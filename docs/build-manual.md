@@ -9,7 +9,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 5 × 5 cm.
-- [ ] Two lengths of 2 × 2 × 1/8 in square steel tube, cut to 213 cm (7 ft) by the supplier (Metal Supermarkets Ottawa), ends deburred.
+- [ ] Two lengths of 2 × 2 × 1/8 in square steel tube, cut to 213 cm (7 ft) by the supplier, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 7/8 in pan-head screws (if you already have 1 in, add a #10 flat washer under every head), 16 × #10 × ⅝ in screws with washers, one 4 in heavy-duty steel corner brace (two holes per leg), 4 × ¼-20 × 2¾ in bolts, 4 nylon-insert nuts, 8 washers.
 - [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
 - [ ] Room cleared: the desk needs 254 × 319 cm of floor including the 5 cm wall gaps.

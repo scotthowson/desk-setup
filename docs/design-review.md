@@ -97,7 +97,7 @@ Everything beyond what you own comes to roughly CAD $130–160 in parts, plus an
 
 | Item | Spec | Qty | Approx. CAD | Source | Confirm? |
 | --- | --- | --- | --- | --- | --- |
-| Steel tube, rails | Square tube 2 × 2 × 1/8 in (51 × 51 × 3.2 mm), 8 ft stock cut to 213 cm each | 2 | $80–120 total (Acier Terrebonne quoted $80 but does not ship) | [Metal Supermarkets Ottawa](https://www.metalsupermarkets.com/ottawa/), 2275 Stevenage Dr, Mon–Fri 8–5 | Call 1-866-724-0037 for the price with two cuts to 213 cm; pickup or delivery |
+| Steel tube, rails | Square tube 2 × 2 × 1/8 in (51 × 51 × 3.2 mm), 8 ft stock cut to 213 cm each | 2 | target $60–120 total (Acier Terrebonne quoted $80 but does not ship; Metal Supermarkets Ottawa quoted about $340, too much) | Call in this order: [Metalium Gatineau](https://www.metalium.com/succursales), 1724 rue Atmec, 819-643-5220, Mon–Fri 8–5; [Loucon Metal](https://loucon.ca/about-us/), 37 Grenfell Cres, Nepean, 613-226-1102; [Russel Metals Ottawa](https://www.russelmetals.com/en/locations/), 2420 Stevenage Dr, 613-738-2961; then any Gatineau welding shop | Ask for 2 × 2 × 0.120 HSS, two at 84 in, cash sale, pickup; 2 × 2 × 3/16 angle is the equal alternative |
 | Corner brace | Heavy-duty steel corner brace, 4 × 4 in legs, two holes per leg, 1/8 in or thicker | 1 | $5–8 | Canadian Tire / Rona / Home Depot | Hole spacing: the rails are drilled through it in place, so any spacing works |
 | Rail screws | #10 × 7/8 in pan-head wood screw, Robertson, zinc | 25 (19 used) | $6 | Canadian Tire / Rona / Home Hardware | If you already own 1 in screws, use them with a #10 flat washer under each head |
 | Brace bolts | ¼-20 × 2¾ in hex bolt, zinc (passes through the brace and both tube walls) | 4 | $4 | same |  |
@@ -235,7 +235,7 @@ Buy two lengths of 2 × 2 × 1/8 in square tube cut to 213 cm from Metal Superma
 - [x] OLOV plate measured 11 cm in diameter, screws M4 × 16 mm fully threaded (IKEA part 108443), 19 Oct. Section B assumed a plate no wider than 7 cm: at 11 cm a leg at (14, 43) would reach y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9), so L1 is at (15, 42). Every other leg clears its neighbours by 1.5 cm or more.
 - [ ] Confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 1.97 in (5 cm) square plate; rating still to confirm.
 - [ ] ALEX side-panel thickness where the corner braces go (expect 16–18 mm; #8 × ½ in screws assume ≥ 14 mm).
-- [ ] Steel source: Acier Terrebonne has no 3/16 angle, quoted $80 for two 8 ft of 2 × 2 × 1/8 in tube, but does not ship and is 3 h from Gatineau. Get the same cut to 213 cm from Metal Supermarkets Ottawa; price to confirm.
+- [ ] Steel source: Acier Terrebonne has no 3/16 angle, quoted $80 for two 8 ft of 2 × 2 × 1/8 in tube, but does not ship and is 3 h from Gatineau; Metal Supermarkets Ottawa quoted about $340. Call Metalium Gatineau (819-643-5220), Loucon Metal Nepean (613-226-1102), Russel Metals Ottawa (613-738-2961), or a local welding shop; price to confirm.
 - [ ] The max-load note on IKEA Canada's ALEX page for your article numbers.
 - [ ] Floor level across the desk footprint (a 1 m level and a shim set).
 
