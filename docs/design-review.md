@@ -200,11 +200,11 @@ The six-leg plan without rails is inadequate: both front edges would hang 55 cm 
 
 **OLOV rating.** 13 kg each, 91 kg for seven, against roughly 40–50 kg actually resting on the legs once the monitor array is up: a margin near 2. OLOV's inner tube can wobble a little at full extension; at 80.2 cm it sits at about two-thirds of travel, and the ALEX boxes and rails do the racking work as before.
 
-**Triple-monitor mount (new).** Three 32 in panels plus the VIVO poles put about 30 kg on one clamp at A's back edge, with the screens 15–25 cm in front of the poles: a steady tipping moment of roughly 50–70 N·m on the clamp. Three consequences: L1 goes at (14, 14), in the corner square right under the mount, and L2 at (14, 43), so each clamp is within 25 cm of a leg (estimated deflection under a clamp under 1 mm); each clamp jaw gets one of your spare 10 × 3 in plates as a pad, because particleboard crushes under a bare steel jaw over months; and both clamps sit on top A's own edges, never on the joint. The corner arrangement needs the VIVO crossbar to span about 42 cm between poles on the diagonal; if the mount's pole spacing turns out different, move both clamps the same amount along their edges (pole spacing ÷ 1.414 from the corner). Keep the centre screen's weight within the mount's rating (59.4 lb centre; the M7 32 in is about 6–7 kg) and both Acers under 17.6 lb each (about 6 kg each with stands removed).
+**Triple-monitor mount (new).** Three 32 in panels plus the VIVO poles put about 30 kg on one clamp at A's back edge, with the screens 15–25 cm in front of the poles: a steady tipping moment of roughly 50–70 N·m on the clamp. Three consequences: L1 goes at (14, 14), in the corner square right under the mount, and L2 at (14, 43), so each clamp is within 25 cm of a leg (estimated deflection under a clamp under 1 mm); each clamp jaw gets one of your spare 10 × 3 in plates as a pad, because particleboard crushes under a bare steel jaw over months; and both clamps sit on top A's own edges, never on the joint. The corner arrangement puts the VIVO crossbar on the diagonal between the poles. VIVO's manual (STAND-V300CU REV1.1) shows this corner mounting, clamps on the two edges directly across the corner, and the clamps are independent C-clamps with no base bar. The pole spacing is fixed by the crossbar (23 in overall per the spec, so about 54–58 cm collar to collar, against the 42 cm assumed here); once measured, move both clamps the same amount along their edges (clamp centre = pole inset + pole spacing ÷ 1.414 from the corner). Keep the centre screen's weight within the mount's rating (59.4 lb centre; the M7 32 in is about 6–7 kg) and both Acers under 17.6 lb each (about 6 kg each with stands removed).
 
 **Optional eighth and ninth legs. An OLOV at (165, 48) under rail A**, just outside the knee zone and 48 cm from ALEX 1, cuts rail A's corner sag roughly in half; one at (48, 165) under rail B cuts rail B's sag by about 85%. Each is CAD $15 and four screws. Build without them first; add one only if the flex bothers you.
 
-**What this assessment does not cover.** Actual ALEX load rating, actual OLOV plate size and screw length, the spacers' footprint and fastening, the VIVO clamp's jaw depth, actual particleboard density and screw-holding of your specific tops, and the floor being level. Those are the measurements in section G.
+**What this assessment does not cover.** Actual ALEX load rating, actual OLOV plate size and screw length, the spacers' footprint and fastening, actual particleboard density and screw-holding of your specific tops, and the floor being level. Those are the measurements in section G.
 
 ## F. Purchasing decision
 
@@ -227,7 +227,7 @@ Buy two 7 ft lengths of 2 × 2 × 3/16 in angle and a 1 ft offcut from Acier Ter
 **Assumptions this design rests on.**
 
 - Top A runs along the back wall and keeps the corner square; top B butts into A's front edge. Mirror everything if the room needs the 314 cm run on the other wall.
-- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 5 cm off their walls so the clamp backs fit. The VIVO pole spacing is assumed to be 42 cm; the clamp positions scale with it.
+- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 5 cm off their walls so the clamp backs fit. The VIVO pole spacing is assumed to be 42 cm; the crossbar spec (23 in) says it is nearer 54–58 cm, and the clamp positions scale with it.
 - The tops are 28 mm thick; a top that measures 27 mm drops the rail-screw reserve to 6.4 mm, still acceptable.
 - A36 angle at 3/16 in wall is in stock; the ⅛ in wall is the fallback, with the sag figures in section E.
 - Nobody sits on the inside corner.
@@ -236,7 +236,7 @@ Buy two 7 ft lengths of 2 × 2 × 3/16 in angle and a 1 ft offcut from Acier Ter
 
 - [ ] Actual thickness of each EKBACKEN top with calipers (expect 28 mm).
 - [ ] Chair raised to about 52 cm seat height for an 83 cm desk; if your feet dangle, plan a footrest or drop the spacers (OLOV then sets to 70.0, surface 72.8).
-- [ ] OLOV plate diameter and the length of the included screws; plate centres in section B assume a plate no wider than 7 cm. Also confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. And the VIVO clamp's under-desk jaw depth (expect about 9 cm), so L1 and L2 clear it.
+- [ ] OLOV plate diameter and the length of the included screws; plate centres in section B assume a plate no wider than 7 cm. Also confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold.
 - [ ] ALEX side-panel thickness where the corner braces go (expect 16–18 mm; #8 × ½ in screws assume ≥ 14 mm).
 - [ ] Acier Terrebonne's price per foot for 2 × 2 × 3/16 in angle, whether they will cut a 9 cm piece, and pickup versus delivery.
 - [ ] The max-load note on IKEA Canada's ALEX page for your article numbers.

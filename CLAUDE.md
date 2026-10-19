@@ -32,7 +32,7 @@ Fixed positions (cm): OLOV legs L1 (14, 14), L2 (14, 43), L3 (65, 10), L4 (140, 
 
 ## Known open items (ask Scott, do not guess)
 
-1. VIVO pole spacing is assumed 42 cm; measure the real crossbar. Clamps move together: spacing ÷ 1.414 from the corner.
+1. VIVO pole spacing is assumed 42 cm but is really fixed by the crossbar (part B, the spec's 23 in "base"; the manual uses it as the spacing guide and shows this exact corner mounting). Expect 54–58 cm. Measure collar centre to collar centre on the crossbar, and the pole centre to the desk edge (model assumes 4.5 cm). Clamps move together: clamp centre = pole inset + spacing ÷ 1.414 from the corner.
 2. Round feet: the plan uses four per ALEX (eight). Confirm their load rating and plate size.
 3. 83 cm is a tall seated height; chair at ~52 cm or a footrest, or drop the feet and set OLOV to 70.
 4. Steel price from Acier Terrebonne for 2 × 2 × 3/16 in angle, two 7 ft pieces plus a 1 ft offcut.

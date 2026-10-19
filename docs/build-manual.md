@@ -11,7 +11,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Eight round 4 in feet (four per ALEX). If you only have four, buy four more before step 4.
 - [ ] Two 7 ft lengths of 2 × 2 × 3/16 in angle plus a 1 ft offcut, deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in screws, 16 × #10 × ⅝ in screws with washers, 4 × ¼-20 × ¾ in bolts, nuts, 8 washers.
-- [ ] VIVO pole spacing measured centre to centre on the crossbar (the plan assumes 42 cm).
+- [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
 - [ ] Room cleared: the desk needs 254 × 319 cm of floor including the 5 cm wall gaps.
 
 ## 1. Cut and drill the steel (bench)
@@ -86,9 +86,9 @@ Lift top A onto L1–L4 with the four feet pads landing on ALEX 1. Push it to 5 
 
 | Item | Position | Note |
 | --- | --- | --- |
-| VIVO clamp 1 | centred x 35 on A's back edge | a spare mending plate flat between the jaw and the top |
+| VIVO clamp 1 | centred x 35 on A's back edge | a spare mending plate flat between the jaw and the top; 28 mm top plus plate is under 60 mm, so use the manual's Option 1 (holes 2 and 4 on the lower clamp) |
 | VIVO clamp 2 | centred y 35 on A's left end edge | same; both clamps sit in the 5 cm wall gap |
-| Crossbar | diagonal between the poles | about 42 cm; if your mount's spacing differs, slide both clamps the same amount |
+| Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). The plan assumes 42 cm; slide both clamps the same amount along their edges to match the real spacing |
 | Samsung M7 | centre bracket, screen centred (40, 40) on the diagonal, 18 cm in front of the poles | bottom edge 24 cm above the top, clears the ELLOVEN |
 | ELLOVEN | centred (33, 33), turned 45°, drawer toward you | under the M7 |
 | Acer right | along the back wall, centred about (106, 19), toed 13° toward you | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
