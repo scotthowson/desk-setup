@@ -98,7 +98,7 @@ Everything beyond what you own comes to roughly CAD $130–160 in parts, plus an
 | Item | Spec | Qty | Approx. CAD | Source | Confirm? |
 | --- | --- | --- | --- | --- | --- |
 | Steel angle, rails | Hot-rolled equal angle 2 × 2 × 3/16 in (51 × 51 × 4.8 mm), 84 in (213 cm) each | 2 | $142.68 + tax = $161.22, cutting included | [Metal Supermarkets Ottawa](https://www.metalsupermarkets.com/ottawa/), 2275 Stevenage Dr, Mon–Fri 8–5, pickup | Ordered 19 Oct |
-| Corner brace | Heavy-duty steel corner brace, 4 × 4 in legs, two holes per leg, 1/8 in or thicker | 1 | $5–8 | Canadian Tire / Rona / Home Depot | Hole spacing: the rails are drilled through it in place, so any spacing works |
+| Corner brace | Steel corner brace, 3–5 in legs, two holes per leg, 2 mm or thicker (12 gauge, 2.7 mm, is ideal; it only carries rail B's end in bolt shear, about 20 kg) | 1 | $5–20 | Home Depot Canada Everbilt 4 in zinc brace, or a 4 × 4 in 4 mm black L bracket from amazon.ca | Open its holes to 9/32 in with the rail holes; the rails are drilled through it in place, so any spacing works |
 | Rail screws | #10 × 1 in pan-head wood screw, Robertson, zinc | 25 (19 used) | $6 | Canadian Tire / Rona / Home Hardware |  |
 | Brace bolts | ¼-20 × ¾ in hex bolt, zinc (through the brace and the angle's vertical leg) | 4 | $3 | same |  |
 | Bracket nuts | ¼-20 nylon-insert lock nut | 4 | $2 | same |  |
