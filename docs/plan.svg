@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 690" font-family="sans-serif" font-size="13" style="background:#fff">
+<text x="24" y="24" font-size="15" font-weight="600">Legs on the wall edges, rails on the front edges, monitors across the corner</text>
+<text x="24" y="40" font-size="11.5" fill="#666">Top view in cm; back wall along the top, side wall along the left; (x, y) from the back-left corner of top A</text>
+<line x1="90.0" y1="64.0" x2="538.2" y2="64.0" stroke="#333" stroke-width="3"/><line x1="84.0" y1="70.0" x2="84.0" y2="635.2" stroke="#333" stroke-width="3"/>
+<rect x="90.0" y="70.0" width="448.2" height="117.0" fill="#f1e8dc" stroke="#555"/><rect x="90.0" y="187.0" width="117.0" height="448.2" fill="#f1e8dc" stroke="#555"/>
+<text x="405.0" y="113.2" text-anchor="middle" font-weight="600">Top A  249 × 65</text><text x="147.6" y="421.0" text-anchor="middle" font-weight="600">Top B</text><text x="147.6" y="435.40000000000003" text-anchor="middle" font-size="11.5" fill="#666">65 × 249</text>
+<line x1="90.0" y1="187.0" x2="207.0" y2="187.0" stroke="#555" stroke-dasharray="4 3"/>
+<rect x="110.16" y="164.14" width="13.68" height="45.72" fill="none" stroke="#888"/>
+<rect x="146.16" y="164.14" width="13.68" height="45.72" fill="none" stroke="#888"/>
+<rect x="91.8" y="156.4" width="383.40000000000003" height="9.0" fill="#9aa0a6" fill-opacity="0.5" stroke="#777"/><rect x="176.4" y="167.2" width="9.0" height="383.40000000000003" fill="#9aa0a6" fill-opacity="0.5" stroke="#777"/><rect x="185.4" y="165.4" width="16.2" height="16.2" fill="#d9a441"/>
+<text x="279.0" y="151.0" text-anchor="middle" font-size="11.5">Rail A, 213 cm, 12 cm back from the front edge</text><text x="212.4" y="322.0" font-size="11.5">Rail B</text><text x="212.4" y="336.40000000000003" font-size="11.5" fill="#666">213 cm</text><text x="212.4" y="176.60000000000002" font-size="11.5">bolted corner bracket</text>
+<rect x="467.1" y="76.3" width="64.8" height="104.4" fill="none" stroke="#333" stroke-width="1.5"/><text x="499.5" y="129.4" text-anchor="middle" font-weight="600">ALEX 1</text><text x="499.5" y="145.60000000000002" text-anchor="middle" font-size="11.5" fill="#666">drawers</text>
+<rect x="96.3" y="564.1" width="104.4" height="64.8" fill="none" stroke="#333" stroke-width="1.5"/><text x="148.5" y="599.2" text-anchor="middle" font-weight="600">ALEX 2</text><text x="148.5" y="617.2" text-anchor="middle" font-size="11.5" fill="#666">door</text>
+<circle cx="475.2" cy="84.4" r="4" fill="none" stroke="#333"/>
+<circle cx="523.8" cy="84.4" r="4" fill="none" stroke="#333"/>
+<circle cx="475.2" cy="172.60000000000002" r="4" fill="none" stroke="#333"/>
+<circle cx="523.8" cy="172.60000000000002" r="4" fill="none" stroke="#333"/>
+<circle cx="104.4" cy="572.2" r="4" fill="none" stroke="#333"/>
+<circle cx="192.60000000000002" cy="572.2" r="4" fill="none" stroke="#333"/>
+<circle cx="104.4" cy="620.8000000000001" r="4" fill="none" stroke="#333"/>
+<circle cx="192.60000000000002" cy="620.8000000000001" r="4" fill="none" stroke="#333"/>
+<rect x="145.8" y="70.0" width="14.4" height="16.2" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><rect x="90.0" y="125.80000000000001" width="16.2" height="14.4" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><line x1="153.0" y1="78.1" x2="98.1" y2="133.0" stroke="#b4791c" stroke-dasharray="3 2" stroke-width="1.5"/><text x="219.6" y="138.8" font-size="11.5">VIVO clamps (35, 0) + (0, 35)</text>
+<path d="M126.0 106.0H306.0V187.0H207.0V286.0H126.0Z" fill="none" stroke="#bbb" stroke-dasharray="3 3"/><text x="291.6" y="264.4" text-anchor="middle" fill="#666">you sit here, facing the corner; knees sweep the dashed zone</text>
+<circle cx="115.2" cy="95.2" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="127.80000000000001" y="92.0" font-size="11.5" font-weight="600">L1</text>
+<circle cx="115.2" cy="147.4" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="126.0" y="151.4" font-size="11.5" font-weight="600">L2</text>
+<circle cx="207.0" cy="88.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="217.8" y="92.0" font-size="11.5" font-weight="600">L3</text>
+<circle cx="342.0" cy="88.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="352.8" y="92.0" font-size="11.5" font-weight="600">L4</text>
+<circle cx="108.0" cy="223.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="118.8" y="227.0" font-size="11.5" font-weight="600">L5</text>
+<circle cx="108.0" cy="358.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="118.8" y="362.0" font-size="11.5" font-weight="600">L6</text>
+<circle cx="108.0" cy="493.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="118.8" y="497.0" font-size="11.5" font-weight="600">L7</text>
+<text x="115.2" y="56" text-anchor="middle" font-size="11.5" fill="#666">14</text>
+<text x="153.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">35</text>
+<text x="207.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">65</text>
+<text x="342.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">140</text>
+<text x="467.1" y="56" text-anchor="middle" font-size="11.5" fill="#666">209.5</text>
+<text x="538.2" y="56" text-anchor="middle" font-size="11.5" fill="#666">249</text>
+<text x="76" y="99.2" text-anchor="end" font-size="11.5" fill="#666">14</text>
+<text x="76" y="137.0" text-anchor="end" font-size="11.5" fill="#666">35</text>
+<text x="76" y="158.60000000000002" text-anchor="end" font-size="11.5" fill="#666">43</text>
+<text x="76" y="191.0" text-anchor="end" font-size="11.5" fill="#666">65</text>
+<text x="76" y="227.0" text-anchor="end" font-size="11.5" fill="#666">85</text>
+<text x="76" y="362.0" text-anchor="end" font-size="11.5" fill="#666">160</text>
+<text x="76" y="497.0" text-anchor="end" font-size="11.5" fill="#666">235</text>
+<text x="76" y="568.1" text-anchor="end" font-size="11.5" fill="#666">274.5</text>
+<text x="76" y="639.2" text-anchor="end" font-size="11.5" fill="#666">314</text>
+<text x="24" y="672" font-size="11.5" fill="#666">Circles: OLOV legs. Strips: angle rails. Gold: VIVO clamps. Small circles: 4 in feet. ALEX 3.5 cm in all round; tops 5 cm off both walls.</text>
+</svg>

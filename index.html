@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Corner Desk Model</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a full-bleed 3D stage, a slim header strip, a floating control dock at the bottom, a spec card top-right. */
+:root{
+  --bg:#1c1a17; --panel:#26231f; --panel2:#2f2b26; --line:#3d382f;
+  --fg:#efe9df; --muted:#a79e8f; --accent:#d9a441; --accent-ink:#1c1a17;
+  --steel:#7a7f86; --good:#7cc47f;
+  --font:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#efeae1; --panel:#fbf8f2; --panel2:#f1ece3; --line:#d9d1c3; --fg:#1f1b16; --muted:#6c6356; --accent:#b4791c; --accent-ink:#fff; --steel:#5b6066; --good:#2e8b3d; color-scheme:light; } }
+:root[data-theme="light"]{ --bg:#efeae1; --panel:#fbf8f2; --panel2:#f1ece3; --line:#d9d1c3; --fg:#1f1b16; --muted:#6c6356; --accent:#b4791c; --accent-ink:#fff; --steel:#5b6066; --good:#2e8b3d; color-scheme:light; }
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);overflow:hidden}
+#stage{position:absolute;inset:0;touch-action:none;cursor:grab}
+#stage:active{cursor:grabbing}
+canvas{display:block}
+.hdr{position:absolute;top:0;left:0;right:0;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));pointer-events:none}
+.hdr h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.01em}
+.hdr .sub{font-size:12.5px;color:var(--muted)}
+.card{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:52px;width:236px;max-width:calc(100% - 32px);background:color-mix(in srgb,var(--panel) 92%,transparent);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:12.5px;line-height:1.45;backdrop-filter:blur(6px)}
+.card h2{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:600}
+.card dl{display:grid;grid-template-columns:1fr auto;gap:3px 10px;margin:0}
+.card dt{color:var(--muted)}
+.card dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.card dd.ok{color:var(--good)}
+.card p{margin:10px 0 0;color:var(--muted);font-size:11.5px}
+.dock{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding-block:10px 12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,color-mix(in srgb,var(--bg) 85%,transparent),transparent)}
+.grp{display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:color-mix(in srgb,var(--panel) 92%,transparent);border:1px solid var(--line);border-radius:10px;padding:6px}
+.grp span.lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 6px 0 4px}
+button.v{font:500 12.5px var(--font);color:var(--fg);background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:6px 10px;cursor:pointer}
+button.v[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button.v:focus-visible,label.t:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+label.t{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:5px 8px;border-radius:7px;cursor:pointer;user-select:none}
+label.t input{accent-color:var(--accent);margin:0}
+.hint{position:absolute;left:max(16px,env(safe-area-inset-left,0px));top:52px;font-size:11.5px;color:var(--muted);pointer-events:none}
+@media (max-width:640px){ .card{display:none} .hdr .sub{display:none} }
+@media (prefers-reduced-motion:reduce){ * { transition:none !important } }
+</style>
+</head>
+<body>
+
+<div id="stage"></div>
+<div class="hdr"><h1>Corner Desk Model</h1><span class="sub">2 × EKBACKEN 249 × 65 · 2 × ALEX on 4 in feet · 7 × OLOV · two 2 × 2 × 3/16 in angle rails · VIVO V300CU across the corner with Samsung M7 32 + 2 × Acer 31.5 · HYTE Y60 · Edifier R1280DBs</span></div>
+<div class="hint" id="hint">drag to orbit · scroll to zoom · right-drag to pan</div>
+
+<div class="card" aria-label="Key dimensions">
+  <h2>As built</h2>
+  <dl>
+    <dt>Top surface</dt><dd>83.0 cm</dd>
+    <dt>Under the top</dt><dd>80.2 cm</dd>
+    <dt>Under the rails</dt><dd class="ok">75.1 cm</dd>
+    <dt>OLOV set to</dt><dd>80.2 of 60–90</dd>
+    <dt>ALEX overhang</dt><dd>3.5 cm all round</dd>
+    <dt>Seat</dt><dd>corner, 45°</dd>
+    <dt>Mount clamps</dt><dd>(35, 0) &amp; (0, 35)</dd>
+    <dt>Gap to walls</dt><dd>5 cm</dd>
+    <dt>Legs in knee zone</dt><dd class="ok">0</dd>
+    <dt>Max span, legs</dt><dd class="ok">75 cm</dd>
+  </dl>
+  <p>You face the inside corner; the M7 sits on the diagonal with the Acers wrapping along each wall and an Edifier under each. Y60 over ALEX 1. Pole spacing assumed 42 cm, to confirm.</p>
+</div>
+
+<div class="dock">
+  <div class="grp"><span class="lbl">View</span>
+    <button class="v" data-view="overview" aria-pressed="true">Overview</button>
+    <button class="v" data-view="seat">From the chair</button>
+    <button class="v" data-view="under">Under the corner</button>
+    <button class="v" data-view="mount">Mount clamps</button>
+    <button class="v" data-view="plan">Plan</button>
+  </div>
+  <div class="grp"><span class="lbl">Show</span>
+    <label class="t"><input type="checkbox" id="tChair" checked> Chair &amp; setup</label>
+    <label class="t"><input type="checkbox" id="tKnee"> Knee zone</label>
+    <label class="t"><input type="checkbox" id="tXray"> See-through tops</label>
+    <label class="t"><input type="checkbox" id="tLabels"> Labels</label>
+    <label class="t"><input type="checkbox" id="tWalls" checked> Walls</label>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  const stage = document.getElementById('stage');
+  const renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  stage.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const isDark = () => { const t = document.documentElement.getAttribute('data-theme'); if (t) return t === 'dark'; return matchMedia('(prefers-color-scheme: dark)').matches; };
+  function applyBg(){ scene.background = new THREE.Color(isDark() ? 0x1c1a17 : 0xefeae1); }
+  applyBg();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyBg);
+  new MutationObserver(applyBg).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+  const camera = new THREE.PerspectiveCamera(42, 1, 1, 4000);
+
+  scene.add(new THREE.HemisphereLight(0xfff4e6, 0x3a3128, 0.75));
+  const sun = new THREE.DirectionalLight(0xffffff, 0.9);
+  sun.position.set(260, 420, 380); sun.castShadow = true; sun.shadow.mapSize.set(2048,2048);
+  const sc = sun.shadow.camera; sc.left=-320; sc.right=320; sc.top=320; sc.bottom=-320; sc.near=50; sc.far=1200; sun.shadow.bias = -0.0008;
+  scene.add(sun);
+  const fill = new THREE.DirectionalLight(0xdfe8ff, 0.35); fill.position.set(-200,200,-100); scene.add(fill);
+
+  const M = {
+    walnut: new THREE.MeshStandardMaterial({color:0x5c3e2a, roughness:0.55, metalness:0.05}),
+    edge:   new THREE.MeshStandardMaterial({color:0x4a3221, roughness:0.6}),
+    alex:   new THREE.MeshStandardMaterial({color:0x2a2420, roughness:0.7}),
+    alexF:  new THREE.MeshStandardMaterial({color:0x332b26, roughness:0.65}),
+    steel:  new THREE.MeshStandardMaterial({color:0x2b2d30, roughness:0.45, metalness:0.7}),
+    leg:    new THREE.MeshStandardMaterial({color:0x1d1d1f, roughness:0.35, metalness:0.6}),
+    zinc:   new THREE.MeshStandardMaterial({color:0x9aa0a6, roughness:0.4, metalness:0.8}),
+    chrome: new THREE.MeshStandardMaterial({color:0xc8cccf, roughness:0.25, metalness:0.9}),
+    floor:  new THREE.MeshStandardMaterial({color:0xb79b76, roughness:0.85}),
+    wall:   new THREE.MeshStandardMaterial({color:0xd8d2c6, roughness:0.95, side:THREE.DoubleSide}),
+    knee:   new THREE.MeshStandardMaterial({color:0x7cc47f, transparent:true, opacity:0.22, roughness:1, depthWrite:false}),
+    chair:  new THREE.MeshStandardMaterial({color:0x3a3f45, roughness:0.75}),
+    mesh:   new THREE.MeshStandardMaterial({color:0x5e6670, roughness:0.9}),
+    black:  new THREE.MeshStandardMaterial({color:0x151617, roughness:0.5, metalness:0.3}),
+    screen: new THREE.MeshStandardMaterial({color:0x1a2230, roughness:0.2, metalness:0.1, emissive:0x1b2a3a, emissiveIntensity:0.6}),
+    key:    new THREE.MeshStandardMaterial({color:0x26282b, roughness:0.6}),
+    plant:  new THREE.MeshStandardMaterial({color:0x4f7d3c, roughness:0.9}),
+    pot:    new THREE.MeshStandardMaterial({color:0xc7b8a3, roughness:0.8}),
+    orange: new THREE.MeshStandardMaterial({color:0xd9541e, roughness:0.6}),
+    orange2:new THREE.MeshStandardMaterial({color:0xe8783c, roughness:0.6}),
+    sapele: new THREE.MeshStandardMaterial({color:0x6b3f2a, roughness:0.6}),
+  };
+
+  // Units: cm. X along the back wall, Z along the side wall, Y up.
+  function box(x0,x1,y0,y1,z0,z1,mat,shadow=true){
+    const m = new THREE.Mesh(new THREE.BoxGeometry(x1-x0, y1-y0, z1-z0), mat);
+    m.position.set((x0+x1)/2,(y0+y1)/2,(z0+z1)/2); m.castShadow = shadow; m.receiveShadow = true; return m;
+  }
+  function cyl(r0,r1,h,mat,x,y,z,seg=24){ const m = new THREE.Mesh(new THREE.CylinderGeometry(r0,r1,h,seg), mat); m.position.set(x,y,z); m.castShadow=true; m.receiveShadow=true; return m; }
+
+  // Room
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(900,900), M.floor);
+  floor.rotation.x = -Math.PI/2; floor.position.set(200,0,200); floor.receiveShadow = true; scene.add(floor);
+  const walls = new THREE.Group();
+  const wBack = new THREE.Mesh(new THREE.PlaneGeometry(420,260), M.wall); wBack.position.set(150,130,-5.5); wBack.receiveShadow=true;
+  const wSide = new THREE.Mesh(new THREE.PlaneGeometry(420,260), M.wall); wSide.rotation.y = Math.PI/2; wSide.position.set(-5.5,130,180); wSide.receiveShadow=true;
+  walls.add(wBack, wSide, box(-5,360,0,8,-6,-4.2,M.edge,false), box(-6,-4.2,0,8,-5,390,M.edge,false));
+  scene.add(walls);
+
+  // Heights: ALEX 70 + 4 in feet 10.16 = 80.2 under the top; top 2.8 thick
+  const T = 2.8, SP = 10.16, Y0 = 70 + SP, Y1 = Y0 + T;
+
+  // Tops
+  const topA = box(0,249,Y0,Y1,0,65,M.walnut);
+  const topB = box(0,65,Y0,Y1,65,314,M.walnut);
+  scene.add(topA, topB, box(0,65,Y1-0.1,Y1+0.05,64.85,65.15,M.edge,false));
+
+  // ALEX units, centred under each wing: 3.5 cm overhang all round
+  function alex(x0,z0,w,d,drawers,faceDir){
+    const g = new THREE.Group();
+    g.add(box(x0,x0+w,0,70,z0,z0+d,M.alex));
+    const n = drawers ? 5 : 1;
+    for(let i=0;i<n;i++){
+      const h = 70/n - 1.2, y = 0.6 + i*(70/n);
+      if(faceDir==='+z'){ g.add(box(x0+0.8,x0+w-0.8,y,y+h,z0+d,z0+d+1.2,M.alexF)); g.add(box(x0+w/2-5,x0+w/2+5,y+h/2-0.5,y+h/2+0.5,z0+d+1.2,z0+d+2.2,M.zinc,false)); }
+      else { g.add(box(x0+w,x0+w+1.2,y,y+h,z0+0.8,z0+d-0.8,M.alexF)); g.add(box(x0+w+1.2,x0+w+2.2,y+h/2-0.5,y+h/2+0.5,z0+d/2-5,z0+d/2+5,M.zinc,false)); }
+    }
+    return g;
+  }
+  scene.add(alex(209.5,3.5,36,58,true,'+z'));   // ALEX 1 drawers, fronts toward you (+z)
+  scene.add(alex(3.5,274.5,58,36,false,'+x'));  // ALEX 2 door, toward you (+x)
+
+  // Round 4 in adjustable feet as spacers: plate screwed under the top, pad resting on the ALEX top. Four per unit, 4.5 cm in from each ALEX corner.
+  const feet = [[214,8],[241,8],[214,57],[241,57],[8,279],[57,279],[8,306],[57,306]];
+  feet.forEach(([x,z])=>{
+    scene.add(cyl(2.5,2.5,SP-1.6,M.chrome,x,70+0.6+(SP-1.6)/2,z));
+    scene.add(cyl(2.9,2.9,1.2,M.black,x,70+0.6,z));                 // pad on the ALEX
+    scene.add(cyl(2.9,2.9,1.0,M.black,x,Y0-1.0,z));                  // collar
+    scene.add(box(x-3,x+3,Y0-0.3,Y0,z-3,z+3,M.black,false));         // plate under the top
+  });
+
+  // OLOV legs (60–90 cm telescoping) set to 80.2
+  const legs = [[14,14],[14,43],[65,10],[140,10],[10,85],[10,160],[10,235]];
+  legs.forEach(([x,z])=>{
+    scene.add(cyl(1.9,1.9,44,M.leg,x,Y0-22,z));
+    scene.add(cyl(1.45,1.45,Y0-44-1.2,M.leg,x,1.2+(Y0-44-1.2)/2,z));
+    scene.add(cyl(2.2,2.2,2.5,M.black,x,Y0-44,z));
+    scene.add(cyl(3.3,3.3,0.4,M.leg,x,Y0-0.2,z));
+    scene.add(cyl(2.4,2.2,1.2,M.black,x,0.6,z));
+  });
+
+  // Angle rails, 2 × 2 × 3/16 in: flat leg under the top, vertical leg down, 12 cm back from the front edge
+  const rails = new THREE.Group(); const t = 0.48, L = 5.08;
+  rails.add(box(1,214,Y0-t,Y0,48,53,M.steel), box(1,214,Y0-L,Y0,53-t,53,M.steel));      // rail A, full 7 ft, now clears the ALEX because of the feet
+  rails.add(box(48,53,Y0-t,Y0,54,267,M.steel), box(53-t,53,Y0-L,Y0,54,267,M.steel));    // rail B
+  rails.add(box(53,62,Y0-L,Y0-0.3,53,53+t,M.steel), box(53,53+t,Y0-L,Y0-0.3,53,62,M.steel)); // corner bracket
+  const boltGeo = new THREE.CylinderGeometry(0.6,0.6,0.5,12);
+  [[56,0],[61,0],[0,56],[0,61]].forEach(([x,z],i)=>{ const b = new THREE.Mesh(boltGeo, M.zinc); if(i<2){ b.rotation.x=Math.PI/2; b.position.set(x,Y0-2.6,53+t+0.25);} else { b.rotation.z=Math.PI/2; b.position.set(53+t+0.25,Y0-2.6,z);} rails.add(b); });
+  rails.add(box(11.2,18.8,Y0-0.25,Y0,52.3,77.7,M.zinc,false), box(31.2,38.8,Y0-0.25,Y0,52.3,77.7,M.zinc,false)); // 10 × 3 in mending plates across the joint
+  rails.add(box(22.3,47.7,Y0-0.25,Y0,0.5,8.1,M.zinc,false), box(0.5,8.1,Y0-0.25,Y0,22.3,47.7,M.zinc,false)); // the other two plates as backing pads under the VIVO clamp jaws
+  scene.add(rails);
+
+  // Knee zone: seat at x 120, knees sweep x 80–160, 45 cm under the top
+  const knee = new THREE.Group(); knee.add(box(20,120,0.2,Y0-0.2,20,65,M.knee,false), box(20,65,0.2,Y0-0.2,65,120,M.knee,false)); knee.visible=false; scene.add(knee);
+
+  // ---- Setup ----
+  const setup = new THREE.Group();
+  // VIVO STAND-V300CU across the inside corner: one clamp on A's back edge at x 35, one on A's left end edge at z 35,
+  // crossbar on the diagonal, M7 centred on the diagonal facing the chair, Acers wrapping along each wall.
+  (function mount(){
+    const g = new THREE.Group(); const poleH = 61;
+    function clamp(x,z,rotY){
+      const c = new THREE.Group();
+      c.add(box(-4,4,Y1,Y1+1.2,0,9,M.black));            // top plate
+      c.add(box(-4,4,Y0-9,Y0,0,9,M.black));              // lower jaw
+      c.add(box(-4,4,Y0-9,Y1+1.2,-2.5,0,M.black,false));  // back of clamp, in the 5 cm wall gap
+      c.add(cyl(1.6,1.6,poleH,M.black,0,Y1+1.2+poleH/2,4.5));
+      c.position.set(x,0,z); c.rotation.y = rotY; g.add(c);
+    }
+    clamp(35,0,0);               // on the back edge
+    clamp(0,35,Math.PI/2);       // on the left end edge (clamp opens toward -x)
+    // crossbar between the pole tops, on the diagonal
+    const bar = box(0,42.4,Y1+40,Y1+43,-1.5,1.5,M.black); bar.geometry.translate(21.2,Y1+41.5,0); bar.position.set(4.5,0,35); bar.rotation.y = Math.PI/4; g.add(bar);
+    // Centre bracket + Samsung M7 32 in 4K (~71.7 × 42), facing the chair, bottom 16 cm above the top
+    const centre = new THREE.Group();
+    centre.add(box(-6,6,Y1+34,Y1+49,-22,0,M.black)); // centre bracket reaches back to the crossbar
+    centre.add(box(-35.85,35.85,Y1+24,Y1+66,0,1.5,M.black));
+    centre.add(box(-34.85,34.85,Y1+25,Y1+65,1.5,1.9,M.screen,false));
+    centre.position.set(40,0,40); centre.rotation.y = Math.PI/4; g.add(centre);
+    // Side arms and Acer XZ320QU 31.5 in 1500R curved (~70 × 41), bottom 28 cm above the top so an Edifier fits beneath
+    function seg(x0,z0,x1,z1){
+      const len = Math.hypot(x1-x0, z1-z0);
+      const a = box(0,len,Y1+44.5,Y1+47.5,-1.5,1.5,M.black); a.geometry.translate(len/2,Y1+46,0); a.position.set(x0,0,z0); a.rotation.y = Math.atan2(-(z1-z0),(x1-x0)); g.add(a);
+    }
+    function acer(px,pz,ax,az,rotY,alongX){
+      // arm runs along the wall from the pole, behind the curved panel, then turns forward into the VESA plate
+      const kx = alongX ? ax : px, kz = alongX ? pz : az;
+      seg(px,pz,kx,kz); seg(kx,kz,ax,az);
+      const m = new THREE.Group();
+      // 1500R curve: a slice of a 150 cm radius cylinder, concave toward the chair; bottom 26 cm above the top
+      const R = 150, arc = 70 / R, ds = THREE.DoubleSide;
+      const body = new THREE.Mesh(new THREE.CylinderGeometry(R, R, 41, 32, 1, true, Math.PI - arc/2, arc), new THREE.MeshStandardMaterial({color:0x151617, roughness:0.5, metalness:0.3, side:ds}));
+      body.position.set(0, Y1+46.5, R); body.castShadow = true; m.add(body);
+      const scr = new THREE.Mesh(new THREE.CylinderGeometry(R-0.6, R-0.6, 39, 32, 1, true, Math.PI - (arc*0.97)/2, arc*0.97), new THREE.MeshStandardMaterial({color:0x1a2230, roughness:0.2, emissive:0x1b2a3a, emissiveIntensity:0.6, side:ds}));
+      scr.position.set(0, Y1+46.5, R); m.add(scr);
+      m.add(box(-4,4,Y1+40,Y1+52,-4,0,M.black)); // VESA plate on the back
+      m.position.set(ax,0,az); m.rotation.y = rotY; g.add(m);
+    }
+    acer(35,4.5, 118,17, -Math.PI/14, true);          // right Acer along the back wall, toed 13° toward the chair
+    acer(4.5,35, 17,118, Math.PI/2 + Math.PI/14, false); // left Acer along the side wall
+    setup.add(g);
+  })();
+  // ELLOVEN monitor stand with drawer under the M7, drawer pull toward you
+  (function elloven(){
+    const e = new THREE.Group();
+    e.add(box(-23.5,23.5,8.8,10,-13,13,M.orange), box(-23.5,-22.3,0,8.8,-13,13,M.orange), box(22.3,23.5,0,8.8,-13,13,M.orange));
+    e.add(box(-21.5,21.5,1.2,7.6,-12,12,M.orange2), box(-4,4,3.6,5.2,12,12.8,M.black,false));
+    e.position.set(33,Y1,33); e.rotation.y = Math.PI/4; setup.add(e);
+  })();
+  // Keyboard and mouse
+  (function kb(){
+    // Deskmat 80 × 30 cm (neon night-city print), NuPhy Air75 V2 (31.6 × 13.3), mouse
+    const matMat = new THREE.MeshStandardMaterial({color:0x2a1f4a, roughness:0.9, emissive:0x3a1a5e, emissiveIntensity:0.25});
+    // Mat centred on the diagonal in front of the ELLOVEN, inside the corner square
+    const mat = box(-40,40,0,0.3,-15,15,matMat,false); mat.position.set(53,Y1,53); mat.rotation.y = Math.PI/4; setup.add(mat);
+    const k = box(-15.8,15.8,0,1.4,-6.65,6.65,new THREE.MeshStandardMaterial({color:0xd8d9d6, roughness:0.6})); k.position.set(56.5,Y1+0.3,56.5); k.rotation.y = Math.PI/4; setup.add(k);
+    const keys = box(-14.8,14.8,1.4,2.0,-5.8,5.8,M.key,false); keys.position.set(56.5,Y1+0.3,56.5); keys.rotation.y = Math.PI/4; setup.add(keys);
+    const mouse = box(-3,3,0,2.6,-5.5,5.5,M.key); mouse.position.set(72,Y1+0.3,43); mouse.rotation.y = Math.PI/4; setup.add(mouse);
+  })();
+  // Edifier R1280DBs at the two ends of the array, toed in
+  (function speakers(){
+    const cab = new THREE.MeshStandardMaterial({color:0x4b3426, roughness:0.75});
+    const grille = new THREE.MeshStandardMaterial({color:0x1f1d1b, roughness:0.95});
+    function spk(x,z,rot){
+      const s = new THREE.Group();
+      s.add(box(-7.3,7.3,0,23.4,-9.8,9.8,cab), box(-6.5,6.5,1,22.4,9.8,10.3,grille,false));
+      const tw = cyl(1.8,1.8,0.4,M.black,0,19,10.5,20); tw.rotation.x=Math.PI/2; s.add(tw);
+      const wf = cyl(4.6,4.6,0.4,M.black,0,9,10.5,24); wf.rotation.x=Math.PI/2; s.add(wf);
+      s.position.set(x,Y1,z); s.rotation.y = rot; setup.add(s);
+    }
+    spk(118, 22, -Math.PI/14 + Math.PI);   // under the right Acer, grille toward the chair
+    spk(22, 118, Math.PI/2 - Math.PI/14);   // under the left Acer
+  })();
+  // HYTE Y60 on top B over ALEX 2, glass toward you
+  (function pcCase(){
+    const g = new THREE.Group();
+    g.add(box(-14.25,14.25,0,46.2,-22.8,22.8,M.black));
+    const glass = new THREE.MeshStandardMaterial({color:0x9fb4c6, transparent:true, opacity:0.35, roughness:0.05, metalness:0.2, depthWrite:false});
+    g.add(box(-14.6,-14.25,2,44.2,-10,22.8,glass,false));     // side glass faces -x (toward you at the corner)
+    g.add(box(-14.25,14.25,2,44.2,22.8,23.1,glass,false));    // front glass faces +z
+    g.add(box(-14.25,-14.0,2,44.2,-10,22.8,new THREE.MeshStandardMaterial({color:0x2a3340,roughness:0.6}),false));
+    g.add(box(-13.5,-12,3,10,-8,20,new THREE.MeshStandardMaterial({color:0x6cc0ff,emissive:0x2a6fb5,emissiveIntensity:0.8}),false));
+    g.position.set(227,Y1,31); setup.add(g);  // over ALEX 1, glass toward the corner seat
+  })();
+  // ELYONA swing-arm lamp: weighted base, sapele post, elbow, forearm, cone shade
+  (function lamp(){
+    const l = new THREE.Group();
+    l.add(cyl(8.5,8.5,1.8,M.black,0,0.9,0,32));
+    l.add(cyl(1.4,1.4,28,M.sapele,0,14.9,0));                       // post
+    const elbow = cyl(1.8,1.8,3,M.black,0,29.5,0); l.add(elbow);
+    const fore = cyl(1.1,1.1,32,M.sapele,0,0,0); fore.rotation.z = -Math.PI/3; fore.position.set(13.9,37.5,0); l.add(fore); // forearm up and out
+    const head = cyl(1.6,1.6,2.5,M.black,0,0,0); head.rotation.z = -Math.PI/3; head.position.set(28.4,45.9,0); l.add(head);
+    const shade = cyl(3,6.5,9,M.black,0,0,0,32); shade.rotation.z = Math.PI/2 + Math.PI/5; shade.position.set(33.5,42.5,0); l.add(shade);
+    const bulb = cyl(4.5,4.5,0.6,new THREE.MeshStandardMaterial({color:0xfff2cc,emissive:0xffe2a0,emissiveIntensity:0.9}),0,0,0,24); bulb.rotation.z = Math.PI/2 + Math.PI/5; bulb.position.set(36.2,38.8,0); l.add(bulb);
+    l.position.set(30,Y1,175); l.rotation.y = -Math.PI/3; setup.add(l);
+  })();
+  // Plant
+  setup.add(cyl(7,5.5,12,M.pot,30,Y1+6,230));
+  const leaves = new THREE.Mesh(new THREE.SphereGeometry(11,16,12), M.plant); leaves.scale.set(1,0.8,1); leaves.position.set(30,Y1+20,230); leaves.castShadow=true; setup.add(leaves);
+  // Chair facing top A
+  (function chair(){
+    const c = new THREE.Group(); const seatH = 52;
+    c.add(cyl(2.2,2.2,seatH-8,M.black,0,(seatH-8)/2+4,0,16));
+    for(let i=0;i<5;i++){
+      const a = i*Math.PI*2/5;
+      const armG = new THREE.BoxGeometry(30,2.5,4.4); armG.translate(15,3.2,0);
+      const arm = new THREE.Mesh(armG, M.black); arm.castShadow=true; arm.rotation.y=a; c.add(arm);
+      const w = cyl(2.8,2.8,2.4,M.black,Math.cos(a)*29,2.8,-Math.sin(a)*29,14); w.rotation.x=Math.PI/2; c.add(w);
+    }
+    c.add(box(-25,25,seatH,seatH+6,-24,24,M.chair), box(-23,23,seatH+6,seatH+56,-27,-22,M.mesh));
+    c.add(box(-30,-25,seatH+6,seatH+24,-15,10,M.black), box(25,30,seatH+6,seatH+24,-15,10,M.black));
+    c.position.set(108,0,108); c.rotation.y = Math.PI*1.25; // facing the inside corner
+    setup.add(c);
+  })();
+  scene.add(setup);
+
+  // Labels
+  const labels = new THREE.Group(); labels.visible=false;
+  function label(text, x,y,z, scale=1){
+    const cv = document.createElement('canvas'); const ctx = cv.getContext('2d');
+    const pad = 14; ctx.font = '600 28px IBM Plex Sans, sans-serif';
+    const w = Math.ceil(ctx.measureText(text).width)+pad*2; cv.width = w; cv.height = 52;
+    ctx.font = '600 28px IBM Plex Sans, sans-serif';
+    ctx.fillStyle = 'rgba(217,164,65,0.95)'; roundRect(ctx,0,0,w,52,10); ctx.fill();
+    ctx.fillStyle = '#1c1a17'; ctx.textBaseline='middle'; ctx.fillText(text,pad,27);
+    const tex = new THREE.CanvasTexture(cv); tex.encoding = THREE.sRGBEncoding;
+    const sp = new THREE.Sprite(new THREE.SpriteMaterial({map:tex, depthTest:false}));
+    sp.scale.set(w*0.38*scale, 52*0.38*scale, 1); sp.position.set(x,y,z); sp.renderOrder=10; labels.add(sp);
+  }
+  function roundRect(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();}
+  legs.forEach(([x,z],i)=>label('OLOV L'+(i+1)+' ('+x+', '+z+')', x, 45, z, 0.85));
+  label('ALEX 1 · 3.5 cm in all round', 227, 60, 32, 0.85); label('ALEX 2 · 3.5 cm in all round', 32, 60, 292, 0.85);
+  label('4 in feet, 4 per ALEX', 227, 76, 32, 0.8);
+  label('Rail A · 213 cm', 110, 72, 53); label('Rail B · 213 cm', 53, 72, 160);
+  label('bolted corner bracket', 70, 70, 70, 0.85);
+  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 40, 150, 40, 0.9); label('Acer 31.5', 118, 160, 17, 0.8); label('Acer 31.5', 17, 160, 118, 0.8);
+  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 118, 112, 22, 0.8); label('Edifier', 22, 112, 118, 0.8);
+  label('HYTE Y60', 227, 136, 31, 0.9); label('lamp', 30, 140, 175, 0.75);
+  label('Top A · 249 × 65', 150, 90, 20); label('Top B · 65 × 249', 32, 90, 215);
+  label('joint + 10 × 3 in plates', 30, 86, 65, 0.8); label('plate pads under the clamps', 35, 86, 4, 0.75); label('NuPhy Air75 V2 on 80 × 30 mat', 53, 92, 53, 0.75);
+  scene.add(labels);
+
+  // Orbit
+  const orbit = { target:new THREE.Vector3(120,55,150), theta:0.85, phi:1.05, radius:560 };
+  const views = {
+    overview:{ target:[120,55,150], theta:0.85, phi:1.05, radius:560 },
+    seat:    { target:[45,108,45],   theta:0.785, phi:1.35, radius:185 },
+    under:   { target:[75,70,80],   theta:0.95, phi:1.75, radius:170 },
+    mount:   { target:[22,82,22],   theta:1.2,  phi:1.4, radius:130 },
+    plan:    { target:[125,0,157],  theta:0.0,  phi:0.02, radius:640 },
+  };
+  let anim = null;
+  function goView(name){
+    const v = views[name];
+    const from = {t:orbit.target.clone(), theta:orbit.theta, phi:orbit.phi, radius:orbit.radius};
+    const to = {t:new THREE.Vector3(...v.target), theta:v.theta, phi:v.phi, radius:v.radius};
+    anim = { from, to, t0: performance.now(), dur: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 650 };
+    document.querySelectorAll('button.v').forEach(b=>b.setAttribute('aria-pressed', b.dataset.view===name ? 'true':'false'));
+  }
+  function stepAnim(now){
+    if(!anim) return;
+    let k = anim.dur ? Math.min(1,(now-anim.t0)/anim.dur) : 1; k = k<.5 ? 2*k*k : -1+(4-2*k)*k;
+    orbit.target.lerpVectors(anim.from.t, anim.to.t, k);
+    orbit.theta = anim.from.theta + (anim.to.theta-anim.from.theta)*k;
+    orbit.phi   = anim.from.phi   + (anim.to.phi  -anim.from.phi)*k;
+    orbit.radius= anim.from.radius+ (anim.to.radius-anim.from.radius)*k;
+    if(k>=1) anim=null;
+  }
+  function updateCamera(){
+    const {theta,phi,radius,target} = orbit;
+    camera.position.set(target.x + radius*Math.sin(phi)*Math.sin(theta), target.y + radius*Math.cos(phi), target.z + radius*Math.sin(phi)*Math.cos(theta));
+    camera.lookAt(target);
+  }
+  const ptrs = new Map(); let lastDist = 0, lastMid = null, mode = null;
+  stage.addEventListener('pointerdown', e=>{ stage.setPointerCapture(e.pointerId); ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); mode = (e.button===2||e.shiftKey)?'pan':'rot'; anim=null; });
+  stage.addEventListener('pointerup', e=>{ ptrs.delete(e.pointerId); lastMid=null; lastDist=0; });
+  stage.addEventListener('pointercancel', e=>{ ptrs.delete(e.pointerId); lastMid=null; lastDist=0; });
+  stage.addEventListener('contextmenu', e=>e.preventDefault());
+  stage.addEventListener('pointermove', e=>{
+    if(!ptrs.has(e.pointerId)) return;
+    const p = ptrs.get(e.pointerId); const dx = e.clientX-p.x, dy = e.clientY-p.y; p.x=e.clientX; p.y=e.clientY;
+    if(ptrs.size===1){
+      if(mode==='pan') pan(dx,dy); else { orbit.theta -= dx*0.006; orbit.phi = Math.min(1.72, Math.max(0.02, orbit.phi - dy*0.006)); }
+    } else if(ptrs.size===2){
+      const [a,b] = [...ptrs.values()]; const d = Math.hypot(a.x-b.x,a.y-b.y); const mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+      if(lastDist) orbit.radius = Math.min(1500, Math.max(60, orbit.radius * lastDist/d));
+      if(lastMid) pan(mid.x-lastMid.x, mid.y-lastMid.y);
+      lastDist=d; lastMid=mid;
+    }
+    document.querySelectorAll('button.v').forEach(b=>b.setAttribute('aria-pressed','false'));
+  });
+  stage.addEventListener('wheel', e=>{ e.preventDefault(); orbit.radius = Math.min(1500, Math.max(60, orbit.radius * (1 + Math.sign(e.deltaY)*0.08))); anim=null; }, {passive:false});
+  function pan(dx,dy){
+    const right = new THREE.Vector3(), up = new THREE.Vector3(0,1,0);
+    camera.getWorldDirection(right); right.cross(up).normalize();
+    const k = orbit.radius*0.0012;
+    orbit.target.addScaledVector(right, -dx*k); orbit.target.y += dy*k;
+  }
+  document.querySelectorAll('button.v').forEach(b=>b.addEventListener('click',()=>goView(b.dataset.view)));
+  document.getElementById('tChair').addEventListener('change',e=>setup.visible=e.target.checked);
+  document.getElementById('tKnee').addEventListener('change',e=>knee.visible=e.target.checked);
+  document.getElementById('tLabels').addEventListener('change',e=>labels.visible=e.target.checked);
+  document.getElementById('tWalls').addEventListener('change',e=>walls.visible=e.target.checked);
+  const xrayMat = new THREE.MeshStandardMaterial({color:0x8a6a50, transparent:true, opacity:0.28, roughness:0.6, depthWrite:false});
+  document.getElementById('tXray').addEventListener('change',e=>{ const on = e.target.checked; [topA,topB].forEach(m=>{ m.material = on ? xrayMat : M.walnut; m.castShadow = !on; }); });
+
+  function resize(){ const w = stage.clientWidth, h = stage.clientHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  function loop(now){ stepAnim(now); updateCamera(); renderer.render(scene,camera); requestAnimationFrame(loop); }
+  requestAnimationFrame(loop);
+  stage.addEventListener('pointerdown', ()=>{ document.getElementById('hint').hidden=true; }, {once:true});
+  goView('overview');
+})();
+</script>
+
+</body>
+</html>
