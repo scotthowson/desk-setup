@@ -9,22 +9,20 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 5 × 5 cm.
-- [ ] Two 7 ft lengths of 2 × 2 × 3/16 in angle plus a 1 ft offcut, deburred.
-- [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in screws, 16 × #10 × ⅝ in screws with washers, 4 × ¼-20 × ¾ in bolts, nuts, 8 washers.
+- [ ] Two lengths of 2 × 2 × 1/8 in square steel tube, cut to 213 cm (7 ft) at the yard, ends deburred. Keep the two offcuts; they are not needed.
+- [ ] Four 10 × 3 in mending plates, 19 × #10 × 7/8 in pan-head screws (if you already have 1 in, add a #10 flat washer under every head), 16 × #10 × ⅝ in screws with washers, one 4 in heavy-duty steel corner brace (two holes per leg), 4 × ¼-20 × 2¾ in bolts, 4 nylon-insert nuts, 8 washers.
 - [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
 - [ ] Room cleared: the desk needs 254 × 319 cm of floor including the 5 cm wall gaps.
 
-## 1. Cut and drill the steel (bench)
+## 1. Drill the steel (bench)
 
 | Piece | Length | Holes | Where |
 | --- | --- | --- | --- |
-| Rail A | 213 cm, uncut | 9 × 7/32 in in the flat leg | 19 mm from the leg's free edge; at 2.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the wall end) |
-| Rail A | | 2 × 9/32 in in the vertical leg | 26 mm down from the flat leg's top face; at 56 and 61 cm from the wall end |
-| Rail B | 213 cm, uncut | 10 × 7/32 in in the flat leg | same offset; at 2.5, 7.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the corner end) |
-| Rail B | | 2 × 9/32 in in the vertical leg | 26 mm down; at 2 and 7 cm from the corner end |
-| Bracket | 9 cm cut from the offcut | drilled later, in place | |
+| Rail A | 213 cm | 9 stations | on the centreline of one face (25 mm from either side); at 2.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the wall end) |
+| Rail B | 213 cm | 10 stations | same; at 2.5, 7.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the corner end) |
+| Both rails | | bolt holes for the corner brace | none on the bench: drilled in place in step 7 through the brace's own holes |
 
-Centre-punch every mark, drill at low speed with oil, deburr with the file. Degrease, scuff, two coats of flat black enamel, dry 24 h.
+Tape one face of each tube and write TOP on it; that face goes against the desk. At every station: drill 7/32 in straight through both walls (one pass keeps the two holes in line), then open the hole in the opposite (bottom) wall only to 7/16 in. The 7/16 in hole passes the screw head and the driver bit. Centre-punch every mark, drill at low speed with oil, deburr with the file. Degrease, scuff, two coats of flat black enamel, dry 24 h.
 
 ## 2. Mark top A (face down)
 
@@ -36,7 +34,7 @@ Measure from the end that will go against the side wall (x = 0) and the edge tha
 | L2 | (65, 10) | OLOV |
 | L3 | (140, 10) | OLOV |
 | F1–F4 | (214, 8), (241, 8), (214, 57), (241, 57) | round feet for ALEX 1 |
-| Rail A line | y = 53, from x = 1 to 214 | the vertical leg's outer face goes on this line, flat leg toward y = 48 |
+| Rail A line | y = 53, from x = 1 to 214 | the tube's front face goes on this line; the tube lies at y 48–53 |
 | Clamp zone 1 | x 31–39, y 0–9 | keep clear |
 | Clamp zone 2 | x 0–9, y 31–39 | keep clear |
 | Plates P1, P2 | centred (15, 65) and (35, 65), long axis along y | span y 52–78, so 13 cm of each plate is on top A |
@@ -51,14 +49,14 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 | L5 | (10, 160) | OLOV |
 | L6 | (10, 235) | OLOV |
 | F5–F8 | (8, 279), (57, 279), (8, 306), (57, 306) | round feet for ALEX 2 |
-| Rail B line | x = 53, from y = 65 to 267 | the vertical leg's outer face on this line, flat leg toward x = 48 |
+| Rail B line | x = 53, from y = 65 to 266 | the tube's outer face goes on this line; the tube lies at x 48–53 |
 
 ## 4. Fit legs and feet to both tops
 
 1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot).
 2. Pilot the feet plate holes 1/8 in, 15 mm deep; screw each plate to the top, pad pointing away from the top. Wind each pad out until the foot measures 10.2 cm overall.
-3. Rail A: clamp it on its line, wall end flush with x = 0. Through each rail hole, drill a 1/8 in pilot 20 mm into the top (tape on the bit at 25 mm). Drive #10 × 1 in screws until the head seats. Nine screws.
-4. Rail B: clamp it on its line with the corner end projecting 11 cm past the top's joint end. Pilot and screw holes 3 to 10 only (eight screws). Holes 1 and 2 wait for step 7.
+3. Rail A: clamp it on its line, TOP face against the top, wall end flush with x = 0. Through each 7/16 in access hole and the 7/32 in hole above it, drill a 1/8 in pilot 20 mm into the top: tape flag on the bit 71 mm from the tip (tube 50.8 mm plus 20 mm); the flag stops on the tube's bottom wall. Drive #10 × 7/8 in screws with a 3 in Robertson #2 power bit through the access hole until the head seats on the inside of the top wall. Nine screws.
+4. Rail B: clamp it on its line with the corner end projecting 12 cm past the top's joint end. Pilot and screw holes 3 to 10 only (eight screws). Holes 1 and 2 wait for step 7.
 
 ## 5. Place the ALEX units
 
@@ -78,8 +76,8 @@ Lift top A onto L1–L3 with the four feet pads landing on ALEX 1. Push it to 5 
 1. Lift top B onto L4–L6 and ALEX 2, slide its end against A's front edge, 5 cm off the side wall.
 2. Adjust its legs and feet until the two surfaces are flush at the joint (run a fingertip across; shim the legs, never the plates).
 3. From below, screw plates P1 and P2 across the joint: #10 × ⅝ in with washers, 1/8 in pilots 12 mm deep, 4 screws per plate, two in each top.
-4. Push rail B's corner end against rail A's vertical leg. Drill its holes 1 and 2 into top A (pilots 20 mm) and screw.
-5. Clamp the 9 cm bracket into the outside corner of the two vertical legs, heel at the corner. Drill 9/32 in through the bracket using the rail holes as guides, four holes. Bolt with a washer each side and nylon-insert nuts, snug.
+4. Push rail B's corner end against rail A's front face. Drill its holes 1 and 2 into top A (pilots 20 mm, same 71 mm flag) and screw.
+5. Hold the 4 in corner brace in the outside corner where rail B's outer face meets rail A's front face, heel at the corner, centred 25 mm below the top, a leg flat on each tube. Through each of its four holes drill 9/32 in straight through both tube walls. Fit the ¼-20 × 2¾ in bolts from the brace side with a washer under each head; washer and nylon-insert nut on the far face (rail A's back face, rail B's inner face). Snug only: a 1/8 in tube wall dents if you crank it.
 
 ## 8. Monitors, PC and the rest
 
