@@ -35,7 +35,7 @@ Fixed positions (cm): OLOV legs L1 (15, 42), L2 (65, 10), L3 (140, 10), L4 (10, 
 1. VIVO pole spacing is assumed 42 cm but is really fixed by the crossbar (part B, the spec's 23 in "base"; the manual uses it as the spacing guide and shows this exact corner mounting). Expect 54–58 cm. Measure collar centre to collar centre on the crossbar, and the pole centre to the desk edge (model assumes 4.5 cm). Clamps move together: clamp centre = pole inset + spacing ÷ 1.414 from the corner.
 2. Round feet: Scott has twelve 4 in feet with a 1.97 in (5 cm) square plate; the plan uses four per ALEX (eight), four spare. Load rating still unknown (design wants ≥ 50 kg each).
 3. Closed 19 Oct 2026: Scott keeps the 83 cm surface (chair at ~52 cm or a footrest).
-4. Closed 19 Oct 2026: Acier Terrebonne has no 3/16 angle; Scott is buying two 8 ft of 2 × 2 × 1/8 in square tube, $80, cut to 213 cm at the yard. The corner bracket is a bought 4 in steel corner brace. Rail screws are #10 × 7/8 in (the 1/8 in wall would put a 1 in screw 22 mm into the top).
+4. Spec closed 19 Oct 2026, source reopened: Acier Terrebonne quoted $80 for two 8 ft of 2 × 2 × 1/8 in square tube but will not ship and is a 3 h drive from Gatineau. Buy the same tube, cut to 213 cm, from Metal Supermarkets Ottawa (2275 Stevenage Dr, Mon–Fri 8–5, 1-866-724-0037); price to confirm. The corner bracket is a bought 4 in steel corner brace. Rail screws are #10 × 7/8 in (the 1/8 in wall would put a 1 in screw 22 mm into the top).
 5. Measured 19 Oct 2026: OLOV plate is 11 cm in diameter (docs assumed ≤ 7 cm), screws M4 × 16 mm fully threaded (IKEA part 108443). The plate clash at (14, 43) is resolved by L1 at (15, 42). ALEX side-panel thickness still open.
 
 ## Rules

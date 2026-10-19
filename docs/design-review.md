@@ -4,7 +4,7 @@ Oct 19, 2026 · @Scott Howson
 
 ## Verdict in five lines
 
-1. Buy neither the C-channels nor the four 6 ft tubes. Buy two 8 ft lengths of 2 × 2 × 1/8 in square steel tube from Acier Terrebonne (quoted $80 the pair, 19 Oct; they stock no 3/16 angle), cut to 213 cm at the yard. The tube is about 1.8 times stiffer than the 2 × 2 × 3/16 angle this review first recommended; the price is the two-hole drilling and a bought corner brace.
+1. Buy neither the C-channels nor the four 6 ft tubes. Buy two lengths of 2 × 2 × 1/8 in square steel tube cut to 213 cm from Metal Supermarkets Ottawa (Acier Terrebonne quoted $80 the pair on 19 Oct but does not ship and is a 3 h drive; expect somewhat more in Ottawa). The tube is about 1.8 times stiffer than the 2 × 2 × 3/16 angle this review first recommended; the price is the two-hole drilling and a bought corner brace.
 2. One tube rail runs under each top's front edge, set 12 cm back, and the two rails are joined at the inside corner by a 4 in steel corner brace through-bolted across both tubes. That bolted joint, not the joining plates, carries the inside corner.
 3. Your six OLOV legs go along the back wall edge and the side wall edge, none in the knee zone (a seventh in the back corner was proposed and dropped on 19 Oct; see E); the two ALEX units, each on four 4 in round adjustable feet, sit centred under the two far ends with 3.5 cm of top showing all round. Set every OLOV to 80.2 cm so the tops sit level on the spacers: top surface at 83.0 cm. You sit at the inside corner facing the diagonal: the Samsung M7 hangs across the corner, the two Acers wrap along each wall with an Edifier under each, and the Y60 sits over ALEX 1. The tops stand 5 cm off both walls so the VIVO clamps have room behind the edges.
 4. Every rail screw into the top is a #10 × 7/8 in wood screw in a pilot hole, penetrating 19 mm of the 28 mm top; no fastener reaches the laminate.
@@ -97,7 +97,7 @@ Everything beyond what you own comes to roughly CAD $130–160 in parts, plus an
 
 | Item | Spec | Qty | Approx. CAD | Source | Confirm? |
 | --- | --- | --- | --- | --- | --- |
-| Steel tube, rails | Square tube 2 × 2 × 1/8 in (51 × 51 × 3.2 mm), 8 ft stock cut to 213 cm each | 2 | $80 total (quoted 19 Oct) | [Acier Terrebonne](https://acierterrebonne.com/en/) | Cuts to 213 cm done at the yard |
+| Steel tube, rails | Square tube 2 × 2 × 1/8 in (51 × 51 × 3.2 mm), 8 ft stock cut to 213 cm each | 2 | $80–120 total (Acier Terrebonne quoted $80 but does not ship) | [Metal Supermarkets Ottawa](https://www.metalsupermarkets.com/ottawa/), 2275 Stevenage Dr, Mon–Fri 8–5 | Call 1-866-724-0037 for the price with two cuts to 213 cm; pickup or delivery |
 | Corner brace | Heavy-duty steel corner brace, 4 × 4 in legs, two holes per leg, 1/8 in or thicker | 1 | $5–8 | Canadian Tire / Rona / Home Depot | Hole spacing: the rails are drilled through it in place, so any spacing works |
 | Rail screws | #10 × 7/8 in pan-head wood screw, Robertson, zinc | 25 (19 used) | $6 | Canadian Tire / Rona / Home Hardware | If you already own 1 in screws, use them with a #10 flat washer under each head |
 | Brace bolts | ¼-20 × 2¾ in hex bolt, zinc (passes through the brace and both tube walls) | 4 | $4 | same |  |
@@ -203,7 +203,7 @@ The six-leg plan without rails is inadequate: both front edges would hang 55 cm 
 
 ## F. Purchasing decision
 
-Buy two 8 ft lengths of 2 × 2 × 1/8 in square tube from Acier Terrebonne, cut to 213 cm ($80 quoted 19 Oct), a 4 in corner brace and the fasteners and finishing items in section C, and nothing else. Do not buy the C-channels or the four 6 ft tubes.
+Buy two lengths of 2 × 2 × 1/8 in square tube cut to 213 cm from Metal Supermarkets Ottawa (price to confirm; Acier Terrebonne's $80 is the reference), a 4 in corner brace and the fasteners and finishing items in section C, and nothing else. Do not buy the C-channels or the four 6 ft tubes.
 
 | Option | Cost (CAD, approx.) | Stiffness per rail (I, in⁴) | Drilling | Fit to a 28 mm particleboard top | Verdict |
 | --- | --- | --- | --- | --- | --- |
@@ -235,7 +235,7 @@ Buy two 8 ft lengths of 2 × 2 × 1/8 in square tube from Acier Terrebonne, cut 
 - [x] OLOV plate measured 11 cm in diameter, screws M4 × 16 mm fully threaded (IKEA part 108443), 19 Oct. Section B assumed a plate no wider than 7 cm: at 11 cm a leg at (14, 43) would reach y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9), so L1 is at (15, 42). Every other leg clears its neighbours by 1.5 cm or more.
 - [ ] Confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 1.97 in (5 cm) square plate; rating still to confirm.
 - [ ] ALEX side-panel thickness where the corner braces go (expect 16–18 mm; #8 × ½ in screws assume ≥ 14 mm).
-- [x] Acier Terrebonne: no 3/16 angle; two 8 ft of 2 × 2 × 1/8 in square tube, $80, cut to 213 cm at the yard (19 Oct).
+- [ ] Steel source: Acier Terrebonne has no 3/16 angle, quoted $80 for two 8 ft of 2 × 2 × 1/8 in tube, but does not ship and is 3 h from Gatineau. Get the same cut to 213 cm from Metal Supermarkets Ottawa; price to confirm.
 - [ ] The max-load note on IKEA Canada's ALEX page for your article numbers.
 - [ ] Floor level across the desk footprint (a 1 m level and a shim set).
 
