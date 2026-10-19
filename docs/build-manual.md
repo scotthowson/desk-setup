@@ -91,10 +91,10 @@ Lift top A onto L1–L4 with the four feet pads landing on ALEX 1. Push it to 5 
 | Crossbar | diagonal between the poles | about 42 cm; if your mount's spacing differs, slide both clamps the same amount |
 | Samsung M7 | centre bracket, screen centred (40, 40) on the diagonal, 18 cm in front of the poles | bottom edge 24 cm above the top, clears the ELLOVEN |
 | ELLOVEN | centred (33, 33), turned 45°, drawer toward you | under the M7 |
-| Acer right | along the back wall, centred about (118, 17), toed 13° toward you | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
-| Acer left | along the side wall, centred about (17, 118), toed 13° | same |
-| Edifiers | centred (118, 22) and (22, 118), grilles toward you | under each Acer |
-| HYTE Y60 | x 213–241, y 8–54, glass toward the corner | over ALEX 1 |
+| Acer right | along the back wall, centred about (106, 19), toed 13° toward you | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
+| Acer left | along the side wall, centred about (19, 106), toed 13° | same |
+| Edifiers | centred (106, 24) and (24, 106), grilles toward you | under each Acer |
+| HYTE Y60 | x 213–241, y 8–54, standing on its I/O end on the MakerWorld pedestal (model 679012), side glass toward the corner, front glass facing up | over ALEX 1 |
 | Deskmat and NuPhy | mat centred (53, 53) turned 45°; keyboard centred (56.5, 56.5); mouse (72, 43) | on the corner square, centred in front of the ELLOVEN |
 | Lamp | base centred (30, 175) | on top B |
 

@@ -252,8 +252,8 @@ label.t input{accent-color:var(--accent);margin:0}
       m.add(box(-4,4,Y1+40,Y1+52,-4,0,M.black)); // VESA plate on the back
       m.position.set(ax,0,az); m.rotation.y = rotY; g.add(m);
     }
-    acer(35,4.5, 118,17, -Math.PI/14, true);          // right Acer along the back wall, toed 13° toward the chair
-    acer(4.5,35, 17,118, Math.PI/2 + Math.PI/14, false); // left Acer along the side wall
+    acer(35,4.5, 106,19, -Math.PI/14, true);          // right Acer along the back wall, toed 13° toward the chair
+    acer(4.5,35, 19,106, Math.PI/2 + Math.PI/14, false); // left Acer along the side wall
     setup.add(g);
   })();
   // ELLOVEN monitor stand with drawer under the M7, drawer pull toward you
@@ -284,19 +284,25 @@ label.t input{accent-color:var(--accent);margin:0}
       const wf = cyl(4.6,4.6,0.4,M.black,0,9,10.5,24); wf.rotation.x=Math.PI/2; s.add(wf);
       s.position.set(x,Y1,z); s.rotation.y = rot; setup.add(s);
     }
-    spk(118, 22, -Math.PI/14 + Math.PI);   // under the right Acer, grille toward the chair
-    spk(22, 118, Math.PI/2 - Math.PI/14);   // under the left Acer
+    spk(106, 24, -Math.PI/14 + Math.PI);   // under the right Acer, grille toward the chair
+    spk(24, 106, Math.PI/2 - Math.PI/14);   // under the left Acer
   })();
-  // HYTE Y60 on top B over ALEX 2, glass toward you
+  // HYTE Y60 standing on its I/O end on a printed pedestal (MakerWorld 679012): footprint 28.5 × 46.2, 45.6 tall.
+  // The former left-side glass now faces the corner seat (-x); the former front glass faces up.
   (function pcCase(){
     const g = new THREE.Group();
-    g.add(box(-14.25,14.25,0,46.2,-22.8,22.8,M.black));
-    const glass = new THREE.MeshStandardMaterial({color:0x9fb4c6, transparent:true, opacity:0.35, roughness:0.05, metalness:0.2, depthWrite:false});
-    g.add(box(-14.6,-14.25,2,44.2,-10,22.8,glass,false));     // side glass faces -x (toward you at the corner)
-    g.add(box(-14.25,14.25,2,44.2,22.8,23.1,glass,false));    // front glass faces +z
-    g.add(box(-14.25,-14.0,2,44.2,-10,22.8,new THREE.MeshStandardMaterial({color:0x2a3340,roughness:0.6}),false));
-    g.add(box(-13.5,-12,3,10,-8,20,new THREE.MeshStandardMaterial({color:0x6cc0ff,emissive:0x2a6fb5,emissiveIntensity:0.8}),false));
-    g.position.set(227,Y1,31); setup.add(g);  // over ALEX 1, glass toward the corner seat
+    const glass = new THREE.MeshStandardMaterial({color:0x9fb4c6, transparent:true, opacity:0.32, roughness:0.05, metalness:0.2, depthWrite:false});
+    const inner = new THREE.MeshStandardMaterial({color:0x2a3340, roughness:0.6});
+    const glow = new THREE.MeshStandardMaterial({color:0x6cc0ff, emissive:0x2a6fb5, emissiveIntensity:0.9});
+    g.add(box(-15.5,15.5,0,2.6,-24.5,24.5,M.black));                 // pedestal base
+    g.add(box(-14.25,14.25,2.6,48.2,-23.1,23.1,M.black));            // case body, standing
+    g.add(box(-14.25,-13.9,4.6,46.2,-22,21,inner,false));            // interior seen through the side glass
+    g.add(box(-14.6,-14.25,4.6,46.2,-22,21,glass,false));            // side glass toward the corner (-x)
+    g.add(box(-13.5,13.5,48.2,48.5,-22,8,glass,false));              // front glass, now on top
+    g.add(box(-13.5,13.5,47.8,48.2,-22,8,inner,false));
+    g.add(box(-13,-12,20,27,-18,12,glow,false));                     // GPU / lighting glow
+    g.add(box(-10,10,30,32,-20,6,glow,false));
+    g.position.set(227,Y1,31); setup.add(g);  // over ALEX 1
   })();
   // ELYONA swing-arm lamp: weighted base, sapele post, elbow, forearm, cone shade
   (function lamp(){
@@ -307,7 +313,9 @@ label.t input{accent-color:var(--accent);margin:0}
     const fore = cyl(1.1,1.1,32,M.sapele,0,0,0); fore.rotation.z = -Math.PI/3; fore.position.set(13.9,37.5,0); l.add(fore); // forearm up and out
     const head = cyl(1.6,1.6,2.5,M.black,0,0,0); head.rotation.z = -Math.PI/3; head.position.set(28.4,45.9,0); l.add(head);
     const shade = cyl(3,6.5,9,M.black,0,0,0,32); shade.rotation.z = Math.PI/2 + Math.PI/5; shade.position.set(33.5,42.5,0); l.add(shade);
-    const bulb = cyl(4.5,4.5,0.6,new THREE.MeshStandardMaterial({color:0xfff2cc,emissive:0xffe2a0,emissiveIntensity:0.9}),0,0,0,24); bulb.rotation.z = Math.PI/2 + Math.PI/5; bulb.position.set(36.2,38.8,0); l.add(bulb);
+    const bulb = cyl(4.5,4.5,0.6,new THREE.MeshStandardMaterial({color:0xfff2cc,emissive:0xffe2a0,emissiveIntensity:1.2}),0,0,0,24); bulb.rotation.z = Math.PI/2 + Math.PI/5; bulb.position.set(36.2,38.8,0); l.add(bulb);
+    const light = new THREE.SpotLight(0xffd9a0, 1.6, 140, Math.PI/3.2, 0.5, 1.2); light.position.set(36.2,38.8,0); light.castShadow = true; light.shadow.mapSize.set(1024,1024); light.shadow.bias = -0.002;
+    const aim = new THREE.Object3D(); aim.position.set(60,-30,0); l.add(aim); light.target = aim; l.add(light);
     l.position.set(30,Y1,175); l.rotation.y = -Math.PI/3; setup.add(l);
   })();
   // Plant
@@ -349,9 +357,9 @@ label.t input{accent-color:var(--accent);margin:0}
   label('4 in feet, 4 per ALEX', 227, 76, 32, 0.8);
   label('Rail A · 213 cm', 110, 72, 53); label('Rail B · 213 cm', 53, 72, 160);
   label('bolted corner bracket', 70, 70, 70, 0.85);
-  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 40, 150, 40, 0.9); label('Acer 31.5', 118, 160, 17, 0.8); label('Acer 31.5', 17, 160, 118, 0.8);
-  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 118, 112, 22, 0.8); label('Edifier', 22, 112, 118, 0.8);
-  label('HYTE Y60', 227, 136, 31, 0.9); label('lamp', 30, 140, 175, 0.75);
+  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 40, 150, 40, 0.9); label('Acer 31.5', 106, 160, 19, 0.8); label('Acer 31.5', 19, 160, 106, 0.8);
+  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 106, 112, 24, 0.8); label('Edifier', 24, 112, 106, 0.8);
+  label('HYTE Y60 on pedestal', 227, 140, 31, 0.9); label('lamp', 30, 140, 175, 0.75);
   label('Top A · 249 × 65', 150, 90, 20); label('Top B · 65 × 249', 32, 90, 215);
   label('joint + 10 × 3 in plates', 30, 86, 65, 0.8); label('plate pads under the clamps', 35, 86, 4, 0.75); label('NuPhy Air75 V2 on 80 × 30 mat', 53, 92, 53, 0.75);
   scene.add(labels);
