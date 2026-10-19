@@ -7,7 +7,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 ## 0. Before you start
 
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
-- [ ] Seven OLOV legs on hand (six ordered plus one more).
+- [ ] Seven OLOV legs on hand (six ordered plus one more). Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight round 4 in feet (four per ALEX). If you only have four, buy four more before step 4.
 - [ ] Two 7 ft lengths of 2 × 2 × 3/16 in angle plus a 1 ft offcut, deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in screws, 16 × #10 × ⅝ in screws with washers, 4 × ¼-20 × ¾ in bolts, nuts, 8 washers.
@@ -56,7 +56,7 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 
 ## 4. Fit legs and feet to both tops
 
-1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA screws. Pre-set every OLOV to 80.2 cm (measure plate face to foot).
+1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot).
 2. Pilot the feet plate holes 1/8 in, 15 mm deep; screw each plate to the top, pad pointing away from the top. Wind each pad out until the foot measures 10.2 cm overall.
 3. Rail A: clamp it on its line, wall end flush with x = 0. Through each rail hole, drill a 1/8 in pilot 20 mm into the top (tape on the bit at 25 mm). Drive #10 × 1 in screws until the head seats. Nine screws.
 4. Rail B: clamp it on its line with the corner end projecting 11 cm past the top's joint end. Pilot and screw holes 3 to 10 only (eight screws). Holes 1 and 2 wait for step 7.

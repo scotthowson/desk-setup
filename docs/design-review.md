@@ -159,7 +159,7 @@ Edge clearances: screw holes sit 19 mm from the flat leg's edge and bolt holes 2
 | Fastener | Passes through | Into the top | Left under the laminate |
 | --- | --- | --- | --- |
 | #10 × 1 in rail screw | 4.8 mm angle | 20.6 mm | 7.4 mm |
-| OLOV screws (IKEA, included) | leg plate \~3 mm | IKEA sizes them for ≥ 25 mm tops | measure one; if longer than 24 mm, substitute #10 × 7/8 in |
+| OLOV screws (IKEA, included) | leg plate \~3 mm | M4 × 16 mm fully threaded, about 13 mm into the top | fine as supplied; pilot 1/8 in, 15 mm deep |
 | #8 × 5/8 in plate and brace screws | 1.5–2 mm plate | \~14 mm | \~14 mm |
 | ¼-20 × ¾ in bolts | 4.8 + 4.8 mm steel | none | not applicable |
 
@@ -235,8 +235,9 @@ Buy two 7 ft lengths of 2 × 2 × 3/16 in angle and a 1 ft offcut from Acier Ter
 **Measure before buying or drilling.**
 
 - [ ] Actual thickness of each EKBACKEN top with calipers (expect 28 mm).
-- [ ] Chair raised to about 52 cm seat height for an 83 cm desk; if your feet dangle, plan a footrest or drop the spacers (OLOV then sets to 70.0, surface 72.8).
-- [ ] OLOV plate diameter and the length of the included screws; plate centres in section B assume a plate no wider than 7 cm. Also confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold.
+- [x] 83 cm confirmed (19 Oct): chair raised to about 52 cm seat height, or a footrest.
+- [x] OLOV plate measured 11 cm in diameter, screws M4 × 16 mm fully threaded (IKEA part 108443), 19 Oct. Section B assumed a plate no wider than 7 cm: at 11 cm the L2 plate at (14, 43) reaches y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9); L2 at (15, 42) clears both. Every other leg clears its neighbours by 1.5 cm or more.
+- [ ] Confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold.
 - [ ] ALEX side-panel thickness where the corner braces go (expect 16–18 mm; #8 × ½ in screws assume ≥ 14 mm).
 - [ ] Acier Terrebonne's price per foot for 2 × 2 × 3/16 in angle, whether they will cut a 9 cm piece, and pickup versus delivery.
 - [ ] The max-load note on IKEA Canada's ALEX page for your article numbers.
