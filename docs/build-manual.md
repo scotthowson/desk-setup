@@ -7,8 +7,8 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 ## 0. Before you start
 
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
-- [ ] Seven OLOV legs on hand (six ordered plus one more). Plate is 11 cm across: keep that in mind at every mark below.
-- [ ] Eight round 4 in feet (four per ALEX). If you only have four, buy four more before step 4.
+- [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
+- [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 5 × 5 cm.
 - [ ] Two 7 ft lengths of 2 × 2 × 3/16 in angle plus a 1 ft offcut, deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in screws, 16 × #10 × ⅝ in screws with washers, 4 × ¼-20 × ¾ in bolts, nuts, 8 washers.
 - [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
@@ -32,10 +32,9 @@ Measure from the end that will go against the side wall (x = 0) and the edge tha
 
 | Mark | Centre (x, y) | Purpose |
 | --- | --- | --- |
-| L1 | (14, 14) | OLOV, corner |
-| L2 | (14, 43) | OLOV |
-| L3 | (65, 10) | OLOV |
-| L4 | (140, 10) | OLOV |
+| L1 | (15, 42) | OLOV, under VIVO clamp 2; its 11 cm plate ends 5 mm short of rail A |
+| L2 | (65, 10) | OLOV |
+| L3 | (140, 10) | OLOV |
 | F1–F4 | (214, 8), (241, 8), (214, 57), (241, 57) | round feet for ALEX 1 |
 | Rail A line | y = 53, from x = 1 to 214 | the vertical leg's outer face goes on this line, flat leg toward y = 48 |
 | Clamp zone 1 | x 31–39, y 0–9 | keep clear |
@@ -48,9 +47,9 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 
 | Mark | Centre (x, y) | Purpose |
 | --- | --- | --- |
-| L5 | (10, 85) | OLOV, 20 cm from the joint end |
-| L6 | (10, 160) | OLOV |
-| L7 | (10, 235) | OLOV |
+| L4 | (10, 85) | OLOV, 20 cm from the joint end |
+| L5 | (10, 160) | OLOV |
+| L6 | (10, 235) | OLOV |
 | F5–F8 | (8, 279), (57, 279), (8, 306), (57, 306) | round feet for ALEX 2 |
 | Rail B line | x = 53, from y = 65 to 267 | the vertical leg's outer face on this line, flat leg toward x = 48 |
 
@@ -72,11 +71,11 @@ Stand them 5 cm off the walls like the tops. A strip of painter's tape on the fl
 
 ## 6. Stand top A (two people)
 
-Lift top A onto L1–L4 with the four feet pads landing on ALEX 1. Push it to 5 cm off both walls. Put a level on the top along x and along y; adjust the OLOV feet and the round feet until it reads flat and all four pads bear with no rock. Target: top surface 83.0 cm above the floor at every corner.
+Lift top A onto L1–L3 with the four feet pads landing on ALEX 1. Push it to 5 cm off both walls. Put a level on the top along x and along y; adjust the OLOV feet and the round feet until it reads flat and all four pads bear with no rock. Target: top surface 83.0 cm above the floor at every corner.
 
 ## 7. Stand top B and make the joint
 
-1. Lift top B onto L5–L7 and ALEX 2, slide its end against A's front edge, 5 cm off the side wall.
+1. Lift top B onto L4–L6 and ALEX 2, slide its end against A's front edge, 5 cm off the side wall.
 2. Adjust its legs and feet until the two surfaces are flush at the joint (run a fingertip across; shim the legs, never the plates).
 3. From below, screw plates P1 and P2 across the joint: #10 × ⅝ in with washers, 1/8 in pilots 12 mm deep, 4 screws per plate, two in each top.
 4. Push rail B's corner end against rail A's vertical leg. Drill its holes 1 and 2 into top A (pilots 20 mm) and screw.
