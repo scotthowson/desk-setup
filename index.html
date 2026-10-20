@@ -50,7 +50,7 @@ label.t input{accent-color:var(--accent);margin:0}
 
 <div id="stage"></div>
 <div class="hdr"><h1>Corner Desk Model</h1><span class="sub">2 × EKBACKEN 249 × 65 · 2 × ALEX on 4 in feet · 6 × OLOV · two 2 × 2 × 3/16 in angle rails · VIVO V300CU across the corner with Samsung M7 32 + 2 × Acer 31.5 · HYTE Y60 · Edifier R1280DBs</span></div>
-<div class="hint" id="hint">drag to orbit · scroll to zoom · right-drag to pan</div>
+<div class="hint" id="hint">drag to orbit · scroll to zoom · right-drag to pan · <a href="guide.html" style="color:inherit">build guide with every measurement</a></div>
 
 <div class="card" aria-label="Key dimensions">
   <h2>As built</h2>
@@ -216,10 +216,10 @@ label.t input{accent-color:var(--accent);margin:0}
   const rails = new THREE.Group(); const t = 0.48, L = 5.08;
   rails.add(box(1,214,Y0-t,Y0,48,53,M.steel), box(1,214,Y0-L,Y0,53-t,53,M.steel));      // rail A, 213 cm, clears the ALEX because of the feet
   rails.add(box(48,53,Y0-t,Y0,53,266,M.steel), box(53-t,53,Y0-L,Y0,53,266,M.steel));    // rail B, 213 cm, corner end against rail A's vertical leg
-  rails.add(box(53,61,Y0-4.85,Y0-0.75,53,53.5,M.zinc), box(53,53.5,Y0-4.85,Y0-0.75,53,61,M.zinc));     // outside 5 mm gusseted strut fitting (1-5/8 in wide), 28 mm below the top
-  rails.add(box(45,53,Y0-4.85,Y0-0.75,53,53.5,M.zinc), box(52,52.5,Y0-4.85,Y0-0.75,53,61,M.zinc));     // inside fitting, other side of rail B's end, under B's flat leg
+  rails.add(box(53,61,Y0-4.95,Y0-0.85,53,53.5,M.zinc), box(53,53.5,Y0-4.95,Y0-0.85,53,61,M.zinc));     // outside 5 mm gusseted strut fitting (1-5/8 in wide), 29 mm below the top
+  rails.add(box(45,53,Y0-4.95,Y0-0.85,53,53.5,M.zinc), box(52,52.5,Y0-4.95,Y0-0.85,53,61,M.zinc));     // inside fitting, other side of rail B's end, under B's flat leg
   const boltGeo = new THREE.CylinderGeometry(0.8,0.8,0.6,12);
-  [[55.5,0],[59.5,0],[50.5,0],[46.5,0],[0,55.5],[0,59.5]].forEach(([x,z],i)=>{ const b = new THREE.Mesh(boltGeo, M.zinc); if(i<4){ b.rotation.x=Math.PI/2; b.position.set(x,Y0-2.8,53.8);} else { b.rotation.z=Math.PI/2; b.position.set(53.8,Y0-2.8,z);} rails.add(b); });
+  [[55.5,0],[59.5,0],[50.5,0],[46.5,0],[0,55.5],[0,59.5]].forEach(([x,z],i)=>{ const b = new THREE.Mesh(boltGeo, M.zinc); if(i<4){ b.rotation.x=Math.PI/2; b.position.set(x,Y0-2.9,53.8);} else { b.rotation.z=Math.PI/2; b.position.set(53.8,Y0-2.9,z);} rails.add(b); });
   rails.add(box(11.2,18.8,Y0-0.25,Y0,52.3,77.7,M.zinc,false), box(31.2,38.8,Y0-0.25,Y0,52.3,77.7,M.zinc,false)); // 10 × 3 in mending plates across the joint
   rails.add(box(22.3,47.7,Y0-0.25,Y0,0.5,8.1,M.zinc,false), box(0.5,8.1,Y0-0.25,Y0,22.3,47.7,M.zinc,false)); // the other two plates as backing pads under the VIVO clamp jaws
   scene.add(rails);
@@ -270,8 +270,8 @@ label.t input{accent-color:var(--accent);margin:0}
       m.add(box(-4,4,Y1+40,Y1+52,-4,0,M.black)); // VESA plate on the back
       m.position.set(ax,0,az); m.rotation.y = rotY; g.add(m);
     }
-    acer(35,4.5, 95,18, -Math.PI/12, true);           // right Acer along the back wall, toed 15°, its near end 2 cm from the M7's end
-    acer(4.5,35, 18,95, Math.PI/2 + Math.PI/12, false);  // left Acer along the side wall
+    acer(35,4.5, 99,19, -Math.PI/12, true);           // right Acer along the back wall, toed 15°, its near end about 6 cm from the M7's end
+    acer(4.5,35, 19,99, Math.PI/2 + Math.PI/12, false);  // left Acer along the side wall
     setup.add(g);
   })();
   // ELLOVEN monitor stand with drawer under the M7, drawer pull toward you
@@ -302,8 +302,8 @@ label.t input{accent-color:var(--accent);margin:0}
       const wf = cyl(4.6,4.6,0.4,M.black,0,9,10.5,24); wf.rotation.x=Math.PI/2; s.add(wf);
       s.position.set(x,Y1,z); s.rotation.y = rot; setup.add(s);
     }
-    spk(95, 22, -Math.PI/12);               // under the right Acer, grille toward the chair
-    spk(22, 95, Math.PI/2 - Math.PI/12);    // under the left Acer
+    spk(108, 22, -Math.PI/12);              // under the right Acer, toward its far end, grille toward the chair
+    spk(22, 108, Math.PI/2 - Math.PI/12);   // under the left Acer
   })();
   // HYTE Y60 standing on its I/O end on a printed pedestal (MakerWorld 679012): footprint 28.5 × 46.2, 45.6 tall.
   // Turned so the former left-side glass faces the room (+z); the former front glass faces up.
@@ -320,7 +320,7 @@ label.t input{accent-color:var(--accent);margin:0}
     g.add(box(-13.5,13.5,47.8,48.2,-22,8,inner,false));
     g.add(box(-13,-12,20,27,-18,12,glow,false));                     // GPU / lighting glow
     g.add(box(-10,10,30,32,-20,6,glow,false));
-    g.position.set(222,Y1,32.5); g.rotation.y = Math.PI/2; setup.add(g);  // over ALEX 1, long axis along the wall
+    g.position.set(222,Y1,20); g.rotation.y = Math.PI/2; setup.add(g);  // over ALEX 1, long axis along the wall, 4.5 cm off the back edge
   })();
   // ELYONA swing-arm lamp: weighted base, sapele post, elbow, forearm, cone shade
   (function lamp(){
@@ -344,8 +344,8 @@ label.t input{accent-color:var(--accent);margin:0}
     const h = new THREE.Group();
     h.add(cyl(6.5,6.5,1.5,M.sapele,0,0.75,0,32), cyl(1.1,1.1,26,M.sapele,0,14.5,0));
     const hook = cyl(0.9,0.9,8,M.sapele,0,27,0); hook.rotation.z = Math.PI/2; hook.position.set(3.5,27,0); h.add(hook);
-    const band = new THREE.Mesh(new THREE.TorusGeometry(8,1.1,10,28), M.black); band.position.set(5,19,0); band.castShadow = true; h.add(band);
-    [-1,1].forEach(s=>{ const cup = cyl(4.5,4.5,3.2,M.black,0,0,0,24); cup.rotation.z = Math.PI/2; cup.position.set(5+s*8.6,13,0); h.add(cup); });
+    const band = new THREE.Mesh(new THREE.TorusGeometry(8,1.1,10,28,Math.PI), M.black); band.position.set(5,19.5,0); band.castShadow = true; h.add(band); // half ring, hanging on the hook
+    [-1,1].forEach(s=>{ const cup = cyl(4.5,4.5,3.2,M.black,0,0,0,24); cup.rotation.z = Math.PI/2; cup.position.set(5+s*8.6,17.5,0); h.add(cup); });
     h.position.set(28,Y1,140); h.rotation.y = -Math.PI/2; setup.add(h);
   })();
   // Chair facing top A
@@ -384,9 +384,9 @@ label.t input{accent-color:var(--accent);margin:0}
   label('4 in feet in printed rings, 4 per ALEX', 227, 76, 32, 0.8);
   label('Rail A · 213 cm', 110, 72, 53); label('Rail B · 213 cm', 53, 72, 160);
   label('two gusseted corner fittings', 70, 70, 70, 0.85);
-  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 34, 150, 34, 0.9); label('Acer 31.5', 95, 160, 18, 0.8); label('Acer 31.5', 18, 160, 95, 0.8);
-  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 95, 112, 22, 0.8); label('Edifier', 22, 112, 95, 0.8);
-  label('HYTE Y60 on pedestal', 222, 140, 32.5, 0.9); label('lamp', 183, 140, 20, 0.75); label('headset stand', 28, 125, 140, 0.75); label('plant', 32, 115, 298, 0.75);
+  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 34, 150, 34, 0.9); label('Acer 31.5', 99, 160, 19, 0.8); label('Acer 31.5', 19, 160, 99, 0.8);
+  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 108, 112, 22, 0.8); label('Edifier', 22, 112, 108, 0.8);
+  label('HYTE Y60 on pedestal', 222, 140, 20, 0.9); label('lamp', 183, 140, 20, 0.75); label('headset stand', 28, 125, 140, 0.75); label('plant', 32, 115, 298, 0.75);
   label('Top A · 249 × 65', 150, 90, 20); label('Top B · 65 × 249', 32, 90, 215);
   label('joint + 10 × 3 in plates', 30, 86, 65, 0.8); label('plate pads under the clamps', 35, 86, 4, 0.75); label('NuPhy Air75 V2 on 80 × 30 mat', 53, 92, 53, 0.75);
   scene.add(labels);

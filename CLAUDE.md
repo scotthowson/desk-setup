@@ -10,6 +10,7 @@ You are continuing work on Scott's L-shaped PC desk build. Everything here is a 
 | `docs/design-review.md` | Engineering review: verified IKEA specs, load paths, bill of materials, hole schedule, structural assessment, purchasing decision, open measurements | Only to correct a measured fact |
 | `docs/build-manual.md` | Build order with every measurement and the final checks | Only to correct a measured fact |
 | `docs/plan.svg` | Static top-down plan | Regenerate if leg or clamp positions change |
+| `guide.html` | Print-ready build guide: every measurement, dimensioned drawings of each top face down, rails, ALEX rings, the corner joint and the desk layout. All numbers live in the `D` object at the top of its script and every table and drawing is rendered from it. | Yes: change `D` whenever `docs/build-manual.md` changes |
 
 ## The design in one paragraph
 
@@ -35,7 +36,7 @@ Fixed positions (cm): OLOV legs L1 (15, 42), L2 (65, 10), L3 (140, 10), L4 (10, 
 1. VIVO pole spacing is assumed 42 cm but is really fixed by the crossbar (part B, the spec's 23 in "base"; the manual uses it as the spacing guide and shows this exact corner mounting). Expect 54–58 cm. Measure collar centre to collar centre on the crossbar, the pole centre to the desk edge (model assumes 4.5 cm), and how far the clamp projects behind the desk edge (the 3 cm wall gap assumes under 2.5 cm). Clamps move together: clamp centre = pole inset + spacing ÷ 1.414 from the corner.
 2. Round feet: Scott has twelve 4 in feet (listing: 10 cm tall, 5 cm stainless body and pad, 6 × 6 cm plate); the plan uses four per ALEX (eight), four spare; pad diameter 5 cm, so the printed locating rings have a 51 mm bore. Load rating still unknown (design wants ≥ 50 kg each).
 3. Closed 19 Oct 2026: Scott keeps the 83 cm surface (chair at ~52 cm or a footrest).
-4. Closed 19 Oct 2026: two 2 × 2 × 0.188 in hot-rolled angle, 84 in each, ordered from Metal Supermarkets Ottawa (2275 Stevenage Dr) for pickup, $142.68 plus tax = $161.22, cutting included. No offcut, so the corner bracket is two 5 mm gusseted 90° strut fittings (1-5/8 in channel, 9/16 in holes, two per leg), one each side of rail B's end, centred 28 mm below the top: four 3/8-16 × 1 in bolts through rail A's vertical leg, two 3/8-16 × 1½ in bolts through rail B's leg with a fitting on each side, all in 7/16 in holes. Rail screws #10 × 1 in.
+4. Closed 19 Oct 2026: two 2 × 2 × 0.188 in hot-rolled angle, 84 in each, ordered from Metal Supermarkets Ottawa (2275 Stevenage Dr) for pickup, $142.68 plus tax = $161.22, cutting included. No offcut, so the corner bracket is two 5 mm gusseted 90° strut fittings (1-5/8 in channel, 9/16 in holes, two per leg), one each side of rail B's end, centred 29 mm below the top (the inside fitting's top edge then clears rail B's first two screw heads by 1 mm): four 3/8-16 × 1 in bolts through rail A's vertical leg, two 3/8-16 × 1½ in bolts through rail B's leg with a fitting on each side, all in 7/16 in holes. Rail screws #10 × 1 in.
 5. Measured 19 Oct 2026: OLOV plate is 11 cm in diameter (docs assumed ≤ 7 cm), screws M4 × 16 mm fully threaded (IKEA part 108443). The plate clash at (14, 43) is resolved by L1 at (15, 42). ALEX side-panel thickness still open.
 
 ## Rules

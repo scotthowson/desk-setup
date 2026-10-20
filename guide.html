@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corner Desk Build Guide</title>
+<meta name="description" content="Every measurement for Scott's L-shaped EKBACKEN / ALEX / OLOV corner desk, in build order, with dimensioned drawings.">
+<style>
+:root{
+  --bg:#f6f1ea; --paper:#fffdfa; --ink:#1f1a16; --muted:#6b5f55; --rule:#d9cfc4; --accent:#b4791c; --accent2:#2f5d8a;
+  --ok:#2f7d4a; --warn:#a33a2a; --top:#e7d5bf; --topEdge:#8a6a4b; --steel:#8d9299; --zone:#f1dcb0; --knee:#bbb;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#17141180; --paper:#1d1915; --ink:#efe7dc; --muted:#a79b8e; --rule:#3a322b; --accent:#e0a53a; --accent2:#7fb0e0;
+  --ok:#6fc08a; --warn:#e0735f; --top:#4a3a2b; --topEdge:#c6a57e; --steel:#9aa0a8; --zone:#5a4520; --knee:#777;
+}}
+:root[data-theme="dark"]{ --bg:#17141180; --paper:#1d1915; --ink:#efe7dc; --muted:#a79b8e; --rule:#3a322b; --accent:#e0a53a; --accent2:#7fb0e0; --ok:#6fc08a; --warn:#e0735f; --top:#4a3a2b; --topEdge:#c6a57e; --steel:#9aa0a8; --zone:#5a4520; --knee:#777; }
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+.page{max-width:880px;margin:0 auto;padding:32px 16px 80px;background:var(--paper)}
+h1{font-size:34px;line-height:1.1;margin:0 0 6px;font-weight:600;letter-spacing:-.01em}
+h2{font-size:22px;margin:44px 0 10px;padding-top:14px;border-top:2px solid var(--rule);font-weight:600}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600;color:var(--accent2)}
+p{margin:8px 0}
+.lead{font-size:17px;color:var(--muted);margin-bottom:18px}
+.kicker{font:600 11px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+table{border-collapse:collapse;width:100%;margin:10px 0 16px;font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--rule)}
+th{font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{border-left:3px solid var(--accent);padding:8px 12px;margin:14px 0;background:color-mix(in srgb,var(--accent) 8%,transparent);font-size:14px}
+.warn{border-left-color:var(--warn);background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.ok{border-left-color:var(--ok);background:color-mix(in srgb,var(--ok) 8%,transparent)}
+.fig{margin:14px 0 6px;padding:10px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);overflow-x:auto}
+.fig svg{display:block;max-width:100%;height:auto;font:11px system-ui,sans-serif}
+.cap{font:12px/1.45 system-ui,sans-serif;color:var(--muted);margin:4px 0 14px}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+ul.check{list-style:none;padding:0}
+ul.check li{padding:4px 0 4px 28px;position:relative}
+ul.check li::before{content:"";position:absolute;left:2px;top:7px;width:14px;height:14px;border:1.5px solid var(--muted);border-radius:3px}
+code{font:13px ui-monospace,Menlo,Consolas,monospace;background:color-mix(in srgb,var(--ink) 7%,transparent);padding:1px 5px;border-radius:3px}
+.toc{columns:2;column-gap:24px;font:14px/1.6 system-ui,sans-serif;margin:10px 0 0}
+.toc a{color:var(--accent2);text-decoration:none}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.two{grid-template-columns:1fr}.toc{columns:1}}
+a{color:var(--accent2)}
+@media print{
+  :root{--bg:#fff;--paper:#fff;--ink:#000;--muted:#444;--rule:#bbb}
+  body{font-size:12.5px}
+  .page{max-width:none;padding:0}
+  h2{break-before:page;margin-top:0;border-top:0}
+  h2:first-of-type{break-before:auto}
+  .fig{break-inside:avoid;border-color:#999}
+  table{break-inside:auto} tr{break-inside:avoid}
+  .noprint{display:none}
+  a{color:#000;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<p class="kicker">Corner desk · build guide</p>
+<h1>Every measurement, in the order you need it</h1>
+<p class="lead">Two IKEA EKBACKEN tops in an L, two ALEX units, six OLOV legs, two steel angle rails, a VIVO triple mount across the corner. Numbers are in centimetres unless marked. The drawings and tables below are generated from one list of numbers, so they always agree with each other and with the 3D model.</p>
+<p class="noprint"><a href="index.html">Open the 3D model</a> · <a href="docs/build-manual.md">build-manual.md</a> · <a href="docs/design-review.md">design-review.md</a> · print this page for the workshop (Ctrl/Cmd+P; each section starts a new sheet).</p>
+<nav class="toc" aria-label="Contents">
+  <div><a href="#s0">0 · How to read the numbers</a></div>
+  <div><a href="#s1">1 · Parts and tools</a></div>
+  <div><a href="#s2">2 · Steel: drill the rails</a></div>
+  <div><a href="#s3">3 · Top A, face down</a></div>
+  <div><a href="#s4">4 · Top B, face down</a></div>
+  <div><a href="#s5">5 · ALEX units and locating rings</a></div>
+  <div><a href="#s6">6 · Standing it up</a></div>
+  <div><a href="#s7">7 · Monitor mount and what goes where</a></div>
+  <div><a href="#s8">8 · Final checks</a></div>
+  <div><a href="#s9">9 · Still to measure</a></div>
+</nav>
+
+<h2 id="s0">0 · How to read the numbers</h2>
+<p>Every position is a pair <strong>(x, y)</strong> in centimetres measured from the <strong>back-left corner of top A</strong>: x runs along the back wall, y runs along the side wall. Top A covers x 0–249, y 0–65. Top B covers x 0–65, y 65–314. The two tops meet on the line y = 65. Both tops stand 3 cm off their walls.</p>
+<p><strong>Your seat</strong> is at the inside corner of the L, facing the corner diagonally. The three monitors wrap around that corner; your knees swing through the open space under the corner square and the first 55 cm of each wing. Nothing is allowed to stand in that sweep, which is why all six legs are on the wall edges and the front edges are carried by steel rails instead.</p>
+<div class="fig" id="figOverview"></div>
+<p class="cap">Plan view from above. Gold circles are legs, with their 11 cm plates drawn to size. Small circles are the ALEX feet. Grey strips are the rails, 12 cm back from the front edges. The dashed area is the knee sweep.</p>
+<div class="note">When a top is <strong>face down</strong> on the blanket you are looking at its underside, so the layout appears mirrored. Sections 3 and 4 draw each top exactly as you will see it face down, with the measuring edges marked. Measure from those two edges and the drawing matches.</div>
+<h3>Heights, from the floor</h3>
+<table id="tHeights"></table>
+
+<h2 id="s1">1 · Parts and tools</h2>
+<h3>Bought</h3>
+<table id="tParts"></table>
+<h3>Fasteners (every screw, with how deep it goes)</h3>
+<div class="note warn">The tops are 28 mm particleboard with a laminate face. No fastener goes deeper than <strong>21 mm</strong> into a top. Every depth below respects that; if your tops measure 27 mm, shorten each screw into the top by 1 mm.</div>
+<table id="tFast"></table>
+<h3>Tools</h3>
+<table id="tTools"></table>
+
+<h2 id="s2">2 · Steel: drill the rails on the bench</h2>
+<p>Two pieces of 2 × 2 × 3/16 in hot-rolled angle, each 213 cm (84 in), arrive cut. One leg of the angle goes flat against the underside of the top (the <em>flat leg</em>); the other hangs down toward the floor (the <em>vertical leg</em>). All screw holes go in the flat leg, 19 mm from its free edge. The bolt holes for the corner fittings are not drilled on the bench; they are marked through the fittings in place (section 6).</p>
+<div class="fig" id="figRailA"></div>
+<p class="cap">Rail A. Stations are measured from the <strong>wall end</strong>. The flat leg is shown; holes on the line 19 mm from the free edge.</p>
+<div class="fig" id="figRailB"></div>
+<p class="cap">Rail B. Stations are measured from the <strong>corner end</strong>. Holes 1 and 2 land in top A; holes 3 to 10 in top B.</p>
+<table id="tRail"></table>
+<ol class="steps">
+  <li>Label the ends with tape: rail A <em>wall end</em>, rail B <em>corner end</em>. File both ends of both rails.</li>
+  <li>With a combination square, scribe the hole line 19 mm from the free edge of the flat leg along the full length of each rail.</li>
+  <li>Mark the stations from the labelled end with a tape measure, centre-punch each mark.</li>
+  <li>Drill 7/32 in at every mark, low speed, a drop of oil on each. Deburr both sides with the file or a larger bit turned by hand.</li>
+  <li>Degrease with acetone, scuff the mill scale with 120 grit, two light coats of flat black enamel, 24 h to cure. Holes clear themselves; mask nothing.</li>
+</ol>
+
+<h2 id="s3">3 · Top A, face down</h2>
+<p>Lay top A face down on a blanket. Find the end that will go against the <strong>side wall</strong> (that is x = 0) and the long edge that will go against the <strong>back wall</strong> (y = 0). Put a strip of tape on each and label them. Every mark below is measured from those two edges. The drawing is what you see from above the face-down top: x grows to the <strong>left</strong>.</p>
+<div class="fig" id="figA"></div>
+<p class="cap">Top A underside as seen face down. Solid gold circles: OLOV plates (11 cm). Grey squares: feet plates (6 cm). Grey strip: rail A. Hatched: VIVO clamp zones (keep clear). Pale bars: the two loose mending plates that pad the clamp jaws. Blue bars: the two joining plates, half on this top.</p>
+<table id="tA"></table>
+<ol class="steps">
+  <li><strong>Legs L1, L2, L3.</strong> Mark each centre. Set the OLOV plate on the mark, scribe through its four holes, pilot 1/8 in, 15 mm deep (tape flag on the bit at 15 mm). Drive the IKEA M4 × 16 mm screws. Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
+  <li><strong>Feet F1–F4.</strong> Mark each centre; the 6 cm plate sits centred on it, its edges parallel to the top's edges. Scribe the four plate holes, pilot 1/8 in, 15 mm deep, drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> overall.</li>
+  <li><strong>Clamp zones.</strong> Nothing goes in x 31–39 along the back edge (9 cm in) or y 31–39 along the left end (9 cm in). Lay the two spare mending plates loose where drawn; they are placed between the clamp jaw and the top in section 7, no screws.</li>
+  <li><strong>Rail A.</strong> Scribe the rail line at y = 53 from x = 1 to 214. Clamp the rail with its vertical leg's outer face on that line, flat leg toward the back edge (covering y 48–53), wall end flush with x = 0 plus 1 cm (the rail starts at x = 1). Through each of the nine holes drill a 1/8 in pilot 20 mm into the top: tape flag <strong>25 mm</strong> from the bit tip (4.8 mm steel + 20 mm). Drive #10 × 1 in screws with the Robertson bit on the 3 in extension so the chuck clears the vertical leg; stop when the head seats.</li>
+  <li><strong>Joining plates</strong> wait for section 6; mark their outlines now so nothing else lands there.</li>
+</ol>
+
+<h2 id="s4">4 · Top B, face down</h2>
+<p>Lay top B face down. The end that will butt against top A is y = 65; the long edge that goes against the side wall is x = 0. Label both. The drawing is again as seen from above the face-down top, x growing to the left.</p>
+<div class="fig" id="figB"></div>
+<p class="cap">Top B underside as seen face down. The rail's corner end projects 12 cm past the joint end; that 12 cm will lie under top A.</p>
+<table id="tB"></table>
+<ol class="steps">
+  <li><strong>Legs L4, L5, L6</strong> and <strong>feet F5–F8</strong> exactly as on top A.</li>
+  <li><strong>Rail B.</strong> Scribe the rail line at x = 53 from the joint end (y = 65) to y = 266. Clamp the rail with its vertical leg's outer face on that line, flat leg toward the wall edge (x 48–53), and its <strong>corner end projecting 12 cm past the joint end</strong> (it will sit against rail A under top A). Pilot and screw holes <strong>3 to 10</strong> only, same 25 mm flag, eight screws. Holes 1 and 2 are driven into top A in section 6.</li>
+</ol>
+
+<h2 id="s5">5 · ALEX units and locating rings</h2>
+<p>The feet pads do not touch bare laminate. Each pad drops into a printed ring screwed to the ALEX top, so the top cannot slide on the units and the units brace the whole desk against racking.</p>
+<div class="two">
+  <div><div class="fig" id="figAlex1"></div><p class="cap">ALEX 1 top (36 × 58), drawers toward you. Ring centres 5 cm in from each corner.</p></div>
+  <div><div class="fig" id="figAlex2"></div><p class="cap">ALEX 2 top (58 × 36), door toward you. Same rule.</p></div>
+</div>
+<table id="tRing"></table>
+<ol class="steps">
+  <li>Print eight rings: 51 mm bore, 3 mm wall, 10 mm tall, no floor, three countersunk holes on the wall for #6 × 5/8 in screws. PETG or ABS. Measure your pad first; the bore is pad + 1 mm.</li>
+  <li>Mark the four ring centres on each ALEX top, 5 cm in from each corner. Set each ring on its mark, scribe the three holes, pilot 5/64 in 12 mm deep, drive the screws.</li>
+  <li>Place the units: ALEX 1 at x 209.5–245.5, y 3.5–61.5 with the drawers facing you; ALEX 2 at x 3.5–61.5, y 274.5–310.5 with the door facing you. Both 3 cm off their walls. Painter's tape on the floor at x = 209.5 and y = 274.5 saves guessing.</li>
+</ol>
+
+<h2 id="s6">6 · Standing it up (two people)</h2>
+<ol class="steps">
+  <li><strong>Top A.</strong> Lift it onto L1–L3 with the four pads dropping into the rings on ALEX 1. Lift and set; the rings do not allow a push. Final position: 3 cm off both walls. Level along x and along y. Adjust the OLOV feet and the round feet until it reads flat and all four pads bear with no rock. Target <strong>83.0 cm</strong> at every corner.</li>
+  <li><strong>Top B.</strong> Lift onto L4–L6 with its pads in the rings on ALEX 2, its end against A's front edge, 3 cm off the side wall. Adjust until the two surfaces are flush at the joint: run a fingertip across; shim the legs, never the plates.</li>
+  <li><strong>Joining plates.</strong> From below, screw P1 and P2 across the joint: each plate centred on the joint line, long axis across it, two #10 × 5/8 in screws with washers in each top, pilots 1/8 in, 12 mm deep. Use the plate's holes nearest 4 cm and 9 cm from the joint on each side.</li>
+  <li><strong>Rail B meets rail A.</strong> Push rail B's corner end against rail A's vertical leg. Drill holes 1 and 2 into top A (25 mm flag) and screw.</li>
+  <li><strong>Corner fittings.</strong> Hold one 5 mm gusseted strut fitting in the <em>outside</em> corner where the two vertical legs meet: one leg flat on rail A's vertical leg toward the far end, the other on rail B's outer face, gusset facing the open quadrant. Hold the second in the <em>inside</em> corner: one leg on rail A's vertical leg toward the wall, the other on the inner face of rail B's vertical leg, gusset under B's flat leg. Both centred <strong>29 mm below the underside of the top</strong>; the inside one must clear B's flat leg above and the heads of screws 1 and 2. Centre-punch through all eight holes, remove both fittings, drill the marks 7/16 in (four in rail A, two in rail B where the marks coincide). Refit. Rail A: four 3/8-16 × 1 in bolts, washer under head, washer and nylon-insert nut inside the leg. Rail B: two 3/8-16 × 1½ in bolts through fitting, leg and fitting. Snug, not cranked.</li>
+</ol>
+<div class="fig" id="figCorner"></div>
+<p class="cap">The inside corner in plan view (x right, y down, as in every other drawing). Rail B's end is sandwiched between the two fittings; bolt centres are 29 mm below the top's underside, along the rail wherever the fitting's holes fall.</p>
+
+<h2 id="s7">7 · Monitor mount and what goes where</h2>
+<div class="note">The two VIVO clamp positions depend on the crossbar's real pole spacing (section 9). The numbers below assume 42 cm; if the crossbar measures 54–58 cm collar to collar, both clamps move out to about 43–46 cm from the corner and nothing else changes.</div>
+<ol class="steps">
+  <li>Lay a spare mending plate flat on the underside at each clamp zone. Fit the VIVO lower clamps using the manual's <strong>Option 1</strong> holes (2 and 4), since the 28 mm top plus plate is under 60 mm.</li>
+  <li>Clamp 1 centred at <strong>x = 35</strong> on A's back edge; clamp 2 centred at <strong>y = 35</strong> on A's left end edge. The clamp backs sit in the 3 cm wall gap.</li>
+  <li>Slide the crossbar onto the poles as the spacing guide (VIVO step 3), tighten the clamps, then refit the crossbar at monitor height (VIVO step 6).</li>
+  <li>Hang the screens and set the heights in the table below. Toe the Acers in about 15° so their near ends sit 2 cm from the M7's ends.</li>
+</ol>
+<div class="fig" id="figSetup"></div>
+<p class="cap">Plan view of everything on the desk.</p>
+<table id="tSetup"></table>
+
+<h2 id="s8">8 · Final checks</h2>
+<ul class="check">
+  <li>Top surface 83.0 cm at all six outer corners, ±3 mm.</li>
+  <li>A level across the joint reads flat both ways; a fingertip finds no step.</li>
+  <li>Push the inside corner down hard: it gives 2–3 mm and springs back, no creak.</li>
+  <li>Push the desk sideways along each wall: no sway at the top beyond a few millimetres, no movement of a top on its ALEX.</li>
+  <li>No screw tip visible or felt as a bump on either laminate face.</li>
+  <li>Knees clear: sit at the corner, slide in, nothing within reach of a knee or thigh. The rails' lower edge is 75.1 cm from the floor, 12 cm back from the edge.</li>
+  <li>Both ALEX fronts open fully without touching a foot or a leg.</li>
+  <li>Retighten every screw after two weeks.</li>
+</ul>
+
+<h2 id="s9">9 · Still to measure</h2>
+<ul class="check">
+  <li>VIVO crossbar, collar centre to collar centre; pole centre to desk edge; how far the clamp projects behind the edge (the 3 cm gap assumes under 2.5 cm).</li>
+  <li>Round feet load rating (design wants 50 kg or more each); pad diameter with calipers before printing the rings.</li>
+  <li>ALEX top-panel thickness where the ring screws go (expect 16 mm or more).</li>
+  <li>Each top's thickness with calipers (expect 28 mm).</li>
+</ul>
+
+</div>
+<script>
+// ---------- One place for every number. docs/build-manual.md is the source of truth; keep this in step with it. ----------
+const D = {
+  T: 2.8, Y0: 80.2, Y1: 83.0, gap: 3,
+  A: { x0:0, x1:249, y0:0, y1:65 }, B: { x0:0, x1:65, y0:65, y1:314 },
+  legs: [ ['L1',15,42,'A','under VIVO clamp 2; plate ends 5 mm short of rail A'], ['L2',65,10,'A','nearest leg to clamp 1'], ['L3',140,10,'A','69.5 to ALEX 1'],
+          ['L4',10,85,'B','20 past the joint'], ['L5',10,160,'B',''], ['L6',10,235,'B','39.5 to ALEX 2'] ],
+  legPlate: 11, legScrew: 'M4 × 16 mm (IKEA), 1/8 in pilot 15 mm deep',
+  feet: [ ['F1',214.5,8.5,'A'], ['F2',240.5,8.5,'A'], ['F3',214.5,56.5,'A'], ['F4',240.5,56.5,'A'], ['F5',8.5,279.5,'B'], ['F6',56.5,279.5,'B'], ['F7',8.5,305.5,'B'], ['F8',56.5,305.5,'B'] ],
+  footPlate: 6, footPad: 5, footH: 10.16, ringBore: 5.1, ringOD: 5.7, ringH: 1.0,
+  alex1: { x0:209.5, y0:3.5, w:36, d:58, face:'drawers toward you (+y)' }, alex2: { x0:3.5, y0:274.5, w:58, d:36, face:'door toward you (+x)' },
+  railA: { x0:1, x1:214, y0:48, y1:53, holes:[2.5,28,54,80,106,132,158,184,210.5], from:'wall end' },
+  railB: { y0:53, y1:266, x0:48, x1:53, holes:[2.5,7.5,28,54,80,106,132,158,184,210.5], from:'corner end' },
+  holeOffset: 1.9, angle: 5.08, wall: 0.48,
+  fitting: { below: 2.9, w: 4.13, legs: 8 },
+  clamp: 35, clampW: 7.6, clampD: 8.9, zoneIn: 9,
+  pads: [ [22.3,47.7,0.5,8.1], [0.5,8.1,22.3,47.7] ],
+  plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6,
+  knee: [ [20,120,20,65], [20,65,65,120] ],
+  setup: [
+    ['Samsung M7 32 in','centre bracket, screen centred (34, 34) on the diagonal, 20 cm in front of the crossbar','bottom edge 24 above the top (107 from the floor), top edge 66 above'],
+    ['Acer XZ320QU right','along the back wall, centred (99, 19), toed 15° toward you; near end about 6 cm from the M7','bottom edge 26 above the top (109 from the floor); centre 46.5 above'],
+    ['Acer XZ320QU left','along the side wall, centred (19, 99), toed 15°','same'],
+    ['Edifier R1280DBs','centred (108, 22) and (22, 108), grilles toward you, toed with the Acers','23.4 tall; 2.6 cm under each Acer'],
+    ['ELLOVEN drawer','centred (33, 33), turned 45°, drawer toward you','10 tall; 14 cm under the M7'],
+    ['Deskmat 80 × 30','centred (53, 53), turned 45°','on the top'],
+    ['NuPhy Air75 V2','centred (56.5, 56.5), turned 45°','on the mat'],
+    ['Mouse','about (72, 43)','on the mat'],
+    ['HYTE Y60 on pedestal','x 197.5–246.5, y 4.5–35.5, long axis along the back wall, side glass facing you, front glass up','48 tall with pedestal'],
+    ['ELYONA lamp','base centred (183, 20) beside the Y60, arm reaching toward the keyboard','head about 46 above the top'],
+    ['Headset stand','base centred (28, 140) on top B, hook toward you','about 28 tall'],
+    ['Plant','centred (32, 298), far end of top B over ALEX 2','as it comes'],
+    ['VIVO crossbar','diagonal between the poles','40–43 above the top'],
+    ['VIVO poles','61 cm (24 in) tall, on the clamps at (35, 0) and (0, 35)','tops 145 from the floor'],
+  ],
+};
+const f1 = n => (Math.round(n*10)/10).toString();
+
+// ---------- tables ----------
+function table(id, head, rows){ const t=document.getElementById(id); t.innerHTML = '<thead><tr>'+head.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map((c,i)=>'<td'+(i===0||/^[\d(]/.test(String(c))?' class="n"':'')+'>'+c+'</td>').join('')+'</tr>').join('')+'</tbody>'; }
+
+table('tHeights', ['Height','cm from the floor','What'], [
+  ['ALEX top', '70.0', 'both units'],
+  ['Locating ring top', f1(70+D.ringH), 'pads sit inside, bearing on the ALEX laminate'],
+  ['Rail lower edge', f1(D.Y0-D.angle), 'vertical leg hangs 5.08 below the underside; 12 cm back from the front edge'],
+  ['Corner fitting centre', f1(D.Y0-D.fitting.below), '29 mm below the underside'],
+  ['Underside of the tops', f1(D.Y0), 'ALEX 70.0 + foot 10.16 = 80.16; OLOV set to this'],
+  ['Top surface', f1(D.Y1), '28 mm top'],
+  ['ELLOVEN top', f1(D.Y1+10), ''],
+  ['Edifier top', f1(D.Y1+23.4), ''],
+  ['M7 bottom edge', f1(D.Y1+24), '14 cm above the ELLOVEN'],
+  ['Acer bottom edge', f1(D.Y1+26), '2.6 cm above an Edifier'],
+  ['VIVO crossbar', f1(D.Y1+40)+'–'+f1(D.Y1+43), 'refitted at monitor height'],
+  ['M7 top edge', f1(D.Y1+66), ''],
+  ['Pole tops', f1(D.Y1+1.2+61), '24 in poles on the clamp plates'],
+]);
+
+table('tParts', ['Item','Qty','Spec'], [
+  ['EKBACKEN top','2','249 × 65 × 2.8 cm, brown walnut'],
+  ['ALEX drawer unit / storage unit','1 + 1','36 × 58 × 70 cm'],
+  ['OLOV leg','6','60–90 cm, set to 80.2; 11 cm plate; max 13 kg each'],
+  ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 6 × 6 cm plate'],
+  ['Printed locating rings','8','51 mm bore, 3 mm wall, 10 mm tall, no floor'],
+  ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
+  ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
+  ['Mending plates','4','10 × 3 in: two across the joint, two as pads under the clamp jaws'],
+  ['VIVO STAND-V300CU','1','clamps at (35, 0) and (0, 35), crossbar on the diagonal'],
+  ['Monitors','3','Samsung M7 32 in centre; two Acer XZ320QU 31.5 in'],
+  ['Speakers','2','Edifier R1280DBs'],
+  ['ELLOVEN, deskmat, NuPhy Air75 V2, HYTE Y60 + pedestal, lamp, headset stand, plant','','as listed in section 7'],
+  ['Flat black enamel, degreaser, 120 grit','','for the rails'],
+]);
+
+table('tFast', ['Fastener','Qty','Through','Into the top','Pilot'], [
+  ['OLOV screws, M4 × 16 mm (included)','24','3 mm leg plate','13 mm','1/8 in, 15 mm deep'],
+  ['#8 × 5/8 in pan head','32','feet plate (1.5–2 mm)','14 mm','1/8 in, 15 mm deep'],
+  ['#10 × 1 in pan head, Robertson','19','4.8 mm angle','20.6 mm','1/8 in, 20 mm deep (flag at 25 mm)'],
+  ['#10 × 5/8 in with #10 washer','8','mending plate (joint)','14 mm','1/8 in, 12 mm deep'],
+  ['#6 × 5/8 in','24','printed ring (3 mm)','ALEX top only, 13 mm','5/64 in, 12 mm deep'],
+  ['3/8-16 × 1 in bolt, washer, nylon nut','4','fitting + rail A vertical leg','none','7/16 in through the leg, in place'],
+  ['3/8-16 × 1½ in bolt, washer, nylon nut','2','fitting + rail B leg + fitting','none','7/16 in, in place'],
+]);
+
+table('tTools', ['Tool','For'], [
+  ['Corded or 18 V drill, clutch set low','all holes; a stripped hole in particleboard is not recoverable'],
+  ['HSS bits: 5/64, 1/8, 7/32, 7/16 in','ring pilots; top pilots; rail screw holes; fitting bolt holes'],
+  ['Centre punch (or a nail)','keeps the bit from wandering on steel'],
+  ['Cutting oil or 3-in-1','every hole in steel'],
+  ['Flat file, 120 grit, acetone, flat black enamel','deburr, scuff, degrease, paint'],
+  ['Robertson #2 bit + 3 in magnetic extension','rail screws beside the vertical leg'],
+  ['Two clamps, 6 in or larger','hold each rail on its line'],
+  ['Tape measure, combination square, masking tape, pencil','layout and depth flags'],
+  ['Spirit level, 60 cm or longer','setting the legs and feet'],
+  ['Calipers','top thickness, pad diameter'],
+]);
+
+table('tRail', ['Rail','Hole','From the '+D.railA.from+' / '+D.railB.from,'Lands at (x, y)','Note'],
+  D.railA.holes.map((s,i)=>['A', i+1, f1(s), '('+f1(D.railA.x0+s)+', '+f1(D.railA.y0+D.holeOffset)+')', i===0?'nearest the wall':(i===8?'over ALEX 1':'')])
+  .concat(D.railB.holes.map((s,i)=>['B', i+1, f1(s), '('+f1(D.railB.x0+D.holeOffset)+', '+f1(D.railB.y0+s)+')', i<2?'into top A, screwed in section 6':''])));
+
+const legRows = t => D.legs.filter(l=>l[3]===t).map(l=>[l[0], '('+l[1]+', '+l[2]+')', 'OLOV, 11 cm plate: x '+f1(l[1]-5.5)+'–'+f1(l[1]+5.5)+', y '+f1(l[2]-5.5)+'–'+f1(l[2]+5.5), l[4]]);
+const feetRows = t => D.feet.filter(f=>f[3]===t).map(f=>[f[0], '('+f[1]+', '+f[2]+')', 'foot, 6 cm plate: x '+f1(f[1]-3)+'–'+f1(f[1]+3)+', y '+f1(f[2]-3)+'–'+f1(f[2]+3), '5 cm in from the ALEX corner below']);
+table('tA', ['Mark','Centre (x, y)','Footprint','Note'], legRows('A').concat(feetRows('A')).concat([
+  ['Rail A line', 'y = 53, x 1–214', 'rail occupies y 48–53', "vertical leg's outer face on the line"],
+  ['Clamp zone 1', '', 'x 31–39, y 0–9', 'keep clear; VIVO clamp 1'],
+  ['Clamp zone 2', '', 'x 0–9, y 31–39', 'keep clear; VIVO clamp 2'],
+  ['Pad plate 1', '', 'x 22.3–47.7, y 0.5–8.1', 'loose mending plate under clamp 1'],
+  ['Pad plate 2', '', 'x 0.5–8.1, y 22.3–47.7', 'loose mending plate under clamp 2'],
+  ['P1', '(15, 65)', 'x 11.2–18.8, y 52.3–77.7', 'joining plate, 13 cm on each top'],
+  ['P2', '(35, 65)', 'x 31.2–38.8, y 52.3–77.7', 'joining plate'],
+]));
+table('tB', ['Mark','Centre (x, y)','Footprint','Note'], legRows('B').concat(feetRows('B')).concat([
+  ['Rail B line', 'x = 53, y 65–266', 'rail occupies x 48–53; corner end at y 53 under top A', "vertical leg's outer face on the line"],
+]));
+table('tRing', ['ALEX','Ring','On the ALEX top, from its back-left corner','Same point in desk coordinates'], [
+  ['1','R1','(5, 5)','(214.5, 8.5)'], ['1','R2','(31, 5)','(240.5, 8.5)'], ['1','R3','(5, 53)','(214.5, 56.5)'], ['1','R4','(31, 53)','(240.5, 56.5)'],
+  ['2','R5','(5, 5)','(8.5, 279.5)'], ['2','R6','(53, 5)','(56.5, 279.5)'], ['2','R7','(5, 31)','(8.5, 305.5)'], ['2','R8','(53, 31)','(56.5, 305.5)'],
+]);
+table('tSetup', ['Item','Position','Height'], D.setup);
+
+// ---------- drawings ----------
+const NS='http://www.w3.org/2000/svg';
+function svgEl(tag, attrs, text){ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(text!=null) e.textContent=text; return e; }
+function Draw(w,h){ const s=svgEl('svg',{viewBox:'0 0 '+w+' '+h,width:w,height:h,role:'img'}); return {
+  s, add(e){ s.appendChild(e); return e; },
+  rect(x,y,w,h,st){ return this.add(svgEl('rect',Object.assign({x,y,width:w,height:h},st))); },
+  circ(cx,cy,r,st){ return this.add(svgEl('circle',Object.assign({cx,cy,r},st))); },
+  line(x1,y1,x2,y2,st){ return this.add(svgEl('line',Object.assign({x1,y1,x2,y2},st))); },
+  text(x,y,t,st){ return this.add(svgEl('text',Object.assign({x,y},st),t)); },
+};}
+const C = { top:'var(--top)', edge:'var(--topEdge)', steel:'var(--steel)', gold:'var(--accent)', blue:'var(--accent2)', ink:'var(--ink)', muted:'var(--muted)', zone:'var(--zone)', knee:'var(--knee)' };
+
+// generic top drawing: region {x0,x1,y0,y1}; mirror flips x (underside view)
+function drawTop(id, reg, opts){
+  const sc = opts.scale || 2.2, m = 58, mirror = !!opts.mirror;
+  const W = (reg.x1-reg.x0)*sc, H = (reg.y1-reg.y0)*sc;
+  const d = Draw(W+2*m, H+2*m);
+  const X = x => m + (mirror ? (reg.x1 - x) : (x - reg.x0))*sc, Y = y => m + (y - reg.y0)*sc;
+  const rectXY = (x0,x1,y0,y1,st) => d.rect(Math.min(X(x0),X(x1)), Y(y0), Math.abs(X(x1)-X(x0)), (y1-y0)*sc, st);
+  // top
+  rectXY(reg.x0,reg.x1,reg.y0,reg.y1,{fill:C.top,stroke:C.edge,'stroke-width':1.5});
+  // rulers
+  const tick = {stroke:C.muted,'stroke-width':1};
+  for(let x=Math.ceil(reg.x0/10)*10; x<=reg.x1; x+=10){ const big = x%50===0; d.line(X(x), m-(big?10:5), X(x), m, tick); if(big||x===reg.x0) d.text(X(x), m-14, x, {'text-anchor':'middle',fill:C.muted,'font-size':10}); }
+  for(let y=Math.ceil(reg.y0/10)*10; y<=reg.y1; y+=10){ const big = y%50===0; d.line(m-(big?10:5), Y(y), m, Y(y), tick); if(big||y===reg.y0) d.text(m-13, Y(y)+3.5, y, {'text-anchor':'end',fill:C.muted,'font-size':10}); }
+  d.text(m+W/2, m-34, (mirror?'←  x grows to the left here (measured from the end on the right)':'x  →'), {'text-anchor':'middle',fill:C.ink,'font-size':11,'font-weight':600});
+  d.text(14, m+H/2, 'y ↓', {fill:C.ink,'font-size':11,'font-weight':600,transform:'rotate(-90 14 '+(m+H/2)+')','text-anchor':'middle'});
+  (opts.extra||[]).forEach(fn=>fn({d,X,Y,sc,rectXY,reg,mirror,m,W,H}));
+  document.getElementById(id).appendChild(d.s);
+}
+const labelAt = (d,X,Y,x,y,t,dx,dy,fill) => d.text(X(x)+(dx||0), Y(y)+(dy||0), t, {fill:fill||C.ink,'font-size':10.5,'font-weight':600});
+
+function legs(top, withPlate, short){ return ({d,X,Y,sc,mirror}) => D.legs.filter(l=>l[3]===top).forEach(l=>{
+  if(withPlate) d.circ(X(l[1]),Y(l[2]),D.legPlate/2*sc,{fill:C.gold,'fill-opacity':.28,stroke:C.gold,'stroke-width':1.5});
+  d.circ(X(l[1]),Y(l[2]),2.1*sc,{fill:C.gold,'fill-opacity':.6,stroke:C.gold});
+  labelAt(d,X,Y,l[1],l[2],short?l[0]:l[0]+' ('+l[1]+', '+l[2]+')', mirror?-18:(short?8:14), short?4:-D.legPlate/2*sc-4);
+});}
+function feet(top, withPlate, short){ return ({d,X,Y,sc,mirror}) => D.feet.filter(f=>f[3]===top).forEach(f=>{
+  if(withPlate) d.rect(X(f[1])-3*sc,Y(f[2])-3*sc,6*sc,6*sc,{fill:C.steel,'fill-opacity':.35,stroke:C.steel});
+  d.circ(X(f[1]),Y(f[2]),2.5*sc,{fill:'none',stroke:C.ink,'stroke-width':1.2});
+  if(!short) labelAt(d,X,Y,f[1],f[2],f[0]+' ('+f[1]+', '+f[2]+')', mirror?-54:-20, f[2]<30? -9 : 24, C.muted);
+});}
+const railA = ({rectXY,d,X,Y,sc}) => { rectXY(D.railA.x0,D.railA.x1,D.railA.y0,D.railA.y1,{fill:C.steel,'fill-opacity':.55,stroke:C.steel}); D.railA.holes.forEach(s=>d.circ(X(D.railA.x0+s),Y(D.railA.y0+D.holeOffset),1.4,{fill:C.ink})); d.text(X(110),Y(46.4),'Rail A · line y = 53 · 9 screws on y = 49.9',{'text-anchor':'middle','font-size':10,fill:C.ink}); };
+const railB = ({rectXY,d,X,Y,sc,reg}) => { const y0=Math.max(D.railB.y0,reg.y0); rectXY(D.railB.x0,D.railB.x1,y0,D.railB.y1,{fill:C.steel,'fill-opacity':.55,stroke:C.steel}); D.railB.holes.forEach(s=>{ const y=D.railB.y0+s; if(y>=reg.y0&&y<=reg.y1) d.circ(X(D.railB.x0+D.holeOffset),Y(y),1.4,{fill:C.ink}); }); d.text(X(50.5),Y(170),'Rail B · line x = 53 · screws on x = 49.9',{'text-anchor':'middle','font-size':10,fill:C.ink,transform:'rotate(-90 '+X(50.5)+' '+Y(170)+')'}); };
+const clampZones = ({rectXY,d,X,Y}) => { const c=D.clamp, w=D.clampW/2, z=D.zoneIn;
+  [[c-4,c+4,0,z],[0,z,c-4,c+4]].forEach(r=>rectXY(r[0],r[1],r[2],r[3],{fill:C.zone,stroke:C.gold,'stroke-dasharray':'3 2'}));
+  D.pads.forEach(p=>rectXY(p[0],p[1],p[2],p[3],{fill:C.steel,'fill-opacity':.25,stroke:C.steel,'stroke-dasharray':'2 2'}));
+  d.text(X(c),Y(13.5),'clamp zone x 31–39',{'text-anchor':'middle','font-size':9.5,fill:C.ink}); d.text(X(14),Y(c+1),'zone y 31–39',{'font-size':9.5,fill:C.ink,'text-anchor':'start'});
+};
+const joinPlates = ({rectXY,d,X,Y,reg}) => D.plates.forEach(p=>{ const y0=Math.max(65-D.plateL/2,reg.y0), y1=Math.min(65+D.plateL/2,reg.y1); rectXY(p[1]-D.plateW/2,p[1]+D.plateW/2,y0,y1,{fill:C.blue,'fill-opacity':.3,stroke:C.blue}); d.text(X(p[1]),Y((y0+y1)/2)+3,p[0],{'text-anchor':'middle','font-size':10,fill:C.ink,'font-weight':600}); });
+const alexOutline = (a, label) => ({rectXY,d,X,Y}) => { rectXY(a.x0,a.x0+a.w,a.y0,a.y0+a.d,{fill:'none',stroke:C.ink,'stroke-width':1.2,'stroke-dasharray':'5 3'}); d.text(X(a.x0+a.w/2),Y(a.y0+a.d/2)+4,label,{'text-anchor':'middle','font-size':11,'font-weight':600,fill:C.ink}); };
+const edgeLabels = (lbls) => ({d,X,Y,m,W,H}) => lbls.forEach(([side,t])=>{ const st={'font-size':10.5,fill:C.edge,'font-weight':600,'text-anchor':'middle'}; if(side==='bottom') d.text(m+W/2,m+H+18,t,st); if(side==='top') d.text(m+W/2,m+H+18,t,st); if(side==='left') d.text(m-30,m+H/2,t,Object.assign(st,{transform:'rotate(-90 '+(m-30)+' '+(m+H/2)+')'})); if(side==='right') d.text(m+W+30,m+H/2,t,Object.assign(st,{transform:'rotate(90 '+(m+W+30)+' '+(m+H/2)+')'})); });
+
+// 0 · overview (plan from above, both tops)
+drawTop('figOverview', {x0:0,x1:249,y0:0,y1:314}, { scale:1.55, extra:[
+  ({rectXY}) => { rectXY(0,249,0,65,{fill:C.top,stroke:C.edge}); rectXY(0,65,65,314,{fill:C.top,stroke:C.edge}); },
+  ({d,X,Y,m,W,H}) => { d.rect(X(65),Y(65),(249-65)*1.55,(314-65)*1.55,{fill:'var(--paper)',stroke:'none'}); d.line(X(0),Y(65),X(65),Y(65),{stroke:C.edge,'stroke-dasharray':'4 3'}); },
+  ({rectXY}) => D.knee.forEach(k=>rectXY(k[0],k[1],k[2],k[3],{fill:'none',stroke:C.knee,'stroke-dasharray':'4 3'})),
+  railA, railB, clampZones, legs('A',true,true), legs('B',true,true), feet('A',false,true), feet('B',false,true),
+  alexOutline(D.alex1,'ALEX 1'), alexOutline(D.alex2,'ALEX 2'),
+  ({d,X,Y}) => { d.text(X(108),Y(112),'Your seat',{'font-size':12,'font-weight':600,fill:C.ink,'text-anchor':'middle'}); d.text(X(108),Y(126),'facing the corner; knees sweep the dashed area',{'font-size':10,fill:C.muted,'text-anchor':'middle'}); d.line(X(0)-4,Y(0)-4,X(249),Y(0)-4,{stroke:C.ink,'stroke-width':3}); d.line(X(0)-4,Y(0)-4,X(0)-4,Y(314),{stroke:C.ink,'stroke-width':3}); d.text(X(170),Y(0)-8,'back wall · 3 cm behind the edge',{'font-size':10,fill:C.muted,'text-anchor':'middle'}); },
+]});
+
+// 2 · rails (flat leg, holes)
+function drawRail(id, r, isA){
+  const sc=3.2, m=50, L=213, W=L*sc, H=D.angle*sc; const d=Draw(W+2*m, H+2*m+30);
+  d.rect(m,m,W,H,{fill:C.steel,'fill-opacity':.45,stroke:C.steel});
+  const hy = m + (isA ? (D.angle-D.holeOffset) : (D.angle-D.holeOffset))*sc; // free edge at the bottom of the drawing
+  d.line(m,hy,m+W,hy,{stroke:C.ink,'stroke-dasharray':'3 3','stroke-width':.8});
+  r.holes.forEach((s,i)=>{ const x=m+s*sc; d.circ(x,hy,2.2,{fill:C.ink}); d.line(x,m+H+4,x,m+H+14,{stroke:C.muted}); d.text(x,m+H+26,s,{'text-anchor':'middle','font-size':10,fill:C.ink,'font-weight':600}); d.text(x,m-8,i+1,{'text-anchor':'middle','font-size':9,fill:C.muted}); });
+  d.text(m, m+H+44, r.from+' (0)', {'font-size':10.5,fill:C.ink,'font-weight':600});
+  d.text(m+W, m+H+44, '213', {'font-size':10.5,fill:C.ink,'font-weight':600,'text-anchor':'end'});
+  d.text(m+W/2, m+H+44, 'heel (vertical leg hangs down from this edge)', {'font-size':10,fill:C.muted,'text-anchor':'middle'});
+  d.text(m-6, hy+3.5, '19 mm', {'font-size':9.5,fill:C.muted,'text-anchor':'end'});
+  document.getElementById(id).appendChild(d.s);
+}
+drawRail('figRailA', D.railA, true); drawRail('figRailB', D.railB, false);
+
+// 3 · top A underside (mirrored)
+drawTop('figA', D.A, { scale:2.2, mirror:true, xEdgeSide:'right', extra:[ railA, clampZones, joinPlates, legs('A',true), feet('A',true), alexOutline(D.alex1,'ALEX 1 below'),
+  edgeLabels([['bottom','front edge, y = 65 (top B butts here)'],['right','side-wall end · x = 0 · measure x from here'],['left','far end · x = 249']]),
+  ({d,X,Y,m}) => { d.text(X(125),m-46,'back edge · y = 0 · measure y from here',{'font-size':10.5,fill:C.edge,'font-weight':600,'text-anchor':'middle'}); } ]});
+// 4 · top B underside (mirrored)
+drawTop('figB', D.B, { scale:2.2, mirror:true, xEdgeSide:'right', extra:[ railB, joinPlates, legs('B',true), feet('B',true), alexOutline(D.alex2,'ALEX 2 below'),
+  edgeLabels([['bottom','far end · y = 314'],['right','side-wall edge · x = 0 · measure x from here'],['left','front edge · x = 65']]),
+  ({d,X,Y,m}) => { d.text(X(32.5),m-46,'joint end · y = 65 · measure y from here (so the first mark, L4, is 20 cm in)',{'font-size':10.5,fill:C.edge,'font-weight':600,'text-anchor':'middle'}); } ]});
+
+// 5 · ALEX tops with rings
+function drawAlex(id, a, rings, faceText){
+  const sc=3, m=44, W=a.w*sc, H=a.d*sc; const d=Draw(W+2*m, H+2*m);
+  d.rect(m,m,W,H,{fill:C.top,stroke:C.edge,'stroke-width':1.5});
+  rings.forEach(([n,x,y])=>{ d.circ(m+x*sc,m+y*sc,D.ringOD/2*sc,{fill:'none',stroke:C.ink,'stroke-width':1.5}); d.circ(m+x*sc,m+y*sc,D.ringBore/2*sc,{fill:'none',stroke:C.muted,'stroke-dasharray':'2 2'}); d.text(m+x*sc,m+y*sc+3.5,n,{'text-anchor':'middle','font-size':9,fill:C.ink,'font-weight':600}); d.text(m+x*sc,m+y*sc+16,'('+x+', '+y+')',{'text-anchor':'middle','font-size':9,fill:C.muted}); });
+  d.line(m,m-14,m+5*sc,m-14,{stroke:C.ink}); d.text(m+5*sc/2,m-18,'5',{'text-anchor':'middle','font-size':9,fill:C.ink});
+  d.line(m-14,m,m-14,m+5*sc,{stroke:C.ink}); d.text(m-18,m+5*sc/2+3,'5',{'text-anchor':'end','font-size':9,fill:C.ink});
+  d.text(m+W/2,m+H+20,faceText,{'text-anchor':'middle','font-size':10.5,fill:C.edge,'font-weight':600});
+  d.text(m+W/2,m-30,a.w+' × '+a.d+' top, seen from above',{'text-anchor':'middle','font-size':10.5,fill:C.muted});
+  document.getElementById(id).appendChild(d.s);
+}
+drawAlex('figAlex1', D.alex1, [['R1',5,5],['R2',31,5],['R3',5,53],['R4',31,53]], 'drawer fronts (toward you)');
+drawAlex('figAlex2', D.alex2, [['R5',5,5],['R6',53,5],['R7',5,31],['R8',53,31]], 'back wall side · the door faces the right edge');
+
+// 6 · corner from below
+(function(){
+  const sc=6, m=40, d=Draw(2*m+36*sc, 2*m+36*sc);
+  const X=x=>m+(x-35)*sc, Y=y=>m+(y-35)*sc;
+  d.rect(X(35),Y(35),36*sc,36*sc,{fill:C.top,stroke:C.edge});
+  d.rect(X(35),Y(48),36*sc,5.08*sc,{fill:C.steel,'fill-opacity':.6,stroke:C.steel}); d.rect(X(35),Y(53-D.wall),36*sc,D.wall*sc,{fill:C.ink,'fill-opacity':.5});
+  d.rect(X(48),Y(53),5.08*sc,18*sc,{fill:C.steel,'fill-opacity':.6,stroke:C.steel}); d.rect(X(53-D.wall),Y(53),D.wall*sc,18*sc,{fill:C.ink,'fill-opacity':.5});
+  // fittings
+  d.rect(X(53),Y(53),8*sc,.5*sc,{fill:C.blue}); d.rect(X(53),Y(53),.5*sc,8*sc,{fill:C.blue}); d.line(X(61),Y(53.5),X(53.5),Y(61),{stroke:C.blue,'stroke-width':2});
+  d.rect(X(45),Y(53),8*sc,.5*sc,{fill:C.blue}); d.rect(X(52),Y(53),.5*sc,8*sc,{fill:C.blue}); d.line(X(45),Y(53.5),X(52),Y(61),{stroke:C.blue,'stroke-width':2});
+  [55.5,59.5,46.5,50.5].forEach(x=>d.circ(X(x),Y(53.9),3,{fill:C.gold,stroke:C.ink})); [55.5,59.5].forEach(y=>d.circ(X(53.9),Y(y),3,{fill:C.gold,stroke:C.ink}));
+  D.railA.holes.filter(s=>D.railA.x0+s>35&&D.railA.x0+s<71).forEach(s=>d.circ(X(D.railA.x0+s),Y(49.9),2,{fill:C.ink}));
+  D.railB.holes.filter(s=>D.railB.y0+s<71).forEach(s=>d.circ(X(49.9),Y(D.railB.y0+s),2,{fill:C.ink}));
+  d.text(X(53),Y(66),'rail B',{'font-size':10,fill:C.ink,'text-anchor':'middle'}); d.text(X(40),Y(47),'rail A',{'font-size':10,fill:C.ink});
+  d.text(X(62),Y(64),'outside fitting',{'font-size':10,fill:C.blue}); d.text(X(36),Y(58),'inside fitting',{'font-size':10,fill:C.blue});
+  d.text(X(53),Y(38),'inside corner of the rails, plan view · gold: 3/8 in bolts · black: #10 rail screws',{'font-size':10,fill:C.muted,'text-anchor':'middle'});
+  document.getElementById('figCorner').appendChild(d.s);
+})();
+
+// 7 · setup plan
+drawTop('figSetup', {x0:0,x1:249,y0:0,y1:314}, { scale:1.55, extra:[
+  ({rectXY}) => { rectXY(0,249,0,65,{fill:C.top,stroke:C.edge}); rectXY(0,65,65,314,{fill:C.top,stroke:C.edge}); },
+  ({d,X,Y}) => { d.rect(X(65),Y(65),(249-65)*1.55,(314-65)*1.55,{fill:'var(--paper)'}); },
+  alexOutline(D.alex1,''), alexOutline(D.alex2,''),
+  ({d,X,Y,sc}) => {
+    const rot = (x,y,w,h,deg,st,t) => { const g=svgEl('g',{transform:'translate('+X(x)+' '+Y(y)+') rotate('+deg+')'}); g.appendChild(svgEl('rect',Object.assign({x:-w*sc/2,y:-h*sc/2,width:w*sc,height:h*sc},st))); if(t) g.appendChild(svgEl('text',{x:0,y:3.5,'text-anchor':'middle','font-size':9.5,fill:C.ink,'font-weight':600},t)); d.add(g); };
+    rot(34,34,71.7,3,-45,{fill:C.ink},''); d.text(X(44),Y(26),'M7 (34, 34)',{'font-size':9.5,fill:C.ink});
+    rot(99,19,70,3,-15,{fill:C.ink},''); d.text(X(99),Y(10),'Acer (99, 19) · 15°',{'font-size':9.5,fill:C.ink,'text-anchor':'middle'});
+    rot(19,99,70,3,-75,{fill:C.ink},''); d.text(X(10),Y(136),'Acer (19, 99)',{'font-size':9.5,fill:C.ink});
+    rot(108,22,14.6,19.6,-15,{fill:C.edge,'fill-opacity':.6},''); rot(22,108,14.6,19.6,-75,{fill:C.edge,'fill-opacity':.6},'');
+    rot(33,33,47,26,-45,{fill:C.gold,'fill-opacity':.5,stroke:C.gold},'ELLOVEN');
+    rot(53,53,80,30,-45,{fill:C.blue,'fill-opacity':.25,stroke:C.blue},'mat (53, 53)');
+    rot(56.5,56.5,31.6,13.3,-45,{fill:'var(--paper)',stroke:C.ink},'');
+    rot(222,20,49,31,0,{fill:C.ink,'fill-opacity':.7},''); d.text(X(222),Y(23.5),'Y60',{'font-size':10,fill:'#fff','text-anchor':'middle'});
+    d.circ(X(183),Y(20),8.5*sc,{fill:'none',stroke:C.ink}); d.text(X(183),Y(45),'lamp (183, 20)',{'font-size':9.5,fill:C.ink,'text-anchor':'middle'});
+    d.circ(X(28),Y(140),6.5*sc,{fill:'none',stroke:C.ink}); d.text(X(8),Y(158),'headset (28, 140)',{'font-size':9.5,fill:C.ink});
+    d.circ(X(32),Y(298),7*sc,{fill:'none',stroke:C.ok}); d.text(X(8),Y(290),'plant (32, 298)',{'font-size':9.5,fill:C.ink});
+    [[35,0],[0,35]].forEach(([x,y])=>d.rect(X(x)-3.8*sc,Y(y)-(y?3.8:0)*sc,7.6*sc,(y?7.6:8.9)*sc,{fill:C.gold}));
+    d.text(X(108),Y(112),'Your seat',{'font-size':12,'font-weight':600,fill:C.ink,'text-anchor':'middle'});
+  },
+]});
+</script>
+</body>
+</html>
