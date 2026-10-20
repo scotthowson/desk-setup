@@ -11,14 +11,14 @@
 <text x="279.0" y="151.0" text-anchor="middle" font-size="11.5">Rail A, 213 cm, 12 cm back from the front edge</text><text x="212.4" y="322.0" font-size="11.5">Rail B</text><text x="212.4" y="336.40000000000003" font-size="11.5" fill="#666">213 cm</text><text x="212.4" y="176.60000000000002" font-size="11.5">bolted corner brace</text>
 <rect x="467.1" y="76.3" width="64.8" height="104.4" fill="none" stroke="#333" stroke-width="1.5"/><text x="499.5" y="129.4" text-anchor="middle" font-weight="600">ALEX 1</text><text x="499.5" y="145.60000000000002" text-anchor="middle" font-size="11.5" fill="#666">drawers</text>
 <rect x="96.3" y="564.1" width="104.4" height="64.8" fill="none" stroke="#333" stroke-width="1.5"/><text x="148.5" y="599.2" text-anchor="middle" font-weight="600">ALEX 2</text><text x="148.5" y="617.2" text-anchor="middle" font-size="11.5" fill="#666">door</text>
-<circle cx="475.2" cy="84.4" r="4" fill="none" stroke="#333"/>
-<circle cx="523.8" cy="84.4" r="4" fill="none" stroke="#333"/>
-<circle cx="475.2" cy="172.60000000000002" r="4" fill="none" stroke="#333"/>
-<circle cx="523.8" cy="172.60000000000002" r="4" fill="none" stroke="#333"/>
-<circle cx="104.4" cy="572.2" r="4" fill="none" stroke="#333"/>
-<circle cx="192.60000000000002" cy="572.2" r="4" fill="none" stroke="#333"/>
-<circle cx="104.4" cy="620.8000000000001" r="4" fill="none" stroke="#333"/>
-<circle cx="192.60000000000002" cy="620.8000000000001" r="4" fill="none" stroke="#333"/>
+<circle cx="476.1" cy="85.3" r="4" fill="none" stroke="#333"/>
+<circle cx="522.9" cy="85.3" r="4" fill="none" stroke="#333"/>
+<circle cx="476.1" cy="171.7" r="4" fill="none" stroke="#333"/>
+<circle cx="522.9" cy="171.7" r="4" fill="none" stroke="#333"/>
+<circle cx="105.3" cy="573.1" r="4" fill="none" stroke="#333"/>
+<circle cx="191.7" cy="573.1" r="4" fill="none" stroke="#333"/>
+<circle cx="105.3" cy="619.9" r="4" fill="none" stroke="#333"/>
+<circle cx="191.7" cy="619.9" r="4" fill="none" stroke="#333"/>
 <rect x="145.8" y="70.0" width="14.4" height="16.2" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><rect x="90.0" y="125.80000000000001" width="16.2" height="14.4" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><line x1="153.0" y1="78.1" x2="98.1" y2="133.0" stroke="#b4791c" stroke-dasharray="3 2" stroke-width="1.5"/><text x="219.6" y="138.8" font-size="11.5">VIVO clamps (35, 0) + (0, 35)</text>
 <path d="M126.0 106.0H306.0V187.0H207.0V286.0H126.0Z" fill="none" stroke="#bbb" stroke-dasharray="3 3"/><text x="291.6" y="264.4" text-anchor="middle" fill="#666">you sit here, facing the corner; knees sweep the dashed zone</text>
 <circle cx="117.0" cy="145.6" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="127.8" y="149.6" font-size="11.5" font-weight="600">L1</text>
@@ -41,5 +41,5 @@
 <text x="76" y="497.0" text-anchor="end" font-size="11.5" fill="#666">235</text>
 <text x="76" y="568.1" text-anchor="end" font-size="11.5" fill="#666">274.5</text>
 <text x="76" y="639.2" text-anchor="end" font-size="11.5" fill="#666">314</text>
-<text x="24" y="672" font-size="11.5" fill="#666">Circles: OLOV legs. Strips: 2 × 2 in angle rails. Gold: VIVO clamps. Small circles: 4 in feet. ALEX 3.5 cm in all round; tops 5 cm off both walls.</text>
+<text x="24" y="672" font-size="11.5" fill="#666">Circles: OLOV legs. Strips: 2 × 2 in angle rails. Gold: VIVO clamps. Small circles: 4 in feet in printed rings, 5 cm in from each ALEX corner. ALEX 3.5 cm in all round; tops 3 cm off both walls.</text>
 </svg>

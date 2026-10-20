@@ -62,7 +62,7 @@ label.t input{accent-color:var(--accent);margin:0}
     <dt>ALEX overhang</dt><dd>3.5 cm all round</dd>
     <dt>Seat</dt><dd>corner, 45°</dd>
     <dt>Mount clamps</dt><dd>(35, 0) &amp; (0, 35)</dd>
-    <dt>Gap to walls</dt><dd>5 cm</dd>
+    <dt>Gap to walls</dt><dd>3 cm</dd>
     <dt>Legs in knee zone</dt><dd class="ok">0</dd>
     <dt>Max span, legs</dt><dd class="ok">75 cm</dd>
   </dl>
@@ -113,8 +113,24 @@ label.t input{accent-color:var(--accent);margin:0}
   scene.add(sun);
   const fill = new THREE.DirectionalLight(0xdfe8ff, 0.35); fill.position.set(-200,200,-100); scene.add(fill);
 
+  // Procedural walnut grain (deterministic), one texture per top so the grain runs along each top's length
+  function woodTex(rot){
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const c = document.createElement('canvas'); c.width = 1024; c.height = 256; const g = c.getContext('2d');
+    g.fillStyle = '#5a3b27'; g.fillRect(0,0,1024,256);
+    for(let i=0;i<170;i++){
+      const y = rnd()*256, w = 0.8 + rnd()*3, a = 0.07 + rnd()*0.2, dark = rnd() < 0.62;
+      g.strokeStyle = dark ? `rgba(34,20,12,${a})` : `rgba(160,112,74,${a*0.6})`; g.lineWidth = w; g.beginPath();
+      const ph = rnd()*6.28, amp = 1.5 + rnd()*6, f = 0.003 + rnd()*0.007;
+      for(let px=0;px<=1024;px+=16){ const py = y + Math.sin(px*f+ph)*amp; px ? g.lineTo(px,py) : g.moveTo(px,py); }
+      g.stroke();
+    }
+    const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 8;
+    t.center.set(0.5,0.5); t.rotation = rot; t.repeat.set(rot ? 1 : 2.5, rot ? 2.5 : 1); return t;
+  }
   const M = {
-    walnut: new THREE.MeshStandardMaterial({color:0x5c3e2a, roughness:0.55, metalness:0.05}),
+    walnut: new THREE.MeshStandardMaterial({map:woodTex(0), roughness:0.55, metalness:0.05}),
+    walnutB:new THREE.MeshStandardMaterial({map:woodTex(Math.PI/2), roughness:0.55, metalness:0.05}),
     edge:   new THREE.MeshStandardMaterial({color:0x4a3221, roughness:0.6}),
     alex:   new THREE.MeshStandardMaterial({color:0x2a2420, roughness:0.7}),
     alexF:  new THREE.MeshStandardMaterial({color:0x332b26, roughness:0.65}),
@@ -148,8 +164,8 @@ label.t input{accent-color:var(--accent);margin:0}
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(900,900), M.floor);
   floor.rotation.x = -Math.PI/2; floor.position.set(200,0,200); floor.receiveShadow = true; scene.add(floor);
   const walls = new THREE.Group();
-  const wBack = new THREE.Mesh(new THREE.PlaneGeometry(420,260), M.wall); wBack.position.set(150,130,-5.5); wBack.receiveShadow=true;
-  const wSide = new THREE.Mesh(new THREE.PlaneGeometry(420,260), M.wall); wSide.rotation.y = Math.PI/2; wSide.position.set(-5.5,130,180); wSide.receiveShadow=true;
+  const wBack = new THREE.Mesh(new THREE.PlaneGeometry(420,260), M.wall); wBack.position.set(150,130,-3.5); wBack.receiveShadow=true;
+  const wSide = new THREE.Mesh(new THREE.PlaneGeometry(420,260), M.wall); wSide.rotation.y = Math.PI/2; wSide.position.set(-3.5,130,180); wSide.receiveShadow=true;
   walls.add(wBack, wSide, box(-5,360,0,8,-6,-4.2,M.edge,false), box(-6,-4.2,0,8,-5,390,M.edge,false));
   scene.add(walls);
 
@@ -158,7 +174,7 @@ label.t input{accent-color:var(--accent);margin:0}
 
   // Tops
   const topA = box(0,249,Y0,Y1,0,65,M.walnut);
-  const topB = box(0,65,Y0,Y1,65,314,M.walnut);
+  const topB = box(0,65,Y0,Y1,65,314,M.walnutB);
   scene.add(topA, topB, box(0,65,Y1-0.1,Y1+0.05,64.85,65.15,M.edge,false));
 
   // ALEX units, centred under each wing: 3.5 cm overhang all round
@@ -176,11 +192,12 @@ label.t input{accent-color:var(--accent);margin:0}
   scene.add(alex(209.5,3.5,36,58,true,'+z'));   // ALEX 1 drawers, fronts toward you (+z)
   scene.add(alex(3.5,274.5,58,36,false,'+x'));  // ALEX 2 door, toward you (+x)
 
-  // Round 4 in adjustable feet as spacers: plate screwed under the top, pad resting on the ALEX top. Four per unit, 4.5 cm in from each ALEX corner.
-  const feet = [[214,8],[241,8],[214,57],[241,57],[8,279],[57,279],[8,306],[57,306]];
+  // Round 4 in adjustable feet as spacers: plate screwed under the top, 5 cm pad sitting in a printed locating ring screwed to the ALEX top. Four per unit, 5 cm in from each ALEX corner; 6 cm plate, 5 cm body and pad.
+  const feet = [[214.5,8.5],[240.5,8.5],[214.5,56.5],[240.5,56.5],[8.5,279.5],[56.5,279.5],[8.5,305.5],[56.5,305.5]];
   feet.forEach(([x,z])=>{
     scene.add(cyl(2.5,2.5,SP-1.6,M.chrome,x,70+0.6+(SP-1.6)/2,z));
-    scene.add(cyl(2.9,2.9,1.2,M.black,x,70+0.6,z));                 // pad on the ALEX
+    scene.add(cyl(2.5,2.5,1.2,M.black,x,70+0.6,z));                 // 5 cm pad on the ALEX
+    scene.add(cyl(2.85,2.85,1.0,M.alexF,x,70+0.5,z,32));             // printed locating ring, 51 mm bore, screwed to the ALEX top
     scene.add(cyl(2.9,2.9,1.0,M.black,x,Y0-1.0,z));                  // collar
     scene.add(box(x-3,x+3,Y0-0.3,Y0,z-3,z+3,M.black,false));         // plate under the top
   });
@@ -220,7 +237,7 @@ label.t input{accent-color:var(--accent);margin:0}
       const c = new THREE.Group();
       c.add(box(-4,4,Y1,Y1+1.2,0,9,M.black));            // top plate
       c.add(box(-4,4,Y0-9,Y0,0,9,M.black));              // lower jaw
-      c.add(box(-4,4,Y0-9,Y1+1.2,-2.5,0,M.black,false));  // back of clamp, in the 5 cm wall gap
+      c.add(box(-4,4,Y0-9,Y1+1.2,-2.5,0,M.black,false));  // back of clamp, in the 3 cm wall gap
       c.add(cyl(1.6,1.6,poleH,M.black,0,Y1+1.2+poleH/2,4.5));
       c.position.set(x,0,z); c.rotation.y = rotY; g.add(c);
     }
@@ -253,8 +270,8 @@ label.t input{accent-color:var(--accent);margin:0}
       m.add(box(-4,4,Y1+40,Y1+52,-4,0,M.black)); // VESA plate on the back
       m.position.set(ax,0,az); m.rotation.y = rotY; g.add(m);
     }
-    acer(35,4.5, 108,15, -Math.PI/24, true);          // right Acer along the back wall, toed 7.5° toward the chair
-    acer(4.5,35, 15,108, Math.PI/2 + Math.PI/24, false); // left Acer along the side wall
+    acer(35,4.5, 95,18, -Math.PI/12, true);           // right Acer along the back wall, toed 15°, its near end 2 cm from the M7's end
+    acer(4.5,35, 18,95, Math.PI/2 + Math.PI/12, false);  // left Acer along the side wall
     setup.add(g);
   })();
   // ELLOVEN monitor stand with drawer under the M7, drawer pull toward you
@@ -285,8 +302,8 @@ label.t input{accent-color:var(--accent);margin:0}
       const wf = cyl(4.6,4.6,0.4,M.black,0,9,10.5,24); wf.rotation.x=Math.PI/2; s.add(wf);
       s.position.set(x,Y1,z); s.rotation.y = rot; setup.add(s);
     }
-    spk(108, 19, -Math.PI/24);              // under the right Acer, grille toward the chair
-    spk(19, 108, Math.PI/2 - Math.PI/24);   // under the left Acer
+    spk(95, 22, -Math.PI/12);               // under the right Acer, grille toward the chair
+    spk(22, 95, Math.PI/2 - Math.PI/12);    // under the left Acer
   })();
   // HYTE Y60 standing on its I/O end on a printed pedestal (MakerWorld 679012): footprint 28.5 × 46.2, 45.6 tall.
   // Turned so the former left-side glass faces the room (+z); the former front glass faces up.
@@ -315,13 +332,22 @@ label.t input{accent-color:var(--accent);margin:0}
     const head = cyl(1.6,1.6,2.5,M.black,0,0,0); head.rotation.z = -Math.PI/3; head.position.set(28.4,45.9,0); l.add(head);
     const shade = cyl(6.5,3,9,M.black,0,0,0,32); shade.rotation.z = Math.PI + Math.PI/5; shade.position.set(31.3,41.9,0); l.add(shade); // wide end down-forward, narrow end at the head
     const bulb = cyl(4.5,4.5,0.6,new THREE.MeshStandardMaterial({color:0xfff2cc,emissive:0xffe2a0,emissiveIntensity:1.2}),0,0,0,24); bulb.rotation.z = Math.PI + Math.PI/5; bulb.position.set(33.7,38.7,0); l.add(bulb);
-    const light = new THREE.SpotLight(0xffd9a0, 1.6, 140, Math.PI/3.2, 0.5, 1.2); light.position.set(33.7,38.7,0); light.castShadow = true; light.shadow.mapSize.set(1024,1024); light.shadow.bias = -0.002;
+    const light = new THREE.SpotLight(0xffd9a0, 1.4, 130, Math.PI/5, 0.7, 1.0); light.position.set(33.7,38.7,0); light.castShadow = true; light.shadow.mapSize.set(1024,1024); light.shadow.bias = -0.002;
     const aim = new THREE.Object3D(); aim.position.set(55,0,0); l.add(aim); light.target = aim; l.add(light);
-    l.position.set(30,Y1,175); l.rotation.y = -Math.PI/3; setup.add(l);
+    l.position.set(183,Y1,20); l.rotation.y = -Math.PI*0.8; setup.add(l);  // beside the Y60, arm reaching toward the keyboard
   })();
   // Plant
-  setup.add(cyl(7,5.5,12,M.pot,30,Y1+6,230));
-  const leaves = new THREE.Mesh(new THREE.SphereGeometry(11,16,12), M.plant); leaves.scale.set(1,0.8,1); leaves.position.set(30,Y1+20,230); leaves.castShadow=true; setup.add(leaves);
+  setup.add(cyl(7,5.5,12,M.pot,32,Y1+6,298));
+  const leaves = new THREE.Mesh(new THREE.SphereGeometry(11,16,12), M.plant); leaves.scale.set(1,0.8,1); leaves.position.set(32,Y1+20,298); leaves.castShadow=true; setup.add(leaves);
+  // Wooden headset stand on top B, hook toward the chair, headset hanging on it
+  (function headset(){
+    const h = new THREE.Group();
+    h.add(cyl(6.5,6.5,1.5,M.sapele,0,0.75,0,32), cyl(1.1,1.1,26,M.sapele,0,14.5,0));
+    const hook = cyl(0.9,0.9,8,M.sapele,0,27,0); hook.rotation.z = Math.PI/2; hook.position.set(3.5,27,0); h.add(hook);
+    const band = new THREE.Mesh(new THREE.TorusGeometry(8,1.1,10,28), M.black); band.position.set(5,19,0); band.castShadow = true; h.add(band);
+    [-1,1].forEach(s=>{ const cup = cyl(4.5,4.5,3.2,M.black,0,0,0,24); cup.rotation.z = Math.PI/2; cup.position.set(5+s*8.6,13,0); h.add(cup); });
+    h.position.set(28,Y1,140); h.rotation.y = -Math.PI/2; setup.add(h);
+  })();
   // Chair facing top A
   (function chair(){
     const c = new THREE.Group(); const seatH = 52;
@@ -355,12 +381,12 @@ label.t input{accent-color:var(--accent);margin:0}
   function roundRect(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();}
   legs.forEach(([x,z],i)=>label('OLOV L'+(i+1)+' ('+x+', '+z+')', x, 45, z, 0.85));
   label('ALEX 1 · 3.5 cm in all round', 227, 60, 32, 0.85); label('ALEX 2 · 3.5 cm in all round', 32, 60, 292, 0.85);
-  label('4 in feet, 4 per ALEX', 227, 76, 32, 0.8);
+  label('4 in feet in printed rings, 4 per ALEX', 227, 76, 32, 0.8);
   label('Rail A · 213 cm', 110, 72, 53); label('Rail B · 213 cm', 53, 72, 160);
   label('two gusseted corner fittings', 70, 70, 70, 0.85);
-  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 34, 150, 34, 0.9); label('Acer 31.5', 108, 160, 15, 0.8); label('Acer 31.5', 15, 160, 108, 0.8);
-  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 108, 112, 19, 0.8); label('Edifier', 19, 112, 108, 0.8);
-  label('HYTE Y60 on pedestal', 222, 140, 32.5, 0.9); label('lamp', 30, 140, 175, 0.75);
+  label('VIVO clamps (35, 0) & (0, 35)', 20, 95, 20, 0.85); label('Samsung M7 32', 34, 150, 34, 0.9); label('Acer 31.5', 95, 160, 18, 0.8); label('Acer 31.5', 18, 160, 95, 0.8);
+  label('ELLOVEN', 33, 97, 33, 0.8); label('Edifier', 95, 112, 22, 0.8); label('Edifier', 22, 112, 95, 0.8);
+  label('HYTE Y60 on pedestal', 222, 140, 32.5, 0.9); label('lamp', 183, 140, 20, 0.75); label('headset stand', 28, 125, 140, 0.75); label('plant', 32, 115, 298, 0.75);
   label('Top A · 249 × 65', 150, 90, 20); label('Top B · 65 × 249', 32, 90, 215);
   label('joint + 10 × 3 in plates', 30, 86, 65, 0.8); label('plate pads under the clamps', 35, 86, 4, 0.75); label('NuPhy Air75 V2 on 80 × 30 mat', 53, 92, 53, 0.75);
   scene.add(labels);

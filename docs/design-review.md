@@ -48,7 +48,7 @@ The design puts every leg against a wall edge, carries both front edges on steel
 - Front edge of top A: rail A, a 2 × 2 × 3/16 in angle, 213 cm, screwed to the underside 12 cm back from the edge; the 10 cm feet lift the top enough that the rail passes over the ALEX with 5 cm to spare. Its ends rest, through the top, beside leg L1 at the wall and on ALEX 1. The 12 cm strip beyond the rail is a cantilever within IKEA's 25 cm limit.
 - Front edge of top B: rail B, same angle, 213 cm, supported at ALEX 2 and, at the corner, by a brace bolted to rail A. Rail B also crosses the joint, so it acts as a third, much stiffer joining plate.
 - Inside corner of top B: rail B → bolted corner fittings → rail A → L1 and ALEX 1. Steel-to-steel bolts, no particleboard screw in the primary path.
-- Racking: the two ALEX boxes, screwed to the tops at opposite ends of the L, brace the whole frame; the telescoping OLOV legs contribute even less against sideways push than ADILS would.
+- Racking: the two ALEX boxes, locked to the tops at opposite ends of the L by the feet pads sitting in printed rings, brace the whole frame; the telescoping OLOV legs contribute even less against sideways push than ADILS would.
 
 **Why angle instead of square tube.** For the same wall thickness, a 2 in angle is stiffer than a 1¼ in square tube (moment of inertia 0.27 in⁴ vs about 0.12 in⁴), it costs about the same per foot, and it needs one hole per screw instead of a clearance hole in one wall and a larger access hole in the opposite wall. The vertical leg also gives a flat face for the corner brace. A 2 × 2 × 1/8 in square tube (about 0.5 in⁴) would have been stiffer still, but Acier Terrebonne does not ship to Gatineau and Metal Supermarkets' tube prices were double the angle's. The trade-off is 5.1 cm of depth below the top; section E covers the knee-clearance check this forces.
 
@@ -63,7 +63,7 @@ The design puts every leg against a wall edge, carries both front edges on steel
 
 ## B. Support layout
 
-Top A runs along the back wall and takes the corner square; top B butts into A's front edge. Both tops stand 5 cm off their walls. You sit at the inside corner facing the diagonal: the VIVO poles clamp to A's back edge at x 35 and to A's left end edge at y 35, the crossbar runs across the corner, the Samsung M7 hangs on the diagonal with the ELLOVEN under it, and the Acers wrap along each wall with an Edifier beneath each. The Y60 sits on top A over ALEX 1; the lamp and plant go on top B. If your longer wall is the other one, mirror the whole layout. Coordinates are (x, y) in cm from the back-left corner of top A: x along the back wall, y along the side wall.
+Top A runs along the back wall and takes the corner square; top B butts into A's front edge. Both tops stand 3 cm off their walls. You sit at the inside corner facing the diagonal: the VIVO poles clamp to A's back edge at x 35 and to A's left end edge at y 35, the crossbar runs across the corner, the Samsung M7 hangs on the diagonal with the ELLOVEN under it, and the Acers wrap along each wall with an Edifier beneath each. The Y60 sits on top A over ALEX 1; the lamp and plant go on top B. If your longer wall is the other one, mirror the whole layout. Coordinates are (x, y) in cm from the back-left corner of top A: x along the back wall, y along the side wall.
 
 ![Top-down support layout](plan.svg)
 
@@ -73,8 +73,8 @@ Six legs sit along the two wall edges, one of them in the corner square under VI
 | --- | --- | --- | --- |
 | ALEX 1 (drawer unit) | x 209.5–245.5, y 3.5–61.5 | 3.5 cm in from A's right end, front and back edges | drawers face you (+y); Y60 sits above it |
 | ALEX 2 (storage unit) | x 3.5–61.5, y 274.5–310.5 | 3.5 cm in from B's far end, wall edge and front edge | door faces you (+x) |
-| Feet on ALEX 1 | centres (214, 8), (241, 8), (214, 57), (241, 57) | 4.5 cm in from each ALEX corner | plate screwed to the top's underside, pad on the ALEX |
-| Feet on ALEX 2 | centres (8, 279), (57, 279), (8, 306), (57, 306) | 4.5 cm in from each ALEX corner | same |
+| Feet on ALEX 1 | centres (214.5, 8.5), (240.5, 8.5), (214.5, 56.5), (240.5, 56.5) | 5 cm in from each ALEX corner | plate screwed to the top's underside; 5 cm pad sits in a printed ring screwed to the ALEX top |
+| Feet on ALEX 2 | centres (8.5, 279.5), (56.5, 279.5), (8.5, 305.5), (56.5, 305.5) | 5 cm in from each ALEX corner | same |
 | L1 | (15, 42) | 15 from A's left end; 6 cm behind rail A | under VIVO clamp 2; its 11 cm plate ends at x 9.5 and y 47.5, clear of the clamp jaw (to x 8.9) and rail A (from y 48) |
 | L2 | (65, 10) | 10 from back edge | nearest leg to VIVO clamp 1 |
 | L3 | (140, 10) | 10 from back edge; 69.5 to ALEX 1 |  |
@@ -105,9 +105,8 @@ Everything beyond what you own comes to roughly CAD $130–160 in parts, plus an
 | Fitting nuts | 3/8-16 nylon-insert lock nut | 6 | $4 | same |  |
 | Fitting washers | 3/8 in flat washer (under head and nut) | 12 | $3 | same |  |
 | Joining-plate screws | #10 × ⅝ in (16 mm) pan-head wood screw with #10 flat washer (the 10 × 3 in plates have oversized holes) | 8 | $3 | same | Skip if your plates came with screws ≤ 16 mm |
-| ALEX-to-top braces | 1½ in zinc corner brace, 2 per ALEX | 4 | $6 | same |  |
-| Brace screws, into top | #8 × ⅝ in (16 mm) | 4 | with above |  |  |
-| Brace screws, into ALEX panel | #8 × ½ in (13 mm) | 4 | $3 | same | ALEX side panel thickness (expect 16–18 mm) |
+| Feet locating rings | 3D-printed ring, 51 mm bore, 3 mm wall, 10 mm tall, no floor, three countersunk holes; PETG or ABS | 8 | filament | printed at home | Replaces the corner braces, which could not bridge the 10 cm feet |
+| Ring screws, into ALEX top | #6 × ⅝ in (16 mm) | 24 | $3 | Canadian Tire / Rona | ALEX top panel thickness (expect ≥ 16 mm) |
 | Degreaser | Acetone or mineral spirits, small can, plus rags | 1 | $8 | same |  |
 | Paint | Rust-Oleum or Tremclad flat black rust enamel, spray | 1 | $13 | same | Optional indoors but hot-rolled steel will mark things otherwise |
 | Abrasive | 120-grit sandpaper or a scuff pad, for mill scale | 1 | $3 | same |  |
@@ -157,7 +156,8 @@ Edge clearances: screw holes sit 19 mm from the flat leg's edge and bolt holes a
 | --- | --- | --- | --- |
 | #10 × 1 in rail screw | 4.8 mm angle | 20.6 mm | 7.4 mm |
 | OLOV screws (IKEA, included) | leg plate \~3 mm | M4 × 16 mm fully threaded, about 13 mm into the top | fine as supplied; pilot 1/8 in, 15 mm deep |
-| #8 × 5/8 in plate and brace screws | 1.5–2 mm plate | \~14 mm | \~14 mm |
+| #8 × 5/8 in plate screws | 1.5–2 mm plate | \~14 mm | \~14 mm |
+| #6 × 5/8 in ring screws, into the ALEX top | 3 mm ring floor flange | \~13 mm | ALEX top panel, not the desk top |
 | 3/8-16 × 1 in and 1½ in fitting bolts | one or two 5 mm fittings plus the 4.8 mm vertical leg | none | not applicable |
 
 Spacer screws depend on the spacer's own holes: into the top, screw length is at most the spacer's hole depth plus 20 mm; into the ALEX top panel (about 16–18 mm, measure it), at most the hole depth plus 12 mm. The VIVO clamp uses no screws at all: it grips the 2.8 cm top at the back edge, so keep the two clamp zones at the corner (x 31–39 on the back edge, y 31–39 on the left end, 9 cm in) free of legs and screws.
@@ -169,11 +169,11 @@ Spacer screws depend on the spacer's own holes: into the top, screw length is at
 3. Degrease with acetone, scuff the mill scale, spray two light coats of enamel, and let them cure 24 h. Mask nothing; the holes clear themselves.
 4. Top A face down on a blanket. Mark the four leg centres, the four feet centres under the ALEX 1 footprint, the two clamp zones (x 31–39 on the back edge and y 31–39 on the left end, keep 9 cm in from the edge clear) and the rail line (vertical leg at 12 cm from the front edge). Fit OLOV L1, L2 and L3 with the IKEA screws after a 1/8 in pilot in each hole, and pre-set each leg to 80.2 cm. Screw the four feet plates to the underside at their centres, pads pointing away from the top, and run each pad out so the foot measures 10.2 cm overall. Clamp rail A on its line, wall end flush with the top's end, and drill the nine 1/8 in pilots through the rail holes with a tape flag 25 mm from the bit's tip (4.8 mm steel plus 20 mm). Drive the #10 × 1 in screws with the bit extension; stop when the head seats. A stripped hole in particleboard is not recoverable, so set the drill clutch low.
 5. Top B face down. Fit L4, L5, L6 and the four feet for ALEX 2 the same way. Clamp rail B on its line with the corner end 12 cm past the top's end (that 12 cm will sit under top A). Pilot and screw holes 3 through 10 only.
-6. Set both ALEX units in the room, ALEX 1 at x 209.5–245.5, y 3.5–61.5 (drawers toward you). With a helper, stand top A on L1–L3 with the four feet pads landing on ALEX 1's top, and adjust the OLOV legs and the feet until a level reads flat and all four pads bear. Fix ALEX 1 with two corner braces at its back edge (#8 × 5/8 in into the top, #8 × ½ in into the ALEX panel).
+6. Set both ALEX units in the room, ALEX 1 at x 209.5–245.5, y 3.5–61.5 (drawers toward you). With a helper, stand top A on L1–L3 with the four feet pads landing on ALEX 1's top, and adjust the OLOV legs and the feet until a level reads flat and all four pads bear. Before that, screw the four locating rings to ALEX 1's top at the foot centres so the pads drop into them.
 7. Stand top B on L4–L6 and ALEX 2 (x 3.5–61.5, y 274.5–310.5, door toward you), slide it until its end meets A's front edge with the two surfaces flush, and adjust feet. Screw two of the 10 × 3 in mending plates across the joint from below, long axis across the joint, centred at x = 15 and 35 cm, with #10 × ⅝ in screws and washers, pilots 12 mm deep.
 8. Push rail B's corner end against rail A's vertical leg. Drill the two remaining 1/8 in pilots through rail B's holes 1 and 2 into top A, 20 mm deep, and screw.
 9. Hold one gusseted fitting in the outside corner (legs on rail A's vertical leg toward +x and on rail B's outer face) and the other in the inside corner (legs on rail A's vertical leg toward −x and on the inner face of rail B's vertical leg, gusset under B's flat leg), both centred 28 mm below the top so the inside one clears B's flat leg. Centre-punch through all eight holes, remove both, drill 7/16 in: four holes in rail A and two in rail B where the marks coincide. Refit. Rail A: four 3/8-16 × 1 in bolts, washer under each head, washer and nylon-insert nut inside the leg. Rail B: two 3/8-16 × 1½ in bolts through fitting, leg and fitting, washers and nylon-insert nuts. Snug.
-10. Fix ALEX 2 with two braces. Retighten every screw after two weeks, as IKEA advises for ALEX and OLOV. Then clamp one VIVO pole at x 35 on A's back edge and the other at y 35 on A's left end edge, a spare 10 × 3 in plate flat under each jaw, so the crossbar runs across the corner. Hang the M7 on the centre bracket facing the diagonal with the ELLOVEN beneath it, the Acers on the side arms along each wall toed in about 7°, an Edifier under each Acer (centres (108, 19) and (19, 108)), the deskmat and NuPhy centred on the diagonal in front of the ELLOVEN, the Y60 on top A over ALEX 1 (x 197.5–246.5, y 17–48, side glass toward you), and the lamp and plant on top B.
+10. Retighten every screw after two weeks, as IKEA advises for ALEX and OLOV. Then clamp one VIVO pole at x 35 on A's back edge and the other at y 35 on A's left end edge, a spare 10 × 3 in plate flat under each jaw, so the crossbar runs across the corner. Hang the M7 on the centre bracket facing the diagonal with the ELLOVEN beneath it, the Acers on the side arms along each wall toed in about 15° with their near ends 2 cm from the M7, an Edifier under each Acer (centres (95, 22) and (22, 95)), the deskmat and NuPhy centred on the diagonal in front of the ELLOVEN, the Y60 on top A over ALEX 1 (x 197.5–246.5, y 17–48, side glass toward you), the lamp on top A beside the Y60 (base (183, 20)), and the headset stand (28, 140) and plant (32, 298) on top B.
 
 ## E. Structural assessment
 
@@ -188,7 +188,7 @@ The six-leg plan without rails is inadequate: both front edges would hang 55 cm 
 | Overhang | 12 cm beyond rails, 3.5 cm beyond ALEX, 10–14 cm beyond wall legs | all within 25 cm | none |
 | Fastener pull-out | #10 screws, 20 mm in particleboard, roughly 50–80 kg each (typical published range); 9–10 per rail | rails see mostly shear, not pull-out | none; the only pull-out case is the two screws into A's front strip, which the bolted corner fittings back up |
 | Joint movement | Joint bridged by rail B (steel, 11 cm into A), two 10 × 3 in plates, and legs L1 and L4 within 25 cm either side | particleboard moves little with humidity | shim the two tops flush before fitting the plates |
-| Racking (sideways push) | OLOV legs give almost no racking resistance; the two ALEX boxes, 2.6 m apart, fixed to the tops, do | adequate once both ALEX units are braced to the tops | don't skip the four corner braces |
+| Racking (sideways push) | OLOV legs give almost no racking resistance; the two ALEX boxes, 2.6 m apart, fixed to the tops, do | adequate once the pads are captive in the rings on both ALEX units | don't skip the rings |
 | Tipping | Mass ≈ 110 kg with ALEX units, low and spread; no support more than 30 cm inboard of any edge | not a risk | none |
 | ALEX capacity | IKEA lists 12 kg max load on the drawer unit | each ALEX carries roughly a quarter of the top weight (≈ 15 kg) plus what sits above it | confirm the figure on IKEA Canada's page; IKEA sells this unit as a desk support, so I read 12 kg as the load on its own top, not a desk limit |
 | Knee and thigh clearance | With the spacers the rail bottom sits at 75.1 cm, 12 cm back from the front edge | clears any seated thigh | resolved by the spacers; the 1½ in fallback is no longer needed |
@@ -223,7 +223,7 @@ The two 2 × 2 × 3/16 in angles are ordered from Metal Supermarkets Ottawa ($16
 **Assumptions this design rests on.**
 
 - Top A runs along the back wall and keeps the corner square; top B butts into A's front edge. Mirror everything if the room needs the 314 cm run on the other wall.
-- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 5 cm off their walls so the clamp backs fit. The VIVO pole spacing is assumed to be 42 cm; the crossbar spec (23 in) says it is nearer 54–58 cm, and the clamp positions scale with it.
+- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 3 cm off their walls so the clamp backs fit (about 1.5 cm needed). The VIVO pole spacing is assumed to be 42 cm; the crossbar spec (23 in) says it is nearer 54–58 cm, and the clamp positions scale with it.
 - The tops are 28 mm thick; a top that measures 27 mm drops the rail-screw reserve to 6.4 mm, still acceptable.
 - The rails are 2 × 2 × 3/16 in hot-rolled angle; the sag and stress figures in section E are for that section.
 - Nobody sits on the inside corner.
@@ -233,8 +233,8 @@ The two 2 × 2 × 3/16 in angles are ordered from Metal Supermarkets Ottawa ($16
 - [ ] Actual thickness of each EKBACKEN top with calipers (expect 28 mm).
 - [x] 83 cm confirmed (19 Oct): chair raised to about 52 cm seat height, or a footrest.
 - [x] OLOV plate measured 11 cm in diameter, screws M4 × 16 mm fully threaded (IKEA part 108443), 19 Oct. Section B assumed a plate no wider than 7 cm: at 11 cm a leg at (14, 43) would reach y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9), so L1 is at (15, 42). Every other leg clears its neighbours by 1.5 cm or more.
-- [ ] Confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 1.97 in (5 cm) square plate; rating still to confirm.
-- [ ] ALEX side-panel thickness where the corner braces go (expect 16–18 mm; #8 × ½ in screws assume ≥ 14 mm).
+- [ ] Confirm the round feet's load rating (expect 50 kg or more each) and that their plate is no wider than 7 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 10 cm tall, 5 cm body and pad, 6 × 6 cm plate; rating still to confirm.
+- [ ] ALEX top-panel thickness where the ring screws go (expect ≥ 16 mm; #6 × ⅝ in screws assume ≥ 14 mm).
 - [x] Steel: two 2 × 2 × 3/16 in angles, 84 in, ordered from Metal Supermarkets Ottawa for pickup, $161.22 with tax, cutting included (19 Oct).
 - [ ] The max-load note on IKEA Canada's ALEX page for your article numbers.
 - [ ] Floor level across the desk footprint (a 1 m level and a shim set).
