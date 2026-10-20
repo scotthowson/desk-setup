@@ -10,7 +10,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 5 × 5 cm.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
-- [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws, 16 × #10 × ⅝ in screws with washers, one 4 in heavy-duty steel corner brace (two holes per leg), 4 × ¼-20 × ¾ in bolts, 4 nylon-insert nuts, 8 washers.
+- [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws, 16 × #10 × ⅝ in screws with washers, two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 4 × 3/8-16 × 1 in bolts, 2 × 3/8-16 × 1½ in bolts, 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers.
 - [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
 - [ ] Room cleared: the desk needs 254 × 319 cm of floor including the 5 cm wall gaps.
 
@@ -20,7 +20,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 | --- | --- | --- | --- |
 | Rail A | 213 cm | 9 × 7/32 in in the flat leg | 19 mm from the leg's free edge; at 2.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the wall end) |
 | Rail B | 213 cm | 10 × 7/32 in in the flat leg | same offset; at 2.5, 7.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the corner end) |
-| Both rails | | bolt holes for the corner brace | none on the bench: drilled in place in step 7 through the brace's own holes |
+| Both rails | | bolt holes for the corner fittings | none on the bench: marked through the fittings and drilled 7/16 in in place, step 7 (four in rail A, two in rail B) |
 
 Centre-punch every mark, drill at low speed with oil, deburr with the file. Degrease, scuff, two coats of flat black enamel, dry 24 h.
 
@@ -77,7 +77,7 @@ Lift top A onto L1–L3 with the four feet pads landing on ALEX 1. Push it to 5 
 2. Adjust its legs and feet until the two surfaces are flush at the joint (run a fingertip across; shim the legs, never the plates).
 3. From below, screw plates P1 and P2 across the joint: #10 × ⅝ in with washers, 1/8 in pilots 12 mm deep, 4 screws per plate, two in each top.
 4. Push rail B's corner end against rail A's vertical leg. Drill its holes 1 and 2 into top A (pilots 20 mm, same 25 mm flag) and screw.
-5. Hold the 4 in corner brace in the outside corner where the two vertical legs meet, heel at the corner, centred 25 mm below the top, a leg flat on each rail. Through each of its four holes drill 9/32 in through the vertical leg behind it. Fit the ¼-20 × ¾ in bolts from the brace side with a washer under each head; washer and nylon-insert nut on the inside of the leg. Snug.
+5. Two gusseted fittings, one each side of rail B's end, both centred 28 mm below the top (the inside one has to fit between rail B's flat leg and the bottom of its vertical leg; check it clears before punching). Outside fitting: heel at the outside corner, one leg on rail A's vertical leg toward +x, the other on rail B's outer face, gusset facing the open quadrant. Inside fitting: heel at the inside corner, one leg on rail A's vertical leg toward −x, the other on the inner face of rail B's vertical leg, gusset under rail B's flat leg. Centre-punch through all eight holes, take both fittings off, drill 7/16 in: four holes in rail A, and two in rail B where the two fittings' marks coincide (if they are off by more than a millimetre, drill at the outside fitting's marks and open the inside fitting's holes with a round file). Refit. Rail A: four 3/8-16 × 1 in bolts from the fitting side, washer under head, washer and nylon-insert nut on the inside of the leg. Rail B: two 3/8-16 × 1½ in bolts through outside fitting, leg and inside fitting, washer each end, nylon-insert nut. Snug.
 
 ## 8. Monitors, PC and the rest
 
