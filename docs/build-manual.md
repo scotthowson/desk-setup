@@ -86,12 +86,12 @@ Lift top A onto L1–L3 with the four feet pads landing on ALEX 1. Push it to 5 
 | VIVO clamp 1 | centred x 35 on A's back edge | a spare mending plate flat between the jaw and the top; 28 mm top plus plate is under 60 mm, so use the manual's Option 1 (holes 2 and 4 on the lower clamp) |
 | VIVO clamp 2 | centred y 35 on A's left end edge | same; both clamps sit in the 5 cm wall gap |
 | Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). The plan assumes 42 cm; slide both clamps the same amount along their edges to match the real spacing |
-| Samsung M7 | centre bracket, screen centred (40, 40) on the diagonal, 18 cm in front of the poles | bottom edge 24 cm above the top, clears the ELLOVEN |
+| Samsung M7 | centre bracket, screen centred (34, 34) on the diagonal, 20 cm in front of the crossbar | bottom edge 24 cm above the top, clears the ELLOVEN |
 | ELLOVEN | centred (33, 33), turned 45°, drawer toward you | under the M7 |
-| Acer right | along the back wall, centred about (106, 19), toed 13° toward you | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
-| Acer left | along the side wall, centred about (19, 106), toed 13° | same |
-| Edifiers | centred (106, 24) and (24, 106), grilles toward you | under each Acer |
-| HYTE Y60 | x 213–241, y 8–54, standing on its I/O end on the MakerWorld pedestal (model 679012), side glass toward the corner, front glass facing up | over ALEX 1 |
+| Acer right | along the back wall, centred about (108, 15), toed 7° toward you | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
+| Acer left | along the side wall, centred about (15, 108), toed 7° | same |
+| Edifiers | centred (108, 19) and (19, 108), grilles toward you | under each Acer |
+| HYTE Y60 | x 197.5–246.5, y 17–48, standing on its I/O end on the MakerWorld pedestal (model 679012), long axis along the back wall, side glass facing you, front glass facing up | over ALEX 1 |
 | Deskmat and NuPhy | mat centred (53, 53) turned 45°; keyboard centred (56.5, 56.5); mouse (72, 43) | on the corner square, centred in front of the ELLOVEN |
 | Lamp | base centred (30, 175) | on top B |
 
