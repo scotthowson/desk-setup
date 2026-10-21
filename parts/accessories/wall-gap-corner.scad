@@ -1,10 +1,10 @@
 // Wall-gap corner. One L-shaped piece for the back-left corner of top A, where the gap along
 // the back wall meets the gap along the side wall. Same profile, lip, screws and gap rule as
-// the strip. Each leg is 151 mm from the wall corner, so it ends 12.0 cm along each desk edge
+// the strip. Each leg is 231 mm from the wall corner, so it ends 20.0 cm along each desk edge
 // and the first strip butts against it there. One screw per leg.
 // The file is in PRINT orientation: top face down, lips up, no supports.
 
-leg = 151; gap = 29; ontop = 12; th = 3; lip = 20; lip_t = 3; chamf = 1.5; screw = 3.2; csk = 6.5; hole_z = -14;
+leg = 231; gap = 29; ontop = 12; th = 3; lip = 20; lip_t = 3; chamf = 1.5; screw = 3.2; csk = 6.5; hole_z = -14;
 w = gap + ontop;
 
 module hole_y(x) { translate([x, gap - lip_t - 1, hole_z]) rotate([-90, 0, 0]) { cylinder(d = screw, h = lip_t + 2, $fn = 24); translate([0, 0, 1 - 0.01]) cylinder(d1 = csk, d2 = screw, h = (csk - screw) / 2 + 0.01, $fn = 24); } }
