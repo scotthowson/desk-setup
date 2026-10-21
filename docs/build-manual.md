@@ -9,8 +9,8 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 6 × 6 cm, body and pad 5 cm, 10 cm tall.
-- [ ] Printed helpers from `parts/` (see `parts/README.md`): the rail marking gauge and the pilot drill guide before any drilling; optionally four rail end caps, a few rail cable hooks, and wall-gap strip segments.
-- [ ] Eight printed locating rings for the pads (`parts/foot-ring.stl`, source `parts/foot-ring.scad`): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
+- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines) and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand.
+- [ ] Eight printed locating rings for the pads (`parts/structure/foot-ring.stl`, source beside it): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws, 16 × #10 × ⅝ in screws with washers, two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 4 × 3/8-16 × 1 in bolts, 2 × 3/8-16 × 1½ in bolts, 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers.
 - [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
@@ -69,7 +69,7 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 
 Stand them 3 cm off the walls like the tops. A strip of painter's tape on the floor at x = 209.5 and y = 274.5 saves guessing.
 
-Screw a locating ring to each ALEX top at the four foot positions: ring centres 5 cm in from each corner of the ALEX top (the same F1–F8 centres, now measured on the ALEX). Pilot 5/64 in, 12 mm deep; #6 × ⅝ in screws. The pads drop into the rings when the tops go on, which is what stops the desk sliding on the ALEX units; the ALEX units themselves then hold the whole desk against racking.
+Screw a locating ring to each ALEX top at the four foot positions: ring centres 5 cm in from each corner of the ALEX top (the same F1–F8 centres, now measured on the ALEX). The printed corner template gives the centre and the three screw holes in one placement; drop it over each corner, fences against the edges, punch through. Pilot 5/64 in, 12 mm deep; #6 × ⅝ in flat-head screws. The pads drop into the rings when the tops go on, which is what stops the desk sliding on the ALEX units; the ALEX units themselves then hold the whole desk against racking.
 
 ## 6. Stand top A (two people)
 

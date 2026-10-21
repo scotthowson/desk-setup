@@ -105,7 +105,7 @@ Everything beyond what you own comes to roughly CAD $130–160 in parts, plus an
 | Fitting nuts | 3/8-16 nylon-insert lock nut | 6 | $4 | same |  |
 | Fitting washers | 3/8 in flat washer (under head and nut) | 12 | $3 | same |  |
 | Joining-plate screws | #10 × ⅝ in (16 mm) pan-head wood screw with #10 flat washer (the 10 × 3 in plates have oversized holes) | 8 | $3 | same | Skip if your plates came with screws ≤ 16 mm |
-| Feet locating rings | 3D-printed (`parts/foot-ring.stl`): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange, three countersunk #6 holes, open bottom; PETG or ABS | 8 | filament | printed at home | Replaces the corner braces, which could not bridge the 10 cm feet |
+| Feet locating rings | 3D-printed (`parts/structure/foot-ring.stl`): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange, three countersunk #6 holes, open bottom; PETG or ABS | 8 | filament | printed at home | Replaces the corner braces, which could not bridge the 10 cm feet |
 | Ring screws, into ALEX top | #6 × ⅝ in (16 mm) | 24 | $3 | Canadian Tire / Rona | ALEX top panel thickness (expect ≥ 16 mm) |
 | Degreaser | Acetone or mineral spirits, small can, plus rags | 1 | $8 | same |  |
 | Paint | Rust-Oleum or Tremclad flat black rust enamel, spray | 1 | $13 | same | Optional indoors but hot-rolled steel will mark things otherwise |

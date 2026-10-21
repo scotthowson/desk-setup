@@ -1,25 +1,41 @@
 # Printed parts
 
-Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` next to it. Change a number in the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm. Previews are the `-preview.png` files.
+Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-preview.png` beside it. Change a number at the top of the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm. Every screw-on part has its countersinks on the flat face that points at the floor, and every screw into the desk top is a #6 × 5/8 in flat head, 13 mm penetration, well inside the 21 mm rule.
 
-## Needed
-
-| Part | Print | What it does | Settings |
-| --- | --- | --- | --- |
-| `foot-ring` | 8 | Locating ring for the ALEX feet. The 5 cm pad of each adjustable foot drops into the 51 mm bore and bears on the ALEX laminate through the open bottom; the 75 mm flange takes three #6 × 5/8 in flat-head screws into the ALEX top. Stops the desk sliding on the cabinets. | flange down, PETG or ABS, 3 perimeters, 30% infill, no supports. Measure your pad first; `pad_d` in the source is 50. |
-| `rail-marking-gauge` | 1 | Hooks over an edge of the steel angle. Pencil notch at 19 mm for the screw line (hook over the flat leg's free edge) and at 29 mm for the bolt line (hook over the heel edge). Slide it along with a pencil in the notch. | flat, hook up, any filament, no supports. |
-| `pilot-drill-guide` | 1 | Block with a 1/8 in bore (every pilot into the tops) and a 5/64 in bore (ring screws into the ALEX). Keeps the bit square. Grooves at 12, 15 and 20 mm from the base and the top face at 25 mm are the tape-flag gauge: stand the bit tip on the bench against the block and wrap the tape level with the groove you need. | standing on its base, any filament, 100% infill. |
-
-## Optional
+## tools/ · print these before you mark or drill anything
 
 | Part | Print | What it does | Settings |
 | --- | --- | --- | --- |
-| `rail-end-cap` | 4 | Slips over each cut end of the two rails so nothing sharp faces the wall gap or the cabinets. 15 mm deep socket, 2 mm walls. | closed end down, PETG or ABS, no supports. A dab of hot glue if loose. |
-| `rail-cable-hook` | 4 to 6 | Snaps over the vertical leg of either rail; a J below it holds a cable bundle up to 24 mm. No holes, no screws, slide it anywhere. Turn it so the J hangs on the side away from your knees. | on its side as rendered, PETG (the clip needs some spring), 3 perimeters. |
-| `wall-gap-strip` | by the metre | 200 mm segment that covers the 3 cm gap between a top's wall edge and the wall so pens and cables stop falling in. Rests 8 mm on the desk, a lip drops into the gap against the desk's edge, the far edge touches the wall. Leave the two VIVO clamp zones uncovered (x 31–39 on the back edge, y 31–39 on the left end). About 12 segments per wall edge. | flat, top face up, a colour near the walnut or black. |
+| `edge-t-square` | 1 | Head hooks over any edge (desk top, ALEX top, the steel); the blade lies square to it with punch holes at the four offsets this build uses: **50** ring centres on the ALEX, **85** feet on the top (with the plate's four screw holes round it), **100** legs L2–L6, **150** leg L1. Slide to the tape station, punch. The blade's edge squares the station lines across a rail. | lip up (flat face on the bed), any filament, no supports. `plate_hole_spacing` is 45; measure your feet plates. |
+| `alex-corner-template` | 1 | Drops over any corner of an ALEX top, fences against both edges: ring centre at 50/50 plus the ring's three screw holes in one placement. Same template for all eight corners. | fences up, any filament. |
+| `rail-marking-gauge` | 1 | Hooks over an edge of the angle. Pencil in the **19** notch along the flat leg's free edge gives the screw line; **29** along the heel edge gives the bolt line. | flat, hook up, any filament. |
+| `pilot-drill-guide` | 1 | 1/8 in and 5/64 in bores keep the bit square. Grooves at 12, 15, 20 mm and the top face at 25 mm set the tape flag: bit tip on the bench against the block, tape level with the groove. | standing on its base, 100% infill. |
+
+## structure/ · part of the desk
+
+| Part | Print | What it does | Settings |
+| --- | --- | --- | --- |
+| `foot-ring` | 8 | Locating ring for the ALEX feet: 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm flange with three countersunk #6 holes, open bottom so the pad bears on the ALEX laminate. Stops the desk sliding on the cabinets. | flange down, PETG or ABS, 3 perimeters, 30% infill. `pad_d` is 50; measure your pad. |
+| `rail-end-cap` | 4 | Slips over each cut end of the rails. 15 mm socket, 2 mm walls. | closed end down, PETG or ABS. Hot glue if loose. |
+
+## cables/ · cable management
+
+| Part | Print | What it does | Settings |
+| --- | --- | --- | --- |
+| `rail-cable-hook` | 4–6 | Snaps over the vertical leg of either rail, J underneath holds a bundle up to 24 mm. No holes; slide it anywhere; turn the J away from your knees. | on its side as rendered, PETG. |
+| `cable-clip` | as needed | Screw-on saddle for one cable (set `bundle` = 8) or a small bundle (14), one #6 screw into the underside. | on its side as rendered, PETG. |
+| `power-bar-cradle` | 2 per bar | Two cradles under the top near the Y60; the bar drops in, a cable tie through the slots holds it. Two #6 screws each. Set `bar_w` and `bar_h` to your bar. | open side up, PETG or ABS. |
+| `cable-tray` | by the segment | 200 mm under-desk trough, 80 wide, 50 deep, screw tabs along both sides, drain slots. Chain segments end to end behind the rail for bricks and slack. | open side up, PETG or ABS. |
+
+## accessories/ · nice to have
+
+| Part | Print | What it does | Settings |
+| --- | --- | --- | --- |
+| `wall-gap-strip` | by the segment | 200 mm strip covering the 3 cm wall gap so nothing falls in: rests 8 mm on the desk, a lip drops into the gap, reaches the wall. About 12 per wall edge; leave the VIVO clamp zones open. | flat, a colour near the walnut or black. |
+| `phone-stand` | 1 | Phone leans back 25° against the plate, bottom edge in a groove behind a lip, cable notch through the base. Cases up to 15 mm. | flat on its base, any filament. |
 
 ## Not printed, on purpose
 
-- The pads under the VIVO clamp jaws stay as the two spare 10 × 3 in steel mending plates. A printed pad would creep under the clamp load over months.
-- The corner joint uses bought 5 mm steel strut fittings; a printed bracket would not hold rail B's end.
+- The pads under the VIVO clamp jaws stay as the two spare 10 × 3 in steel mending plates; plastic creeps under the clamp load.
+- The corner joint stays the bought 5 mm steel strut fittings.
 - The HYTE Y60 pedestal is MakerWorld model 679012.

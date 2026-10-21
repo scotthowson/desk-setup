@@ -10,7 +10,7 @@ You are continuing work on Scott's L-shaped PC desk build. Everything here is a 
 | `docs/design-review.md` | Engineering review: verified IKEA specs, load paths, bill of materials, hole schedule, structural assessment, purchasing decision, open measurements | Only to correct a measured fact |
 | `docs/build-manual.md` | Build order with every measurement and the final checks | Only to correct a measured fact |
 | `docs/plan.svg` | Static top-down plan | Regenerate if leg or clamp positions change |
-| `parts/` | Printed parts, each an OpenSCAD source with its rendered STL and preview; `parts/README.md` lists them. Needed: foot-ring (8), rail-marking-gauge, pilot-drill-guide. Optional: rail-end-cap, rail-cable-hook, wall-gap-strip. Re-render with `openscad -o name.stl name.scad`. | Yes, when a measured dimension changes (pad diameter, angle size, wall gap) |
+| `parts/` | Printed parts in `tools/`, `structure/`, `cables/`, `accessories/`, each an OpenSCAD source with its STL and preview; `parts/README.md` lists every one with quantity and print settings. Re-render with `openscad -o name.stl name.scad`. | Yes, when a measured dimension changes (pad diameter, angle size, wall gap, feet-plate hole spacing) |
 | `guide.html` | Print-ready build guide: every measurement, dimensioned drawings of each top face down, rails, ALEX rings, the corner joint and the desk layout. All numbers live in the `D` object at the top of its script and every table and drawing is rendered from it. | Yes: change `D` whenever `docs/build-manual.md` changes |
 
 ## The design in one paragraph

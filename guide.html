@@ -158,8 +158,8 @@ a{color:var(--accent2)}
 <p class="cap">Top A underside as seen face down. Gold circles: OLOV plates (11 cm). Grey squares: feet plates (6 cm). Grey strip: rail A, its screws as dots. Hatched boxes C1, C2: VIVO clamp zones, keep clear. Pale bars: the two loose mending plates that pad the clamp jaws. Blue bars P1, P2: the joining plates, half on this top.</p>
 <table id="tA"></table>
 <ol class="steps">
-  <li><strong>Legs L1, L2, L3.</strong> Mark each centre. Set the OLOV plate on the mark, scribe through its four holes, pilot 1/8 in, 15 mm deep (tape flag at 15 mm, set with the drill guide's groove; drill through the guide's 1/8 bore to stay square). Drive the IKEA M4 × 16 mm screws. Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
-  <li><strong>Feet F1–F4.</strong> Mark each centre; the 6 cm plate sits centred on it with its edges parallel to the top's edges. Scribe the four plate holes, pilot 1/8 in, 15 mm deep, drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> overall.</li>
+  <li><strong>Legs L1, L2, L3.</strong> Mark each centre with the T-square (the 100 hole for L2 and L3 from the back edge; the 150 hole for L1 from the side-wall end, at tape station 42). Set the OLOV plate on the mark, scribe through its four holes, pilot 1/8 in, 15 mm deep (tape flag at 15 mm, set with the drill guide's groove; drill through the guide's 1/8 bore to stay square). Drive the IKEA M4 × 16 mm screws. Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
+  <li><strong>Feet F1–F4.</strong> Mark each centre with the T-square: head on the edge at the tape station, punch through the 85 hole and the four plate holes round it. Pilot 1/8 in, 15 mm deep, drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> overall.</li>
   <li><strong>Clamp zones C1 and C2.</strong> Nothing goes in x 31–39 along the back edge, 9 cm in, or in y 31–39 along the left end, 9 cm in. Lay the two spare mending plates loose where drawn; they go between the clamp jaw and the top in section 7, no screws.</li>
   <li><strong>Rail A.</strong> Draw the rail line at y = 53 from x = 1 to 214. Clamp the rail with the outer face of its vertical leg on that line, flat leg toward the back edge (it covers y 48–53), wall end at x = 1. Through each of the nine holes drill a 1/8 in pilot 20 mm into the top: tape flag <strong>25 mm</strong> from the bit tip (4.8 mm of steel plus 20 mm). Drive #10 × 1 in screws with the Robertson bit on the 3 in extension so the chuck clears the vertical leg; stop when the head seats.</li>
   <li><strong>Joining plates</strong> wait for section 6. Mark their outlines now so nothing else lands there.</li>
@@ -183,8 +183,8 @@ a{color:var(--accent2)}
 </div>
 <table id="tRing"></table>
 <ol class="steps">
-  <li>Print eight rings from <code>parts/foot-ring.stl</code>: 51 mm bore, 3 mm wall, 10 mm tall ring on a 75 mm flange, three countersunk holes in the flange for #6 × 5/8 in flat-head screws, open bottom so the pad sits on the ALEX laminate. PETG or ABS, flange down, 3 perimeters. Measure your pad first with calipers; if it is not 50.0 mm, change <code>pad_d</code> in <code>parts/foot-ring.scad</code> and re-render.</li>
-  <li>Mark the four ring centres on each ALEX top, 5 cm in from each corner. Set each ring on its mark, scribe the three holes, pilot 5/64 in 12 mm deep, drive the screws.</li>
+  <li>Print eight rings from <code>parts/structure/foot-ring.stl</code>: 51 mm bore, 3 mm wall, 10 mm tall ring on a 75 mm flange, three countersunk holes in the flange for #6 × 5/8 in flat-head screws, open bottom so the pad sits on the ALEX laminate. PETG or ABS, flange down, 3 perimeters. Measure your pad first with calipers; if it is not 50.0 mm, change <code>pad_d</code> in <code>parts/structure/foot-ring.scad</code> and re-render.</li>
+  <li>Mark each ALEX corner with the printed corner template: drop it over the corner with both fences against the edges, punch through the centre hole and the three screw holes. Pilot the three 5/64 in, 12 mm deep, set the ring on its outline, drive the screws.</li>
   <li>Place the units: ALEX 1 at x 209.5–245.5, y 3.5–61.5 with the drawers facing you; ALEX 2 at x 3.5–61.5, y 274.5–310.5 with the door facing you. Both 3 cm off their walls. Painter's tape on the floor at x = 209.5 and y = 274.5 saves guessing.</li>
 </ol>
 
@@ -295,7 +295,7 @@ table('tParts', ['Item','Qty','Spec'], [
   ['ALEX drawer unit / storage unit','1 + 1','36 × 58 × 70 cm'],
   ['OLOV leg','6','60–90 cm, set to 80.2; 11 cm plate; max 13 kg each'],
   ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 6 × 6 cm plate'],
-  ['Printed locating rings','8','parts/foot-ring.stl: 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm flange, three countersunk #6 holes, open bottom'],
+  ['Printed locating rings','8','parts/structure/foot-ring.stl: 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm flange, three countersunk #6 holes, open bottom'],
   ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
   ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
   ['Mending plates','4','10 × 3 in: two across the joint, two as pads under the clamp jaws'],
@@ -304,7 +304,8 @@ table('tParts', ['Item','Qty','Spec'], [
   ['Speakers','2','Edifier R1280DBs'],
   ['ELLOVEN, deskmat, NuPhy Air75 V2, HYTE Y60 + pedestal, lamp, headset stand, plant','','as listed in section 7'],
   ['Flat black enamel, degreaser, 120 grit','','for the rails'],
-  ['Printed helpers (parts/README.md)','','rail marking gauge (19 and 29 mm lines) and pilot drill guide with tape-flag grooves: print before section 2. Optional: 4 rail end caps, rail cable hooks, wall-gap strip segments'],
+  ['Printed tools (parts/README.md)','','edge T-square (punch holes at 50, 85, 100 and 150 mm from an edge, plus the feet-plate holes), ALEX corner template, rail marking gauge (19 and 29 mm lines), pilot drill guide with tape-flag grooves. Print before section 2'],
+  ['Printed cable parts and accessories','optional','rail end caps, snap-on rail cable hooks, screw-on cable clips, power-bar cradles, cable tray segments, wall-gap strip, phone stand'],
 ]);
 
 table('tFast', ['Fastener','Qty','Goes through','Into the top','Pilot'], [
