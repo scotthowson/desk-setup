@@ -19,7 +19,7 @@
 <circle cx="191.7" cy="573.1" r="4" fill="none" stroke="#333"/>
 <circle cx="105.3" cy="619.9" r="4" fill="none" stroke="#333"/>
 <circle cx="191.7" cy="619.9" r="4" fill="none" stroke="#333"/>
-<rect x="145.8" y="70.0" width="14.4" height="16.2" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><rect x="90.0" y="125.80000000000001" width="16.2" height="14.4" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><line x1="153.0" y1="78.1" x2="98.1" y2="133.0" stroke="#b4791c" stroke-dasharray="3 2" stroke-width="1.5"/><text x="219.6" y="138.8" font-size="11.5">VIVO clamps (35, 0) + (0, 35)</text>
+<rect x="154.8" y="70.0" width="14.4" height="16.2" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><rect x="90.0" y="134.8" width="16.2" height="14.4" fill="#d9a441" fill-opacity="0.6" stroke="#b4791c"/><line x1="162.0" y1="78.1" x2="98.1" y2="142.0" stroke="#b4791c" stroke-dasharray="3 2" stroke-width="1.5"/><text x="219.6" y="138.8" font-size="11.5">VIVO clamps (40, 0) + (0, 40)</text>
 <path d="M126.0 106.0H306.0V187.0H207.0V286.0H126.0Z" fill="none" stroke="#bbb" stroke-dasharray="3 3"/><text x="291.6" y="264.4" text-anchor="middle" fill="#666">Your seat: the inside corner, facing the diagonal. Dashed area: knee sweep, keep it clear.</text>
 <circle cx="117.0" cy="145.6" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="127.8" y="149.6" font-size="11.5" font-weight="600">L1</text>
 <circle cx="207.0" cy="88.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="217.8" y="92.0" font-size="11.5" font-weight="600">L2</text>
@@ -28,12 +28,12 @@
 <circle cx="108.0" cy="358.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="118.8" y="362.0" font-size="11.5" font-weight="600">L5</text>
 <circle cx="108.0" cy="493.0" r="6" fill="#d9a441" fill-opacity="0.25" stroke="#b4791c" stroke-width="1.5"/><text x="118.8" y="497.0" font-size="11.5" font-weight="600">L6</text>
 <text x="117.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">15</text>
-<text x="153.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">35</text>
+<text x="162.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">40</text>
 <text x="207.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">65</text>
 <text x="342.0" y="56" text-anchor="middle" font-size="11.5" fill="#666">140</text>
 <text x="467.1" y="56" text-anchor="middle" font-size="11.5" fill="#666">209.5</text>
 <text x="538.2" y="56" text-anchor="middle" font-size="11.5" fill="#666">249</text>
-<text x="76" y="137.0" text-anchor="end" font-size="11.5" fill="#666">35</text>
+<text x="76" y="146.0" text-anchor="end" font-size="11.5" fill="#666">40</text>
 <text x="76" y="151.0" text-anchor="end" font-size="11.5" fill="#666">42</text>
 <text x="76" y="191.0" text-anchor="end" font-size="11.5" fill="#666">65</text>
 <text x="76" y="227.0" text-anchor="end" font-size="11.5" fill="#666">85</text>

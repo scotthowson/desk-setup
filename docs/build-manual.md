@@ -13,7 +13,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Eight printed locating rings for the pads (`parts/structure/foot-ring.stl`, source beside it): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws, 16 × #10 × ⅝ in screws with washers, two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 4 × 3/8-16 × 1 in bolts, 2 × 3/8-16 × 1½ in bolts, 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers.
-- [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
+- [x] VIVO crossbar measured 21¼ in (54.0 cm) outer edge to outer edge, collars about 4 cm: poles 50.0 cm apart, clamps at 40 cm from the corner.
 - [ ] Room cleared: the desk needs 252 × 317 cm of floor including the 3 cm wall gaps.
 
 ## 1. Drill the steel (bench)
@@ -37,8 +37,8 @@ Measure from the end that will go against the side wall (x = 0) and the edge tha
 | L3 | (140, 10) | OLOV |
 | F1–F4 | (214.5, 8.5), (240.5, 8.5), (214.5, 56.5), (240.5, 56.5) | round feet for ALEX 1; 5 cm in from each ALEX corner, the 6 cm plates 5 mm clear of rail A |
 | Rail A line | y = 53, from x = 1 to 214 | the vertical leg's outer face goes on this line, flat leg toward y = 48 |
-| Clamp zone 1 | x 31–39, y 0–9 | keep clear |
-| Clamp zone 2 | x 0–9, y 31–39 | keep clear |
+| Clamp zone 1 | x 36–44, y 0–9 | keep clear |
+| Clamp zone 2 | x 0–9, y 36–44 | keep clear |
 | Plates P1, P2 | centred (15, 65) and (35, 65), long axis along y | span y 52–78, so 13 cm of each plate is on top A |
 
 ## 3. Mark top B (face down)
@@ -87,9 +87,9 @@ Lift top A onto L1–L3 with the four feet pads dropping into their rings on ALE
 
 | Item | Position | Note |
 | --- | --- | --- |
-| VIVO clamp 1 | centred x 35 on A's back edge | a spare mending plate flat between the jaw and the top; 28 mm top plus plate is under 60 mm, so use the manual's Option 1 (holes 2 and 4 on the lower clamp) |
-| VIVO clamp 2 | centred y 35 on A's left end edge | same; both clamps sit in the 3 cm wall gap |
-| Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). The plan assumes 42 cm; slide both clamps the same amount along their edges to match the real spacing |
+| VIVO clamp 1 | centred x 40 on A's back edge | a spare mending plate flat between the jaw and the top; 28 mm top plus plate is under 60 mm, so use the manual's Option 1 (holes 2 and 4 on the lower clamp) |
+| VIVO clamp 2 | centred y 40 on A's left end edge | same; both clamps sit in the 3 cm wall gap |
+| Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). Poles 50.0 cm apart (crossbar measured); the bar on the poles sets the last millimetre, so tighten the clamps with it fitted |
 | Samsung M7 | centre bracket, screen centred (34, 34) on the diagonal, 20 cm in front of the crossbar | bottom edge 24 cm above the top, clears the ELLOVEN |
 | ELLOVEN | centred (33, 33), turned 45°, drawer toward you | under the M7 |
 | Acer right | along the back wall, centred about (99, 19), toed 15° toward you; its near end about 6 cm from the M7's end | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |

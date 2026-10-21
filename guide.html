@@ -160,7 +160,7 @@ a{color:var(--accent2)}
 <ol class="steps">
   <li><strong>Legs L1, L2, L3.</strong> Mark each centre with the T-square (the 100 hole for L2 and L3 from the back edge; the 150 hole for L1 from the side-wall end, at tape station 42). Set the OLOV plate on the mark, scribe through its four holes, pilot 1/8 in, 15 mm deep (tape flag at 15 mm, set with the drill guide's groove; drill through the guide's 1/8 bore to stay square). Drive the IKEA M4 × 16 mm screws. Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
   <li><strong>Feet F1–F4.</strong> Mark each centre with the T-square: head on the edge at the tape station, punch through the 85 hole and the four plate holes round it. Pilot 1/8 in, 15 mm deep, drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> overall.</li>
-  <li><strong>Clamp zones C1 and C2.</strong> Nothing goes in x 31–39 along the back edge, 9 cm in, or in y 31–39 along the left end, 9 cm in. Lay the two spare mending plates loose where drawn; they go between the clamp jaw and the top in section 7, no screws.</li>
+  <li><strong>Clamp zones C1 and C2.</strong> Nothing goes in x 36–44 along the back edge, 9 cm in, or in y 36–44 along the left end, 9 cm in. Lay the two spare mending plates loose where drawn; they go between the clamp jaw and the top in section 7, no screws.</li>
   <li><strong>Rail A.</strong> Draw the rail line at y = 53 from x = 1 to 214. Clamp the rail with the outer face of its vertical leg on that line, flat leg toward the back edge (it covers y 48–53), wall end at x = 1. Through each of the nine holes drill a 1/8 in pilot 20 mm into the top: tape flag <strong>25 mm</strong> from the bit tip (4.8 mm of steel plus 20 mm). Drive #10 × 1 in screws with the Robertson bit on the 3 in extension so the chuck clears the vertical leg; stop when the head seats.</li>
   <li><strong>Joining plates</strong> wait for section 6. Mark their outlines now so nothing else lands there.</li>
 </ol>
@@ -200,10 +200,10 @@ a{color:var(--accent2)}
 <p class="cap">The inside corner in plan view (x right, y down, as in every other drawing). Rail B's end is sandwiched between the two fittings. Gold: the 3/8 in bolts. Black dots: the #10 rail screws, which are in the flat legs, one storey up from the bolts.</p>
 
 <h2 id="s7">7 · Monitor mount and what goes where</h2>
-<div class="note">The two VIVO clamp positions depend on the crossbar's real pole spacing (section 9). The numbers below assume 42 cm; if the crossbar measures 54–58 cm collar to collar, both clamps move out to about 43–46 cm from the corner and nothing else changes.</div>
+<div class="note">The crossbar measured 21¼ in (54.0 cm) outer edge to outer edge with 4 cm end collars, so the poles sit 50.0 cm apart. With the pole centre 4.5 cm in from the edge that puts each clamp at 40 cm from the corner. Fit the crossbar as the spacing guide and tighten the clamps with it on; it sets the last millimetre.</div>
 <ol class="steps">
   <li>Lay a spare mending plate flat on the underside at each clamp zone. Fit the VIVO lower clamps using the manual's <strong>Option 1</strong> holes (2 and 4), since the 28 mm top plus plate is under 60 mm.</li>
-  <li>Clamp 1 centred at <strong>x = 35</strong> on A's back edge; clamp 2 centred at <strong>y = 35</strong> on A's left end edge. The clamp backs sit in the 3 cm wall gap.</li>
+  <li>Clamp 1 centred at <strong>x = 40</strong> on A's back edge; clamp 2 centred at <strong>y = 40</strong> on A's left end edge. The clamp backs sit in the 3 cm wall gap.</li>
   <li>Slide the crossbar onto the poles as the spacing guide (VIVO step 3), tighten the clamps, then refit the crossbar at monitor height (VIVO step 6).</li>
   <li>Hang the screens and set the heights in the table below. Toe the Acers in about 15° so their near ends sit about 6 cm from the M7's ends.</li>
 </ol>
@@ -225,7 +225,7 @@ a{color:var(--accent2)}
 
 <h2 id="s9">9 · Still to measure</h2>
 <ul class="check">
-  <li>VIVO crossbar, collar centre to collar centre; pole centre to desk edge; how far the clamp projects behind the edge (the 3 cm gap assumes under 2.5 cm).</li>
+  <li>VIVO pole centre to desk edge (assumed 4.5 cm) and how far the clamp projects behind the edge (the 3 cm gap assumes under 2.5 cm). The crossbar itself is measured: poles 50.0 cm apart.</li>
   <li>Round feet load rating (design wants 50 kg or more each); pad diameter with calipers before printing the rings.</li>
   <li>ALEX top-panel thickness where the ring screws go (expect 16 mm or more).</li>
   <li>Each top's thickness with calipers (expect 28 mm).</li>
@@ -248,7 +248,7 @@ const D = {
   railB: { y0:53, y1:266, x0:48, x1:53, holes:[2.5,7.5,28,54,80,106,132,158,184,210.5], from:'corner end', fit:[{heel:0,dir:1,label:'both fittings'}] },
   holeOffset: 1.9, angle: 5.08, wall: 0.48,
   fitting: { below: 2.9, w: 4.13, legs: 8, h:[3,7] },   // h: assumed hole distances from the heel until Scott measures
-  clamp: 35, clampW: 7.6, clampD: 8.9, zoneIn: 9,
+  clamp: 40, clampW: 7.6, clampD: 8.9, zoneIn: 9,
   pads: [ [22.3,47.7,0.5,8.1], [0.5,8.1,22.3,47.7] ],
   plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6,
   knee: [ [20,120,20,65], [20,65,65,120] ],
@@ -266,7 +266,7 @@ const D = {
     ['Headset stand','base centred (28, 140) on top B, hook toward you','about 28 tall'],
     ['Plant','centred (32, 298), far end of top B over ALEX 2','as it comes'],
     ['VIVO crossbar','diagonal between the poles','40–43 above the top'],
-    ['VIVO poles','61 cm (24 in) tall, on the clamps at (35, 0) and (0, 35)','tops 145 from the floor'],
+    ['VIVO poles','61 cm (24 in) tall, on the clamps at (40, 0) and (0, 40); 50.0 cm apart','tops 145 from the floor'],
   ],
 };
 const f1 = n => (Math.round(n*10)/10).toString();
@@ -299,7 +299,7 @@ table('tParts', ['Item','Qty','Spec'], [
   ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
   ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
   ['Mending plates','4','10 × 3 in: two across the joint, two as pads under the clamp jaws'],
-  ['VIVO STAND-V300CU','1','clamps at (35, 0) and (0, 35), crossbar on the diagonal'],
+  ['VIVO STAND-V300CU','1','clamps at (40, 0) and (0, 40), crossbar on the diagonal, poles 50.0 cm apart'],
   ['Monitors','3','Samsung M7 32 in centre; two Acer XZ320QU 31.5 in'],
   ['Speakers','2','Edifier R1280DBs'],
   ['ELLOVEN, deskmat, NuPhy Air75 V2, HYTE Y60 + pedestal, lamp, headset stand, plant','','as listed in section 7'],
@@ -345,8 +345,8 @@ const legRows = t => D.legs.filter(l=>l[3]===t).map(l=>[l[0], '('+l[1]+', '+l[2]
 const feetRows = t => D.feet.filter(f=>f[3]===t).map(f=>[f[0], '('+f[1]+', '+f[2]+')', 'foot, 6 cm plate: x '+f1(f[1]-3)+'–'+f1(f[1]+3)+', y '+f1(f[2]-3)+'–'+f1(f[2]+3), '5 cm in from the ALEX corner below']);
 table('tA', ['Mark','Centre (x, y)','Footprint','Note'], legRows('A').concat(feetRows('A')).concat([
   ['Rail A line', 'y = 53, x 1–214', 'rail occupies y 48–53', "vertical leg's outer face on the line"],
-  ['C1', '', 'x 31–39, y 0–9', 'keep clear; VIVO clamp 1'],
-  ['C2', '', 'x 0–9, y 31–39', 'keep clear; VIVO clamp 2'],
+  ['C1', '', 'x 36–44, y 0–9', 'keep clear; VIVO clamp 1'],
+  ['C2', '', 'x 0–9, y 36–44', 'keep clear; VIVO clamp 2'],
   ['Pad plate 1', '', 'x 22.3–47.7, y 0.5–8.1', 'loose mending plate under clamp 1'],
   ['Pad plate 2', '', 'x 0.5–8.1, y 22.3–47.7', 'loose mending plate under clamp 2'],
   ['P1', '(15, 65)', 'x 11.2–18.8, y 52.3–77.7', 'joining plate, 13 cm on each top'],
@@ -549,7 +549,7 @@ drawTop('figSetup', {x0:0,x1:249,y0:0,y1:314}, { scale:1.55, extra:[
     d.circ(X(183),Y(20),8.5*sc,{fill:'none',stroke:C.ink}); T(d,X(183),Y(45),'lamp (183, 20)',{'font-size':9.5,'text-anchor':'middle'});
     d.circ(X(28),Y(140),6.5*sc,{fill:'none',stroke:C.ink}); T(d,X(8),Y(158),'headset (28, 140)',{'font-size':9.5});
     d.circ(X(32),Y(298),7*sc,{fill:'none',stroke:C.ok}); T(d,X(8),Y(290),'plant (32, 298)',{'font-size':9.5});
-    [[35,0],[0,35]].forEach(([x,y])=>d.rect(X(x)-3.8*sc,Y(y)-(y?3.8:0)*sc,7.6*sc,(y?7.6:8.9)*sc,{fill:C.gold}));
+    [[40,0],[0,40]].forEach(([x,y])=>d.rect(X(x)-3.8*sc,Y(y)-(y?3.8:0)*sc,7.6*sc,(y?7.6:8.9)*sc,{fill:C.gold}));
     T(d,X(108),Y(112),'Your seat',{'font-size':12,'font-weight':600,'text-anchor':'middle'});
   },
 ]});
