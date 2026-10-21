@@ -2,13 +2,15 @@
 
 Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-preview.png` beside it. Change a number at the top of the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm. Every screw-on part has its countersinks on the flat face that points at the floor, and every screw into the desk top is a #6 × 5/8 in flat head, 13 mm penetration, well inside the 21 mm rule.
 
+**Printers:** everything fits the Bambu P1S and A1 (256 × 256 mm bed; the longest part is 200 mm). Every STL is saved in its print orientation, flat face on the bed, and none needs supports. The three lipped marking tools print lip-up and are turned over to use; their labels are on the bed face so they read correctly in use. Bambu defaults (0.2 mm layers, 3 walls) are fine; use PETG where the table says so, PLA is fine for the rest.
+
 ## tools/ · print these before you mark or drill anything
 
 | Part | Print | What it does | Settings |
 | --- | --- | --- | --- |
-| `edge-t-square` | 1 | Head hooks over any edge (desk top, ALEX top, the steel); the blade lies square to it with punch holes at the four offsets this build uses: **50** ring centres on the ALEX, **85** feet on the top (with the plate's four screw holes round it), **100** legs L2–L6, **150** leg L1. Slide to the tape station, punch. The blade's edge squares the station lines across a rail. | lip up (flat face on the bed), any filament, no supports. `plate_hole_spacing` is 45; measure your feet plates. |
-| `alex-corner-template` | 1 | Drops over any corner of an ALEX top, fences against both edges: ring centre at 50/50 plus the ring's three screw holes in one placement. Same template for all eight corners. | fences up, any filament. |
-| `rail-marking-gauge` | 1 | Hooks over an edge of the angle. Pencil in the **19** notch along the flat leg's free edge gives the screw line; **29** along the heel edge gives the bolt line. | flat, hook up, any filament. |
+| `edge-t-square` | 1 | Head hooks over any edge (desk top, ALEX top, the steel); the blade lies square to it with punch holes at the four offsets this build uses: **50** ring centres on the ALEX, **85** feet on the top (with the plate's four screw holes round it), **100** legs L2–L6, **150** leg L1. Slide to the tape station, punch. The blade's edge squares the station lines across a rail. | as saved (lip up), turn over to use. `plate_hole_spacing` is 45; measure your feet plates. |
+| `alex-corner-template` | 1 | Drops over any corner of an ALEX top, fences against both edges: ring centre at 50/50 plus the ring's three screw holes in one placement. Same template for all eight corners. | as saved (fences up), turn over to use. |
+| `rail-marking-gauge` | 1 | Hooks over an edge of the angle. Pencil in the **19** notch along the flat leg's free edge gives the screw line; **29** along the heel edge gives the bolt line. | as saved (hook up), turn over to use. |
 | `pilot-drill-guide` | 1 | 1/8 in and 5/64 in bores keep the bit square. Grooves at 12, 15, 20 mm and the top face at 25 mm set the tape flag: bit tip on the bench against the block, tape level with the groove. | standing on its base, 100% infill. |
 
 ## structure/ · part of the desk
