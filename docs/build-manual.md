@@ -57,7 +57,7 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 
 1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot).
 2. Pilot the feet plate holes 1/8 in, 15 mm deep; screw each plate to the top, pad pointing away from the top. Wind each pad out until the foot measures 10.2 cm overall.
-3. Rail A: clamp it on its line, flat leg against the top, wall end flush with x = 0. Through each rail hole, drill a 1/8 in pilot 20 mm into the top: tape flag on the bit 25 mm from the tip (4.8 mm steel plus 20 mm). Drive #10 × 1 in screws with the Robertson #2 bit on the 3 in extension (the chuck would hit the vertical leg otherwise) until the head seats. Nine screws.
+3. Rail A: clamp it on its line, flat leg against the top, wall end flush with x = 0. Through each rail hole, drill a 1/8 in pilot 20 mm into the top: the printed drill guide's 25 RAIL step on the flat leg, or a tape flag on the bit 25 mm from the tip (4.8 mm steel plus 20 mm). Drive #10 × 1 in screws with the Robertson #2 bit on the 3 in extension (the chuck would hit the vertical leg otherwise) until the head seats. Nine screws.
 4. Rail B: clamp it on its line with the corner end projecting 12 cm past the top's joint end. Pilot and screw holes 3 to 10 only (eight screws). Holes 1 and 2 wait for step 7.
 
 ## 5. Place the ALEX units
