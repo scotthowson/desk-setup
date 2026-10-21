@@ -10,6 +10,7 @@ You are continuing work on Scott's L-shaped PC desk build. Everything here is a 
 | `docs/design-review.md` | Engineering review: verified IKEA specs, load paths, bill of materials, hole schedule, structural assessment, purchasing decision, open measurements | Only to correct a measured fact |
 | `docs/build-manual.md` | Build order with every measurement and the final checks | Only to correct a measured fact |
 | `docs/plan.svg` | Static top-down plan | Regenerate if leg or clamp positions change |
+| `parts/foot-ring.scad`, `parts/foot-ring.stl` | The printed locating ring for the ALEX feet (parametric OpenSCAD source and the rendered STL; `openscad -o foot-ring.stl foot-ring.scad`). | Yes, if the pad diameter changes |
 | `guide.html` | Print-ready build guide: every measurement, dimensioned drawings of each top face down, rails, ALEX rings, the corner joint and the desk layout. All numbers live in the `D` object at the top of its script and every table and drawing is rendered from it. | Yes: change `D` whenever `docs/build-manual.md` changes |
 
 ## The design in one paragraph

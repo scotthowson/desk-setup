@@ -183,7 +183,7 @@ a{color:var(--accent2)}
 </div>
 <table id="tRing"></table>
 <ol class="steps">
-  <li>Print eight rings: 51 mm bore, 3 mm wall, 10 mm tall, no floor, three countersunk holes in the wall for #6 × 5/8 in screws. PETG or ABS. Measure your pad first with calipers; the bore is the pad plus 1 mm.</li>
+  <li>Print eight rings from <code>parts/foot-ring.stl</code>: 51 mm bore, 3 mm wall, 10 mm tall ring on a 75 mm flange, three countersunk holes in the flange for #6 × 5/8 in flat-head screws, open bottom so the pad sits on the ALEX laminate. PETG or ABS, flange down, 3 perimeters. Measure your pad first with calipers; if it is not 50.0 mm, change <code>pad_d</code> in <code>parts/foot-ring.scad</code> and re-render.</li>
   <li>Mark the four ring centres on each ALEX top, 5 cm in from each corner. Set each ring on its mark, scribe the three holes, pilot 5/64 in 12 mm deep, drive the screws.</li>
   <li>Place the units: ALEX 1 at x 209.5–245.5, y 3.5–61.5 with the drawers facing you; ALEX 2 at x 3.5–61.5, y 274.5–310.5 with the door facing you. Both 3 cm off their walls. Painter's tape on the floor at x = 209.5 and y = 274.5 saves guessing.</li>
 </ol>
@@ -295,7 +295,7 @@ table('tParts', ['Item','Qty','Spec'], [
   ['ALEX drawer unit / storage unit','1 + 1','36 × 58 × 70 cm'],
   ['OLOV leg','6','60–90 cm, set to 80.2; 11 cm plate; max 13 kg each'],
   ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 6 × 6 cm plate'],
-  ['Printed locating rings','8','51 mm bore, 3 mm wall, 10 mm tall, no floor'],
+  ['Printed locating rings','8','parts/foot-ring.stl: 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm flange, three countersunk #6 holes, open bottom'],
   ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
   ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
   ['Mending plates','4','10 × 3 in: two across the joint, two as pads under the clamp jaws'],

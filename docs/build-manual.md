@@ -9,7 +9,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 6 × 6 cm, body and pad 5 cm, 10 cm tall.
-- [ ] Eight printed locating rings for the pads: 51 mm bore, 3 mm wall, 10 mm tall, no floor, three countersunk holes for #6 × ⅝ in screws (PETG or ABS). Plus 24 × #6 × ⅝ in screws.
+- [ ] Eight printed locating rings for the pads (`parts/foot-ring.stl`, source `parts/foot-ring.scad`): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws, 16 × #10 × ⅝ in screws with washers, two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 4 × 3/8-16 × 1 in bolts, 2 × 3/8-16 × 1½ in bolts, 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers.
 - [ ] VIVO pole spacing measured collar centre to collar centre on the crossbar (part B). The plan assumes 42 cm; the spec's 23 in crossbar makes 54–58 cm likely, which moves both clamps out to about 43–46 cm from the corner.
