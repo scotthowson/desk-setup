@@ -12,11 +12,11 @@ plate_t = 2.5;   // halved to save material
 size    = 100;     // square plate
 fence_h = 6; fence_t = 4;
 hole_d  = 4;       // scriber or pencil tip
-screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle, from structure/foot-ring.scad
+screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle: (ring_od/2 + flange_od/2)/2 from structure/foot-ring.scad. If pad_d changes there, change ring_od here too
 n_screws = 3;
 ring_od = 57; ring_bore = 51;
 
-module ring_line(d) { translate([inset, inset, plate_t - 0.5]) difference() { cylinder(d = d + 0.6, h = 1, $fn = 96); translate([0, 0, -1]) cylinder(d = d - 0.6, h = 3, $fn = 96); } }
+module ring_line(d) { translate([inset, inset, plate_t - 0.5]) difference() { cylinder(d = d + 0.9, h = 1, $fn = 96); translate([0, 0, -1]) cylinder(d = d - 0.9, h = 3, $fn = 96); } }
 module template() {   // use orientation: plate on the ALEX top, fences hanging down over two edges
     difference() {
         union() {

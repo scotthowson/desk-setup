@@ -5,8 +5,8 @@
 <rect x="90.0" y="70.0" width="448.2" height="117.0" fill="#f1e8dc" stroke="#555"/><rect x="90.0" y="187.0" width="117.0" height="448.2" fill="#f1e8dc" stroke="#555"/>
 <text x="405.0" y="113.2" text-anchor="middle" font-weight="600">Top A  249 × 65</text><text x="147.6" y="421.0" text-anchor="middle" font-weight="600">Top B</text><text x="147.6" y="435.40000000000003" text-anchor="middle" font-size="11.5" fill="#666">65 × 249</text>
 <line x1="90.0" y1="187.0" x2="207.0" y2="187.0" stroke="#555" stroke-dasharray="4 3"/>
-<rect x="110.16" y="164.14" width="13.68" height="45.72" fill="none" stroke="#888"/>
-<rect x="146.16" y="164.14" width="13.68" height="45.72" fill="none" stroke="#888"/>
+<rect x="110.16" y="165.94" width="13.68" height="45.72" fill="none" stroke="#888"/>
+<rect x="146.16" y="165.94" width="13.68" height="45.72" fill="none" stroke="#888"/>
 <rect x="91.8" y="156.4" width="383.40000000000003" height="9.0" fill="#9aa0a6" fill-opacity="0.5" stroke="#777"/><rect x="176.4" y="165.4" width="9.0" height="383.40000000000003" fill="#9aa0a6" fill-opacity="0.5" stroke="#777"/><rect x="185.4" y="165.4" width="16.2" height="16.2" fill="#d9a441"/>
 <text x="279.0" y="151.0" text-anchor="middle" font-size="11.5">Rail A, 213 cm, 12 cm back from the front edge</text><text x="212.4" y="322.0" font-size="11.5">Rail B</text><text x="212.4" y="336.40000000000003" font-size="11.5" fill="#666">213 cm</text><text x="212.4" y="176.60000000000002" font-size="11.5">bolted corner brace</text>
 <rect x="467.1" y="76.3" width="64.8" height="104.4" fill="none" stroke="#333" stroke-width="1.5"/><text x="499.5" y="129.4" text-anchor="middle" font-weight="600">ALEX 1</text><text x="499.5" y="145.60000000000002" text-anchor="middle" font-size="11.5" fill="#666">drawers</text>

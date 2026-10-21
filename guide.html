@@ -37,6 +37,8 @@ td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
 .cap{font:12.5px/1.45 system-ui,sans-serif;color:var(--muted);margin:4px 0 14px}
 ol.steps{padding-left:22px}
 ol.steps li{margin:10px 0}
+ol.steps ol{padding-left:20px;list-style:lower-alpha}
+ol.steps ol li{margin:4px 0}
 ul.check{list-style:none;padding:0}
 ul.check li{padding:4px 0 4px 28px;position:relative}
 ul.check li::before{content:"";position:absolute;left:2px;top:7px;width:14px;height:14px;border:1.5px solid var(--muted);border-radius:3px}
@@ -67,11 +69,11 @@ a{color:var(--accent2)}
 <p class="kicker">Corner desk · build guide</p>
 <h1>Every measurement, in the order you need it</h1>
 <p class="lead">Two IKEA EKBACKEN tops in an L, two ALEX units, six OLOV legs, two steel angle rails, a VIVO triple mount across the corner. Numbers are in centimetres unless marked. Every table and drawing here is generated from one list of numbers, so they always agree with each other and with the 3D model.</p>
-<p class="noprint"><a href="index.html">Open the 3D model</a> · <a href="docs/build-manual.md">build-manual.md</a> · <a href="docs/design-review.md">design-review.md</a> · print this page for the workshop (Ctrl/Cmd+P; each section starts a new sheet).</p>
+<p class="noprint"><a href="index.html">Open the 3D model</a> · <a href="docs/build-manual.md">build-manual.md</a> · <a href="docs/design-review.md">design-review.md</a> · <a href="parts/README.md">printed parts</a> · print this page for the workshop (Ctrl/Cmd+P; each section starts a new sheet).</p>
 <nav class="toc" aria-label="Contents">
   <div><a href="#s0">0 · How this desk works, in plain words</a></div>
   <div><a href="#s0b">0b · Reading the numbers and the drawings</a></div>
-  <div><a href="#s1">1 · Parts and tools</a></div>
+  <div><a href="#s1">1 · Parts, tools and the printed helpers</a></div>
   <div><a href="#s2">2 · Steel: drill both rails on the bench</a></div>
   <div><a href="#s3">3 · Top A, face down</a></div>
   <div><a href="#s4">4 · Top B, face down</a></div>
@@ -85,42 +87,55 @@ a{color:var(--accent2)}
 <h2 id="s0">0 · How this desk works, in plain words</h2>
 <p>Read this once before you pick up a drill. Everything after it is a list of numbers; this is why the numbers are what they are.</p>
 <ol class="steps">
-  <li><strong>Two kitchen counter tops make an L.</strong> Top A lies along the back wall. Top B lies along the side wall and its end pushes against the front edge of top A. They are the same size; only their direction differs.</li>
+  <li><strong>Two kitchen counter tops make an L.</strong> Top A lies along the back wall. Top B lies along the side wall and its end pushes against the front edge of top A. They are the same size; only their direction differs. The place where they meet, in the crook of the L, is where you sit; this guide calls it <em>the L corner</em>.</li>
   <li><strong>What holds them up.</strong> At the two far ends of the L, each top rests on an ALEX cabinet. Along the two wall edges there are six IKEA OLOV legs. That leaves the <em>front</em> edges, the ones your knees go under, with nothing beneath them for over two metres. Counter tops sag and eventually break like that.</li>
-  <li><strong>So each front edge gets a steel rail.</strong> A piece of steel angle, 2 inches on each side and 213 cm long, is screwed to the underside of each top, 12 cm back from the front edge. Steel on edge is very stiff; the rails carry the front edges the way a beam carries a floor. Where the two rails meet at the inside corner they are bolted to each other with two heavy steel corner fittings, so the corner of top B hangs from rail A instead of from nothing.</li>
+  <li><strong>So each front edge gets a steel rail.</strong> A piece of steel angle, 2 inches on each side and 213 cm long, is screwed to the underside of each top, 12 cm back from the front edge. Steel on edge is very stiff; the rails carry the front edges the way a beam carries a floor. Where the two rails meet under the L corner they are bolted to each other with two heavy steel corner fittings, so the corner of top B hangs from rail A instead of from nothing.</li>
   <li><strong>Why the cabinets have feet on them.</strong> An ALEX is 70 cm tall. You want the desk surface at 83 cm. Each cabinet therefore carries four 10 cm adjustable feet between its top and the desk. The feet are screwed to the <em>desk</em>, and their round pads drop into little printed rings screwed to the <em>cabinet</em>. The rings stop the desk sliding on the cabinets, and because the cabinets are heavy boxes on the floor, that also stops the whole desk from rocking sideways; the thin OLOV legs could not do that on their own.</li>
-  <li><strong>Why the legs are where they are.</strong> All six legs stand on the wall edges, none under the front. That keeps the space under the corner, where you sit, completely open for your knees. One leg sits right under the monitor mount's second clamp, because that clamp carries the weight of the screens.</li>
+  <li><strong>Why the legs are where they are.</strong> All six legs stand on the wall edges, none under the front. That keeps the space under the L corner, where you sit, completely open for your knees. One leg sits right under the monitor mount's second clamp, because that clamp carries the weight of the screens.</li>
   <li><strong>Why no screw goes deeper than 21 mm.</strong> The tops are 28 mm particleboard with a thin laminate skin. A screw that reaches the skin leaves a bump you will see and feel for ever. Every screw length in this guide was chosen so that it stops at least 7 mm short of the top face. Keep that rule if you ever substitute a screw.</li>
-  <li><strong>Why the tops are drawn mirrored.</strong> You mark the undersides with the tops face down. Looking at a face-down top you see its layout flipped left-to-right, like a mirror. Sections 3 and 4 draw each top exactly as you will see it on the blanket, so you can hold the page next to the top and the drawing matches.</li>
+  <li><strong>Why the tops are drawn mirrored.</strong> You mark the undersides with the tops face down. Looking at a face-down top you see its layout flipped left-to-right, like a mirror. Sections 3 and 4 draw each top exactly as you will see it on the blanket, and tell you where to stand, so you can hold the page next to the top and the drawing matches.</li>
 </ol>
 <h3>Words used in this guide</h3>
 <dl class="gloss">
-  <dt>Angle</dt><dd>Steel bent into an L. One side is 2 inches, the other side is 2 inches, the steel is 3/16 inch thick.</dd>
+  <dt>Angle</dt><dd>Steel bent into an L. One side is 2 inches, the other side is 2 inches, the steel is 3/16 inch (4.8 mm) thick. The drawing below shows it end-on.</dd>
   <dt>Flat leg</dt><dd>The side of the angle that lies flat against the underside of the top. All the screws go through it.</dd>
   <dt>Vertical leg</dt><dd>The side of the angle that hangs straight down toward the floor. The corner fittings bolt to it.</dd>
-  <dt>Heel</dt><dd>The bend, where the two legs meet. The heel edge is the top edge of the vertical leg, flush with the underside of the desk.</dd>
+  <dt>Outer face, inner face</dt><dd>Of the vertical leg: the outer face looks toward the front edge of the desk, away from the flat leg. The inner face is the other side, tucked under the flat leg.</dd>
+  <dt>Heel of the angle</dt><dd>The bend, where the two legs meet. The heel edge is the top edge of the vertical leg, flush with the underside of the desk.</dd>
+  <dt>Heel of a fitting</dt><dd>The outside of its bend, the corner you can run a finger round. When a step says "heel on the mark", put that outside corner on the mark with the fitting's leg lying flat on the steel.</dd>
   <dt>Free edge</dt><dd>The outer edge of a leg, the one that is not the heel. The screw holes sit 19 mm in from the flat leg's free edge.</dd>
-  <dt>Station</dt><dd>A position along a rail, measured from one labelled end. Rail A is measured from its wall end; rail B from its corner end.</dd>
-  <dt>Pilot hole</dt><dd>A small hole drilled first so the screw goes in straight and does not split the board. In these tops it is always a 1/8 in bit.</dd>
-  <dt>Tape flag</dt><dd>A piece of masking tape wrapped round the drill bit at a set distance from the tip. When the tape touches the surface, stop. The printed drill guide replaces this: its steps stop the chuck at the right depth.</dd>
-  <dt>Centre punch</dt><dd>A pointed steel tool (a nail works). Tap it on a mark on steel to make a dent, so the drill bit starts exactly there instead of skating.</dd>
+  <dt>Station</dt><dd>A distance along an edge, measured from the labelled end of that edge with the tape. On a rail it is where a hole goes. On a top: tick the edge at the station, draw a short line square to the edge with the combination square, and lay the T-square so its row of holes sits on that line.</dd>
+  <dt>Scribe</dt><dd>Draw a fine line with a sharp pencil or a nail.</dd>
+  <dt>Pilot hole</dt><dd>A small hole drilled first so the screw goes in straight and does not split the board. Into the desk tops it is a 1/8 in bit; into the ALEX tops a 5/64 in bit.</dd>
+  <dt>Drill guide</dt><dd>The printed stepped block. It keeps the bit square and stops the chuck at the right depth; section 1 says how to set it.</dd>
+  <dt>Tape flag</dt><dd>A piece of masking tape wrapped round the drill bit at a set distance from the tip; when the tape touches the surface, stop. The drill guide replaces this; it is the fallback if you have no guide to hand.</dd>
+  <dt>Centre punch</dt><dd>A pointed steel tool (a nail works). Tap it on a mark on steel to make a dent, so the drill bit starts exactly there instead of skating. On the tops, a pencil dot through the tool's hole is enough.</dd>
+  <dt>Countersunk</dt><dd>A hole with a cone at its mouth so a flat-head screw sits flush.</dd>
   <dt>Deburr</dt><dd>Drilling leaves a sharp ring of metal around a hole. Rub it off with a file or twist a bigger bit in the hole by hand.</dd>
-  <dt>Snug</dt><dd>Tight enough that nothing moves, then stop. Not "as hard as you can".</dd>
+  <dt>Flush</dt><dd>Level with, no step.</dd>
+  <dt>Butt</dt><dd>Push end-on against, no gap.</dd>
+  <dt>Seats</dt><dd>A screw head seats when it touches the metal and the plate no longer moves. Stop there.</dd>
+  <dt>Snug</dt><dd>With a hand wrench: turn until the washer stops turning, then about one eighth of a turn more. Not "as hard as you can".</dd>
+  <dt>Clutch</dt><dd>The numbered ring behind the drill's chuck. Start at the lowest number that still drives the screw fully home. A screw that stops a millimetre proud is fine; a stripped hole is not.</dd>
+  <dt>Chuck nose</dt><dd>The flat front face of the drill's chuck, the part that spins round the bit.</dd>
+  <dt>Nylon-insert nut</dt><dd>A nut with a plastic ring inside so it cannot vibrate loose. It is stiff to turn; that is normal.</dd>
   <dt>Toe-in</dt><dd>Turning a side monitor or speaker a little toward you instead of flat along the wall.</dd>
   <dt>Gusseted fitting</dt><dd>A steel L-shaped bracket with a triangular web across its inside corner. Very stiff. Ours are made for 1-5/8 in strut channel and have two 9/16 in holes in each leg.</dd>
+  <dt>Fence</dt><dd>A raised lip on a printed template that rests against an edge.</dd>
+  <dt>Racking</dt><dd>The whole desk leaning sideways like a parallelogram. The cabinets, locked to the tops by the rings, stop it.</dd>
 </dl>
 <div class="fig" id="figSection"></div>
 <p class="cap">The angle rail seen end-on, as it sits under the top, and the two lines everything is measured from: the screw line 19 mm in from the flat leg's free edge, and the bolt line 29 mm down from the heel edge.</p>
 
 <h2 id="s0b">0b · Reading the numbers and the drawings</h2>
 <p>Every position is a pair <strong>(x, y)</strong> in centimetres measured from the <strong>back-left corner of top A</strong>: x runs along the back wall, y runs along the side wall. Top A covers x 0–249, y 0–65. Top B covers x 0–65, y 65–314. The two tops meet on the line y = 65. Both tops stand 3 cm off their walls.</p>
-<p><strong>Your seat</strong> is at the inside corner of the L, facing the corner diagonally. The three monitors wrap around that corner. Your knees swing through the open space under the corner and the first 55 cm of each wing; nothing is allowed to stand there.</p>
+<p><strong>Your seat</strong> is at the L corner, facing it diagonally. The three monitors wrap around that corner. Your knees swing through the open space under the corner and the first 55 cm of each wing; nothing is allowed to stand there.</p>
 <div class="fig" id="figOverview"></div>
 <p class="cap">Plan view from above. Gold circles: legs, drawn with their 11 cm plates. Small circles: the feet on the ALEX units. Grey strips: the rails, 12 cm back from the front edges. Dashed area: the knee sweep. Short names here; every coordinate is in the tables of sections 3 to 7.</p>
 <h3>Heights, from the floor</h3>
 <table id="tHeights"></table>
 
-<h2 id="s1">1 · Parts and tools</h2>
+<h2 id="s1">1 · Parts, tools and the printed helpers</h2>
 <h3>Bought</h3>
 <table id="tParts"></table>
 <h3>Fasteners (every screw, with how deep it goes)</h3>
@@ -128,84 +143,131 @@ a{color:var(--accent2)}
 <table id="tFast"></table>
 <h3>Tools</h3>
 <table id="tTools"></table>
+<h3>The printed helpers</h3>
+<p>Print everything in <code>parts/tools</code> and the eight rings in <code>parts/structure</code> before you start; <code>parts/README.md</code> has quantities and print settings. Two rules: never scale a printed tool in the slicer (its distances are the tool), and the three marking tools print lip-up and are turned over to use, so the lip hangs over an edge and the label reads correctly.</p>
+<table id="tHelpers"></table>
+<div class="note"><strong>Setting the drill guide.</strong> Loosen the chuck. Drop the 1/8 in bit tip-first into the SET hole marked <strong>1/8</strong> until it bottoms, rest the chuck nose on the top of the tower, and tighten the chuck. The bit now sticks out exactly 45 mm. For the 5/64 in bit use the hole marked <strong>5/64</strong> (35 mm). Do this again every time you change bits. To drill: stand the step you need flat on the surface, put the bit down its bore, and drill until the chuck nose touches the step. The hole is then exactly the depth written on that step. Steps: <strong>12</strong> joining plates, <strong>15</strong> leg and feet plates, <strong>12 RING</strong> (5/64 bit) rings into the ALEX, <strong>25 RAIL</strong> through the angle into the top.</div>
 
 <h2 id="s2">2 · Steel: drill both rails on the bench</h2>
 <p>Everything in steel is drilled on the bench, before the rails go anywhere near the tops. When you are under the desk later you only drive screws and bolts; you never drill steel there.</p>
-<p>Two pieces of angle arrive cut to 213 cm. Decide which is rail A and which is rail B, and tape a label on one end of each: rail A <em>wall end</em>, rail B <em>corner end</em>. All stations below are measured from that labelled end.</p>
+<p>Two identical pieces of angle arrive cut to 213 cm; either can be rail A. Tape a label on one end of each: rail A <em>wall end</em>, rail B <em>corner end</em>. All stations below are measured from that labelled end.</p>
 <h3>Screw holes, in the flat leg</h3>
 <div class="fig" id="figRailA"></div>
-<p class="cap">Rail A. The upper strip is the flat leg (screw holes), the lower strip is the vertical leg (the fitting bolt holes, drawn where they fall if your fitting's holes are near 3 and 7 cm from its heel; yours set the exact spots).</p>
+<p class="cap">Rail A, drawn opened out flat as if you unfolded the L along the heel; the heavy line between the strips is the heel. Upper strip: the flat leg with its screw holes. Lower strip: the vertical leg with the fitting bolt holes, drawn where they fall if your fitting's holes are about 2.5 and 6.5 cm from its heel; yours set the exact spots.</p>
 <div class="fig" id="figRailB"></div>
 <p class="cap">Rail B. Holes 1 and 2 are only 5 cm apart and both land in top A later; holes 3 to 10 land in top B.</p>
 <table id="tRail"></table>
 <h3>Bolt holes for the corner fittings, in the vertical leg</h3>
-<p>You do not need to know the fitting's hole spacing. The fitting <em>is</em> the template: clamp it to the rail where it will finally sit, punch through its holes, drill. Both fittings are identical, so holes punched through one fit the other.</p>
+<p>You do not need to know the fitting's hole spacing. The fitting <em>is</em> the template: clamp it to the rail where it will finally sit, punch through its holes, drill. Both fittings are identical, so holes punched through one fit the other. Remember that the heel of a fitting means the <em>outside</em> of its bend.</p>
 <div class="fig" id="figTemplate"></div>
-<p class="cap">Where to clamp the fitting as a template, three times. Its heel goes on the blue mark, its holes 29 mm down from the heel edge of the rail, its legs pointing the way shown. The gold dots are where the holes land if your fitting's holes are about 3 and 7 cm from its heel. Rail B's two holes serve both fittings.</p>
+<p class="cap">Where to clamp the fitting as a template, three times. Its heel (outside of the bend) goes on the blue mark, its holes on the 29 mm bolt line, its legs pointing the way shown. The gold dots are where the holes land if your fitting's holes are about 2.5 and 6.5 cm from its heel. Rail B's two holes serve both fittings.</p>
 <table id="tTemplate"></table>
 <ol class="steps">
-  <li>Scribe the screw line on each flat leg: 19 mm in from the free edge, full length. The printed marking gauge does this: hook it over the free edge, pencil in the 19 notch, slide. Mark the stations from the labelled end, centre-punch each mark.</li>
+  <li>Scribe the screw line on each flat leg: 19 mm in from the free edge, full length. The printed marking gauge does this: lay it on the flat leg with its lip over the free edge, pencil in the <strong>19</strong> notch, slide. Then scribe the bolt line on each vertical leg the same way: lip over the heel edge, pencil in the <strong>29</strong> notch.</li>
+  <li>Mark the stations on the screw line from the labelled end with the tape, centre-punch each mark.</li>
   <li>Drill every screw hole 7/32 in, slow speed, a drop of oil on each. Deburr both sides.</li>
-  <li>Rail A, fitting holes: first scribe the bolt line on the vertical leg with the gauge hooked over the heel edge, pencil in the 29 notch. Clamp a fitting to the <em>vertical</em> leg with its heel exactly on the <strong>52.0 cm</strong> mark, legs pointing toward the far end, holes on the bolt line. Punch through both holes. Move it so its heel is on the <strong>51.5 cm</strong> mark, legs pointing toward the wall end, same height. Punch. Drill the four marks 7/16 in.</li>
-  <li>Rail B, fitting holes: clamp the fitting with its heel flush with the <strong>corner end</strong> of the rail, legs pointing toward the far end, holes 29 mm down. Punch, drill 7/16 in, two holes.</li>
-  <li>Test: lay the two rails on the floor in an L, rail B's end against rail A's vertical leg at the 52 cm mark, and bolt both fittings on loosely. Everything should line up with the bolts sliding in freely. If a hole is off by a millimetre, open it with a round file now, not under the desk.</li>
+  <li>Rail A, fitting holes:
+    <ol>
+      <li>Clamp a fitting to the <em>vertical</em> leg with its heel exactly on the <strong>52.0 cm</strong> mark, legs pointing toward the far end, holes centred on the bolt line. Punch through both holes.</li>
+      <li>Move it so its heel is on the <strong>51.5 cm</strong> mark, legs pointing toward the wall end, holes on the bolt line. Punch.</li>
+      <li>Drill the four marks: 1/8 in first, then 1/4 in, then 7/16 in, slow, oil on each.</li>
+    </ol>
+  </li>
+  <li>Rail B, fitting holes: clamp the fitting with its heel flush with the <strong>corner end</strong> of the rail, legs pointing toward the far end, holes on the bolt line. Punch, drill the same way, two holes.</li>
+  <li>Floor test. Lay both rails flat legs down, vertical legs up. Butt rail B's corner end against the outer face of rail A's vertical leg so that rail B's outer face is on the 52.0 mark (its flat leg then covers 47–52). Bolt both fittings on loosely: the outside one on the far-end side of rail B, the inside one on the wall side. Every bolt should slide in freely. If one is off by a millimetre, open its hole with a round file now, not under the desk.</li>
   <li>Take the fittings off. Degrease with acetone, scuff with 120 grit, two light coats of flat black enamel, 24 h to cure. Holes clear themselves; mask nothing.</li>
 </ol>
 
 <h2 id="s3">3 · Top A, face down</h2>
-<p>Lay top A face down on a blanket. Find the end that will go against the <strong>side wall</strong> (that is x = 0) and the long edge that will go against the <strong>back wall</strong> (y = 0). Put a strip of tape on each and label them. Every mark below is measured from those two edges. The drawing is what you see looking down at the face-down top: x grows to the <strong>left</strong>.</p>
+<p>Each top has one rounded, laminated long edge and one square, unfinished long edge. <strong>The unfinished edge goes against the wall.</strong> On top A it is y = 0 (the back edge). The rounded edge is the front edge. Either short end can be the side-wall end; pick one. Put tape on the unfinished long edge and on the chosen end and label them <em>back edge</em> and <em>side-wall end</em>. Every mark below is measured from those two edges.</p>
+<p>Lay top A face down on a blanket and <strong>stand so the taped back edge is away from you</strong>. The taped side-wall end is then on your right, and the drawing below matches what you see: x grows to the <strong>left</strong>. Before drilling: calipers on the top; if it is 27 mm instead of 28, shorten every screw into it by 1 mm.</p>
 <div class="fig" id="figA"></div>
-<p class="cap">Top A underside as seen face down. Gold circles: OLOV plates (11 cm). Grey squares: feet plates (6 cm). Grey strip: rail A, its screws as dots. Hatched boxes C1, C2: VIVO clamp zones, keep clear. Pale bars: the two loose mending plates that pad the clamp jaws. Blue bars P1, P2: the joining plates, half on this top.</p>
+<p class="cap">Top A underside as seen face down. Gold circles: OLOV plates (11 cm). Grey squares: feet plates (6 cm). Grey strip: rail A, its screws as dots. Hatched boxes C1, C2: VIVO clamp zones, keep clear. Pale bars: where the two loose mending plates will pad the clamp jaws. Blue bars P1, P2: the joining plates, half on this top, with their screw holes.</p>
 <table id="tA"></table>
+<h3>Marking with the T-square</h3>
+<p>Turn the T-square over so its lip hangs down, hook the lip over the edge named in the table, slide it to the station, and punch through the named hole. One row for every mark on this top:</p>
+<table id="tTsqA"></table>
 <ol class="steps">
-  <li><strong>Legs L1, L2, L3.</strong> Mark each centre with the T-square (the 100 hole for L2 and L3 from the back edge; the 150 hole for L1 from the side-wall end, at tape station 42). Set the OLOV plate on the mark, scribe through its four holes, pilot 1/8 in, 15 mm deep: set the bit in the drill guide's SET hole, then drill through its <strong>15</strong> step until the chuck lands on it. Drive the IKEA M4 × 16 mm screws. Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
-  <li><strong>Feet F1–F4.</strong> Mark each centre with the T-square: head on the edge at the tape station, punch through the 85 hole and the four plate holes round it. Pilot 1/8 in, 15 mm deep, drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> overall.</li>
-  <li><strong>Clamp zones C1 and C2.</strong> Nothing goes in x 36–44 along the back edge, 9 cm in, or in y 36–44 along the left end, 9 cm in. Lay the two spare mending plates loose where drawn; they go between the clamp jaw and the top in section 7, no screws.</li>
-  <li><strong>Rail A.</strong> Draw the rail line at y = 53 from x = 1 to 214. Clamp the rail with the outer face of its vertical leg on that line, flat leg toward the back edge (it covers y 48–53), wall end at x = 1. Through each of the nine holes drill a 1/8 in pilot 20 mm into the top: the drill guide's <strong>25 RAIL</strong> step standing on the flat leg (4.8 mm of steel plus 20 mm), or a tape flag 25 mm from the bit tip. Drive #10 × 1 in screws with the Robertson bit on the 3 in extension so the chuck clears the vertical leg; stop when the head seats.</li>
-  <li><strong>Joining plates</strong> wait for section 6. Mark their outlines now so nothing else lands there.</li>
+  <li><strong>Legs L1, L2, L3.</strong>
+    <ol>
+      <li>Punch the three centres with the T-square as in the table above.</li>
+      <li>Draw a cross through each punch mark with the combination square, each arm about 7 cm long.</li>
+      <li>Set the OLOV plate (leg attached, pointing up) on the mark so that each plate edge is 5.5 cm from the mark; the cross lines help you see it is centred. Scribe through its four holes. Lift the leg away.</li>
+      <li>Drill the four pilots with the drill guide's <strong>15</strong> step and the 1/8 in bit.</li>
+      <li>Drive the IKEA M4 × 16 mm screws, clutch low, until the heads seat.</li>
+      <li>Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
+    </ol>
+  </li>
+  <li><strong>Feet F1–F4.</strong> First lay one foot plate over the T-square's 85 hole pattern. If its four screw holes line up with the tool's, punch all five at each mark; if not, punch only the centre, set the plate on the mark with its edges parallel to the top's edges, and scribe through its own holes. Drill the four pilots with the <strong>15</strong> step. Drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> from the plate face that touches the top to the bottom of the pad.</li>
+  <li><strong>Clamp zones C1 and C2.</strong> Nothing goes in x 36–44 along the back edge, 9 cm in from the edge toward the middle, or in y 36–44 along the side-wall end, 9 cm in. Draw the outlines of the two pad plates where the drawing shows them; the plates themselves go in at section 7, no screws.</li>
+  <li><strong>Rail A.</strong>
+    <ol>
+      <li>Draw the rail line at y = 53 from x = 1 to 214.</li>
+      <li>Clamp the rail with the outer face of its vertical leg on that line, flat leg toward the back edge (it covers y 47.9–53), wall end at x = 1, one centimetre in from the taped end.</li>
+      <li>Measure 12 cm from the front edge to the vertical leg's outer face at both ends and in the middle. Adjust until all three read 12.0.</li>
+      <li>Through the rail's two end holes, drill 1/8 in pilots with the drill guide's <strong>25 RAIL</strong> step standing on the flat leg (4.8 mm of steel plus 20 mm into the top). Drive #10 × 1 in screws with the Robertson bit on the 3 in extension so the chuck clears the vertical leg; stop when the heads seat. Re-check the 12 cm.</li>
+      <li>Drill and drive the other seven the same way. Nine screws.</li>
+    </ol>
+  </li>
+  <li><strong>Joining plates</strong> wait for section 6. Draw their outlines now (y 53.3–78.7 on this top's scale, so 53.3 to 65 here) so nothing else lands there.</li>
 </ol>
 
 <h2 id="s4">4 · Top B, face down</h2>
-<p>Lay top B face down. The end that will butt against top A is y = 65; the long edge that goes against the side wall is x = 0. Label both. The drawing is again as seen looking down at the face-down top, x growing to the left.</p>
+<p>On top B the unfinished long edge is the side-wall edge, x = 0, and the end that will butt against top A is y = 65. Tape and label both. Lay it face down and <strong>stand so the taped joint end is away from you</strong>; the taped side-wall edge is then on your right and the drawing matches: x grows to the left. Calipers on this top too.</p>
 <div class="fig" id="figB"></div>
 <p class="cap">Top B underside as seen face down. The rail's corner end sticks out 12 cm past the joint end; that 12 cm will lie under top A.</p>
 <table id="tB"></table>
+<h3>Marking with the T-square</h3>
+<table id="tTsqB"></table>
 <ol class="steps">
-  <li><strong>Legs L4, L5, L6</strong> and <strong>feet F5–F8</strong> exactly as on top A.</li>
-  <li><strong>Rail B.</strong> Draw the rail line at x = 53 from the joint end (y = 65) to y = 266. Clamp the rail with the outer face of its vertical leg on that line, flat leg toward the wall edge (x 48–53), and its <strong>corner end sticking out 12 cm past the joint end</strong>. Pilot and screw holes <strong>3 to 10</strong> only, same 25 mm flag, eight screws. Holes 1 and 2 are driven into top A in section 6.</li>
+  <li><strong>Legs L4, L5, L6</strong> and <strong>feet F5–F8</strong> exactly as on top A, with the T-square hooked on the edges named in the table.</li>
+  <li><strong>Rail B.</strong> Draw the rail line at x = 53 from the joint end (y = 65) to y = 266. Clamp the rail with the outer face of its vertical leg on that line, flat leg toward the side-wall edge (x 47.9–53), and its <strong>corner end sticking out 12 cm past the joint end</strong>. Check the 12 cm from the front edge at both ends and the middle. Pilot and screw holes <strong>3 to 10</strong> only, end holes first, with the <strong>25 RAIL</strong> step. Eight screws. Holes 1 and 2 are driven into top A in section 6.</li>
+  <li><strong>Joining plates.</strong> Draw the P1 and P2 outlines on this top too: x 11.2–18.8 and 31.2–38.8, from the joint end to y 78.7.</li>
 </ol>
 
 <h2 id="s5">5 · ALEX units and locating rings</h2>
 <p>The feet pads never touch bare laminate. Each pad drops into a printed ring screwed to the ALEX top, so the top cannot slide on the units and the units hold the whole desk steady.</p>
 <div class="two">
   <div><div class="fig" id="figAlex1"></div><p class="cap">ALEX 1 top (36 × 58), drawers toward you. Ring centres 5 cm in from each corner.</p></div>
-  <div><div class="fig" id="figAlex2"></div><p class="cap">ALEX 2 top (58 × 36), door toward you. Same rule.</p></div>
+  <div><div class="fig" id="figAlex2"></div><p class="cap">ALEX 2 top (58 × 36), door toward you. The ring pattern is the same from every corner, so which way the unit faces does not matter for marking.</p></div>
 </div>
 <table id="tRing"></table>
 <ol class="steps">
-  <li>Print eight rings from <code>parts/structure/foot-ring.stl</code>: 51 mm bore, 3 mm wall, 10 mm tall ring on a 75 mm flange, three countersunk holes in the flange for #6 × 5/8 in flat-head screws, open bottom so the pad sits on the ALEX laminate. PETG or ABS, flange down, 3 perimeters. Measure your pad first with calipers; if it is not 50.0 mm, change <code>pad_d</code> in <code>parts/structure/foot-ring.scad</code> and re-render.</li>
-  <li>Mark each ALEX corner with the printed corner template: drop it over the corner with both fences against the edges, punch through the centre hole and the three screw holes. Pilot the three 5/64 in, 12 mm deep, set the ring on its outline, drive the screws.</li>
-  <li>Place the units: ALEX 1 at x 209.5–245.5, y 3.5–61.5 with the drawers facing you; ALEX 2 at x 3.5–61.5, y 274.5–310.5 with the door facing you. Both 3 cm off their walls. Painter's tape on the floor at x = 209.5 and y = 274.5 saves guessing.</li>
+  <li>Before drilling: measure the ALEX top panel at an edge. It must be at least 16 mm thick for the 5/8 in screws.</li>
+  <li>Mark each ALEX corner with the printed corner template, turned over so its fences hang down: drop it over the corner with both fences against the edges, punch through the centre hole and the three screw holes. Eight corners.</li>
+  <li>Set the 5/64 in bit in the drill guide's <strong>5/64</strong> SET hole and drill the three pilots at each corner with the <strong>12 RING</strong> step.</li>
+  <li>Set each ring so its three flange holes sit over the three pilot holes (it only fits one way round) and drive #6 × 5/8 in flat-head screws.</li>
+  <li>Place the units by the walls, because the tops are not up yet to measure from. ALEX 1: its back 6.5 cm off the back wall, its near side 212.5 cm from the side wall, drawers facing you. ALEX 2: its side 6.5 cm off the side wall, its near end 277.5 cm from the back wall, door facing you. That is 3.5 cm inside the tops' edges all round once the tops are on. Painter's tape on the floor saves guessing.</li>
 </ol>
 
 <h2 id="s6">6 · Standing it up (two people)</h2>
+<div class="note">The outside corner of the rails is where rail A's outer face meets rail B's outer face; you can see it from the knee space. The inside corner is the pocket between rail A's outer face and the inner face of rail B's vertical leg, hidden under rail B's flat leg. Both fittings bolt into these two pockets.</div>
 <ol class="steps">
-  <li><strong>Top A.</strong> Lift it onto L1–L3 with the four pads dropping into the rings on ALEX 1. Lift and set; the rings do not allow a push. Final position: 3 cm off both walls. Level along x and along y. Adjust the OLOV feet and the round feet until it reads flat and all four pads bear with no rock. Target <strong>83.0 cm</strong> at every corner.</li>
-  <li><strong>Top B.</strong> Lift onto L4–L6 with its pads in the rings on ALEX 2, its end against A's front edge, 3 cm off the side wall. Adjust until the two surfaces are flush at the joint: run a fingertip across; shim the legs, never the plates.</li>
-  <li><strong>Joining plates.</strong> From below, screw P1 and P2 across the joint: each plate centred on the joint line, long axis across it, two #10 × 5/8 in screws with washers in each top, pilots 1/8 in, 12 mm deep. Each plate has four holes along its length, at 2.0, 7.0, 18.4 and 23.4 cm from one end. With the plate at y 53.3–78.7 (3 mm clear of rail A) they land at y 55.3 and 60.3 in top A and 71.7 and 76.7 in top B, every one more than 4 cm from an edge, so all four get a screw.</li>
-  <li><strong>Rail B meets rail A.</strong> Push rail B's corner end against rail A's vertical leg. Drill holes 1 and 2 into top A (25 mm flag) and screw.</li>
-  <li><strong>Corner fittings.</strong> The holes already match from section 2. Outside fitting: heel in the outside corner, one leg on rail A's vertical leg toward the far end, the other on rail B's outer face, gusset facing the open space. Inside fitting: heel in the inside corner, one leg on rail A's vertical leg toward the wall, the other on the inner face of rail B's vertical leg, gusset tucked under B's flat leg. Rail A: four 3/8-16 × 1 in bolts from the fitting side, washer under each head, washer and nylon-insert nut inside the leg. Rail B: two 3/8-16 × 1½ in bolts through fitting, leg and fitting. Snug, not cranked.</li>
+  <li><strong>Top A.</strong> It already has its legs and feet on it. With a helper, turn it over and stand it on its legs, lowering the ALEX end first so the four pads drop into their rings, then the leg end. It cannot be pushed once the pads are in the rings. If the pads miss, or the top is not 3 cm off a wall, lift the ALEX end a few millimetres and slide the ALEX unit, not the top; a 3 cm offcut held against the wall is the easiest gauge. Then level along x and along y, turning the OLOV feet and the round feet until it reads flat and all four pads bear with no rock. Target <strong>83.0 cm</strong> at every corner.</li>
+  <li><strong>Top B.</strong> Wind its OLOV legs 2–3 mm short so rail B's corner end can slide under top A. Turn it over onto its legs with its pads in the rings on ALEX 2, push it until its end meets A's front edge and rail B's end touches rail A's vertical leg, 3 cm off the side wall. Wind the legs up until the two surfaces are level at the joint: a fingertip across the joint should find no step. Level by turning the feet, never by packing anything under the joining plates.</li>
+  <li><strong>Check under the corner before anything is screwed.</strong> Rail B's end must touch the face of rail A's vertical leg with no gap, and rail B's outer face must line up with the 52.0 mark on rail A. If not, lift top B a little and move it. Only then go on.</li>
+  <li><strong>Joining plates.</strong> From below, screw P1 and P2 across the joint on the outlines you drew. They are not centred on the joint: each runs y 53.3–78.7, 3 mm clear of rail A, so its centre is 1 cm into top B. Each plate has four holes along its length (2.0, 7.0, 18.4 and 23.4 cm from one end); they land at y 55.3 and 60.3 in top A and 71.7 and 76.7 in top B, all more than 4 cm from an edge, so all four get a screw. Pilot with the drill guide's <strong>12</strong> step, held up overhead; drive #10 × 5/8 in screws with washers.</li>
+  <li><strong>Rail B meets rail A.</strong> Drill rail B's holes 1 and 2 into top A with the <strong>25 RAIL</strong> step and screw.</li>
+  <li><strong>Corner fittings.</strong> The holes already match from section 2.
+    <ol>
+      <li>Outside fitting: heel in the outside corner, one leg flat on rail A's vertical leg toward the far end, the other on rail B's outer face, gusset facing the open knee space.</li>
+      <li>Inside fitting: heel in the inside corner, one leg on rail A's vertical leg toward the wall, the other on the inner face of rail B's vertical leg, and its <strong>gusset pointing at the floor</strong> (gusset-up it would sit a millimetre under the head of rail B's first screw; the hole pattern is symmetric, so the holes still line up).</li>
+      <li>Rail A: four 3/8-16 × 1¼ in bolts from the fitting side, washer under each head, washer and nylon-insert nut on the inner face of the leg, under the flat leg.</li>
+      <li>Rail B: two 3/8-16 × 1½ in bolts through fitting, leg and fitting, washer each end, nylon-insert nut.</li>
+      <li>Tighten: snug, as the glossary defines it.</li>
+    </ol>
+  </li>
 </ol>
 <div class="fig" id="figCorner"></div>
-<p class="cap">The inside corner in plan view (x right, y down, as in every other drawing). Rail B's end is sandwiched between the two fittings. Gold: the 3/8 in bolts. Black dots: the #10 rail screws, which are in the flat legs, one storey up from the bolts.</p>
+<p class="cap">The inside corner in plan view, x to the right and y down as in the plan views (sections 3 and 4 are the mirrored ones). Rail B's end is sandwiched between the two fittings. Gold: the 3/8 in bolts. Black dots: the #10 rail screws, which are in the flat legs, one storey up from the bolts.</p>
 
 <h2 id="s7">7 · Monitor mount and what goes where</h2>
-<div class="note">The crossbar measured 21¼ in (54.0 cm) outer edge to outer edge with 4 cm end collars, so the poles sit 50.0 cm apart. With the pole centre 4.5 cm in from the edge that puts each clamp at 40 cm from the corner. Fit the crossbar as the spacing guide and tighten the clamps with it on; it sets the last millimetre.</div>
+<div class="note">The crossbar measured 21¼ in (54.0 cm) outer edge to outer edge with 4 cm end collars, so the poles sit 50.0 cm apart. With the pole centre 4.5 cm in from the edge that puts each clamp at 40 cm from the corner. The crossbar fitted as the spacing guide sets the last millimetre.</div>
 <ol class="steps">
-  <li>Lay a spare mending plate flat on the underside at each clamp zone. Fit the VIVO lower clamps using the manual's <strong>Option 1</strong> holes (2 and 4), since the 28 mm top plus plate is under 60 mm.</li>
-  <li>Clamp 1 centred at <strong>x = 40</strong> on A's back edge; clamp 2 centred at <strong>y = 40</strong> on A's left end edge. The clamp backs sit in the 3 cm wall gap.</li>
-  <li>Slide the crossbar onto the poles as the spacing guide (VIVO step 3), tighten the clamps, then refit the crossbar at monitor height (VIVO step 6).</li>
-  <li>Hang the screens and set the heights in the table below. Toe the Acers in about 15° so their near ends sit about 6 cm from the M7's ends.</li>
+  <li>Lay a spare mending plate flat on the underside on each pad outline from section 3, long side along the edge (x 20.0–45.4 at clamp 1, y 20.0–45.4 at clamp 2).</li>
+  <li>Hang both VIVO lower clamps on their marks, <strong>finger-tight only</strong>: clamp 1 centred at x = 40 on A's back edge, clamp 2 centred at y = 40 on A's side-wall end. Use the VIVO instruction sheet's Option 1 holes (2 and 4), since the 28 mm top plus plate is under 60 mm. The clamp backs sit in the 3 cm wall gap.</li>
+  <li>Fit the poles and slide the crossbar onto them as the spacing guide (VIVO sheet step 3). Only now tighten the clamps. Then refit the crossbar at monitor height (VIVO sheet step 6).</li>
+  <li>Hang the screens and set the heights in the table below. Toe the Acers in about 15°; their near ends end up about 20 cm in front of and 6 cm beside the M7's ends.</li>
 </ol>
 <div class="fig" id="figSetup"></div>
 <p class="cap">Plan view of everything on the desk.</p>
@@ -222,14 +284,16 @@ a{color:var(--accent2)}
   <li>Both ALEX fronts open fully without touching a foot or a leg.</li>
   <li>Retighten every screw after two weeks.</li>
 </ul>
+<div class="note ok"><strong>If something goes wrong.</strong> A screw that spins: back it out, fill the hole with wood glue and a couple of matchsticks, let it dry, re-pilot. A mark off by more than 2 mm: redraw it; a stray 1/8 in hole in the underside does no harm. A fitting bolt that will not go in: open the hole in the rail with a round file, never force it.</div>
 
 <h2 id="s9">9 · Still to measure</h2>
 <ul class="check">
   <li>VIVO pole centre to desk edge (assumed 4.5 cm) and how far the clamp projects behind the edge (the 3 cm gap assumes under 2.5 cm). The crossbar itself is measured: poles 50.0 cm apart.</li>
-  <li>Round feet load rating (design wants 50 kg or more each); pad diameter with calipers before printing the rings.</li>
+  <li>Round feet load rating (design wants 50 kg or more each); pad diameter with calipers before printing the rings (assumed 50.0).</li>
+  <li>Feet plate screw-hole spacing, centre to centre (the T-square assumes 45 mm).</li>
   <li>ALEX top-panel thickness where the ring screws go (expect 16 mm or more).</li>
   <li>Each top's thickness with calipers (expect 28 mm).</li>
-  <li>Your fitting's hole positions from its heel, once it arrives: h1 = <span class="blank"></span> cm, h2 = <span class="blank"></span> cm. Write them here; the drawings in section 2 assume about 3 and 7.</li>
+  <li>Your fitting's hole positions from its heel, once it arrives: h1 = <span class="blank"></span> cm, h2 = <span class="blank"></span> cm. The drawings in section 2 assume about 2.5 and 6.5.</li>
 </ul>
 
 </div>
@@ -238,29 +302,29 @@ a{color:var(--accent2)}
 const D = {
   T: 2.8, Y0: 80.2, Y1: 83.0, gap: 3,
   A: { x0:0, x1:249, y0:0, y1:65 }, B: { x0:0, x1:65, y0:65, y1:314 },
-  legs: [ ['L1',15,42,'A','under VIVO clamp 2; plate ends 5 mm short of rail A'], ['L2',65,10,'A','nearest leg to clamp 1'], ['L3',140,10,'A','69.5 to ALEX 1'],
+  legs: [ ['L1',15,42,'A','under VIVO clamp 2; plate ends 4 mm short of rail A'], ['L2',65,10,'A','nearest leg to clamp 1'], ['L3',140,10,'A','69.5 to ALEX 1'],
           ['L4',10,85,'B','20 past the joint'], ['L5',10,160,'B',''], ['L6',10,235,'B','39.5 to ALEX 2'] ],
   legPlate: 11,
   feet: [ ['F1',214.5,8.5,'A'], ['F2',240.5,8.5,'A'], ['F3',214.5,56.5,'A'], ['F4',240.5,56.5,'A'], ['F5',8.5,279.5,'B'], ['F6',56.5,279.5,'B'], ['F7',8.5,305.5,'B'], ['F8',56.5,305.5,'B'] ],
-  footPlate: 6, footPad: 5, footH: 10.16, ringBore: 5.1, ringOD: 5.7, ringH: 1.0,
+  footPlate: 6, footPad: 5, footH: 10.16, ringBore: 5.1, ringOD: 5.7, ringH: 1.25,
   alex1: { x0:209.5, y0:3.5, w:36, d:58 }, alex2: { x0:3.5, y0:274.5, w:58, d:36 },
-  railA: { x0:1, x1:214, y0:48, y1:53, holes:[2.5,28,54,80,106,132,158,184,210.5], from:'wall end', fit:[{heel:52.0,dir:1,label:'outside fitting'},{heel:51.5,dir:-1,label:'inside fitting'}] },
-  railB: { y0:53, y1:266, x0:48, x1:53, holes:[2.5,7.5,28,54,80,106,132,158,184,210.5], from:'corner end', fit:[{heel:0,dir:1,label:'both fittings'}] },
+  railA: { x0:1, x1:214, y0:47.9, y1:53, holes:[3.5,28,54,80,106,132,158,184,210.5], from:'wall end', fit:[{heel:52.0,dir:1,label:'outside fitting'},{heel:51.5,dir:-1,label:'inside fitting'}] },
+  railB: { y0:53, y1:266, x0:47.9, x1:53, holes:[2.5,7.5,28,54,80,106,132,158,184,210.5], from:'corner end', fit:[{heel:0,dir:1,label:'both fittings'}] },
   holeOffset: 1.9, angle: 5.08, wall: 0.48,
-  fitting: { below: 2.9, w: 4.13, legs: 8, h:[3,7] },   // h: assumed hole distances from the heel until Scott measures
+  fitting: { below: 2.9, w: 4.13, legs: 8, h:[2.5,6.5] },   // h: assumed hole distances from the heel until Scott measures
   clamp: 40, clampW: 7.6, clampD: 8.9, zoneIn: 9,
-  pads: [ [22.3,47.7,0.5,8.1], [0.5,8.1,22.3,47.7] ],
+  pads: [ [20.0,45.4,0.5,8.1], [0.5,8.1,20.0,45.4] ],
   plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6, plateY: 66, plateHoles: [2.0, 7.0, 18.4, 23.4],   // hole centres along the plate from one end
   knee: [ [20,120,20,65], [20,65,65,120] ],
   setup: [
-    ['Samsung M7 32 in','centre bracket, screen centred (34, 34) on the diagonal, 20 cm in front of the crossbar','bottom edge 24 above the top (107 from the floor), top edge 66 above'],
-    ['Acer XZ320QU right','along the back wall, centred (99, 19), toed 15° toward you; near end about 6 cm from the M7','bottom edge 26 above the top (109 from the floor); centre 46.5 above'],
+    ['Samsung M7 32 in','centre bracket, screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar','bottom edge 24 above the top (107 from the floor), top edge 66 above'],
+    ['Acer XZ320QU right','along the back wall, centred (99, 19), toed 15° toward you; near end about 20 cm in front of and 6 cm beside the M7’s end','bottom edge 26 above the top (109 from the floor); centre 46.5 above'],
     ['Acer XZ320QU left','along the side wall, centred (19, 99), toed 15°','same'],
     ['Edifier R1280DBs','centred (108, 22) and (22, 108), grilles toward you, toed with the Acers','23.4 tall; 2.6 cm under each Acer'],
-    ['ELLOVEN drawer','centred (33, 33), turned 45°, drawer toward you','10 tall; 14 cm under the M7'],
-    ['Deskmat 80 × 30','centred (53, 53), turned 45°','on the top'],
-    ['NuPhy Air75 V2','centred (56.5, 56.5), turned 45°','on the mat'],
-    ['Mouse','about (72, 43)','on the mat'],
+    ['ELLOVEN drawer','centred (36, 36), turned 45°, drawer toward you; its back corners clear the clamp plates and poles by over 2 cm','10 tall; 14 cm under the M7'],
+    ['Deskmat 80 × 30','centred (55, 55), turned 45°; its back edge touches the ELLOVEN’s front feet, its front edge reaches the L corner','on the top'],
+    ['NuPhy Air75 V2','centred (58.5, 58.5), turned 45°','on the mat'],
+    ['Mouse','about (74, 45)','on the mat'],
     ['HYTE Y60 on pedestal','x 197.5–246.5, y 4.5–35.5, long axis along the back wall, side glass facing you, front glass up','48 tall with pedestal'],
     ['ELYONA lamp','base centred (183, 20) beside the Y60, arm reaching toward the keyboard','head about 46 above the top'],
     ['Headset stand','base centred (28, 140) on top B, hook toward you','about 28 tall'],
@@ -291,70 +355,89 @@ table('tHeights', ['Height','cm from the floor','What'], [
 ]);
 
 table('tParts', ['Item','Qty','Spec'], [
-  ['EKBACKEN top','2','249 × 65 × 2.8 cm, brown walnut'],
+  ['EKBACKEN top','2','249 × 65 × 2.8 cm, brown walnut; one long edge rounded and laminated (front), one square and unfinished (wall side)'],
   ['ALEX drawer unit / storage unit','1 + 1','36 × 58 × 70 cm'],
   ['OLOV leg','6','60–90 cm, set to 80.2; 11 cm plate; max 13 kg each'],
   ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 6 × 6 cm plate'],
-  ['Printed locating rings','8','parts/structure/foot-ring.stl: 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm flange, three countersunk #6 holes, open bottom'],
   ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
   ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
-  ['Mending plates','4','10 × 3 in: two across the joint, two as pads under the clamp jaws'],
+  ['Mending plates','4','10 × 3 × 0.12 in, four holes along the length at 2.0, 7.0, 18.4, 23.4 cm: two across the joint, two as pads under the clamp jaws'],
   ['VIVO STAND-V300CU','1','clamps at (40, 0) and (0, 40), crossbar on the diagonal, poles 50.0 cm apart'],
   ['Monitors','3','Samsung M7 32 in centre; two Acer XZ320QU 31.5 in'],
   ['Speakers','2','Edifier R1280DBs'],
   ['ELLOVEN, deskmat, NuPhy Air75 V2, HYTE Y60 + pedestal, lamp, headset stand, plant','','as listed in section 7'],
   ['Flat black enamel, degreaser, 120 grit','','for the rails'],
-  ['Printed tools (parts/README.md)','','edge T-square (punch holes at 50, 85, 100 and 150 mm from an edge, plus the feet-plate holes), ALEX corner template, rail marking gauge (19 and 29 mm lines), pilot drill guide with depth-stop steps (12, 15, 25 RAIL, 12 RING). Print before section 2'],
-  ['Printed cable parts and accessories','optional','rail end caps, snap-on rail cable hooks, screw-on cable clips, power-bar cradles, cable tray segments, wall-gap strip, phone stand'],
 ]);
 
 table('tFast', ['Fastener','Qty','Goes through','Into the top','Pilot'], [
-  ['OLOV screws, M4 × 16 mm (included)','24','3 mm leg plate','13 mm','1/8 in, 15 mm deep'],
-  ['#8 × 5/8 in pan head','32','feet plate (1.5–2 mm)','14 mm','1/8 in, 15 mm deep'],
-  ['#10 × 1 in pan head, Robertson','19','4.8 mm angle','20.6 mm','1/8 in, 20 mm deep (flag at 25 mm)'],
-  ['#10 × 5/8 in with #10 washer','8','mending plate (joint)','14 mm','1/8 in, 12 mm deep'],
-  ['#6 × 5/8 in','24','printed ring (3 mm)','ALEX top only, 13 mm','5/64 in, 12 mm deep'],
-  ['3/8-16 × 1 in bolt, washer, nylon nut','4','fitting + rail A vertical leg','none','7/16 in, bench-drilled'],
-  ['3/8-16 × 1½ in bolt, washer, nylon nut','2','fitting + rail B leg + fitting','none','7/16 in, bench-drilled'],
+  ['OLOV screws, M4 × 16 mm (included)','24','3 mm leg plate','13 mm','1/8 in, 15 mm deep (drill guide step 15)'],
+  ['#8 × 5/8 in pan head','32','feet plate (1.5–2 mm)','14 mm','1/8 in, 15 mm deep (step 15)'],
+  ['#10 × 1 in pan head, Robertson','19','4.8 mm angle','20.6 mm','1/8 in, 20 mm deep (step 25 RAIL)'],
+  ['#10 × 5/8 in with #10 washer','8','3 mm joining plate','13 mm','1/8 in, 12 mm deep (step 12)'],
+  ['#6 × 5/8 in flat head','24','2.5 mm ring flange','ALEX top only, 13.4 mm','5/64 in, 12 mm deep (step 12 RING)'],
+  ['3/8-16 × 1¼ in bolt, 2 washers, nylon nut','4','fitting + rail A vertical leg','none','7/16 in, bench-drilled'],
+  ['3/8-16 × 1½ in bolt, 2 washers, nylon nut','2','fitting + rail B leg + fitting','none','7/16 in, bench-drilled'],
 ]);
 
 table('tTools', ['Tool','For'], [
-  ['Corded or 18 V drill, clutch set low','all holes; a stripped hole in particleboard is not recoverable'],
-  ['HSS bits: 5/64, 1/8, 7/32, 7/16 in','ring pilots; top pilots; rail screw holes; fitting bolt holes'],
+  ['Corded or 18 V drill, clutch set low','all holes and screws'],
+  ['HSS bits: 5/64, 1/8, 7/32, 1/4, 7/16 in','ring pilots; top pilots; rail screw holes; step bit for the fitting holes; fitting bolt holes'],
   ['Centre punch (or a nail)','keeps the bit from wandering on steel'],
   ['Cutting oil or 3-in-1','every hole in steel'],
   ['Flat file, round file, 120 grit, acetone, flat black enamel','deburr, ease a tight hole, scuff, degrease, paint'],
   ['Robertson #2 bit + 3 in magnetic extension','rail screws beside the vertical leg'],
+  ['3/8 in wrench or socket, and a second one for the nut','the corner fittings'],
   ['Two clamps, 6 in or larger','hold each rail on its line; hold the fitting as a template'],
-  ['Tape measure, combination square, masking tape, pencil','layout and depth flags'],
+  ['Tape measure, combination square, masking tape, pencil','layout'],
   ['Spirit level, 60 cm or longer','setting the legs and feet'],
-  ['Calipers','top thickness, pad diameter'],
+  ['Calipers','top thickness, pad diameter, ALEX panel'],
+]);
+
+table('tHelpers', ['Printed tool','When','How'], [
+  ['Edge T-square','sections 3, 4, 5','Turn it over (lip down). Hook the lip over the edge named in the table, slide to the station, punch through the hole named: 50 for ring centres on the ALEX, 85 for feet (with the plate holes round it), 100 for legs L2–L6, 150 for L1.'],
+  ['ALEX corner template','section 5','Turn it over (fences down). Drop over a cabinet corner, fences against both edges, punch the centre and the three screw holes.'],
+  ['Rail marking gauge','section 2','Turn it over (lip down). Lay it on the steel with the lip over the edge, pencil in the 19 notch (screw line) or the 29 notch (bolt line), slide.'],
+  ['Drill guide','every pilot hole','See the box below. Never scale it.'],
+  ['Foot rings, 8','section 5','Screwed to the ALEX tops; the feet pads drop into them.'],
 ]);
 
 table('tRail', ['Rail','Hole','From the '+D.railA.from+' / '+D.railB.from,'Lands at (x, y)','Note'],
-  D.railA.holes.map((s,i)=>['A', i+1, f1(s), '('+f1(D.railA.x0+s)+', '+f1(D.railA.y0+D.holeOffset)+')', i===0?'nearest the wall':(i===8?'over ALEX 1':'')])
+  D.railA.holes.map((s,i)=>['A', i+1, f1(s), '('+f1(D.railA.x0+s)+', '+f1(D.railA.y0+D.holeOffset)+')', i===0?'4.5 cm from the top’s end':(i===8?'over ALEX 1':'')])
   .concat(D.railB.holes.map((s,i)=>['B', i+1, f1(s), '('+f1(D.railB.x0+D.holeOffset)+', '+f1(D.railB.y0+s)+')', i<2?'into top A, screwed in section 6':''])));
 
-table('tTemplate', ['Rail','Fitting','Clamp its heel on','Legs point toward','Holes','Bolts'], [
-  ['A','outside','52.0 cm from the wall end','the far end','2 × 7/16 in','3/8-16 × 1 in'],
-  ['A','inside','51.5 cm from the wall end','the wall end','2 × 7/16 in','3/8-16 × 1 in'],
+table('tTemplate', ['Rail','Fitting','Clamp its heel (outside of the bend) on','Legs point toward','Holes','Bolts'], [
+  ['A','outside','52.0 cm from the wall end','the far end','2 × 7/16 in','3/8-16 × 1¼ in'],
+  ['A','inside','51.5 cm from the wall end','the wall end','2 × 7/16 in','3/8-16 × 1¼ in'],
   ['B','both (shared holes)','the corner end (0 cm)','the far end','2 × 7/16 in','3/8-16 × 1½ in, through both fittings'],
 ]);
 
 const legRows = t => D.legs.filter(l=>l[3]===t).map(l=>[l[0], '('+l[1]+', '+l[2]+')', 'OLOV, 11 cm plate: x '+f1(l[1]-5.5)+'–'+f1(l[1]+5.5)+', y '+f1(l[2]-5.5)+'–'+f1(l[2]+5.5), l[4]]);
 const feetRows = t => D.feet.filter(f=>f[3]===t).map(f=>[f[0], '('+f[1]+', '+f[2]+')', 'foot, 6 cm plate: x '+f1(f[1]-3)+'–'+f1(f[1]+3)+', y '+f1(f[2]-3)+'–'+f1(f[2]+3), '5 cm in from the ALEX corner below']);
 table('tA', ['Mark','Centre (x, y)','Footprint','Note'], legRows('A').concat(feetRows('A')).concat([
-  ['Rail A line', 'y = 53, x 1–214', 'rail occupies y 48–53', "vertical leg's outer face on the line"],
+  ['Rail A line', 'y = 53, x 1–214', 'rail occupies y 47.9–53', "vertical leg's outer face on the line; wall end at x = 1"],
   ['C1', '', 'x 36–44, y 0–9', 'keep clear; VIVO clamp 1'],
   ['C2', '', 'x 0–9, y 36–44', 'keep clear; VIVO clamp 2'],
-  ['Pad plate 1', '', 'x 22.3–47.7, y 0.5–8.1', 'loose mending plate under clamp 1'],
-  ['Pad plate 2', '', 'x 0.5–8.1, y 22.3–47.7', 'loose mending plate under clamp 2'],
-  ['P1', '(15, 66)', 'x 11.2–18.8, y 53.3–78.7', 'joining plate; screws on x = 15 at y 55.3 and 60.3 (top A), 71.7 and 76.7 (top B)'],
+  ['Pad plate 1', '', 'x 20.0–45.4, y 0.5–8.1', 'outline only now; loose mending plate under clamp 1 in section 7; 2.5 cm clear of rail A'],
+  ['Pad plate 2', '', 'x 0.5–8.1, y 20.0–45.4', 'outline only now; loose mending plate under clamp 2'],
+  ['P1', '(15, 66)', 'x 11.2–18.8, y 53.3–78.7', 'joining plate, not centred on the joint; screws on x = 15 at y 55.3 and 60.3 (top A), 71.7 and 76.7 (top B)'],
   ['P2', '(35, 66)', 'x 31.2–38.8, y 53.3–78.7', 'joining plate; screws on x = 35 at the same four y'],
 ]));
 table('tB', ['Mark','Centre (x, y)','Footprint','Note'], legRows('B').concat(feetRows('B')).concat([
-  ['Rail B line', 'x = 53, y 65–266', 'rail occupies x 48–53; corner end at y 53 under top A', "vertical leg's outer face on the line"],
+  ['Rail B line', 'x = 53, y 65–266', 'rail occupies x 47.9–53; corner end at y 53 under top A', "vertical leg's outer face on the line; corner end sticks out 12 cm past the joint end"],
+  ['P1', '(15, 66)', 'x 11.2–18.8, y 65–78.7 on this top', 'joining plate; screws on x = 15 at y 71.7 and 76.7'],
+  ['P2', '(35, 66)', 'x 31.2–38.8, y 65–78.7 on this top', 'joining plate; screws on x = 35 at y 71.7 and 76.7'],
 ]));
+table('tTsqA', ['Mark','Hook the lip over','Station along that edge','Punch the hole'], [
+  ['L2','the back edge','x = 65','100'], ['L3','the back edge','x = 140','100'],
+  ['L1','the side-wall end','y = 42','150'],
+  ['F1, F2','the back edge','x = 214.5 and 240.5','85 and its four plate holes'],
+  ['F3, F4','the FRONT edge (the rounded one)','x = 214.5 and 240.5','85 and its four plate holes'],
+]);
+table('tTsqB', ['Mark','Hook the lip over','Station along that edge','Punch the hole'], [
+  ['L4, L5, L6','the side-wall edge','y = 85, 160, 235','100'],
+  ['F5, F7','the side-wall edge','y = 279.5 and 305.5','85 and its four plate holes'],
+  ['F6, F8','the FRONT edge (the rounded one, x = 65)','y = 279.5 and 305.5','85 and its four plate holes'],
+]);
 table('tRing', ['ALEX','Ring','On the ALEX top, from its back-left corner','Same point in desk coordinates'], [
   ['1','R1','(5, 5)','(214.5, 8.5)'], ['1','R2','(31, 5)','(240.5, 8.5)'], ['1','R3','(5, 53)','(214.5, 56.5)'], ['1','R4','(31, 53)','(240.5, 56.5)'],
   ['2','R5','(5, 5)','(8.5, 279.5)'], ['2','R6','(53, 5)','(56.5, 279.5)'], ['2','R7','(5, 31)','(8.5, 305.5)'], ['2','R8','(53, 31)','(56.5, 305.5)'],
@@ -374,7 +457,6 @@ function Draw(w,h){ const s=svgEl('svg',{viewBox:'0 0 '+w+' '+h,width:w,height:h
 const C = { top:'var(--top)', edge:'var(--topEdge)', steel:'var(--steel)', gold:'var(--accent)', blue:'var(--accent2)', ink:'var(--ink)', muted:'var(--muted)', zone:'var(--zone)', knee:'var(--knee)' };
 const T = (d,x,y,t,o) => d.text(x,y,t,Object.assign({'font-size':10.5,fill:C.ink},o||{}));
 
-// generic top drawing: region {x0,x1,y0,y1}; mirror flips x (underside view)
 function drawTop(id, reg, opts){
   const sc = opts.scale || 2.2, m = 64, mirror = !!opts.mirror;
   const W = (reg.x1-reg.x0)*sc, H = (reg.y1-reg.y0)*sc;
@@ -390,7 +472,6 @@ function drawTop(id, reg, opts){
   (opts.extra||[]).forEach(fn=>fn({d,X,Y,sc,rectXY,reg,mirror,m,W,H}));
   document.getElementById(id).appendChild(d.s);
 }
-// beside-label: to the "interior" side of a mark (left in mirrored views, right otherwise)
 function beside(d,X,Y,x,y,t,r,mirror,fill){ T(d, X(x)+(mirror?-(r+5):(r+5)), Y(y)+4, t, {'text-anchor':mirror?'end':'start','font-weight':600,fill:fill||C.ink}); }
 
 function legs(top, withPlate, short){ return ({d,X,Y,sc,mirror}) => D.legs.filter(l=>l[3]===top).forEach(l=>{
@@ -404,8 +485,8 @@ function feet(top, withPlate, short){ return ({d,X,Y,sc,mirror}) => D.feet.filte
   d.circ(X(f[1]),Y(f[2]),2.5*sc,{fill:'none',stroke:C.ink,'stroke-width':1.2});
   if(!short) T(d,X(f[1]),Y(f[2])+3.5,f[0],{'text-anchor':'middle','font-size':9.5,'font-weight':600});
 });}
-const railA = ({rectXY,d,X,Y}) => { rectXY(D.railA.x0,D.railA.x1,D.railA.y0,D.railA.y1,{fill:C.steel,'fill-opacity':.55,stroke:C.steel}); D.railA.holes.forEach(s=>d.circ(X(D.railA.x0+s),Y(D.railA.y0+D.holeOffset),1.4,{fill:C.ink})); T(d,X(110),Y(46.4),'rail A · outer face on y = 53 · screws on y = 49.9',{'text-anchor':'middle','font-size':10}); };
-const railB = ({rectXY,d,X,Y,reg}) => { const y0=Math.max(D.railB.y0,reg.y0); rectXY(D.railB.x0,D.railB.x1,y0,D.railB.y1,{fill:C.steel,'fill-opacity':.55,stroke:C.steel}); D.railB.holes.forEach(s=>{ const y=D.railB.y0+s; if(y>=reg.y0&&y<=reg.y1) d.circ(X(D.railB.x0+D.holeOffset),Y(y),1.4,{fill:C.ink}); }); T(d,X(50.5),Y(170),'rail B · outer face on x = 53 · screws on x = 49.9',{'text-anchor':'middle','font-size':10,transform:'rotate(-90 '+X(50.5)+' '+Y(170)+')'}); };
+const railA = ({rectXY,d,X,Y}) => { rectXY(D.railA.x0,D.railA.x1,D.railA.y0,D.railA.y1,{fill:C.steel,'fill-opacity':.55,stroke:C.steel}); D.railA.holes.forEach(s=>d.circ(X(D.railA.x0+s),Y(D.railA.y0+D.holeOffset),1.4,{fill:C.ink})); T(d,X(110),Y(46.4),'rail A · outer face on y = 53 · screws on y = 49.8',{'text-anchor':'middle','font-size':10}); };
+const railB = ({rectXY,d,X,Y,reg}) => { const y0=Math.max(D.railB.y0,reg.y0); rectXY(D.railB.x0,D.railB.x1,y0,D.railB.y1,{fill:C.steel,'fill-opacity':.55,stroke:C.steel}); D.railB.holes.forEach(s=>{ const y=D.railB.y0+s; if(y>=reg.y0&&y<=reg.y1) d.circ(X(D.railB.x0+D.holeOffset),Y(y),1.4,{fill:C.ink}); }); T(d,X(50.5),Y(170),'rail B · outer face on x = 53 · screws on x = 49.8',{'text-anchor':'middle','font-size':10,transform:'rotate(-90 '+X(50.5)+' '+Y(170)+')'}); };
 const clampZones = (withText) => ({rectXY,d,X,Y}) => { const c=D.clamp, z=D.zoneIn;
   [[c-4,c+4,0,z],[0,z,c-4,c+4]].forEach((r,i)=>{ rectXY(r[0],r[1],r[2],r[3],{fill:C.zone,stroke:C.gold,'stroke-dasharray':'3 2'}); if(withText) T(d,X((r[0]+r[1])/2),Y((r[2]+r[3])/2)+3.5,'C'+(i+1),{'text-anchor':'middle','font-size':9.5,'font-weight':600}); });
   D.pads.forEach(p=>rectXY(p[0],p[1],p[2],p[3],{fill:C.steel,'fill-opacity':.25,stroke:C.steel,'stroke-dasharray':'2 2'}));
@@ -419,11 +500,11 @@ const edgeLabels = (lbls) => ({d,m,W,H}) => lbls.forEach(([side,t])=>{ const st=
 
 // 0 · angle cross-section
 (function(){
-  const sc=30, m=70, d=Draw(2*m+21*sc, 2*m+8*sc); const ox=m+3*sc, oy=m+1.5*sc; // heel at (ox,oy)
+  const sc=30, m=70, d=Draw(2*m+21*sc, 2*m+8*sc); const ox=m+3*sc, oy=m+1.5*sc;
   d.rect(ox-3*sc, oy-1.5*sc, 21*sc, 1.5*sc, {fill:C.top,stroke:C.edge}); T(d,ox+7.5*sc,oy-0.55*sc,'the top, 28 mm, seen end-on (its underside is the bottom of this bar)',{'text-anchor':'middle'});
   d.rect(ox, oy, D.angle*sc, D.wall*sc, {fill:C.steel,stroke:C.ink}); d.rect(ox, oy, D.wall*sc, D.angle*sc, {fill:C.steel,stroke:C.ink});
   T(d,ox+1.1*sc, oy+0.48*sc+38, 'flat leg · lies against the underside of the top', {'font-weight':600});
-  T(d,ox+1.1*sc, oy+4.5*sc, 'vertical leg · hangs down toward the floor', {'font-weight':600});
+  T(d,ox+1.1*sc, oy+4.5*sc, 'vertical leg · hangs down toward the floor · this side is its inner face, the other side its outer face', {'font-weight':600});
   T(d,ox-8, oy+13, 'heel', {'text-anchor':'end','font-weight':600});
   T(d,ox+D.angle*sc+8, oy+0.24*sc+4, 'free edge', {'font-weight':600});
   T(d,ox+D.wall*sc/2, oy+D.angle*sc+16, 'free edge', {'text-anchor':'middle','font-weight':600});
@@ -440,24 +521,24 @@ const edgeLabels = (lbls) => ({d,m,W,H}) => lbls.forEach(([side,t])=>{ const st=
   document.getElementById('figSection').appendChild(d.s);
 })();
 
-// 0b · overview (plan from above, both tops)
+// 0b · overview
 drawTop('figOverview', {x0:0,x1:249,y0:0,y1:314}, { scale:1.55, extra:[
   ({rectXY}) => { rectXY(0,249,0,65,{fill:C.top,stroke:C.edge}); rectXY(0,65,65,314,{fill:C.top,stroke:C.edge}); },
   ({d,X,Y}) => { d.rect(X(65),Y(65),(249-65)*1.55,(314-65)*1.55,{fill:'var(--paper)',stroke:'none'}); d.line(X(0),Y(65),X(65),Y(65),{stroke:C.edge,'stroke-dasharray':'4 3'}); },
   ({rectXY}) => D.knee.forEach(k=>rectXY(k[0],k[1],k[2],k[3],{fill:'none',stroke:C.knee,'stroke-dasharray':'4 3'})),
   railA, railB, clampZones(false), legs('A',true,true), legs('B',true,true), feet('A',false,true), feet('B',false,true),
   alexOutline(D.alex1,'ALEX 1'), alexOutline(D.alex2,'ALEX 2'),
-  ({d,X,Y}) => { T(d,X(108),Y(112),'Your seat',{'font-size':12,'font-weight':600,'text-anchor':'middle'}); T(d,X(108),Y(126),'facing the corner; knees sweep the dashed area',{'font-size':10,fill:C.muted,'text-anchor':'middle'}); d.line(X(0)-4,Y(0)-4,X(249),Y(0)-4,{stroke:C.ink,'stroke-width':3}); d.line(X(0)-4,Y(0)-4,X(0)-4,Y(314),{stroke:C.ink,'stroke-width':3}); T(d,X(170),Y(0)-8,'back wall · 3 cm behind the edge',{'font-size':10,fill:C.muted,'text-anchor':'middle'}); },
+  ({d,X,Y}) => { T(d,X(108),Y(112),'Your seat',{'font-size':12,'font-weight':600,'text-anchor':'middle'}); T(d,X(108),Y(126),'facing the L corner; knees sweep the dashed area',{'font-size':10,fill:C.muted,'text-anchor':'middle'}); d.line(X(0)-4,Y(0)-4,X(249),Y(0)-4,{stroke:C.ink,'stroke-width':3}); d.line(X(0)-4,Y(0)-4,X(0)-4,Y(314),{stroke:C.ink,'stroke-width':3}); T(d,X(170),Y(0)-8,'back wall · 3 cm behind the edge',{'font-size':10,fill:C.muted,'text-anchor':'middle'}); },
 ]});
 
-// 2 · rails: flat leg (screw holes) above, vertical leg (fitting bolt holes) below
+// 2 · rails
 function drawRail(id, r, isA){
   const sc=3.2, m=50, L=213, W=L*sc, H=D.angle*sc; const d=Draw(W+2*m, 2*H+2*m+70);
-  const topY = m, botY = m+H;  // flat leg strip, then vertical leg strip hanging from the shared heel line
+  const topY = m, botY = m+H;
   d.rect(m,topY,W,H,{fill:C.steel,'fill-opacity':.45,stroke:C.steel}); d.rect(m,botY,W,H,{fill:C.steel,'fill-opacity':.25,stroke:C.steel});
   d.line(m,botY,m+W,botY,{stroke:C.ink,'stroke-width':1.5}); T(d,m+W+6,botY+4,'heel',{'font-size':9.5,fill:C.muted});
   T(d,m-6,topY+H/2+3,'flat leg',{'text-anchor':'end','font-size':9.5,fill:C.muted}); T(d,m-6,botY+H/2+3,'vertical leg',{'text-anchor':'end','font-size':9.5,fill:C.muted});
-  const hy = topY + D.holeOffset*sc;  // 19 mm from the free edge (the top edge of the upper strip is the free edge)
+  const hy = topY + D.holeOffset*sc;
   d.line(m,hy,m+W,hy,{stroke:C.ink,'stroke-dasharray':'3 3','stroke-width':.8});
   let lastX=-99;
   r.holes.forEach((s,i)=>{ const x=m+s*sc; d.circ(x,hy,2.2,{fill:C.ink}); const row = (x-lastX<26)?1:0; lastX=x; d.line(x,botY+H+4,x,botY+H+14+row*12,{stroke:C.muted}); T(d,x,botY+H+26+row*12,s,{'text-anchor':'middle','font-size':10,'font-weight':600}); T(d,x,topY-6,i+1,{'text-anchor':'middle','font-size':9,fill:C.muted}); });
@@ -470,7 +551,7 @@ function drawRail(id, r, isA){
 }
 drawRail('figRailA', D.railA, true); drawRail('figRailB', D.railB, false);
 
-// 2 · template placement: one strip per clamping position
+// 2 · template placement
 (function(){
   const sc=8, m=36, rows=[
     {title:'Rail A · outside fitting', from:40, heel:52.0, dir:1, note:'heel on the 52.0 cm mark, legs pointing toward the far end'},
@@ -494,10 +575,10 @@ drawRail('figRailA', D.railA, true); drawRail('figRailB', D.railB, false);
 
 // 3 · top A underside (mirrored)
 drawTop('figA', D.A, { scale:2.2, mirror:true, extra:[ railA, clampZones(true), joinPlates, legs('A',true,false), feet('A',true,false), alexOutline(D.alex1,'ALEX 1 below'),
-  edgeLabels([['bottom','front edge · y = 65 · top B butts against this edge'],['right','side-wall end · x = 0 · measure x from here'],['left','far end · x = 249'],['top','back edge · y = 0 · measure y from here']]) ]});
+  edgeLabels([['bottom','front edge (rounded) · y = 65 · top B butts against this edge'],['right','side-wall end · x = 0 · measure x from here'],['left','far end · x = 249'],['top','back edge (unfinished) · y = 0 · measure y from here']]) ]});
 // 4 · top B underside (mirrored)
 drawTop('figB', D.B, { scale:2.2, mirror:true, extra:[ railB, joinPlates, legs('B',true,false), feet('B',true,false), alexOutline(D.alex2,'ALEX 2 below'),
-  edgeLabels([['bottom','far end · y = 314'],['right','side-wall edge · x = 0 · measure x from here'],['left','front edge · x = 65'],['top','joint end · y = 65 · measure y from here']]) ]});
+  edgeLabels([['bottom','far end · y = 314'],['right','side-wall edge (unfinished) · x = 0 · measure x from here'],['left','front edge (rounded) · x = 65'],['top','joint end · y = 65 · measure y from here']]) ]});
 
 // 5 · ALEX tops with rings
 function drawAlex(id, a, rings, faceText){
@@ -518,15 +599,15 @@ drawAlex('figAlex2', D.alex2, [['R5',5,5],['R6',53,5],['R7',5,31],['R8',53,31]],
   const sc=6, m=40, d=Draw(2*m+36*sc, 2*m+36*sc);
   const X=x=>m+(x-35)*sc, Y=y=>m+(y-35)*sc;
   d.rect(X(35),Y(35),36*sc,36*sc,{fill:C.top,stroke:C.edge});
-  d.rect(X(35),Y(48),36*sc,5.08*sc,{fill:C.steel,'fill-opacity':.6,stroke:C.steel}); d.rect(X(35),Y(53-D.wall),36*sc,D.wall*sc,{fill:C.ink,'fill-opacity':.5});
-  d.rect(X(48),Y(53),5.08*sc,18*sc,{fill:C.steel,'fill-opacity':.6,stroke:C.steel}); d.rect(X(53-D.wall),Y(53),D.wall*sc,18*sc,{fill:C.ink,'fill-opacity':.5});
+  d.rect(X(35),Y(47.92),36*sc,5.08*sc,{fill:C.steel,'fill-opacity':.6,stroke:C.steel}); d.rect(X(35),Y(53-D.wall),36*sc,D.wall*sc,{fill:C.ink,'fill-opacity':.5});
+  d.rect(X(47.92),Y(53),5.08*sc,18*sc,{fill:C.steel,'fill-opacity':.6,stroke:C.steel}); d.rect(X(53-D.wall),Y(53),D.wall*sc,18*sc,{fill:C.ink,'fill-opacity':.5});
   d.rect(X(53),Y(53),8*sc,.5*sc,{fill:C.blue}); d.rect(X(53),Y(53),.5*sc,8*sc,{fill:C.blue}); d.line(X(61),Y(53.5),X(53.5),Y(61),{stroke:C.blue,'stroke-width':2});
-  d.rect(X(45),Y(53),8*sc,.5*sc,{fill:C.blue}); d.rect(X(52),Y(53),.5*sc,8*sc,{fill:C.blue}); d.line(X(45),Y(53.5),X(52),Y(61),{stroke:C.blue,'stroke-width':2});
+  d.rect(X(44.5),Y(53),8*sc,.5*sc,{fill:C.blue}); d.rect(X(52),Y(53),.5*sc,8*sc,{fill:C.blue}); d.line(X(44.5),Y(53.5),X(52),Y(61),{stroke:C.blue,'stroke-width':2});
   D.fitting.h.forEach(h=>{ d.circ(X(53+h),Y(53.9),3,{fill:C.gold,stroke:C.ink}); d.circ(X(52.5-h),Y(53.9),3,{fill:C.gold,stroke:C.ink}); d.circ(X(53.9),Y(53+h),3,{fill:C.gold,stroke:C.ink}); });
-  D.railA.holes.filter(s=>D.railA.x0+s>35&&D.railA.x0+s<71).forEach(s=>d.circ(X(D.railA.x0+s),Y(49.9),2,{fill:C.ink}));
-  D.railB.holes.filter(s=>D.railB.y0+s<71).forEach(s=>d.circ(X(49.9),Y(D.railB.y0+s),2,{fill:C.ink}));
+  D.railA.holes.filter(s=>D.railA.x0+s>35&&D.railA.x0+s<71).forEach(s=>d.circ(X(D.railA.x0+s),Y(49.8),2,{fill:C.ink}));
+  D.railB.holes.filter(s=>D.railB.y0+s<71).forEach(s=>d.circ(X(49.8),Y(D.railB.y0+s),2,{fill:C.ink}));
   T(d,X(53),Y(66),'rail B',{'text-anchor':'middle'}); T(d,X(40),Y(47),'rail A');
-  T(d,X(62),Y(64),'outside fitting',{fill:C.blue}); T(d,X(36),Y(58),'inside fitting',{fill:C.blue});
+  T(d,X(62),Y(64),'outside fitting',{fill:C.blue}); T(d,X(36),Y(58),'inside fitting (gusset down)',{fill:C.blue});
   T(d,X(53),Y(38),'inside corner of the rails, plan view · gold: 3/8 in bolts · black: #10 rail screws',{'font-size':10,fill:C.muted,'text-anchor':'middle'});
   document.getElementById('figCorner').appendChild(d.s);
 })();
@@ -538,13 +619,13 @@ drawTop('figSetup', {x0:0,x1:249,y0:0,y1:314}, { scale:1.55, extra:[
   alexOutline(D.alex1,''), alexOutline(D.alex2,''),
   ({d,X,Y,sc}) => {
     const rot = (x,y,w,h,deg,st,t) => { const g=svgEl('g',{transform:'translate('+X(x)+' '+Y(y)+') rotate('+deg+')'}); g.appendChild(svgEl('rect',Object.assign({x:-w*sc/2,y:-h*sc/2,width:w*sc,height:h*sc},st))); if(t) g.appendChild(svgEl('text',{x:0,y:3.5,'text-anchor':'middle','font-size':9.5,fill:C.ink,'font-weight':600},t)); d.add(g); };
-    rot(34,34,71.7,3,-45,{fill:C.ink},''); T(d,X(44),Y(26),'M7 (34, 34)',{'font-size':9.5});
+    rot(36.5,36.5,71.7,3,-45,{fill:C.ink},''); T(d,X(46),Y(28),'M7 (36.5, 36.5)',{'font-size':9.5});
     rot(99,19,70,3,-15,{fill:C.ink},''); T(d,X(99),Y(10),'Acer (99, 19) · 15°',{'font-size':9.5,'text-anchor':'middle'});
     rot(19,99,70,3,-75,{fill:C.ink},''); T(d,X(10),Y(136),'Acer (19, 99)',{'font-size':9.5});
     rot(108,22,14.6,19.6,-15,{fill:C.edge,'fill-opacity':.6},''); rot(22,108,14.6,19.6,-75,{fill:C.edge,'fill-opacity':.6},'');
-    rot(33,33,47,26,-45,{fill:C.gold,'fill-opacity':.5,stroke:C.gold},'ELLOVEN');
-    rot(53,53,80,30,-45,{fill:C.blue,'fill-opacity':.25,stroke:C.blue},'mat (53, 53)');
-    rot(56.5,56.5,31.6,13.3,-45,{fill:'var(--paper)',stroke:C.ink},'');
+    rot(36,36,47,26,-45,{fill:C.gold,'fill-opacity':.5,stroke:C.gold},'ELLOVEN');
+    rot(55,55,80,30,-45,{fill:C.blue,'fill-opacity':.25,stroke:C.blue},'mat (55, 55)');
+    rot(58.5,58.5,31.6,13.3,-45,{fill:'var(--paper)',stroke:C.ink},'');
     rot(222,20,49,31,0,{fill:C.ink,'fill-opacity':.7},''); T(d,X(222),Y(23.5),'Y60',{'font-size':10,fill:'#fff','text-anchor':'middle'});
     d.circ(X(183),Y(20),8.5*sc,{fill:'none',stroke:C.ink}); T(d,X(183),Y(45),'lamp (183, 20)',{'font-size':9.5,'text-anchor':'middle'});
     d.circ(X(28),Y(140),6.5*sc,{fill:'none',stroke:C.ink}); T(d,X(8),Y(158),'headset (28, 140)',{'font-size':9.5});

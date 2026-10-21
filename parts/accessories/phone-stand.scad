@@ -16,6 +16,6 @@ difference() {
         translate([lip_x, 0, 0]) cube([lip_t, width, lip_h]);                                               // front lip
     }
     translate([lip_x + lip_t, -1, base_t - groove_depth]) cube([42 - lip_x - lip_t, width + 2, 30]);         // groove the phone stands in
-    translate([lip_x + lip_t - 1, width / 2 - cable / 2, -1]) cube([20, cable, base_t + 2]);               // cable notch through the base
+    translate([lip_x + lip_t - 1, width / 2 - cable / 2, -1]) cube([base_l - lip_x - lip_t + 22, cable, base_t + 2]);   // cable tunnel from the groove out through the back
     translate([-1, -1, -1]) cube([base_l + 20, width + 2, 1]);                                               // trim below the bed
 }

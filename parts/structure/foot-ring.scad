@@ -13,7 +13,7 @@ ring_h     = 10;    // ring height above the flange
 flange_t   = 2.5;   // flange thickness (the screws go through this)
 flange_od  = 75;    // flange outside diameter
 screw_hole = 3.8;   // clearance for a #6 screw
-csk_d      = 7.5;   // countersink diameter at the surface (#6 flat head)
+csk_d      = 7.0;   // countersink diameter at the surface (#6 flat head); 7.0 keeps 1 mm of flange outside it
 n_screws   = 3;
 lead_in    = 1.0;   // chamfer at the top of the bore so the pad finds its way in
 
