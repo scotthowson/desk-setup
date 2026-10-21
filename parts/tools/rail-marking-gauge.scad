@@ -12,8 +12,9 @@ d19      = 19;
 d29      = 29;
 notch    = 2.4;   // pencil notch width
 
-module notch_at(x, y0, y1) {               // V notch cut into an end face, through the full thickness
-    translate([x, (y0 + y1) / 2, body_t / 2])
+pencil_tip = 0.8;   // the pencil's point diameter; the V's apex sits this far short of the distance so the pencil centre lands on it
+module notch_at(x, y0, y1) {               // V notch cut into an end face, through the full thickness, apex at x - pencil_tip/2
+    translate([x - pencil_tip / 2 + notch * 0.7071, (y0 + y1) / 2, body_t / 2])
         rotate([0, 0, 45]) cube([notch, notch, body_t + 2], center = true);
 }
 
@@ -24,7 +25,6 @@ difference() {
         translate([0, w / 2, 0]) cube([d29, w / 2, body_t]);
         // hook: a lip that drops over the edge; its inner face is x = 0
         translate([-(leg_t + slack + 3), 0, -hook_h]) cube([3, w, hook_h + body_t]);
-        translate([-(leg_t + slack + 3), 0, body_t]) cube([leg_t + slack + 3, w, 0]);
         translate([-(leg_t + slack), 0, 0]) cube([leg_t + slack, w, body_t]);   // bridge over the edge
     }
     // the slot the leg sits in
