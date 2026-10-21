@@ -13,8 +13,8 @@
 // Fits the Bambu P1S / A1 bed (179 x 140 mm). Any filament.
 
 head_l = 140; head_w = 24;
-t      = 6;                               // plate thickness, head and blade alike, so the tool lies flat
-lip_h  = 12;  lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
+t      = 3;                               // plate thickness, head and blade alike, so the tool lies flat (halved to save material; 3 mm still guides a scriber)
+lip_h  = 6;   lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
 blade_l = 175; blade_w = 30;
 hole_d  = 4;                              // fits a scriber, a pencil tip or a 1/8 in bit
 plate_hole_spacing = 45;                  // the feet plates' screw holes, centre to centre. Measure yours.

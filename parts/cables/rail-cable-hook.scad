@@ -1,23 +1,25 @@
-// Cable hook that snaps over the vertical leg of either rail. No holes, no screws; slide it
-// wherever a cable run needs holding, and flip it so the J hangs on the side away from your
-// knees. Holds a bundle up to about 24 mm. Print on its side (the profile is what you see
-// from the end), PETG so the clip has some spring. Print as many as you need.
+// Magnetic cable hook for the rails. The rail's flat leg is flush against the desk, so
+// nothing can clip over it; instead this hook holds itself to the steel with two 10 x 3 mm
+// neodymium disc magnets (glued into the pockets) and sticks anywhere on the vertical leg's
+// front face. A J below holds a bundle up to 24 mm. For light cable runs; use the screw-on
+// clips or the tray for anything heavy. Print on its side as rendered, PETG.
 
-leg_t = 4.8;   // angle thickness
-slack = 0.3;
-w     = 16;    // width along the rail
-jaw   = 22;    // how far the clip reaches down the leg
-wall  = 2.4;
-loop  = 24;    // inside width of the J
-drop  = 26;    // how far the J hangs below the clip
+w       = 16;    // width along the rail
+plate_h = 40;    // the plate against the vertical leg (which is 50.8 tall)
+wall    = 2.4;
+plate_t = 4;     // the plate against the steel, thick enough for the magnet pockets plus 0.8 mm of backing
+loop    = 24;    // inside width of the J
+drop    = 26;    // how far the J hangs below the plate
+mag_d   = 10.3;  // magnet pocket, for 10 x 3 mm discs
+mag_t   = 3.2;
 
-slot = leg_t + slack;
 module profile() {
-    square([wall, jaw]);                                        // inner jaw (x 0..wall), the leg sits beside it
-    translate([wall, 1.5]) polygon([[0,0],[0.5,1.5],[0,3]]);    // snap bump
-    translate([0, jaw]) square([2*wall + slot, wall]);          // bridge over the heel edge
-    translate([wall + slot, -drop]) square([wall, drop + jaw + wall]);   // outer jaw, continuing down as the J's spine
-    translate([wall + slot, -drop]) square([wall + loop + wall, wall]);  // bottom of the J
-    translate([wall + slot + wall + loop, -drop]) square([wall, drop - 8]); // up-stand, 8 mm short of the clip so cables drop in
+    translate([0, -drop]) square([plate_t, drop + plate_h]);              // the plate on the steel, continuing down as the J's spine
+    translate([0, -drop]) square([plate_t + loop + wall, wall]);          // bottom of the J
+    translate([plate_t + loop, -drop]) square([wall, drop - 8]);          // up-stand, 8 mm short of the plate so cables drop in
 }
-linear_extrude(w) profile();
+difference() {
+    linear_extrude(w) profile();
+    // magnet pockets in the plate, opening on the steel side (x = 0), one near the top and one near the bottom
+    for (y = [8, plate_h - 8]) translate([-1, y, w / 2]) rotate([0, 90, 0]) cylinder(d = mag_d, h = mag_t + 1, $fn = 32);   // 3.2 deep into a 4 mm plate
+}

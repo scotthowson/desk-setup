@@ -8,8 +8,8 @@
 
 leg_t  = 4.8;   // angle thickness
 slack  = 0.4;   // hook clearance over the leg
-hook_h = 8;     // how far the hook reaches down the leg
-body_t = 10;    // gauge thickness
+hook_h = 4;     // how far the hook reaches down the leg (the leg edge is 4.8 mm thick)
+body_t = 5;     // gauge thickness (halved to save material)
 w      = 30;    // width along the rail
 d19    = 19;
 d29    = 29;

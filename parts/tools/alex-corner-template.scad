@@ -8,9 +8,9 @@
 // face you. Any filament.
 
 inset   = 50;      // ring centre from each edge
-plate_t = 5;
+plate_t = 2.5;   // halved to save material
 size    = 100;     // square plate
-fence_h = 12; fence_t = 4;
+fence_h = 6; fence_t = 4;
 hole_d  = 4;       // scriber or pencil tip
 screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle, from structure/foot-ring.scad
 n_screws = 3;
