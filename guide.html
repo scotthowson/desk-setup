@@ -192,7 +192,7 @@ a{color:var(--accent2)}
 <ol class="steps">
   <li><strong>Top A.</strong> Lift it onto L1–L3 with the four pads dropping into the rings on ALEX 1. Lift and set; the rings do not allow a push. Final position: 3 cm off both walls. Level along x and along y. Adjust the OLOV feet and the round feet until it reads flat and all four pads bear with no rock. Target <strong>83.0 cm</strong> at every corner.</li>
   <li><strong>Top B.</strong> Lift onto L4–L6 with its pads in the rings on ALEX 2, its end against A's front edge, 3 cm off the side wall. Adjust until the two surfaces are flush at the joint: run a fingertip across; shim the legs, never the plates.</li>
-  <li><strong>Joining plates.</strong> From below, screw P1 and P2 across the joint: each plate centred on the joint line, long axis across it, two #10 × 5/8 in screws with washers in each top, pilots 1/8 in, 12 mm deep. The plates have three rows of holes; use only the four end holes (20 mm from each end), which land 9.7 cm into top A and 11.7 cm into top B. The middle pair would sit on the joint, leave it empty. Set each plate at y 53.3–78.7, 3 mm clear of rail A.</li>
+  <li><strong>Joining plates.</strong> From below, screw P1 and P2 across the joint: each plate centred on the joint line, long axis across it, two #10 × 5/8 in screws with washers in each top, pilots 1/8 in, 12 mm deep. Each plate has four holes along its length, at 2.0, 7.0, 18.4 and 23.4 cm from one end. With the plate at y 53.3–78.7 (3 mm clear of rail A) they land at y 55.3 and 60.3 in top A and 71.7 and 76.7 in top B, every one more than 4 cm from an edge, so all four get a screw.</li>
   <li><strong>Rail B meets rail A.</strong> Push rail B's corner end against rail A's vertical leg. Drill holes 1 and 2 into top A (25 mm flag) and screw.</li>
   <li><strong>Corner fittings.</strong> The holes already match from section 2. Outside fitting: heel in the outside corner, one leg on rail A's vertical leg toward the far end, the other on rail B's outer face, gusset facing the open space. Inside fitting: heel in the inside corner, one leg on rail A's vertical leg toward the wall, the other on the inner face of rail B's vertical leg, gusset tucked under B's flat leg. Rail A: four 3/8-16 × 1 in bolts from the fitting side, washer under each head, washer and nylon-insert nut inside the leg. Rail B: two 3/8-16 × 1½ in bolts through fitting, leg and fitting. Snug, not cranked.</li>
 </ol>
@@ -250,7 +250,7 @@ const D = {
   fitting: { below: 2.9, w: 4.13, legs: 8, h:[3,7] },   // h: assumed hole distances from the heel until Scott measures
   clamp: 40, clampW: 7.6, clampD: 8.9, zoneIn: 9,
   pads: [ [22.3,47.7,0.5,8.1], [0.5,8.1,22.3,47.7] ],
-  plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6, plateY: 66, plateHoleCols: 5.0, plateHoleEnd: 2.0,
+  plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6, plateY: 66, plateHoles: [2.0, 7.0, 18.4, 23.4],   // hole centres along the plate from one end
   knee: [ [20,120,20,65], [20,65,65,120] ],
   setup: [
     ['Samsung M7 32 in','centre bracket, screen centred (34, 34) on the diagonal, 20 cm in front of the crossbar','bottom edge 24 above the top (107 from the floor), top edge 66 above'],
@@ -349,8 +349,8 @@ table('tA', ['Mark','Centre (x, y)','Footprint','Note'], legRows('A').concat(fee
   ['C2', '', 'x 0–9, y 36–44', 'keep clear; VIVO clamp 2'],
   ['Pad plate 1', '', 'x 22.3–47.7, y 0.5–8.1', 'loose mending plate under clamp 1'],
   ['Pad plate 2', '', 'x 0.5–8.1, y 22.3–47.7', 'loose mending plate under clamp 2'],
-  ['P1', '(15, 66)', 'x 11.2–18.8, y 53.3–78.7', 'joining plate; screws at y 55.3 (top A) and 76.7 (top B), x 12.5 and 17.5'],
-  ['P2', '(35, 66)', 'x 31.2–38.8, y 53.3–78.7', 'joining plate; screws at y 55.3 and 76.7, x 32.5 and 37.5'],
+  ['P1', '(15, 66)', 'x 11.2–18.8, y 53.3–78.7', 'joining plate; screws on x = 15 at y 55.3 and 60.3 (top A), 71.7 and 76.7 (top B)'],
+  ['P2', '(35, 66)', 'x 31.2–38.8, y 53.3–78.7', 'joining plate; screws on x = 35 at the same four y'],
 ]));
 table('tB', ['Mark','Centre (x, y)','Footprint','Note'], legRows('B').concat(feetRows('B')).concat([
   ['Rail B line', 'x = 53, y 65–266', 'rail occupies x 48–53; corner end at y 53 under top A', "vertical leg's outer face on the line"],
@@ -410,7 +410,7 @@ const clampZones = (withText) => ({rectXY,d,X,Y}) => { const c=D.clamp, z=D.zone
   [[c-4,c+4,0,z],[0,z,c-4,c+4]].forEach((r,i)=>{ rectXY(r[0],r[1],r[2],r[3],{fill:C.zone,stroke:C.gold,'stroke-dasharray':'3 2'}); if(withText) T(d,X((r[0]+r[1])/2),Y((r[2]+r[3])/2)+3.5,'C'+(i+1),{'text-anchor':'middle','font-size':9.5,'font-weight':600}); });
   D.pads.forEach(p=>rectXY(p[0],p[1],p[2],p[3],{fill:C.steel,'fill-opacity':.25,stroke:C.steel,'stroke-dasharray':'2 2'}));
 };
-const joinPlates = ({rectXY,d,X,Y,reg}) => D.plates.forEach(p=>{ const y0=Math.max(D.plateY-D.plateL/2,reg.y0), y1=Math.min(D.plateY+D.plateL/2,reg.y1); rectXY(p[1]-D.plateW/2,p[1]+D.plateW/2,y0,y1,{fill:C.blue,'fill-opacity':.3,stroke:C.blue}); [D.plateY-D.plateL/2+D.plateHoleEnd, D.plateY+D.plateL/2-D.plateHoleEnd].forEach(hy=>{ if(hy>=reg.y0&&hy<=reg.y1) [-1,1].forEach(s=>d.circ(X(p[1]+s*D.plateHoleCols/2),Y(hy),1.4,{fill:C.ink})); }); T(d,X(p[1]),Y((y0+y1)/2)+3,p[0],{'text-anchor':'middle','font-size':10,'font-weight':600}); });
+const joinPlates = ({rectXY,d,X,Y,reg}) => D.plates.forEach(p=>{ const y0=Math.max(D.plateY-D.plateL/2,reg.y0), y1=Math.min(D.plateY+D.plateL/2,reg.y1); rectXY(p[1]-D.plateW/2,p[1]+D.plateW/2,y0,y1,{fill:C.blue,'fill-opacity':.3,stroke:C.blue}); D.plateHoles.forEach(h=>{ const hy=D.plateY-D.plateL/2+h; if(hy>=reg.y0&&hy<=reg.y1) d.circ(X(p[1]),Y(hy),1.4,{fill:C.ink}); }); T(d,X(p[1]),Y((y0+y1)/2)+3,p[0],{'text-anchor':'middle','font-size':10,'font-weight':600}); });
 const alexOutline = (a, label) => ({rectXY,d,X,Y}) => { rectXY(a.x0,a.x0+a.w,a.y0,a.y0+a.d,{fill:'none',stroke:C.ink,'stroke-width':1.2,'stroke-dasharray':'5 3'}); if(label) T(d,X(a.x0+a.w/2),Y(a.y0+a.d/2)+4,label,{'text-anchor':'middle','font-size':11,'font-weight':600}); };
 const edgeLabels = (lbls) => ({d,m,W,H}) => lbls.forEach(([side,t])=>{ const st={'font-size':10.5,fill:C.edge,'font-weight':600,'text-anchor':'middle'};
   if(side==='bottom') T(d,m+W/2,m+H+18,t,st); if(side==='top') T(d,m+W/2,m-46,t,st);

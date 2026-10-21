@@ -39,7 +39,7 @@ Measure from the end that will go against the side wall (x = 0) and the edge tha
 | Rail A line | y = 53, from x = 1 to 214 | the vertical leg's outer face goes on this line, flat leg toward y = 48 |
 | Clamp zone 1 | x 36–44, y 0–9 | keep clear |
 | Clamp zone 2 | x 0–9, y 36–44 | keep clear |
-| Plates P1, P2 | centred (15, 66) and (35, 66), long axis along y | span y 53.3–78.7 (3 mm clear of rail A); the plates are 10 × 3 × 0.12 in with six holes, two columns 50 mm apart, rows 20 mm from each end and one in the middle. Use the four end holes: in top A at y 55.3, in top B at y 76.7. Skip the middle pair, it sits 1 cm from top B's edge |
+| Plates P1, P2 | centred (15, 66) and (35, 66), long axis along y | span y 53.3–78.7 (3 mm clear of rail A). The plates are 10 × 3 × 0.12 in with four holes along the length at 0.79, 2.76, 7.26 and 9.21 in from one end (2.0, 7.0, 18.4, 23.4 cm). Laid across the joint those land at y 55.3 and 60.3 in top A, 71.7 and 76.7 in top B: all four get a screw |
 
 ## 3. Mark top B (face down)
 
@@ -79,7 +79,7 @@ Lift top A onto L1–L3 with the four feet pads dropping into their rings on ALE
 
 1. Lift top B onto L4–L6 with its pads in the rings on ALEX 2, its end against A's front edge, 3 cm off the side wall.
 2. Adjust its legs and feet until the two surfaces are flush at the joint (run a fingertip across; shim the legs, never the plates).
-3. From below, screw plates P1 and P2 across the joint through their four end holes (two in each top, 20 mm from each plate end): #10 × ⅝ in with washers, 1/8 in pilots 12 mm deep (the drill guide's 12 step). Leave the middle pair of holes empty.
+3. From below, screw plates P1 and P2 across the joint through all four holes (two land in each top): #10 × ⅝ in with washers, 1/8 in pilots 12 mm deep (the drill guide's 12 step).
 4. Push rail B's corner end against rail A's vertical leg. Drill its holes 1 and 2 into top A (pilots 20 mm, same 25 mm flag) and screw.
 5. Bolt on the two gusseted fittings (their holes and the rails' holes were drilled to match in step 1). Outside fitting: heel at the outside corner, one leg on rail A's vertical leg toward the far end, the other on rail B's outer face, gusset facing the open space under the knee corner. Inside fitting: heel at the inside corner, one leg on rail A's vertical leg toward the wall, the other on the inner face of rail B's vertical leg, gusset tucked under rail B's flat leg (it clears the flat leg above and the heads of screws 1 and 2 by about 1 mm each). Rail A: four 3/8-16 × 1 in bolts from the fitting side, washer under each head, washer and nylon-insert nut on the inside of the leg. Rail B: two 3/8-16 × 1½ in bolts through outside fitting, leg and inside fitting, washer each end, nylon-insert nut. Snug, not cranked.
 
