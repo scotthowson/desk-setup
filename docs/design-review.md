@@ -83,7 +83,7 @@ Six legs sit along the two wall edges, one of them in the corner square under VI
 | L6 | (10, 235) | 10 from side-wall edge; 39.5 to ALEX 2 |  |
 | VIVO clamp 1 | x 36–44 on A's back edge, jaw under y 0–9 | centred 40 from A's left end | grips the top plus a 10 × 3 in plate pad |
 | VIVO clamp 2 | y 36–44 on A's left end edge, jaw under x 0–9 | centred 40 from A's back edge | same; the poles are 50.0 cm apart on the diagonal (crossbar measured 21 Oct) |
-| Clamp pads | spare mending plates at x 20.0–45.4, y 0.5–8.1 and x 0.5–8.1, y 20.0–45.4 | 2.5 cm clear of rail A; the 7.6 cm jaws (36.2–43.8) sit fully on them | flat against the underside, no screws |
+| Clamp pads | spare mending plates at x 20.0–45.4, y 0.5–8.1 and x 0.5–8.1, y 20.0–45.4 | 2.5 cm clear of rail A; the 8 cm jaws (36–44) sit fully on them | flat against the underside, no screws |
 | Rail A | x 1–214, flat leg y 48–53, vertical leg at y 53 | 12 cm back from A's front edge | 213 cm |
 | Rail B | y 53–266, flat leg x 48–53, vertical leg at x 53 | 12 cm back from B's front edge | corner end against rail A's vertical leg; first 12 cm lie under A, crossing the joint; stops 8.5 cm short of ALEX 2 |
 | Corner fittings | two 5 mm gusseted 90° strut fittings, one on the outside corner (A's vertical leg toward +x, B's outer face) and one on the inside corner (A's vertical leg toward −x, B's inner face) | rail B's end sandwiched between them, 29 mm below the top | 3/8 in bolts: four through rail A, two through rail B and both fittings |

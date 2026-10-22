@@ -1,21 +1,23 @@
-// Wall-gap strip with a clamp notch: the piece that runs from the corner piece (desk 20 cm)
-// to the far side of a VIVO clamp (desk 44 cm). Its last 80 mm has a notch cut from the desk
-// side so the clamp's back (7.6 cm wide, projecting `clamp_proj` behind the edge) sits in it,
-// while a narrow bridge along the wall side still closes the gap behind the clamp. The lip
-// and its screws stop where the notch starts. Two needed: one on the back wall (clamp 1), one
-// on the side wall (clamp 2); the side-wall one is the same part turned round.
-// Measure how far the clamp's back projects behind the desk edge once a clamp is on, and set
-// `clamp_proj` to that (the manual's construction suggests about 16 mm). The bridge that is
-// left must be at least 8 mm wide, or print the piece without the bridge (set bridge = false).
+// Wall-gap strip with a clamp notch: the piece that runs from desk 28 cm to 52 cm along each
+// wall edge, with an enclosed notch in its middle that wraps round the VIVO clamp's back.
+// The clamp back is 80 mm long along the edge and projects 17.5 mm behind the desk edge
+// (measured 21 Oct 2026). The notch is 82 mm wide (1 mm each side) and 19.5 mm deep from the
+// desk's edge, and its centre is exactly 120 mm from the piece's start, so butted against
+// the 80 mm filler and the corner piece the notch centres on desk 40.0 cm: the clamp position.
+// A 9.5 mm bridge along the wall side still closes the gap behind the clamp. The lip runs
+// either side of the notch with one screw each side. Two needed, one per wall; it is the same
+// part turned round. If the notch does not centre on a clamp, adjust the 80 mm filler, not this.
 // The file is in PRINT orientation: top face down, lip up, no supports.
 
 seg = 240; gap = 29; ontop = 12; th = 3; lip = 20; lip_t = 3; chamf = 1.5; screw = 3.2; csk = 6.5; hole_z = -14;
-notch_w    = 84;    // clamp 76 wide plus 4 each side
-clamp_proj = 16;    // clamp back behind the desk edge, measured; see above
-margin     = 3;
-bridge     = true;
-notch_d = clamp_proj + margin;              // notch depth from the desk's edge toward the wall
-n0 = seg - notch_w;                         // the notch starts here and runs to the end
+clamp_len  = 80;    // clamp back along the edge, measured
+clamp_proj = 17.5;  // clamp back behind the desk edge, measured
+clear      = 1;     // per side
+margin     = 2;
+notch_w = clamp_len + 2 * clear;
+notch_d = clamp_proj + margin;              // from the desk's edge toward the wall
+notch_c = 120;                              // notch centre from the piece's start = desk 40.0 when the piece starts at 28
+n0 = notch_c - notch_w / 2; n1 = notch_c + notch_w / 2;
 
 module profile() { polygon([[0, 0], [gap + ontop, 0], [gap + ontop, th - chamf], [gap + ontop - chamf, th], [chamf, th], [0, th - chamf]]); }
 module lip_holes(xs) { for (x = xs) translate([x, gap - lip_t - 1, hole_z]) rotate([-90, 0, 0]) { cylinder(d = screw, h = lip_t + 2, $fn = 24); translate([0, 0, 1 - 0.01]) cylinder(d1 = csk, d2 = screw, h = (csk - screw) / 2 + 0.01, $fn = 24); } }
@@ -23,11 +25,10 @@ module strip() {
     difference() {
         union() {
             rotate([90, 0, 90]) linear_extrude(seg) profile();
-            translate([0, gap - lip_t, -lip]) cube([n0, lip_t, lip]);              // lip only where there is a desk edge
+            translate([0, gap - lip_t, -lip]) cube([seg, lip_t, lip]);
         }
-        lip_holes([40, n0 - 40]);
-        // the notch: from the desk-side edge inward by notch_d, over the last notch_w of the length
-        translate([n0, bridge ? gap - notch_d : -1, -lip - 1]) cube([notch_w + 1, bridge ? ontop + notch_d + 1 : gap + ontop + 2, lip + th + 2]);
+        lip_holes([40, seg - 40]);
+        translate([n0, gap - notch_d, -lip - 1]) cube([notch_w, ontop + notch_d + 1, lip + th + 2]);   // the notch, through plate and lip
     }
 }
 translate([0, 0, th]) mirror([0, 0, 1]) strip();   // flipped for printing

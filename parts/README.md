@@ -19,24 +19,24 @@ Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-prev
 | cables: power-bar-cradle | 2 per bar | PETG or ABS |
 | cables: cable-tray | 3 | PETG or ABS |
 | accessories: wall-gap-corner | 1 | walnut-ish or black |
-| accessories: wall-gap-strip, 240 mm | 16 | same |
+| accessories: wall-gap-strip, 240 mm | 15 | same |
 | accessories: wall-gap-strip-slot, 240 mm | 3 | same |
 | accessories: wall-gap-strip-clamp, 240 mm | 2 | same |
-| accessories: wall-gap-strip, short (set `seg`) | 1 × 130, 1 × 60 | same |
+| accessories: wall-gap-strip, short (set `seg`) | 2 × 80 (fillers), 1 × 50, 1 × 220 | same |
 | accessories: phone-stand | 1 | any |
 
 Screws to buy for the printed parts: 46 × #6 × 5/8 in flat head (24 rings, 6 clips, 4 cradles, 12 trays) and 48 × #4 × 1/2 in flat head (wall-gap trim, two per piece).
 
-**Wall-gap cut list.** The gap runs 249 cm along the back wall and 314 cm along the side wall. The corner piece covers the first 20 cm of each. Next comes a clamp piece (20–44) whose notched end wraps round the VIVO clamp's back at 36–44 and still closes the sliver between the clamp and the wall; the monitor leads come down the poles there. Segments are 240 mm, butted end to end. Set `seg` in the source for the two short pieces so nothing is cut by hand.
+**Wall-gap cut list.** The gap runs 249 cm along the back wall and 314 cm along the side wall. The corner piece covers the first 20 cm of each wall. Then an 80 mm filler (20–28), then the clamp piece (28–52) whose enclosed notch wraps round the VIVO clamp's back at 36–44 (the clamp back is 80 mm long and projects 17.5 mm; the notch is 82 × 19.5 and still leaves a 9.5 mm bridge along the wall). Because the notch is centred 120 mm into the piece, butting the chain together puts it on desk 40.0, the clamp position, on both walls alike. If a wall is out and the notch misses the clamp, change the filler's `seg`, nothing else. Segments are 240 mm, butted end to end; set `seg` for the short pieces so nothing is cut by hand.
 
 | Run | From | To | Pieces | Slotted segment |
 | --- | --- | --- | --- | --- |
-| back wall, corner to past clamp 1 | 20 | 44 | 1 × clamp piece | |
-| back wall, clamp 1 to the far end | 44 | 249 | 8 × 240 + 1 × 130 | the 3rd (92–116, behind the right speaker) and the 8th (212–236, behind the Y60) |
-| side wall, corner to past clamp 2 | 20 | 44 | 1 × clamp piece | |
-| side wall, clamp 2 to the far end | 44 | 314 | 11 × 240 + 1 × 60 | the 3rd (92–116, behind the left speaker) |
+| back wall, filler then clamp 1 | 20 | 52 | 1 × 80 filler + 1 × clamp piece | |
+| back wall, clamp 1 to the far end | 52 | 249 | 8 × 240 + 1 × 50 | the 3rd (100–124, behind the right speaker) and the 8th (220–244, behind the Y60) |
+| side wall, filler then clamp 2 | 20 | 52 | 1 × 80 filler + 1 × clamp piece | |
+| side wall, clamp 2 to the far end | 52 | 314 | 10 × 240 + 1 × 220 | the 3rd (100–124, behind the left speaker) |
 
-Totals: 21 full-length pieces (16 plain, 3 slotted, 2 clamp), 2 short, 1 corner.
+Totals: 20 full-length pieces (15 plain, 3 slotted, 2 clamp), 4 short (two 80 mm fillers, 50, 220), 1 corner.
 
 ## tools/ · print these before you mark or drill anything
 
@@ -70,7 +70,7 @@ Totals: 21 full-length pieces (16 plain, 3 slotted, 2 clamp), 2 short, 1 corner.
 | `wall-gap-corner` | One L piece for the back-left corner where the two wall gaps meet; 231 mm legs from the wall corner, ending 20.0 cm along each desk edge, where the clamp pieces start. | Sits on the desk's two edges; the 20 mm lip drops into the gap against the desk's raw edge, the outer edges touch the walls. One #4 × 1/2 in flat head per leg through the lip into the edge, 14 mm below the surface. | as saved (top face down, lips up). |
 | `wall-gap-strip` | 240 mm strip covering the gap: rests 12 mm on the desk, lip into the gap, reaches the wall. `gap` is 29 (design gap 30 minus 1). After the desk is in, measure the gap in several places and set `gap` to the **smallest** value minus 1. | Lip against the desk's edge, pushed to the wall; two #4 × 1/2 in per segment through the lip, 40 mm from each end. Butt segments end to end. 3M VHB tape under the flat is the no-screw alternative. | as saved (top face down, lip up). |
 | `wall-gap-strip-slot` | The same strip with a 60 × 18 mm rounded slot over the gap, for leads to drop straight down. | Same. Three places: see the cut list. | as saved. |
-| `wall-gap-strip-clamp` | The strip from desk 20 to 44 cm with its last 80 mm notched from the desk side so the VIVO clamp's back sits in it; a bridge along the wall side still closes the gap behind the clamp. `clamp_proj` (16 mm assumed) is how far the clamp back projects behind the edge: measure it with a clamp on, set it, re-render. If the bridge would be under 8 mm, set `bridge = false`. | Two: one per wall; the side-wall one is the same part turned round. Two screws in the un-notched part of the lip. | as saved (top face down, lip up). |
+| `wall-gap-strip-clamp` | The strip from desk 28 to 52 cm with an enclosed notch in its middle (82 × 19.5 mm) that wraps round the VIVO clamp's back (80 mm long, 17.5 mm projection, measured) and leaves a 9.5 mm bridge along the wall. The notch centre is 120 mm into the piece, so the chain locates it on desk 40.0, the clamp position. | Two: one per wall; the side-wall one is the same part turned round. One screw each side of the notch. | as saved (top face down, lip up). |
 | `phone-stand` | Phone leans back 25° against the plate, bottom edge in a groove behind a lip, cable tunnel from the groove out through the back. Cases up to 15 mm. | Anywhere on the top; nothing fixed. | flat on its base, any filament. |
 
 ## Not printed, on purpose
