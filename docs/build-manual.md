@@ -22,7 +22,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 | --- | --- | --- | --- |
 | Rail A | 213 cm | 9 × 7/32 in in the flat leg | 19 mm from the leg's free edge; at 3.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the wall end). The first is at 3.5, not 2.5, so it stays 4 cm from top A's end |
 | Rail B | 213 cm | 10 × 7/32 in in the flat leg | same offset; at 2.5, 7.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from one end (call it the corner end) |
-| Both rails | | 7/16 in bolt holes for the corner fittings, in the vertical leg, 29 mm down from the heel edge | on the bench, using one fitting as the template. Rail A: clamp the fitting to the vertical leg with its heel on the 52.0 cm mark from the wall end, legs pointing toward the far end; punch through both holes. Clamp it again with its heel on the 51.5 cm mark, legs pointing toward the wall end; punch. Rail B: heel on the corner end itself (0 cm), legs toward the far end; punch. Drill all six 7/16 in. The fittings' 9/16 in holes give 2 mm of play at assembly |
+| Both rails | | 7/16 in bolt holes for the corner fittings, in the vertical leg, 29 mm down from the heel edge | on the bench, using one fitting as the template. Rail A: clamp the fitting to the vertical leg with its heel on the 52.0 cm mark from the wall end, legs pointing toward the far end; punch through both holes. Clamp it again with its heel on the 51.5 cm mark, legs pointing toward the wall end; punch. Rail B: heel on the corner end itself (0 cm), legs toward the far end; punch. Drill all six 7/16 in. At assembly the bolts have 1.6 mm of play in these holes and 4.8 mm in the fittings' 9/16 in holes; that is why step 7 tightens them fully, the corner holds by friction |
 
 Centre-punch every mark, drill at low speed with oil, deburr with the file. Degrease, scuff, two coats of flat black enamel, dry 24 h.
 
@@ -121,6 +121,8 @@ Retighten every screw after two weeks.
 - [ ] Top surface 83.0 cm at all six outer corners (± 3 mm); with optional ALEX feet, 83.0 plus their height.
 - [ ] A level across the joint reads flat both ways.
 - [ ] Push the inside corner down hard: it should give 2–3 mm and spring back, no creak.
+- [ ] All eight feet pads bear in their rings: try to turn each pad by hand; none should spin free or rock.
+- [ ] Lay a straightedge across the joint at the inside corner and write down any step. Check it again after two weeks and after the first month: if the corner has settled, retighten the six fitting bolts.
 - [ ] Push the desk sideways along each wall: no sway at the top beyond a few millimetres.
 - [ ] No screw tip visible or felt as a bump on either laminate face.
 - [ ] Knees clear: sit at the corner, slide in, nothing within reach of a knee or thigh.
