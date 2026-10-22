@@ -14,7 +14,7 @@
 
 h = 60;                        // total height from the floor to the ALEX, pad included
 col_top = 56; col_bot = 52;    // round column, slight taper toward the floor
-screw_r = 16; n_screws = 3; screw = 3.6; csk = 7.0;   // screw circle, same angles as the ring pattern so the template carries both
+screw_r = 14.5; n_screws = 3; screw = 3.6; csk = 7.0;   // screw circle, same angles as the ring pattern so the template carries both
 roof = 6;                      // solid plastic between the screw head and the ALEX
 well_d = 10;                   // clears a 6 mm screwdriver shank or a 1/4 in bit holder
 pad_t = 4; plug_d = 40; plug_h = 2;   // the TPU pad's plug fits this pocket
