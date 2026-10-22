@@ -2,7 +2,7 @@
 // the two edges, and the holes give you the ring centre (5 cm in from both edges) and the
 // ring's three screw holes in one go. Same template for all eight corners; just turn it.
 // Turned over against the two edges of the BOTTOM, it marks the optional ALEX feet
-// (accessories/alex-foot.scad), which use the same centre and screw pattern.
+// (accessories/alex-foot.scad): same centre, and their three screws are the inner holes.
 // The ring's outline is engraved so you can see it will land where you expect.
 //
 // The file is in PRINT orientation: flat face on the bed, fences pointing up, no supports.
@@ -16,6 +16,7 @@ fence_h = 6; fence_t = 4;
 hole_d  = 4;       // scriber or pencil tip
 screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle: (ring_od/2 + flange_od/2)/2 from structure/foot-ring.scad. If pad_d changes there, change ring_od here too
 n_screws = 3;
+foot_r  = 16;      // the ALEX foot's screw circle (accessories/alex-foot.scad), same angles
 ring_od = 57; ring_bore = 51;
 
 module ring_line(d) { translate([inset, inset, plate_t - 0.5]) difference() { cylinder(d = d + 0.9, h = 1, $fn = 96); translate([0, 0, -1]) cylinder(d = d - 0.9, h = 3, $fn = 96); } }
@@ -30,8 +31,11 @@ module template() {   // use orientation: plate on the ALEX top, fences hanging 
         for (i = [0 : n_screws - 1])
             translate([inset, inset, -1]) rotate([0, 0, i * 360 / n_screws + 45])
                 translate([screw_r, 0, 0]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);           // ring screws
+        for (i = [0 : n_screws - 1])
+            translate([inset, inset, -1]) rotate([0, 0, i * 360 / n_screws + 45])
+                translate([foot_r, 0, 0]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);            // ALEX foot screws (underside)
         ring_line(ring_od); ring_line(ring_bore);
-        translate([inset, 10, plate_t - 0.6]) linear_extrude(1) text("ring / foot centre 50 / 50", size = 4, halign = "center");
+        translate([inset, 10, plate_t - 0.6]) linear_extrude(1) text("ring / foot centre 50 / 50  .  inner 3 = foot screws", size = 3.2, halign = "center");
         translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the ALEX edges", size = 3.5, halign = "center");
     }
 }
