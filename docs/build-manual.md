@@ -13,7 +13,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Eight printed locating rings for the pads (`parts/structure/foot-ring.stl`, source beside it): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws (rails), 32 × #8 × ⅝ in pan-head screws (feet plates), 8 × #10 × ⅝ in screws with #10 washers (joining plates), two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 4 × 3/8-16 × 1¼ in bolts (rail A), 2 × 3/8-16 × 1½ in bolts (rail B), 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers. Buy a few spares of each screw.
-- [x] VIVO crossbar measured 21¼ in (54.0 cm) outer edge to outer edge, collars about 4 cm: poles 50.0 cm apart, clamps at 40 cm from the corner.
+- [x] VIVO crossbar measured 19¾ in (50.2 cm) centre to centre of its end collars: clamps at 40 cm from the corner put the poles exactly that far apart.
 - [ ] Room cleared: the desk needs 252 × 317 cm of floor including the 3 cm wall gaps.
 
 ## 1. Drill the steel (bench)
@@ -91,7 +91,7 @@ Top A already has its legs and feet on it. With a helper, turn it over and stand
 | --- | --- | --- |
 | VIVO clamp 1 | centred x 40 on A's back edge; finger-tight until the crossbar is on | a spare mending plate flat between the jaw and the top, long side along the edge on the outline from step 2; 28 mm top plus plate is under 60 mm, so use the manual's Option 1 (holes 2 and 4 on the lower clamp) |
 | VIVO clamp 2 | centred y 40 on A's left end edge | same; both clamps sit in the 3 cm wall gap |
-| Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). Poles 50.0 cm apart (crossbar measured); the bar on the poles sets the last millimetre, so tighten the clamps with it fitted |
+| Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). Poles 50.2 cm apart (crossbar measured centre to centre); the bar on the poles sets the last millimetre, so tighten the clamps with it fitted |
 | Samsung Odyssey G5 32 in (1000R, landscape) | centre bracket (VESA 75), screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar; the curve brings its ends 6.5 cm toward you | bottom edge 23 cm above the top (13 cm over the ELLOVEN), top edge 66.9, inside the mount's 26.5 in (67.3 cm) centre-screen limit |
 | ELLOVEN | centred (36, 36), turned 45°, drawer toward you | under the G5; its back corners clear the clamp plates and poles by over 2 cm (at (33, 33) they would sit on the clamps) |
 | Acer right (landscape) | along the back wall, centred about (99, 19), toed 15° toward you; its near end about 12 cm from the G5's curved end | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |

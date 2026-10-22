@@ -82,7 +82,7 @@ Six legs sit along the two wall edges, one of them in the corner square under VI
 | L5 | (10, 160) | 10 from side-wall edge |  |
 | L6 | (10, 235) | 10 from side-wall edge; 39.5 to ALEX 2 |  |
 | VIVO clamp 1 | x 36–44 on A's back edge, jaw under y 0–9 | centred 40 from A's left end | grips the top plus a 10 × 3 in plate pad |
-| VIVO clamp 2 | y 36–44 on A's left end edge, jaw under x 0–9 | centred 40 from A's back edge | same; the poles are 50.0 cm apart on the diagonal (crossbar measured 21 Oct) |
+| VIVO clamp 2 | y 36–44 on A's left end edge, jaw under x 0–9 | centred 40 from A's back edge | same; the poles are 50.2 cm apart on the diagonal (crossbar 19¾ in centre to centre, measured 21 Oct) |
 | Clamp pads | spare mending plates at x 20.0–45.4, y 0.5–8.1 and x 0.5–8.1, y 20.0–45.4 | 2.5 cm clear of rail A; the 8 cm jaws (36–44) sit fully on them | flat against the underside, no screws |
 | Rail A | x 1–214, flat leg y 48–53, vertical leg at y 53 | 12 cm back from A's front edge | 213 cm |
 | Rail B | y 53–266, flat leg x 48–53, vertical leg at x 53 | 12 cm back from B's front edge | corner end against rail A's vertical leg; first 12 cm lie under A, crossing the joint; stops 8.5 cm short of ALEX 2 |
@@ -224,7 +224,7 @@ The two 2 × 2 × 3/16 in angles are ordered from Metal Supermarkets Ottawa ($16
 **Assumptions this design rests on.**
 
 - Top A runs along the back wall and keeps the corner square; top B butts into A's front edge. Mirror everything if the room needs the 314 cm run on the other wall.
-- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 3 cm off their walls so the clamp backs fit (about 1.5 cm needed). The VIVO pole spacing is 50.0 cm (crossbar measured); the clamp positions follow from it and from the 4.5 cm pole inset, which is still assumed.
+- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 3 cm off their walls so the clamp backs fit (1.75 cm measured). The VIVO pole spacing is 50.0 cm (crossbar measured); the clamp positions follow from it and from the 4.5 cm pole inset, which is still assumed.
 - The tops are 28 mm thick; a top that measures 27 mm drops the rail-screw reserve to 6.4 mm, still acceptable.
 - The rails are 2 × 2 × 3/16 in hot-rolled angle; the sag and stress figures in section E are for that section.
 - Nobody sits on the inside corner.
@@ -236,7 +236,7 @@ The two 2 × 2 × 3/16 in angles are ordered from Metal Supermarkets Ottawa ($16
 - [x] OLOV plate measured 11 cm in diameter, screws M4 × 16 mm fully threaded (IKEA part 108443), 19 Oct. Section B assumed a plate no wider than 7 cm: at 11 cm a leg at (14, 43) would reach y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9), so L1 is at (15, 42). Every other leg clears its neighbours by 0.8 cm or more (L4's plate to joining plate P1 is the closest).
 - [ ] Confirm the round feet's load rating (expect 50 kg or more each); the plate is 6 × 6 cm; the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 10 cm tall, 5 cm body and pad, 6 × 6 cm plate; rating still to confirm.
 - [ ] ALEX top-panel thickness where the ring screws go (expect ≥ 16 mm; #6 × ⅝ in screws assume ≥ 14 mm).
-- [x] VIVO crossbar: 21¼ in outer to outer, 4 cm collars, poles 50.0 cm apart (21 Oct). Still to measure: pole centre to desk edge (assumed 4.5 cm) and clamp projection behind the edge (under 2.5 cm assumed).
+- [x] VIVO crossbar: 19¾ in (50.2 cm) centre to centre of the end collars (21 Oct); clamps at 40 give exactly that. Still to measure: pole centre to desk edge (assumed 4.5 cm) and clamp projection behind the edge (under 2.5 cm assumed).
 - [x] Steel: two 2 × 2 × 3/16 in angles, 84 in, ordered from Metal Supermarkets Ottawa for pickup, $161.22 with tax, cutting included (19 Oct).
 - [ ] The max-load note on IKEA Canada's ALEX page for your article numbers.
 - [ ] Floor level across the desk footprint (a 1 m level and a shim set).
