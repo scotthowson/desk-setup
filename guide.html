@@ -134,6 +134,8 @@ a{color:var(--accent2)}
 <p class="cap">Plan view from above. Gold circles: legs, drawn with their 11 cm plates. Small circles: the feet on the ALEX units. Grey strips: the rails, 12 cm back from the front edges. Dashed area: the knee sweep. Short names here; every coordinate is in the tables of sections 3 to 7.</p>
 <h3>Heights, from the floor</h3>
 <table id="tHeights"></table>
+<p><strong>Optional ALEX feet.</strong> The desk is built at 83.0 cm. If you want it higher, four printed round feet under each cabinet (2, 4 or 6 cm; <code>parts/accessories/alex-foot.scad</code>, three #6 × 5/8 in screws each, marked with the ALEX corner template on the bottom corners) raise everything by their height. Nothing on the desk moves; these four numbers do, and the OLOV pre-set in section 3 becomes the table’s number. Decide before section 3.</p>
+<table id="tAlexFeet"></table>
 
 <h2 id="s1">1 · Parts, tools and the printed helpers</h2>
 <h3>Bought</h3>
@@ -195,7 +197,7 @@ a{color:var(--accent2)}
       <li>Set the OLOV plate (leg attached, pointing up) on the mark so that each plate edge is 5.5 cm from the mark; the cross lines help you see it is centred. Scribe through its four holes. Lift the leg away.</li>
       <li>Drill the four pilots with the drill guide's <strong>15</strong> step and the 1/8 in bit.</li>
       <li>Drive the IKEA M4 × 16 mm screws, clutch low, until the heads seat.</li>
-      <li>Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot.</li>
+      <li>Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot (or the optional-feet table’s number in section 0b).</li>
     </ol>
   </li>
   <li><strong>Feet F1–F4.</strong> First lay one foot plate over the T-square's 85 hole pattern. If its four screw holes line up with the tool's, punch all five at each mark; if not, punch only the centre, set the plate on the mark with its edges parallel to the top's edges, and scribe through its own holes. Drill the four pilots with the <strong>15</strong> step. Drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the foot measures <strong>10.2 cm</strong> from the plate face that touches the top to the bottom of the pad.</li>
@@ -307,6 +309,7 @@ const D = {
   legPlate: 11,
   feet: [ ['F1',214.5,8.5,'A'], ['F2',240.5,8.5,'A'], ['F3',214.5,56.5,'A'], ['F4',240.5,56.5,'A'], ['F5',8.5,279.5,'B'], ['F6',56.5,279.5,'B'], ['F7',8.5,305.5,'B'], ['F8',56.5,305.5,'B'] ],
   footPlate: 6, footPad: 5, footH: 10.16, ringBore: 5.1, ringOD: 5.7, ringH: 1.25,
+  alexFeet: [2, 4, 6],   // optional printed feet under the ALEX units, cm
   alex1: { x0:209.5, y0:3.5, w:36, d:58 }, alex2: { x0:3.5, y0:274.5, w:58, d:36 },
   railA: { x0:1, x1:214, y0:47.9, y1:53, holes:[3.5,28,54,80,106,132,158,184,210.5], from:'wall end', fit:[{heel:52.0,dir:1,label:'outside fitting'},{heel:51.5,dir:-1,label:'inside fitting'}] },
   railB: { y0:53, y1:266, x0:47.9, x1:53, holes:[2.5,7.5,28,54,80,106,132,158,184,210.5], from:'corner end', fit:[{heel:0,dir:1,label:'both fittings'}] },
@@ -353,6 +356,9 @@ table('tHeights', ['Height','cm from the floor','What'], [
   ['G5 top edge', f1(D.Y1+66.9), '0.4 cm under the mount’s 26.5 in (67.3 cm) limit for the centre screen'],
   ['Pole tops', f1(D.Y1+1.2+61), '24 in poles, 1.4 in (35.6 mm) diameter, on the clamp plates'],
 ]);
+
+table('tAlexFeet', ['ALEX feet','Underside of the tops','Top surface','Every OLOV set to','Rail lower edge'],
+  [['none (as planned)', f1(D.Y0), f1(D.Y1), f1(D.Y0), f1(D.Y0-D.angle)]].concat(D.alexFeet.map(h => [h+' cm', f1(D.Y0+h), f1(D.Y1+h), f1(D.Y0+h)+(D.Y0+h>86?' (OLOV max 90)':''), f1(D.Y0-D.angle+h)])));
 
 table('tParts', ['Item','Qty','Spec'], [
   ['EKBACKEN top','2','249 × 65 × 2.8 cm, brown walnut; one long edge rounded and laminated (front), one square and unfinished (wall side)'],

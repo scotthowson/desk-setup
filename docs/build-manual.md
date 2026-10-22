@@ -9,7 +9,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 6 × 6 cm, body and pad 5 cm, 10 cm tall.
-- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines) and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand.
+- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines) and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand, ALEX feet (2, 4 or 6 cm under the cabinets; height table before step 5).
 - [ ] Eight printed locating rings for the pads (`parts/structure/foot-ring.stl`, source beside it): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws (rails), 32 × #8 × ⅝ in pan-head screws (feet plates), 8 × #10 × ⅝ in screws with #10 washers (joining plates), two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 4 × 3/8-16 × 1¼ in bolts (rail A), 2 × 3/8-16 × 1½ in bolts (rail B), 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers. Buy a few spares of each screw.
@@ -56,10 +56,21 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 
 ## 4. Fit legs and feet to both tops
 
-1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot).
+1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot), or the table's number if you fit the optional ALEX feet.
 2. Pilot the feet plate holes 1/8 in, 15 mm deep; screw each plate to the top, pad pointing away from the top. Wind each pad out until the foot measures 10.2 cm overall.
 3. Rail A: clamp it on its line, flat leg against the top, wall end at x = 1 (1 cm in from the taped end). Measure 12 cm from the front edge to the vertical leg's outer face at both ends and in the middle before drilling; drill and drive the two end screws first, re-check, then the rest. Through each rail hole, drill a 1/8 in pilot 20 mm into the top: the printed drill guide's 25 RAIL step on the flat leg, or a tape flag on the bit 25 mm from the tip (4.8 mm steel plus 20 mm). Drive #10 × 1 in screws with the Robertson #2 bit on the 3 in extension (the chuck would hit the vertical leg otherwise) until the head seats. Nine screws.
 4. Rail B: clamp it on its line with the corner end projecting 12 cm past the top's joint end. Pilot and screw holes 3 to 10 only (eight screws). Holes 1 and 2 wait for step 7.
+
+**Optional ALEX feet.** The desk is built at 83.0 cm as planned. If you want it higher, print four round feet per ALEX (`parts/accessories/alex-foot.scad`, 2, 4 or 6 cm, three #6 × 5/8 in screws each, TPU pad) and screw them under the ALEX bottom corners before step 5: the corner template marks them exactly where the rings go on top. Everything on the desk stays where it is; only these four numbers move, all by the foot height:
+
+| ALEX feet | Underside of the tops | Top surface | Every OLOV set to | Rail lower edge |
+| --- | --- | --- | --- | --- |
+| none (as planned) | 80.2 | 83.0 | 80.2 | 75.1 |
+| 2 cm | 82.2 | 85.0 | 82.2 | 77.1 |
+| 4 cm | 84.2 | 87.0 | 84.2 | 79.1 |
+| 6 cm | 86.2 | 89.0 | 86.2 (OLOV max 90) | 81.1 |
+
+Decide before step 4, because the OLOV pre-set in step 4 is the table's number. Seat height goes up by the same amount: about 52 cm without feet, 58 cm with the 6 cm feet.
 
 ## 5. Place the ALEX units
 
@@ -107,7 +118,7 @@ Retighten every screw after two weeks.
 
 ## 9. Checks before you call it done
 
-- [ ] Top surface 83.0 cm at all six outer corners (± 3 mm).
+- [ ] Top surface 83.0 cm at all six outer corners (± 3 mm); with optional ALEX feet, 83.0 plus their height.
 - [ ] A level across the joint reads flat both ways.
 - [ ] Push the inside corner down hard: it should give 2–3 mm and spring back, no creak.
 - [ ] Push the desk sideways along each wall: no sway at the top beyond a few millimetres.
