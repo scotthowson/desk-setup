@@ -267,7 +267,7 @@ a{color:var(--accent2)}
   <li>Lay a spare mending plate flat on the underside on each pad outline from section 3, long side along the edge (x 20.0–45.4 at clamp 1, y 20.0–45.4 at clamp 2).</li>
   <li>Hang both VIVO lower clamps on their marks, <strong>finger-tight only</strong>: clamp 1 centred at x = 40 on A's back edge, clamp 2 centred at y = 40 on A's side-wall end. Use the VIVO instruction sheet's Option 1 holes (2 and 4), since the 28 mm top plus plate is under 60 mm. The clamp backs sit in the 3 cm wall gap.</li>
   <li>Fit the poles and slide the crossbar onto them as the spacing guide (VIVO sheet step 3). Only now tighten the clamps. Then refit the crossbar at monitor height (VIVO sheet step 6).</li>
-  <li>Hang the screens and set the heights in the table below. Toe the Acers in about 15°; their near ends end up about 20 cm in front of and 6 cm beside the M7's ends.</li>
+  <li>Hang the screens and set the heights in the table below. Toe the Acers in about 15°; their near ends end up about 12 cm from the G5's curved ends, and all three screens are landscape.</li>
 </ol>
 <div class="fig" id="figSetup"></div>
 <p class="cap">Plan view of everything on the desk.</p>
@@ -317,11 +317,11 @@ const D = {
   plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6, plateY: 66, plateHoles: [2.0, 7.0, 18.4, 23.4],   // hole centres along the plate from one end
   knee: [ [20,120,20,65], [20,65,65,120] ],
   setup: [
-    ['Samsung M7 32 in','centre bracket, screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar','bottom edge 24 above the top (107 from the floor), top edge 66 above'],
-    ['Acer XZ320QU right','along the back wall, centred (99, 19), toed 15° toward you; near end about 20 cm in front of and 6 cm beside the M7’s end','bottom edge 26 above the top (109 from the floor); centre 46.5 above'],
+    ['Samsung Odyssey G5 32 in, 1000R, landscape','centre bracket (VESA 75), screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar; the curve brings its ends 6.5 cm toward you','bottom edge 23 above the top (106 from the floor), top edge 66.9, inside the mount’s 67.3 cm limit'],
+    ['Acer XZ320QU right','along the back wall, centred (99, 19), toed 15° toward you; near end about 12 cm from the G5’s curved end','bottom edge 26 above the top (109 from the floor); centre 46.5 above'],
     ['Acer XZ320QU left','along the side wall, centred (19, 99), toed 15°','same'],
     ['Edifier R1280DBs','centred (108, 22) and (22, 108), grilles toward you, toed with the Acers','23.4 tall; 2.6 cm under each Acer'],
-    ['ELLOVEN drawer','centred (36, 36), turned 45°, drawer toward you; its back corners clear the clamp plates and poles by over 2 cm','10 tall; 14 cm under the M7'],
+    ['ELLOVEN drawer','centred (36, 36), turned 45°, drawer toward you; its back corners clear the clamp plates and poles by over 2 cm','10 tall; 13 cm under the G5'],
     ['Deskmat 80 × 30','centred (55, 55), turned 45°; its back edge touches the ELLOVEN’s front feet, its front edge reaches the L corner','on the top'],
     ['NuPhy Air75 V2','centred (58.5, 58.5), turned 45°','on the mat'],
     ['Mouse','about (74, 45)','on the mat'],
@@ -347,10 +347,10 @@ table('tHeights', ['Height','cm from the floor','What'], [
   ['Top surface', f1(D.Y1), '28 mm top'],
   ['ELLOVEN top', f1(D.Y1+10), ''],
   ['Edifier top', f1(D.Y1+23.4), ''],
-  ['M7 bottom edge', f1(D.Y1+24), '14 cm above the ELLOVEN'],
+  ['G5 bottom edge', f1(D.Y1+23), '13 cm above the ELLOVEN'],
   ['Acer bottom edge', f1(D.Y1+26), '2.6 cm above an Edifier'],
   ['VIVO crossbar', f1(D.Y1+40)+'–'+f1(D.Y1+43), 'refitted at monitor height'],
-  ['M7 top edge', f1(D.Y1+66), '1.3 cm under the mount’s 26.5 in (67.3 cm) limit for the centre screen'],
+  ['G5 top edge', f1(D.Y1+66.9), '0.4 cm under the mount’s 26.5 in (67.3 cm) limit for the centre screen'],
   ['Pole tops', f1(D.Y1+1.2+61), '24 in poles, 1.4 in (35.6 mm) diameter, on the clamp plates'],
 ]);
 
@@ -363,7 +363,7 @@ table('tParts', ['Item','Qty','Spec'], [
   ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
   ['Mending plates','4','10 × 3 × 0.12 in, four holes along the length at 2.0, 7.0, 18.4, 23.4 cm: two across the joint, two as pads under the clamp jaws'],
   ['VIVO STAND-V300CU','1','clamps at (40, 0) and (0, 40), crossbar on the diagonal, poles 50.0 cm apart'],
-  ['Monitors','3','Samsung M7 32 in centre; two Acer XZ320QU 31.5 in'],
+  ['Monitors','3','Samsung Odyssey G5 32 in (1000R, VESA 75) centre; two Acer XZ320QU 31.5 in (1500R, VESA 100); all landscape'],
   ['Speakers','2','Edifier R1280DBs'],
   ['ELLOVEN, deskmat, NuPhy Air75 V2, HYTE Y60 + pedestal, lamp, headset stand, plant','','as listed in section 7'],
   ['Flat black enamel, degreaser, 120 grit','','for the rails'],
@@ -619,7 +619,7 @@ drawTop('figSetup', {x0:0,x1:249,y0:0,y1:314}, { scale:1.55, extra:[
   alexOutline(D.alex1,''), alexOutline(D.alex2,''),
   ({d,X,Y,sc}) => {
     const rot = (x,y,w,h,deg,st,t) => { const g=svgEl('g',{transform:'translate('+X(x)+' '+Y(y)+') rotate('+deg+')'}); g.appendChild(svgEl('rect',Object.assign({x:-w*sc/2,y:-h*sc/2,width:w*sc,height:h*sc},st))); if(t) g.appendChild(svgEl('text',{x:0,y:3.5,'text-anchor':'middle','font-size':9.5,fill:C.ink,'font-weight':600},t)); d.add(g); };
-    rot(36.5,36.5,71.7,3,-45,{fill:C.ink},''); T(d,X(46),Y(28),'M7 (36.5, 36.5)',{'font-size':9.5});
+    rot(36.5,36.5,71,3,-45,{fill:C.ink},''); T(d,X(46),Y(28),'G5 (36.5, 36.5)',{'font-size':9.5});
     rot(99,19,70,3,-15,{fill:C.ink},''); T(d,X(99),Y(10),'Acer (99, 19) · 15°',{'font-size':9.5,'text-anchor':'middle'});
     rot(19,99,70,3,-75,{fill:C.ink},''); T(d,X(10),Y(136),'Acer (19, 99)',{'font-size':9.5});
     rot(108,22,14.6,19.6,-15,{fill:C.edge,'fill-opacity':.6},''); rot(22,108,14.6,19.6,-75,{fill:C.edge,'fill-opacity':.6},'');

@@ -92,9 +92,9 @@ Top A already has its legs and feet on it. With a helper, turn it over and stand
 | VIVO clamp 1 | centred x 40 on A's back edge; finger-tight until the crossbar is on | a spare mending plate flat between the jaw and the top, long side along the edge on the outline from step 2; 28 mm top plus plate is under 60 mm, so use the manual's Option 1 (holes 2 and 4 on the lower clamp) |
 | VIVO clamp 2 | centred y 40 on A's left end edge | same; both clamps sit in the 3 cm wall gap |
 | Crossbar | diagonal between the poles | fit it first as the spacing guide (manual step 3), then refit it at monitor height (step 6). Poles 50.0 cm apart (crossbar measured); the bar on the poles sets the last millimetre, so tighten the clamps with it fitted |
-| Samsung M7 | centre bracket, screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar | bottom edge 24 cm above the top, clears the ELLOVEN; its back corners clear the side arms by over 1 cm |
-| ELLOVEN | centred (36, 36), turned 45°, drawer toward you | under the M7; its back corners clear the clamp plates and poles by over 2 cm (at (33, 33) they would sit on the clamps) |
-| Acer right | along the back wall, centred about (99, 19), toed 15° toward you; its near end about 20 cm in front of and 6 cm beside the M7's end | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
+| Samsung Odyssey G5 32 in (1000R, landscape) | centre bracket (VESA 75), screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar; the curve brings its ends 6.5 cm toward you | bottom edge 23 cm above the top (13 cm over the ELLOVEN), top edge 66.9, inside the mount's 26.5 in (67.3 cm) centre-screen limit |
+| ELLOVEN | centred (36, 36), turned 45°, drawer toward you | under the G5; its back corners clear the clamp plates and poles by over 2 cm (at (33, 33) they would sit on the clamps) |
+| Acer right (landscape) | along the back wall, centred about (99, 19), toed 15° toward you; its near end about 12 cm from the G5's curved end | bottom edge 26 cm above the top; the arm runs along the wall behind the panel, then forward into the VESA plate |
 | Acer left | along the side wall, centred about (19, 99), toed 15° | same |
 | Edifiers | centred (108, 22) and (22, 108), grilles toward you | under the outer half of each Acer |
 | HYTE Y60 | x 197.5–246.5, y 4.5–35.5, standing on its I/O end on the MakerWorld pedestal (model 679012), long axis along the back wall, side glass facing you, front glass facing up | over ALEX 1 |
