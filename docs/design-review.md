@@ -224,7 +224,7 @@ The two 2 × 2 × 3/16 in angles are ordered from Metal Supermarkets Ottawa ($16
 **Assumptions this design rests on.**
 
 - Top A runs along the back wall and keeps the corner square; top B butts into A's front edge. Mirror everything if the room needs the 314 cm run on the other wall.
-- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 3 cm off their walls so the clamp backs fit (1.75 cm measured). The VIVO pole spacing is 50.0 cm (crossbar measured); the clamp positions follow from it and from the 4.5 cm pole inset, which is still assumed.
+- You sit at the inside corner facing the diagonal, with the three-monitor array across the corner; both tops stand 3 cm off their walls so the clamp backs fit (1.75 cm measured). The VIVO pole spacing is 50.2 cm (crossbar measured centre to centre); the clamp positions follow from it and from the 4.5 cm pole inset, which is still assumed.
 - The tops are 28 mm thick; a top that measures 27 mm drops the rail-screw reserve to 6.4 mm, still acceptable.
 - The rails are 2 × 2 × 3/16 in hot-rolled angle; the sag and stress figures in section E are for that section.
 - Nobody sits on the inside corner.
