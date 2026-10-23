@@ -17,7 +17,7 @@ t      = 3;                               // plate thickness, head and blade ali
 lip_h  = 6;   lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
 blade_l = 162; blade_w = 24;
 hole_d  = 4;                              // fits a scriber, a pencil tip or a 1/8 in bit
-plate_hole_spacing = 47.0;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
+plate_hole_spacing = 46.8;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
 pad = 56;                                 // square pad round the 85 mm hole (holes at ±23.3)
 
 module tool() {   // use orientation: plate at z 0..t on the surface, lip hanging below
@@ -29,8 +29,8 @@ module tool() {   // use orientation: plate at z 0..t on the surface, lip hangin
             translate([85 - pad / 2, -pad / 2, 0]) cube([pad, pad, t]);                      // pad for the foot plate pattern
         }
         for (x = [50, 85, 100, 150]) translate([x, 0, -1]) cylinder(d = hole_d, h = t + 2, $fn = 24);
-        for (sx = [-1, 1], sy = [-1, 1])   // plate holes: 5.4 mm at the face like the plate's own, so calipers read the same 41.6 inner to inner; tapering to 2.4 so a scriber self-centres
-            translate([85 + sx * plate_hole_spacing / 2, sy * plate_hole_spacing / 2, -0.01]) cylinder(d1 = 2.4, d2 = 5.4, h = t + 0.02, $fn = 32);
+        for (sx = [-1, 1], sy = [-1, 1])   // plate holes, straight 5.2 mm: inside jaws between two holes read 41.6 and outside jaws across them 52.0, as on the plate
+            translate([85 + sx * plate_hole_spacing / 2, sy * plate_hole_spacing / 2, -1]) cylinder(d = 5.2, h = t + 2, $fn = 48);
         translate([head_w, -0.45, t - 0.5]) cube([blade_l - head_w, 0.9, 1]);                // scribe line down the blade's centre
         translate([0, 0, t - 0.6]) labels();   // labels on the face you see in use
     }
