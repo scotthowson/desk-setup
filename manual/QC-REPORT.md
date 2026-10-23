@@ -24,8 +24,8 @@ Footprint 2490 × 650 per top, 2490 × 3140 overall, 30 mm wall gaps, 2520 × 31
 ## Outstanding physical measurements (each is flagged where it is used)
 1. EKBACKEN thickness (expect 28; if 27, every screw into the top loses 1 mm).
 2. Delivered rail lengths and angle thickness (design 2130 from the labelled end; bought as 84 in = 2133.6).
-3. Feet pad diameter (rings bored 51 for 50).
-4. ALEX top panel thickness (16 or more for the 5/8 in screws) and bottom panel thickness (ALEX feet).
+3. Feet pad diameter (rings bored 52 for the 50 mm pad).
+4. ALEX bottom panel thickness (only for the optional ALEX feet). The top panel is measured: 15.9 mm, screws 13.4 in, 2.5 remains.
 5. ALEX height with and without its stock feet (docs assume 700).
 6. VIVO top arm reach (about 89) and maximum opening (31 or more).
 7. Room: wall to wall 2520 and 3170, baseboard thickness.
