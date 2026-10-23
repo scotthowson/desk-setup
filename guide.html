@@ -254,7 +254,7 @@ a{color:var(--accent2)}
     <ol>
       <li>Outside fitting: heel in the outside corner, one leg flat on rail A's vertical leg toward the far end, the other on rail B's outer face, gusset facing the open knee space.</li>
       <li>Inside fitting: heel in the inside corner, one leg on rail A's vertical leg toward the wall, the other on the inner face of rail B's vertical leg, and its <strong>gusset pointing at the floor</strong> (gusset-up it would sit a millimetre under the head of rail B's first screw; the hole pattern is symmetric, so the holes still line up).</li>
-      <li>Rail A: four 3/8-16 × 1¼ in bolts from the fitting side, washer under each head, washer and nylon-insert nut on the inner face of the leg, under the flat leg.</li>
+      <li>Rail A: four 3/8-16 × 1½ in bolts from the fitting side, washer under each head, washer and nylon-insert nut on the inner face of the leg, under the flat leg.</li>
       <li>Rail B: two 3/8-16 × 1½ in bolts through fitting, leg and fitting, washer each end, nylon-insert nut.</li>
       <li>Tighten fully, as the glossary's <strong>Tight</strong> defines it, and only after rail B's end touches rail A and the two surfaces are flush. The mending plates align the tops; they do not carry the corner.</li>
     </ol>
@@ -384,7 +384,7 @@ table('tFast', ['Fastener','Qty','Goes through','Into the top','Pilot'], [
   ['#10 × 1 in pan head, Robertson','19','4.8 mm angle','20.6 mm','1/8 in, 20 mm deep (step 25 RAIL)'],
   ['#10 × 5/8 in with #10 washer','8','3 mm joining plate','13 mm','1/8 in, 12 mm deep (step 12)'],
   ['#6 × 5/8 in flat head','24','2.5 mm ring flange','ALEX top only, 13.4 mm','5/64 in, 12 mm deep (step 12 RING)'],
-  ['3/8-16 × 1¼ in bolt, 2 washers, nylon nut','4','fitting + rail A vertical leg','none','7/16 in, bench-drilled'],
+  ['3/8-16 × 1½ in bolt, 2 washers, nylon nut','4','fitting + rail A vertical leg','none','7/16 in, bench-drilled'],
   ['3/8-16 × 1½ in bolt, 2 washers, nylon nut','2','fitting + rail B leg + fitting','none','7/16 in, bench-drilled'],
 ]);
 
@@ -415,8 +415,8 @@ table('tRail', ['Rail','Hole','From the '+D.railA.from+' / '+D.railB.from,'Lands
   .concat(D.railB.holes.map((s,i)=>['B', i+1, f1(s), '('+f1(D.railB.x0+D.holeOffset)+', '+f1(D.railB.y0+s)+')', i<2?'into top A, screwed in section 6':''])));
 
 table('tTemplate', ['Rail','Fitting','Clamp its heel (outside of the bend) on','Legs point toward','Holes','Bolts'], [
-  ['A','outside','52.0 cm from the wall end','the far end','2 × 7/16 in','3/8-16 × 1¼ in'],
-  ['A','inside','51.5 cm from the wall end','the wall end','2 × 7/16 in','3/8-16 × 1¼ in'],
+  ['A','outside','52.0 cm from the wall end','the far end','2 × 7/16 in','3/8-16 × 1½ in'],
+  ['A','inside','51.5 cm from the wall end','the wall end','2 × 7/16 in','3/8-16 × 1½ in'],
   ['B','both (shared holes)','the corner end (0 cm)','the far end','2 × 7/16 in','3/8-16 × 1½ in, through both fittings'],
 ]);
 
