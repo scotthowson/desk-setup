@@ -1,0 +1,85 @@
+{
+  "_about": "Every number the manual may print, with its provenance. data.json (extracted from guide.html's D object) holds coordinates; this file holds everything else. Units: mm unless the key says cm. Confidence labels: VERIFIED = measured on the purchased part or taken from its own geometry file; SOURCE = defined by the project documents (docs/build-manual.md); ASSUMPTION = engineering estimate or field check.",
+  "source_commit": "HEAD of https://github.com/scotthowson/desk-setup on 23 Oct 2026 (supersedes a2e99ea with measured facts)",
+  "heights_mm": { "top_thickness": 28, "underside": 802, "surface": 830, "alex_height": 700, "foot_height": 102, "rail_lower_edge": 751, "olov_setting": 802, "confidence": "SOURCE; ALEX height ASSUMPTION until measured; top thickness MEASURE ON HARDWARE (expect 28)" },
+  "tops": { "name": "IKEA EKBACKEN brown walnut", "length": 2490, "width": 650, "thickness": 28, "front_edge": "rounded, laminated", "back_edge": "square, unfinished (wall side)", "max_fastener_depth": 21, "why_21": "28 mm particleboard with a thin laminate skin; a screw reaching the skin lifts it", "confidence": "SOURCE" },
+  "layout_cm": {
+    "topA": { "x": [0, 249], "y": [0, 65], "runs": "along the back wall, keeps the corner square" },
+    "topB": { "x": [0, 65], "y": [65, 314], "runs": "along the side wall, butts into A's front edge at y = 65" },
+    "wall_gap": 3.0, "walls_at": { "x": -3, "y": -3 },
+    "legs": { "L1": [15, 42], "L2": [65, 10], "L3": [140, 10], "L4": [10, 85], "L5": [10, 160], "L6": [10, 235], "note": "all on the wall edges; L1 under VIVO clamp 2; plate 105 mm" },
+    "alex1": { "x": [209.5, 245.5], "y": [3.5, 61.5], "faces": "+y (drawers toward you)", "type": "drawer unit" },
+    "alex2": { "x": [3.5, 61.5], "y": [274.5, 310.5], "faces": "+x (door toward you)", "type": "storage unit with door" },
+    "alex_by_walls": { "alex1_back_off_back_wall": 6.5, "alex1_near_side_from_side_wall": 212.5, "alex2_side_off_side_wall": 6.5, "alex2_near_end_from_back_wall": 277.5 },
+    "feet": { "F1": [214.5, 8.5], "F2": [240.5, 8.5], "F3": [214.5, 56.5], "F4": [240.5, 56.5], "F5": [8.5, 279.5], "F6": [56.5, 279.5], "F7": [8.5, 305.5], "F8": [56.5, 305.5], "note": "5 cm in from each ALEX corner = 8.5 cm in from the top's edges; F2 F4 F7 F8 are 8.5 from the far end, F1 F3 F5 F6 are 34.5 from it" },
+    "rails": { "A": { "x": [1, 214], "y": [47.9, 53], "wall_end_x": 1 }, "B": { "y": [53, 266], "x": [47.9, 53], "corner_end_y": 53 }, "note": "12 cm back from the front edges; vertical leg's outer face at y = 53 (A) and x = 53 (B); B's corner end touches A's vertical leg; neither rail touches a cabinet" },
+    "clamps": { "clamp1": [40, 0], "clamp2": [0, 40], "zones": { "c1_x": [36, 44], "c2_y": [36, 44] }, "pad_plates": { "p1": { "x": [20.0, 45.4], "y": [0.5, 8.1] }, "p2": { "x": [0.5, 8.1], "y": [20.0, 45.4] } } },
+    "joining_plates": { "P1_centre_x": 15, "P2_centre_x": 35, "y_span": [53.3, 78.7], "holes_from_end_cm": [2.0, 7.0, 18.4, 23.4], "screws_y": { "in_A": [55.3, 60.3], "in_B": [71.7, 76.7] }, "note": "not centred on the joint; 3 mm clear of rail A" },
+    "surface_items": { "G5": [36.5, 36.5], "G5_bottom_above_top_cm": 23, "ELLOVEN": [36, 36], "mat": [55, 55], "keyboard": [58.5, 58.5], "mouse": [74, 45], "Y60": { "x": [197.5, 246.5], "y": [4.5, 35.5] }, "lamp": [183, 20], "headset": [28, 140], "plant": [32, 298], "acer_right": [99, 19], "acer_left": [19, 99], "edifiers": [[108, 22], [22, 108]] },
+    "confidence": "SOURCE (docs/build-manual.md)"
+  },
+  "olov": { "plate_diameter": 105, "holes": 5, "hole_diameter": 5.5, "hole_circle_radius": 42.5, "hole_circle_diameter": 85, "neighbour_spacing": 49.96, "pattern": "regular pentagon; the leg jig puts one hole toward the wall on L2-L6", "screws": "M4 x 16 mm fully threaded, IKEA part 108443, 5 per leg, 30 total", "pilot": "1/8 in, 15 mm deep (puck 15 LEG)", "range_cm": [60, 90], "set_to_cm": 80.2, "max_load_kg": 13, "confidence": "VERIFIED: 105 mm plate measured 22 Oct 2026; hole pattern from a shared OLOV template (schablone.stp) that was printed and test-fitted; leg jig matches it to 0.01 mm" },
+  "feet": { "name": "round adjustable feet, 4 in", "on_hand": 12, "used": 8, "height_set_mm": 102, "body_and_pad_diameter": 50, "plate": 59.5, "plate_hole_diameter": 5.2, "plate_hole_spacing": 46.8, "between_holes_inside_jaws": 41.6, "across_holes_outside_jaws": 52.0, "screws": "#8 x 5/8 in pan head, 4 per plate, 32 total; 14 mm into the top", "pilot": "1/8 in, 15 mm deep (puck 15 LEG)", "load_rating": "unknown (design wants 50 kg or more each)", "confidence": "VERIFIED on the purchased plate 23 Oct 2026 (46.8 from 41.6 inside jaws and 52.0 outside jaws); load rating ASSUMPTION" },
+  "rings": { "file": "parts/structure/foot-ring.scad", "bore": 51, "wall": 3, "od": 57, "flange_od": 75, "flange_t": 2.5, "ring_h": 10, "screw_hole": 3.8, "csk": 7.0, "screw_circle_radius": 33, "screw_angles_deg": [90, 210, 330], "screws": "#6 x 5/8 in flat head, 3 per ring, 24 total; 13 mm into the ALEX top", "pilot": "5/64 in, 12 mm deep (puck 12 ALEX)", "centre_from_alex_corner": 50, "confidence": "VERIFIED from its own geometry file (ring); pad diameter 50 MEASURE ON HARDWARE (calipers) before relying on the 51 bore" },
+  "alex_feet_optional": { "file": "parts/accessories/alex-foot.scad", "heights": [20, 40, 60], "diameter": 56, "screw_circle_radius": 14.5, "screw_angles_deg": [45, 165, 285], "screws": "#6 x 5/8 in, 3 per foot, 24 total", "pilot": "5/64 in, 12 mm deep (puck 12 ALEX)", "desk_heights_with": { "20": { "underside": 822, "surface": 850, "olov": 822 }, "40": { "underside": 842, "surface": 870, "olov": 842 }, "60": { "underside": 862, "surface": 890, "olov": 862, "note": "OLOV max is 900" } }, "confidence": "SOURCE (optional; the model and all fixed numbers stay at 802/830)" },
+  "steel": {
+    "section": "2 x 2 x 3/16 in hot-rolled angle", "leg": 50.8, "thickness": 4.76, "design_length": 2130, "purchased_as": "84 in = 2133.6 mm, cut by Metal Supermarkets Ottawa; measure the delivered length; 2130 is the layout length and the far end may carry the extra",
+    "railA": { "holes_from_wall_end_cm": [3.5, 28, 54, 80, 106, 132, 158, 184, 210.5], "count": 9, "fitting_heels_from_wall_end_cm": { "outside_fitting_facing_far_end": 52.0, "inside_fitting_facing_wall_end": 51.5 } },
+    "railB": { "holes_from_corner_end_cm": [2.5, 7.5, 28, 54, 80, 106, 132, 158, 184, 210.5], "count": 10, "fitting_heel": "at the corner end (0 cm), legs toward the far end", "corner_overlap_under_topA_cm": 12 },
+    "screw_line_from_free_edge": 19, "bolt_line_below_heel": 29, "screw_clearance_hole": "7/32 in (5.56 mm)", "bolt_hole": "7/16 in (11.1 mm)", "fitting_hole": "9/16 in (14.3 mm)",
+    "rail_screws": "#10 x 1 in pan head, Robertson; 20.6 mm into the top; 19 total", "rail_pilot": "1/8 in, 25 mm from the flat leg's top face = 20 mm into the wood (puck 25 RAIL)",
+    "finish": "degrease, 120 grit, two coats flat black enamel, 24 h",
+    "confidence": "SOURCE for all positions; delivered length MEASURE ON HARDWARE"
+  },
+  "corner_joint": {
+    "fittings": "two 5 mm gusseted 90-degree strut fittings for 1-5/8 in channel, two 9/16 in holes per leg", "placement": "one each side of rail B's end: outside fitting with its heel at the outside corner (legs on rail A's vertical leg toward the far end and on rail B's outer face, gusset facing the open knee space); inside fitting with its heel at the inside corner (legs on rail A's vertical leg toward the wall end and on the inner face of rail B's vertical leg), gusset pointing at the floor", "centred_below_top": 29,
+    "bolts": "six 3/8-16 x 1-1/2 in hex bolts, grade 5: four through rail A's vertical leg (one fitting each), two through rail B's leg with a fitting on each side; washer under head and nut; nylon-insert nuts", "torque": "25 N·m (18 ft·lb), under the standard dry torque even for a grade 2 bolt; or one hand's full pull on a 15 cm wrench", "why_tight": "friction joint: 9/16 in fitting holes leave 4.8 mm of play round each bolt and 7/16 in rail holes 1.6 mm", "hole_positions_from_heel": "ASSUMPTION about 25 and 65 mm until the fittings arrive; the fitting itself is the drilling template, with the centring plug",
+    "confidence": "SOURCE placement; fitting hole spacing MEASURE ON HARDWARE"
+  },
+  "vivo": { "model": "VIVO STAND-V300CU", "crossbar_centre_to_centre_mm": 502, "pole_diameter": 35, "pole_centre_from_desk_edge": 43.7, "clamp_back_length_along_edge": 80, "clamp_back_behind_edge": 17.5, "lower_pad": "oval 90 x 50 mm, from 13.5 to 63.5 mm in from the edge, on the steel plate", "ideal_clamp_from_corner_cm": 39.9, "built_at_cm": 40.0, "pad_plates": "two spare 10 x 3 x 0.12 in mending plates between the lower jaw and the top", "max_centre_screen_height_in": 26.5, "confidence": "VERIFIED: crossbar, pole, pole inset, clamp back, pad all measured 21-23 Oct 2026; top arm reach ASSUMPTION about 89; max opening MEASURE ON HARDWARE (needs 31 mm or more)" },
+  "monitors": { "centre": "Samsung Odyssey G5 32 in, 1000R, VESA 75, about 5 kg, bottom edge 230 mm above the top, top edge 669 (limit 673)", "sides": "two Acer XZ320QU 31.5 in, 1500R, VESA 100, 5.6 kg with stand, about 5 kg on the arm", "all_landscape": true, "confidence": "SOURCE" },
+  "hardware_counts": {
+    "H01": { "name": "M4 x 16 mm machine screw, IKEA 108443 (with the OLOV legs)", "qty": 30, "use": "OLOV plates, 5 per leg" },
+    "H02": { "name": "#8 x 5/8 in pan head screw", "qty": 32, "use": "feet plates, 4 each" },
+    "H03": { "name": "#10 x 1 in pan head, Robertson", "qty": 19, "use": "rails into the tops" },
+    "H04": { "name": "#10 x 5/8 in pan head", "qty": 8, "use": "joining plates" },
+    "H05": { "name": "#10 flat washer", "qty": 8, "use": "under H04" },
+    "H06": { "name": "#6 x 5/8 in flat head", "qty": 24, "use": "rings, 3 each (plus 24 for the optional ALEX feet and more for cable parts)" },
+    "H07": { "name": "#4 x 1/2 in flat head", "qty": 48, "use": "wall-gap trim" },
+    "H08": { "name": "3/8-16 x 1-1/2 in hex bolt, grade 5", "qty": 6, "use": "corner fittings" },
+    "H09": { "name": "3/8 flat washer", "qty": 12, "use": "under each bolt head and nut" },
+    "H10": { "name": "3/8-16 nylon-insert lock nut", "qty": 6, "use": "corner fittings" },
+    "H11": { "name": "10 x 3 mm neodymium disc magnet", "qty": 8, "use": "rail cable hooks" },
+    "confidence": "SOURCE (docs/build-manual.md checklist; all ordered 22 Oct 2026)"
+  },
+  "parts": {
+    "P01": "Top A, EKBACKEN 2490 x 650 x 28", "P02": "Top B, EKBACKEN 2490 x 650 x 28", "P03": "ALEX 1, drawer unit 360 x 580 x 700", "P04": "ALEX 2, storage unit with door 360 x 580 x 700",
+    "P05": "OLOV leg x 6, 105 mm plate", "P06": "Rail A, steel angle 2130", "P07": "Rail B, steel angle 2130", "P08": "Gusseted 90-degree strut fitting x 2", "P09": "Round adjustable foot 4 in x 8", "P10": "Printed locating ring x 8",
+    "P11": "Mending plate 10 x 3 x 0.12 in x 4 (two joining, two clamp pads)", "P12": "VIVO STAND-V300CU", "P13": "Samsung Odyssey G5 32 in", "P14": "Acer XZ320QU x 2", "P15": "Edifier R1280DBs x 2", "P16": "IKEA ELLOVEN", "P17": "HYTE Y60 on printed pedestal",
+    "P18": "Printed tools: T-square, leg jig, feet corner jig, ALEX corner template, rail gauge, rail drill jig, fitting centring plug x 2, drill guide (tower + 5 pucks), foot height gauge, wall gauge",
+    "P19": "Wall-gap trim (optional): corner, fillers, clamp pieces, segments, connector tiles", "P20": "ALEX feet (optional) x 8 with TPU pads", "P21": "Cable parts (optional): hooks, clips, cradles, tray"
+  },
+  "printed_tools": {
+    "edge-t-square": "lip over an edge; station holes 50 ALEX ring, 85 foot (with the 4 feet plate holes at 46.8, 1/8 in), 100 leg, 150 L1",
+    "leg-jig": "lip over the wall edge; OLOV centre + 5 holes (1/8 in) at 100 (L2-L6, solid circle) and 150 (L1, dashed circle, ringed holes)",
+    "feet-corner-jig": "fences on a far corner; foot centre 85/85 + 4 holes (1/8 in) at 46.8: F2 F4 F7 F8",
+    "alex-corner-template": "fences on an ALEX corner; ring centre 50/50 + 3 ring holes (5/64 in, r 33) + 3 ALEX-foot holes (r 14.5), top and bottom corners",
+    "rail-marking-gauge": "lip over the angle's edge; pencil notches at 19 (screw line) and 29 (bolt line)",
+    "rail-drill-jig": "lip over the flat leg's free edge; 1/8 in bore on the 19 line; sight grooves",
+    "fitting-centring-plug": "drops into a fitting's 9/16 hole; 1/8 in bore dead centre; print 2",
+    "pilot-drill-guide": "SET tower (45 mm for 1/8, 35 mm for 5/64) and five pucks: 12 PLATE, 15 LEG, 10 EDGE, 12 ALEX, 25 RAIL",
+    "foot-height-gauge": "C gauge, 102 mm inside",
+    "wall-gauge": "L: 65 mm (ALEX back to wall) and 30 mm (top's raw edge to wall)",
+    "rule": "every jig hole is bit-sized: start the pilot 3-4 mm through the jig, lift it, finish to depth with the puck; centre holes are scriber only"
+  },
+  "procedures": {
+    "corner_load_test": "20 kg (a case of water plus a few books) on top B's inside corner, 10 cm in from both edges; straightedge from leg L1's line across the corner: no more than 2 mm drop (estimate about 1); remove: returns, no creak, nothing moved; never stand or sit on the corner",
+    "sideways_push": "push the desk along each wall: no sway beyond a few mm at the top, no movement of a top on its ALEX",
+    "pads": "turn each of the 8 pads by hand in its ring: none spins free or rocks",
+    "settling": "straightedge across the joint at the inside corner: write the step down; re-check at two weeks and one month; retighten the six fitting bolts if it settled",
+    "retighten": "every screw after two weeks",
+    "surface_height": "830 mm at all six outer corners, +/- 3 mm (plus ALEX feet height if fitted)",
+    "trim_fitting": "manual step 8b: measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX"
+  },
+  "open_measurements": ["ALEX top and bottom panel thickness", "ALEX height with and without its stock feet (docs assume 700)", "feet pad diameter (rings bored 51 for 50)", "EKBACKEN thickness (expect 28)", "VIVO top arm reach (about 89) and max opening (31 or more)", "strut fitting hole positions from the heel and hole diameter", "delivered rail lengths and angle thickness (4.8)", "room: wall to wall 2520 and 3170, baseboard thickness", "feet load rating"]
+}

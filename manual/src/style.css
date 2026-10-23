@@ -1,0 +1,66 @@
+/* IKEA-style assembly manual: white pages, black line art, greys for fills, no meaning carried by colour. */
+@page { size: A4; margin: 0; }
+html, body { margin: 0; padding: 0; background: #fff; color: #000; font-family: Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+
+.page { width: 210mm; height: 297mm; position: relative; padding: 16mm 16mm 18mm 16mm; break-after: page; overflow: hidden; }
+.page:last-child { break-after: auto; }
+.page .footer { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 8pt; color: #333; border-top: 0.3mm solid #000; padding-top: 1.5mm; }
+.page .header { position: absolute; left: 16mm; right: 16mm; top: 7mm; font-size: 8pt; color: #333; display: flex; justify-content: space-between; }
+.chapter-letter { font-size: 26pt; font-weight: bold; }
+
+h1 { font-size: 20pt; margin: 0 0 4mm 0; letter-spacing: 0.2mm; }
+h2 { font-size: 13pt; margin: 5mm 0 2mm 0; }
+h3 { font-size: 10.5pt; margin: 4mm 0 1.5mm 0; }
+p, li, td, th { font-size: 9.5pt; line-height: 1.35; }
+p { margin: 0 0 2.2mm 0; }
+ul, ol { margin: 0 0 2.5mm 0; padding-left: 5mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm 0; }
+th, td { border: 0.25mm solid #000; padding: 1.2mm 1.8mm; text-align: left; vertical-align: top; }
+th { background: #e6e6e6; font-weight: bold; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.small { font-size: 8pt; }
+.mono { font-family: "DejaVu Sans Mono", Menlo, monospace; font-size: 8.5pt; }
+
+/* step layout */
+.step { display: grid; grid-template-columns: 14mm 1fr; gap: 3mm; margin: 2.5mm 0 4mm 0; break-inside: avoid; }
+.step .num { width: 12mm; height: 12mm; border: 0.5mm solid #000; border-radius: 50%; font-size: 14pt; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.step .body { }
+.fig { display: block; max-width: 100%; height: auto; }
+.figbox { border: 0.25mm solid #000; padding: 2mm; margin: 2mm 0 3mm 0; break-inside: avoid; }
+.figbox .cap { font-size: 8pt; margin-top: 1.5mm; }
+.full { width: 178mm; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3mm; }
+
+/* panels */
+.warn { display: grid; grid-template-columns: 9mm 1fr; gap: 2.5mm; border: 0.6mm solid #000; padding: 2mm 2.5mm; margin: 2.5mm 0; font-size: 9pt; background: #fff; break-inside: avoid; }
+.warn-icon { width: 8mm; height: 8mm; border: 0.6mm solid #000; border-radius: 50%; font-weight: bold; font-size: 14pt; display: flex; align-items: center; justify-content: center; }
+.note { border-left: 1.2mm solid #000; padding: 1.5mm 2.5mm; margin: 2.5mm 0; font-size: 9pt; background: #f2f2f2; }
+.badge { display: inline-block; font-size: 7pt; font-weight: bold; padding: 0.4mm 1.4mm; border: 0.3mm solid #000; border-radius: 1mm; margin-left: 1mm; vertical-align: middle; letter-spacing: 0.1mm; }
+.badge-verified { background: #000; color: #fff; }
+.badge-source { background: #fff; }
+.badge-measure { background: #e6e6e6; }
+.badge-assumption { background: #fff; border-style: dashed; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 1mm 4mm; font-size: 9pt; }
+
+/* cover */
+.cover { padding: 20mm; }
+.cover h1 { font-size: 30pt; margin-top: 10mm; }
+.cover .sub { font-size: 12pt; color: #333; }
+
+/* TOC */
+.toc li { list-style: none; display: flex; justify-content: space-between; border-bottom: 0.2mm dotted #999; padding: 1mm 0; font-size: 10pt; }
+
+/* hardware symbol grid for the inventory */
+.hw { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+.hw .item { border: 0.25mm solid #000; padding: 2mm; text-align: center; font-size: 8pt; break-inside: avoid; }
+.hw .item .id { font-weight: bold; font-size: 10pt; }
+
+/* checklist */
+.check li { list-style: none; display: grid; grid-template-columns: 6mm 1fr; gap: 2mm; padding: 1.2mm 0; border-bottom: 0.2mm solid #ccc; }
+.check li::before { content: ""; width: 4.5mm; height: 4.5mm; border: 0.4mm solid #000; display: block; margin-top: 0.3mm; }
+
+/* templates (1:1 sheets) */
+.tpl { padding: 10mm; }
+.ruler { font-size: 7pt; }

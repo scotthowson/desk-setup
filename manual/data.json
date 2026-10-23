@@ -1,0 +1,327 @@
+{
+ "T": 2.8,
+ "Y0": 80.2,
+ "Y1": 83,
+ "gap": 3,
+ "A": {
+  "x0": 0,
+  "x1": 249,
+  "y0": 0,
+  "y1": 65
+ },
+ "B": {
+  "x0": 0,
+  "x1": 65,
+  "y0": 65,
+  "y1": 314
+ },
+ "legs": [
+  [
+   "L1",
+   15,
+   42,
+   "A",
+   "under VIVO clamp 2; plate ends 4 mm short of rail A"
+  ],
+  [
+   "L2",
+   65,
+   10,
+   "A",
+   "nearest leg to clamp 1"
+  ],
+  [
+   "L3",
+   140,
+   10,
+   "A",
+   "69.5 to ALEX 1"
+  ],
+  [
+   "L4",
+   10,
+   85,
+   "B",
+   "20 past the joint"
+  ],
+  [
+   "L5",
+   10,
+   160,
+   "B",
+   ""
+  ],
+  [
+   "L6",
+   10,
+   235,
+   "B",
+   "39.5 to ALEX 2"
+  ]
+ ],
+ "legPlate": 10.5,
+ "feet": [
+  [
+   "F1",
+   214.5,
+   8.5,
+   "A"
+  ],
+  [
+   "F2",
+   240.5,
+   8.5,
+   "A"
+  ],
+  [
+   "F3",
+   214.5,
+   56.5,
+   "A"
+  ],
+  [
+   "F4",
+   240.5,
+   56.5,
+   "A"
+  ],
+  [
+   "F5",
+   8.5,
+   279.5,
+   "B"
+  ],
+  [
+   "F6",
+   56.5,
+   279.5,
+   "B"
+  ],
+  [
+   "F7",
+   8.5,
+   305.5,
+   "B"
+  ],
+  [
+   "F8",
+   56.5,
+   305.5,
+   "B"
+  ]
+ ],
+ "footPlate": 6,
+ "footPad": 5,
+ "footH": 10.16,
+ "ringBore": 5.1,
+ "ringOD": 5.7,
+ "ringH": 1.25,
+ "alexFeet": [
+  2,
+  4,
+  6
+ ],
+ "alex1": {
+  "x0": 209.5,
+  "y0": 3.5,
+  "w": 36,
+  "d": 58
+ },
+ "alex2": {
+  "x0": 3.5,
+  "y0": 274.5,
+  "w": 58,
+  "d": 36
+ },
+ "railA": {
+  "x0": 1,
+  "x1": 214,
+  "y0": 47.9,
+  "y1": 53,
+  "holes": [
+   3.5,
+   28,
+   54,
+   80,
+   106,
+   132,
+   158,
+   184,
+   210.5
+  ],
+  "from": "wall end",
+  "fit": [
+   {
+    "heel": 52,
+    "dir": 1,
+    "label": "outside fitting"
+   },
+   {
+    "heel": 51.5,
+    "dir": -1,
+    "label": "inside fitting"
+   }
+  ]
+ },
+ "railB": {
+  "y0": 53,
+  "y1": 266,
+  "x0": 47.9,
+  "x1": 53,
+  "holes": [
+   2.5,
+   7.5,
+   28,
+   54,
+   80,
+   106,
+   132,
+   158,
+   184,
+   210.5
+  ],
+  "from": "corner end",
+  "fit": [
+   {
+    "heel": 0,
+    "dir": 1,
+    "label": "both fittings"
+   }
+  ]
+ },
+ "holeOffset": 1.9,
+ "angle": 5.08,
+ "wall": 0.48,
+ "fitting": {
+  "below": 2.9,
+  "w": 4.13,
+  "legs": 8,
+  "h": [
+   2.5,
+   6.5
+  ]
+ },
+ "clamp": 40,
+ "clampW": 8,
+ "clampD": 8.9,
+ "zoneIn": 9,
+ "pads": [
+  [
+   20,
+   45.4,
+   0.5,
+   8.1
+  ],
+  [
+   0.5,
+   8.1,
+   20,
+   45.4
+  ]
+ ],
+ "plates": [
+  [
+   "P1",
+   15
+  ],
+  [
+   "P2",
+   35
+  ]
+ ],
+ "plateL": 25.4,
+ "plateW": 7.6,
+ "plateY": 66,
+ "plateHoles": [
+  2,
+  7,
+  18.4,
+  23.4
+ ],
+ "knee": [
+  [
+   20,
+   120,
+   20,
+   65
+  ],
+  [
+   20,
+   65,
+   65,
+   120
+  ]
+ ],
+ "setup": [
+  [
+   "Samsung Odyssey G5 32 in, 1000R, landscape",
+   "centre bracket (VESA 75), screen centred (36.5, 36.5) on the diagonal, 20 cm in front of the crossbar; the curve brings its ends 6.5 cm toward you",
+   "bottom edge 23 above the top (106 from the floor), top edge 66.9, inside the mount’s 67.3 cm limit"
+  ],
+  [
+   "Acer XZ320QU right",
+   "along the back wall, centred (99, 19), toed 15° toward you; near end about 12 cm from the G5’s curved end",
+   "bottom edge 26 above the top (109 from the floor); centre 46.5 above"
+  ],
+  [
+   "Acer XZ320QU left",
+   "along the side wall, centred (19, 99), toed 15°",
+   "same"
+  ],
+  [
+   "Edifier R1280DBs",
+   "centred (108, 22) and (22, 108), grilles toward you, toed with the Acers",
+   "23.4 tall; 2.6 cm under each Acer"
+  ],
+  [
+   "ELLOVEN drawer",
+   "centred (36, 36), turned 45°, drawer toward you; its back corners clear the clamp plates and poles by over 2 cm",
+   "10 tall; 13 cm under the G5"
+  ],
+  [
+   "Deskmat 80 × 30",
+   "centred (55, 55), turned 45°; its back edge touches the ELLOVEN’s front feet, its front edge reaches the L corner",
+   "on the top"
+  ],
+  [
+   "NuPhy Air75 V2",
+   "centred (58.5, 58.5), turned 45°",
+   "on the mat"
+  ],
+  [
+   "Mouse",
+   "about (74, 45)",
+   "on the mat"
+  ],
+  [
+   "HYTE Y60 on pedestal",
+   "x 197.5–246.5, y 4.5–35.5, long axis along the back wall, side glass facing you, front glass up",
+   "48 tall with pedestal"
+  ],
+  [
+   "ELYONA lamp",
+   "base centred (183, 20) beside the Y60, arm reaching toward the keyboard",
+   "head about 46 above the top"
+  ],
+  [
+   "Headset stand",
+   "base centred (28, 140) on top B, hook toward you",
+   "about 28 tall"
+  ],
+  [
+   "Plant",
+   "centred (32, 298), far end of top B over ALEX 2",
+   "as it comes"
+  ],
+  [
+   "VIVO crossbar",
+   "diagonal between the poles",
+   "40–43 above the top"
+  ],
+  [
+   "VIVO poles",
+   "61 cm (24 in) tall, on the clamps at (40, 0) and (0, 40); 50.2 cm apart",
+   "tops 145 from the floor"
+  ]
+ ]
+}
