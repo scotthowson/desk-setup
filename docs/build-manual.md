@@ -129,7 +129,7 @@ Retighten every screw after two weeks.
 
 - [ ] Top surface 83.0 cm at all six outer corners (± 3 mm); with optional ALEX feet, 83.0 plus their height.
 - [ ] A level across the joint reads flat both ways.
-- [ ] Corner load test, a known weight rather than a shove: set 20 kg (a case of water plus a few books) on top B's inside corner, 10 cm in from both edges. Rest a straightedge from leg L1's line across the corner: it should drop no more than 2 mm (the estimate is about 1). Lift the weight off: the corner returns to where it was, nothing creaks, no screw or bolt has moved. Do not stand or sit on the corner; that is not what the beam was sized for.
+- [ ] Corner load test, a known weight rather than a shove: set 20 kg (a case of water plus a few books) on top B's inside corner, the case's two near faces 10 cm from the corner's two edges. Lay a straightedge flat on the surface from above leg L1 toward the inside corner, hold it down over L1, and read the gap under its far end at the corner before and after the weight goes on: it should drop no more than 2 mm (the estimate for 20 kg is about 1). Lift the weight off: the corner returns to where it was, nothing creaks, no screw or bolt has moved. Do not stand or sit on the corner; that is not what the beam was sized for.
 - [ ] All eight feet pads bear in their rings: try to turn each pad by hand; none should spin free or rock.
 - [ ] Lay a straightedge across the joint at the inside corner and write down any step. Check it again after two weeks and after the first month: if the corner has settled, retighten the six fitting bolts.
 - [ ] Push the desk sideways along each wall: no sway at the top beyond a few millimetres.
