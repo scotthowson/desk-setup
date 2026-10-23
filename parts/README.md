@@ -64,7 +64,7 @@ Totals: 20 full-length pieces (15 plain, 3 slotted, 2 clamp), 4 short (two 80 mm
 
 | Part | What it does | Where and how it attaches | Settings |
 | --- | --- | --- | --- |
-| `foot-ring` | Locating ring for the ALEX feet: 51 mm bore, 3 mm wall, 10 mm ring on a 75 × 2.5 mm flange, open bottom so the pad bears on the ALEX laminate. Stops the desk sliding on the cabinets. | ALEX tops, 5 cm in from each corner (the corner template marks them). Three #6 × 5/8 in flat heads into the ALEX top, 13 mm in. It only fits one way round over its three pilot holes. | flange down, PETG or ABS, 3 perimeters, 30% infill. `pad_d` is 50; measure your pad. |
+| `foot-ring` | Locating ring for the ALEX feet: 52 mm bore for the 50 mm pad, 3 mm wall, 10 mm ring on a 75 × 2.5 mm flange, open bottom so the pad bears on the ALEX laminate. Stops the desk sliding on the cabinets. | ALEX tops, 5 cm in from each corner. Fitted by tracing: stand the top on the bare cabinet, pencil round each pad, lift the top, set the ring on its circle (look through the bore: pencil line all round), pilot through its own holes, three #6 × 5/8 in flat heads 13.4 mm into the 15.9 mm panel. The corner template is the check, not the method. | flange down, PETG or ABS, 3 perimeters, 30% infill. `pad_d` is 50; measure your pad. |
 | `rail-end-cap-A`, `-B` | Covers a cut end of a rail: 15 mm socket, 2 mm walls, open on the face that sits against the desk. The two ends of one rail are mirror images, so there are two hands. A: rail A's far end and rail B's far end. B: rail A's wall end. Rail B's corner end is bolted to rail A and takes no cap. | Slides on; friction, a dab of hot glue if loose. A cap that will not go on is the other hand. | closed end down, PETG or ABS. |
 
 ## cables/ · cable management

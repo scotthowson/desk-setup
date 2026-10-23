@@ -7,7 +7,7 @@
 // Render:  openscad -o foot-ring.stl foot-ring.scad
 
 pad_d      = 50;    // measured pad diameter, mm. Re-measure yours with calipers before printing.
-clearance  = 1.0;   // added to the pad so it drops in without forcing
+clearance  = 2.0;   // added to the pad: bore 52 for a 50 pad, so a ring placed on a pencil trace of the pad (within 1 mm) still takes it
 wall       = 3;     // ring wall thickness
 ring_h     = 10;    // ring height above the flange
 flange_t   = 2.5;   // flange thickness (the screws go through this)
@@ -17,8 +17,8 @@ csk_d      = 7.0;   // countersink diameter at the surface (#6 flat head); 7.0 k
 n_screws   = 3;
 lead_in    = 1.0;   // chamfer at the top of the bore so the pad finds its way in
 
-bore_d  = pad_d + clearance;      // 51 for a 50 mm pad
-ring_od = bore_d + 2 * wall;      // 57
+bore_d  = pad_d + clearance;      // 52 for a 50 mm pad
+ring_od = bore_d + 2 * wall;      // 58
 screw_r = (ring_od / 2 + flange_od / 2) / 2;   // screws centred in the flange band
 $fn = 128;
 

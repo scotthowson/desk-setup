@@ -18,7 +18,7 @@ bit     = 2.3;     // 5/64 in bit (1.98) + 0.3 for the #6 screws, prints as a ru
 screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle: (ring_od/2 + flange_od/2)/2 from structure/foot-ring.scad. If pad_d changes there, change ring_od here too
 n_screws = 3;
 foot_r  = 14.5;      // the ALEX foot's screw circle (accessories/alex-foot.scad), same angles
-ring_od = 57; ring_bore = 51;
+ring_od = 58; ring_bore = 52;
 
 module ring_line(d) { translate([inset, inset, plate_t - 0.5]) difference() { cylinder(d = d + 0.9, h = 1, $fn = 96); translate([0, 0, -1]) cylinder(d = d - 0.9, h = 3, $fn = 96); } }
 module template() {   // use orientation: plate on the ALEX top, fences hanging down over two edges

@@ -335,9 +335,9 @@
   },
   "rings": {
     "file": "parts/structure/foot-ring.scad",
-    "bore": 51,
+    "bore": 52,
     "wall": 3,
-    "od": 57,
+    "od": 58,
     "flange_od": 75,
     "flange_t": 2.5,
     "ring_h": 10,
@@ -352,7 +352,8 @@
     "screws": "#6 x 5/8 in flat head, 3 per ring, 24 total; 13.4 mm into the ALEX top",
     "pilot": "5/64 in, 12 mm deep (puck 12 ALEX)",
     "centre_from_alex_corner": 50,
-    "confidence": "VERIFIED from its own geometry file (ring); pad diameter 50 MEASURE ON HARDWARE (calipers) before relying on the 51 bore"
+    "confidence": "VERIFIED from its own geometry file; pad diameter 50 MEASURE ON HARDWARE; ALEX top panel 15.9 mm (5/8 in) VERIFIED 23 Oct 2026, 2.5 mm remains under the 13.4 mm screws",
+    "fitting_method": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method."
   },
   "alex_feet_optional": {
     "file": "parts/accessories/alex-foot.scad",
@@ -586,17 +587,18 @@
     "settling": "straightedge across the joint at the inside corner: write the step down; re-check at two weeks and one month; retighten the six fitting bolts if it settled",
     "retighten": "every screw after two weeks",
     "surface_height": "830 mm at all six outer corners, +/- 3 mm (plus ALEX feet height if fitted)",
-    "trim_fitting": "manual step 8b: measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX"
+    "trim_fitting": "manual step 8b: measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX",
+    "rings_by_trace": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method."
   },
   "tools_note": "the 3/8-16 bolt head and nut take a 9/16 in wrench or socket; two needed",
   "open_measurements": [
-    "ALEX top and bottom panel thickness",
     "ALEX height with and without its stock feet (docs assume 700)",
     "feet pad diameter (rings bored 51 for 50)",
     "EKBACKEN thickness (expect 28)",
     "VIVO top arm reach (about 89) and max opening (31 or more)",
     "delivered rail lengths and angle thickness (4.8)",
     "room: wall to wall 2520 and 3170, baseboard thickness",
-    "feet load rating"
+    "feet load rating",
+    "ALEX bottom panel thickness (only for the optional ALEX feet)"
   ]
 }

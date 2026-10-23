@@ -197,7 +197,7 @@ label.t input{accent-color:var(--accent);margin:0}
   feet.forEach(([x,z])=>{
     scene.add(cyl(2.5,2.5,SP-1.6,M.chrome,x,70+0.6+(SP-1.6)/2,z));
     scene.add(cyl(2.5,2.5,1.2,M.black,x,70+0.6,z));                 // 5 cm pad on the ALEX
-    scene.add(cyl(2.85,2.85,1.0,M.alexF,x,70+0.5,z,32));             // printed locating ring, 51 mm bore, screwed to the ALEX top
+    scene.add(cyl(2.9,2.9,1.0,M.alexF,x,70+0.5,z,32));               // printed locating ring, 52 mm bore, screwed to the ALEX top
     scene.add(cyl(2.9,2.9,1.0,M.black,x,Y0-1.0,z));                  // collar
     scene.add(box(x-3,x+3,Y0-0.3,Y0,z-3,z+3,M.black,false));         // plate under the top
   });
