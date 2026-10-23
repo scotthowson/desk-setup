@@ -172,7 +172,7 @@ def p_ring():
     c.line((cx + bo, base - ft - rh), (cx + bo, base), lw="outline")
     c.line((cx, base - ft - rh - 1.5), (cx, base + 1.5), lw="thin", dash="2 0.6 0.5 0.6")
     c.text((cx, 8), "half section", size=3.0)
-    c.text((cx, 27.5), "flange 75, bore 51 mm", size=3.0)
+    c.text((cx, 27.5), "flange 75, bore 52 mm", size=3.0)
     pc, k = (43, 13), 0.2
     c.circle(pc, 75 * k / 2, fill="#fff", lw="outline"); c.circle(pc, 57 * k / 2, lw="thin"); c.circle(pc, 51 * k / 2, fill=GREY["light"], lw="outline")
     for a in (90, 210, 330):

@@ -752,8 +752,8 @@ def fig_ring_depth():
     c.text((30, 7.8), "#6 × 5/8 flat head", size=3.0)
     c.text((30, 11.6), "pilot 12, 12 ALEX", size=3.0)
     c.text((30, yb + 40), "ALEX top panel:", size=3.0, weight="bold")
-    c.text((30, yb + 43.8), "thickness unknown,", size=3.0)
-    c.text((30, yb + 47.6), "must be 16 mm or more", size=3.0)
+    c.text((30, yb + 43.8), "15.9 mm (5/8 in), measured;", size=3.0)
+    c.text((30, yb + 47.6), "screw 13.4 in, 2.5 remains", size=3.0)
     return c.save(os.path.join(FIG, "04-ring-depth.svg"))
 
 
