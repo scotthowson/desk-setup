@@ -34,9 +34,10 @@ module tool() {   // use orientation: plate at z 0..t on the surface, lip hangin
         for (sx = [-1, 1], sy = [-1, 1])
             translate([85 + sx * plate_hole_spacing / 2, sy * plate_hole_spacing / 2, -1]) cylinder(d = hole_d, h = t + 2, $fn = 24);
         translate([head_w, -0.45, t - 0.5]) cube([blade_l - head_w, 0.9, 1]);                // scribe line down the blade's centre
-        label(50, "50 ring", 1); label(85, "85 foot", -1); label(100, "100 leg", 1); label(150, "150 L1", -1);
-        translate([85, -pad / 2 + 3, t - 0.6]) linear_extrude(1) text("foot plate holes", size = 3.2, halign = "center");
+        label(50, "50 ALEX ring", 1); label(85, "85 EKB foot", -1); label(100, "100 EKB leg", 1); label(150, "150 EKB L1", -1);
+        translate([85, -pad / 2 + 3, t - 0.6]) linear_extrude(1) text("EKB foot plate holes 47.4", size = 3.2, halign = "center");
         translate([head_w / 2 + 2, 0, t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("edge", size = 5, halign = "center", valign = "center");
+        translate([head_w / 2 + 2, 45, t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("EKB T-SQUARE", size = 4, halign = "center", valign = "center");
     }
 }
 translate([0, 0, t]) mirror([0, 0, 1]) tool();   // flipped for printing: lip up, labels on the bed face

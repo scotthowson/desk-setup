@@ -24,7 +24,8 @@ module jig() {
         for (sx = [-1, 1], sy = [-1, 1]) translate([inset + sx * hole_sp / 2, inset + sy * hole_sp / 2, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);
         square_line(plate);
         translate([inset, 8, plate_t - 0.6]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 47.4", size = 3.6, halign = "center");
-        translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the top's edges", size = 3.4, halign = "center");
+        translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the EKB edges", size = 3.4, halign = "center");
+        translate([inset, size - 12, plate_t - 0.6]) linear_extrude(1) text("EKB FEET CORNER", size = 6, halign = "center");
     }
 }
 translate([0, 0, plate_t]) mirror([0, 0, 1]) jig();   // flipped for printing

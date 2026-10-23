@@ -20,7 +20,7 @@ module jig() {   // use orientation: body on the leg's top face, lip hanging ove
         translate([d19, w / 2, -1]) cylinder(d = bore, h = body_t + 2, $fn = 32);
         for (y = [-1, w - 0.6]) translate([d19 - 0.4, y, -1]) cube([0.8, 1.6, body_t + 2]);                     // sight grooves down both sides, on the bore's centre line
         translate([d19 + 9, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("19", size = 5, halign = "center", valign = "center");
-        translate([len - 6, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("1/8 pilot", size = 3, halign = "center", valign = "center");
+        translate([len - 6, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL JIG  1/8 pilot", size = 3, halign = "center", valign = "center");
     }
 }
 translate([0, 0, body_t]) mirror([0, 0, 1]) jig();   // flipped for printing: lip up

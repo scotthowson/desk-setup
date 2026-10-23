@@ -37,6 +37,7 @@ module template() {   // use orientation: plate on the ALEX top, fences hanging 
         ring_line(ring_od); ring_line(ring_bore);
         translate([inset, 10, plate_t - 0.6]) linear_extrude(1) text("ring / foot centre 50 / 50  .  inner 3 = foot screws", size = 3.2, halign = "center");
         translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the ALEX edges", size = 3.5, halign = "center");
+        translate([inset, size - 12, plate_t - 0.6]) linear_extrude(1) text("ALEX CORNER", size = 6, halign = "center");
     }
 }
 translate([0, 0, plate_t]) mirror([0, 0, 1]) template();   // flipped for printing

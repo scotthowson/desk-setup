@@ -32,6 +32,7 @@ module gauge() {   // use orientation: body on the steel face, lip hanging over 
         notch_at(d29, w / 2, w);
         translate([d19 / 2, w / 4, body_t - 0.6]) linear_extrude(1) text("19", size = 5, halign = "center", valign = "center");
         translate([d29 / 2, 3 * w / 4, body_t - 0.6]) linear_extrude(1) text("29", size = 5, halign = "center", valign = "center");
+        translate([24, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL", size = 3, halign = "center", valign = "center");
     }
 }
 translate([0, 0, body_t]) mirror([0, 0, 1]) gauge();   // flipped for printing

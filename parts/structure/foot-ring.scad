@@ -27,6 +27,8 @@ difference() {
         cylinder(d = flange_od, h = flange_t);
         cylinder(d = ring_od, h = flange_t + ring_h);
     }
+    // name on the flange, between two screws
+    rotate([0, 0, 150]) translate([screw_r, 0, flange_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("ALEX RING", size = 2.8, halign = "center", valign = "center");
     // the open bore, right through
     translate([0, 0, -1]) cylinder(d = bore_d, h = flange_t + ring_h + 2);
     // lead-in chamfer at the top of the bore

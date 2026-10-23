@@ -29,5 +29,5 @@ difference() {
         translate([0, 0, roof + (well_d - screw) / 2 - 0.01]) cylinder(d = well_d, h = col_h, $fn = 32);    // well, open at the floor end
     }
     translate([0, 0, col_h - plug_h - 0.2]) cylinder(d = plug_d + 0.4, h = plug_h + 1, $fn = 96);           // pad pocket
-    translate([0, 0, col_h / 2]) rotate([90, 0, 180 + 45]) translate([0, 0, col_top / 2 - 0.6]) linear_extrude(2) text(str(h / 10, " cm"), size = 4, halign = "center", valign = "center");   // height on the side, between two wells
+    translate([0, 0, col_h / 2]) rotate([90, 0, 180 + 45]) translate([0, 0, col_top / 2 - 0.6]) linear_extrude(2) text(str("ALEX ", h / 10, " cm"), size = 3.5, halign = "center", valign = "center");   // height on the side, between two wells
 }
