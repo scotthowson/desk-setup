@@ -74,14 +74,14 @@ def place(dst, src, dx, dy):
     """Composite a sub-canvas, giving its clipPath ids a unique prefix (many SVGs share one HTML page)."""
     _uid[0] += 1
     s = "\n".join(src.parts)
-    s = re.sub(r'id="h(\d+)"', rf'id="s{_uid[0]}h\1"', s).replace("url(#h", f"url(#s{_uid[0]}h")
+    s = re.sub(r'id="(h[\w-]+)"', rf'id="s{_uid[0]}\1"', s).replace("url(#h", f"url(#s{_uid[0]}h")
     dst.raw(f'<g transform="translate({dx} {dy})">{s}</g>')
 
 
 def save(c, name):
     svg = c.svg()
-    svg = re.sub(r'id="(s?\d*h\d+)"', rf'id="f08{name.replace("-", "")}\1"', svg)
-    svg = re.sub(r'url\(#(s?\d*h\d+)\)', rf'url(#f08{name.replace("-", "")}\1)', svg)
+    svg = re.sub(r'id="((?:s\d+)?h[\w-]+)"', rf'id="f08{name.replace("-", "")}\1"', svg)
+    svg = re.sub(r'url\(#((?:s\d+)?h[\w-]+)\)', rf'url(#f08{name.replace("-", "")}\1)', svg)
     open(os.path.join(OUT, f"08-{name}.svg"), "w").write(svg)
 
 
@@ -151,15 +151,15 @@ def fig_standA():
     # frame a: tilted, ALEX end low, pads just over their rings
     a = Canvas(W, 60, scale=s, origin=(-300, -100), flip_y=True)
     floor(a, -300, 4100)
-    alex1_front(a)
+    alex1_front(a, rings=False)
     piv = (feet["F2"][0], ALEXH)
-    tf = rot(-7.5, piv, lift=RG["flange_t"] + RG["ring_h"] + 25)
+    tf = rot(-7.5, piv, lift=25)
     shapes_draw(a, topA_front_shapes(), tf)
     pr = tf((LEN - 60, SURF)); pl = tf((60, SURF))
     a.arrow((pr[0] + 40, pr[1] + 330), (pr[0] + 40, pr[1] + 50), lw="heavy", head=2.6)
     num_circle(a, (pr[0] + 260, pr[1] + 240), "1")
     a.text((pr[0] + 420, pr[1] + 240), "ALEX end first:", anchor="start")
-    a.text((pr[0] + 420, pr[1] + 90), "4 pads into rings", anchor="start")
+    a.text((pr[0] + 420, pr[1] + 90), "pads on the bare top", anchor="start")
     a.arrow((-170, pl[1] + 20), (-170, pl[1] - 330), lw="heavy", head=2.6)
     num_circle(a, (250, 1290), "2")
     a.text((380, 1290), "then the leg end", anchor="start")
@@ -180,8 +180,8 @@ def fig_standA():
     b.text((-260, 950), "b", size=4.2, weight="bold", anchor="start")
     b.balloon((feet["F2"][0] + FB - 3, ALEXH + 50), (3250, 650), "P09")
     b.balloon((feet["F2"][0] + RG["flange_od"] / 2 - 4, ALEXH + 4), (3250, 330), "P10")
-    dm(b, (0, 0), (0, SURF), "830", offset=4.5, side=-1)
-    dm(b, (LEN, 0), (LEN, SURF), "830", offset=-4.5, side=-1)
+    dm(b, (0, 0), (0, SURF), "83.0 cm", offset=4.5, side=-1)
+    dm(b, (LEN, 0), (LEN, SURF), "83.0 cm", offset=-4.5, side=-1)
     b.text((1245, 930), "level along x and y; all four pads bear, no rock", size=3.2)
     place(out, b, 0, 61)
     save(out, "standA")
@@ -189,12 +189,32 @@ def fig_standA():
 
 # ------------------------------------------------------------------ H-2: pad into its ring (section)
 def fig_pad_ring():
-    s = 0.42
-    c = Canvas(80, 45, scale=s, origin=(-80, 682), flip_y=True)
+    out = Canvas(172, 56)
+    b, o, fo, ft, rh = RG["bore"] / 2, RG["od"] / 2, RG["flange_od"] / 2, RG["flange_t"], RG["ring_h"]
+    # a: plan, the ring set on its pencil circle
+    sp = 0.5
+    p = Canvas(92, 56, scale=sp, origin=(-42, -56), flip_y=True)
+    p.circle((0, 0), fo, fill=GREY["light"]); p.circle((0, 0), o, fill=GREY["mid"]); p.circle((0, 0), b, fill="#fff")
+    p.circle((0, 0), FB, lw="thin", dash="0.9 0.5")
+    p.centre_mark((0, 0), size=2)
+    for ang in RG["screw_angles_deg"]:
+        a_ = math.radians(ang)
+        p.circle((RG["screw_circle_radius"] * math.cos(a_), RG["screw_circle_radius"] * math.sin(a_)), RG["screw_hole"] / 2, fill="#fff")
+    p.text((-40, 50), "a", size=4.2, weight="bold", anchor="start")
+    ldr(p, (FB * 0.72, FB * 0.69), (46, 28), "pencil line (pad outline)", anchor="start")
+    p.text((49, 18), "shows all round inside", size=3.0, anchor="start")
+    p.text((49, 8), f"the ⌀{_n(RG['bore'])} mm bore", size=3.0, anchor="start")
+    a3 = math.radians(330)
+    ldr(p, (RG["screw_circle_radius"] * math.cos(a3) + 2.5, RG["screw_circle_radius"] * math.sin(a3)), (46, -16), "3 holes: start 5/64 in", anchor="start")
+    p.text((49, -26), "pilots through, 3–4 mm", size=3.0, anchor="start")
+    place(out, p, 0, 0)
+    # b: section, the pad drops in
+    s_ = 0.42
+    c = Canvas(80, 56, scale=s_, origin=(-80, 671), flip_y=True)
+    c.text((-76, 794), "b", size=4.2, weight="bold", anchor="start")
     c.poly(R(-80, 60, 684, ALEXH), fill=GREY["light"], lw="thin")
     c.hatch(R(-80, 60, 684, ALEXH), spacing=1.6)
     c.label_box((-50, 692), "ALEX top", size=3.0, pad=0.6)
-    b, o, fo, ft, rh = RG["bore"] / 2, RG["od"] / 2, RG["flange_od"] / 2, RG["flange_t"], RG["ring_h"]
     for sg in (-1, 1):
         pts = [(sg * b, ALEXH), (sg * fo, ALEXH), (sg * fo, ALEXH + ft), (sg * o, ALEXH + ft), (sg * o, ALEXH + ft + rh), (sg * b, ALEXH + ft + rh)]
         c.poly(pts, fill=GREY["mid"])
@@ -204,12 +224,15 @@ def fig_pad_ring():
     c.line((-FB, zb + 52), (-FB, zb + 58), lw="outline"); c.line((FB, zb + 52), (FB, zb + 58), lw="outline")
     c.arrow((-FB - 14, zb + 50), (-FB - 14, zb + 2), lw="heavy", head=2.4)
     c.dim((-b, ALEXH + ft + rh + 5), (b, ALEXH + ft + rh + 5), "", offset=0)
-    c.text((fo + 2, ALEXH + ft + rh + 5), "⌀51 bore", size=3.0, anchor="start")
+    c.text((fo + 2, ALEXH + ft + rh + 5), f"⌀{_n(RG['bore'])} mm bore", size=3.0, anchor="start")
     c.dim((-FB, zb + 12), (FB, zb + 12), "", offset=0)
-    c.text((FB + 4, zb + 12), "⌀50 pad", size=3.0, anchor="start")
+    c.text((FB + 4, zb + 12), f"⌀{_n(FB * 2)} mm pad", size=3.0, anchor="start")
     c.balloon((FB - 2, zb + 45), (FB + 30, zb + 40), "P09")
     c.balloon((fo - 6, ALEXH + 1.2), (fo + 18, ALEXH - 2), "P10")
-    save(c, "pad-ring")
+    place(out, c, 92, 0)
+    save(out, "pad-ring")
+
+
 # ------------------------------------------------------------------ H-3: top B slides in under A's front edge
 def topB_side_shapes():
     """Top B seen from the knee space (+x), y right, z up; rail B's outer face toward you."""
@@ -295,7 +318,7 @@ def fig_slideB():
 # ------------------------------------------------------------------ H-4: the joint in section (detail)
 def fig_joint_section():
     s = 0.45
-    c = Canvas(172, 70, scale=s, origin=(418, 706), flip_y=True)
+    c = Canvas(172, 66, scale=s, origin=(418, 713), flip_y=True)
     y0, y1 = 430, 790
     secA = R(y0, WID, UNDER, SURF)
     c.poly(secA, fill="#fff"); c.hatch(secA, spacing=1.4)
@@ -310,10 +333,10 @@ def fig_joint_section():
     c.arrow((yb + dy - 4, 775), (yb + 4, 775), lw="outline", head=1.8)
     for y in (y0, y1):
         c.line((y, UNDER - 4), (y, SURF + 4), lw="thin")
-    dm(c, (yb, RAIL_LOW), (WID, RAIL_LOW), "120 under top A", offset=4, side=-1)
-    ldr(c, (yb, 768), (548, 722), "rail B's end touches rail A's vertical leg (y 530)")
-    ldr(c, (WID, SURF), (625, 852), "B's end meets A's front edge (y 650)")
-    ldr(c, (720, SURF), (700, 852), "flush: 830 both sides")
+    dm(c, (yb, RAIL_LOW), (WID, RAIL_LOW), "12 cm under top A", offset=4, side=-1)
+    ldr(c, (yb, 768), (548, 722), "rail B's end touches rail A's vertical leg (y = 53 cm)")
+    ldr(c, (WID, SURF), (625, 852), "B's end meets A's front edge (y = 65 cm)")
+    ldr(c, (712, SURF), (725, 852), "flush, 83.0 cm", anchor="start")
     c.text((785, 737), "dashed: on its way in, 2–3 mm low", size=3.0, anchor="end")
     c.label_box((520, 816), "top A (cut)", size=3.0, pad=0.6)
     c.text((470, 776), "rail A", size=3.0)
@@ -345,7 +368,7 @@ def fig_joint_plan():
         c.hole((cm(RB["x0"]) + off, yA + cm(h)), 5.56)
     for i in (0, 1):
         c.arrow((668, 760), (cm(RB["x0"]) + off + 5, yA + cm(RB["holes"][i]) + 3), lw="thin", head=1.4)
-    for k, t in enumerate(("rail B", "holes 1, 2", "(step 5)")):
+    for k, t in enumerate(("rail B", "holes 1, 2", "(step 7)")):
         c.text((672, 765 + 18 * k), t, size=3.0, anchor="start")
     fl, ft = cm(D["fitting"]["legs"]), 5
     c.poly([(xB, yA), (xB + fl, yA), (xB + fl, yA + ft), (xB + ft, yA + ft), (xB + ft, yA + fl), (xB, yA + fl)], dash="1.2 0.8", lw="outline")
@@ -375,10 +398,10 @@ def fig_joint_plan():
     c.dim((x2l, py0 + pl), (x2l + pw, py0 + pl), "", offset=3, side=1)
     c.text((x2l + pw * 0.27, py0 + pl + 4.9 / s), _n(pw), size=3.0)
     for k, (name, xc) in enumerate(D["plates"]):
-        dm(c, (0, 925 - 28 * k), (cm(xc), 925 - 28 * k), _n(cm(xc)), offset=0, side=-1, gap=1.6)
-        c.line((cm(xc), py0 + pl), (cm(xc), 930), lw="thin", dash="4 1 0.8 1")
-    ldr(c, (cm(D["plates"][0][1]) + 25, py0), (250, 395), "3 clear of rail A (530 to 533)")
-    c.text((250, WID - 8), "joint, y 650", size=3.0, baseline="auto")
+        dm(c, (0, 922 + 24 * k), (cm(xc), 922 + 24 * k), f"{_n(xc)} cm", offset=0, side=-1, gap=1.6)
+        c.line((cm(xc), py0 + pl), (cm(xc), 927 + 24 * k), lw="thin", dash="4 1 0.8 1")
+    ldr(c, (cm(D["plates"][0][1]) + 25, py0), (250, 395), "3 mm clear of rail A")
+    c.text((250, WID - 8), "joint, y = 65 cm", size=3.0, baseline="auto")
     c.text((420, 375), "top A", size=3.2, weight="bold"); c.text((570, 900), "top B", size=3.2, weight="bold")
     c.text((-GAP - 25, 650), "side wall", size=3.0, rotate=-90, baseline="auto")
     c.label_box((680, 505), "rail A", size=3.0, pad=0.4)
@@ -410,9 +433,9 @@ def fig_checks():
     c.line(a, b, lw="outline", dash="2 1")
     for p in (a, b):
         c.circle(p, 20, fill="#000", lw="thin")
-    c.text(((WID + a[0]) / 2, WID + 70), "600", size=3.0)
-    c.text((WID + 50, (WID + b[1]) / 2), "800", size=3.0, anchor="start")
-    c.text(((a[0] + b[0]) / 2 + 60, (a[1] + b[1]) / 2 + 40), "1000 (field check)", size=3.0, anchor="start")
+    c.text(((WID + a[0]) / 2, WID + 70), "60 cm", size=3.0)
+    c.text((WID - 30, (WID + b[1]) / 2), "80 cm", size=3.0, anchor="end")
+    c.text(((a[0] + b[0]) / 2 + 60, (a[1] + b[1]) / 2 + 40), "100 cm (field check)", size=3.0, anchor="start")
     c.rect(300, 450, 60, 400, fill="#fff"); c.circle((330, 560), 18, lw="thin")
     c.rect(120, 620, 400, 60, fill="#fff"); c.circle((230, 650), 18, lw="thin")
     ldr(c, (360, 470), (900, 190), "levels across")
@@ -443,8 +466,10 @@ def fig_pulled():
         px, py = (cx + 330, cy - 160) if n == "1" else (cx + 420, cy - 60)
         person(c, *c.P(px, py), s=0.9)
         c.text((px + 110, py + 40), f"ALEX {n}", size=3.0, anchor="start")
-    dm(c, (-GAP, 1700), (pull, 1700), "400", offset=0, side=-1)
-    dm(c, (1700, -GAP), (1700, pull), "400", offset=0, side=1)
+    c.dim((-GAP, 1700), (pull, 1700), "", offset=0)
+    c.text((pull + 30, 1700), "40 cm", size=3.0, anchor="start")
+    c.dim((1700, -GAP), (1700, pull), "", offset=0)
+    c.text((1740, 200), "40 cm", size=3.0, anchor="start")
     c.text((1500, 1700), "Pads stay in their rings;", size=3.2, anchor="start")
     c.text((1500, 1840), "the ALEX units slide on", size=3.2, anchor="start")
     c.text((1500, 1980), "their feet. Nothing comes apart.", size=3.2, anchor="start")
@@ -481,12 +506,12 @@ def fig_chain():
         if end - x >= 150:
             c.text(((x + end) / 2, y + 55), _n(end - x), size=3.0)
         else:
-            c.text((end + 30, y + h / 2), f"{_n(end - x)} short", size=3.0, anchor="start")
+            c.text((end + 30, y + h / 2), f"{_n(end - x)} mm", size=3.0, anchor="start")
         for t in ticks:
             c.line((t, y + h + 60), (t, y + h + 110), lw="thin")
-            c.text((t, y + h + 125), str(t), size=3.0, baseline="hanging")
-    c.text((-55, 1110), "C corner · F 80 filler · K clamp piece (white: notch round the clamp back)", size=3.0, anchor="start")
-    c.text((-55, 1190), "1, 2 … 240 segments, grey with a slot = slotted · ■ connector tile under every joint", size=3.0, anchor="start")
+            c.text((t, y + h + 125), _n(t / 10), size=3.0, baseline="hanging")
+    c.text((-55, 1110), "Desk positions in cm. C corner · F 80 mm filler · K clamp piece (white: notch round the clamp back)", size=3.0, anchor="start")
+    c.text((-55, 1190), "1, 2 … 240 mm segments, grey with a slot = slotted · ■ connector tile under every joint", size=3.0, anchor="start")
     save(c, "chain")
 
 
@@ -523,7 +548,7 @@ def fig_profile():
     dm(c, (g - lt, zf(0)), (g - lt, zf(-lip)), "20 lip", offset=5, side=1)
     dm(c, (76, zf(0)), (76, zf(-hz)), "14", offset=0, side=-1)
     c.line((70, zf(0)), (78, zf(0)), lw="thin"); c.line((g + 12, yz), (78, yz), lw="thin", dash="4 1 0.8 1")
-    c.text((g + 16, zf(-T - 3.5)), "pilot ⌀2.0 (5/64 in) × 10,", size=3.0, anchor="start", baseline="hanging")
+    c.text((g + 16, zf(-T - 3.5)), "pilot ⌀2.0 (5/64 in) × 10 mm deep,", size=3.0, anchor="start", baseline="hanging")
     c.text((g + 16, zf(-T - 5.6)), "puck 10 EDGE, bit horizontal", size=3.0, anchor="start", baseline="hanging")
     c.line((g + 12, yz + 1.2), (g + 17, zf(-T - 3)), lw="thin")
     c.text((-13, zf(-T - 3.5)), "#4 × 1/2 in flat head (H07)", size=3.0, anchor="start", baseline="hanging")
@@ -574,9 +599,9 @@ def fig_gauge():
     c.poly(R(yf - RG["od"] / 2, yf - RG["bore"] / 2, ALEXH + RG["flange_t"], ALEXH + RG["flange_t"] + RG["ring_h"]), fill=GREY["mid"], lw="thin")
     c.poly(R(yf + RG["bore"] / 2, yf + RG["od"] / 2, ALEXH + RG["flange_t"], ALEXH + RG["flange_t"] + RG["ring_h"]), fill=GREY["mid"], lw="thin")
     c.poly(R(0, 65, 640, 654), fill="#000", lw="thin")
-    c.text((32.5, 630), "65 leg", size=3.0, baseline="hanging")
-    dm(c, (0, 670), (65, 670), "65", offset=0, side=-1)
-    dm(c, (0, SURF + 14), (GAP, SURF + 14), "30", offset=0, side=-1)
+    c.text((32.5, 630), "ALEX 65", size=3.0, baseline="hanging"); c.text((32.5, 616), "leg", size=3.0, baseline="hanging")
+    dm(c, (0, 670), (65, 670), "6.5 cm", offset=0, side=-1)
+    dm(c, (0, SURF + 14), (GAP, SURF + 14), "3 cm", offset=0, side=-1)
     c.text((100, 655), "ALEX 1", size=3.0, anchor="start")
     c.text((105, SURF + 16), "top A", size=3.0, anchor="start")
     c.text((-30, 730), "back wall", size=3.0, rotate=-90)

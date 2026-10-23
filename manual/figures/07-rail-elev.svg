@@ -9,13 +9,13 @@
 <rect x="12.00" y="6.30" width="81.90" height="3.64" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>
 <rect x="12.00" y="9.94" width="36.40" height="6.63" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
 <line x1="94.90" y1="6.30" x2="102.90" y2="6.30" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="103.90" y="5.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">830 surface</text>
+<text x="103.90" y="5.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">83.0 cm surface</text>
 <line x1="94.90" y1="9.94" x2="102.90" y2="9.94" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="103.90" y="11.14" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">802 underside</text>
+<text x="103.90" y="11.14" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">80.2 cm underside</text>
 <line x1="94.90" y1="16.57" x2="102.90" y2="16.57" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="103.90" y="16.57" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">751 rail lower edge</text>
+<text x="103.90" y="16.57" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">75.1 cm rail lower edge</text>
 <line x1="94.90" y1="23.20" x2="102.90" y2="23.20" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="103.90" y="23.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">700 ALEX top (ASSUMPTION)</text>
+<text x="103.90" y="23.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">70.0 cm ALEX top (ASSUMPTION)</text>
 <line x1="19.80" y1="23.20" x2="42.55" y2="23.20" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6" stroke-linecap="round"/>
 <line x1="23.70" y1="23.20" x2="23.70" y2="16.57" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="23.7,16.57 24.18,17.885 23.22,17.885" fill="#000"/>

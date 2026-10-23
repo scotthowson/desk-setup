@@ -94,7 +94,7 @@ def p_olov():
     for i in range(5):
         a = math.radians(-90 + i * 72)
         c.circle((pc[0] + 42.5 * k * math.cos(a), pc[1] + 42.5 * k * math.sin(a)), 0.55, fill="#fff", lw="thin")
-    c.text((pc[0], 28.5), "plate 105, 1:5", size=3.0)
+    c.text((pc[0], 28.5), "plate ⌀105 mm", size=3.0)
     return c
 
 
@@ -104,7 +104,7 @@ def p_rail(label):
     c.rect(2, 10, 26, 2.5, fill=GREY["steel"], lw="outline")
     c.line((2, 12.5), (28, 12.5), lw="heavy")
     c.text((15, 6), "RAIL " + label, size=3.2, weight="bold")
-    c.text((15, 17), "2130 long", size=3.0)
+    c.text((15, 17), "213 cm long", size=3.0)
     s = 0.36
     ox, oy = 31, 3
     a, t = 50.8 * s, 4.76 * s
@@ -131,7 +131,7 @@ def p_fitting():
     c.text((x0 + s1 * s + 1.0, y0 - 2.8), "29.15", size=3.0, anchor="start")
     dim2(c, (x0, y0 - 0.01), (x0 + s2 * s, y0 - 0.01), "78.45", off=6.6)
     c.text((x0 + 1.2, y0 + w * s + 2.6), "heel", size=3.0, anchor="start")
-    c.text((x0 + L * s / 2 + 6, y0 + w * s + 2.6), "100.5 × 41 leg", size=3.0)
+    c.text((x0 + L * s / 2 + 6, y0 + w * s + 2.6), "100.5 × 41 mm leg", size=3.0)
     # profile: L with gusset, 1:5
     k, px, py = 0.09, 44.5, 27
     c.poly([(px, py), (px + L * k, py), (px + L * k, py - t * k * 2), (px + t * k * 2, py - t * k * 2), (px + t * k * 2, py - L * k), (px, py - L * k)], fill=GREY["dark"], lw="thin")
@@ -152,7 +152,7 @@ def p_foot():
     by = top + 0.8 + 30 * s
     c.rect(cx - 25 * s, by, 50 * s, 56 * s, fill=GREY["steel"], lw="outline")
     c.rect(cx - 25 * s, by + 56 * s, 50 * s, 102 * s - 0.8 - 86 * s, fill=GREY["dark"], lw="outline")
-    dim2(c, (cx + pw / 2 + 4, top), (cx + pw / 2 + 4, top + 102 * s), "102", off=-0.1)
+    dim2(c, (cx + pw / 2 + 4, top), (cx + pw / 2 + 4, top + 102 * s), "102 mm", off=-0.1)
     c.text((cx - pw / 2 - 1, top + 1), "plate", size=3.0, anchor="end")
     c.text((cx - 25 * s - 1, by + 7), "body", size=3.0, anchor="end")
     c.text((cx - 25 * s - 1, top + 102 * s - 1), "pad", size=3.0, anchor="end")
@@ -172,7 +172,7 @@ def p_ring():
     c.line((cx + bo, base - ft - rh), (cx + bo, base), lw="outline")
     c.line((cx, base - ft - rh - 1.5), (cx, base + 1.5), lw="thin", dash="2 0.6 0.5 0.6")
     c.text((cx, 8), "half section", size=3.0)
-    c.text((cx, 27.5), "flange 75, bore 51", size=3.0)
+    c.text((cx, 27.5), "flange 75, bore 51 mm", size=3.0)
     pc, k = (43, 13), 0.2
     c.circle(pc, 75 * k / 2, fill="#fff", lw="outline"); c.circle(pc, 57 * k / 2, lw="thin"); c.circle(pc, 51 * k / 2, fill=GREY["light"], lw="outline")
     for a in (90, 210, 330):
@@ -189,7 +189,7 @@ def p_plate():
     c.rect(x0, y0, 254 * s, 76 * s, fill=GREY["steel"], lw="outline")
     for h in D["plateHoles"]:
         c.circle((x0 + h * 10 * s, y0 + 38 * s), 0.9, fill="#fff", lw="thin")
-    c.text((x0 + 127 * s, y0 + 76 * s + 4), "254 × 76 × 3 (10 × 3 × 0.12 in)", size=3.0)
+    c.text((x0 + 127 * s, y0 + 76 * s + 4), "254 × 76 × 3 mm (10 × 3 × 0.12 in)", size=3.0)
     c.text((x0 + 127 * s, 4), "4 holes along the centreline", size=3.0)
     return c
 
@@ -205,7 +205,7 @@ def p_vivo():
     for u, d in ((12, -1), (40, 1)):
         c.line((u, base - 500 * s), (u + d * 10, base - 520 * s), lw="outline")
         c.line((u + d * 10, base - 520 * s), (u + d * 11, base - 540 * s), lw="outline")
-    c.text((26, base - 430 * s - 3), "502 c/c", size=3.0)
+    c.text((26, base - 430 * s - 3), "50.2 cm c/c", size=3.0)
     return c
 
 
@@ -274,7 +274,7 @@ def p_alexfoot():
     for u, h in ((10, 20), (26, 40), (42, 60)):
         c.rect(u - 28 * s, 27 - h * s, 56 * s, h * s, fill=GREY["light"], lw="outline")
         c.rect(u - 26 * s, 27 - 0.9, 52 * s, 0.9, fill=GREY["dark"], lw="thin")
-        c.text((u, 27 - h * s - 2.2), str(h), size=3.0)
+        c.text((u, 27 - h * s - 2.2), f"{h // 10} cm", size=3.0)
     return c
 
 

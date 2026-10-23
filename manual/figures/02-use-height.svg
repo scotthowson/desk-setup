@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 70" width="86mm" height="70mm" class="fig">
+<polygon points="13.5,52 38.5,52 38.5,60 13.5,60" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="13.5,25 38.5,25 38.5,52 13.5,52" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="25.1,10.2 26.9,10.2 26.9,25 25.1,25" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="11.125,9 40.875,9 40.875,10.2 11.125,10.2" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="6,6 50.875,6 50.875,63 6,63 6,60 46.875,60 46.875,9 6,9" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="66.875" y1="34.5" x2="52.875" y2="34.5" stroke="#000" stroke-width="0.5"/>
+<polygon points="52.875,34.5 54.378,33.951 54.378,35.049" fill="#000"/>
+<text x="53.875" y="31" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">slide on</text>
+<line x1="76.275" y1="9" x2="75.665" y2="9" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="76.275" y1="60" x2="75.665" y2="60" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="76.865" y1="9" x2="76.865" y2="60" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="76.865,9 77.379,10.409 76.351,10.409" fill="#000"/>
+<polygon points="76.865,60 76.351,58.591 77.379,58.591" fill="#000"/>
+<text x="74.865" y="34.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 74.865 34.5)"></text>
+<text x="74.875" y="17" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="bold" fill="#000">102 mm</text>
+<text x="74.875" y="20.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">inside</text>
+<text x="6" y="3.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">plate</text>
+<text x="6" y="66.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">pad</text>
+</svg>

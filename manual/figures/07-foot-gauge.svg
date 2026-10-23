@@ -11,7 +11,7 @@
 <line x1="5.80" y1="8.00" x2="5.80" y2="37.58" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="5.8,8 6.314,9.409 5.286,9.409" fill="#000"/>
 <polygon points="5.8,37.58 5.286,36.171 6.314,36.171" fill="#000"/>
-<text x="3.20" y="22.79" font-family="Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90.00 3.20 22.79)">102.0</text>
+<text x="3.20" y="22.79" font-family="Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90.00 3.20 22.79)">102.0 mm</text>
 <line x1="43.5" y1="22.5" x2="33.64" y2="22.5" stroke="#000" stroke-width="0.5"/>
 <polygon points="33.64,22.5 35.331,21.883 35.331,23.117" fill="#000"/>
 <text x="34.22" y="19.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">slide on</text>

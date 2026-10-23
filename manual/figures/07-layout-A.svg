@@ -2,7 +2,7 @@
 <polygon points="10,17 164.38,17 164.38,57.3 10,57.3" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <line x1="10" y1="17" x2="164.38" y2="17" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
 <line x1="163.76" y1="49.86" x2="31.7" y2="49.86" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1 0.8 1" stroke-linecap="round"/>
-<text x="89.98" y="52.65" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail A line y = 530 (fitted later)</text>
+<text x="89.98" y="52.65" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail A line, y = 53 cm (fitted later)</text>
 <polygon points="12.17,19.17 34.49,19.17 34.49,55.13 12.17,55.13" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
 <polygon points="136.232,17.31 151.98,17.31 151.98,22.022 136.232,22.022" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.8" stroke-linejoin="round"/>
 <polygon points="159.358,29.4 164.07,29.4 164.07,45.148 159.358,45.148" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.8" stroke-linejoin="round"/>
@@ -77,24 +77,25 @@
 <polygon points="77.58,17 77.066,15.591 78.094,15.591" fill="#000"/>
 <polygon points="77.58,23.2 78.094,24.609 77.066,24.609" fill="#000"/>
 <line x1="77.58" y1="14.00" x2="77.58" y2="26.20" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="70.54" y="20.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 70.54 20.10)">100</text>
+<text x="79.78" y="20.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 79.78 20.10)"></text>
+<text x="79.08" y="14.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">10 cm</text>
 <line x1="10.00" y1="16.20" x2="10.00" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="15.27" y1="16.20" x2="15.27" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="10.00" y1="13.50" x2="15.27" y2="13.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,13.5 8.591,14.014 8.591,12.986" fill="#000"/>
 <polygon points="15.27,13.5 16.679,12.986 16.679,14.014" fill="#000"/>
 <line x1="7.00" y1="13.50" x2="18.27" y2="13.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="12.63" y="11.30" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">85</text>
+<text x="12.63" y="9.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">8.5 cm</text>
 <line x1="10.00" y1="58.10" x2="10.00" y2="62.30" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="31.39" y1="58.10" x2="31.39" y2="62.30" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="10.00" y1="60.80" x2="31.39" y2="60.80" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,60.8 11.409,60.286 11.409,61.314" fill="#000"/>
 <polygon points="31.39,60.8 29.981,61.314 29.981,60.286" fill="#000"/>
-<text x="20.70" y="63.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">345</text>
+<text x="20.70" y="63.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">34.5 cm</text>
 <line x1="164.38" y1="58.10" x2="164.38" y2="62.30" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="155.08" y1="58.10" x2="155.08" y2="62.30" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="164.38" y1="60.80" x2="155.08" y2="60.80" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="164.38,60.8 162.971,61.314 162.971,60.286" fill="#000"/>
 <polygon points="155.08,60.8 156.489,60.286 156.489,61.314" fill="#000"/>
-<text x="159.73" y="63.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(360.00 159.73 63.00)">150</text>
+<text x="159.73" y="63.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(360.00 159.73 63.00)">15 cm</text>
 </svg>

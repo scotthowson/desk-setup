@@ -123,29 +123,29 @@ def fig_clamp_plan():
     for p in (p1, p2):
         c.circle(p, pr, fill="#fff"); c.centre_mark(p, 1.2)
     # dimensions
-    dim(c, (0, -55), (400, -55), "400 (40.0)  clamp 1 centre", 14, side=-1)
-    dim(c, (360, -55), (440, -55), "80", 6, side=-1, shift=2.6)
-    dim(c, (-55, 0), (-55, 400), "400 (40.0)  clamp 2 centre", 14, side=1)
-    dim(c, (-55, 360), (-55, 440), "80", 6, side=1, shift=-2.6)
+    dim(c, (0, -55), (400, -55), "40.0 cm  clamp 1 centre", 14, side=-1)
+    dim(c, (360, -55), (440, -55), "8 cm", 6, side=-1, shift=10)
+    dim(c, (-55, 0), (-55, 400), "40.0 cm  clamp 2 centre", 14, side=1)
+    dim(c, (-55, 360), (-55, 440), "8 cm", 6, side=1, shift=-10)
     dim(c, (560, -30), (560, 0), "", 0)
-    txt(c, (600, -15), "wall gap 30", 3.0, anchor="start")
+    txt(c, (600, -15), "wall gap 3 cm", 3.0, anchor="start")
     # crossbar dimension along the diagonal, offset toward you
-    dim(c, p1, p2, "crossbar 502 c–c", 8, side=-1)
+    dim(c, p1, p2, "crossbar 50.2 cm c–c", 8, side=-1)
     # labels (ordered top to bottom like their targets so leaders do not cross)
     datum(c)
     txt(c, (25, 30), "datum (0, 0)", 3.0, anchor="start")
-    for ty, tgt, rows in ((175, (430, -8), ["clamp back, in the gap:", "80 long, 17.5 behind the edge"]),
-                          (255, (418, 52), ["pole ⌀35, centre 43.7", "in from the edge"]),
-                          (335, (440, 85), ["clamp zone 360–440 (dotted):", "keep clear"]),
-                          (415, (448, 40), ["pad plate P11, under the top:", "x 200–454, y 5–81"])):
+    for ty, tgt, rows in ((175, (430, -8), ["clamp back, in the gap: 80 mm", "long, 17.5 mm behind the edge"]),
+                          (255, (418, 52), ["pole ⌀35 mm, centre 43.7 mm", "in from the edge"]),
+                          (335, (440, 85), ["clamp zone x 36–44 cm,", "dotted: keep clear"]),
+                          (415, (448, 40), ["pad plate P11, under the top:", "x 20.0–45.4 cm, y 0.5–8.1 cm"])):
         c.leader(tgt, (478, ty), "", 3)
         lines(c, (482, ty), rows, 3.0)
-    lines(c, (95, 568), ["pad plate P11: y 200–454, x 5–81"], 3.0)
+    lines(c, (95, 562), ["pad plate P11:", "y 20.0–45.4 cm, x 0.5–8.1 cm"], 3.0)
     c.leader((40, 440), (92, 566), "", 3)
     txt(c, (790, 505), "rail A", 3.0, anchor="end")
     txt(c, (505, 700), "rail B", 3.0, rotate=-90)
-    txt(c, (25, 682), "joint y = 650", 3.0, anchor="start")
-    txt(c, (300, 615), "TOP A  P01", 3.2, weight="bold")
+    txt(c, (25, 682), "joint y = 65 cm", 3.0, anchor="start")
+    txt(c, (690, 600), "TOP A  P01", 3.2, weight="bold")
     txt(c, (330, 688), "TOP B  P02", 3.2, weight="bold")
     return save(c, "09-clamp-plan.svg")
 
@@ -153,8 +153,8 @@ def fig_clamp_plan():
 def fig_clamp_section():
     """I-2: section through clamp 1 at x = 400, looking along the back wall. Only measured values are dimensioned;
     the clamp body is a schematic C (dashed, grey) because its shape is not measured."""
-    s = 0.64
-    y0, z0, y1, z1 = -80, -78, 184, 122
+    s = 0.58
+    y0, z0, y1, z1 = -80, -78, 214, 122
     c = Canvas((y1 - y0) * s, (z1 - z0) * s, scale=s, origin=(y0, z0), flip_y=True)
     T = F["tops"]["thickness"]; pl = 3.0
     bk = V["clamp_back_behind_edge"]
@@ -184,33 +184,33 @@ def fig_clamp_section():
     dim(c, (102, 0), (102, T), "28", 4, side=1)
     dim(c, (-bk, 50), (0, 50), "17.5", 0, side=-1, gap=3.0)
     c.line((-bk, T + arm), (-bk, 53), lw="thin", dash="1 0.8")
-    dim(c, (-30, 66), (0, 66), "30", 0, side=-1, gap=3.0)
+    dim(c, (-30, 66), (0, 66), "3 cm", 0, side=-1, gap=3.0)
     txt(c, (-15, 80), "wall gap", 3.0)
     # each extension line stops at its own dimension level, so no label is crossed
     for x, ztop, zbot in ((0, -pl, -66), (5, -pl, -58), (13.5, -pl - 4, -42), (63.5, -pl - 4, -42), (81, -pl, -66)):
         c.line((x, ztop), (x, zbot), lw="thin", dash="1 0.8")
     dim(c, (0, -27), (pi, -27), "43.7", 0, side=1, gap=-3.0)
     dim(c, (13.5, -40), (63.5, -40), "pad 13.5–63.5", 0, side=1, gap=-3.0)
-    dim(c, (0, -64), (81, -64), "plate 5–81", 0, side=1, gap=-3.0)
+    dim(c, (0, -64), (81, -64), "plate 0.5–8.1 cm", 0, side=1, gap=-3.0)
     dim(c, (0, -56), (5, -56), "", 0)
-    txt(c, (-3, -56), "5", 3.0, anchor="end")
+    txt(c, (-3, -56), "0.5 cm", 3.0, anchor="end")
     # unverified: reach and opening
     c.line((0, T + arm), (0, 101), lw="thin", dash="1 0.8"); c.line((reach, T + arm), (reach, 101), lw="thin", dash="1 0.8")
-    dim(c, (0, 98), (reach, 98), "reach about 89", 0, side=-1, gap=3.0)
+    dim(c, (0, 98), (reach, 98), "reach about 89 mm", 0, side=-1, gap=3.0)
     pill(c, (44.5, 114), "ASSUMPTION · MEASURE")
-    c.line((81, -pl), (124, -pl), lw="thin", dash="1 0.8"); c.line((102, T), (124, T), lw="thin", dash="1 0.8")
-    dim(c, (122, -pl), (122, T), "31", 0, side=1, gap=-3.0)
+    c.line((81, -pl), (136, -pl), lw="thin", dash="1 0.8"); c.line((102, T), (136, T), lw="thin", dash="1 0.8")
+    dim(c, (134, -pl), (134, T), "31", 0, side=1, gap=-3.0)
     # labels
     lines(c, (92, 72), ["pole P12, ⌀35", "centre 43.7 from the edge"], 3.0)
     c.leader((pi + pr, 65), (90, 72), "", 3)
     lines(c, (-78, -32), ["clamp back", "behind the edge"], 3.0)
     c.leader((-bk + 3, -6), (-60, -30), "", 3)
-    lines(c, (122, -12), ["plate P11, 3 (0.12 in)", "loose, no screws"], 3.0)
-    c.leader((76, -1.5), (120, -11), "", 3)
-    lines(c, (122, -30), ["lower pad, oval 90 × 50", "(seen edge-on)"], 3.0)
-    c.leader((63.5, -5), (120, -29), "", 3)
+    lines(c, (142, -12), ["plate P11, 3 mm (0.12 in)", "loose, no screws"], 3.0)
+    c.leader((76, -1.5), (140, -11), "", 3)
+    lines(c, (142, -30), ["lower pad, oval 90 × 50", "(seen edge-on)"], 3.0)
+    c.leader((63.5, -5), (140, -29), "", 3)
     lines(c, (100, 50), ["clamp body: schematic", "(grey, dashed), not measured"], 3.0)
-    pill(c, (150, -50), "MEASURE: opening ≥ 31")
+    pill(c, (170, -52), "MEASURE: opening ≥ 31 mm")
     return save(c, "09-clamp-section.svg")
 
 
@@ -232,23 +232,23 @@ def fig_heights():
     c.rect(420, 0, 160, 100, fill=GREY["mid"])                            # ELLOVEN
     c.line((360, 673), (640, 673), lw="thin", dash="3 1")
     c.line((380, 120), (620, 120), lw="thin", dash="1 1")
-    dim(c, (20, 0), (20, 234), "234", 4, side=-1)
-    dim(c, (20, 0), (20, 260), "260", 12, side=-1)
-    dim(c, (620, 0), (620, 230), "230", 4, side=1)
-    dim(c, (620, 0), (620, 669), "669", 11, side=1)
-    dim(c, (420, 0), (420, 100), "100", 4, side=-1)
-    dim(c, (980, 0), (980, 465), "465", 5, side=1)
-    txt(c, (140, 600), "Acer left P14", 3.0, weight="bold"); txt(c, (140, 300), "bottom 260 (1090)", 3.0)
-    txt(c, (860, 600), "Acer right P14", 3.0, weight="bold"); txt(c, (860, 300), "bottom 260 (1090)", 3.0)
+    dim(c, (20, 0), (20, 234), "23.4", 4, side=-1)
+    dim(c, (20, 0), (20, 260), "26", 12, side=-1)
+    dim(c, (620, 0), (620, 230), "23", 4, side=1)
+    dim(c, (620, 0), (620, 669), "66.9", 11, side=1)
+    dim(c, (420, 0), (420, 100), "10", 4, side=-1)
+    dim(c, (980, 0), (980, 465), "46.5", 5, side=1)
+    txt(c, (140, 600), "Acer left P14", 3.0, weight="bold"); txt(c, (140, 300), "bottom 26 (109.0)", 3.0)
+    txt(c, (860, 600), "Acer right P14", 3.0, weight="bold"); txt(c, (860, 300), "bottom 26 (109.0)", 3.0)
     txt(c, (500, 550), "G5 P13", 3.2, weight="bold")
-    txt(c, (500, 630), "top 669 (1499)", 3.0); txt(c, (500, 265), "bottom 230 (1060)", 3.0)
-    txt(c, (500, 50), "ELLOVEN P16", 3.0); txt(c, (500, 150), "lowest G5 bottom 120", 3.0)
-    txt(c, (500, 705), "mount limit 673 (26.5 in)", 3.0)
+    txt(c, (500, 630), "top 66.9 (149.9)", 3.0); txt(c, (500, 265), "bottom 23 (106.0)", 3.0)
+    txt(c, (500, 50), "ELLOVEN P16", 3.0); txt(c, (500, 150), "lowest G5 bottom 12", 3.0)
+    txt(c, (500, 705), "mount limit 67.3 (26.5 in)", 3.0)
     for x in (80, 920):
         txt(c, (x, 135), "Edifier", 3.0); txt(c, (x, 105), "P15", 3.0)
-    txt(c, (500, 370), "crossbar 400–430", 3.0); txt(c, (500, 340), "(behind)", 3.0)
-    txt(c, (500, -70), "top surface = 0 (830 from the floor)", 3.0)
-    txt(c, (-155, 330), "mm above the top surface (from the floor)", 3.0, rotate=-90)
+    txt(c, (500, 370), "crossbar 40–43", 3.0); txt(c, (500, 340), "(behind)", 3.0)
+    txt(c, (500, -70), "top surface = 0 (83.0 from the floor)", 3.0)
+    txt(c, (-155, 330), "cm above the top surface (cm from the floor)", 3.0, rotate=-90)
     return save(c, "09-heights.svg")
 
 
@@ -289,10 +289,10 @@ def fig_placement():
            "plant": ("11", (370, 2980), "start")}
     for k, (n, p, anc) in num.items():
         txt(c, p, n, 3.2, anchor=anc, weight="bold")
-    key = ["1  G5 P13 (365, 365)", "2  ELLOVEN P16 (360, 360)", "3  keyboard (585, 585)", "4  mouse (740, 450)",
-           "5  Acer P14 (990, 190)", "6  Acer P14 (190, 990)", "7  Edifier P15 (1080, 220)", "8  Edifier P15 (220, 1080)",
-           "9  lamp (1830, 200)", "10  headset (280, 1400)", "11  plant (320, 2980)", "",
-           "grey 45°: mat 800 × 300 at (550, 550)", "black: VIVO poles and crossbar P12", "datum (0, 0): top A back-left corner"]
+    key = ["all cm from the datum", "1  G5 P13 (36.5, 36.5)", "2  ELLOVEN P16 (36, 36)", "3  keyboard (58.5, 58.5)", "4  mouse (74, 45)",
+           "5  Acer P14 (99, 19)", "6  Acer P14 (19, 99)", "7  Edifier P15 (108, 22)", "8  Edifier P15 (22, 108)",
+           "9  lamp (183, 20)", "10  headset (28, 140)", "11  plant (32, 298)", "",
+           "grey 45°: mat 80 × 30 at (55, 55)", "black: VIVO poles and crossbar P12", "datum (0, 0): top A back-left corner"]
     lines(c, (950, 1200), key, 3.0, lead=1.35)
     txt(c, (2200, 140), "Y60 P17", 3.0)
     c.arrow((920, 920), (710, 710), lw="outline", head=2.2)

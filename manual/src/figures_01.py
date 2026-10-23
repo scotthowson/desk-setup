@@ -22,6 +22,11 @@ def mm(v_cm):
     return ("%.1f" % (v_cm * 10)).rstrip("0").rstrip(".")
 
 
+def cm(v_cm):
+    """tape-measure label in cm, as the build manual writes it."""
+    return ("%.1f" % v_cm).rstrip("0").rstrip(".")
+
+
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;")
 
@@ -255,9 +260,9 @@ def fig_cover():
     c = iso_canvas(170, ISO_EXT + [(-25, 0, 83), (0, -30, 83)], margin=(4, 4, 4, 4))
     A, B = D["A"], D["B"]
     def dims(c):
-        idim(c, (0, 0, Z1), (A["x1"], 0, Z1), (0, -26, 0), mm(A["x1"]))
-        idim(c, (0, 0, Z1), (0, B["y1"], Z1), (-24, 0, 0), mm(B["y1"]))
-        idim(c, (B["x1"], A["y1"], 0), (B["x1"], A["y1"], Z1), (14, 10, 0), mm(Z1))
+        idim(c, (0, 0, Z1), (A["x1"], 0, Z1), (0, -26, 0), cm(A["x1"]) + " cm")
+        idim(c, (0, 0, Z1), (0, B["y1"], Z1), (-24, 0, 0), cm(B["y1"]) + " cm")
+        idim(c, (B["x1"], A["y1"], 0), (B["x1"], A["y1"], Z1), (14, 10, 0), "%.1f cm" % Z1)
     desk_iso(c, mid=dims)
     for lab, (x, y) in (("A", (150, 32)), ("B", (32, 200))):
         px, py = c.P(*c.iso(x, y, Z1))
@@ -374,8 +379,8 @@ def fig_plan():
     ptext(c, *c.P(120, 50.4), "rail A", size=3.2, weight="bold")
     ptext(c, *c.P(50.4, 210), "rail B", size=3.2, weight="bold", rotate=-90)
     ptext(c, *c.P(178, 38), "A", size=7, weight="bold"); ptext(c, *c.P(32, 160), "B", size=9, weight="bold")
-    leader(c, (D["clamp"], 4.5), c.P(74, 26), "VIVO clamp 1 (x 400)", anchor="start")
-    leader(c, (4.5, D["clamp"]), c.P(21, 24), "clamp 2 (y 400)", anchor="start")
+    leader(c, (D["clamp"], 4.5), c.P(74, 26), "VIVO clamp 1 (x 40)", anchor="start")
+    leader(c, (4.5, D["clamp"]), c.P(21, 24), "clamp 2 (y 40)", anchor="start")
     leader(c, (0, 0), c.P(4, 14), "datum 0,0", anchor="start")
     # seat
     a = c.P(97, 97); b = c.P(74, 74)
@@ -383,27 +388,27 @@ def fig_plan():
     c.circle((101, 101), 9, lw="outline", dash="1.5 1")
     ptext(c, *c.P(101, 116), "seat, facing", size=3.2, weight="bold"); ptext(c, c.P(101, 116)[0], c.P(101, 116)[1] + 3.8, "the diagonal", size=3.2, weight="bold")
     # dimensions (mm)
-    dim(c, (-g, -g), (A["x1"], -g), mm(A["x1"] + g), 12)        # 2520 floor incl. gap
-    dim(c, (0, 0), (A["x1"], 0), mm(A["x1"]), 6.5)              # 2490
-    dim(c, (-g, B["y1"]), (-g, -g), mm(B["y1"] + g), 13.5)      # 3170
-    dim(c, (0, B["y1"]), (0, 0), mm(B["y1"]), 8)                # 3140
-    dim(c, (A["x1"], 0), (A["x1"], A["y1"]), mm(A["y1"]), 6)    # 650 A
-    dim(c, (B["x1"], B["y1"]), (0, B["y1"]), mm(B["x1"]), 6)    # 650 B
-    dim(c, (B["x1"], B["y0"]), (B["x1"], B["y1"]), mm(B["y1"] - B["y0"]), 5)  # 2490 B
-    dim(c, (180, D["railA"]["y1"]), (180, A["y1"]), "120", -4)            # rail A back from front edge
-    dim(c, (D["railB"]["x1"], 150), (B["x1"], 150), "120", 4)              # rail B
+    dim(c, (-g, -g), (A["x1"], -g), cm(A["x1"] + g), 12)        # 2520 floor incl. gap
+    dim(c, (0, 0), (A["x1"], 0), cm(A["x1"]), 6.5)              # 2490
+    dim(c, (-g, B["y1"]), (-g, -g), cm(B["y1"] + g), 13.5)      # 3170
+    dim(c, (0, B["y1"]), (0, 0), cm(B["y1"]), 8)                # 3140
+    dim(c, (A["x1"], 0), (A["x1"], A["y1"]), cm(A["y1"]), 6)    # 650 A
+    dim(c, (B["x1"], B["y1"]), (0, B["y1"]), cm(B["x1"]), 6)    # 650 B
+    dim(c, (B["x1"], B["y0"]), (B["x1"], B["y1"]), cm(B["y1"] - B["y0"]), 5)  # 2490 B
+    dim(c, (180, D["railA"]["y1"]), (180, A["y1"]), "12", -4)            # rail A back from front edge
+    dim(c, (D["railB"]["x1"], 150), (B["x1"], 150), "12", 4)              # rail B
     # wall gap callouts
-    leader(c, (160, -g / 2), c.P(150, 27), "30 gap to the wall", anchor="start")
-    leader(c, (-g / 2, 118), c.P(16, 128), "30 gap", anchor="start")
+    leader(c, (160, -g / 2), c.P(150, 27), "3 cm gap to the wall", anchor="start")
+    leader(c, (-g / 2, 118), c.P(16, 128), "3 cm gap", anchor="start")
     # ALEX inset callout
-    leader(c, (247.2, 40), c.P(256, 78), "35 all round", anchor="end")
+    leader(c, (247.2, 40), c.P(256, 78), "3.5 cm all round", anchor="end")
     # datum
     dx, dy = c.P(0, 0)
     c.raw(f'<circle cx="{dx:.2f}" cy="{dy:.2f}" r="1.3" fill="#000"/>')
     # coordinate table in the open quadrant
     tx, ty = c.P(86, 150)
-    rows = [("Leg", "x", "y")] + [(l[0], mm(l[1]), mm(l[2])) for l in D["legs"]]
-    rows += [("Foot", "x", "y")] + [(f[0], mm(f[1]), mm(f[2])) for f in D["feet"]]
+    rows = [("Leg", "x", "y")] + [(l[0], cm(l[1]), cm(l[2])) for l in D["legs"]]
+    rows += [("Foot", "x", "y")] + [(f[0], cm(f[1]), cm(f[2])) for f in D["feet"]]
     col = [0, 20, 40]
     y = ty
     for i, r in enumerate(rows):
@@ -413,17 +418,17 @@ def fig_plan():
         y += 4.4
     t2 = tx + 50
     y2 = ty
-    other = [("ALEX 1", f"x {mm(a1['x0'])}–{mm(a1['x0'] + a1['w'])}", f"y {mm(a1['y0'])}–{mm(a1['y0'] + a1['d'])}"),
-             ("ALEX 2", f"x {mm(a2['x0'])}–{mm(a2['x0'] + a2['w'])}", f"y {mm(a2['y0'])}–{mm(a2['y0'] + a2['d'])}"),
-             ("Rail A", f"x {mm(D['railA']['x0'])}–{mm(D['railA']['x1'])}", f"y {mm(D['railA']['y0'])}–{mm(D['railA']['y1'])}"),
-             ("Rail B", f"x {mm(D['railB']['x0'])}–{mm(D['railB']['x1'])}", f"y {mm(D['railB']['y0'])}–{mm(D['railB']['y1'])}"),
-             ("Clamp 1", f"x {mm(D['clamp'])}", "on A's back edge"),
-             ("Clamp 2", f"y {mm(D['clamp'])}", "on A's left end")]
+    other = [("ALEX 1", f"x {cm(a1['x0'])}–{cm(a1['x0'] + a1['w'])}", f"y {cm(a1['y0'])}–{cm(a1['y0'] + a1['d'])}"),
+             ("ALEX 2", f"x {cm(a2['x0'])}–{cm(a2['x0'] + a2['w'])}", f"y {cm(a2['y0'])}–{cm(a2['y0'] + a2['d'])}"),
+             ("Rail A", f"x {cm(D['railA']['x0'])}–{cm(D['railA']['x1'])}", f"y {cm(D['railA']['y0'])}–{cm(D['railA']['y1'])}"),
+             ("Rail B", f"x {cm(D['railB']['x0'])}–{cm(D['railB']['x1'])}", f"y {cm(D['railB']['y0'])}–{cm(D['railB']['y1'])}"),
+             ("Clamp 1", f"x {cm(D['clamp'])}", "on A's back edge"),
+             ("Clamp 2", f"y {cm(D['clamp'])}", "on A's left end")]
     for r in other:
         ptext(c, t2, y2, r[0], size=3.2, anchor="start", weight="bold"); y2 += 4.0
         ptext(c, t2 + 2, y2, r[1], size=3.2, anchor="start"); y2 += 4.0
         ptext(c, t2 + 2, y2, r[2], size=3.2, anchor="start"); y2 += 5.4
-    ptext(c, tx, ty - 7, "Centres and extents, mm from the datum", size=3.2, anchor="start", weight="bold")
+    ptext(c, tx, ty - 7, "Centres and extents, cm from the datum", size=3.2, anchor="start", weight="bold")
     # legend
     lx = tx
     ly = max(y, y2) + 1

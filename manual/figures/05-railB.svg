@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 250" width="178mm" height="250mm" class="fig">
 <g transform="translate(0 250) rotate(-90)">
-<text x="3" y="5" font-family="Helvetica, Arial, sans-serif" font-size="4.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">P07 · RAIL B · OPENED-OUT FABRICATION DRAWING · all dimensions mm</text>
+<text x="3" y="5" font-family="Helvetica, Arial, sans-serif" font-size="4.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">P07 · RAIL B · OPENED-OUT FABRICATION DRAWING · ordinates in mm (cm in the table)</text>
 <text x="3" y="10.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Lengths 1:10 from the CORNER END (datum 0); leg widths 1:2.5, not to scale across; hole symbols not to scale. Seen from outside the L.</text>
 <polygon points="27,33 240,33 240,53.32 27,53.32" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <polygon points="27,53.32 240,53.32 240,73.64 27,73.64" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
@@ -138,7 +138,7 @@
 <line x1="27" y1="73.64" x2="25" y2="76.84" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <text x="24.5" y="78.14" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">heel 0</text>
 <text x="27" y="83.64" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">10× ⌀5.56 (7/32 in) THRU in the flat leg, centres on the screw line 19 from the free edge, at the ordinates above.</text>
-<text x="27" y="88.04" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2× ⌀11.1 (7/16 in) THRU in the vertical leg on the bolt line 29 below the heel, at 29.2, 78.5 (Detail A).</text>
+<text x="27" y="88.04" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2× ⌀11.1 (7/16 in) THRU in the vertical leg on the bolt line 29 below the heel, at 2.9, 7.8 cm (Detail A, mm).</text>
 <text x="27" y="92.44" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Positions VERIFIED from the measured fitting; drill them THROUGH the clamped fitting with the slot plug (step 6).</text>
 <text x="3" y="99" font-family="Helvetica, Arial, sans-serif" font-size="3.6" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">DETAIL A · 1:2 · dashed: the fitting clamped as the template</text>
 <polygon points="10,110 135,110 135,135.4 10,135.4" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
@@ -189,88 +189,103 @@
 <polygon points="22,137.3 20.685,137.78 20.685,136.82" fill="#000"/>
 <text x="23.2" y="137.3" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">legs</text>
 <text x="11.4" y="132.6" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">heel 0</text>
-<polygon points="147,97 246,97 246,101.35 147,101.35" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
-<text x="148.2" y="99.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">No.</text>
-<text x="159.2" y="99.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">from corner end</text>
-<text x="187.2" y="99.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">hole</text>
-<text x="214.2" y="99.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">where</text>
-<text x="148.2" y="103.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1</text>
-<text x="159.2" y="103.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">25</text>
-<text x="187.2" y="103.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="103.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="107.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2</text>
-<text x="159.2" y="107.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">75</text>
-<text x="187.2" y="107.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="107.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="112.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">3</text>
-<text x="159.2" y="112.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">280</text>
-<text x="187.2" y="112.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="112.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="116.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">4</text>
-<text x="159.2" y="116.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">540</text>
-<text x="187.2" y="116.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="116.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="121.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">5</text>
-<text x="159.2" y="121.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">800</text>
-<text x="187.2" y="121.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="121.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="125.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6</text>
-<text x="159.2" y="125.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1060</text>
-<text x="187.2" y="125.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="125.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="129.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">7</text>
-<text x="159.2" y="129.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1320</text>
-<text x="187.2" y="129.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="129.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="134.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">8</text>
-<text x="159.2" y="134.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1580</text>
-<text x="187.2" y="134.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="134.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="138.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">9</text>
-<text x="159.2" y="138.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1840</text>
-<text x="187.2" y="138.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="138.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="142.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">10</text>
-<text x="159.2" y="142.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2105</text>
-<text x="187.2" y="142.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
-<text x="214.2" y="142.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat leg, 19 line</text>
-<text x="148.2" y="147.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">C1</text>
-<text x="159.2" y="147.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">29.2</text>
-<text x="187.2" y="147.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀11.1 (7/16 in)</text>
-<text x="214.2" y="147.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">vertical, 29 line</text>
-<text x="148.2" y="151.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">C2</text>
-<text x="159.2" y="151.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">78.5</text>
-<text x="187.2" y="151.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀11.1 (7/16 in)</text>
-<text x="214.2" y="151.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">vertical, 29 line</text>
-<line x1="147" y1="97" x2="246" y2="97" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="101.35" x2="246" y2="101.35" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="105.7" x2="246" y2="105.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="110.05" x2="246" y2="110.05" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="114.4" x2="246" y2="114.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="118.75" x2="246" y2="118.75" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="123.1" x2="246" y2="123.1" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="127.45" x2="246" y2="127.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="131.8" x2="246" y2="131.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="136.15" x2="246" y2="136.15" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="140.5" x2="246" y2="140.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="144.85" x2="246" y2="144.85" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="149.2" x2="246" y2="149.2" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="153.55" x2="246" y2="153.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="147" y1="97" x2="147" y2="153.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="158" y1="97" x2="158" y2="153.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="186" y1="97" x2="186" y2="153.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="213" y1="97" x2="213" y2="153.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="246" y1="97" x2="246" y2="153.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="147" y="157.75" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">P07 Rail B · 2 x 2 x 3/16 in hot-rolled angle</text>
-<text x="147" y="161.85" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">50.8 × 50.8 × 4.76, design 2130: MEASURE first (E-1)</text>
-<text x="147" y="165.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">On the desk: corner end y = 530, outer face x = 530</text>
-<text x="147" y="170.05" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">(datum: top A's back-left corner)</text>
+<text x="147" y="96.6" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Holes from the corner end</text>
+<polygon points="147,99 246,99 246,103.35 147,103.35" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="148.2" y="101.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">No.</text>
+<text x="158.2" y="101.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">mm</text>
+<text x="172.2" y="101.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">cm</text>
+<text x="184.2" y="101.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">hole</text>
+<text x="211.2" y="101.275" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">leg, line</text>
+<text x="148.2" y="105.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1</text>
+<text x="158.2" y="105.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">25</text>
+<text x="172.2" y="105.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2.5</text>
+<text x="184.2" y="105.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="105.625" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="109.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2</text>
+<text x="158.2" y="109.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">75</text>
+<text x="172.2" y="109.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">7.5</text>
+<text x="184.2" y="109.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="109.975" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="114.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">3</text>
+<text x="158.2" y="114.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">280</text>
+<text x="172.2" y="114.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">28</text>
+<text x="184.2" y="114.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="114.325" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="118.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">4</text>
+<text x="158.2" y="118.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">540</text>
+<text x="172.2" y="118.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">54</text>
+<text x="184.2" y="118.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="118.675" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="123.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">5</text>
+<text x="158.2" y="123.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">800</text>
+<text x="172.2" y="123.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">80</text>
+<text x="184.2" y="123.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="123.025" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="127.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6</text>
+<text x="158.2" y="127.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1060</text>
+<text x="172.2" y="127.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">106</text>
+<text x="184.2" y="127.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="127.375" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="131.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">7</text>
+<text x="158.2" y="131.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1320</text>
+<text x="172.2" y="131.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">132</text>
+<text x="184.2" y="131.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="131.725" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="136.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">8</text>
+<text x="158.2" y="136.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1580</text>
+<text x="172.2" y="136.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">158</text>
+<text x="184.2" y="136.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="136.075" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="140.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">9</text>
+<text x="158.2" y="140.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1840</text>
+<text x="172.2" y="140.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">184</text>
+<text x="184.2" y="140.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="140.425" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="144.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">10</text>
+<text x="158.2" y="144.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2105</text>
+<text x="172.2" y="144.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">210.5</text>
+<text x="184.2" y="144.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.56 (7/32 in)</text>
+<text x="211.2" y="144.775" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">flat, 19 line</text>
+<text x="148.2" y="149.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">C1</text>
+<text x="158.2" y="149.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">29.2</text>
+<text x="172.2" y="149.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2.9</text>
+<text x="184.2" y="149.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀11.1 (7/16 in)</text>
+<text x="211.2" y="149.125" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">vertical, 29</text>
+<text x="148.2" y="153.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">C2</text>
+<text x="158.2" y="153.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">78.5</text>
+<text x="172.2" y="153.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">7.8</text>
+<text x="184.2" y="153.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">⌀11.1 (7/16 in)</text>
+<text x="211.2" y="153.475" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">vertical, 29</text>
+<line x1="147" y1="99" x2="246" y2="99" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="103.35" x2="246" y2="103.35" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="107.7" x2="246" y2="107.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="112.05" x2="246" y2="112.05" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="116.4" x2="246" y2="116.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="120.75" x2="246" y2="120.75" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="125.1" x2="246" y2="125.1" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="129.45" x2="246" y2="129.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="133.8" x2="246" y2="133.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="138.15" x2="246" y2="138.15" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="142.5" x2="246" y2="142.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="146.85" x2="246" y2="146.85" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="151.2" x2="246" y2="151.2" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="155.55" x2="246" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="99" x2="147" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="157" y1="99" x2="157" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="171" y1="99" x2="171" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="183" y1="99" x2="183" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="210" y1="99" x2="210" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="246" y1="99" x2="246" y2="155.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="147" y="159.75" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">P07 Rail B · 2 x 2 x 3/16 in hot-rolled angle</text>
+<text x="147" y="163.85" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">50.8 × 50.8 × 4.76 mm, 213 cm: MEASURE first</text>
+<text x="147" y="167.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">On the desk: corner end y = 53 cm, outer face x = 53 cm</text>
+<text x="147" y="172.05" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">(datum: top A's back-left corner)</text>
 <line x1="10" y1="105.5" x2="70" y2="105.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,105.5 11.315,105.02 11.315,105.98" fill="#000"/>
 <polygon points="70,105.5 68.685,105.98 68.685,105.02" fill="#000"/>
 <line x1="70" y1="104" x2="70" y2="109.7" stroke="#000" stroke-width="0.25" stroke-dasharray="1.5 1" stroke-linecap="round"/>
 <line x1="70" y1="161.1" x2="70" y2="164.3" stroke="#000" stroke-width="0.25" stroke-dasharray="1.5 1" stroke-linecap="round"/>
-<text x="40" y="103.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">120: under top A</text>
+<text x="40" y="103.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">120 (12 cm): under top A</text>
 <text x="71.5" y="103.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">top A's front edge (the joint)</text>
 </g>
 </svg>

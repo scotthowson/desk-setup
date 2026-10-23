@@ -11,14 +11,14 @@
 <text x="86.647" y="26.176" font-family="Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">TOP A (P01): along the back wall</text>
 <text x="55.176" y="72.353" font-family="Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90 55.176 72.353)">TOP B (P02): along the side wall</text>
 <text x="92.529" y="18.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">back edge, unfinished: y = 0</text>
-<text x="76.353" y="37.718" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">front edge (rounded, laminated): y = 650</text>
+<text x="76.353" y="37.718" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">front edge (rounded, laminated): y = 65 cm</text>
 <text x="46.7" y="72.353" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 46.7 72.353)">side-wall edge, unfinished: x = 0</text>
-<text x="65.918" y="72.353" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 65.918 72.353)">front edge (rounded, laminated): x = 650</text>
+<text x="65.918" y="72.353" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 65.918 72.353)">front edge (rounded, laminated): x = 65 cm</text>
 <text x="53.559" y="110.753" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">far end</text>
 <text x="119.835" y="24.559" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 119.835 24.559)">far end</text>
 <line x1="56.353" y1="34.118" x2="70.471" y2="42.059" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <circle cx="56.353" cy="34.118" r="0.6" fill="#000"/>
-<text x="71.471" y="42.059" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">joint: B's end butts against A's front edge (y = 650)</text>
+<text x="71.471" y="42.059" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">joint: B's end butts against A's front edge (y = 65 cm)</text>
 <line x1="44" y1="15" x2="59.294" y2="15" stroke="#000" stroke-width="0.5"/>
 <polygon points="59.294,15 57.415,15.686 57.415,14.314" fill="#000"/>
 <line x1="44" y1="15" x2="44" y2="30.294" stroke="#000" stroke-width="0.5"/>
@@ -40,25 +40,25 @@
 <line x1="44" y1="6.5" x2="117.235" y2="6.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="44,6.5 45.409,5.986 45.409,7.014" fill="#000"/>
 <polygon points="117.235,6.5 115.826,7.014 115.826,5.986" fill="#000"/>
-<text x="80.618" y="4.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">2490</text>
+<text x="80.618" y="4.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">249 cm</text>
 <line x1="117.835" y1="15" x2="127.435" y2="15" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="117.835" y1="34.118" x2="127.435" y2="34.118" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="126.235" y1="15" x2="126.235" y2="34.118" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="126.235,15 126.75,16.409 125.721,16.409" fill="#000"/>
 <polygon points="126.235,34.118 125.721,32.709 126.75,32.709" fill="#000"/>
-<text x="128.235" y="24.559" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 128.235 24.559)">650</text>
+<text x="128.235" y="24.559" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 128.235 24.559)">65 cm</text>
 <line x1="44" y1="107.953" x2="44" y2="115.053" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="63.118" y1="107.953" x2="63.118" y2="115.053" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="44" y1="113.853" x2="63.118" y2="113.853" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="44,113.853 45.409,113.339 45.409,114.367" fill="#000"/>
 <polygon points="63.118,113.853 61.709,114.367 61.709,113.339" fill="#000"/>
-<text x="53.559" y="115.853" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">650</text>
+<text x="53.559" y="115.853" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">65 cm</text>
 <line x1="43.4" y1="15" x2="4.8" y2="15" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="43.4" y1="107.353" x2="4.8" y2="107.353" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="6" y1="15" x2="6" y2="107.353" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="6,15 6.514,16.409 5.486,16.409" fill="#000"/>
 <polygon points="6,107.353 5.486,105.944 6.514,105.944" fill="#000"/>
-<text x="4" y="61.176" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 4 61.176)">3140</text>
-<text x="177" y="112" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">Both tops: 2490 × 650 × 28, identical. Both stand 30 off their walls.</text>
+<text x="4" y="61.176" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 4 61.176)">314 cm</text>
+<text x="177" y="112" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">Both tops: 249 × 65 cm, 28 mm thick, identical. Both stand 3 cm off their walls.</text>
 <text x="177" y="116.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">Plan from above, face up, as installed. Scale 1:34.</text>
 </svg>

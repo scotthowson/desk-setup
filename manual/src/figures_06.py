@@ -11,7 +11,7 @@ import math, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from figures_05 import (Canvas, GREY, FACTS, DATA, S, LEG, T, SCREW, BOLT, HEEL_OUT, HEEL_IN, FIT_T, FIT_W, FIT_L,  # noqa: E402
                         FIT_H, RAILA_X0, TOP_T, SC_LBL, BO_LBL, SLOT_LBL, SLOT_L, SLOT_W, PILOT_LBL, SC_IN, BO_IN, SC_D, BO_D,
-                        T_, L_, R_, P_, head, dimh, dimv, leader, arrow, hole, hatch_rect, zig, save, num, _f)
+                        T_, L_, R_, P_, cm, head, dimh, dimv, leader, arrow, hole, hatch_rect, zig, save, num, _f)
 
 OUT = DATA["railA"]["y1"] * 10           # 530: rail A's outer face (y) and rail B's outer face (x)
 INB = OUT - T                            # 525.24: rail B's inner face (x)
@@ -326,9 +326,9 @@ def fig_plan():
     T_(c, X(xa1) - 1, Y(RAILA_Y0) - 2.5, "rail A (P06)", size=3.2, anchor="end", weight="bold")
     T_(c, X(OUT) + 3, Y(yb1) - 5, "rail B (P07)", size=3.2, weight="bold")
     T_(c, X(xa0) + 1, Y(RAILA_Y0) - 2.5, "← wall end", size=3.2)
-    leader(c, X(600), Y(625), X(OUT + FIT_T / 2), Y(OUT + 96), "outside fitting:", lines=[f"heel {HEEL_OUT} from the", "wall end, at x = 530"])
-    leader(c, X(414), Y(625), X(INB - FIT_T / 2), Y(OUT + 96), "inside fitting:", anchor="start", lines=[f"heel {HEEL_IN} from", "the wall end"])
-    T_(c, 6, 4, f"Section at the bolt line, {BOLT} below the top, seen from above. Dashed: flat legs above the cut.", size=3.2)
+    leader(c, X(600), Y(625), X(OUT + FIT_T / 2), Y(OUT + 96), "outside fitting:", lines=[f"heel on rail A's", f"{cm(HEEL_OUT, True)} cm mark"])
+    leader(c, X(414), Y(625), X(INB - FIT_T / 2), Y(OUT + 96), "inside fitting:", anchor="start", lines=[f"heel on rail A's", f"{cm(HEEL_IN, True)} cm mark"])
+    T_(c, 6, 4, f"Section at the bolt line, {BOLT} mm below the top, seen from above. Dashed: flat legs above the cut.", size=3.2)
     return save(c, "06-plan.svg")
 
 
@@ -425,7 +425,7 @@ def fig_screw():
             T_(c, ox + 9 * k + 2, Y(-T - ph / 2) - 2, "puck 25 RAIL (P18)", size=3.2)
             T_(c, ox + 9 * k + 2, Y(-T - ph / 2) + 2.2, "on the leg's face", size=3.2)
             T_(c, ox + 8 * k + 2, Y(-T - ph) + 3, "chuck nose stops here", size=3.2)
-            dimv(c, Y(-T), Y(20), xa - 4, "25 from the leg", x_from=ox - 1.6 * k)
+            dimv(c, Y(-T), Y(20), xa - 4, "25 mm from the leg", x_from=ox - 1.6 * k)
             dimv(c, Y(0), Y(20), ox + 12, "20", x_from=ox + 1.6 * k, left=False, box=True)
             T_(c, xb + 2, Y(16), "pilot", size=3.2)
             T_(c, xb + 2, Y(16) + 4.2, PILOT_LBL, size=3.2)
@@ -442,7 +442,7 @@ def fig_screw():
             dimv(c, Y(0), Y(TOP_T), xb + 4, f"{TOP_T} top", x_from=xb, left=False)
             T_(c, ox, Y(-T - hh) + 4.5, "#10 × 1 in pan head (H03)", size=3.2, anchor="middle")
             T_(c, ox, Y(-T - hh) + 8.7, f"through the {SC_LBL} hole", size=3.2, anchor="middle")
-    T_(c, 4, 100, f"Never more than {FACTS['tops']['max_fastener_depth']} into the {TOP_T} top. Drawn upright, as for rail B's holes 1 and 2 (overhead).", size=3.2)
+    T_(c, 4, 100, f"Never more than {FACTS['tops']['max_fastener_depth']} mm into the {TOP_T} mm top. Drawn upright, as for rail B's holes 1 and 2.", size=3.2)
     return save(c, "06-screw.svg")
 
 

@@ -25,12 +25,13 @@
 <polygon points="48.1,74.75 46.597,75.299 46.597,74.201" fill="#000"/>
 <text x="44.85" y="77.15" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 44.85 77.15)"></text>
 <text x="44.85" y="76.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal"></text>
-<text x="49.4" y="74.75" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">100</text>
-<line x1="25.35" y1="48.1" x2="25.35" y2="54.6" stroke="#000" stroke-width="0.25"/>
-<polygon points="25.35,48.1 25.899,49.603 24.801,49.603" fill="#000"/>
-<polygon points="25.35,54.6 24.801,53.097 25.899,53.097" fill="#000"/>
-<text x="27.75" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 27.75 51.35)"></text>
-<text x="28.35" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" transform="rotate(90 28.35 51.35)">100</text>
+<text x="49.4" y="74.75" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">10 cm</text>
+<line x1="22.1" y1="48.1" x2="22.1" y2="54.6" stroke="#000" stroke-width="0.25"/>
+<polygon points="22.1,48.1 22.649,49.603 21.551,49.603" fill="#000"/>
+<polygon points="22.1,54.6 21.551,53.097 22.649,53.097" fill="#000"/>
+<text x="19.7" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 19.7 51.35)"></text>
+<text x="19.9" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" transform="rotate(90 19.9 51.35)"></text>
+<text x="21.125" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal">10 cm</text>
 <polygon points="15.22,33.977 54.87,52.177 55.63,50.523 15.98,32.323" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <line x1="59.15" y1="39.65" x2="48.1" y2="48.1" stroke="#000" stroke-width="0.25"/>
 <circle cx="48.1" cy="48.1" r="0.7" fill="#000"/>

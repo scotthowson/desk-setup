@@ -56,7 +56,7 @@ def fig_corner_elev():
     for z in range(50, 830, 50):
         c.line((40, z), (55 if z % 100 else 62, z), lw="thin")
     c.line((0, 830), (95, 830), lw="thin", dash="1 0.8")
-    dim(c, (120, 0), (120, 830), "830 ± 3", 4, side=1)
+    dim(c, (120, 0), (120, 830), "83.0 ± 0.3 cm", 4, side=1)
     lines(c, (-400, 975), ["hook the tape on the floor;", "read at the top face, at the corner"], 3.0)
     txt(c, (-250, 870), "top (laminate up)", 3.0)
     txt(c, (-200, 30), "floor", 3.0)
@@ -85,7 +85,7 @@ def fig_joint_level():
     lines(c, (700, 700), ["4  straightedge", "at the inside", "corner (check 5)"], 3.0)
     c.leader((627, 760), (695, 700), "", 3)
     txt(c, (800, 520), "top A", 3.2, weight="bold"); txt(c, (150, 850), "top B", 3.2, weight="bold")
-    txt(c, (40, 600), "joint y = 650", 3.0, anchor="start")
+    txt(c, (40, 600), "joint y = 65 cm", 3.0, anchor="start")
     return save(c, "10-joint-level.svg")
 
 
@@ -108,8 +108,9 @@ def fig_load_plan():
     c.rect(cx1 - 260, cy0, 260, 340, fill=GREY["mid"])
     txt(c, (cx1 - 130, cy0 + 170), "20 kg", 3.2, weight="bold")
     dim(c, (cx1, 1060), (650, 1060), "", 0)
-    txt(c, (670, 1060), "100", 3.0, anchor="start")
-    dim(c, (300, 650), (300, cy0), "100", 0, side=-1, gap=3.0)
+    txt(c, (670, 1060), "10 cm", 3.0, anchor="start")
+    dim(c, (250, 650), (250, cy0), "", 0)
+    txt(c, (235, 700), "10 cm", 3.0, anchor="end")
     # straightedge from over L1 across the corner
     a = (150, 420); b = (760, 700)
     ux, uy = (b[0] - a[0]), (b[1] - a[1]); L = math.hypot(ux, uy); ux, uy = ux / L, uy / L
@@ -145,7 +146,7 @@ def fig_load_elev():
     txt(c, (507, zt(505) + 146), "books", 3.0)
     # reading at the corner
     dim(c, (645, zt(645)), (645, 0), "", 0)
-    lines(c, (670, -30), ["≤ 2", "(est. 1)"], 3.0)
+    lines(c, (670, -30), ["≤ 2 mm", "(est. 1 mm)"], 3.0)
     c.arrow((-60, 70), (-60, 14), head=1.8)
     txt(c, (-60, 90), "hold flat", 3.0)
     lines(c, (80, -110), ["straightedge: flat on the top over L1,", "reaching past the corner; the case", "stands beside it, not on it.", "Drop exaggerated."], 3.0)
@@ -179,9 +180,9 @@ def fig_pad_turn():
     c.poly(pts, close=False, lw="outline")
     x1_, y1_ = c.P(*pts[-2]); x2_, y2_ = c.P(*pts[-1]); c._head(x1_, y1_, x2_, y2_, 3.0)
     dim(c, (-pd, -8), (pd, -8), "", 0)
-    dim(c, (95, 0), (95, H), "102", 0, side=1, gap=-3.2)
+    dim(c, (95, 0), (95, H), "102 mm", 0, side=1, gap=-3.2)
     c.line((pl, H), (98, H), lw="thin", dash="1 0.8"); c.line((70, 0), (98, 0), lw="thin", dash="1 0.8")
-    txt(c, (0, -32), "pad ⌀50 in a ⌀51 bore", 3.0)
+    txt(c, (0, -32), f"pad ⌀{pd * 2:g} mm in a ⌀{R['bore']:g} mm bore", 3.0)
     c.label_box((46, -11), "ALEX top", 3.0)
     txt(c, (0, H + T + 9), "top (face up)", 3.0)
     lines(c, (-78, 72), ["turn the", "pad by", "hand"], 3.0)
@@ -236,10 +237,10 @@ def fig_knee():
     ry = LAY["rails"]["A"]["y"][1] * 10
     ang = [(ry - leg, U), (ry, U), (ry, U - leg), (ry - th, U - leg), (ry - th, U - th), (ry - leg, U - th)]
     c.poly(ang, fill="#000", lw="thin")
-    dim(c, (900, 0), (900, U + T), "830", 4, side=1)
-    dim(c, (760, 0), (760, U - leg), "751", 4, side=1)
+    dim(c, (900, 0), (900, U + T), "83.0 cm", 4, side=1)
+    dim(c, (760, 0), (760, U - leg), "75.1 cm", 4, side=1)
     c.line((ry, U - leg), (775, U - leg), lw="thin", dash="1 0.8"); c.line((650, U + T), (915, U + T), lw="thin", dash="1 0.8")
-    dim(c, (ry, U + T + 40), (650, U + T + 40), "120", 0, side=-1, gap=3.0)
+    dim(c, (ry, U + T + 40), (650, U + T + 40), "12 cm", 0, side=-1, gap=3.0)
     c.line((650, U + T), (650, U + T + 50), lw="thin", dash="1 0.8"); c.line((ry, U), (ry, U + T + 50), lw="thin", dash="1 0.8")
     lines(c, (220, 630), ["rail A in section", "(vertical leg hangs", "under the top)"], 3.0)
     c.leader((ry - 20, U - 20), (300, 665), "", 3)

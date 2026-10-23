@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 60" width="178mm" height="60mm" class="fig">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 63" width="178mm" height="63mm" class="fig">
 <rect x="6.00" y="9.00" width="76.85" height="36.25" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>
 <rect x="25.57" y="9.00" width="52.20" height="31.17" fill="none" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1"/>
 <rect x="6.00" y="20.45" width="26.10" height="7.39" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
@@ -11,7 +11,8 @@
 <text x="16.15" y="24.23" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">rail A</text>
 <text x="58.20" y="16.25" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 1 below</text>
 <text x="44.00" y="50.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(a) rail A's far end, plan</text>
-<text x="44.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail end x 2140 · F1/F3 centres x 2145</text>
+<text x="44.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail end x 214 cm</text>
+<text x="44.00" y="59.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">F1/F3 centres x 214.5 cm</text>
 <rect x="98.00" y="9.00" width="76.41" height="36.25" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>
 <rect x="139.58" y="9.00" width="34.84" height="31.17" fill="none" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1"/>
 <rect x="98.00" y="20.45" width="22.47" height="7.39" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
@@ -22,10 +23,11 @@
 <line x1="120.47" y1="3.50" x2="150.82" y2="3.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="120.475,3.5 121.884,2.986 121.884,4.014" fill="#000"/>
 <polygon points="150.816,3.5 149.407,4.014 149.407,2.986" fill="#000"/>
-<text x="135.65" y="6.30" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">135</text>
+<text x="135.65" y="6.30" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">13.5 cm</text>
 <text x="111.48" y="24.08" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">rail B</text>
-<text x="166.55" y="16.25" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 2 below</text>
+<text x="158.68" y="15.52" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 2</text>
 <text x="124.97" y="42.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edge</text>
 <text x="136.00" y="50.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(b) rail B's end, plan (y to the right)</text>
-<text x="136.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail end y 2660 · ALEX 2 face 2745 · F5/F6 y 2795</text>
+<text x="136.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail end y 266 cm · ALEX 2 face y 274.5 cm</text>
+<text x="136.00" y="59.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">F5/F6 centres y 279.5 cm</text>
 </svg>

@@ -19,11 +19,10 @@
 <line x1="8.00" y1="35.40" x2="5.60" y2="37.80" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="8.00" y1="37.50" x2="5.60" y2="39.90" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <polygon points="8,6 35.3,6 35.3,11.88 13.88,11.88 13.88,18.6 8,18.6" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<polygon points="35.3,3.48 39.5,3.48 39.5,28.68 35.3,28.68" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<text x="37.40" y="16.92" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 37.40 16.92)">ALEX</text>
-<text x="24.80" y="8.94" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">65 leg</text>
-<text x="10.94" y="15.66" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">30</text>
-<text x="9.68" y="27.84" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">65: ALEX to wall</text>
-<text x="9.68" y="32.24" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">30: top to wall</text>
+<polygon points="35.3,3.48 39.5,3.48 39.5,22.8 35.3,22.8" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="37.40" y="13.14" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 37.40 13.14)">ALEX</text>
+<text x="24.80" y="8.94" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">6.5 cm leg</text>
+<text x="9.68" y="27.84" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm: ALEX to wall</text>
+<text x="9.68" y="32.24" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">3 cm: top to wall</text>
 <text x="9.68" y="36.64" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">(raw edge)</text>
 </svg>

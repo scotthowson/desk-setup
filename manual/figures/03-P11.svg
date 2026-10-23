@@ -4,6 +4,6 @@
 <circle cx="15.3" cy="15.22" r="0.9" fill="#fff" stroke="#000" stroke-width="0.25"/>
 <circle cx="36.96" cy="15.22" r="0.9" fill="#fff" stroke="#000" stroke-width="0.25"/>
 <circle cx="46.46" cy="15.22" r="0.9" fill="#fff" stroke="#000" stroke-width="0.25"/>
-<text x="26.13" y="26.44" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">254 × 76 × 3 (10 × 3 × 0.12 in)</text>
+<text x="26.13" y="26.44" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">254 × 76 × 3 mm (10 × 3 × 0.12 in)</text>
 <text x="26.13" y="4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">4 holes along the centreline</text>
 </svg>

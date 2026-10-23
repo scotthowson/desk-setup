@@ -8,7 +8,7 @@ mirrored left-right, so desk x grows to the LEFT and the datum corner side (x = 
 the same mapping (page u = -x, page v = +y): top B is top A's plan rotated, never mirrored differently.
 All numbers come from manual/data.json, manual/facts.json and docs/build-manual.md (cm there, mm here).
 """
-import json, math, os, sys
+import json, math, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MAN = os.path.dirname(HERE)
@@ -246,10 +246,18 @@ def spread(vals, gap):
     return out
 
 
-def ord_x(fd, items, edge_y, base_v, up=True, gap=3.7, size=3.1, jog=3.0):
+def to_cm(t):
+    """'2145 F1 F3' -> '214.5 F1 F3': ordinate labels are written in mm in the code, printed in cm (tape units)."""
+    m = re.match(r"^(-?\d+(?:\.\d+)?)(.*)$", t)
+    return (fmt(float(m.group(1)) / 10) + m.group(2)) if m else t
+
+
+def ord_x(fd, items, edge_y, base_v, up=True, gap=3.7, size=3.1, jog=3.0, cm=True):
     """Ordinate dimensions for desk-x stations: extension from the board edge (desk y = edge_y) to a baseline at page
     v = base_v; labels rotated, reading bottom-to-top. items: [(x_mm, text)]."""
     c = fd.c
+    if cm:
+        items = [(x, to_cm(t)) for x, t in items]
     us = [fd.u(x) for x, _ in items]
     pos = spread(us, gap)
     ev = fd.v(edge_y)
@@ -261,9 +269,11 @@ def ord_x(fd, items, edge_y, base_v, up=True, gap=3.7, size=3.1, jog=3.0):
         c.text((pu, base_v + sgn * 0.6), t, size=size, anchor="start" if up else "end", rotate=-90, baseline="middle")
 
 
-def ord_y(fd, items, edge_x, base_u, right=True, gap=3.7, size=3.1, jog=3.0):
+def ord_y(fd, items, edge_x, base_u, right=True, gap=3.7, size=3.1, jog=3.0, cm=True):
     """Ordinate dimensions for desk-y stations, labels horizontal beside a vertical baseline at page u = base_u."""
     c = fd.c
+    if cm:
+        items = [(y, to_cm(t)) for y, t in items]
     vs = [fd.v(y) for y, _ in items]
     pos = spread(vs, gap)
     eu = fd.u(edge_x)
@@ -363,12 +373,12 @@ def fig_datum():
     c.text(P(1450, 380), "TOP A (P01): along the back wall", size=3.4, weight="bold")
     c.text(P(380, 1950), "TOP B (P02): along the side wall", size=3.4, weight="bold", rotate=-90)
     c.text((P(1650, 0)[0], P(0, 0)[1] + 3.2), "back edge, unfinished: y = 0", size=3.0)
-    c.text((P(1100, 0)[0], P(0, 650)[1] + 3.6), "front edge (rounded, laminated): y = 650", size=3.0, anchor="start")
+    c.text((P(1100, 0)[0], P(0, 650)[1] + 3.6), "front edge (rounded, laminated): y = 65 cm", size=3.0, anchor="start")
     c.text((P(0, 0)[0] + 2.7, P(0, 1950)[1]), "side-wall edge, unfinished: x = 0", size=3.0, rotate=-90)
-    c.text((P(650, 0)[0] + 2.8, P(0, 1950)[1]), "front edge (rounded, laminated): x = 650", size=3.0, rotate=-90)
+    c.text((P(650, 0)[0] + 2.8, P(0, 1950)[1]), "front edge (rounded, laminated): x = 65 cm", size=3.0, rotate=-90)
     c.text((P(325, 3140)[0], P(0, 3140)[1] + 3.4), "far end", size=3.0)
     c.text((P(2490, 0)[0] + 2.6, P(0, 325)[1]), "far end", size=3.0, rotate=-90)
-    lead(c, P(420, 650), (P(900, 920)[0], P(0, 920)[1]), "joint: B's end butts against A's front edge (y = 650)")
+    lead(c, P(420, 650), (P(900, 920)[0], P(0, 920)[1]), "joint: B's end butts against A's front edge (y = 65 cm)")
     # axes
     c.arrow(P(0, 0), P(520, 0), lw="outline", head=2.0)
     c.arrow(P(0, 0), P(0, 520), lw="outline", head=2.0)
@@ -384,11 +394,11 @@ def fig_datum():
     c.arrow((su - 2.6, sv - 2.6), (su - 9, sv - 9), lw="outline", head=1.8)
     c.text((su + 5, sv + 0.5), "your seat, facing the inside corner", size=3.0, anchor="start")
     # dimensions
-    dim2(c, (P(0, 0)[0], oy), (P(2490, 0)[0], oy), "2490", off=8.5)
-    dim2(c, P(2490, 0), P(2490, 650), "650", off=9)
-    dim2(c, P(0, 3140), P(650, 3140), "650", off=-6.5)
-    dim2(c, P(0, 0), P(0, 3140), "3140", off=-38)
-    c.text((W - 1, H - 6), "Both tops: 2490 × 650 × 28, identical. Both stand 30 off their walls.", size=3.0, anchor="end")
+    dim2(c, (P(0, 0)[0], oy), (P(2490, 0)[0], oy), "249 cm", off=8.5)
+    dim2(c, P(2490, 0), P(2490, 650), "65 cm", off=9)
+    dim2(c, P(0, 3140), P(650, 3140), "65 cm", off=-6.5)
+    dim2(c, P(0, 0), P(0, 3140), "314 cm", off=-38)
+    c.text((W - 1, H - 6), "Both tops: 249 × 65 cm, 28 mm thick, identical. Both stand 3 cm off their walls.", size=3.0, anchor="end")
     c.text((W - 1, H - 1.8), "Plan from above, face up, as installed. Scale 1:34.", size=3.0, anchor="end")
     return c.save(os.path.join(FIG, "04-datum-plan.svg"))
 
@@ -454,18 +464,18 @@ def fig_topA_overview():
     ord_x(fd, xs, 0, mT - 5, up=True, gap=3.8, jog=1.6)
     datum_dot(c, fd.u(0), fd.v(0))
     c.text((fd.u(0) - 3.2, fd.v(0) - 2.6), "DATUM", size=3.0, anchor="end", weight="bold")
-    c.text((fd.u(1245), 3), "← x grows to the LEFT (mm from the side-wall end)", size=3.1, weight="bold")
+    c.text((fd.u(1245), 3), "← x grows to the LEFT · all cm · tape hooked on the side-wall end", size=3.1, weight="bold")
     for n, w in (("L1", "above"), ("L2", "below"), ("L3", "below")):
         leg_label(fd, n, w)
     foot_labels(fd, ("F1", "F2", "F3", "F4"), below=("F2",), right=("F1", "F3"))
-    dim2(c, fd.p(1400, 0), fd.p(1400, 100), "100", off=-5.5)
-    c.text((fd.u(1100), fd.v(440)), "RAIL A: vertical leg's outer face on y = 530", size=3.0)
+    dim2(c, fd.p(1400, 0), fd.p(1400, 100), "10", off=-5.5)
+    c.text((fd.u(1100), fd.v(440)), "RAIL A: vertical leg's outer face on y = 53 cm", size=3.0)
     c.text((fd.u(2275), fd.v(325)), "ALEX 1", size=3.0)
     c.text((fd.u(2275), fd.v(325) + 3.6), "below", size=3.0)
-    c.text((fd.u(1245), fd.v(650) + 4.2), "FRONT EDGE · rounded, laminated · y = 650 · you stand here", size=3.1, weight="bold")
+    c.text((fd.u(1245), fd.v(650) + 4.2), "FRONT EDGE · rounded, laminated · y = 65 cm · you stand here", size=3.1, weight="bold")
     c.text((fd.u(0) + 3.0, fd.v(325)), "side-wall end, x = 0", size=3.0, rotate=-90)
     c.text((fd.u(2490) - 3.0, fd.v(325)), "far end", size=3.0, rotate=-90)
-    c.text((W - 1, H - 1.5), "Scale 1:16. Corner and far end in Figs D-4 and D-5.", size=3.0, anchor="end")
+    c.text((W - 1, H - 1.5), "Scale 1:16. y: tape hooked on the back edge. Details: Figs D-4, D-5.", size=3.0, anchor="end")
     return c.save(os.path.join(FIG, "04-topA-overview.svg"))
 
 
@@ -500,10 +510,10 @@ def fig_topA_corner():
     c.text((pu - 1.8, pv), "pad plate 2", size=3.0, rotate=-90); c.text((pu + 1.9, pv), "(outline only)", size=3.0, rotate=-90)
     lead(c, fd.p(530, 600), fd.p(590, 600), "rail B end, later")
     c.label_box(fd.p(170, 505), "RAIL A", size=3.2, weight="bold", pad=0.6)
-    lead(c, fd.p(150, 420 + LEG_R), fd.p(330, 440), "6.5 clear of rail A")
-    c.text((fd.u(360), fd.v(650) + 4.2), "FRONT EDGE · rounded · y = 650 · top B butts here · you stand here", size=3.1, weight="bold")
-    c.text((2, 3), "BACK EDGE · y = 0 · away from you", size=3.1, weight="bold", anchor="start")
-    c.text((fd.u(360), fd.v(650) + 9.4), "Top A corner, face down: back edge away from you, x grows to the left. Scale 1:5", size=3.0)
+    lead(c, fd.p(150, 420 + LEG_R), fd.p(330, 440), "6.5 mm clear of rail A")
+    c.text((fd.u(360), fd.v(650) + 4.2), "FRONT EDGE · rounded · y = 65 · top B butts here · you stand here", size=3.1, weight="bold")
+    c.text((2, 3), "BACK EDGE · y = 0 · away from you · all cm", size=3.1, weight="bold", anchor="start")
+    c.text((fd.u(360), fd.v(650) + 9.4), "x: tape hooked on the side-wall end · y: tape hooked on the back edge · Scale 1:5", size=3.0)
     return c.save(os.path.join(FIG, "04-topA-corner.svg"))
 
 
@@ -522,12 +532,12 @@ def fig_topA_far():
     ord_y(fd, ys, 2490, fd.u(2490) - 2.5, right=False, gap=3.75, jog=1.4)
     foot_labels(fd, ("F1", "F2", "F3", "F4"), below=("F1", "F2", "F3", "F4"))
     cu = fd.u(2275)
-    for k, t in enumerate(("ALEX 1 outline below,", "x 2095-2455, y 35-615", "(reference only)")):
+    for k, t in enumerate(("ALEX 1 outline below,", "x 209.5–245.5, y 3.5–61.5 cm", "(reference only)")):
         c.text((cu, fd.v(250) + k * 4), t, size=3.0)
     x, y, _ = FEET["F2"]
-    lead(c, fd.p(x - FOOT_SP / 2, y + FOOT_SP / 2), fd.p(2380, 170), "4 × ⌀5.2 on a 46.8 square", size=3.0)
-    c.text((fd.u(2265), fd.v(650) + 4.2), "FRONT EDGE · y = 650", size=3.1, weight="bold")
-    c.text((fd.u(2265), fd.v(650) + 9.2), "Top A far end, face down. Scale 1:4.5", size=3.0)
+    lead(c, fd.p(x - FOOT_SP / 2, y + FOOT_SP / 2), fd.p(2380, 170), "4 × ⌀5.2 mm on a 46.8 mm square", size=3.0)
+    c.text((fd.u(2265), fd.v(650) + 4.2), "FRONT EDGE · y = 65", size=3.1, weight="bold")
+    c.text((fd.u(2265), fd.v(650) + 9.2), "All cm. x: tape on the side-wall end. y: tape on the back edge. 1:4.5", size=3.0)
     c.text((fd.u(2265), 3), "BACK EDGE · y = 0", size=3.1, weight="bold")
     return c.save(os.path.join(FIG, "04-topA-far.svg"))
 
@@ -555,9 +565,9 @@ def fig_topB_overview():
     c = Canvas(W, H)
     fd = FD(c, (0, 650, 520, 3140), s, mL, mT)
     topB_content(fd)
-    ys = [(650, "650 (0)"), (850, "850 (200)"), (1600, "1600 (950)"), (2350, "2350 (1700)"),
-          (mm(RB["y1"]), "2660 (2010)"), (2795, "2795 (2145)"), (3055, "3055 (2405)"), (3140, "3140 (2490)")]
-    ord_y(fd, ys, 0, fd.u(0) + 3.5, right=True, gap=3.7, jog=1.2, size=3.0)
+    ys = [(650, "0"), (850, "20"), (1600, "95"), (2350, "170"),
+          (mm(RB["y1"]), "201"), (2795, "214.5"), (3055, "240.5"), (3140, "249")]
+    ord_y(fd, ys, 0, fd.u(0) + 3.5, right=True, gap=3.7, jog=1.2, size=3.0, cm=False)
     xs = [(0, "0"), (85, "85"), (100, "100"), (mm(RB["x0"]), "479"), (mm(RB["x1"]), "530"), (565, "565"), (650, "650")]
     ord_x(fd, xs, 650, mT - 13, up=True, gap=3.4, jog=1.2, size=3.0)
     for n in ("L4", "L5", "L6"):
@@ -565,13 +575,13 @@ def fig_topB_overview():
     foot_labels(fd, ("F5", "F6", "F7", "F8"), below=("F5", "F6"))
     c.text((1, 3), "JOINT END away from you", size=3.0, weight="bold", anchor="start")
     c.text((1, 6.8), "← x grows to the LEFT", size=3.0, weight="bold", anchor="start")
-    c.text((fd.u(325), fd.v(3140) + 4.0), "far end, y = 3140", size=3.0)
-    c.text((fd.u(650) - 2.6, fd.v(1250)), "front edge, rounded, x = 650", size=3.0, rotate=-90)
+    c.text((fd.u(325), fd.v(3140) + 4.0), "far end", size=3.0)
+    c.text((fd.u(650) - 2.6, fd.v(1250)), "front edge, rounded, x = 65", size=3.0, rotate=-90)
     c.text((fd.u(0) + 2.6, fd.v(1250)), "side-wall edge, x = 0", size=3.0, rotate=90)
     c.text((fd.u(505), fd.v(1250)), "RAIL B", size=3.0, rotate=-90, weight="bold")
     c.text((fd.u(325), fd.v(2925)), "ALEX 2", size=3.0)
-    c.text((1, H - 5.4), "y labels: desk y (tape from the joint end)", size=3.0, anchor="start")
-    c.text((1, H - 1.6), "Scale 1:14", size=3.0, anchor="start")
+    c.text((1, H - 5.4), "All cm. Right: tape hooked on the joint end.", size=3.0, anchor="start")
+    c.text((1, H - 1.6), "Top: tape on the side-wall edge. 1:14", size=3.0, anchor="start")
     return c.save(os.path.join(FIG, "04-topB-overview.svg"))
 
 
@@ -590,15 +600,15 @@ def fig_topB_joint():
     c.line((fd.u(650) - 1, v), (fd.u(0) + 1, v), lw="thin", dash="3 1 0.6 1")
     xs = [(0, "0"), (100, "100 L4"), (150, "150 P1"), (350, "350 P2"), (mm(RB["x0"]), "479"), (mm(RB["x1"]), "530 rail B line"), (650, "650")]
     ord_x(fd, xs, 500, mT - 4, up=True, gap=4.0, jog=1.6)
-    ys = [(mm(RB["y0"]), "530 (−120) rail B end"), (650, "650 (0) joint end"), (PLATE_Y - PLATE_L / 2 + PLATE_HOLES[2], "717 (67)"),
-          (PLATE_Y - PLATE_L / 2 + PLATE_HOLES[3], "767 (117)"), (PLATE_Y + PLATE_L / 2, "787 (137) P1 P2"), (850, "850 (200) L4")]
-    ord_y(fd, ys, 0, fd.u(0) + 5, right=True, gap=3.8, jog=2.0)
+    ys = [(mm(RB["y0"]), "rail B end, 12 past"), (650, "0 joint end"), (PLATE_Y - PLATE_L / 2 + PLATE_HOLES[2], "6.7"),
+          (PLATE_Y - PLATE_L / 2 + PLATE_HOLES[3], "11.7"), (PLATE_Y + PLATE_L / 2, "13.7 P1 P2 end"), (850, "20 L4")]
+    ord_y(fd, ys, 0, fd.u(0) + 5, right=True, gap=3.8, jog=2.0, cm=False)
     leg_label(fd, "L4", "left")
     c.label_box(fd.p(250, 545), "top A goes here (not this top)", size=3.0, pad=0.8)
     lead(c, fd.p(505, 580), fd.p(420, 615), "")
-    c.label_box((fd.u(420) + 35.8, fd.v(615)), "rail B sticks out 120 past the joint end", size=3.0, pad=0.8)
-    c.text((fd.u(325), H - 5.6), "Top B joint end, face down: joint end away from you, x grows to the left. Scale 1:5", size=3.0)
-    c.text((fd.u(325), H - 1.6), "(…) = tape reading from the joint end. P1, P2 holes: screw positions.", size=3.0)
+    c.label_box((fd.u(420) + 35.8, fd.v(615)), "rail B sticks out 12 cm past the joint end", size=3.0, pad=0.8)
+    c.text((fd.u(325), H - 5.6), "All cm. Top: tape hooked on the side-wall edge. Right: tape hooked on the joint end.", size=3.0)
+    c.text((fd.u(325), H - 1.6), "Joint end away from you, x grows to the left. Scale 1:5", size=3.0)
     return c.save(os.path.join(FIG, "04-topB-joint.svg"))
 
 
@@ -613,13 +623,13 @@ def fig_topB_far():
     c.line((fd.u(650) - 1, v), (fd.u(0) + 1, v), lw="thin", dash="3 1 0.6 1")
     xs = [(0, "0"), (mm(A2["x0"]), "35"), (85, "85 F5 F7"), (mm(RB["x0"]), "479"), (mm(RB["x1"]), "530"), (565, "565 F6 F8"), (mm(A2["x0"] + A2["w"]), "615"), (650, "650")]
     ord_x(fd, xs, 2600, mT - 4, up=True, gap=4.0, jog=1.6)
-    ys = [(mm(RB["y1"]), "2660 (2010) rail end"), (mm(A2["y0"]), "2745 (2095)"), (2795, "2795 (2145) F5 F6"), (3055, "3055 (2405) F7 F8"),
-          (mm(A2["y0"] + A2["d"]), "3105 (2455)"), (3140, "3140 (2490)")]
-    ord_y(fd, ys, 0, fd.u(0) + 5, right=True, gap=3.8, jog=2.0)
+    ys = [(mm(RB["y1"]), "201 rail end"), (mm(A2["y0"]), "209.5 ALEX 2"), (2795, "214.5 F5 F6"), (3055, "240.5 F7 F8"),
+          (mm(A2["y0"] + A2["d"]), "245.5"), (3140, "249 far end")]
+    ord_y(fd, ys, 0, fd.u(0) + 5, right=True, gap=3.8, jog=2.0, cm=False)
     foot_labels(fd, ("F5", "F6", "F7", "F8"), below=("F7", "F8"))
     c.text((fd.u(325), fd.v(2900)), "ALEX 2 outline below (reference only)", size=3.0)
-    c.text((fd.u(325), fd.v(3140) + 4.2), "FAR END · y = 3140", size=3.1, weight="bold")
-    c.text((fd.u(325), H - 1.6), "Top B far end, face down. Scale 1:5.  (…) = tape from the joint end", size=3.0)
+    c.text((fd.u(325), fd.v(3140) + 4.2), "FAR END", size=3.1, weight="bold")
+    c.text((fd.u(325), H - 1.6), "All cm. Top: tape on the side-wall edge. Right: tape hooked on the joint end. 1:5", size=3.0)
     return c.save(os.path.join(FIG, "04-topB-far.svg"))
 
 
@@ -643,12 +653,12 @@ def fig_rail_orientation():
     c.raw(f'<path d="M {_f(Yp(sy) - 2.6)} {_f(oy + wall * s)} h 5.2 v 0.8 q -2.6 1.4 -5.2 0 z" fill="#000"/>')
     lead(c, (Yp(y0 + 8), oy + wall * s / 2), (Yp(y0 + 30), oy + 33), "flat leg UP, tight against the underside")
     lead(c, (Yp(y1), oy + ang * s * 0.75), (Yp(y1) + 24, oy + 21), "vertical leg DOWN, on the front-edge side")
-    lead(c, (Yp(y1), oy + 4), (Yp(y1) + 24, oy + 12), "its outer face on the rail line (top A: y = 530)")
-    dim2(c, (Yp(y1), oy - T * s), (Yp(650), oy - T * s), "120 to the front edge", off=5)
+    lead(c, (Yp(y1), oy + 4), (Yp(y1) + 24, oy + 12), "its outer face on the rail line (top A: y = 53 cm)")
+    dim2(c, (Yp(y1), oy - T * s), (Yp(650), oy - T * s), "12 cm to the front edge", off=5)
     c.label_box((Yp(590), oy - T * s / 2), "TOP A, laminate up (as installed)", size=3.0, weight="bold", pad=0.8)
     c.text((Yp(650) + 3, oy - T * s / 2), "front edge", size=3.0, anchor="start")
     c.text((Yp(400) + 1, oy + 8), "← back wall side", size=3.0, anchor="start")
-    c.text((W - 1, H - 1.5), "Section through top A and rail A, end-on, about 1:2. Rail B on top B: the same, with its outer face on x = 530.", size=3.0, anchor="end")
+    c.text((W - 1, H - 1.5), "Section through top A and rail A, end-on, about 1:2. Rail B on top B: the same, outer face on x = 53 cm.", size=3.0, anchor="end")
     return c.save(os.path.join(FIG, "04-rail-orientation.svg"))
 
 
@@ -687,7 +697,7 @@ def fig_depths():
     c.text((x0 + 1.5, yl + 3.2), "21 mm LIMIT: no screw tip and no pilot past this line", size=3.0, anchor="start", weight="bold")
     c.text((x0 + 1.5, yt - 3.0), "7 mm of wood must remain above the laminate", size=3.0, anchor="start")
     c.text((x0 + 1.5, yt + 3.4), "laminate face (desk surface), down on the blanket", size=3.0, anchor="start")
-    dim2(c, (x0, yt), (x0, yb), "28", off=4)
+    dim2(c, (x0, yt), (x0, yb), "28 mm", off=4)
 
     def screw(u, depth, part_t, pilot, l1, l2, puck, head="pan"):
         if part_t:
@@ -717,7 +727,7 @@ def fig_depths():
     c.arrow((x1 + 15, tv), (x1 + 1, tv), lw="outline", head=1.8)
     c.text((x1 + 2, tv - 6), "trim #4 × 1/2", size=3.0, anchor="start", weight="bold")
     c.text((x1 + 2, tv + 4.0), "pilot 10, 10 EDGE,", size=3.0, anchor="start")
-    c.text((x1 + 2, tv + 7.8), "14 below the surface", size=3.0, anchor="start")
+    c.text((x1 + 2, tv + 7.8), "14 mm below the surface", size=3.0, anchor="start")
     c.text((x1 + 2, yb - 4), "raw back edge", size=3.0, anchor="start")
     c.text((x0 + 1.5, H - 5.4), "Section through a 28 mm top, face down as you drill it (underside up), 2:1. Grey: the part being screwed on.", size=3.0, anchor="start")
     c.text((x0 + 1.5, H - 1.6), "Dashed: the pilot hole. Bold numbers: how far the screw goes into the wood, mm.", size=3.0, anchor="start")
@@ -737,13 +747,13 @@ def fig_ring_depth():
     u = 30
     c.rect(u - 0.8, yb, 1.6, 12 * s, fill="#fff", lw=0.2, dash="0.8 0.5")
     c.poly([(u - 3.2, yb - 2.5 * s), (u + 3.2, yb - 2.5 * s), (u + 1.4, yb - 2.5 * s + 1.8), (u + 1.4, yb + 13 * s - 2), (u, yb + 13 * s), (u - 1.4, yb + 13 * s - 2), (u - 1.4, yb - 2.5 * s + 1.8)], fill="#fff", lw="outline")
-    c.text((u + 3, yb + 13 * s - 1), "13", size=3.0, anchor="start", weight="bold")
+    c.text((u + 3, yb + 13 * s - 1), "13 mm", size=3.0, anchor="start", weight="bold")
     c.text((30, 4), "ring flange", size=3.0, weight="bold")
     c.text((30, 7.8), "#6 × 5/8 flat head", size=3.0)
     c.text((30, 11.6), "pilot 12, 12 ALEX", size=3.0)
     c.text((30, yb + 40), "ALEX top panel:", size=3.0, weight="bold")
     c.text((30, yb + 43.8), "thickness unknown,", size=3.0)
-    c.text((30, yb + 47.6), "must be 16 or more", size=3.0)
+    c.text((30, yb + 47.6), "must be 16 mm or more", size=3.0)
     return c.save(os.path.join(FIG, "04-ring-depth.svg"))
 
 

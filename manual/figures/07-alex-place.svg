@@ -106,22 +106,22 @@
 <line x1="42.28" y1="118.38" x2="49.48" y2="118.38" stroke="#000" stroke-width="0.5"/>
 <polygon points="49.48,118.38 47.789,118.997 47.789,117.763" fill="#000"/>
 <text x="51.64" y="116.22" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">door toward you</text>
-<line x1="107.08" y1="13.17" x2="103.48" y2="13.17" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="107.08" y1="17.40" x2="103.48" y2="13.17" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <circle cx="103.48" cy="13.17" r="0.6" fill="#000"/>
-<text x="108.28" y="13.17" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">65</text>
+<text x="108.28" y="17.40" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm</text>
 <line x1="16.00" y1="51.88" x2="16.00" y2="48.18" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="92.50" y1="51.88" x2="92.50" y2="48.18" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="16.00" y1="49.68" x2="92.50" y2="49.68" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="16,49.68 17.409,49.166 17.409,50.194" fill="#000"/>
 <polygon points="92.5,49.68 91.091,50.194 91.091,49.166" fill="#000"/>
-<text x="54.25" y="47.48" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">2125</text>
+<text x="54.25" y="47.48" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">212.5 cm</text>
 <line x1="17.17" y1="118.20" x2="17.17" y2="126.84" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <circle cx="17.17" cy="118.20" r="0.6"/>
-<text x="17.17" y="129.36" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">65</text>
+<text x="18.17" y="128.28" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm</text>
 <line x1="55.88" y1="12.00" x2="52.18" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="55.88" y1="111.90" x2="52.18" y2="111.90" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="53.68" y1="12.00" x2="53.68" y2="111.90" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="53.68,12 54.194,13.409 53.166,13.409" fill="#000"/>
 <polygon points="53.68,111.9 53.166,110.491 54.194,110.491" fill="#000"/>
-<text x="51.48" y="61.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 51.48 61.95)">2775</text>
+<text x="51.48" y="61.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 51.48 61.95)">277.5 cm</text>
 </svg>

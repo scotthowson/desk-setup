@@ -32,9 +32,27 @@ FIT_H = [round(h * 10, 2) for h in DATA["fitting"]["h"]]   # 29.15, 78.45: slot 
 SLOT_L, SLOT_W = [round(v * 10, 2) for v in DATA["fitting"]["slot"]]   # 21 x 12 slots, long axis along the leg
 RH = FACTS["corner_joint"]["rail_hole_positions_mm"]
 HOLES_AO, HOLES_AI, HOLES_BC = RH["railA_outside_fitting_from_wall_end"], RH["railA_inside_fitting_from_wall_end"], RH["railB_from_corner_end"]
+
+
+def cm(mm, one_decimal=False):
+    """Tape reading in cm as the build manual writes it: 35 -> '3.5', 280 -> '28', 520 -> '52.0' with one_decimal."""
+    v = round(mm / 10 + 1e-9, 1)
+    return f"{v:.1f}" if one_decimal else f"{v:g}"
+
+
+# bolt-hole tape readings from the exact slot centres (heel +/- 29.15 / 78.45), as docs/build-manual.md step 1 prints them
+BOLT_CM = {}
+for _heel, _d, _mm in ((HEEL_OUT_MM := round(S["railA"]["fitting_heels_from_wall_end_cm"]["outside_fitting_facing_far_end"] * 10), +1, RH["railA_outside_fitting_from_wall_end"]),
+                       (round(S["railA"]["fitting_heels_from_wall_end_cm"]["inside_fitting_facing_wall_end"] * 10), -1, RH["railA_inside_fitting_from_wall_end"]),
+                       (0, +1, RH["railB_from_corner_end"])):
+    for _h, _m in zip([round(h * 10, 2) for h in DATA["fitting"]["h"]], _mm):
+        BOLT_CM[_m] = cm(_heel + _d * _h)
+assert [BOLT_CM[m] for m in RH["railA_outside_fitting_from_wall_end"] + RH["railA_inside_fitting_from_wall_end"] + RH["railB_from_corner_end"]] == \
+    ["54.9", "59.8", "48.6", "43.7", "2.9", "7.8"]   # docs/build-manual.md step 1
 RAILA_Y = DATA["railA"]["y0"] * 10, DATA["railA"]["y1"] * 10   # 479, 530
 RAILA_X0 = DATA["railA"]["x0"] * 10                   # 10: wall end on top A
 TOP_T = FACTS["tops"]["thickness"]                    # 28
+OUTF = DATA["railA"]["y1"] * 10                        # 530: vertical legs' outer faces (y on rail A, x on rail B)
 
 
 def num(v):
@@ -278,8 +296,8 @@ def fig_length():
         P_(c, [(8.8, y + 7), (10, y + 7), (10, y + 10.7), (8.8, y + 10.7)], fill="#000", lw="thin")
         for k in range(0, 137, 6):
             L_(c, 10 + k, y + 8.5, 10 + k, y + 9.6, lw="thin")
-        dimh(c, 10, 140, y + 17.5, f"design length {LEN} · last hole at {max(HOLES_A)}", y_from=y + 6)
-        dimh(c, 10, 147, y + 25.5, "delivered length: MEASURE ______ mm", y_from=y + 6)
+        dimh(c, 10, 140, y + 17.5, f"design length {cm(LEN)} cm · last hole at {cm(max(HOLES_A))} cm", y_from=y + 6)
+        dimh(c, 10, 147, y + 25.5, "delivered length: MEASURE ______ cm", y_from=y + 6)
         for i, s in enumerate(["far end:", "any extra", "stays here"]):
             T_(c, 150, y + 1 + i * 4.1, s, size=3.2)
     return save(c, "05-length.svg")
@@ -297,7 +315,7 @@ def fig_section():
     for xx in (xa, xb):
         c.raw(f'<rect x="{_f(xx - 1.7)}" y="{_f(Z(TOP_T) - 1)}" width="3.4" height="{_f(TOP_T + 2)}" fill="#fff"/>')
         zig(c, xx, Z(TOP_T) - 1, Z(0) + 0.6)
-    T_(c, (xa + xb) / 2, Z(TOP_T / 2), f"TOP (P01 / P02), {TOP_T}", size=3.2, anchor="middle", box=True)
+    T_(c, (xa + xb) / 2, Z(TOP_T / 2), f"TOP (P01 / P02), {TOP_T} mm", size=3.2, anchor="middle", box=True)
     fl = [(X(479), Z(0)), (X(530), Z(0)), (X(530), Z(-LEG)), (X(530 - T), Z(-LEG)), (X(530 - T), Z(-T)), (X(479), Z(-T))]
     P_(c, fl, fill=GREY["steel"], lw="heavy"); c.hatch(fl, spacing=1.1)
     sy = 479 + SCREW
@@ -324,12 +342,12 @@ def fig_section():
     T_(c, X(530) + 2.4, Z(-41), "outer face", size=3.2, anchor="middle", rotate=-90)
     leader(c, X(530) + 22, Z(2.5), X(530), Z(0), "heel", lines=["(outside of", "the bend)"])
     block = [("FLAT LEG", "bold"), ("lies against the", ""), ("top's underside", ""), ("", ""), ("VERTICAL LEG", "bold"),
-             ("hangs down, toward", ""), ("you; outer face at", ""), ("y = 530 (rail A)", ""), ("x = 530 (rail B)", "")]
+             ("hangs down, toward", ""), ("you; outer face at", ""), (f"y = {cm(OUTF)} cm (rail A)", ""), (f"x = {cm(OUTF)} cm (rail B)", "")]
     for i, (s, w) in enumerate(block):
         if s:
             T_(c, 3, Z(-12) + i * 4.2, s, size=3.2, weight=w or "normal")
     arrow(c, X(468), 6, X(452), 6)
-    T_(c, X(468) + 1.5, 6, f"BACK: wall side ({FACTS['layout_cm']['wall_gap'] * 10:g} gap)", size=3.2)
+    T_(c, X(468) + 1.5, 6, f"BACK: wall side ({FACTS['layout_cm']['wall_gap']:g} cm gap)", size=3.2)
     arrow(c, X(512), 6, X(540), 6)
     T_(c, X(540) + 1.5, 6, "FRONT: you", size=3.2)
     return save(c, "05-section.svg")
@@ -363,7 +381,7 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
     fe = 33; heel = fe + LEG * kw; vfe = heel + LEG * kw
     sl, bl = fe + SCREW * kw, heel + BOLT * kw
     X = lambda s: x0 + s * kx
-    T_(c, 3, 5, f"{part} · {name} · OPENED-OUT FABRICATION DRAWING · all dimensions mm", size=4.2, weight="bold")
+    T_(c, 3, 5, f"{part} · {name} · OPENED-OUT FABRICATION DRAWING · ordinates in mm (cm in the table)", size=4.2, weight="bold")
     T_(c, 3, 10.5, f"Lengths 1:10 from the {datum.upper()} (datum 0); leg widths 1:2.5, not to scale across; hole symbols not to scale. "
                    f"Seen from outside the L.", size=3.2)
     R_(c, x0, fe, x1 - x0, LEG * kw, fill=GREY["steel"])
@@ -403,12 +421,12 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
     T_(c, x1 - 1, heel - 1.9, "heel", size=3.2, anchor="end")
     hl = " · ".join(num(h) for h, _, _, _ in heels)
     L_(c, X(heels[-1][0]), vfe, X(heels[-1][0]) - 2, vfe + 3.2, lw="dim")
-    T_(c, X(heels[-1][0]) - 2.5, vfe + 4.5, f"heel {hl}", size=3.2, anchor="end")
+    T_(c, X(heels[-1][0]) - 2.5, vfe + 4.5, (f"heel {hl} ({' · '.join(cm(h, True) for h, _, _, _ in heels)} cm)" if heels[-1][0] else "heel 0"), size=3.2, anchor="end")
     allb = sorted(b for h in heels for b in h[3])
     nb = len(allb)
     y = vfe + 10
     T_(c, x0, y, f"{len(holes)}× {SC_LBL} THRU in the flat leg, centres on the screw line {SCREW} from the free edge, at the ordinates above.", size=3.2)
-    T_(c, x0, y + 4.4, f"{nb}× {BO_LBL} THRU in the vertical leg on the bolt line {BOLT} below the heel, at {', '.join(num(b) for b in allb)} (Detail A).", size=3.2)
+    T_(c, x0, y + 4.4, f"{nb}× {BO_LBL} THRU in the vertical leg on the bolt line {BOLT} below the heel, at {', '.join(BOLT_CM[b] for b in allb)} cm (Detail A, mm).", size=3.2)
     T_(c, x0, y + 8.8, "Positions VERIFIED from the measured fitting; drill them THROUGH the clamped fitting with the slot plug (step 6).", size=3.2, weight="bold")
     # ---- detail A at 1:2
     k2 = 0.5
@@ -451,12 +469,13 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
             T_(c, D(b) + 1.1, dvfe + 2.6, num(b), size=3.2, anchor="end", rotate=-90, weight="bold")
         arrow(c, D(hpos) + d * 1.2, dheel + 1.9, D(hpos) + d * 12, dheel + 1.9, lw="thin", h=1.4)
         T_(c, D(hpos) + d * 13.2, dheel + 1.9, "legs", size=3.2, anchor="start" if d > 0 else "end")
-        T_(c, D(hpos) + d * 1.4, dheel - 2.8, f"heel {num(hpos)}", size=3.2, anchor="start" if d > 0 else "end", weight="bold")
+        T_(c, D(hpos) + d * 1.4, dheel - 2.8, f"heel {num(hpos)} ({cm(hpos, True)} cm)" if hpos else "heel 0", size=3.2, anchor="start" if d > 0 else "end", weight="bold")
     # hole table and title block
-    rows = [[str(i + 1), num(s), SC_LBL, f"flat leg, {SCREW} line"] for i, s in enumerate(holes)]
+    rows = [[str(i + 1), num(s), cm(s), SC_LBL, f"flat, {SCREW} line"] for i, s in enumerate(holes)]
     for lbl, pos_ in bolt_rows:
-        rows.append([lbl, num(pos_), BO_LBL, f"vertical, {BOLT} line"])
-    yt = table(c, 147, 97, ["No.", f"from {datum}", "hole", "where"], rows, [11, 28, 27, 33])
+        rows.append([lbl, num(pos_), BOLT_CM[pos_], BO_LBL, f"vertical, {BOLT}"])
+    T_(c, 147, 96.6, f"Holes from the {datum}", size=3.2, weight="bold")
+    yt = table(c, 147, 99, ["No.", "mm", "cm", "hole", "leg, line"], rows, [10, 14, 12, 27, 36])
     for i, s in enumerate(block):
         T_(c, 147, yt + 4.2 + i * 4.1, s, size=3.2, weight="bold" if i == 0 else "normal")
     return c, D, dfe, dvfe, dbl
@@ -464,22 +483,22 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
 
 def fig_railA():
     heels = [(HEEL_IN, -1, f"heel {HEEL_IN}: inside fitting, legs to the wall end", HOLES_AI), (HEEL_OUT, +1, f"heel {HEEL_OUT}: outside fitting, legs to the far end", HOLES_AO)]
-    block = [f"P06 Rail A · {S['section']}", f"{LEG} × {LEG} × {T}, design {LEN}: MEASURE first (E-1)",
-             f"On the desk: wall end x = {num(RAILA_X0)}, outer face y = {num(RAILA_Y[1])}", "(datum: top A's back-left corner)"]
+    block = [f"P06 Rail A · {S['section']}", f"{LEG} × {LEG} × {T} mm, {cm(LEN)} cm: MEASURE first",
+             f"On the desk: wall end x = {cm(RAILA_X0)} cm, outer face y = {cm(OUTF)} cm", "(datum: top A's back-left corner)"]
     c, D, dfe, dvfe, dbl = fab("P06", "RAIL A", HOLES_A, "wall end", heels, 395, 645, [("I2", HOLES_AI[1]), ("I1", HOLES_AI[0]), ("O1", HOLES_AO[0]), ("O2", HOLES_AO[1])], block)
     return save(c, "05-railA.svg", rotate=True)
 
 
 def fig_railB():
     heels = [(0, +1, "heel flush with the corner end (0), legs to the far end; both fittings share these holes", HOLES_BC)]
-    block = [f"P07 Rail B · {S['section']}", f"{LEG} × {LEG} × {T}, design {LEN}: MEASURE first (E-1)",
-             f"On the desk: corner end y = {num(RAILA_Y[1])}, outer face x = {num(DATA['railB']['x1'] * 10)}", "(datum: top A's back-left corner)"]
+    block = [f"P07 Rail B · {S['section']}", f"{LEG} × {LEG} × {T} mm, {cm(LEN)} cm: MEASURE first",
+             f"On the desk: corner end y = {cm(OUTF)} cm, outer face x = {cm(DATA['railB']['x1'] * 10)} cm", "(datum: top A's back-left corner)"]
     c, D, dfe, dvfe, dbl = fab("P07", "RAIL B", HOLES_B, "corner end", heels, 0, 250, [("C1", HOLES_BC[0]), ("C2", HOLES_BC[1])], block)
     yz = dfe - 4.5
     L_(c, D(0), yz, D(UNDER_A), yz, lw="dim"); head(c, D(UNDER_A), yz, D(0), yz, 1.4); head(c, D(0), yz, D(UNDER_A), yz, 1.4)
     L_(c, D(UNDER_A), yz - 1.5, D(UNDER_A), dfe - 0.3, lw="thin", dash="1.5 1")
     L_(c, D(UNDER_A), dvfe + 0.3, D(UNDER_A), dvfe + 3.5, lw="thin", dash="1.5 1")
-    T_(c, D(UNDER_A / 2), yz - 2, f"{UNDER_A}: under top A", size=3.2, anchor="middle")
+    T_(c, D(UNDER_A / 2), yz - 2, f"{UNDER_A} ({cm(UNDER_A)} cm): under top A", size=3.2, anchor="middle")
     T_(c, D(UNDER_A) + 1.5, yz - 2, "top A's front edge (the joint)", size=3.2)
     return save(c, "05-railB.svg", rotate=True)
 
@@ -594,8 +613,8 @@ def fig_jig():
 def fig_placement():
     c = Canvas(172, 124)
     k = 0.5
-    rows = [(f"Rail A, outside fitting: heel on {HEEL_OUT} from the wall end, legs toward the far end", 400, HEEL_OUT, +1),
-            (f"Rail A, inside fitting: heel on {HEEL_IN} from the wall end, legs toward the wall end", 400, HEEL_IN, -1),
+    rows = [(f"Rail A, outside fitting: heel on the {cm(HEEL_OUT, True)} cm mark, legs toward the far end", 400, HEEL_OUT, +1),
+            (f"Rail A, inside fitting: heel on the {cm(HEEL_IN, True)} cm mark, legs toward the wall end", 400, HEEL_IN, -1),
             ("Rail B, one fitting: heel flush with the corner end (0), legs toward the far end", 0, 0, +1)]
     for i, (title, s0, hpos, d) in enumerate(rows):
         y = 10 + i * 40
@@ -611,10 +630,10 @@ def fig_placement():
         for s in range(s0, s0 + span + 1, 20):
             L_(c, X(s), y + LEG * k, X(s), y + LEG * k + (3 if s % 100 == 0 else 1.6), lw="thin")
             if s % 100 == 0:
-                T_(c, X(s), y + LEG * k + 5.5, num(s), size=3.2, anchor="middle")
+                T_(c, X(s), y + LEG * k + 5.5, cm(s), size=3.2, anchor="middle")
         T_(c, x0 + span * k + 2, y + 1.8, "heel edge", size=3.2)
-        T_(c, x0 + span * k + 2, bl, f"bolt line {BOLT}", size=3.2)
-        T_(c, x0 + span * k + 2, y + LEG * k + 5.5, "mm", size=3.2)
+        T_(c, x0 + span * k + 2, bl, f"bolt line {BOLT} mm", size=3.2)
+        T_(c, x0 + span * k + 2, y + LEG * k + 5.5, "cm", size=3.2)
         fx = X(hpos) if d > 0 else X(hpos - FIT_L)
         R_(c, fx, bl - FIT_W * k / 2, FIT_L * k, FIT_W * k, fill=GREY["mid"])
         L_(c, X(hpos), y - 2.2, X(hpos), y + LEG * k + 2.2, lw="heavy")
@@ -710,12 +729,81 @@ def fig_floor():
     T_(c, xa1 - 2, oy + LEG * k + 4.5, "rail A", size=3.2, weight="bold", anchor="end")
     b0 = round(DATA["railB"]["x0"] * 10 - RAILA_X0)   # 469: rail B's flat leg edge on rail A's scale
     dimh(c, bx0, bx1, oy + LEG * k + 8, "", y_from=oy + LEG * k)
-    T_(c, bx1 + 3, oy + LEG * k + 8, f"B's flat leg covers {b0} to {HEEL_OUT} on rail A", size=3.2)
-    T_(c, bx1 - 10, oy + LEG * k + 14, f"B's outer face on rail A's {HEEL_OUT} mark; B's end touching A: no gap", size=3.2, anchor="middle", weight="bold")
+    T_(c, bx1 + 3, oy + LEG * k + 8, f"B's flat leg covers {cm(b0)} to {cm(HEEL_OUT, True)} cm on rail A", size=3.2)
+    T_(c, bx1 - 10, oy + LEG * k + 14, f"B's outer face on rail A's {cm(HEEL_OUT, True)} cm mark; B's end touching A: no gap", size=3.2, anchor="middle", weight="bold")
     return save(c, "05-floor.svg")
+
+
+# ---------------------------------------------------------------- Fig E-9b: why both rails' holes meet without a jig
+def fig_meet():
+    c = Canvas(172, 132)
+    k = 0.5
+
+    def strip(x0, y0, s0, s1, title):
+        X = lambda st: x0 + (st - s0) * k
+        T_(c, 4, y0 - 4.5, title, size=3.2, weight="bold")
+        R_(c, X(s0), y0, (s1 - s0) * k, LEG * k, fill=GREY["light"])
+        L_(c, X(s0), y0, X(s1), y0, lw="heavy")
+        bl = y0 + BOLT * k
+        L_(c, X(s0), bl, X(s1), bl, lw="thin", dash="4 1 0.8 1")
+        return X, bl
+
+    def place(X, bl, heel, d, holes):
+        fx = X(heel) if d > 0 else X(heel - FIT_L)
+        R_(c, fx, bl - FIT_W * k / 2, FIT_L * k, FIT_W * k, lw="thin", dash="1.5 0.7")
+        L_(c, X(heel), bl - LEG * k * 0.57 - 1.5, X(heel), bl + LEG * k * 0.43 + 1.5, lw="heavy")
+        for hh in FIT_H:
+            slot(c, X(heel + d * hh), bl, SLOT_L * k, SLOT_W * k, fill="none", lw="thin", dash="1 0.6")
+        for b in holes:
+            hole(c, X(b), bl, BO_D * k, cross=0.5)
+
+    # 1: rail A, both placements on one strip
+    X, bl = strip(10, 14, 400, 650, "1  One fitting, three placements. Rail A, vertical leg:")
+    place(X, bl, HEEL_IN, -1, HOLES_AI); place(X, bl, HEEL_OUT, +1, HOLES_AO)
+    yb = 14 + LEG * k
+    T_(c, X(HEEL_IN) - 1.5, yb + 4, f"heel on {cm(HEEL_IN, True)} cm, legs → wall end", size=3.2, anchor="end")
+    T_(c, X(HEEL_OUT) + 1.5, yb + 4, f"heel on {cm(HEEL_OUT, True)} cm, legs → far end", size=3.2)
+    T_(c, X(650) + 2, 14 + 6, "slot centres", size=3.2)
+    T_(c, X(650) + 2, 14 + 10.2, f"{num(FIT_H[0])} and", size=3.2)
+    T_(c, X(650) + 2, 14 + 14.4, f"{num(FIT_H[1])} mm from", size=3.2)
+    T_(c, X(650) + 2, 14 + 18.6, "the heel", size=3.2)
+    # rail B, heel flush with the corner end
+    X, bl = strip(10, 53, 0, 220, "Rail B, vertical leg:")
+    L_(c, X(0), 52, X(0), 53 + LEG * k + 1, lw="heavy")
+    place(X, bl, 0, +1, HOLES_BC)
+    T_(c, X(0) + 1.5, 53 + LEG * k + 4, "heel flush with the corner end, legs → far end", size=3.2)
+    T_(c, X(220) + 2, 53 + 6, "each pilot goes through", size=3.2)
+    T_(c, X(220) + 2, 53 + 10.2, "the slot plug: dead on", size=3.2)
+    T_(c, X(220) + 2, 53 + 14.4, "the slot centre", size=3.2)
+    # 2: bolted corner, elevation of rail A's outer face from the knee side, rail B cut just in front of the fittings
+    y0 = 98
+    T_(c, 4, y0 - 6.5, "2  Bolted: each slot sits over the hole it made (rail A from the knee space, rail B cut)", size=3.2, weight="bold")
+    X = lambda x: 10 + (x - 400) * k
+    Z = lambda z: y0 - z * k                     # z up from the top's underside (0)
+    R_(c, X(400), Z(0), 250 * k, LEG * k, fill=GREY["light"])
+    INB = RAILA_Y[1] - T
+    for x0, x1 in ((RAILA_Y[1], RAILA_Y[1] + FIT_L), (INB - FIT_L, INB)):
+        R_(c, X(x0), Z(-BOLT + FIT_W / 2), (x1 - x0) * k, FIT_W * k, fill="#fff")
+    for x, hh in [(RAILA_Y[1] + h, h) for h in FIT_H] + [(INB - h, h) for h in FIT_H]:
+        slot(c, X(x), Z(-BOLT), SLOT_L * k, SLOT_W * k, fill=GREY["mid"])
+        hole(c, X(x), Z(-BOLT), BO_D * k, cross=0.5)
+    # rail B in section (flat leg on top, vertical leg) and the two fitting B-legs in section
+    sec = [(X(DATA["railB"]["x0"] * 10), Z(0)), (X(RAILA_Y[1]), Z(0)), (X(RAILA_Y[1]), Z(-LEG)), (X(INB), Z(-LEG)), (X(INB), Z(-T)), (X(DATA["railB"]["x0"] * 10), Z(-T))]
+    P_(c, sec, fill=GREY["steel"], lw="heavy"); c.hatch(sec, spacing=0.8)
+    for x0 in (RAILA_Y[1], INB - FIT_T):
+        pts = [(X(x0), Z(-BOLT + FIT_W / 2)), (X(x0 + FIT_T), Z(-BOLT + FIT_W / 2)), (X(x0 + FIT_T), Z(-BOLT - FIT_W / 2)), (X(x0), Z(-BOLT - FIT_W / 2))]
+        P_(c, pts, fill=GREY["light"]); c.hatch(pts, spacing=0.8, angle=135)
+    L_(c, X(400), Z(0), X(650), Z(0), lw="heavy")
+    T_(c, X(650) + 2, Z(-6), "rail A", size=3.2, weight="bold")
+    T_(c, X(650) + 2, Z(-BOLT) - 2, "slots (grey)", size=3.2)
+    T_(c, X(650) + 2, Z(-BOLT) + 2.2, "over the holes", size=3.2)
+    T_(c, X(RAILA_Y[1]) + 1.5, Z(-LEG) + 3.6, f"rail B's end on A, outer face on the {cm(HEEL_OUT, True)} cm mark", size=3.2)
+    T_(c, X(INB - FIT_L / 2), Z(-BOLT + FIT_W / 2) + 3.4, "inside fitting", size=3.2, anchor="middle")
+    T_(c, X(RAILA_Y[1] + FIT_L / 2), Z(-BOLT + FIT_W / 2) + 3.4, "outside fitting", size=3.2, anchor="middle")
+    return save(c, "05-meet.svg")
 
 
 if __name__ == "__main__":
     os.makedirs(FIG, exist_ok=True)
-    for f in (fig_length, fig_section, fig_railA, fig_railB, fig_stations, fig_gauge, fig_jig, fig_placement, fig_plug, fig_floor):
+    for f in (fig_length, fig_section, fig_railA, fig_railB, fig_stations, fig_gauge, fig_jig, fig_placement, fig_plug, fig_meet, fig_floor):
         print(f())

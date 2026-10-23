@@ -19,7 +19,7 @@
 <polygon points="29.742,4.59 28.333,5.104 28.333,4.076" fill="#000"/>
 <text x="15.621" y="2.59" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">78.45</text>
 <text x="2.7" y="28.56" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">heel</text>
-<text x="25.59" y="28.56" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">100.5 × 41 leg</text>
+<text x="25.59" y="28.56" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">100.5 × 41 mm leg</text>
 <polygon points="44.5,27 53.545,27 53.545,26.1 45.4,26.1 45.4,17.955 44.5,17.955" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <polygon points="45.4,26.1 49.5,26.1 45.4,22" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 </svg>

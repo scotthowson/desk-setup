@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 64" width="86mm" height="64mm" class="fig">
+<polygon points="4,12 70,12 70,66 4,66" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="4" y1="12" x2="70" y2="12" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="70" y1="12" x2="70" y2="62" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polygon points="23.2,12 70,12 70,58.8 23.2,58.8" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="23.2,10 72,10 72,12 23.2,12" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="70,10 72,10 72,58.8 70,58.8" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="28.69,31.89 50.11,31.89 50.11,53.31 28.69,53.31" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1.2 0.7" stroke-linejoin="round"/>
+<circle cx="39.4" cy="42.6" r="0.5" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="30.976" cy="34.176" r="0.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="30.976" cy="51.024" r="0.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="47.824" cy="34.176" r="0.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="47.824" cy="51.024" r="0.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<line x1="39.4" y1="11.4" x2="39.4" y2="5.3" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="70" y1="11.4" x2="70" y2="5.3" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="39.4" y1="6.5" x2="70" y2="6.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="39.4,6.5 40.809,5.986 40.809,7.014" fill="#000"/>
+<polygon points="70,6.5 68.591,7.014 68.591,5.986" fill="#000"/>
+<text x="54.7" y="4.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">8.5 cm</text>
+<line x1="69.4" y1="12" x2="62.8" y2="12" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="69.4" y1="42.6" x2="62.8" y2="42.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="64" y1="12" x2="64" y2="42.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="64,12 64.514,13.409 63.486,13.409" fill="#000"/>
+<polygon points="64,42.6 63.486,41.191 64.514,41.191" fill="#000"/>
+<text x="62" y="27.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 62 27.3)">8.5 cm</text>
+<text x="39.4" y="56.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">plate outline</text>
+</svg>

@@ -25,13 +25,13 @@
 <line x1="30.00" y1="13.00" x2="80.00" y2="13.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="30,13 31.409,12.486 31.409,13.514" fill="#000"/>
 <polygon points="80,13 78.591,13.514 78.591,12.486" fill="#000"/>
-<text x="55.00" y="10.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">100</text>
+<text x="55.00" y="10.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">100 mm (10 cm)</text>
 <line x1="30.00" y1="16.20" x2="30.00" y2="4.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="105.00" y1="16.20" x2="105.00" y2="4.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="30.00" y1="6.00" x2="105.00" y2="6.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="30,6 31.409,5.486 31.409,6.514" fill="#000"/>
 <polygon points="105,6 103.591,6.514 103.591,5.486" fill="#000"/>
-<text x="67.50" y="3.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">150</text>
+<text x="67.50" y="3.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">150 mm (15 cm)</text>
 <line x1="25" y1="42" x2="10" y2="42" stroke="#000" stroke-width="0.5"/>
 <polygon points="10,42 11.691,41.383 11.691,42.617" fill="#000"/>
 <text x="18.00" y="38.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">wall</text>
@@ -54,5 +54,5 @@
 <text x="138.00" y="58.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">centres: scriber</text>
 <text x="138.00" y="62.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">only</text>
 <text x="81.25" y="71.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000"></text>
-<text x="85.00" y="76.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">Each pattern: plate ⌀105 outline, 5 holes for the 1/8 in bit on ⌀85 (neighbours 50 apart)</text>
+<text x="85.00" y="76.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">Each pattern, mm: plate ⌀105 outline, 5 holes for the 1/8 in bit on ⌀85 (neighbours 50 apart)</text>
 </svg>

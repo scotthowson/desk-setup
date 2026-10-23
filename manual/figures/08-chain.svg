@@ -37,21 +37,21 @@
 <polygon points="100,12.4 102,12.4 102,14.65 100,14.65" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <polygon points="112,12.4 114,12.4 114,14.65 112,14.65" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <polygon points="124,12.4 126,12.4 126,14.65 124,14.65" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
-<text x="129" y="8.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">50 short</text>
+<text x="129" y="8.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">50 mm</text>
 <line x1="3" y1="15" x2="3" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <text x="3" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">0</text>
 <line x1="13" y1="15" x2="13" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="13" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">200</text>
+<text x="13" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">20</text>
 <line x1="29" y1="15" x2="29" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="29" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">520</text>
+<text x="29" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">52</text>
 <line x1="53" y1="15" x2="53" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="53" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">1000</text>
+<text x="53" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">100</text>
 <line x1="65" y1="15" x2="65" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="65" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">1240</text>
+<text x="65" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">124</text>
 <line x1="113" y1="15" x2="113" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="113" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">2200</text>
+<text x="113" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">220</text>
 <line x1="125" y1="15" x2="125" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="125" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">2440</text>
+<text x="125" y="18.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">244</text>
 <text x="0.25" y="31" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="auto" font-weight="bold" fill="#000">side wall</text>
 <polygon points="1.5,32.5 13,32.5 13,40 1.5,40" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <text x="7.25" y="35.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#fff">C</text>
@@ -99,17 +99,17 @@
 <line x1="3" y1="43" x2="3" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <text x="3" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">0</text>
 <line x1="13" y1="43" x2="13" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="13" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">200</text>
+<text x="13" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">20</text>
 <line x1="29" y1="43" x2="29" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="29" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">520</text>
+<text x="29" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">52</text>
 <line x1="53" y1="43" x2="53" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="53" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">1000</text>
+<text x="53" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">100</text>
 <line x1="65" y1="43" x2="65" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="65" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">1240</text>
+<text x="65" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">124</text>
 <line x1="149" y1="43" x2="149" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="149" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">2920</text>
+<text x="149" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">292</text>
 <line x1="160" y1="43" x2="160" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="160" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">3140</text>
-<text x="0.25" y="55.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">C corner · F 80 filler · K clamp piece (white: notch round the clamp back)</text>
-<text x="0.25" y="59.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1, 2 … 240 segments, grey with a slot = slotted · ■ connector tile under every joint</text>
+<text x="160" y="46.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">314</text>
+<text x="0.25" y="55.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Desk positions in cm. C corner · F 80 mm filler · K clamp piece (white: notch round the clamp back)</text>
+<text x="0.25" y="59.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1, 2 … 240 mm segments, grey with a slot = slotted · ■ connector tile under every joint</text>
 </svg>

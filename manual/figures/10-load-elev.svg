@@ -13,8 +13,8 @@
 <polygon points="130.05,35.7 130.599,37.203 129.501,37.203" fill="#000"/>
 <text x="132.45" y="38.473" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 132.45 38.473)"></text>
 <text x="132.25" y="38.473" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" transform="rotate(90 132.25 38.473)"></text>
-<text x="134.3" y="40.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">≤ 2</text>
-<text x="134.3" y="44.55" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">(est. 1)</text>
+<text x="134.3" y="40.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">≤ 2 mm</text>
+<text x="134.3" y="44.55" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">(est. 1 mm)</text>
 <line x1="10.2" y1="23.8" x2="10.2" y2="33.32" stroke="#000" stroke-width="0.5"/>
 <polygon points="10.2,33.32 9.583,31.629 10.817,31.629" fill="#000"/>
 <text x="10.2" y="20.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">hold flat</text>

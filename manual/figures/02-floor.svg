@@ -11,21 +11,21 @@
 <line x1="15.25" y1="8.25" x2="78.25" y2="8.25" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="15.25,8.25 16.659,7.736 16.659,8.764" fill="#000"/>
 <polygon points="78.25,8.25 76.841,8.764 76.841,7.736" fill="#000"/>
-<text x="46.75" y="6.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">2520</text>
+<text x="46.75" y="6.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">252 cm</text>
 <line x1="14.65" y1="92.5" x2="9.05" y2="92.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="14.65" y1="13.25" x2="9.05" y2="13.25" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="10.25" y1="92.5" x2="10.25" y2="13.25" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10.25,92.5 9.736,91.091 10.764,91.091" fill="#000"/>
 <polygon points="10.25,13.25 10.764,14.659 9.736,14.659" fill="#000"/>
-<text x="8.25" y="52.875" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 8.25 52.875)">3170</text>
+<text x="8.25" y="52.875" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 8.25 52.875)">317 cm</text>
 <text x="53.5" y="22.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">desk</text>
 <text x="53.5" y="23" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000"></text>
 <line x1="15.625" y1="39" x2="38.5" y2="39" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <circle cx="15.625" cy="39" r="0.6" fill="#000"/>
-<text x="39.5" y="39" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">30 wall gap</text>
+<text x="39.5" y="39" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">3 cm wall gap</text>
 <polygon points="44.75,64 70.75,64 70.75,73 44.75,73" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <polygon points="45.75,67.4 69.75,67.4 69.75,68.6 45.75,68.6" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <text x="57.75" y="78" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">bench for the steel</text>
-<text x="57.75" y="82" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(rails 2130 long)</text>
+<text x="57.75" y="82" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(rails 213 cm long)</text>
 <text x="48" y="104.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">Plan, 1:40. Both walls MEASURE.</text>
 </svg>

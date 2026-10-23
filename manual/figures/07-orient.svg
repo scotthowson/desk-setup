@@ -6,7 +6,7 @@
 <text x="71.80" y="12.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">measure y from here</text>
 <text x="71.80" y="46.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edge: rounded, laminated</text>
 <text x="126.10" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 126.10 29.00)">side-wall end · x = 0</text>
-<text x="17.50" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 17.50 29.00)">far end · x = 2490</text>
+<text x="17.50" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 17.50 29.00)">far end · x = 249 cm</text>
 <rect x="104.60" y="16.60" width="10" height="3.2" fill="#bfbfbf" stroke="#000" stroke-width="0.25" transform="rotate(0 109.60 18.20)"/>
 <text x="109.60" y="18.30" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">TAPE</text>
 <rect x="114.40" y="36.40" width="10" height="3.2" fill="#bfbfbf" stroke="#000" stroke-width="0.25" transform="rotate(90 119.40 38.00)"/>
@@ -22,9 +22,9 @@
 <rect x="150" y="14" width="26.00" height="99.60" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>
 <line x1="176.00" y1="14.00" x2="176.00" y2="113.60" stroke="#000" stroke-width="1.2" stroke-linecap="round"/>
 <text x="163.00" y="63.80" font-family="Helvetica, Arial, sans-serif" font-size="8" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">B</text>
-<text x="163.00" y="10.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">joint end · y = 650</text>
+<text x="163.00" y="10.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">joint end (tape 0)</text>
 <text x="180.50" y="63.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 180.50 63.80)">side-wall edge: unfinished (to the wall) · x = 0</text>
-<text x="145.50" y="63.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 145.50 63.80)">front edge: rounded, laminated · x = 650</text>
+<text x="145.50" y="63.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 145.50 63.80)">front edge: rounded, laminated · x = 65 cm</text>
 <rect x="158.00" y="14.60" width="10" height="3.2" fill="#bfbfbf" stroke="#000" stroke-width="0.25" transform="rotate(0 163.00 16.20)"/>
 <text x="163.00" y="16.30" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">TAPE</text>
 <rect x="168.80" y="34.40" width="10" height="3.2" fill="#bfbfbf" stroke="#000" stroke-width="0.25" transform="rotate(90 173.80 36.00)"/>
@@ -33,7 +33,7 @@
 <line x1="156" y1="76" x2="156" y2="94" stroke="#000" stroke-width="0.5"/>
 <polygon points="156,94 155.383,92.309 156.617,92.309" fill="#000"/>
 <text x="158.50" y="94.00" font-family="Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">y</text>
-<text x="163.00" y="117.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">far end · y = 3140</text>
+<text x="163.00" y="117.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">far end</text>
 <ellipse cx="163.00" cy="123.60" rx="5" ry="2.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" transform="rotate(0.0 163.00 123.60)"/>
 <circle cx="163.00" cy="123.60" r="2" fill="#fff" stroke="#000" stroke-width="0.5"/>
 <text x="163.00" y="130.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">stand here</text>

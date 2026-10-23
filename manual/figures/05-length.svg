@@ -38,13 +38,13 @@
 <line x1="10" y1="37.5" x2="140" y2="37.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,37.5 11.503,36.951 11.503,38.049" fill="#000"/>
 <polygon points="140,37.5 138.497,38.049 138.497,36.951" fill="#000"/>
-<text x="75" y="35.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">design length 2130 · last hole at 2105</text>
+<text x="75" y="35.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">design length 213 cm · last hole at 210.5 cm</text>
 <line x1="10" y1="26.8" x2="10" y2="46.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="147" y1="26.8" x2="147" y2="46.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="10" y1="45.5" x2="147" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,45.5 11.503,44.951 11.503,46.049" fill="#000"/>
 <polygon points="147,45.5 145.497,46.049 145.497,44.951" fill="#000"/>
-<text x="78.5" y="43.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">delivered length: MEASURE ______ mm</text>
+<text x="78.5" y="43.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">delivered length: MEASURE ______ cm</text>
 <text x="150" y="21" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">far end:</text>
 <text x="150" y="25.1" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">any extra</text>
 <text x="150" y="29.2" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">stays here</text>
@@ -87,13 +87,13 @@
 <line x1="10" y1="83.5" x2="140" y2="83.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,83.5 11.503,82.951 11.503,84.049" fill="#000"/>
 <polygon points="140,83.5 138.497,84.049 138.497,82.951" fill="#000"/>
-<text x="75" y="81.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">design length 2130 · last hole at 2105</text>
+<text x="75" y="81.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">design length 213 cm · last hole at 210.5 cm</text>
 <line x1="10" y1="72.8" x2="10" y2="92.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="147" y1="72.8" x2="147" y2="92.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="10" y1="91.5" x2="147" y2="91.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="10,91.5 11.503,90.951 11.503,92.049" fill="#000"/>
 <polygon points="147,91.5 145.497,92.049 145.497,90.951" fill="#000"/>
-<text x="78.5" y="89.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">delivered length: MEASURE ______ mm</text>
+<text x="78.5" y="89.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">delivered length: MEASURE ______ cm</text>
 <text x="150" y="67" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">far end:</text>
 <text x="150" y="71.1" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">any extra</text>
 <text x="150" y="75.2" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">stays here</text>

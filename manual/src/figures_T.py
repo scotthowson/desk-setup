@@ -30,8 +30,10 @@ def scad(rel, name):
 
 # ---------- source numbers, cross-checked against the parts' own geometry files ----------
 RING = F["rings"]
-ring_r = (scad("structure/foot-ring.scad", "pad_d") + scad("structure/foot-ring.scad", "clearance") + 2 * scad("structure/foot-ring.scad", "wall")) / 4 + scad("structure/foot-ring.scad", "flange_od") / 4
-assert abs(ring_r - RING["screw_circle_radius"]) < 1e-9 and RING["od"] == 57 and RING["flange_od"] == scad("structure/foot-ring.scad", "flange_od")
+ring_r = scad("structure/foot-ring.scad", "screw_r")
+assert ring_r == scad("tools/alex-corner-template.scad", "screw_r")   # paper sheet, printed template and ring drill the same circle
+assert ring_r == RING["screw_circle_radius"] and RING["od"] == scad("structure/foot-ring.scad", "pad_d") + scad("structure/foot-ring.scad", "clearance") + 2 * scad("structure/foot-ring.scad", "wall")
+assert RING["flange_od"] == scad("structure/foot-ring.scad", "flange_od")
 assert scad("tools/alex-corner-template.scad", "inset") == RING["centre_from_alex_corner"]
 AF = F["alex_feet_optional"]
 _tpl = open(os.path.join(REPO, "parts", "tools", "alex-corner-template.scad")).read()
@@ -135,16 +137,17 @@ def crosscheck(c, x, y):
 def dim2(c, p1, p2, label):
     """Dimension with its label in a white box on the line (turned with a vertical line)."""
     c.dim(p1, p2, "", offset=0)
+    g = f"dim{len(c.parts)}"; reg(c, "mark", p1[0] - 0.3, p1[1] - 0.3, p2[0] + 0.3, p2[1] + 0.3, g, "dimension line")
     mx, my = (p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2
     w = len(label) * 3.0 * EM + 1.6; h = 3.0 + 1.0
     if abs(p1[0] - p2[0]) < 1e-9:
         c.raw(f'<rect x="{_f(mx - h / 2)}" y="{_f(my - w / 2)}" width="{_f(h)}" height="{_f(w)}" fill="#fff"/>')
         c.raw(f'<text x="{_f(mx)}" y="{_f(my)}" font-family="{FONT}" font-size="3" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 {_f(mx)} {_f(my)})">{label}</text>')
-        reg(c, "text", mx - h / 2, my - w / 2, mx + h / 2, my + w / 2, None, label)
+        reg(c, "text", mx - h / 2, my - w / 2, mx + h / 2, my + w / 2, g, label)
     else:
         c.raw(f'<rect x="{_f(mx - w / 2)}" y="{_f(my - h / 2)}" width="{_f(w)}" height="{_f(h)}" fill="#fff"/>')
         c.raw(f'<text x="{_f(mx)}" y="{_f(my)}" font-family="{FONT}" font-size="3" text-anchor="middle" dominant-baseline="middle">{label}</text>')
-        reg(c, "text", mx - w / 2, my - h / 2, mx + w / 2, my + h / 2, None, label)
+        reg(c, "text", mx - w / 2, my - h / 2, mx + w / 2, my + h / 2, g, label)
 
 
 def leader2(c, target, p, s):
@@ -276,13 +279,13 @@ def t1():
     waste(c, 2, C[1] - 150, C[0] - 2, 150 + 6); waste(c, C[0], C[1], 150, 6)
     edge(c, "T-1-edge-v", U(0, 150), C); edge(c, "T-1-edge-h", C, U(150, 0))
     T(c, U(3.5, 112), "ALEX EDGE: trim, butt to the cabinet edge", rotate=-90, anchor="middle")
-    T(c, U(108, 3.2), "ALEX EDGE: trim, butt to the cabinet edge", anchor="middle")
+    T(c, U(127, 3.2), "ALEX EDGE: trim, butt to it", anchor="middle")
     label_box(c, (C[0] + 20, C[1] + 3.4), "DATUM: ALEX corner")
-    c.arrow(U(90, 7), U(100, 17)); T(c, U(102, 12), "into the cabinet")
+    c.arrow(U(104, 7), U(114, 17)); T(c, U(116, 12), "into the cabinet")
     k = RING["centre_from_alex_corner"]; R = U(k, k)
-    ring(c, R, RING["flange_od"] / 2); ring(c, R, RING["od"] / 2)
+    ring(c, R, RING["flange_od"] / 2); ring(c, R, RING["od"] / 2); ring(c, R, RING["bore"] / 2)
     posmark(c, R, size=6, hid="T-1-centre")
-    dim2(c, U(0, 10), U(k, 10), "50"); dim2(c, U(k, 0), U(k, k), "50")
+    dim2(c, U(0, 10), U(k, 10), "50 (5.0 cm)"); dim2(c, U(k + 42, 0), U(k + 42, k), "50 (5.0 cm)")
     c.line(U(k + 6, k), U(k + 44, k), lw="thin", dash="2 1"); T(c, U(k + 45.5, k), "0°")
     r = RING["screw_circle_radius"]
     for a in RING_ANGLES:
@@ -299,9 +302,9 @@ def t1():
     ruler(c, 20, 17); crosscheck(c, 20, 23)
     ident(c, 28, 27, "T1", "P10 locating ring + P20 ALEX foot (opt.)")
     y = para(c, 28, 33, "SHEET FACE UP on the ALEX top, the two edge lines on the two edges of one corner. Same sheet for all eight corners: turn it, never flip it.", 92)
-    para(c, 28, y + 1, "1 Tape down.  2 Awl or punch each RING centre through the paper.  3 Lift the sheet.  4 Pilot 5/64 in, 12 mm deep (puck 12 ALEX).  5 #6 × 5/8 in flat head, 13 mm into the ALEX top.", 92)
+    para(c, 28, y + 1, "1 Tape down.  2 Awl or punch each RING centre through the paper.  3 Lift the sheet.  4 Pilot 5/64 in, 12 mm deep (puck 12 ALEX).  5 #6 × 5/8 in flat head, 13.4 mm into the ALEX top.", 92)
     yl = legend(c, 124, 35, "DRILL ⌀2.0 (5/64 in): ring screws, ALEX TOP.", "OPTIONAL DRILL ⌀2.0 (5/64 in): ALEX feet only, on the ALEX BOTTOM (unit on its back).", w=52)
-    para(c, 124, yl + 3, "Ring: OD ⌀57, flange ⌀75 (dashed), screws on r 33 at 45 / 165 / 285°, the printed ALEX corner template's holes. ALEX foot: r 14.5 at the same angles. Angles counter-clockwise from the bottom edge, sheet face up. Ring screw holes ⌀3.8 shown dashed.", 52)
+    para(c, 124, yl + 3, "Ring: bore ⌀52, OD ⌀58, flange ⌀75 (dashed), screws on r 33 at 45 / 165 / 285°, the printed ALEX corner template's holes. ALEX foot: r 14.5 at the same angles. Angles counter-clockwise from the bottom edge, sheet face up. Ring screw holes ⌀3.8 shown dashed.", 52)
     return save(c, name), W
 
 
@@ -331,9 +334,9 @@ def t2():
     OB = (EX + k, Ey)
     line_id(c, "T-2-B-station", (EX, Ey), (EX + k + 40, Ey), heavy=False, dash="4 1 0.8 1")
     plate_pattern(c, name, "B", OB, (0, 0), lambda a, b: (b, a + k), src)      # u = along the edge from the station, v = from the edge
-    dim2(c, (EX, 95), (EX + k, 95), "85")
+    dim2(c, (EX, 95), (EX + k, 95), "85 (8.5 cm)")
     T(c, (12, 32), "PIECE B · F1 F3 F5 F6", weight="bold")
-    para(c, 12, 37, "Set the station line on your pencil mark 345 (34.5 cm) from the far end, along this edge.", 46)
+    para(c, 12, 37, "Set the station line on your pencil mark 34.5 cm from the far end, along this edge.", 46)
     T(c, (12, 54), "← TOP EDGE: trim, butt to it")
     T(c, (EX + k + 33, Ey - 2.6), "STATION LINE")
     # cut line
@@ -345,7 +348,7 @@ def t2():
     T(c, (12, 110), "← TOP EDGE: trim, butt to it"); T(c, U(105, 3.2), "TOP END: trim, butt to the end", anchor="middle")
     label_box(c, (C[0] + 26, C[1] + 3.4), "DATUM: far corner of the top")
     plate_pattern(c, name, "A", U(k, k), (k, k), lambda a, b: (a, b), src)
-    dim2(c, U(0, 10), U(k, 10), "85"); dim2(c, U(10, 0), U(10, k), "85")
+    dim2(c, U(0, 10), U(k, 10), "85 (8.5 cm)"); dim2(c, U(10, 0), U(10, k), "85 (8.5 cm)")
     T(c, (127, 108), "PIECE A · F2 F4 F7 F8", weight="bold")
     T(c, (127, 113), f"T2-A · rev {REV}", weight="bold")
     yl = legend(c, 127, 120, "DRILL ⌀3.2 (1/8 in), 15 mm deep (puck 15 LEG). Plate holes ⌀5.2 dashed.", w=49)
@@ -370,7 +373,7 @@ def t3(inset, name, tid):
         a = math.radians((-90 if toward else 90) + 72 * i)   # angle in (u along the edge, v from the edge) frame
         uv = (r * math.cos(a), inset + r * math.sin(a))
         drill(c, name, f"{tid}-H{i + 1}", (O[0] + uv[0], EY - uv[1]), "1/8", uv, f"facts olov r {r}, 5 × 72°, {'one toward' if toward else 'one away from'} the edge (leg-jig.scad)", ref_d=OLOV["hole_diameter"])
-    dim2(c, (8, EY), (8, EY - inset), str(inset))
+    dim2(c, (8, EY), (8, EY - inset), f"{inset} ({inset / 10:g} cm)")
     c.arrow((60, EY - 38), (60, EY - 2)); T(c, (58, EY - 20), "toward the edge", anchor="end")
     tag = tid.replace("T-", "T")
     legtxt = "DRILL ⌀3.2 (1/8 in), 15 mm deep (puck 15 LEG). OLOV holes ⌀5.5 dashed."
@@ -379,13 +382,13 @@ def t3(inset, name, tid):
         ruler(c, 20, 17); crosscheck(c, 20, 23)
         T(c, (28, 27), f"{tag} · P05 OLOV plate · 100", weight="bold")
         y = para(c, 128, 6, f"{tag} · rev {REV}", 48, weight="bold")
-        y = para(c, 128, y + 1, "L2 (65, 10), L3 (140, 10): top A, 100 from the back edge; station x 650 and 1400 from the side-wall end. L4 (10, 85), L5 (10, 160), L6 (10, 235): top B, 100 from the side-wall edge; station 85 - 65 = 20 cm, then 95 and 170 cm from the joint end. One hole points AT the edge.", 48)
+        y = para(c, 128, y + 1, "The sheet sets 10 cm from the edge. Top A, edge = back edge, tape from the side-wall end: L2 65 cm, L3 140 cm. Top B, edge = side-wall edge, tape from the joint end: L4 20 cm, L5 95 cm, L6 170 cm. One hole points AT the edge.", 48)
         legend(c, 128, y + 4, legtxt, w=48)
     else:
         T(c, (SX + 2, 112), "STATION LINE"); T(c, (100, 100), "plate ⌀105")
         ruler(c, 74, 132); crosscheck(c, 74, 137)
         y = para(c, 124, 6, f"{tag} · P05 OLOV plate · 150 · L1 · rev {REV}", 52, weight="bold")
-        para(c, 124, y + 1, "L1 (15, 42) on top A: 150 from the side-wall end (x = 0); station 420 (42 cm) from the back edge, along that end. Turned 36°: one hole points AWAY from the edge.", 52)
+        para(c, 124, y + 1, "L1 on top A: the sheet sets 15 cm from the side-wall end; tape the station along that end: 42 cm from the back edge. Turned 36°: one hole points AWAY from the edge.", 52)
         para(c, 12, 118, "Only for L1. L2-L6 use sheet T3a.", 48, weight="bold")
         legend(c, 84, 142, legtxt, w=92)
     return save(c, name), W
@@ -432,7 +435,7 @@ def t4(rail):
             if s0 <= s <= s_end:
                 drill(c, name, f"T-4{rail}-{n}-{rail}{i}", (X(s), YS), "7/32", (s, SCREW_LINE), f"data.json rail{rail}.holes[{i - 1}] = {s / 10:g} cm; facts screw line {SCREW_LINE:g}")
                 c.circle((X(s), YS), BITS["1/8"][0] / 2, lw="thin", dash="0.5 0.4")
-                T(c, (X(s), YS + 7.5), f"{rail}{i} · {s:g} ({s / 10:g} cm)", anchor="middle", weight="bold")
+                T(c, (X(s), YS + 7.5), f"{rail}{i} · {s:g} mm ({s / 10:g} cm)", anchor="middle", weight="bold")
         # start: reference end or join
         if n == 1:
             line_id(c, f"T-4{rail}-{n}-ref", (X(0), YF - 5), (X(0), YB + 4))
@@ -452,13 +455,13 @@ def t4(rail):
         else:
             for s in (ST["design_length"], BOUGHT):
                 c.line((X(s), YF - 5), (X(s), YB + 4), lw="outline", dash="1.5 0.8")
-            T(c, (X(BOUGHT) + 2, YB + 3.5), "design end 2130 | 2133.6 = 84 in as bought")
+            T(c, (X(BOUGHT) + 2, YB + 3.5), "design end 213.0 cm | 213.4 cm = 84 in as bought")
             para(c, X(BOUGHT) + 4, YS + 6, "FAR END: your rail ends near here. It carries any extra length; no station depends on it.", 66)
         # ident inside the band, screw-line label and 19 dimension where they clear the holes
         tag = f"T4-{rail} · sheet {n}/{n_sheets} · rev {REV}"
         off = free_spot(c, [14, 60, 120, 180], lambda o: (X(s0) + o, YB - 4.5, X(s0) + o + len(tag) * 3.2 * EM + 2, YB - 1.5))
         T(c, (X(s0) + off, YB - 3), tag, weight="bold")
-        lab = f"screw line {SCREW_LINE:g} from the free edge"
+        lab = f"screw line {SCREW_LINE:g} mm from the free edge"
         off = free_spot(c, range(14, 240, 4), lambda o: [(X(s0) + o + 1.5, YF + 5.2, X(s0) + o + 6.5, YS - 0.5), (X(s0) + o + 7.5, YS - 4.5, X(s0) + o + 9 + len(lab) * 3 * EM, YS - 0.5)])
         T(c, (X(s0) + off + 8, YS - 2.6), lab)
         dim2(c, (X(s0) + off + 4, YF), (X(s0) + off + 4, YS), f"{SCREW_LINE:g}")
@@ -468,8 +471,8 @@ def t4(rail):
         para(c, 130, 5, "DRILL ⌀5.56 (7/32 in) through the steel; 1/8 in pilot first (dashed). Centre-punch through the paper, low speed, cutting oil.", 68)
         posmark(c, (124, 22.5), size=3.5); para(c, 130, 22, "Ticks and numbers: position only, never drilled.", 68)
         para(c, 118, 31, "Preferred method: the printed rail drill jig on the 19 line, with a tape from the reference end. This strip is the check. Tape it to either face of the flat leg. 19 is from the FREE edge (build manual step 1), not from the heel.", 80)
-        boxed(c, 200, 1, 72, "MEASURE THE DELIVERED RAIL", f"Design 2130; bought as 84 in = 2133.6. Every station runs from the labelled {end_name.lower()}; the far end carries any extra. Tape-check each station from that end.")
-        para(c, 4, YB + 9, f"Joins: trim each later sheet on its start J line and lay it on the previous sheet's J line so ticks, numbers and the screw line run on; tape. Rail {rail} holes: " + ", ".join(f"{rail}{i} {s:g}" for i, s in enumerate(stations, 1)) + ".", 266)
+        boxed(c, 200, 1, 72, "MEASURE THE DELIVERED RAIL", f"Design 213.0 cm (2130 mm); bought as 84 in = 213.4 cm (2133.6 mm). Every station runs from the labelled {end_name.lower()}; the far end carries any extra. Tape-check each station from that end.")
+        para(c, 4, YB + 9, f"Joins: trim each later sheet on its start J line and lay it on the previous sheet's J line so ticks, numbers and the screw line run on; tape. Rail {rail} holes, cm from the {end_name.lower()}: " + ", ".join(f"{rail}{i} {s / 10:g}" for i, s in enumerate(stations, 1)) + ".", 266)
         names.append((save(c, name), W, n, n_sheets, s0, s_end))
     return names
 
@@ -501,6 +504,9 @@ def t5():
         assert abs(s - ref) <= 0.051, (s, ref)
     for s, ref in zip(RH["railB_from_corner_end"], (FIT["c1"], FIT["c2"])):
         assert abs(s - ref) <= 0.051, (s, ref)
+    exact = [heel_in - FIT["c2"], heel_in - FIT["c1"], heel_out + FIT["c1"], heel_out + FIT["c2"], FIT["c1"], FIT["c2"]]
+    CM = {s: round(e / 10, 1) for (_, s), e in zip(holesA + [(0, v) for v in RH["railB_from_corner_end"]], exact)}   # cm from the unrounded heel + slot centre
+    assert list(CM.values()) == [43.7, 48.6, 54.9, 59.8, 2.9, 7.8], CM
     ruler(c, 8, 17); crosscheck(c, 170, 2)
     T(c, (8, 26), f"T5 · P08 on P06 / P07 · REFERENCE 1:2, NOT FOR DRILLING · rev {REV}", weight="bold")
 
@@ -517,8 +523,8 @@ def t5():
     c.rect(*P(s_a, 0), 250 * k, ang * k, fill="#f2f2f2")
     line_id(c, "T-5-heel-in", (P(heel_in, 0)[0], 38.6), (P(heel_in, 0)[0], P(0, ang + 4)[1]), heavy=False)
     line_id(c, "T-5-heel-out", (P(heel_out, 0)[0], 44.6), (P(heel_out, 0)[0], P(0, ang + 4)[1]), heavy=False)
-    T(c, (P(heel_in, 0)[0] - 1.5, 38), "INSIDE heel 515: legs ← wall end", anchor="end")
-    T(c, (P(heel_out, 0)[0] + 1.5, 44), "OUTSIDE heel 520: legs → far end")
+    T(c, (P(heel_in, 0)[0] - 1.5, 38), "INSIDE heel 51.5 cm: legs ← wall end", anchor="end")
+    T(c, (P(heel_out, 0)[0] + 1.5, 44), "OUTSIDE heel 52.0 cm: legs → far end")
     for s0 in (heel_out, heel_in - legl):
         c.rect(*P(s0, below - fw / 2), legl * k, fw * k, fill="#bfbfbf")
     for hc in (heel_out + FIT["c1"], heel_out + FIT["c2"], heel_in - FIT["c1"], heel_in - FIT["c2"]):
@@ -530,8 +536,8 @@ def t5():
     dim2(c, P(s_a + 254, 0), P(s_a + 254, below), f"{below:g}")
     for hid, s in holesA:
         hole(hid, s, P, X0, s_a, Y0 + below * k)
-        T(c, (P(s, 0)[0], P(0, ang + 6)[1]), f"{s:g}", anchor="middle", weight="bold")
-    T(c, (14, 90), "rail A hole centres from the WALL END (0, 400 mm off the drawing)")
+        T(c, (P(s, 0)[0], P(0, ang + 6)[1]), f"{s:g}", anchor="middle", weight="bold"); T(c, (P(s, 0)[0], P(0, ang + 6)[1] + 4.2), f"({CM[s]:g} cm)", anchor="middle")
+    T(c, (14, 90), "rail A hole centres from the WALL END (40 cm off the drawing)")
     T(c, (P(heel_out, 0)[0] + 3, 95), "rail B end (section)")
     # view 2: rail B outer face near the corner end
     Y0 = 116
@@ -545,7 +551,7 @@ def t5():
     c.centreline(Q(-8, below), Q(236, below))
     for i, s in enumerate(RH["railB_from_corner_end"], 1):
         hole(f"T-5-B{i}", s, Q, 19, 0, Y0 + below * k)
-        T(c, (Q(s, 0)[0], Q(0, ang + 6)[1]), f"{s:g}", anchor="middle", weight="bold")
+        T(c, (Q(s, 0)[0], Q(0, ang + 6)[1]), f"{s:g}", anchor="middle", weight="bold"); T(c, (Q(s, 0)[0], Q(0, ang + 6)[1] + 4.2), f"({CM[s]:g} cm)", anchor="middle")
     T(c, (21, 109), "HEEL = corner end (0): fitting legs → far end")
     T(c, (66, Q(0, ang + 6)[1]), "from the CORNER END; bolts pass both fittings")
     # detail 1:1: one fitting leg with its slots
@@ -559,7 +565,7 @@ def t5():
     dim2(c, (hx, 167), (hx + FIT["c2"], 167), f"{FIT['c2']:g}"); dim2(c, (hx, 173), (hx + FIT["c1"], 173), f"{FIT['c1']:g}")
     dim2(c, (hx, ly + fw + 5), (hx + legl, ly + fw + 5), f"{legl:g}")
     dim2(c, (hx + legl + 4, ly), (hx + legl + 4, ly + fw), f"{fw:g}")
-    boxed(c, 124, 152, 50, "RAIL HOLES · VERIFIED 23 Oct 2026", "Rail A from the wall end: 549.2 / 598.5 (outside fitting, heel 520), 485.9 / 436.6 (inside, heel 515). Rail B from the corner end: 29.2 / 78.5. All on the 29 bolt line. Drill THROUGH THE FITTING: clamp on the heel mark, printed slot plug in each slot, pilot 1/8 in, open to 7/16 in (11.1). Inside fitting gusset DOWN, outside toward the knee space.")
+    boxed(c, 124, 152, 50, "RAIL HOLES · VERIFIED 23 Oct 2026", "Rail A, cm from the wall end: 54.9 / 59.8 (outside fitting, heel 52.0), 48.6 / 43.7 (inside, heel 51.5). Rail B, cm from the corner end: 2.9 / 7.8. All on the bolt line, 29 mm below the heel. Drill THROUGH THE FITTING: clamp on the heel mark, printed slot plug in each slot, pilot 1/8 in, open to 7/16 in (11.1 mm). Inside gusset DOWN, outside toward the knee space.")
     return save(c, name), W
 
 
@@ -579,7 +585,7 @@ def t6():
     T(c, (25, 56), "DATUM (0, 0)")
     c.arrow(P(10, 10), P(100, 10)); T(c, (P(104, 0)[0], P(0, 10)[1]), "x")
     c.arrow(P(10, 10), P(10, 100)); T(c, (P(10, 0)[0], P(0, 112)[1]), "y", anchor="middle")
-    c.rect(*P(10, 479), 550 * k, 51 * k, lw="thin", dash="1.5 1"); T(c, (P(300, 0)[0], P(0, 465)[1]), "rail A (y 479-530)", anchor="middle")
+    c.rect(*P(10, 479), 550 * k, 51 * k, lw="thin", dash="1.5 1"); T(c, (P(300, 0)[0], P(0, 465)[1]), "rail A (y 47.9-53.0 cm)", anchor="middle")
     c.circle(P(150, 420), 52.5 * k, lw="thin", dash="1.5 1"); T(c, P(150, 420), "L1", anchor="middle")
     for i, (x0, x1, y0, y1) in enumerate(pads, 1):
         c.raw(f'<rect id="T-6-pad{i}" x="{_f(P(x0, y0)[0])}" y="{_f(P(x0, y0)[1])}" width="{_f((x1 - x0) * k)}" height="{_f((y1 - y0) * k)}" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>')
@@ -587,13 +593,13 @@ def t6():
     cx = (zone[0] + zone[1]) / 2; cy = (13.5 + 63.5) / 2
     for (ex, ey, rx, ry) in ((cx, cy, 45, 25), (cy, cx, 25, 45)):
         p = P(ex, ey); c.raw(f'<ellipse cx="{_f(p[0])}" cy="{_f(p[1])}" rx="{_f(rx * k)}" ry="{_f(ry * k)}" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="0.6 0.5"/>')
-    dim2(c, P(0, -10), P(200, -10), "200"); dim2(c, P(0, -22), P(454, -22), "454")
-    dim2(c, P(-10, 0), P(-10, 200), "200"); dim2(c, P(-22, 0), P(-22, 454), "454")
-    leader2(c, P(330, 70), (92, 88), "pad plate x 200-454, y 5-81 (0.5-8.1 cm)")
-    leader2(c, P(445, 45), (138, 76), "clamp zone 360-440"); T(c, (138, 80.5), "jaw pad oval 90 × 50")
-    leader2(c, P(70, 300), (52, 116), "pad plate x 5-81, y 200-454")
-    leader2(c, P(52, 430), (52, 123), "clamp zone 360-440; oval")
-    para(c, 8, 192, "Plan from above, datum top A's back-left corner (x along the back wall, y along the side wall). The plates lie LOOSE on the underside under the VIVO lower jaws (build manual step 8): with the top face down, draw the outlines measuring from the same two named edges. Jaw pad: oval 90 × 50, 13.5-63.5 in from the edge (measured), drawn centred on each clamp.", 166)
+    dim2(c, P(0, -10), P(200, -10), "200 (20.0 cm)"); dim2(c, P(0, -22), P(454, -22), "454 (45.4 cm)")
+    dim2(c, P(-10, 0), P(-10, 200), "200 (20.0 cm)"); dim2(c, P(-22, 0), P(-22, 454), "454 (45.4 cm)")
+    leader2(c, P(330, 70), (92, 88), "pad plate x 20.0-45.4 cm, y 0.5-8.1 cm")
+    leader2(c, P(445, 45), (138, 76), "clamp zone 36-44 cm"); T(c, (138, 80.5), "jaw pad 90 × 50 mm")
+    leader2(c, P(70, 300), (52, 116), "pad plate x 0.5-8.1 cm, y 20.0-45.4 cm")
+    leader2(c, P(52, 430), (52, 123), "clamp zone 36-44 cm; oval")
+    para(c, 8, 192, "Plan from above, datum top A's back-left corner (x along the back wall, y along the side wall). The plates lie LOOSE on the underside under the VIVO lower jaws (build manual step 8): with the top face down, draw the outlines measuring from the same two named edges. Jaw pad: oval 90 × 50 mm, 13.5-63.5 mm in from the edge (measured), drawn centred on each clamp.", 166)
     return save(c, name), W
 
 
@@ -682,11 +688,11 @@ def head(tid, name, badges, extra=""):
     b = "".join(badge(x) for x in badges)
     w = warning_panel("DISABLE FIT TO PAGE / shrink to fit / scale to fit. Measure the ruler before use: 0 to 100 must read 100.0 mm and the cross-check bar 50.0 mm (±0.5). If either is off, do not use the sheet: reprint." + extra, kind="PRINT AT 100% / ACTUAL SIZE" + (" · A4 LANDSCAPE" if tid.startswith("T4") else ""))
     return (f'<div class="tph"><div><span class="tid">{tid}</span><span class="tname">{name}</span> {b}</div>'
-            f'<div class="trev">Template {tid} · rev {REV}<br>numbers: manual/facts.json + data.json, source_commit: {SRC}</div></div><div class="tplwarn">{w}</div>')
+            f'<div class="trev">Template {tid} · rev {REV}<br><b>units: mm; tape stations also in cm</b><br>numbers: manual/facts.json + data.json, source_commit: {SRC}</div></div><div class="tplwarn">{w}</div>')
 
 
-def page(tid, title, name, badges, fig, W, cls="", extra="", after=""):
-    return (f'<section class="page{cls}" data-chapter="{tid}" data-title="{title}">\n{head(tid, name, badges, extra)}\n'
+def page(tid, title, name, badges, fig, W, cls="", extra="", after="", pre=""):
+    return (f'<section class="page{cls}" data-chapter="{tid}" data-title="{title}">\n{head(tid, name, badges, extra)}{pre}\n'
             f'<img class="fig" src="../../figures/{fig}" style="width:{_f(W)}mm">{after}\n</section>\n')
 
 
@@ -714,8 +720,9 @@ def main():
 <p class="small">Using a drilling sheet: trim on the heavy datum line(s), butt the trimmed edge to the named edge, tape, then punch each DRILL centre through the paper with an awl or automatic centre punch, lift the sheet and drill to the depth stated. The printed jigs (P18) are the primary tools; these sheets reproduce their patterns and serve as the check. Top marking is done face down (underside up); every pattern here is used without flipping the sheet.</p>
 </section>
 """)
-    write("01-ring.html", page("T1", "Locating ring P10", "Locating ring (P10) · drilling template 1:1", ["VERIFIED"], f1, w1,
-          after=warning_panel("ALEX top panel at least 16 mm thick for the 5/8 in screws: measure at an edge before drilling (open measurement). Turn each ring so its three screw holes sit on the marks.", kind="MEASURE ON HARDWARE")))
+    write("01-ring.html", page("T1", "Locating ring P10", "Locating ring (P10) · check template 1:1", ["VERIFIED"], f1, w1,
+          pre='<div class="note"><b>CHECK SHEET.</b> The rings are fitted by tracing the pads with the top standing on the bare cabinet (build manual). Lay this sheet on each ALEX corner to check that the ring centre is 5 cm in from both edges. If you prefer the measured method, you can also drill through it.</div>',
+          after='<div class="note">ALEX top panel 15.9 mm (5/8 in), measured 23 Oct 2026: the #6 × 5/8 in screws go 13.4 mm in and leave 2.5 mm. Turn each ring so its three screw holes sit on the marks.</div>'))
     write("02-feet.html", page("T2", "Feet plate P09", "Feet plate (P09) · drilling template 1:1", ["VERIFIED"], f2, w2,
           extra=" Verified on the purchased plate 23 Oct 2026: 41.6 between holes (inside jaws), 52.0 across (outside jaws), so 46.8 centres."))
     write("03-olov.html", page("T3a", "OLOV plate P05, 100", "OLOV plate (P05) · 100 from the edge · 1:1", ["VERIFIED"], f3a, w3)

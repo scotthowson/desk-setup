@@ -50,9 +50,9 @@
 <line x1="54.643" y1="32.5" x2="33.214" y2="61.071" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1" stroke-linecap="round"/>
 <circle cx="54.643" cy="32.5" r="0.714" fill="#000" stroke="#000" stroke-width="0.25"/>
 <circle cx="33.214" cy="61.071" r="0.714" fill="#000" stroke="#000" stroke-width="0.25"/>
-<text x="43.929" y="35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">600</text>
-<text x="35" y="46.786" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">800</text>
-<text x="46.071" y="48.214" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">1000 (field check)</text>
+<text x="43.929" y="35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">60 cm</text>
+<text x="32.143" y="46.786" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">80 cm</text>
+<text x="46.071" y="48.214" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">100 cm (field check)</text>
 <polygon points="20.714,25.357 22.857,25.357 22.857,39.643 20.714,39.643" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <circle cx="21.786" cy="29.286" r="0.643" fill="none" stroke="#000" stroke-width="0.25"/>
 <polygon points="14.286,31.429 28.571,31.429 28.571,33.571 14.286,33.571" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>

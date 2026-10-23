@@ -36,6 +36,6 @@
 <polygon points="63.68,100.32 65.183,99.771 65.183,100.869" fill="#000"/>
 <polygon points="84,100.32 82.497,100.869 82.497,99.771" fill="#000"/>
 <text x="73.84" y="98.62" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000"></text>
-<text x="87" y="100.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">B's flat leg covers 469 to 520 on rail A</text>
-<text x="74" y="106.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">B's outer face on rail A's 520 mark; B's end touching A: no gap</text>
+<text x="87" y="100.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">B's flat leg covers 46.9 to 52.0 cm on rail A</text>
+<text x="74" y="106.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">B's outer face on rail A's 52.0 cm mark; B's end touching A: no gap</text>
 </svg>

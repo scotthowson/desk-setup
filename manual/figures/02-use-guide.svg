@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 74" width="86mm" height="74mm" class="fig">
+<polygon points="6,26 22,26 22,56 6,56" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="12.5,26 15.5,26 15.5,48.5 12.5,48.5" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="14" y1="14" x2="14" y2="48.5" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polygon points="9,14 19,14 19,26 9,26" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="24.6" y1="48.5" x2="25.21" y2="48.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="24.6" y1="26" x2="25.21" y2="26" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="24.01" y1="48.5" x2="24.01" y2="26" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="24.01,48.5 23.496,47.091 24.524,47.091" fill="#000"/>
+<polygon points="24.01,26 24.524,27.409 23.496,27.409" fill="#000"/>
+<text x="26.01" y="37.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 26.01 37.25)">45 mm</text>
+<text x="14" y="60" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(a) SET</text>
+<text x="14" y="63.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">1/8: 45, 5/64: 35</text>
+<polygon points="30,56 56,56 56,66 30,66" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="36,46 50,46 50,56 36,56" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="41.5,46 44.5,46 44.5,56 41.5,56" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="38,34 48,34 48,46 38,46" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="43" y1="46" x2="43" y2="62" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polygon points="42.2,56 43.8,56 43.8,62 42.2,62" fill="#fff" stroke="#000" stroke-width="0.2" stroke-dasharray="0.6 0.4" stroke-linejoin="round"/>
+<line x1="43.8" y1="62" x2="60" y2="62" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="43.8" cy="62" r="0.6" fill="#000"/>
+<text x="61" y="62" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">depth of the puck</text>
+<line x1="48" y1="45" x2="54" y2="38" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="48" cy="45" r="0.6" fill="#000"/>
+<text x="55" y="38" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">chuck nose stops</text>
+<text x="43" y="72.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(b) drill through the puck</text>
+</svg>
