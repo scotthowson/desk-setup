@@ -120,7 +120,7 @@ a{color:var(--accent2)}
   <dt>Chuck nose</dt><dd>The flat front face of the drill's chuck, the part that spins round the bit.</dd>
   <dt>Nylon-insert nut</dt><dd>A nut with a plastic ring inside so it cannot vibrate loose. It is stiff to turn; that is normal.</dd>
   <dt>Toe-in</dt><dd>Turning a side monitor or speaker a little toward you instead of flat along the wall.</dd>
-  <dt>Gusseted fitting</dt><dd>A steel L-shaped bracket with a triangular web across its inside corner. Very stiff. Ours are made for 1-5/8 in strut channel and have two 9/16 in holes in each leg.</dd>
+  <dt>Gusseted fitting</dt><dd>A steel L-shaped bracket with a triangular web across its inside corner. Very stiff. Ours are made for 1-5/8 in strut channel: legs 100.5 long and 41 wide, 5 mm steel, with two 21 × 12 mm slots in each leg centred 29 and 78 mm from the heel (measured 23 Oct 2026).</dd>
   <dt>Fence</dt><dd>A raised lip on a printed template that rests against an edge.</dd>
   <dt>Racking</dt><dd>The whole desk leaning sideways like a parallelogram. The cabinets, locked to the tops by the rings, stop it.</dd>
 </dl>
@@ -155,14 +155,14 @@ a{color:var(--accent2)}
 <p>Two identical pieces of angle arrive cut to 213 cm; either can be rail A. Tape a label on one end of each: rail A <em>wall end</em>, rail B <em>corner end</em>. All stations below are measured from that labelled end.</p>
 <h3>Screw holes, in the flat leg</h3>
 <div class="fig" id="figRailA"></div>
-<p class="cap">Rail A, drawn opened out flat as if you unfolded the L along the heel; the heavy line between the strips is the heel. Upper strip: the flat leg with its screw holes. Lower strip: the vertical leg with the fitting bolt holes, drawn where they fall if your fitting's holes are about 2.5 and 6.5 cm from its heel; yours set the exact spots.</p>
+<p class="cap">Rail A, drawn opened out flat as if you unfolded the L along the heel; the heavy line between the strips is the heel. Upper strip: the flat leg with its screw holes. Lower strip: the vertical leg with the fitting bolt holes at the measured slot centres, 2.9 and 7.8 cm from each fitting's heel; the fitting with the slot plug is still the template you drill through.</p>
 <div class="fig" id="figRailB"></div>
 <p class="cap">Rail B. Holes 1 and 2 are only 5 cm apart and both land in top A later; holes 3 to 10 land in top B.</p>
 <table id="tRail"></table>
 <h3>Bolt holes for the corner fittings, in the vertical leg</h3>
-<p>You do not need to know the fitting's hole spacing. The fitting <em>is</em> the template: clamp it to the rail where it will finally sit, drop a centring plug into each hole and drill the 1/8 in pilot through the plug. The plug matters: the fitting's holes are 9/16 in and the bolts 3/8, so a bare punch could land anywhere in 4.8 mm of slack. Both fittings are identical, so holes punched through one fit the other. Remember that the heel of a fitting means the <em>outside</em> of its bend.</p>
+<p>The fitting <em>is</em> the template: clamp it to the rail where it will finally sit, drop a slot plug into each slot and drill the 1/8 in pilot through the plug. The plug matters: the fitting's holes are 21 × 12 mm slots and the bolts 3/8, so a bare punch could land anywhere in 11 mm of slot. The slot centres are 29.15 and 78.45 mm from the heel (measured), so the holes land there. Both fittings are identical, so holes punched through one fit the other. Remember that the heel of a fitting means the <em>outside</em> of its bend.</p>
 <div class="fig" id="figTemplate"></div>
-<p class="cap">Where to clamp the fitting as a template, three times. Its heel (outside of the bend) goes on the blue mark, its holes on the 29 mm bolt line, its legs pointing the way shown. The gold dots are where the holes land if your fitting's holes are about 2.5 and 6.5 cm from its heel. Rail B's two holes serve both fittings.</p>
+<p class="cap">Where to clamp the fitting as a template, three times. Its heel (outside of the bend) goes on the blue mark, its holes on the 29 mm bolt line, its legs pointing the way shown. The gold dots are where the holes land with the measured slot centres 2.9 and 7.8 cm from the heel. Rail B's two holes serve both fittings.</p>
 <table id="tTemplate"></table>
 <ol class="steps">
   <li>Scribe the screw line on each flat leg: 19 mm in from the free edge, full length. The printed marking gauge does this: lay it on the flat leg with its lip over the free edge, pencil in the <strong>19</strong> notch, slide. Then scribe the bolt line on each vertical leg the same way: lip over the heel edge, pencil in the <strong>29</strong> notch.</li>
@@ -296,7 +296,6 @@ a{color:var(--accent2)}
   <li>Round feet load rating (design wants 50 kg or more each); pad diameter with calipers before printing the rings (assumed 50.0).</li>
   <li>ALEX top-panel thickness where the ring screws go (expect 16 mm or more).</li>
   <li>Each top's thickness with calipers (expect 28 mm).</li>
-  <li>Your fitting's hole positions from its heel, once it arrives: h1 = <span class="blank"></span> cm, h2 = <span class="blank"></span> cm. The drawings in section 2 assume about 2.5 and 6.5.</li>
 </ul>
 
 </div>
@@ -315,7 +314,7 @@ const D = {
   railA: { x0:1, x1:214, y0:47.9, y1:53, holes:[3.5,28,54,80,106,132,158,184,210.5], from:'wall end', fit:[{heel:52.0,dir:1,label:'outside fitting'},{heel:51.5,dir:-1,label:'inside fitting'}] },
   railB: { y0:53, y1:266, x0:47.9, x1:53, holes:[2.5,7.5,28,54,80,106,132,158,184,210.5], from:'corner end', fit:[{heel:0,dir:1,label:'both fittings'}] },
   holeOffset: 1.9, angle: 5.08, wall: 0.48,
-  fitting: { below: 2.9, w: 4.13, legs: 8, h:[2.5,6.5] },   // h: assumed hole distances from the heel until Scott measures
+  fitting: { below: 2.9, w: 4.1, legs: 10.05, h:[2.915,7.845], slot:[2.1,1.2] },   // measured 23 Oct 2026: legs 100.5 x 41, two 21 x 12 slots per leg centred 29.15 and 78.45 from the heel
   clamp: 40, clampW: 8.0, clampD: 8.9, zoneIn: 9,   // clamp back 8 cm long along the edge (measured), jaw 8.9 deep
   pads: [ [20.0,45.4,0.5,8.1], [0.5,8.1,20.0,45.4] ],
   plates: [ ['P1',15], ['P2',35] ], plateL: 25.4, plateW: 7.6, plateY: 66, plateHoles: [2.0, 7.0, 18.4, 23.4],   // hole centres along the plate from one end
@@ -367,7 +366,7 @@ table('tParts', ['Item','Qty','Spec'], [
   ['OLOV leg','6','60–90 cm, set to 80.2; 10.5 cm plate, five 5.5 mm holes on an 85 mm circle; max 13 kg each'],
   ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 59.5 mm plate with four 5.2 mm holes 46.8 mm apart (measured)'],
   ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
-  ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
+  ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, legs 100.5 × 41, two 21 × 12 mm slots per leg centred 29.15 and 78.45 from the heel (measured)'],
   ['Mending plates','4','10 × 3 × 0.12 in, four holes along the length at 2.0, 7.0, 18.4, 23.4 cm: two across the joint, two as pads under the clamp jaws'],
   ['VIVO STAND-V300CU','1','clamps at (40, 0) and (0, 40), crossbar on the diagonal, poles 50.2 cm apart'],
   ['Monitors','3','Samsung Odyssey G5 32 in (1000R, VESA 75, about 5 kg) centre; two Acer XZ320QU 31.5 in (1500R, VESA 100, 5.6 kg with stand, about 5 kg on the arm against an 8 kg limit); all landscape'],
@@ -409,7 +408,7 @@ table('tHelpers', ['Printed tool','When','How'], [
   ['ALEX corner template','section 5','Turn it over (fences down). Drop over a cabinet corner, fences against both edges, start the three pilots through it with the 5/64 in bit, lift it, finish with the 12 ALEX puck.'],
   ['Rail marking gauge','section 2','Turn it over (lip down). Lay it on the steel with the lip over the edge, pencil in the 19 notch (screw line) or the 29 notch (bolt line), slide.'],
   ['Rail drill jig','section 2','Turn it over (lip down). Hook over the flat leg\'s free edge, slide to the station line (sight grooves), drill the 1/8 in pilot through it, then open to 7/32 in freehand.'],
-  ['Fitting centring plugs, 2','section 2','Drop into the clamped fitting\'s 9/16 in hole; drill the 1/8 in pilot through the plug\'s centre bore. Then open to 7/16 in with the fitting off.'],
+  ['Fitting slot plugs, 2','section 2','Drop into the clamped fitting\'s 21 × 12 slot; drill the 1/8 in pilot through the plug\'s centre bore, so the hole lands at the slot\'s centre. Then open to 7/16 in with the fitting off.'],
   ['Drill guide','every pilot hole','See the box below. Never scale it. Its 10 EDGE step is for the wall-gap trim, drill held horizontal against the raw edge.'],
   ['Foot rings, 8','section 5','Screwed to the ALEX tops; the feet pads drop into them.'],
 ]);

@@ -219,7 +219,7 @@ label.t input{accent-color:var(--accent);margin:0}
   rails.add(box(53,61,Y0-4.95,Y0-0.85,53,53.5,M.zinc), box(53,53.5,Y0-4.95,Y0-0.85,53,61,M.zinc));     // outside 5 mm gusseted strut fitting (1-5/8 in wide), 29 mm below the top
   rails.add(box(44.5,52.5,Y0-4.95,Y0-0.85,53,53.5,M.zinc), box(52,52.5,Y0-4.95,Y0-0.85,53,61,M.zinc));   // inside fitting, other side of rail B's end, gusset-down
   const boltGeo = new THREE.CylinderGeometry(0.8,0.8,0.6,12);
-  [[55.5,0],[59.5,0],[50,0],[46,0],[0,55.5],[0,59.5]].forEach(([x,z],i)=>{ const b = new THREE.Mesh(boltGeo, M.zinc); if(i<4){ b.rotation.x=Math.PI/2; b.position.set(x,Y0-2.9,53.8);} else { b.rotation.z=Math.PI/2; b.position.set(53.8,Y0-2.9,z);} rails.add(b); });
+  [[54.92,0],[59.85,0],[48.59,0],[43.66,0],[0,55.92],[0,60.85]].forEach(([x,z],i)=>{ const b = new THREE.Mesh(boltGeo, M.zinc); if(i<4){ b.rotation.x=Math.PI/2; b.position.set(x,Y0-2.9,53.8);} else { b.rotation.z=Math.PI/2; b.position.set(53.8,Y0-2.9,z);} rails.add(b); });
   rails.add(box(11.2,18.8,Y0-0.3,Y0,53.3,78.7,M.zinc,false), box(31.2,38.8,Y0-0.3,Y0,53.3,78.7,M.zinc,false)); // 10 × 3 × 0.12 in mending plates across the joint, 3 mm clear of rail A
   rails.add(box(20,45.4,Y0-0.3,Y0,0.5,8.1,M.zinc,false), box(0.5,8.1,Y0-0.3,Y0,20,45.4,M.zinc,false)); // the other two plates as backing pads under the VIVO clamp jaws, 2.5 cm clear of rail A
   scene.add(rails);
