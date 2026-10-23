@@ -13,10 +13,10 @@
 //   10 EDGE  5/64 in, 10 mm: the wall-gap trim's #4 screws sideways into the raw back edge (hold the step's base against the edge, bit horizontal)
 //   12 ALEX  5/64 in, 12 mm: the locating rings into the ALEX tops, and the optional ALEX feet into the bottoms
 //   25 RAIL  1/8 in, 25 mm: through the 4.8 mm angle into the top, 20 mm into the wood
-// Print standing on its base, 100% infill, any filament. 156 x 18 x 47 mm. Never scale it.
+// Print standing on its base, 100% infill, any filament. 156 x 10 x 47 mm. Never scale it.
 // If your chuck nose is domed rather than flat, drill one test hole in scrap and measure it.
 
-step_w = 28; bore_off = 24; depth_y = 18;
+step_w = 28; bore_off = 24; depth_y = 10;   // 10 mm deep: enough wall round a 3.3 mm bore and a flat for the chuck nose
 P8 = 45;   // protrusion for the 1/8 in bit, set by the tower hole
 P64 = 35;  // protrusion for the 5/64 in bit (shorter bit, less sticks out)
 bore_8th = 3.3; bore_64th = 2.2; set_8th = 3.5; set_64th = 2.4;
