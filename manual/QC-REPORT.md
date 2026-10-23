@@ -1,16 +1,16 @@
 # Quality-control report · assembly manual
 
-Built 23 Oct 2026 from the repository at HEAD (commit ab97a73 and the measured facts since a2e99ea; see `manual/facts.json` `source_commit`). The brief named a2e99ea; the facts measured after it (feet plate 46.8, OLOV pattern on the 85 mm circle, VIVO pole inset 43.7 and pad, strut fitting slots, 1½ in bolts everywhere, the printed drill jigs) are in this manual and in the repository documents, so the two agree.
+Built 23 Oct 2026 from the repository at commit 459465afdf429f88e9928482752b118f5d7cdea3 (the measured facts since a2e99ea are included; see `manual/facts.json` `source_commit`). The brief named a2e99ea; the facts measured after it (feet plate 46.8, OLOV pattern on the 85 mm circle, VIVO pole inset 43.7 and pad, strut fitting slots, 1½ in bolts everywhere, the printed drill jigs) are in this manual and in the repository documents, so the two agree.
 
 ## Deliverables
 | File | Pages | Content |
 | --- | --- | --- |
-| `manual/IKEA-Style-Assembly-Manual.pdf` | 64 | cover, contents, chapters A–K, appendix |
+| `manual/IKEA-Style-Assembly-Manual.pdf` | 72 | cover, contents, chapters A–K, appendix |
 | `manual/Drilling-and-Placement-Templates.pdf` | 25 | T0 index, T1 ring (1:1), T2 feet plate (1:1), T3a/b OLOV (1:1), T4-A/B rail strips (1:1, 9 landscape sheets each), T5 fittings (reference 1:2 with VERIFIED rail hole positions), T6 clamp pads (reference 1:4) |
 | `manual/Assembly-Verification-Checklist.pdf` | 3 | measurements before you start, gates at each step, final checks, two-week and one-month items |
-| Source: `manual/src/` (chapter HTML and figure scripts), `manual/figures/` (150 SVG), `manual/lib/draw.py`, `manual/build.py`, `manual/facts.json`, `manual/data.json` | | rebuild with `python3 manual/build.py` |
+| Source: `manual/src/` (chapter HTML and figure scripts), `manual/figures/` (162 SVG), `manual/lib/draw.py`, `manual/build.py`, `manual/facts.json`, `manual/data.json` | | rebuild with `python3 manual/build.py` |
 
-Illustrations in the manual: 121 inline vector figures (plus 25 template sheets and the checklist icons). All vector; pages are A4 with 16 mm margins.
+Illustrations in the manual: 133 inline vector figures (plus 25 template sheets and the checklist icons). All vector; pages are A4 with 16 mm margins.
 
 ## How it was checked
 - Every chapter was written from `facts.json` and `data.json` (extracted from the guide's `D` object) and `docs/build-manual.md`; no number was allowed from anywhere else. Each author rendered its pages to PNG at 60 and 100 dpi and read them; then every page of all three PDFs was rendered and read again at integration, with the dense pages (face-down marking diagrams, both rail fabrication drawings, the underside layout, the joint plan, the clamp section) re-read at 110 dpi.
@@ -46,6 +46,13 @@ Footprint 2490 × 650 per top, 2490 × 3140 overall, 30 mm wall gaps, 2520 × 31
 
 ## Assumptions retained from the design review (labelled ASSUMPTION / FIELD CHECK in the manual)
 ALEX height 700 · VIVO top arm reach about 89 · feet load rating · the 3-4-5 squareness field check (not in the build manual) · corner sag about 1 mm under the 20 kg test (estimate, not a measured capacity) · bolt preload and friction margin (torque, not measured preload) · the lower jaw pad oval drawn centred on the clamp.
+
+## Second build (same day): what changed and what was re-verified
+- Units: cm for everything a tape reads, mm for calipers and drills, on every page; no page asks the reader to add or subtract (the two former cases, a 27 mm top and the trim gap, are now a plain statement and a lookup table).
+- Tools: chapter B gained five pages, one panel per printed jig drawn in use with its steps and first-print check; chapter E gained the panel and drawing "why the holes on both rails meet without a jig".
+- Rings: fitted by tracing the pads with the top standing on the bare cabinet (chapters G and H, build manual steps 5–7, checklist); bore 52 / OD 58 for the 50 mm pad; screw circle pinned at r 33 in `foot-ring.scad`, `alex-corner-template.scad`, `facts.json` and template T1, and asserted equal by `figures_T.py` (which reads the pinned value instead of deriving it).
+- Measured on the hardware 23 Oct 2026 and now VERIFIED throughout: strut fittings (legs 100.5 × 41 × 5, slots 21 × 12 at 29.15 / 78.45 from the heel; rail holes 54.9 / 59.8 / 48.6 / 43.7 cm on A, 2.9 / 7.8 cm on B), ALEX top panel 15.9 mm (screws 13.4 in, 2.5 remains), feet plate 59.5 with 46.8 centres, VIVO pole inset 43.7 and pad. Defined by CAD / the documents (SOURCE): every coordinate, the rail layout, the ring and foot geometry, heights. Still ASSUMPTION or MEASURE: see the list above (the ALEX top panel is removed from it; the bottom panel remains, for the optional feet only).
+- Verification run on this build: all three PDFs built from a clean clone of the repository (same page counts); built text searched for stale ring (51 / 57), panel-rule (16 mm) and earlier-geometry strings: none; the templates' 43 holes re-derived from the sources (0.002 mm) and the 100 mm rulers re-measured at 254 dpi; every page rendered and read again after the rebuild.
 
 ## Not done
 No paper print was measured (the 100 mm rulers were measured on the rendered PDF). The desk has not been load-tested; the manual's chapter J is the acceptance test, not a structural certification.
