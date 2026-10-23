@@ -27,7 +27,7 @@ module jig() {
     }
 }
 module labels(top = false) {
-    translate([inset, 9.8, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 47.0", size = 3.6, halign = "center", valign = "center");
+    translate([inset, 9.8, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 46.8", size = 3.6, halign = "center", valign = "center");
     translate([size - 6, size / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the EKB edges", size = 3.4, halign = "center", valign = "center");
     translate([inset, size - 5, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("EKB FEET CORNER", size = 5, halign = "center", valign = "center");
 }

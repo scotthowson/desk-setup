@@ -20,7 +20,7 @@
     "back_edge": "square, unfinished (wall side)",
     "max_fastener_depth": 21,
     "why_21": "28 mm particleboard with a thin laminate skin; a screw reaching the skin lifts it",
-    "confidence": "SOURCE"
+    "confidence": "SOURCE; thickness MEASURE ON HARDWARE (expect 28)"
   },
   "layout_cm": {
     "topA": {
