@@ -3,12 +3,12 @@
 // plate screw holes, square to the edges, in one placement. That is F2 and F4 at top A's far
 // corners and F7 and F8 at top B's far corners: no measuring at all for those four. The other
 // four feet (F1, F3, F5, F6) are 34.5 cm from the end: the T-square's 85 hole does those.
-// The plate is the measured 59.5 x 59.5 mm with 5.4 mm holes 47.4 mm apart (22 Oct 2026).
+// The plate is the measured 59.5 x 59.5 mm with 5.4 mm holes 36.6 mm apart (22 Oct 2026).
 // The file is in PRINT orientation: flat face on the bed, fences up, no supports. Turn it
 // over to use. Any filament.
 
 inset   = 85;      // foot centre from each edge
-hole_sp = 47.4;    // plate holes, centre to centre, measured
+hole_sp = 36.6;    // plate holes, centre to centre, measured
 plate   = 59.5;    // feet plate, engraved so you can see where it lands
 plate_t = 2.5; size = 125; fence_h = 6; fence_t = 4; hole_d = 4;
 
@@ -23,7 +23,7 @@ module jig() {
         translate([inset, inset, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);
         for (sx = [-1, 1], sy = [-1, 1]) translate([inset + sx * hole_sp / 2, inset + sy * hole_sp / 2, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);
         square_line(plate);
-        translate([inset, 8, plate_t - 0.6]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 47.4", size = 3.6, halign = "center");
+        translate([inset, 8, plate_t - 0.6]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 36.6", size = 3.6, halign = "center");
         translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the EKB edges", size = 3.4, halign = "center");
         translate([inset, size - 12, plate_t - 0.6]) linear_extrude(1) text("EKB FEET CORNER", size = 6, halign = "center");
     }

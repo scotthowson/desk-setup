@@ -131,7 +131,7 @@ a{color:var(--accent2)}
 <p>Every position is a pair <strong>(x, y)</strong> in centimetres measured from the <strong>back-left corner of top A</strong>: x runs along the back wall, y runs along the side wall. Top A covers x 0–249, y 0–65. Top B covers x 0–65, y 65–314. The two tops meet on the line y = 65. Both tops stand 3 cm off their walls.</p>
 <p><strong>Your seat</strong> is at the L corner, facing it diagonally. The three monitors wrap around that corner. Your knees swing through the open space under the corner and the first 55 cm of each wing; nothing is allowed to stand there.</p>
 <div class="fig" id="figOverview"></div>
-<p class="cap">Plan view from above. Gold circles: legs, drawn with their 11 cm plates. Small circles: the feet on the ALEX units. Grey strips: the rails, 12 cm back from the front edges. Dashed area: the knee sweep. Short names here; every coordinate is in the tables of sections 3 to 7.</p>
+<p class="cap">Plan view from above. Gold circles: legs, drawn with their 10.5 cm plates. Small circles: the feet on the ALEX units. Grey strips: the rails, 12 cm back from the front edges. Dashed area: the knee sweep. Short names here; every coordinate is in the tables of sections 3 to 7.</p>
 <h3>Heights, from the floor</h3>
 <table id="tHeights"></table>
 <p><strong>Optional ALEX feet.</strong> The desk is built at 83.0 cm. If you want it higher, four printed round feet under each cabinet (2, 4 or 6 cm; <code>parts/accessories/alex-foot.scad</code>, three #6 × 5/8 in screws each, marked with the ALEX corner template on the bottom corners) raise everything by their height. Nothing on the desk moves; these four numbers do, and the OLOV pre-set in section 3 becomes the table’s number. Decide before section 3.</p>
@@ -185,7 +185,7 @@ a{color:var(--accent2)}
 <p>Each top has one rounded, laminated long edge and one square, unfinished long edge. <strong>The unfinished edge goes against the wall.</strong> On top A it is y = 0 (the back edge). The rounded edge is the front edge. Either short end can be the side-wall end; pick one. Put tape on the unfinished long edge and on the chosen end and label them <em>back edge</em> and <em>side-wall end</em>. Every mark below is measured from those two edges.</p>
 <p>Lay top A face down on a blanket and <strong>stand so the taped back edge is away from you</strong>. The taped side-wall end is then on your right, and the drawing below matches what you see: x grows to the <strong>left</strong>. Before drilling: calipers on the top; if it is 27 mm instead of 28, shorten every screw into it by 1 mm.</p>
 <div class="fig" id="figA"></div>
-<p class="cap">Top A underside as seen face down. Gold circles: OLOV plates (11 cm). Grey squares: feet plates (6 cm). Grey strip: rail A, its screws as dots. Hatched boxes C1, C2: VIVO clamp zones, keep clear. Pale bars: where the two loose mending plates will pad the clamp jaws. Blue bars P1, P2: the joining plates, half on this top, with their screw holes.</p>
+<p class="cap">Top A underside as seen face down. Gold circles: OLOV plates (10.5 cm). Grey squares: feet plates (6 cm). Grey strip: rail A, its screws as dots. Hatched boxes C1, C2: VIVO clamp zones, keep clear. Pale bars: where the two loose mending plates will pad the clamp jaws. Blue bars P1, P2: the joining plates, half on this top, with their screw holes.</p>
 <table id="tA"></table>
 <h3>Marking with the T-square</h3>
 <p>Turn the T-square over so its lip hangs down, hook the lip over the edge named in the table, slide it to the station, and punch through the named hole. One row for every mark on this top:</p>
@@ -193,15 +193,15 @@ a{color:var(--accent2)}
 <ol class="steps">
   <li><strong>Legs L1, L2, L3.</strong>
     <ol>
-      <li>Punch the three centres with the T-square as in the table above.</li>
+      <li>Punch the three centres with the T-square as in the table above (or go straight to the jig in step 3).</li>
       <li>Draw a cross through each punch mark with the combination square, each arm about 7 cm long.</li>
-      <li>Set the OLOV plate (leg attached, pointing up) on the mark so that each plate edge is 5.5 cm from the mark; the cross lines help you see it is centred. Scribe through its four holes. Lift the leg away.</li>
+      <li>Hook the leg jig over the same edge (lip down), slide it to the station, and punch the centre and the five plate holes through its 100 pattern (150 pattern for L1). The plate's five screws then sit the same way round on every leg.</li>
       <li>Drill the four pilots with the drill guide's <strong>15 LEG</strong> step and the 1/8 in bit.</li>
       <li>Drive the IKEA M4 × 16 mm screws, clutch low, until the heads seat.</li>
       <li>Pre-set each leg to <strong>80.2 cm</strong> from plate face to foot (or the optional-feet table’s number in section 0b).</li>
     </ol>
   </li>
-  <li><strong>Feet F1–F4.</strong> F2 and F4: drop the feet corner jig over the far back corner and the far front corner (fences against both edges) and punch the centre and the four plate holes. F1 and F3: T-square as in the table, hole 85 and its four plate holes. The patterns are the measured 47.4 mm, so every plate lands square with its edges parallel to the top's. Drill the four pilots with the <strong>15 LEG</strong> step. Drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the printed foot height gauge (102.0 mm inside) just slides over the foot from the side with no rock: all eight identical, no ruler.</li>
+  <li><strong>Feet F1–F4.</strong> F2 and F4: drop the feet corner jig over the far back corner and the far front corner (fences against both edges) and punch the centre and the four plate holes. F1 and F3: T-square as in the table, hole 85 and its four plate holes. The patterns are the measured 36.6 mm, so every plate lands square with its edges parallel to the top's. Drill the four pilots with the <strong>15 LEG</strong> step. Drive #8 × 5/8 in screws. Pad pointing away from the top. Wind each pad out until the printed foot height gauge (102.0 mm inside) just slides over the foot from the side with no rock: all eight identical, no ruler.</li>
   <li><strong>Clamp zones C1 and C2.</strong> Nothing goes in x 36–44 along the back edge, 9 cm in from the edge toward the middle, or in y 36–44 along the side-wall end, 9 cm in. Draw the outlines of the two pad plates where the drawing shows them; the plates themselves go in at section 7, no screws.</li>
   <li><strong>Rail A.</strong>
     <ol>
@@ -309,7 +309,7 @@ const D = {
   A: { x0:0, x1:249, y0:0, y1:65 }, B: { x0:0, x1:65, y0:65, y1:314 },
   legs: [ ['L1',15,42,'A','under VIVO clamp 2; plate ends 4 mm short of rail A'], ['L2',65,10,'A','nearest leg to clamp 1'], ['L3',140,10,'A','69.5 to ALEX 1'],
           ['L4',10,85,'B','20 past the joint'], ['L5',10,160,'B',''], ['L6',10,235,'B','39.5 to ALEX 2'] ],
-  legPlate: 11,
+  legPlate: 10.5,
   feet: [ ['F1',214.5,8.5,'A'], ['F2',240.5,8.5,'A'], ['F3',214.5,56.5,'A'], ['F4',240.5,56.5,'A'], ['F5',8.5,279.5,'B'], ['F6',56.5,279.5,'B'], ['F7',8.5,305.5,'B'], ['F8',56.5,305.5,'B'] ],
   footPlate: 6, footPad: 5, footH: 10.16, ringBore: 5.1, ringOD: 5.7, ringH: 1.25,
   alexFeet: [2, 4, 6],   // optional printed feet under the ALEX units, cm
@@ -366,8 +366,8 @@ table('tAlexFeet', ['ALEX feet','Underside of the tops','Top surface','Every OLO
 table('tParts', ['Item','Qty','Spec'], [
   ['EKBACKEN top','2','249 × 65 × 2.8 cm, brown walnut; one long edge rounded and laminated (front), one square and unfinished (wall side)'],
   ['ALEX drawer unit / storage unit','1 + 1','36 × 58 × 70 cm'],
-  ['OLOV leg','6','60–90 cm, set to 80.2; 11 cm plate; max 13 kg each'],
-  ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 59.5 mm plate with four 5.4 mm holes 47.4 mm apart (measured)'],
+  ['OLOV leg','6','60–90 cm, set to 80.2; 10.5 cm plate, five 5.5 mm holes on a 49.08 mm radius; max 13 kg each'],
+  ['Round adjustable feet','8 of 12','4 in (10.16 cm), 5 cm body and pad, 59.5 mm plate with four 5.4 mm holes 36.6 mm apart (measured)'],
   ['Steel angle','2','2 × 2 × 3/16 in hot rolled, 213 cm each (Metal Supermarkets Ottawa, cut)'],
   ['Gusseted 90° strut fittings','2 (4-pack)','for 1-5/8 in channel, 5 mm steel, two 9/16 in holes per leg'],
   ['Mending plates','4','10 × 3 × 0.12 in, four holes along the length at 2.0, 7.0, 18.4, 23.4 cm: two across the joint, two as pads under the clamp jaws'],
@@ -379,7 +379,7 @@ table('tParts', ['Item','Qty','Spec'], [
 ]);
 
 table('tFast', ['Fastener','Qty','Goes through','Into the top','Pilot'], [
-  ['OLOV screws, M4 × 16 mm (included)','24','3 mm leg plate','13 mm','1/8 in, 15 mm deep (drill guide step 15)'],
+  ['OLOV screws, M4 × 16 mm (included)','30','3 mm leg plate','13 mm','1/8 in, 15 mm deep (drill guide step 15 LEG)'],
   ['#8 × 5/8 in pan head','32','feet plate (1.5–2 mm)','14 mm','1/8 in, 15 mm deep (step 15 LEG)'],
   ['#10 × 1 in pan head, Robertson','19','4.8 mm angle','20.6 mm','1/8 in, 20 mm deep (step 25 RAIL)'],
   ['#10 × 5/8 in with #10 washer','8','3 mm joining plate','13 mm','1/8 in, 12 mm deep (step 12 PLATE)'],
@@ -404,6 +404,7 @@ table('tTools', ['Tool','For'], [
 
 table('tHelpers', ['Printed tool','When','How'], [
   ['Edge T-square','sections 3, 4, 5','Turn it over (lip down). Hook the lip over the edge named in the table, slide to the station, punch through the hole named: 50 for ring centres on the ALEX, 85 for feet (with the plate holes round it), 100 for legs L2–L6, 150 for L1.'],
+  ['Leg jig','sections 3, 4','Turn it over (lip down). Hook over the edge named in the table, slide to the station, punch the centre and the five OLOV holes: 100 pattern for L2–L6, 150 for L1.'],
   ['Feet corner jig','sections 3, 4','Turn it over (fences down). Drop over a far corner of the top, fences against both edges, punch the centre and the four plate holes: F2, F4, F7, F8.'],
   ['Foot height gauge','section 3','Stand a foot on its pad, slide the C over it from the side, wind the pad until the gauge just fits. Eight times.'],
   ['ALEX corner template','section 5','Turn it over (fences down). Drop over a cabinet corner, fences against both edges, punch the centre and the three screw holes.'],
@@ -424,7 +425,7 @@ table('tTemplate', ['Rail','Fitting','Clamp its heel (outside of the bend) on','
   ['B','both (shared holes)','the corner end (0 cm)','the far end','2 × 7/16 in','3/8-16 × 1½ in, through both fittings'],
 ]);
 
-const legRows = t => D.legs.filter(l=>l[3]===t).map(l=>[l[0], '('+l[1]+', '+l[2]+')', 'OLOV, 11 cm plate: x '+f1(l[1]-5.5)+'–'+f1(l[1]+5.5)+', y '+f1(l[2]-5.5)+'–'+f1(l[2]+5.5), l[4]]);
+const legRows = t => D.legs.filter(l=>l[3]===t).map(l=>[l[0], '('+l[1]+', '+l[2]+')', 'OLOV, 10.5 cm plate: x '+f1(l[1]-5.25)+'–'+f1(l[1]+5.25)+', y '+f1(l[2]-5.25)+'–'+f1(l[2]+5.25), l[4]]);
 const feetRows = t => D.feet.filter(f=>f[3]===t).map(f=>[f[0], '('+f[1]+', '+f[2]+')', 'foot, 6 cm plate: x '+f1(f[1]-3)+'–'+f1(f[1]+3)+', y '+f1(f[2]-3)+'–'+f1(f[2]+3), '5 cm in from the ALEX corner below']);
 table('tA', ['Mark','Centre (x, y)','Footprint','Note'], legRows('A').concat(feetRows('A')).concat([
   ['Rail A line', 'y = 53, x 1–214', 'rail occupies y 47.9–53', "vertical leg's outer face on the line; wall end at x = 1"],
@@ -441,14 +442,14 @@ table('tB', ['Mark','Centre (x, y)','Footprint','Note'], legRows('B').concat(fee
   ['P2', '(35, 66)', 'x 31.2–38.8, y 65–78.7 on this top', 'joining plate; screws on x = 35 at y 71.7 and 76.7'],
 ]));
 table('tTsqA', ['Mark','Hook the lip over','Station along that edge','Punch the hole'], [
-  ['L2','the back edge','x = 65','100'], ['L3','the back edge','x = 140','100'],
-  ['L1','the side-wall end','y = 42','150'],
+  ['L2','the back edge','x = 65','leg jig, 100 pattern: centre + 5'], ['L3','the back edge','x = 140','leg jig, 100 pattern: centre + 5'],
+  ['L1','the side-wall end','y = 42','leg jig, 150 pattern: centre + 5'],
   ['F1','the back edge','x = 214.5','85 and its four plate holes'],
   ['F3','the FRONT edge (the rounded one)','x = 214.5','85 and its four plate holes'],
   ['F2, F4','corner jig instead','far back and far front corners','centre and four plate holes'],
 ]);
 table('tTsqB', ['Mark','Hook the lip over','Station along that edge','Punch the hole'], [
-  ['L4, L5, L6','the side-wall edge','y = 85, 160, 235','100'],
+  ['L4, L5, L6','the side-wall edge','y = 85, 160, 235','leg jig, 100 pattern: centre + 5'],
   ['F5','the side-wall edge','y = 279.5','85 and its four plate holes'],
   ['F6','the FRONT edge (the rounded one, x = 65)','y = 279.5','85 and its four plate holes'],
   ['F7, F8','corner jig instead','far wall-side and far front corners','centre and four plate holes'],

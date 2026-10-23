@@ -75,7 +75,7 @@ Six legs sit along the two wall edges, one of them in the corner square under VI
 | ALEX 2 (storage unit) | x 3.5–61.5, y 274.5–310.5 | 3.5 cm in from B's far end, wall edge and front edge | door faces you (+x) |
 | Feet on ALEX 1 | centres (214.5, 8.5), (240.5, 8.5), (214.5, 56.5), (240.5, 56.5) | 5 cm in from each ALEX corner | plate screwed to the top's underside; 5 cm pad sits in a printed ring screwed to the ALEX top |
 | Feet on ALEX 2 | centres (8.5, 279.5), (56.5, 279.5), (8.5, 305.5), (56.5, 305.5) | 5 cm in from each ALEX corner | same |
-| L1 | (15, 42) | 15 from A's left end; 6 cm behind rail A | under VIVO clamp 2; its 11 cm plate ends at x 9.5 and y 47.5, clear of the clamp jaw (to x 8.9) and rail A (from y 48) |
+| L1 | (15, 42) | 15 from A's left end; 6 cm behind rail A | under VIVO clamp 2; its 10.5 cm plate ends at x 9.75 and y 47.25, clear of the clamp jaw (to x 8.9) and rail A (from y 47.9) |
 | L2 | (65, 10) | 10 from back edge | nearest leg to VIVO clamp 1 |
 | L3 | (140, 10) | 10 from back edge; 69.5 to ALEX 1 |  |
 | L4 | (10, 85) | 10 from side-wall edge; 20 past the joint | takes the joint's wall end on B's side |
@@ -234,8 +234,8 @@ The two 2 × 2 × 3/16 in angles are ordered from Metal Supermarkets Ottawa ($16
 
 - [ ] Actual thickness of each EKBACKEN top with calipers (expect 28 mm).
 - [x] 83 cm confirmed (19 Oct): chair raised to about 52 cm seat height, or a footrest.
-- [x] OLOV plate measured 11 cm in diameter, screws M4 × 16 mm fully threaded (IKEA part 108443), 19 Oct. Section B assumed a plate no wider than 7 cm: at 11 cm a leg at (14, 43) would reach y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9), so L1 is at (15, 42). Every other leg clears its neighbours by 0.8 cm or more (L4's plate to joining plate P1 is the closest).
-- [ ] Confirm the round feet's load rating (expect 50 kg or more each); the plate is 59.5 × 59.5 mm with four 5.4 mm holes 47.4 mm apart (measured 22 Oct 2026); the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 10 cm tall, 5 cm body and pad, 6 × 6 cm plate; rating still to confirm.
+- [x] OLOV plate measured 11 cm in diameter on 19 Oct, 105 mm with five 5.5 mm holes on a 49.08 mm radius on 22 Oct; screws M4 × 16 mm fully threaded (IKEA part 108443). Section B assumed a plate no wider than 7 cm: at 11 cm a leg at (14, 43) would reach y 48.5, 5 mm onto rail A's flat leg, and x 8.5, 4 mm inside the clamp-2 jaw (which ends at x 8.9), so L1 is at (15, 42). Every other leg clears its neighbours by 0.8 cm or more (L4's plate to joining plate P1 is the closest).
+- [ ] Confirm the round feet's load rating (expect 50 kg or more each); the plate is 59.5 × 59.5 mm with four 5.4 mm holes 36.6 mm apart (measured 22 Oct 2026); the layout uses four per ALEX. The VIVO clamp is 3 × 3.5 in (7.6 × 8.9 cm) per the spec, so the 9 cm clamp zones hold. Feet: twelve on hand, 10 cm tall, 5 cm body and pad, 6 × 6 cm plate; rating still to confirm.
 - [ ] ALEX top-panel thickness where the ring screws go (expect ≥ 16 mm; #6 × ⅝ in screws assume ≥ 14 mm).
 - [x] VIVO crossbar: 19¾ in (50.2 cm) centre to centre of the end collars (21 Oct); clamps at 40 give exactly that. Still to measure: pole centre to desk edge (assumed 4.5 cm) and clamp projection behind the edge (under 2.5 cm assumed).
 - [x] Steel: two 2 × 2 × 3/16 in angles, 84 in, ordered from Metal Supermarkets Ottawa for pickup, $161.22 with tax, cutting included (19 Oct).

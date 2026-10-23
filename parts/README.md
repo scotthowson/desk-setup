@@ -11,7 +11,7 @@ Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-prev
 | Part | Print | Filament |
 | --- | --- | --- |
 | tools: edge-t-square, alex-corner-template, rail-marking-gauge, pilot-drill-guide, rail-drill-jig | 1 each | any (PETG for the jig) |
-| tools: feet-corner-jig, foot-height-gauge | 1 each | any |
+| tools: leg-jig, feet-corner-jig, foot-height-gauge | 1 each | any |
 | tools: fitting-centring-plug | 2 | any |
 | structure: foot-ring | 8 | PETG or ABS |
 | structure: rail-end-cap-A | 2 | PETG or ABS |
@@ -47,8 +47,9 @@ Totals: 20 full-length pieces (15 plain, 3 slotted, 2 clamp), 4 short (two 80 mm
 
 | Part | What it does | Settings |
 | --- | --- | --- |
-| `edge-t-square` | The head hooks over any edge (desk top, ALEX top, the steel); the blade lies square to it with punch holes at the four offsets this build uses: **50** ring centres on the ALEX, **85** feet on the top (with the plate's four screw holes round it), **100** legs L2–L6, **150** leg L1. Slide to the tape station, punch. The blade's edge squares the station lines across a rail. | as saved (lip up), 3 mm plate, 6 mm lip; turn over to use. `plate_hole_spacing` is 47.4, measured (59.5 mm plate, 5.4 mm holes). |
+| `edge-t-square` | The head hooks over any edge (desk top, ALEX top, the steel); the blade lies square to it with punch holes at the four offsets this build uses: **50** ring centres on the ALEX, **85** feet on the top (with the plate's four screw holes round it), **100** legs L2–L6, **150** leg L1. Slide to the tape station, punch. The blade's edge squares the station lines across a rail. | as saved (lip up), 3 mm plate, 6 mm lip; turn over to use. `plate_hole_spacing` is 36.6, measured (59.5 mm plate, 5.4 mm holes). |
 | `alex-corner-template` | Drops over any corner of an ALEX top, fences against both edges: ring centre at 50/50 plus the ring's three screw holes in one placement. Same template for all eight corners; the ring pattern is symmetric so which way the unit faces does not matter. Turned over against the two edges of the **bottom**, it marks the optional ALEX feet: same centre, and the inner three holes are their screws. | as saved (fences up), 2.5 mm plate, 6 mm fences; turn over to use. |
+| `leg-jig` | Hooks over the wall edge like the T-square and marks an OLOV's centre and its five plate holes (105 mm plate, 5.5 mm holes on a 49.08 mm radius, measured) in one punch set: the 100 pattern for L2–L6, the 150 pattern for L1 from the side-wall end. One hole points at the wall on every leg, so the plates all sit the same way. | as saved (lip up), 3 mm plate; turn over to use. 215 × 110. |
 | `feet-corner-jig` | Drops over a far corner of a top (face down), fences against both edges: a foot's centre 8.5 cm from each edge and its four plate holes, square to the edges, in one placement. F2, F4, F7, F8 need no measuring; F1, F3, F5, F6 (34.5 cm from the end) use the T-square's 85 hole. | as saved (fences up), 2.5 mm plate; turn over to use. |
 | `foot-height-gauge` | A C with a 102.0 mm inside height. Stand a foot on its pad, slide the gauge over it from the side, wind the pad until the gauge just slides on without rocking. All eight feet identical, no ruler. | flat, 100% infill. |
 | `rail-marking-gauge` | Sits on a face of the angle with its lip over the edge. Pencil in the **19** notch along the flat leg's free edge gives the screw line; **29** along the vertical leg's heel edge gives the bolt line. The notches put a 0.8 mm pencil point on exactly 19.0 and 29.0. | as saved (lip up), 5 mm body, 6 mm lip; turn over to use. |

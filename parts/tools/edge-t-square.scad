@@ -17,7 +17,7 @@ t      = 3;                               // plate thickness, head and blade ali
 lip_h  = 6;   lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
 blade_l = 175; blade_w = 30;
 hole_d  = 4;                              // fits a scriber, a pencil tip or a 1/8 in bit
-plate_hole_spacing = 47.4;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
+plate_hole_spacing = 36.6;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
 pad = 62;                                 // square pad round the 85 mm hole
 
 module label(x, s, side) { translate([x + 3.5, side > 0 ? 4 : -9, t - 0.6]) linear_extrude(1) text(s, size = 3.6, halign = "left"); }
@@ -35,7 +35,7 @@ module tool() {   // use orientation: plate at z 0..t on the surface, lip hangin
             translate([85 + sx * plate_hole_spacing / 2, sy * plate_hole_spacing / 2, -1]) cylinder(d = hole_d, h = t + 2, $fn = 24);
         translate([head_w, -0.45, t - 0.5]) cube([blade_l - head_w, 0.9, 1]);                // scribe line down the blade's centre
         label(50, "50 ALEX ring", 1); label(85, "85 EKB foot", -1); label(100, "100 EKB leg", 1); label(150, "150 EKB L1", -1);
-        translate([85, -pad / 2 + 3, t - 0.6]) linear_extrude(1) text("EKB foot plate holes 47.4", size = 3.2, halign = "center");
+        translate([85, -pad / 2 + 3, t - 0.6]) linear_extrude(1) text("EKB foot plate holes 36.6", size = 3.2, halign = "center");
         translate([head_w / 2 + 2, 0, t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("edge", size = 5, halign = "center", valign = "center");
         translate([head_w / 2 + 2, 45, t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("EKB T-SQUARE", size = 4, halign = "center", valign = "center");
     }
