@@ -142,7 +142,7 @@ label.t input{accent-color:var(--accent);margin:0}
     wall:   new THREE.MeshStandardMaterial({color:0xd8d2c6, roughness:0.95, side:THREE.DoubleSide}),
     knee:   new THREE.MeshStandardMaterial({color:0x7cc47f, transparent:true, opacity:0.22, roughness:1, depthWrite:false}),
     chair:  new THREE.MeshStandardMaterial({color:0x3a3f45, roughness:0.75}),
-    mesh:   new THREE.MeshStandardMaterial({color:0x5e6670, roughness:0.9}),
+    mesh:   new THREE.MeshStandardMaterial({color:0x474d55, roughness:0.9}),
     black:  new THREE.MeshStandardMaterial({color:0x151617, roughness:0.5, metalness:0.3}),
     screen: new THREE.MeshStandardMaterial({color:0x1a2230, roughness:0.2, metalness:0.1, emissive:0x1b2a3a, emissiveIntensity:0.6}),
     key:    new THREE.MeshStandardMaterial({color:0x26282b, roughness:0.6}),
@@ -362,8 +362,14 @@ label.t input{accent-color:var(--accent);margin:0}
       const arm = new THREE.Mesh(armG, M.black); arm.castShadow=true; arm.rotation.y=a; c.add(arm);
       const w = cyl(2.8,2.8,2.4,M.black,Math.cos(a)*29,2.8,-Math.sin(a)*29,14); w.rotation.x=Math.PI/2; c.add(w);
     }
-    c.add(box(-25,25,seatH,seatH+6,-24,24,M.chair), box(-23,23,seatH+6,seatH+56,-27,-22,M.mesh));
-    c.add(box(-30,-25,seatH+6,seatH+24,-15,10,M.black), box(25,30,seatH+6,seatH+24,-15,10,M.black));
+    c.add(box(-25,25,seatH,seatH+6,-24,24,M.chair));                                   // seat
+    c.add(box(-3,3,seatH+6,seatH+60,-30,-26,M.black));                                 // spine behind the back
+    for(let i=-3;i<=3;i++){                                                            // curved mesh back: seven slats on a 38 cm arc
+      const a = i*0.19, r = 38;
+      const slat = box(-3.4,3.4,0,46,-1.2,1.2,M.mesh); slat.position.set(Math.sin(a)*r, seatH+29, 13-Math.cos(a)*r); slat.rotation.y = -a; c.add(slat);   // arc centre 13 cm ahead of the seat centre; box() centres the slat, so y is its middle
+    }
+    c.add(box(-12,12,seatH+60,seatH+68,-26,-22,M.chair));                               // headrest
+    c.add(box(-30,-25,seatH+6,seatH+24,-15,10,M.black), box(25,30,seatH+6,seatH+24,-15,10,M.black));   // arms
     c.position.set(108,0,108); c.rotation.y = Math.PI*1.25; // facing the inside corner
     setup.add(c);
   })();
