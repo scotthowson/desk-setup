@@ -141,7 +141,7 @@
         56.5,
         305.5
       ],
-      "note": "5 cm in from each ALEX corner = 8.5 cm in from the top's edges; F2 F4 F7 F8 are 8.5 from the far end, F1 F3 F5 F6 are 34.5 from it"
+      "note": "5 cm in from each ALEX corner = 8.5 cm in from the top's edges; F2 F4 F7 F8 are 8.5 from the far end (feet corner jig), F1 F3 F5 F6 are 34.5 cm from the far end: hook the tape on the far end, the same end the cabinet is set from; never from the other end"
     },
     "rails": {
       "A": {
@@ -332,7 +332,8 @@
     "screws": "#8 x 5/8 in pan head, 4 per plate, 32 total; 14 mm into the top",
     "pilot": "1/8 in, 15 mm deep (puck 15 LEG)",
     "load_rating": "unknown (design wants 50 kg or more each)",
-    "confidence": "VERIFIED on the purchased plate 23 Oct 2026 (46.8 from 41.6 inside jaws and 52.0 outside jaws); load rating ASSUMPTION"
+    "confidence": "VERIFIED on the purchased plate 23 Oct 2026 (46.8 from 41.6 inside jaws and 52.0 outside jaws); load rating ASSUMPTION",
+    "height_gauge_when": "gauge every foot loose, before its plate is screwed on; the C sits against the plate face"
   },
   "rings": {
     "file": "parts/structure/foot-ring.scad",
@@ -354,7 +355,8 @@
     "pilot": "5/64 in, 12 mm deep (puck 12 ALEX)",
     "centre_from_alex_corner": 50,
     "confidence": "VERIFIED from its own geometry file; pad diameter 50 MEASURE ON HARDWARE; ALEX top panel 15.9 mm (5/8 in) VERIFIED 23 Oct 2026, 2.5 mm remains under the 13.4 mm screws",
-    "fitting_method": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method."
+    "fitting_method": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method.",
+    "angles_note": "the ring's own three holes are at 90/210/330 in its file; the printed template and the paper template drill at 45/165/285 from the cabinet corner; the ring is round and is simply turned so its holes sit on whichever three pilots it meets"
   },
   "alex_feet_optional": {
     "file": "parts/accessories/alex-foot.scad",
@@ -441,7 +443,8 @@
     "rail_screws": "#10 x 1 in pan head, Robertson; 20.6 mm into the top; 19 total",
     "rail_pilot": "1/8 in, 25 mm from the face of the flat leg the puck stands on (the floor side) = 20 mm into the wood (puck 25 RAIL)",
     "finish": "degrease, 120 grit, two coats flat black enamel, 24 h",
-    "confidence": "SOURCE for all positions; delivered length MEASURE ON HARDWARE"
+    "confidence": "SOURCE for all positions; delivered length MEASURE ON HARDWARE",
+    "rail_end_caps": "handed: cap A fits rail A's far end (1); cap B fits rail A's wall end and rail B's far end (2), because rail B's far end is the mirror image of rail A's far end about the desk's diagonal; rail B's corner end is bolted to rail A and takes no cap"
   },
   "corner_joint": {
     "fittings": "two 5 mm gusseted 90-degree strut fittings for 1-5/8 in channel; measured 23 Oct 2026: legs 100.5 long x 41 wide, two slots 21 x 12 mm per leg, slot centres 29.15 and 78.45 mm from the heel (49.3 apart), first slot's near edge 18.65 from the heel, last slot's far edge 11.5 from the leg's end",
@@ -584,13 +587,17 @@
   "procedures": {
     "corner_load_test": "20 kg (a case of water plus a few books) on top B's inside corner, 10 cm in from both edges; straightedge from leg L1's line across the corner: no more than 2 mm drop (estimate about 1); remove: returns, no creak, nothing moved; never stand or sit on the corner",
     "sideways_push": "push the desk along each wall: no sway beyond a few mm at the top, no movement of a top on its ALEX",
-    "pads": "turn each of the 8 pads by hand in its ring: none spins free or rocks",
+    "pads": "rock each pad sideways by hand; do not turn it (turning changes the height); none rocks or lifts",
     "settling": "straightedge across the joint at the inside corner: write the step down; re-check at two weeks and one month; retighten the six fitting bolts if it settled",
     "retighten": "every screw after two weeks",
-    "surface_height": "830 mm at all six outer corners, +/- 3 mm (plus ALEX feet height if fitted)",
-    "trim_fitting": "manual step 8b: measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX",
+    "surface_height": "83.0 cm at all six corners of the L, +/- 3 mm (plus ALEX feet height if fitted); adjust (0,0) by L1/L2, (249,0) and (249,65) by the ALEX 1 feet, (0,314) and (65,314) by the ALEX 2 feet, (0,65) by L4; the inside corner (65,65) has no support and follows the joint",
+    "trim_fitting": "step 8b, after the mount: take the screens, PC and everything loose off; measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX",
     "rings_by_trace": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method.",
-    "trim_gap_table": "smallest gap reading -> gap value: 27 -> 26, 28 -> 27, 29 -> 28, 30 -> 29 (as saved), 31 -> 30, 32 -> 31, 33 -> 32"
+    "trim_gap_table": "smallest gap reading -> gap value: 27 -> 26, 28 -> 27, 29 -> 28, 30 -> 29 (as saved), 31 -> 30, 32 -> 31, 33 -> 32; under 27 or over 33: measure again and ask",
+    "alex2_staging": "step 5 places ALEX 2 with its near end 292.5 cm from the back wall (15 cm short of the final 277.5) so top B can be stood on it with rail B's 12 cm projection clear of top A; in step 7 ALEX 2 is pushed home with the pads in its rings and top B comes with it",
+    "never_push_the_top": "once the pads are in the rings, push the ALEX unit and the top comes with it; never push or lift the top alone",
+    "plates_pilot": "scribe through the plate's holes, plate off, pilot 1/8 x 12 with the 12 PLATE puck standing on the wood, plate back, screws",
+    "heel_marks": "scribe the 51.5 and 52.0 cm heel positions on rail A's vertical leg; after painting, tape and re-label the 52.0 mark and both rail ends; step 7 checks rail B's outer face against 52.0"
   },
   "tools_note": "the 3/8-16 bolt head and nut take a 9/16 in wrench or socket; two needed",
   "open_measurements": [
