@@ -1,5 +1,5 @@
 // Fitting slot plug. The strut fittings have 21 x 12 mm slots (measured 23 Oct 2026) and the
-// rails get 7/16 in holes, so a bolt could sit anywhere along 11 mm of slot. This plug fills
+// rails get 7/16 in holes, so a bolt could sit anywhere along 11.5 mm of slot. This plug fills
 // the slot and has a 1/8 in bore dead centre: clamp the fitting on its heel mark, drop the plug
 // into each slot, drill the 1/8 in pilot through it, move the plug to the next slot. Then take
 // the fitting off and open each pilot to 7/16 in; the bit follows the pilot and every hole lands
