@@ -3,11 +3,11 @@
 // line. Slide it to a station line, line the scribe marks up with it, hold it down and drill
 // the 1/8 in pilot through the bore. The bore keeps the bit square and it cannot wander on
 // the steel. Pull the jig off and open the hole to 7/32 in: the bit follows the pilot. Nineteen
-// holes, one jig. The body is 12 mm thick so the bit is guided for its first 12 mm.
+// holes, one jig. The body is 6 mm thick, enough to start the bit square.
 // PRINT orientation: body on the bed, lip up, no supports. PETG (the bore lasts longer).
 
 d19    = 19;     // screw line from the leg's free edge
-body_t = 12; lip_h = 6; lip_t = 4;
+body_t = 6; lip_h = 6; lip_t = 4;
 w      = 30;     // along the rail
 len    = 40;     // from the lip across the leg
 bore   = 3.3;    // 1/8 in bit, running fit

@@ -17,7 +17,7 @@ t      = 3;                               // plate thickness, head and blade ali
 lip_h  = 6;   lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
 blade_l = 175; blade_w = 30;
 hole_d  = 4;                              // fits a scriber, a pencil tip or a 1/8 in bit
-plate_hole_spacing = 45;                  // the feet plates' screw holes, centre to centre. Measure yours.
+plate_hole_spacing = 47.4;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
 pad = 62;                                 // square pad round the 85 mm hole
 
 module label(x, s, side) { translate([x + 3.5, side > 0 ? 4 : -9, t - 0.6]) linear_extrude(1) text(s, size = 3.6, halign = "left"); }

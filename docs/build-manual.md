@@ -8,8 +8,8 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
-- [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 6 × 6 cm, body and pad 5 cm, 10 cm tall.
-- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines), the rail drill jig (1/8 in bore on the 19 mm line), two fitting centring plugs and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand, ALEX feet (2, 4 or 6 cm under the cabinets; height table before step 5).
+- [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 59.5 × 59.5 mm with four 5.4 mm holes 47.4 mm apart (measured 22 Oct 2026), body and pad 5 cm, 10 cm tall.
+- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the feet corner jig (a far-corner foot and its four plate holes in one placement), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines), the rail drill jig (1/8 in bore on the 19 mm line), two fitting centring plugs and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand, ALEX feet (2, 4 or 6 cm under the cabinets; height table before step 5).
 - [ ] Eight printed locating rings for the pads (`parts/structure/foot-ring.stl`, source beside it): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws (rails), 32 × #8 × ⅝ in pan-head screws (feet plates), 8 × #10 × ⅝ in screws with #10 washers (joining plates), two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 6 × 3/8-16 × 1½ in hex bolts, grade 5 (one length for both rails), 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers. Buy a few spares of each screw.
@@ -36,7 +36,7 @@ Each top has one rounded, laminated long edge and one square, unfinished long ed
 | L1 | (15, 42) | OLOV, under VIVO clamp 2; its 11 cm plate ends 5 mm short of rail A |
 | L2 | (65, 10) | OLOV |
 | L3 | (140, 10) | OLOV |
-| F1–F4 | (214.5, 8.5), (240.5, 8.5), (214.5, 56.5), (240.5, 56.5) | round feet for ALEX 1; 5 cm in from each ALEX corner, the 6 cm plates 5 mm clear of rail A |
+| F1–F4 | (214.5, 8.5), (240.5, 8.5), (214.5, 56.5), (240.5, 56.5) | round feet for ALEX 1; 5 cm in from each ALEX corner, the 6 cm plates 5 mm clear of rail A. F2 and F4: feet corner jig over the far corners (8.5 from both edges). F1 and F3: T-square's 85 hole at x 214.5 |
 | Rail A line | y = 53, from x = 1 to 214 | the vertical leg's outer face goes on this line, flat leg toward y = 47.9 (the leg is 5.08 wide) |
 | Clamp zone 1 | x 36–44, y 0–9 | keep clear |
 | Clamp zone 2 | x 0–9, y 36–44 | keep clear |
@@ -52,7 +52,7 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 | L4 | (10, 85) | OLOV, 20 cm from the joint end |
 | L5 | (10, 160) | OLOV |
 | L6 | (10, 235) | OLOV |
-| F5–F8 | (8.5, 279.5), (56.5, 279.5), (8.5, 305.5), (56.5, 305.5) | round feet for ALEX 2 |
+| F5–F8 | (8.5, 279.5), (56.5, 279.5), (8.5, 305.5), (56.5, 305.5) | round feet for ALEX 2. F7 and F8: feet corner jig over the far corners. F5 and F6: T-square's 85 hole at y 279.5 |
 | Rail B line | x = 53, from y = 65 to 266 | the vertical leg's outer face on this line, flat leg toward x = 48 |
 
 ## 4. Fit legs and feet to both tops
