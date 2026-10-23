@@ -596,7 +596,7 @@
     "trim_fitting": "step 8b, after the mount: take the screens, PC and everything loose off; measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX",
     "rings_by_trace": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method.",
     "trim_gap_table": "smallest gap reading -> gap value: 27 -> 26, 28 -> 27, 29 -> 28, 30 -> 29 (as saved), 31 -> 30, 32 -> 31, 33 -> 32; under 27 or over 33: measure again and ask",
-    "alex2_staging": "step 5 places ALEX 2 with its near end 292.5 cm from the back wall (15 cm short of the final 277.5) so top B can be stood on it with rail B's 12 cm projection clear of top A; in step 7 ALEX 2 is pushed home with the pads in its rings and top B comes with it",
+    "alex2_staging": "step 5 places ALEX 2 with its near end 282.5 cm from the back wall (5 cm short of the final 277.5) so top B can be lowered onto it with rail B's corner end clear of rail A's flat leg; in step 7 ALEX 2 is pushed home with the pads in its rings and top B comes with it. Top B's far end reaches 319 cm from the back wall for a moment: the side wall must run at least 322 cm, else stop and ask",
     "never_push_the_top": "once the pads are in the rings, push the ALEX unit and the top comes with it; never push or lift the top alone",
     "plates_pilot": "scribe through the plate's holes, plate off, pilot 1/8 x 12 with the 12 PLATE puck standing on the wood, plate back, screws",
     "heel_marks": "scribe the 51.5 and 52.0 cm heel positions on rail A's vertical leg; after painting, tape and re-label the 52.0 mark and both rail ends; step 7 checks rail B's outer face against 52.0"
@@ -608,8 +608,16 @@
     "EKBACKEN thickness (expect 28)",
     "VIVO top arm reach (about 89) and max opening (31 or more)",
     "delivered rail lengths and angle thickness (4.8)",
-    "room: wall to wall 2520 and 3170, baseboard thickness",
+    "room: wall to wall along the back wall (2520 needed) and along the side wall (3220 needed: 3170 plus 5 cm of staging in chapter G), baseboard thickness",
     "feet load rating",
     "ALEX bottom panel thickness (only for the optional ALEX feet)"
-  ]
+  ],
+  "room": {
+    "floor_cm": "252 x 317 including the 3 cm wall gaps",
+    "side_wall_min_cm": 322,
+    "why": "top B is stood 5 cm out (far end at 319) in chapter G and pushed home",
+    "open_sides_cm": 40,
+    "why_open": "chapter J pulls the desk 40 cm into the room, away from both walls, so no wall run-out is needed for J",
+    "if_short": "stop and ask before chapter G"
+  }
 }
