@@ -5,9 +5,9 @@
 // with no rock. The inside height is 102.0 mm. Print flat, any filament, 100% infill.
 
 inside_h = 102.0; inside_w = 64;   // the 59.5 mm plate passes through
-arm = 10; th = 8;
+arm = 6; th = 5;
 difference() {
     cube([inside_w + 2 * arm, inside_h + 2 * arm, th]);
     translate([arm, arm, -1]) cube([inside_w + 1, inside_h, th + 2]);   // open on the +x side
-    translate([arm - 0.6, arm + inside_h / 2, th - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("EKB FOOT 10.2 cm", size = 4, halign = "center", valign = "center");
+    translate([arm / 2, arm + inside_h / 2, th - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("EKB FOOT 10.2 cm", size = 2.6, halign = "center", valign = "center");
 }

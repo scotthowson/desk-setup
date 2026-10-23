@@ -8,7 +8,7 @@
 // (schablone.stp) and Scott's 49 mm hole-to-hole measurement, 22 Oct 2026. The T-square's 100 and 150 holes are the centres only.
 // PRINT orientation: flat on the bed, lip up; turn over to use. Any filament.
 
-t = 3; lip_h = 6; lip_t = 4; len = 215; w = 110; hole_d = 4;
+t = 3; lip_h = 6; lip_t = 4; len = 205; w = 100; hole_d = 4;
 r = 42.5; n = 5;
 module ring(d, w = 0.8, dashed = false) {   // engraved circle, 0.5 deep, optionally dashed
     translate([0, 0, t - 0.5]) difference() {

@@ -10,15 +10,15 @@
 //
 // The file is in PRINT orientation: flat face on the bed, lip pointing up, no supports.
 // In use you turn it over: the lip hangs down over the edge and the labels read correctly.
-// Fits the Bambu P1S / A1 bed (179 x 140 mm). Any filament.
+// 162 x 110 mm. Any filament.
 
-head_l = 140; head_w = 24;
+head_l = 110; head_w = 20;
 t      = 3;                               // plate thickness, head and blade alike, so the tool lies flat (halved to save material; 3 mm still guides a scriber)
 lip_h  = 6;   lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
-blade_l = 175; blade_w = 30;
+blade_l = 162; blade_w = 24;
 hole_d  = 4;                              // fits a scriber, a pencil tip or a 1/8 in bit
 plate_hole_spacing = 36.6;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
-pad = 62;                                 // square pad round the 85 mm hole
+pad = 48;                                 // square pad round the 85 mm hole (holes at ±18.3)
 
 module tool() {   // use orientation: plate at z 0..t on the surface, lip hanging below
     difference() {
@@ -37,10 +37,9 @@ module tool() {   // use orientation: plate at z 0..t on the surface, lip hangin
 }
 module labels(top = false) {
     module label(x, s, side, al = "left") { translate([x + (al == "left" ? 3.5 : -3.5), side > 0 ? 5.8 : -7.2, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text(s, size = 3.6, halign = al, valign = "center"); }
-    label(50, "50 ALEX ring", 1); label(85, "85 foot", -1); label(100, "100 leg", 1); label(150, "150 L1", -1, "right");
-    translate([85, -pad / 2 + 4.6, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("foot plate holes 36.6", size = 3.2, halign = "center", valign = "center");
-    translate([head_w / 2 + 2, 0, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("edge", size = 5, halign = "center", valign = "center");
-    translate([head_w / 2 + 2, 45, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("EKB T-SQUARE", size = 4, halign = "center", valign = "center");
+    label(50, "50 ALEX ring", 1); label(100, "100 leg", 1); label(150, "150 L1", 1, "right"); label(85, "85 foot + plate holes 36.6", -1);
+    translate([head_w / 2 + 2, 0, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("edge", size = 4, halign = "center", valign = "center");
+    translate([head_w / 2 + 2, 36, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("EKB T-SQUARE", size = 3.6, halign = "center", valign = "center");
 }
 difference() {
     translate([0, 0, t]) mirror([0, 0, 1]) tool();   // flipped for printing

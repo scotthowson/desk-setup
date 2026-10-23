@@ -19,7 +19,8 @@ module clip() {
         translate([bundle + wall, 0, 0]) cube([wall, w, bundle + 2 * wall]);          // other side, longer, with a lip
         translate([bundle + wall - 1.5, 0, bundle + wall]) cube([1.5 + wall, w, wall]);  // the lip that keeps the cable in
     }
-    translate([-foot / 2, w / 2, -1]) { cylinder(d = hole, h = wall + 2, $fn = 24); translate([0, 0, 1 - 0.01]) cylinder(d1 = csk, d2 = hole, h = (csk - hole) / 2 + 0.01, $fn = 24); }
+    translate([-foot / 2, w / 2, -1]) cylinder(d = hole, h = wall + 2, $fn = 24);
+    translate([-foot / 2, w / 2, wall - (csk - hole) / 2]) cylinder(d1 = hole, d2 = csk, h = (csk - hole) / 2 + 0.01, $fn = 24);   // countersink on the floor face (z = wall), where the screw head is
   }
 }
 translate([0, w, 0]) rotate([90, 0, 0]) clip();   // profile face down for printing

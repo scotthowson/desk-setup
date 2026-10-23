@@ -1,7 +1,9 @@
 // Under-desk cable tray, a 200 mm segment. The rim screws to the underside of the top and
 // the trough hangs below it, open side against the desk; bricks and slack slide in from the
 // ends. Chain segments end to end. Drain slots in the floor. Four #6 x 5/8 in flat heads
-// per segment, countersunk on the face that points at the floor.
+// per segment, countersunk on the face that points at the floor. The wall-side wall (y = 0)
+// has a long entry slot under the rim for leads coming from the outlets; the front wall has
+// two notches for leads going out to the devices, so nothing has to be threaded in from the ends.
 // The file is in PRINT orientation: standing on one end (200 mm tall), no overhangs, no
 // supports. PETG or ABS.
 
@@ -25,6 +27,8 @@ module tray() {   // use orientation: floor at z = 0, rim and tabs at z = h .. h
             translate([0, 0, 1 - 0.01]) cylinder(d1 = csk, d2 = hole, h = (csk - hole) / 2 + 0.01, $fn = 24);   // countersink on the tab's lower face
         }
         for (x = [20 : 40 : seg - 20]) translate([x - 4, wall + 10, -1]) cube([8, w - 20, wall + 2]);   // drain slots
+        translate([25, -1, h - 20]) cube([seg - 50, wall + 2, 21]);                                           // entry slot along the wall-side wall, 20 mm tall under the rim
+        for (x = [seg / 4, 3 * seg / 4]) translate([x - 12, w + wall - 1, h - 14]) cube([24, wall + 2, 15]);   // two exit notches in the front wall
     }
 }
 rotate([0, -90, 0]) tray();   // standing on one end for printing
