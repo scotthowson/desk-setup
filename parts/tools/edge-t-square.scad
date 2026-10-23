@@ -29,8 +29,8 @@ module tool() {   // use orientation: plate at z 0..t on the surface, lip hangin
             translate([85 - pad / 2, -pad / 2, 0]) cube([pad, pad, t]);                      // pad for the foot plate pattern
         }
         for (x = [50, 85, 100, 150]) translate([x, 0, -1]) cylinder(d = hole_d, h = t + 2, $fn = 24);
-        for (sx = [-1, 1], sy = [-1, 1])   // plate holes, straight 5.2 mm: inside jaws between two holes read 41.6 and outside jaws across them 52.0, as on the plate
-            translate([85 + sx * plate_hole_spacing / 2, sy * plate_hole_spacing / 2, -1]) cylinder(d = 5.2, h = t + 2, $fn = 48);
+        for (sx = [-1, 1], sy = [-1, 1])   // plate holes: 1/8 in bit + 0.3 (prints as a running fit) on the plate's 46.8 mm centres; the plate's own holes are 5.2
+            translate([85 + sx * plate_hole_spacing / 2, sy * plate_hole_spacing / 2, -1]) cylinder(d = 3.5, h = t + 2, $fn = 32);
         translate([head_w, -0.45, t - 0.5]) cube([blade_l - head_w, 0.9, 1]);                // scribe line down the blade's centre
         translate([0, 0, t - 0.6]) labels();   // labels on the face you see in use
     }

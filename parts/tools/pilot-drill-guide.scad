@@ -19,7 +19,7 @@
 puck_w = 18; depth_y = 10; gap = 4;
 P8 = 45;   // protrusion for the 1/8 in bit, set by the tower hole
 P64 = 35;  // protrusion for the 5/64 in bit (shorter bit, less sticks out)
-bore_8th = 3.3; bore_64th = 2.2; set_8th = 3.5; set_64th = 2.4;
+bore_8th = 3.5; bore_64th = 2.3; set_8th = 3.6; set_64th = 2.4;   // bit + 0.3 for the bores, which print as a running fit
 steps = [ [P8 - 12, bore_8th, "12 PLATE"], [P8 - 15, bore_8th, "15 LEG"], [P64 - 10, bore_64th, "10 EDGE"], [P64 - 12, bore_64th, "12 ALEX"], [P8 - 25, bore_8th, "25 RAIL"] ];
 tower_w = 16; tower_h = P8 + 2;
 

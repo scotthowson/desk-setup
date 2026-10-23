@@ -10,7 +10,7 @@ d19    = 19;     // screw line from the leg's free edge
 body_t = 6; lip_h = 6; lip_t = 4;
 w      = 24;     // along the rail
 len    = 28;     // from the lip across the leg
-bore   = 3.3;    // 1/8 in bit, running fit
+bore   = 3.5;    // 1/8 in bit (3.18) + 0.3, prints as a running fit
 module jig() {   // use orientation: body on the leg's top face, lip hanging over the free edge
     difference() {
         union() {

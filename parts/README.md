@@ -4,6 +4,8 @@ Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-prev
 
 **Printers:** everything fits the Bambu P1S and A1 (256 × 256 × 256 mm; the longest part is 240 mm, the tallest 200). **Every STL is saved in its print orientation**: put it on the bed as it opens, no rotating, no supports. Every tool is named on both faces: the face you see in the slicer reads as printed, and the face you see in use (the lipped tools are turned over) reads after the flip. Bambu defaults (0.2 mm layers, 3 walls) are fine; PETG where the table says so, PLA for the rest. **Never scale anything in the slicer**: the tools' distances are the tool.
 
+**How the jigs are used:** every jig hole is sized for its drill bit, 1/8 in for the leg and feet pilots and 5/64 in for the ring and ALEX-foot pilots. Hold the jig on, drill through each hole 3 to 4 mm to start it, lift the jig, then finish each hole to depth with the drill guide's puck. The small centre holes are for a scriber to check position; nothing is drilled through them.
+
 **Fastening rules every part obeys:** nothing is ever screwed into the top *face* of a desk top. Screws into the underside are #6 × 5/8 in flat head (13 mm in, well inside the 21 mm rule), and every screw-on part has its countersinks on the face that points at the floor. Parts on the desk surface hold by their own shape, by magnets on the steel, or, for the wall-gap trim, by #4 × 1/2 in screws driven sideways into the desk's raw back edge inside the gap, 14 mm below the surface, where nothing shows.
 
 ## Print list

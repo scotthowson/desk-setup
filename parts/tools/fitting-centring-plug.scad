@@ -10,7 +10,7 @@ hole_d = 14.29;   // 9/16 in
 fit    = 0.25;    // clearance so it drops in
 plug_h = 5;       // the fitting is 5 mm thick
 head_d = 20; head_t = 3;
-bore   = 3.3;     // 1/8 in bit
+bore   = 3.5;     // 1/8 in bit (3.18) + 0.3, prints as a running fit
 difference() {
     union() {
         cylinder(d = head_d, h = head_t, $fn = 96);

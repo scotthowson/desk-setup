@@ -13,7 +13,8 @@ inset   = 50;      // ring centre from each edge
 plate_t = 2.5;   // halved to save material
 size    = 92;      // square plate
 fence_h = 6; fence_t = 4;
-hole_d  = 4;       // scriber or pencil tip
+centre_d = 2.5;    // scriber only
+bit     = 2.3;     // 5/64 in bit (1.98) + 0.3 for the #6 screws, prints as a running fit
 screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle: (ring_od/2 + flange_od/2)/2 from structure/foot-ring.scad. If pad_d changes there, change ring_od here too
 n_screws = 3;
 foot_r  = 14.5;      // the ALEX foot's screw circle (accessories/alex-foot.scad), same angles
@@ -27,13 +28,13 @@ module template() {   // use orientation: plate on the ALEX top, fences hanging 
             translate([-fence_t, -fence_t, -fence_h]) cube([size + fence_t, fence_t, fence_h + plate_t]);   // fence along one edge
             translate([-fence_t, -fence_t, -fence_h]) cube([fence_t, size + fence_t, fence_h + plate_t]);   // fence along the other
         }
-        translate([inset, inset, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);                 // ring centre
+        translate([inset, inset, -1]) cylinder(d = centre_d, h = plate_t + 2, $fn = 24);               // ring centre, scriber
         for (i = [0 : n_screws - 1])
             translate([inset, inset, -1]) rotate([0, 0, i * 360 / n_screws + 45])
-                translate([screw_r, 0, 0]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);           // ring screws
+                translate([screw_r, 0, 0]) cylinder(d = bit, h = plate_t + 2, $fn = 32);              // ring screws, 5/64 in drill holes
         for (i = [0 : n_screws - 1])
             translate([inset, inset, -1]) rotate([0, 0, i * 360 / n_screws + 45])
-                translate([foot_r, 0, 0]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);            // ALEX foot screws (underside)
+                translate([foot_r, 0, 0]) cylinder(d = bit, h = plate_t + 2, $fn = 32);               // ALEX foot screws (underside), 5/64 in drill holes
         ring_line(ring_od); ring_line(ring_bore);
         translate([0, 0, plate_t - 0.6]) labels();   // labels on the face you see in use
     }

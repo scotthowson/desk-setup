@@ -8,7 +8,7 @@
 // (schablone.stp) and Scott's 49 mm hole-to-hole measurement, 22 Oct 2026. The T-square's 100 and 150 holes are the centres only.
 // PRINT orientation: flat on the bed, lip up; turn over to use. Any filament.
 
-t = 3; lip_h = 6; lip_t = 4; len = 205; w = 100; hole_d = 4;
+t = 3; lip_h = 6; lip_t = 4; len = 205; w = 100; centre_d = 2.5; bit = 3.5;   // centre: scriber only; the five holes: 1/8 in bit (3.18) + 0.3, which prints as a running fit
 r = 42.5; n = 5;
 module ring(d, w = 0.8, dashed = false) {   // engraved circle, 0.5 deep, optionally dashed
     translate([0, 0, t - 0.5]) difference() {
@@ -17,9 +17,9 @@ module ring(d, w = 0.8, dashed = false) {   // engraved circle, 0.5 deep, option
     }
 }
 module pattern(cx, rot, dashed = false) {
-    translate([cx, 0, -1]) cylinder(d = hole_d, h = t + 2, $fn = 24);
+    translate([cx, 0, -1]) cylinder(d = centre_d, h = t + 2, $fn = 24);
     for (i = [0 : n - 1]) translate([cx + r * cos(rot + i * 360 / n), r * sin(rot + i * 360 / n), 0]) {
-        translate([0, 0, -1]) cylinder(d = hole_d, h = t + 2, $fn = 24);
+        translate([0, 0, -1]) cylinder(d = bit, h = t + 2, $fn = 32);
         if (dashed) ring(8);                         // the 150 holes are ringed
     }
     translate([cx, 0, 0]) ring(105, dashed = dashed);   // the OLOV plate's outline

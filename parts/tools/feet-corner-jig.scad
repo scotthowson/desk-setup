@@ -10,7 +10,7 @@
 inset   = 85;      // foot centre from each edge
 hole_sp = 46.8;    // plate holes, centre to centre, measured
 plate   = 59.5;    // feet plate, engraved so you can see where it lands
-plate_t = 2.5; size = 125; fence_h = 6; fence_t = 4; hole_d = 4;
+plate_t = 2.5; size = 125; fence_h = 6; fence_t = 4; centre_d = 2.5; bit = 3.5;   // centre: scriber only; plate holes: 1/8 in bit (3.18) + 0.3, which prints as a running fit
 
 module square_line(s) { translate([inset, inset, plate_t - 0.5]) difference() { translate([-s / 2 - 0.45, -s / 2 - 0.45, 0]) cube([s + 0.9, s + 0.9, 1]); translate([-s / 2 + 0.45, -s / 2 + 0.45, -1]) cube([s - 0.9, s - 0.9, 3]); } }
 module jig() {
@@ -20,8 +20,8 @@ module jig() {
             translate([-fence_t, -fence_t, -fence_h]) cube([size + fence_t, fence_t, fence_h + plate_t]);
             translate([-fence_t, -fence_t, -fence_h]) cube([fence_t, size + fence_t, fence_h + plate_t]);
         }
-        translate([inset, inset, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);
-        for (sx = [-1, 1], sy = [-1, 1]) translate([inset + sx * hole_sp / 2, inset + sy * hole_sp / 2, -1]) cylinder(d = 5.2, h = plate_t + 2, $fn = 48);   // straight 5.2 mm holes: inside jaws between two read 41.6, outside jaws across them 52.0, as on the plate
+        translate([inset, inset, -1]) cylinder(d = centre_d, h = plate_t + 2, $fn = 24);
+        for (sx = [-1, 1], sy = [-1, 1]) translate([inset + sx * hole_sp / 2, inset + sy * hole_sp / 2, -1]) cylinder(d = bit, h = plate_t + 2, $fn = 32);   // 1/8 in drill holes on the plate's 46.8 mm centres (the plate's own holes are 5.2, measured 41.6 between and 52.0 across)
         square_line(plate);
         translate([0, 0, plate_t - 0.6]) labels();   // labels on the face you see in use
     }

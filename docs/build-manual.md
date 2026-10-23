@@ -57,8 +57,8 @@ Measure from the end that butts against top A (y = 65) and the edge that goes ag
 
 ## 4. Fit legs and feet to both tops
 
-1. Pilot every leg plate hole 1/8 in, 15 mm deep, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot), or the table's number if you fit the optional ALEX feet.
-2. Pilot the feet plate holes 1/8 in, 15 mm deep; screw each plate to the top, pad pointing away from the top. Wind each pad out until the printed foot height gauge (102.0 mm inside) just slides over the foot from the side with no rock; all eight then match without a ruler.
+1. Legs: start the five pilots through the leg jig with the 1/8 in bit, lift the jig, finish 15 mm deep with the 15 LEG puck, then drive the IKEA M4 × 16 mm screws (about 13 mm into the top). Pre-set every OLOV to 80.2 cm (measure plate face to foot), or the table's number if you fit the optional ALEX feet.
+2. Feet plates: start the four pilots through the jig's holes with the 1/8 in bit, lift the jig, finish 15 mm deep with the 15 LEG puck; screw each plate to the top, pad pointing away from the top. Wind each pad out until the printed foot height gauge (102.0 mm inside) just slides over the foot from the side with no rock; all eight then match without a ruler.
 3. Rail A: clamp it on its line, flat leg against the top, wall end at x = 1 (1 cm in from the taped end). Measure 12 cm from the front edge to the vertical leg's outer face at both ends and in the middle before drilling; drill and drive the two end screws first, re-check, then the rest. Through each rail hole, drill a 1/8 in pilot 20 mm into the top: the printed drill guide's 25 RAIL step on the flat leg, or a tape flag on the bit 25 mm from the tip (4.8 mm steel plus 20 mm). Drive #10 × 1 in screws with the Robertson #2 bit on the 3 in extension (the chuck would hit the vertical leg otherwise) until the head seats. Nine screws.
 4. Rail B: clamp it on its line with the corner end projecting 12 cm past the top's joint end. Pilot and screw holes 3 to 10 only (eight screws). Holes 1 and 2 wait for step 7.
 
@@ -82,7 +82,7 @@ Decide before step 4, because the OLOV pre-set in step 4 is the table's number. 
 
 The tops are not up yet, so set the units by the walls: ALEX 1's back 6.5 cm off the back wall (the printed wall gauge's 65 leg just fits) and its near side 212.5 cm from the side wall; ALEX 2's side 6.5 cm off the side wall and its near end 277.5 cm from the back wall. That is 3.5 cm inside the tops' edges all round once the tops are on, 3 cm off the walls. Painter's tape on the floor saves guessing. Before drilling the rings: measure the ALEX top panel at an edge; it must be at least 16 mm thick for the ⅝ in screws.
 
-Screw a locating ring to each ALEX top at the four foot positions: ring centres 5 cm in from each corner of the ALEX top (the same F1–F8 centres, now measured on the ALEX). The printed corner template gives the centre and the three screw holes in one placement; drop it over each corner, fences against the edges, punch through. Pilot 5/64 in, 12 mm deep; #6 × ⅝ in flat-head screws. The pads drop into the rings when the tops go on, which is what stops the desk sliding on the ALEX units; the ALEX units themselves then hold the whole desk against racking.
+Screw a locating ring to each ALEX top at the four foot positions: ring centres 5 cm in from each corner of the ALEX top (the same F1–F8 centres, now measured on the ALEX). The printed corner template gives the centre and the three screw holes in one placement; drop it over each corner, fences against the edges, start the three pilots through it with the 5/64 in bit, lift it, finish 12 mm deep with the 12 ALEX puck; #6 × ⅝ in flat-head screws. The pads drop into the rings when the tops go on, which is what stops the desk sliding on the ALEX units; the ALEX units themselves then hold the whole desk against racking.
 
 ## 6. Stand top A (two people)
 
