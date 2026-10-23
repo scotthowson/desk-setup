@@ -29,7 +29,7 @@ Steps: `<div class="step"><div class="num">4</div><div class="body">...</div></d
 - Drawings may carry mm (CAD habit) but every label the builder measures with a tape gets its cm value too, in brackets if the mm must stay.
 
 ## Style
-IKEA: white page, black line art, greys for fills, no meaning carried by colour. Isometric views use `Canvas.iso` (30°). Callouts are numbered balloons that use the part numbers (P01…P21) and hardware numbers (H01…H11) from `facts.json`; a page that uses a balloon shows the legend for it. Every dimension in mm (cm in brackets where the build manual uses cm). Hole symbols: circle plus centre mark, diameter written as `⌀3.2 (1/8 in)`. Arrows for insertion, rotation and alignment. Zoomed detail views in their own figbox.
+IKEA: white page, black line art, greys for fills, no meaning carried by colour. Isometric views use `Canvas.iso` (30°). Callouts are numbered balloons that use the part numbers (P01…P21) and hardware numbers (H01…H11) from `facts.json`; a page that uses a balloon shows the legend for it. Units as in the section above (cm for the tape, mm for calipers and drills). Hole symbols: circle plus centre mark, diameter written as `⌀3.2 (1/8 in)`. Arrows for insertion, rotation and alignment. Zoomed detail views in their own figbox.
 
 Confidence labels: use `badge('VERIFIED')`, `badge('SOURCE')`, `badge('MEASURE')`, `badge('ASSUMPTION')` from `lib.draw` next to the dimension or table row they qualify, with the wording from `facts.json`. A source-defined dimension is never called verified. Any dimension not in the data files gets a `warning_panel(...)` **at the point of use**, not in an appendix.
 
