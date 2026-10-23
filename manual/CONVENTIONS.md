@@ -21,6 +21,13 @@ Figures: `<img class="fig" src="../../figures/name.svg">` is inlined by the buil
 
 Steps: `<div class="step"><div class="num">4</div><div class="body">...</div></div>`. One primary operation per step. Prefer a drawing to text.
 
+## Units and arithmetic (binding)
+- **cm for anything a tape measure reads**: positions on the desk (x, y), stations along a rail or an edge, lengths of tops and rails, distances from the walls, heights from the floor, the wall gap, the rail setback, the feet and ring insets. Write them as the build manual does: `214.5 cm`, `3.5 cm`, `83.0 cm`. One decimal where the manual has one; no trailing noise.
+- **mm for anything calipers or a drill read**: thicknesses, hole diameters, screw lengths and depths, plate and ring sizes, slot sizes, the 19 / 29 lines on the steel, the hole spacings on the plates.
+- Say the unit every time a number stands alone in text; in a table or on a drawing, say it once in the heading or caption ("all cm" / "mm").
+- **No arithmetic for the reader.** Print the number the builder will read on the tool: if the tape is hooked on the joint end, print that reading, not a formula; if a depth depends on a thickness, print the depth. A page that needs the reader to add or subtract is a defect.
+- Drawings may carry mm (CAD habit) but every label the builder measures with a tape gets its cm value too, in brackets if the mm must stay.
+
 ## Style
 IKEA: white page, black line art, greys for fills, no meaning carried by colour. Isometric views use `Canvas.iso` (30°). Callouts are numbered balloons that use the part numbers (P01…P21) and hardware numbers (H01…H11) from `facts.json`; a page that uses a balloon shows the legend for it. Every dimension in mm (cm in brackets where the build manual uses cm). Hole symbols: circle plus centre mark, diameter written as `⌀3.2 (1/8 in)`. Arrows for insertion, rotation and alignment. Zoomed detail views in their own figbox.
 
