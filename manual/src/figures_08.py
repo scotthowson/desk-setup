@@ -277,6 +277,13 @@ def rail_section():
     return [(yo - LEG, UNDER), (yo, UNDER), (yo, RAIL_LOW), (yo - TH, RAIL_LOW), (yo - TH, UNDER - TH), (yo - LEG, UNDER - TH)]
 
 
+class MirrorCanvas(Canvas):
+    """Horizontal mirror of the page mapping, for views where y grows to the left (knee space looking at the side wall)."""
+    def P(self, x, y):
+        px, py = Canvas.P(self, x, y)
+        return self.w - px, py
+
+
 def wall(c, y, z0, z1, side=-1, w=30):
     c.line((y, z0), (y, z1), lw="heavy")
     c.hatch(R(y + side * w, y, z0, z1) if side < 0 else R(y, y + w, z0, z1), spacing=1.4)
@@ -288,21 +295,22 @@ def fig_slideB():
     s = 1 / 24.0
     W = 172
     out = Canvas(W, 100)
-    sh = 160  # graphic offset of the approach position (not a dimension)
+    sh = 150  # ALEX 2 staged 15 cm out (facts procedures.alex2_staging)
     for k, (dy, lab, oy) in enumerate([(sh, "a", 0), (0, "b", 51)]):
-        c = Canvas(W, 49, scale=s, origin=(-150, -110), flip_y=True)
+        # seen from the knee space looking at the side wall: top A on the right, so y grows to the LEFT (negative scale)
+        c = MirrorCanvas(W, 49, scale=s, origin=(-150, -110), flip_y=True)
         floor(c, -60, 3400)
         wall(c, -GAP, 0, 1000, side=-1, w=60)
         topA_cut(c)
         alex2_side(c, dy)
         shapes_draw(c, topB_side_shapes(), rot(0, (0, 0), shift=(dy, 0)))
-        c.text((20, 1020), lab, size=4.2, weight="bold", anchor="start")
+        c.text((3560, 1020), lab, size=4.2, weight="bold", anchor="start")
         if k == 0:
             yend = cm(D["B"]["y1"]) + dy
             c.arrow((yend + 30, 960), (yend - 470, 960), lw="heavy", head=2.6)
-            c.text((yend - 220, 1020), "push", size=3.2)
-            ldr(c, (legs["L5"][1] + dy - 18, 330), (1690, 330), "legs wound", size=3.2, anchor="end")
-            c.text((1655, 190), "2–3 mm short", size=3.2, anchor="end")
+            c.text((yend - 220, 1020), "push ALEX 2", size=3.2)
+            ldr(c, (legs["L5"][1] + dy - 18, 330), (1690, 330), "legs set to", size=3.2)
+            c.text((1655, 190), "79.9–80.0 cm", size=3.2, anchor="start")
             c.balloon((1900 + dy, UNDER - 25), (2150 + dy, 420), "P07")
             c.balloon((1000 + dy, SURF - 6), (950, 960), "P02")
             c.balloon((cm(A2["y0"]) + dy + 40, 300), (2700, 300), "P04")
@@ -318,7 +326,8 @@ def fig_slideB():
 # ------------------------------------------------------------------ H-4: the joint in section (detail)
 def fig_joint_section():
     s = 0.45
-    c = Canvas(172, 66, scale=s, origin=(418, 713), flip_y=True)
+    # same view as G-3: top A on the right, y grows to the left
+    c = MirrorCanvas(172, 66, scale=s, origin=(418, 713), flip_y=True)
     y0, y1 = 430, 790
     secA = R(y0, WID, UNDER, SURF)
     c.poly(secA, fill="#fff"); c.hatch(secA, spacing=1.4)
@@ -336,8 +345,8 @@ def fig_joint_section():
     dm(c, (yb, RAIL_LOW), (WID, RAIL_LOW), "12 cm under top A", offset=4, side=-1)
     ldr(c, (yb, 768), (548, 722), "rail B's end touches rail A's vertical leg (y = 53 cm)")
     ldr(c, (WID, SURF), (625, 852), "B's end meets A's front edge (y = 65 cm)")
-    ldr(c, (712, SURF), (725, 852), "flush, 83.0 cm", anchor="start")
-    c.text((785, 737), "dashed: on its way in, 2–3 mm low", size=3.0, anchor="end")
+    ldr(c, (712, SURF), (725, 852), "flush, 83.0 cm", anchor="end")
+    c.text((785, 737), "dashed: on its way in, 2–3 mm low", size=3.0, anchor="start")
     c.label_box((520, 816), "top A (cut)", size=3.0, pad=0.6)
     c.text((470, 776), "rail A", size=3.0)
     save(c, "joint-section")
@@ -368,14 +377,14 @@ def fig_joint_plan():
         c.hole((cm(RB["x0"]) + off, yA + cm(h)), 5.56)
     for i in (0, 1):
         c.arrow((668, 760), (cm(RB["x0"]) + off + 5, yA + cm(RB["holes"][i]) + 3), lw="thin", head=1.4)
-    for k, t in enumerate(("rail B", "holes 1, 2", "(step 7)")):
+    for k, t in enumerate(("rail B", "holes 1, 2", "(step 4)")):
         c.text((672, 765 + 18 * k), t, size=3.0, anchor="start")
     fl, ft = cm(D["fitting"]["legs"]), 5
     c.poly([(xB, yA), (xB + fl, yA), (xB + fl, yA + ft), (xB + ft, yA + ft), (xB + ft, yA + fl), (xB, yA + fl)], dash="1.2 0.8", lw="outline")
     xi = xB - TH
     c.poly([(xi, yA), (xi - fl, yA), (xi - fl, yA + ft), (xi - ft, yA + ft), (xi - ft, yA + fl), (xi, yA + fl)], dash="1.2 0.8", lw="outline")
     c.balloon((xB + fl - 8, yA + 3), (690, 590), "P08")
-    c.text((665, 680), "fittings:", size=3.0, anchor="start"); c.text((665, 698), "chapter F", size=3.0, anchor="start")
+    c.text((665, 680), "fittings:", size=3.0, anchor="start"); c.text((665, 698), "steps 5–7", size=3.0, anchor="start")
     pw, pl = cm(D["plateW"]), cm(D["plateL"])
     py0 = cm(F["layout_cm"]["joining_plates"]["y_span"][0])
     for name, xc in D["plates"]:
@@ -608,7 +617,48 @@ def fig_gauge():
     save(c, "gauge")
 
 
+def fig_corner():
+    """Former chapter F figures. F-2 plan, F-3 stack-up and F-4 screw are reused as drawn by figures_06.py (plan and
+    sections, not mirrored). The exploded view is redrawn here unmirrored: the desk frame (x along the back wall, y into
+    the room, z up) is left-handed, so seen from the knee space rail A's far end is to the RIGHT and rail B to the LEFT."""
+    import shutil
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import figures_06 as f6
+    f6.proj = lambda p: ((p[0] - p[1]) * f6.C30, p[2] - (p[0] + p[1]) / 2)
+    for fn, name in ((f6.fig_plan, "06-plan.svg"), (f6.fig_stackup, "06-stackup.svg"), (f6.fig_screw, "06-screw.svg")):
+        fn()
+        shutil.copy(os.path.join(OUT, name), os.path.join(OUT, "08-" + name[3:]))
+    sc = f6.Scene()
+    xa0, xa1, yb1 = 400, 740, 800
+    f6.rails(sc, xa0, xa1, yb1)
+    OO = (75, 75, -95); IO = (-30, 95, -205)
+    top_o, _ = f6.fitting(sc, (f6.OUT, f6.OUT), +1, f6.ZC, gusset_up=True, off=OO)
+    top_i, _ = f6.fitting(sc, (f6.INB, f6.OUT), -1, f6.ZC, gusset_up=False, off=IO)
+    c = Canvas(172, 132)
+    k, P = f6.fit_view(sc, 172, 132, (46, 4, 2, 2))
+    sc.render(c, P)
+    ix, iy, gz = f6.INB - f6.FIT_T + IO[0], f6.OUT + f6.FIT_T + IO[1], f6.ZC - f6.FIT_W / 2 + IO[2]
+    f6.P_(c, [P((ix, iy, gz)), P((ix - 26, iy, gz)), P((ix, iy + 26, gz))], lw="thin", dash="1.2 0.8")
+    c.balloon(P((640, f6.OUT, -25)), (158, 30), "P06")
+    c.balloon(P((505, 740, 0)), (52, 14), "P07")
+    c.balloon(P((f6.OUT + OO[0] + 60, f6.OUT + OO[1] + f6.FIT_T, f6.ZC + OO[2])), (158, 104), "P08")
+    c.balloon(P((f6.INB + IO[0] + f6.FIT_T, f6.OUT + IO[1] + 60, f6.ZC + IO[2])), (26, 98), "P08")
+    for i, (t, w) in enumerate([("OUTSIDE FITTING", "bold"), ("heel in the outside corner;", ""), ("legs on rail A (toward", ""),
+                                ("the far end) and on rail", ""), ("B's outer face; gusset up,", ""), ("facing the knee space", "")]):
+        f6.T_(c, 169, 110 + i * 4.1, t, size=3.2, weight=w or "normal", anchor="end")
+    for i, (t, w) in enumerate([("INSIDE FITTING", "bold"), ("heel in the inside corner;", ""), ("legs on rail A (toward", ""),
+                                ("the wall end) and on rail", ""), ("B's inner face, under its", ""), ("flat leg; gusset DOWN,", ""),
+                                ("at the floor (dashed)", "")]):
+        f6.T_(c, 3, 56 + i * 4.1, t, size=3.2, weight=w or "normal")
+    for tgt, frm in (((f6.OUT, f6.OUT, f6.ZC + f6.FIT_W / 2), top_o), ((f6.INB, f6.OUT, f6.ZC + f6.FIT_W / 2), top_i)):
+        a, b = P(frm), P(tgt)
+        f6.L_(c, a[0], a[1], b[0], b[1], lw="thin", dash="2 1")
+        f6.head(c, a[0], a[1], b[0], b[1], 2.0)
+    save(c, "exploded")
+
+
 if __name__ == "__main__":
+    fig_corner()
     fig_standA(); fig_pad_ring(); fig_slideB(); fig_joint_section(); fig_joint_plan(); fig_checks()
     fig_pulled(); fig_chain(); fig_profile(); fig_tile(); fig_gauge()
     print("chapter H figures:", sorted(f for f in os.listdir(OUT) if f.startswith("08-")))

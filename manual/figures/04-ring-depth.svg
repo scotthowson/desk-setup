@@ -1,14 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 76" width="60mm" height="76mm" class="fig">
-<polygon points="4,22 56,22 56,56 4,56" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<path d="M 4 56 l 13 0 l 2 -2 l 2 4 l 2 -2 l 33 0" fill="none" stroke="#000" stroke-width="0.25"/>
-<polygon points="18,17 42,17 42,22 18,22" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
-<polygon points="29.2,22 30.8,22 30.8,46 29.2,46" fill="#fff" stroke="#000" stroke-width="0.2" stroke-dasharray="0.8 0.5" stroke-linejoin="round"/>
-<polygon points="26.8,17 33.2,17 31.4,18.8 31.4,46 30,48 28.6,46 28.6,18.8" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<text x="33" y="47" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">13 mm</text>
-<text x="30" y="4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ring flange</text>
-<text x="30" y="7.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">#6 × 5/8 flat head</text>
-<text x="30" y="11.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">pilot 12, 12 ALEX</text>
-<text x="30" y="62" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX top panel:</text>
-<text x="30" y="65.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">15.9 mm (5/8 in), measured;</text>
-<text x="30" y="69.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">screw 13.4 in, 2.5 remains</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 66" width="60mm" height="66mm" class="fig">
+<polygon points="4,20 48,20 48,51.8 4,51.8" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="14,15 40,15 40,20 14,20" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="26.2,20 27.8,20 27.8,44 26.2,44" fill="#fff" stroke="#000" stroke-width="0.2" stroke-dasharray="0.8 0.5" stroke-linejoin="round"/>
+<polygon points="23.8,15 30.2,15 28.4,16.8 28.4,44.8 27,46.8 25.6,44.8 25.6,16.8" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="29.6" y="43.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">13.4</text>
+<line x1="51.6" y1="51.8" x2="52.21" y2="51.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.6" y1="20" x2="52.21" y2="20" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.01" y1="51.8" x2="51.01" y2="20" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="51.01,51.8 50.496,50.391 51.524,50.391" fill="#000"/>
+<polygon points="51.01,20 51.524,21.409 50.496,21.409" fill="#000"/>
+<text x="53.01" y="35.9" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 53.01 35.9)">15.9</text>
+<line x1="7.4" y1="46.8" x2="6.79" y2="46.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="7.4" y1="51.8" x2="6.79" y2="51.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="7.99" y1="46.8" x2="7.99" y2="51.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="7.99,46.8 8.504,48.209 7.476,48.209" fill="#000"/>
+<polygon points="7.99,51.8 7.476,50.391 8.504,50.391" fill="#000"/>
+<text x="5.99" y="49.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 5.99 49.3)"></text>
+<text x="9.5" y="55.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">2.5 remains</text>
+<text x="30" y="3.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ring flange, #6 × 5/8 flat head</text>
+<text x="30" y="7.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">pilot 12 (12 ALEX puck)</text>
+<text x="30" y="60.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX top panel 15.9 mm (5/8 in)</text>
+<text x="30" y="64.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">all mm, 2:1</text>
 </svg>

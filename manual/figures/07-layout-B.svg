@@ -2,7 +2,7 @@
 <polygon points="13,9 42.25,9 42.25,121.05 13,121.05" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <line x1="42.25" y1="9" x2="42.25" y2="121.05" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
 <line x1="18.4" y1="9" x2="18.4" y2="99.45" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1 0.8 1" stroke-linecap="round"/>
-<text x="15.92" y="56.25" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 15.92 56.25)">rail B line, x = 53 cm (fitted later)</text>
+<text x="15.92" y="56.25" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 15.92 56.25)">rail B line, x = 53 cm (step 5)</text>
 <polygon points="14.575,103.275 40.675,103.275 40.675,119.475 14.575,119.475" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
 <circle cx="37.75" cy="18" r="2.363" fill="#fff" stroke="#000" stroke-width="0.5"/>
 <circle cx="39.663" cy="18" r="0.248" fill="#000" stroke="#000" stroke-width="0.25"/>

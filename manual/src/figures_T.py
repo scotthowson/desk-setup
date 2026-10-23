@@ -182,6 +182,13 @@ def drill(c, svg, hid, p, bit, uv, src, ref_d=None, optional=False, label=None, 
     HOLES.append((svg, hid, "OPTIONAL DRILL" if optional else "DRILL", uv, d, src))
 
 
+def refhole(c, svg, hid, p, uv, src, d):
+    """A part's own hole shown for checking: dashed circle at its size plus a POSITION mark. Never drilled from this sheet."""
+    c.raw(f'<circle id="{hid}" cx="{_f(p[0])}" cy="{_f(p[1])}" r="{_f(d / 2)}" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="0.8 0.6"/>')
+    posmark(c, p, size=4.2)
+    HOLES.append((svg, hid, "POSITION", uv, d, src))
+
+
 def posmark(c, p, size=5, hid=None):
     """POSITIONING reference: thin cross in an open diamond. Centre mark only, never drilled."""
     c.line((p[0] - size, p[1]), (p[0] + size, p[1]), lw="thin"); c.line((p[0], p[1] - size), (p[0], p[1] + size), lw="thin")
@@ -199,8 +206,9 @@ def drill_symbol(c, p, optional=False):
 
 def legend(c, x, y, drill_txt, optional_txt=None, w=60):
     T(c, (x, y), "LEGEND", weight="bold"); y += 5
-    drill_symbol(c, (x + 4, y + 1.5))
-    y = max(para(c, x + 10, y, drill_txt, w - 10), y + 6) + 1.5
+    if drill_txt:
+        drill_symbol(c, (x + 4, y + 1.5))
+        y = max(para(c, x + 10, y, drill_txt, w - 10), y + 6) + 1.5
     if optional_txt:
         drill_symbol(c, (x + 4, y + 1.5), optional=True)
         y = max(para(c, x + 10, y, optional_txt, w - 10), y + 6) + 1.5
@@ -283,7 +291,7 @@ def t1():
     label_box(c, (C[0] + 20, C[1] + 3.4), "DATUM: ALEX corner")
     c.arrow(U(104, 7), U(114, 17)); T(c, U(116, 12), "into the cabinet")
     k = RING["centre_from_alex_corner"]; R = U(k, k)
-    ring(c, R, RING["flange_od"] / 2); ring(c, R, RING["od"] / 2); ring(c, R, RING["bore"] / 2)
+    ring(c, R, RING["flange_od"] / 2); ring(c, R, FEET["body_and_pad_diameter"] / 2)
     posmark(c, R, size=6, hid="T-1-centre")
     dim2(c, U(0, 10), U(k, 10), "50 (5.0 cm)"); dim2(c, U(k + 42, 0), U(k + 42, k), "50 (5.0 cm)")
     c.line(U(k + 6, k), U(k + 44, k), lw="thin", dash="2 1"); T(c, U(k + 45.5, k), "0°")
@@ -291,20 +299,21 @@ def t1():
     for a in RING_ANGLES:
         t = math.radians(a); uv = (k + r * math.cos(t), k + r * math.sin(t))
         lp, an = {45: ((88, 106), "start"), 165: ((9.5, 116), "start"), 285: ((72, 178), "start")}[a]
-        drill(c, name, f"T-1-R{a}", U(*uv), "5/64", uv, f"facts rings r {r} (foot-ring.scad) at {a}° as alex-corner-template.scad", ref_d=RING["screw_hole"], label=f"RING {a}°", lpos=lp, anchor=an)
+        refhole(c, name, f"T-1-R{a}", U(*uv), uv, f"facts rings r {r} (foot-ring.scad) at {a}° as alex-corner-template.scad", RING["screw_hole"])
+        T(c, lp, f"RING {a}°", anchor=an)
     rf = AF["screw_circle_radius"]
     for a in AF["screw_angles_deg"]:
         t = math.radians(a); uv = (k + rf * math.cos(t), k + rf * math.sin(t))
         drill(c, name, f"T-1-F{a}", U(*uv), "5/64", uv, f"facts alex_feet_optional r {rf} at {a}° (alex-foot.scad)", optional=True)
-    T(c, (16, 93), "dashed inner 3 = OPTIONAL ALEX-foot holes")
+    T(c, (16, 93), "inner 3 = DRILL, ALEX feet only (bottom)")
     c.arrow((40, 95), (43.6, 129.6), lw="thin", head=1.4)
     # calibration, id, use; legend and notes in the right column
     ruler(c, 20, 17); crosscheck(c, 20, 23)
     ident(c, 28, 27, "T1", "P10 locating ring + P20 ALEX foot (opt.)")
-    y = para(c, 28, 33, "SHEET FACE UP on the ALEX top, the two edge lines on the two edges of one corner. Same sheet for all eight corners: turn it, never flip it.", 92)
-    para(c, 28, y + 1, "1 Tape down.  2 Awl or punch each RING centre through the paper.  3 Lift the sheet.  4 Pilot 5/64 in, 12 mm deep (puck 12 ALEX).  5 #6 × 5/8 in flat head, 13.4 mm into the ALEX top.", 92)
-    yl = legend(c, 124, 35, "DRILL ⌀2.0 (5/64 in): ring screws, ALEX TOP.", "OPTIONAL DRILL ⌀2.0 (5/64 in): ALEX feet only, on the ALEX BOTTOM (unit on its back).", w=52)
-    para(c, 124, yl + 3, "Ring: bore ⌀52, OD ⌀58, flange ⌀75 (dashed), screws on r 33 at 45 / 165 / 285°, the printed ALEX corner template's holes. ALEX foot: r 14.5 at the same angles. Angles counter-clockwise from the bottom edge, sheet face up. Ring screw holes ⌀3.8 shown dashed.", 52)
+    y = para(c, 28, 33, "CHECK, ALEX TOP: sheet face up, the edge lines on the two edges of one corner. Your pencil trace of the pad must lie on the ⌀50 circle. Turn the sheet for each corner, never flip it.", 92)
+    para(c, 28, y + 1, "DRILL, ALEX BOTTOM, only if fitting ALEX feet (unit on its back): punch the 3 inner centres, lift, pilot 5/64 in, 12 mm deep (puck 12 ALEX).", 92)
+    yl = legend(c, 124, 35, None, "DRILL ⌀2.0 (5/64 in), dashed: ALEX feet only, ALEX BOTTOM.", w=52)
+    para(c, 124, yl + 3, "Dashed circles: pad trace ⌀50, ring flange ⌀75. RING marks: the ring's screw holes (⌀3.8) on r 33 at 45 / 165 / 285°, where the printed ALEX corner template pilots them. ALEX foot: r 14.5, same angles. Angles counter-clockwise from the bottom edge, sheet face up.", 52)
     return save(c, name), W
 
 
@@ -336,7 +345,7 @@ def t2():
     plate_pattern(c, name, "B", OB, (0, 0), lambda a, b: (b, a + k), src)      # u = along the edge from the station, v = from the edge
     dim2(c, (EX, 95), (EX + k, 95), "85 (8.5 cm)")
     T(c, (12, 32), "PIECE B · F1 F3 F5 F6", weight="bold")
-    para(c, 12, 37, "Set the station line on your pencil mark 34.5 cm from the far end, along this edge.", 46)
+    para(c, 12, 37, "Hook the tape on the FAR end; set the station line on your mark at 34.5 cm, along this edge.", 46)
     T(c, (12, 54), "← TOP EDGE: trim, butt to it")
     T(c, (EX + k + 33, Ey - 2.6), "STATION LINE")
     # cut line
@@ -470,7 +479,7 @@ def t4(rail):
         drill_symbol(c, (124, 6.5)); c.circle((124, 6.5), BITS["1/8"][0] / 2, lw="thin", dash="0.5 0.4")
         para(c, 130, 5, "DRILL ⌀5.56 (7/32 in) through the steel; 1/8 in pilot first (dashed). Centre-punch through the paper, low speed, cutting oil.", 68)
         posmark(c, (124, 22.5), size=3.5); para(c, 130, 22, "Ticks and numbers: position only, never drilled.", 68)
-        para(c, 118, 31, "Preferred method: the printed rail drill jig on the 19 line, with a tape from the reference end. This strip is the check. Tape it to either face of the flat leg. 19 is from the FREE edge (build manual step 1), not from the heel.", 80)
+        para(c, 118, 31, "Preferred method: the printed rail drill jig on the 19 line, with a tape from the reference end. This strip is the check. Tape it to either face of the flat leg. 19 is from the FREE edge (chapter E), not from the heel.", 80)
         boxed(c, 200, 1, 72, "MEASURE THE DELIVERED RAIL", f"Design 213.0 cm (2130 mm); bought as 84 in = 213.4 cm (2133.6 mm). Every station runs from the labelled {end_name.lower()}; the far end carries any extra. Tape-check each station from that end.")
         para(c, 4, YB + 9, f"Joins: trim each later sheet on its start J line and lay it on the previous sheet's J line so ticks, numbers and the screw line run on; tape. Rail {rail} holes, cm from the {end_name.lower()}: " + ", ".join(f"{rail}{i} {s / 10:g}" for i, s in enumerate(stations, 1)) + ".", 266)
         names.append((save(c, name), W, n, n_sheets, s0, s_end))
@@ -599,7 +608,7 @@ def t6():
     leader2(c, P(445, 45), (138, 76), "clamp zone 36-44 cm"); T(c, (138, 80.5), "jaw pad 90 × 50 mm")
     leader2(c, P(70, 300), (52, 116), "pad plate x 0.5-8.1 cm, y 20.0-45.4 cm")
     leader2(c, P(52, 430), (52, 123), "clamp zone 36-44 cm; oval")
-    para(c, 8, 192, "Plan from above, datum top A's back-left corner (x along the back wall, y along the side wall). The plates lie LOOSE on the underside under the VIVO lower jaws (build manual step 8): with the top face down, draw the outlines measuring from the same two named edges. Jaw pad: oval 90 × 50 mm, 13.5-63.5 mm in from the edge (measured), drawn centred on each clamp.", 166)
+    para(c, 8, 192, "Plan from above, datum top A's back-left corner (x along the back wall, y along the side wall). The plates lie LOOSE on the underside under the VIVO lower jaws (chapter I): with the top face down, draw the outlines measuring from the same two named edges. Jaw pad: oval 90 × 50 mm, 13.5-63.5 mm in from the edge (measured), drawn centred on each clamp.", 166)
     return save(c, name), W
 
 
@@ -706,7 +715,7 @@ def main():
     f3a, w3 = t3(100, "T-3a-olov-100.svg", "T-3a"); f3b, _ = t3(150, "T-3b-olov-150.svg", "T-3b")
     rA, rB = t4("A"), t4("B"); f5, w5 = t5(); f6, w6 = t6()
     check()
-    sheets = [("T1", "Locating ring P10 (+ optional ALEX foot P20)", "1:1 drilling"), ("T2", "Feet plate P09, two pieces", "1:1 drilling"),
+    sheets = [("T1", "Locating ring P10 (+ optional ALEX foot P20)", "1:1 check; drilling only for the ALEX feet"), ("T2", "Feet plate P09, two pieces", "1:1 drilling"),
               ("T3a", "OLOV plate P05 at 100: L2-L6", "1:1 drilling"), ("T3b", "OLOV plate P05 at 150: L1", "1:1 drilling"),
               ("T4-A", f"Rail A P06 station strip, {len(rA)} landscape sheets", "1:1 marking check"), ("T4-B", f"Rail B P07 station strip, {len(rB)} landscape sheets", "1:1 marking check"),
               ("T5", "Corner fitting P08 placement", "reference 1:2, not for drilling"), ("T6", "Clamp pad plate P11 placement", "reference 1:4, positioning only")]
@@ -721,8 +730,8 @@ def main():
 </section>
 """)
     write("01-ring.html", page("T1", "Locating ring P10", "Locating ring (P10) · check template 1:1", ["VERIFIED"], f1, w1,
-          pre='<div class="note"><b>CHECK SHEET.</b> The rings are fitted by tracing the pads with the top standing on the bare cabinet (build manual). Lay this sheet on each ALEX corner to check that the ring centre is 5 cm in from both edges. If you prefer the measured method, you can also drill through it.</div>',
-          after='<div class="note">ALEX top panel 15.9 mm (5/8 in), measured 23 Oct 2026: the #6 × 5/8 in screws go 13.4 mm in and leave 2.5 mm. Turn each ring so its three screw holes sit on the marks.</div>'))
+          pre='<div class="note"><b>CHECK SHEET.</b> The rings are placed by tracing the pads (chapter G). Lay this sheet on each ALEX top corner: the traced circle must sit on the ⌀50 circle, centred 5 cm in from both edges. It is a drilling template only for the optional ALEX feet, on the bottom corners.</div>',
+          after='<div class="note">The ring\'s own holes are at 90 / 210 / 330° in its file; the template drills 45 / 165 / 285°. The ring is round and is turned so its holes meet the pilots. ALEX top panel 15.9 mm (5/8 in), measured 23 Oct 2026: the #6 × 5/8 in screws go 13.4 mm in and leave 2.5 mm.</div>'))
     write("02-feet.html", page("T2", "Feet plate P09", "Feet plate (P09) · drilling template 1:1", ["VERIFIED"], f2, w2,
           extra=" Verified on the purchased plate 23 Oct 2026: 41.6 between holes (inside jaws), 52.0 across (outside jaws), so 46.8 centres."))
     write("03-olov.html", page("T3a", "OLOV plate P05, 100", "OLOV plate (P05) · 100 from the edge · 1:1", ["VERIFIED"], f3a, w3)
@@ -733,8 +742,8 @@ def main():
             html += page(f"T4-{rail}", f"Rail {rail} strip {n}/{N}", f"Rail {rail} ({part}) station strip {n}/{N}", ["SOURCE", "MEASURE"], fig, W, cls=" land")
     write("04-rails.html", html)
     write("05-fittings.html", page("T5", "Corner fittings P08", "Corner fitting (P08) placement · reference", ["SOURCE", "VERIFIED"], f5, w5))
-    write("06-pads.html", page("T6", "Clamp pad plates P11", "Clamp pad plate (P11) placement · reference", ["VERIFIED", "ASSUMPTION"], f6, w6,
-          after='<p class="small">VERIFIED: pad plate outlines and the 90 × 50 lower-jaw pad, measured 21-23 Oct 2026 (facts.json vivo). ASSUMPTION / FIELD CHECK: the oval drawn centred on the clamp; the clamp back sets the final position (crossbar fitted as the spacing guide).</p>'))
+    write("06-pads.html", page("T6", "Clamp pad plates P11", "Clamp pad plate (P11) placement · reference", ["SOURCE", "VERIFIED", "ASSUMPTION"], f6, w6,
+          after='<p class="small">SOURCE-DEFINED: the pad plate outlines (marking table, chapter F). VERIFIED: the 90 × 50 mm lower-jaw pad, measured 21-23 Oct 2026 (facts.json vivo). ASSUMPTION / FIELD CHECK: the oval drawn centred on the clamp; the clamp back sets the final position (crossbar fitted as the spacing guide).</p>'))
 
 
 if __name__ == "__main__":

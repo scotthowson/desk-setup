@@ -1,0 +1,68 @@
+<section class="page" data-chapter="J" data-title="Wall-gap trim" data-toc="J · Wall-gap trim (optional)">
+  <h1>J · Wall-gap trim (optional)</h1>
+  <div class="warn"><span class="warn-icon">!</span><div><b>After chapter I.</b><br>The clamp pieces wrap round the VIVO clamp backs, so both clamps must already be fitted and tight. The trim goes on before the final push to the walls.</div></div>
+  <p>Parts: P19 wall-gap trim (corner, two 80 mm fillers, two clamp pieces, 240 mm segments, the short end pieces, connector tiles), H07 #4 × 1/2 in flat head × 48. Tools: tape measure, drill guide with the <b>10 EDGE</b> puck, 5/64 in bit, wall gauge. No figure in this chapter uses part balloons.</p>
+
+  <div class="step"><div class="num">1</div><div class="body" style="font-size:9.5pt;line-height:1.35">
+    <b>Unload the desk.</b> Take the screens, the PC and everything loose off the desk.
+  </div></div>
+
+  <div class="step"><div class="num">2</div><div class="body" style="font-size:9.5pt;line-height:1.35">
+    <b>Measure, set, print.</b> With the desk still against both walls, measure the gap between each top's raw back edge and the wall, in mm, at five or six points along each wall. Take the smallest reading, find it in the table, and set <span class="mono">gap</span> in <span class="mono">parts/accessories/wall-gap-common.scad</span> to the value under it. Then print the trim. <span class="badge badge-measure">MEASURE ON HARDWARE</span>
+  </div></div>
+  <table>
+    <tr><th>Smallest gap (mm)</th><td class="n">27</td><td class="n">28</td><td class="n">29</td><td class="n">30</td><td class="n">31</td><td class="n">32</td><td class="n">33</td><td>under 27 or over 33</td></tr>
+    <tr><th>Set <span class="mono">gap</span> to</th><td class="n">26</td><td class="n">27</td><td class="n">28</td><td class="n">29 (as saved)</td><td class="n">30</td><td class="n">31</td><td class="n">32</td><td>measure again and ask before printing</td></tr>
+  </table>
+  <table>
+    <tr><th>Wall</th><th>From the wall corner outward: desk positions in cm, piece lengths in mm</th><th>Slotted segments (cm)</th></tr>
+    <tr><td>back</td><td>corner (to 20), 80 mm filler (20–28), clamp piece (28–52), 8 × 240 mm, 1 × 50 mm (to 249)</td><td>3rd (100–124), 8th (220–244)</td></tr>
+    <tr><td>side</td><td>corner (to 20), 80 mm filler (20–28), clamp piece (28–52), 10 × 240 mm, 1 × 220 mm (to 314)</td><td>3rd (100–124)</td></tr>
+  </table>
+  <p>The corner piece covers each wall's first 20 cm of desk. 24 connector tiles: 11 joints on the back wall, 13 on the side wall. Cut list from parts/README.md.</p>
+</section>
+
+<section class="page" data-chapter="J" data-title="Wall-gap trim">
+  <div class="step"><div class="num">3</div><div class="body" style="font-size:9.5pt;line-height:1.35">
+    <b>Pull the desk out, 40 cm from both walls.</b> Two people, one at each ALEX unit: slide the whole desk away from both walls. The ALEX units slide on their feet and the pads stay in their rings. Nothing comes apart.
+  </div></div>
+  <div class="figbox"><img class="fig" src="../../figures/08-pulled.svg" style="width:172mm">
+    <div class="cap" style="font-size:8.5pt">Fig. J-1 · Plan, seen from above: x grows to the right, y toward you, back wall at the top (1:40). Dashed: the desk in place, 3 cm off both walls. Grey: pulled 40 cm off both, so the raw back edges are open to work on.</div></div>
+
+</section>
+
+<section class="page" data-chapter="J" data-title="Wall-gap trim">
+  <div class="step"><div class="num">4</div><div class="body" style="font-size:9.5pt;line-height:1.35">
+    <b>Build each chain from the corner outward.</b> Corner piece, 80 mm filler, clamp piece with its notch round the clamp back, then the 240 mm segments (slotted ones where the cut list says), ending with the short piece. Butt every joint and push a connector tile up into the pockets.
+  </div></div>
+  <div class="figbox"><img class="fig" src="../../figures/08-chain.svg" style="width:172mm">
+    <div class="cap" style="font-size:8.5pt">Fig. J-2 · Chain order along both walls, straightened out: the wall corner on the left, desk positions in cm growing to the right, piece lengths in mm (1:20). The notch (white, in K) wraps the clamp back, 80 mm long and 17.5 mm proud <span class="badge badge-verified">VERIFIED</span>.</div></div>
+  <div class="two">
+    <div class="figbox"><img class="fig" src="../../figures/08-tile.svg" style="width:82mm">
+      <div class="cap" style="font-size:8.5pt">Fig. J-3 · Connector tile (1.8:1, mm), one under every joint, pins up. It bridges the 20 × 12 mm pockets of two butted pieces.</div></div>
+    <div>
+      <p>Every piece, the corner included, has a pocket on its underside at each end, over the gap. Butt two pieces, then push a tile up into both pockets until its pins seat: the joint cannot step, bow or drift, and nothing shows on top.</p>
+      <p>If a wall is out and the notch misses the clamp, change the 80 mm filler's <span class="mono">seg</span> and reprint it, nothing else.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-chapter="J" data-title="Wall-gap trim">
+  <div class="step"><div class="num">5</div><div class="body" style="font-size:9.5pt;line-height:1.35">
+    <b>Pilot and screw.</b> Through each lip hole, pilot 5/64 in, 10 mm deep, drill horizontal, with the drill guide's <b>10 EDGE</b> puck held against the raw edge. Drive an H07 #4 × 1/2 in flat head into each: two per segment, one per corner leg, one each side of a clamp notch.
+  </div></div>
+  <div class="figbox"><img class="fig" src="../../figures/08-trim-profile.svg" style="width:172mm">
+    <div class="cap" style="font-size:8.5pt">Fig. J-4 · Trim on the raw back edge, section across the edge (1.8:1, mm): the wall on the left, the desk toward you on the right. 12 mm rests on the surface, the 20 mm lip drops into the gap, the screw sits 14 mm below the surface: nothing shows on top and nothing goes into the top face. Profile from parts/accessories/wall-gap-common.scad <span class="badge badge-source">SOURCE-DEFINED</span>; top 28 mm thick <span class="badge badge-measure">MEASURE ON HARDWARE</span>.</div></div>
+
+  <div class="two">
+    <div>
+      <div class="step"><div class="num">6</div><div class="body" style="font-size:9.5pt;line-height:1.35">
+        <b>Slide the desk back.</b> Two people again, one at each ALEX, until the wall gauge's ALEX 65 leg (6.5 cm) just fits between the wall and each ALEX. The trim's outer edge stops 1 mm short of the wall.
+      </div></div>
+      <p>Retighten every screw after two weeks.</p>
+      <p><b>Next: chapter K</b>, final inspection and load testing.</p>
+    </div>
+    <div class="figbox"><img class="fig" src="../../figures/08-gauge.svg" style="width:80mm">
+      <div class="cap" style="font-size:8.5pt">Fig. J-5 · Wall gauge at ALEX 1, section across the back wall: the wall on the left, the room on the right (1:3.3).</div></div>
+  </div>
+</section>

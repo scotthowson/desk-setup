@@ -74,17 +74,17 @@ def fig_orient():
     pline(c, (ox2, oy2), (ox2, oy2 + (B["y1"] - B["y0"]) * k), lw=1.2)
     ptext(c, ox2 + B["x1"] * k / 2, oy2 + 18, "B", size=4, weight="bold")
     cx, cy, r = 60, 92, 5
-    c.raw(f'<path d="M {cx + r:.2f} {cy:.2f} A {r} {r} 0 1 1 {cx:.2f} {cy - r:.2f}" fill="none" stroke="#000" stroke-width="0.5"/>')
-    c._head(cx - 1.5, cy - r - 0.2, cx, cy - r, 1.6)
+    c.raw(f'<path d="M {cx + r:.2f} {cy:.2f} A {r} {r} 0 1 0 {cx:.2f} {cy + r:.2f}" fill="none" stroke="#000" stroke-width="0.5"/>')
+    c._head(cx - 1.5, cy + r + 0.1, cx, cy + r, 1.6)   # anticlockwise: A's wall edge (top) turns to B's wall edge (left)
     for i, (t, w) in enumerate((("Face up, as installed:", "bold"), ("heavy line = unfinished edge,", "normal"), ("always to a wall.", "normal"),
-                                ("B is A turned a quarter", "bold"), ("turn, never flipped over.", "bold"),
+                                ("B is A turned a quarter turn:", "bold"), ("B's drawings are not a", "bold"), ("mirror of A's.", "bold"),
                                 ("Either short end of A can be", "normal"), ("its side-wall end: tape one.", "normal"))):
-        ptext(c, 86, 81 + i * 4.6 + (2 if i >= 3 else 0) + (2 if i >= 5 else 0), t, size=3.2, anchor="start", weight=w)
+        ptext(c, 86, 79 + i * 4.4 + (2 if i >= 3 else 0) + (2 if i >= 6 else 0), t, size=3.2, anchor="start", weight=w)
     save(c, "07-orient.svg")
 
 
 # ---------------- G-2 / G-3 underside support layout, face down ----------------
-def layout_top(top, name, s, margin, size):
+def layout_top(top, name, s, margin, size, rail_line=True):
     """Face-down view of one top. A: back edge at the page top, x grows to the left. B: joint end at the top."""
     if top == "A":
         T = lambda x, y: (A["x1"] - x, y)
@@ -100,15 +100,17 @@ def layout_top(top, name, s, margin, size):
     else:
         c.line((reg[0], 0), (reg[0], reg[1]), lw="heavy")
     # rail line (reference only) and ALEX outline
-    if top == "A":
+    if top == "A" and not rail_line:
+        a = D["alex1"]
+    elif top == "A":
         r = D["railA"]
         c.line(T(r["x0"], r["y1"]), T(r["x1"], r["y1"]), lw="thin", dash="3 1 0.8 1")
-        ptext(c, *c.P(*T(120, r["y1"] + 4.5)), "rail A line, y = 53 cm (fitted later)", size=3.2)
+        ptext(c, *c.P(*T(120, r["y1"] + 4.5)), "rail A line, y = 53 cm (step 4)", size=3.2)
         a = D["alex1"]
     else:
         r = D["railB"]
         c.line(T(r["x1"], B["y0"]), T(r["x1"], r["y1"]), lw="thin", dash="3 1 0.8 1")
-        ptext(c, *c.P(*T(r["x1"] + 5.5, 170)), "rail B line, x = 53 cm (fitted later)", size=3.2, rotate=-90)
+        ptext(c, *c.P(*T(r["x1"] + 5.5, 170)), "rail B line, x = 53 cm (step 5)", size=3.2, rotate=-90)
         a = D["alex2"]
     p0 = T(a["x0"], a["y0"]); p1 = T(a["x0"] + a["w"], a["y0"] + a["d"])
     c.rect(min(p0[0], p1[0]), min(p0[1], p1[1]), abs(p1[0] - p0[0]), abs(p1[1] - p0[1]), lw="thin", dash="3 1.5")
@@ -329,7 +331,7 @@ def fig_feet_jigs():
     pline(c, (bx0, by), (bx0 + 72, by), lw=0.5)
     sx = 140; s2 = 0.32
     pline(c, (sx, by - 3), (sx, by + 54), lw=0.25, dash="3 1 0.8 1")
-    ptext(c, sx, by - 9.5, "station 214.5 cm from the side-wall end (F1, F3)", size=3.2); ptext(c, sx, by - 5.2, "or from the joint end (F5, F6)", size=3.2)
+    ptext(c, sx, by - 9.5, "station 34.5 cm from the far end", size=3.2); ptext(c, sx, by - 5.2, "(tape hooked on the far end)", size=3.2)
     c.raw(f'<rect x="{sx - 55 * s2:.2f}" y="{by - 1.4:.2f}" width="{110 * s2:.2f}" height="1.4" fill="#808080"/>')
     c.raw(f'<rect x="{sx - 55 * s2:.2f}" y="{by:.2f}" width="{110 * s2:.2f}" height="{20 * s2:.2f}" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     c.raw(f'<rect x="{sx - 12 * s2:.2f}" y="{by + 20 * s2:.2f}" width="{24 * s2:.2f}" height="{142 * s2:.2f}" fill="#fff" stroke="#000" stroke-width="0.5"/>')
@@ -465,95 +467,118 @@ def fig_alex_rings():
     save(c, "07-alex-rings.svg")
 
 
-# ---------------- G-10b rings by tracing ----------------
-def fig_trace():
-    c = Canvas(178, 74)
-    w = 44.5
-    for i in range(4):
-        x0 = 1 + i * w
-        c.raw(f'<rect x="{x0:.2f}" y="0.5" width="{w - 2.5:.2f}" height="73" fill="none" stroke="#000" stroke-width="0.25"/>')
-        ptext(c, x0 + 3, 4.5, str(i + 1), size=4, weight="bold", anchor="start")
-    k = 0.45            # mm on the page per mm (panels 1, 4)
-    pad = FE["body_and_pad_diameter"]
-    # 1: top standing on the bare ALEX, pencil round the pad
-    x0 = 1
-    c.raw(f'<rect x="{x0 + 2}" y="52" width="38" height="{15.9 * k:.2f}" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>')
-    cx = x0 + 18
-    c.raw(f'<rect x="{cx - pad / 2 * k:.2f}" y="{52 - 4:.2f}" width="{pad * k:.2f}" height="4" fill="#808080" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<rect x="{cx - 2.7:.2f}" y="40" width="5.4" height="8" fill="#fff" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<rect x="{cx - pad / 2 * k:.2f}" y="14" width="{pad * k:.2f}" height="26" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<rect x="{x0 + 2}" y="9" width="38" height="5" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>')
-    # pencil touching the laminate at the pad's edge
-    px, py = cx + pad / 2 * k + 0.4, 51.8
-    c.raw(f'<polygon points="{px:.2f},{py:.2f} {px + 2.2:.2f},{py - 3.2:.2f} {px + 13:.2f},{py - 17:.2f} {px + 15.5:.2f},{py - 15.3:.2f} {px + 4.4:.2f},{py - 1.6:.2f}" fill="#bfbfbf" stroke="#000" stroke-width="0.4"/>')
-    ptext(c, x0 + 21, 65, "top on the bare ALEX:", size=3.2); ptext(c, x0 + 21, 69.2, "pencil round each pad", size=3.2)
-    # 2: top lifted off: pencil circle on the ALEX top (plan)
-    x0 = 1 + w
-    k2 = 0.5
-    c.raw(f'<rect x="{x0 + 3}" y="9" width="36" height="44" fill="#f2f2f2" stroke="none"/>')
-    pline(c, (x0 + 3, 9), (x0 + 39, 9), lw=0.5); pline(c, (x0 + 3, 9), (x0 + 3, 53), lw=0.5)
-    ccx, ccy = x0 + 3 + 50 * k2 * 0.6 + 4, 9 + 50 * k2 * 0.6 + 4
-    c.raw(f'<circle cx="{ccx:.2f}" cy="{ccy:.2f}" r="{pad / 2 * k2:.2f}" fill="none" stroke="#000" stroke-width="0.35"/>')
-    c.arrow((x0 + 30, 46), (x0 + 30, 34)); ptext(c, x0 + 32, 48, "lift", size=3.2, anchor="start")
-    ptext(c, x0 + 21, 61, "lift the top off", size=3.2); ptext(c, x0 + 21, 65.2, "(two people):", size=3.2); ptext(c, x0 + 21, 69.4, "a circle at each foot", size=3.2)
-    # 3: ring on the circle, seen from above: the line shows all round the bore
-    x0 = 1 + 2 * w
-    k3 = 0.5
-    rcx, rcy = x0 + 21, 31
-    c.raw(f'<rect x="{x0 + 2}" y="9" width="38" height="44" fill="#f2f2f2" stroke="none"/>')
-    c.raw(f'<circle cx="{rcx}" cy="{rcy}" r="{RG["flange_od"] / 2 * k3:.2f}" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<circle cx="{rcx}" cy="{rcy}" r="{RG["od"] / 2 * k3:.2f}" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<circle cx="{rcx}" cy="{rcy}" r="{RG["bore"] / 2 * k3:.2f}" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<circle cx="{rcx}" cy="{rcy}" r="{pad / 2 * k3:.2f}" fill="none" stroke="#000" stroke-width="0.3"/>')
-    for ang in RG["screw_angles_deg"]:
-        hx, hy = rcx + RG["screw_circle_radius"] * k3 * math.cos(math.radians(ang)), rcy - RG["screw_circle_radius"] * k3 * math.sin(math.radians(ang))
-        c.raw(f'<circle cx="{hx:.2f}" cy="{hy:.2f}" r="{RG["csk"] / 2 * k3:.2f}" fill="#fff" stroke="#000" stroke-width="0.3"/>')
-    ptext(c, x0 + 21, 57, "ring on the circle:", size=3.2); ptext(c, x0 + 21, 61.2, "the pencil line shows", size=3.2); ptext(c, x0 + 21, 65.4, "all round the bore", size=3.2)
-    ptext(c, x0 + 21, 69.6, "(looking down)", size=3.2)
-    # 4: pilots through the ring's own holes, then the puck, then screws
-    x0 = 1 + 3 * w
-    c.raw(f'<rect x="{x0 + 2}" y="44" width="38" height="{15.9 * k:.2f}" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>')
-    rx = x0 + 19
-    c.raw(f'<rect x="{rx - RG["flange_od"] / 2 * k:.2f}" y="{44 - 2.5 * k:.2f}" width="{RG["flange_od"] * k:.2f}" height="{2.5 * k:.2f}" fill="#bfbfbf" stroke="#000" stroke-width="0.3"/>')
-    for sg in (-1, 1):
-        c.raw(f'<rect x="{rx + (RG["bore"] / 2 * k if sg > 0 else -RG["od"] / 2 * k):.2f}" y="{44 - 12.5 * k:.2f}" width="{3 * k:.2f}" height="{12.5 * k:.2f}" fill="#bfbfbf" stroke="#000" stroke-width="0.3"/>')
-    hx = rx + RG["screw_circle_radius"] * k
-    c.raw(f'<rect x="{hx - 4}" y="16" width="8" height="10" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>')
-    c.raw(f'<rect x="{hx - 0.5}" y="26" width="1" height="{44 - 26 + 1.6:.2f}" fill="#808080" stroke="#000" stroke-width="0.25"/>')
-    ptext(c, x0 + 21, 57, "5/64 in bit, 3–4 mm", size=3.2); ptext(c, x0 + 21, 61.2, "through the ring's holes;", size=3.2)
-    ptext(c, x0 + 21, 65.4, "lift, finish 12 mm deep", size=3.2)
-    ptext(c, x0 + 21, 69.6, "3 × #6 × 5/8 (H06)", size=3.2)
-    save(c, "07-trace.svg")
+# ---------------- rails screwed to the tops ----------------
+def fig_rails_plan():
+    s = 0.6
+    c, T = layout_top("A", "", s, (10, 16), (178, 68), rail_line=False)
+    ra = D["railA"]
+    q0, q1 = T(ra["x0"], ra["y0"]), T(ra["x1"], ra["y1"])
+    c.rect(min(q0[0], q1[0]), q0[1], abs(q1[0] - q0[0]), q1[1] - q0[1], fill="#bfbfbf", lw="outline")
+    for i, h in enumerate(ra["holes"]):
+        end = i in (0, len(ra["holes"]) - 1)
+        c.circle(T(ra["x0"] + h, ra["y0"] + D["holeOffset"]), 1.0 if end else 0.6, fill="#000" if end else "#fff", lw="thin")
+    for x, anc in ((ra["x0"] + 11, "end"), ((ra["x0"] + ra["x1"]) / 2, "end"), (ra["x1"] - 9, "start")):
+        dim(c, T(x, ra["y1"]), T(x, A["y1"]), "", 0, ext=False)
+        q = c.P(*T(x, (ra["y1"] + A["y1"]) / 2)); ptext(c, q[0] + (1.2 if anc == "start" else -1.2), q[1], "12 cm", size=3.2, anchor=anc)
+    ptext(c, *c.P(A["x1"] / 2, -9.5 / s), "top A face down, back edge away from you, x grows to the left", size=3.2, weight="bold")
+    ptext(c, *c.P(A["x1"] / 2, A["y1"] + 4.5 / s), "front edge (rounded)", size=3.2)
+    ptext(c, *c.P(A["x1"] + 4.5 / s, A["y1"] / 2), "side-wall end · x = 0", size=3.2, rotate=90)
+    q = c.P(*T(4, A["y1"])); leader(c, T(ra["x0"] + 0.3, ra["y1"] - 0.5), (q[0], q[1] + 4.5), "wall end at x = 1 cm", anchor="end")
+    leader(c, T(ra["x1"] - 40, ra["y0"] + D["holeOffset"]), c.P(*T(150, 30)), "● end screws first", anchor="start")
+    save(c, "07-rails-plan.svg")
+
+
+def fig_rails_detail():
+    c = Canvas(178, 76)
+    # (a) section across rail A, the top face down (mm); horizontal = y, vertical = height above the blanket
+    k = 0.34
+    Y0 = 420
+    def S(y, z): return (6 + (y - Y0) * k, 58 - z * k)
+    t = F["tops"]["thickness"]; L = F["steel"]["leg"]; th = F["steel"]["thickness"]
+    yf, yv = D["railA"]["y0"] * 10, D["railA"]["y1"] * 10
+    def poly(pts, fill, lw=0.5):
+        c.raw('<polygon points="' + " ".join(f"{x:.2f},{y:.2f}" for x, y in (S(*p) for p in pts)) + f'" fill="{fill}" stroke="#000" stroke-width="{lw}"/>')
+    slab = [(Y0, 0), (650, 0), (650, t), (Y0, t)]
+    poly(slab, "#fff"); c.hatch([S(*p) for p in slab], spacing=1.6)
+    pline(c, S(Y0, 0), S(650, 0), lw=0.8)
+    poly([(yf, t), (yv, t), (yv, t + L), (yv - th, t + L), (yv - th, t + th), (yf, t + th)], "#bfbfbf")
+    ys = yf + F["steel"]["screw_line_from_free_edge"]
+    # puck on the flat leg, bit 20 mm into the wood
+    pw, ph = 18, 20
+    poly([(ys - pw / 2, t + th), (ys + pw / 2, t + th), (ys + pw / 2, t + th + ph), (ys - pw / 2, t + th + ph)], "#e6e6e6")
+    poly([(ys - 0.8, t - 20), (ys + 0.8, t - 20), (ys + 0.8, t + th + ph), (ys - 0.8, t + th + ph)], "#808080", lw=0.25)
+    poly([(ys - 6, t + th + ph), (ys + 6, t + th + ph), (ys + 6, t + th + ph + 16), (ys - 6, t + th + ph + 16)], "#bfbfbf")
+    q = S(ys - pw / 2, t + th + ph / 2); pline(c, (q[0], q[1]), (q[0] - 3, q[1])); ptext(c, q[0] - 3.5, q[1], "25 RAIL puck", size=3.2, anchor="end")
+    # 12 cm to the front edge
+    a, b = S(yv, t + L + 8), S(650, t + L + 8)
+    pline(c, S(yv, t + L + 1), S(yv, t + L + 10)); pline(c, S(650, t + 1), S(650, t + L + 10))
+    pline(c, a, b); c._head(a[0], a[1], b[0], b[1], 1.5); c._head(b[0], b[1], a[0], a[1], 1.5)
+    ptext(c, (a[0] + b[0]) / 2, a[1] - 2.4, "12 cm to the outer face", size=3.2)
+    q = S(560, 0); ptext(c, q[0], q[1] + 3.5, "top, laminate down on the blanket", size=3.2)
+    ptext(c, S(yv, 0)[0] + 2, S(0, t + 32)[1], "vertical leg", size=3.2, anchor="start")
+    pline(c, S(yv, t + 30), (S(yv, 0)[0] + 1.6, S(0, t + 32)[1]))
+    ptext(c, 6, 72, "(a) rail A in section: pilot 1/8 in, 20 mm into the wood", size=3.2, anchor="start", weight="bold")
+    # (b) rail B at the joint end, face down (x grows to the left), plan
+    s2 = 0.62
+    def P(x, y): return (126 + (65 - x) * s2, 8 + (y - 50) * s2)
+    def rect(x0, x1, y0, y1, fill="none", lw=0.5, dash=None):
+        p, q = P(x0, y0), P(x1, y1)
+        d = f' stroke-dasharray="{dash}"' if dash else ""
+        c.raw(f'<rect x="{min(p[0], q[0]):.2f}" y="{min(p[1], q[1]):.2f}" width="{abs(q[0] - p[0]):.2f}" height="{abs(q[1] - p[1]):.2f}" fill="{fill}" stroke="#000" stroke-width="{lw}"{d}/>')
+    rect(0, 65, 65, 130, fill="#f2f2f2")
+    pline(c, P(65, 65), P(0, 65), lw=0.5); pline(c, P(0, 65), P(0, 130), lw=1.2)
+    rb = D["railB"]
+    rect(rb["x0"], rb["x1"], rb["y0"], 130, fill="#bfbfbf")
+    for i, h in enumerate(rb["holes"][:4]):
+        y = rb["y0"] + h
+        p = P(rb["x0"] + D["holeOffset"], y)
+        c.raw(f'<circle cx="{p[0]:.2f}" cy="{p[1]:.2f}" r="0.8" fill="{"#fff" if i < 2 else "#000"}" stroke="#000" stroke-width="0.3"/>')
+    a, b = P(rb["x1"] + 3, rb["y0"]), P(rb["x1"] + 3, 65)
+    pline(c, P(rb["x1"], rb["y0"]), P(rb["x1"] + 5, rb["y0"]))
+    pline(c, a, b); c._head(a[0], a[1], b[0], b[1], 1.4); c._head(b[0], b[1], a[0], a[1], 1.4)
+    ptext(c, a[0] - 1.5, (a[1] + b[1]) / 2, "12 cm", size=3.2, anchor="end")
+    ptext(c, 146, 62, "○ holes 1, 2: chapter H", size=3.2); ptext(c, 146, 66.5, "● holes 3–10: screw now", size=3.2)
+    ptext(c, *P(32, 69), "joint end", size=3.2)
+    ptext(c, P(0, 100)[0] + 4, P(0, 100)[1], "side-wall edge", size=3.2, rotate=90)
+    ptext(c, 146, 72, "(b) rail B at top B's joint end", size=3.2, weight="bold")
+    save(c, "07-rails-detail.svg")
 
 
 # ---------------- G-11 ALEX placement by the walls ----------------
+STAGE = 15   # cm: ALEX 2 stands 15 cm short of its final place until chapter G (build manual step 5)
+
+
 def fig_alex_place():
-    s = 0.36
+    s = 0.34
     g = D["gap"]
-    c = Canvas(120, 134, scale=s, origin=(-g - 16 / s, -g - 12 / s))
+    c = Canvas(120, 140, scale=s, origin=(-g - 16 / s, -g - 12 / s))
     wall_hatch(c, (-g, -g), (A["x1"] + 6, -g), (0, -1))
-    wall_hatch(c, (-g, -g), (-g, B["y1"] + 6), (-1, 0))
+    wall_hatch(c, (-g, -g), (-g, B["y1"] + 26), (-1, 0))
     ptext(c, *c.P(120, -g - 13), "back wall", size=3.2, weight="bold")
     ptext(c, *c.P(-g - 13, 150), "side wall", size=3.2, weight="bold", rotate=-90)
-    # tops as phantom
     c.poly([(0, 0), (A["x1"], 0), (A["x1"], A["y1"]), (B["x1"], A["y1"]), (B["x1"], B["y1"]), (0, B["y1"])], lw="thin", dash="4 1 0.8 1 0.8 1")
     ptext(c, *c.P(32, 190), "tops come later (outline)", size=3.2, rotate=-90)
     a1, a2 = D["alex1"], D["alex2"]
+    y2 = a2["y0"] + STAGE
     c.rect(a1["x0"], a1["y0"], a1["w"], a1["d"], fill="#e6e6e6")
-    c.rect(a2["x0"], a2["y0"], a2["w"], a2["d"], fill="#e6e6e6")
+    c.rect(a2["x0"], a2["y0"], a2["w"], a2["d"], lw="thin", dash="1.5 1")      # final place, chapter G
+    c.rect(a2["x0"], y2, a2["w"], a2["d"], fill="#e6e6e6")
     c.line((a1["x0"], a1["y0"] + a1["d"]), (a1["x0"] + a1["w"], a1["y0"] + a1["d"]), lw="heavy")
-    c.line((a2["x0"] + a2["w"], a2["y0"]), (a2["x0"] + a2["w"], a2["y0"] + a2["d"]), lw="heavy")
+    c.line((a2["x0"] + a2["w"], y2), (a2["x0"] + a2["w"], y2 + a2["d"]), lw="heavy")
     ptext(c, *c.P(a1["x0"] + 18, 32.5), "1", size=4.5, weight="bold")
-    ptext(c, *c.P(32.5, a2["y0"] + 18), "2", size=4.5, weight="bold")
+    ptext(c, *c.P(32.5, y2 + 18), "2", size=4.5, weight="bold")
     c.arrow((a1["x0"] + 18, 70), (a1["x0"] + 18, 88)); ptext(c, *c.P(a1["x0"] + 4, 96), "drawers", size=3.2)
     ptext(c, *c.P(a1["x0"] + 4, 96 + 4.2 / s), "toward you", size=3.2)
-    c.arrow((70, a2["y0"] + 18), (90, a2["y0"] + 18)); ptext(c, *c.P(96, a2["y0"] + 12), "door toward you", size=3.2, anchor="start")
+    c.arrow((70, y2 + 18), (90, y2 + 18)); ptext(c, *c.P(96, y2 + 12), "door toward you", size=3.2, anchor="start")
+    ptext(c, *c.P(96, y2 + 32), "staged 15 cm out;", size=3.2, anchor="start")
+    ptext(c, c.P(96, 0)[0], c.P(0, y2 + 32)[1] + 4.2, "dashed: its final place", size=3.2, anchor="start")
     L = LAY["alex_by_walls"]
     leader(c, (240, a1["y0"] / 2 - g / 2), c.P(250, 12), cm(L["alex1_back_off_back_wall"]) + " cm", anchor="start")
     dim(c, (-g, 110), (a1["x0"], 110), cm(L["alex1_near_side_from_side_wall"]) + " cm", 3)
-    pline(c, c.P(a2["x0"] / 2 - g / 2, 292), c.P(a2["x0"] / 2 - g / 2, 316)); c.raw('<circle cx="%.2f" cy="%.2f" r="0.6"/>' % c.P(a2["x0"] / 2 - g / 2, 292))
-    q = c.P(a2["x0"] / 2 - g / 2, 320); ptext(c, q[0] + 1, q[1], cm(L["alex2_side_off_side_wall"]) + " cm", size=3.2, anchor="start")
-    dim(c, (110, -g), (110, a2["y0"]), cm(L["alex2_near_end_from_back_wall"]) + " cm", -3)
+    xg = a2["x0"] / 2 - g / 2
+    pline(c, c.P(xg, y2 + 10), c.P(xg, y2 + a2["d"] + 6)); c.raw('<circle cx="%.2f" cy="%.2f" r="0.6"/>' % c.P(xg, y2 + 10))
+    q = c.P(xg, y2 + a2["d"] + 10); ptext(c, q[0] + 1, q[1], cm(L["alex2_side_off_side_wall"]) + " cm", size=3.2, anchor="start")
+    dim(c, (110, -g), (110, y2), cm(L["alex2_near_end_from_back_wall"] + STAGE) + " cm (staged)", -3)
     save(c, "07-alex-place.svg")
 
 
@@ -794,5 +819,5 @@ def fig_underside():
 if __name__ == "__main__":
     os.makedirs(FIG, exist_ok=True)
     fig_orient(); fig_layout_a(); fig_layout_b(); fig_leg_jig(); fig_leg_steps(); fig_feet_plate(); fig_feet_jigs(); fig_foot_gauge()
-    fig_ring(); fig_alex_rings(); fig_trace(); fig_alex_place(); fig_wall_gauge(); fig_section(); fig_loadpath(); fig_rail_ends(); fig_rail_elev(); fig_underside()
+    fig_ring(); fig_alex_rings(); fig_rails_plan(); fig_rails_detail(); fig_alex_place(); fig_wall_gauge(); fig_section(); fig_loadpath(); fig_rail_ends(); fig_rail_elev(); fig_underside()
     print("figures_07: done")

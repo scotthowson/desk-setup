@@ -43,13 +43,14 @@
 <rect x="70" y="78" width="9.75" height="37.35" fill="#fff" stroke="#000" stroke-width="0.5"/>
 <line x1="70.00" y1="78.00" x2="70.00" y2="115.35" stroke="#000" stroke-width="1.2" stroke-linecap="round"/>
 <text x="74.88" y="96.00" font-family="Helvetica, Arial, sans-serif" font-size="4" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">B</text>
-<path d="M 65.00 92.00 A 5 5 0 1 1 60.00 87.00" fill="none" stroke="#000" stroke-width="0.5"/>
-<polygon points="60,87 58.438,87.345 58.583,86.258" fill="#000"/>
-<text x="86.00" y="81.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Face up, as installed:</text>
-<text x="86.00" y="85.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">heavy line = unfinished edge,</text>
-<text x="86.00" y="90.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">always to a wall.</text>
-<text x="86.00" y="96.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">B is A turned a quarter</text>
-<text x="86.00" y="101.40" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">turn, never flipped over.</text>
-<text x="86.00" y="108.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Either short end of A can be</text>
-<text x="86.00" y="112.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">its side-wall end: tape one.</text>
+<path d="M 65.00 92.00 A 5 5 0 1 0 60.00 97.00" fill="none" stroke="#000" stroke-width="0.5"/>
+<polygon points="60,97 58.537,97.647 58.464,96.553" fill="#000"/>
+<text x="86.00" y="79.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Face up, as installed:</text>
+<text x="86.00" y="83.40" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">heavy line = unfinished edge,</text>
+<text x="86.00" y="87.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">always to a wall.</text>
+<text x="86.00" y="94.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">B is A turned a quarter turn:</text>
+<text x="86.00" y="98.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">B's drawings are not a</text>
+<text x="86.00" y="103.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">mirror of A's.</text>
+<text x="86.00" y="109.40" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Either short end of A can be</text>
+<text x="86.00" y="113.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">its side-wall end: tape one.</text>
 </svg>

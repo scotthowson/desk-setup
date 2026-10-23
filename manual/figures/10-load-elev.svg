@@ -3,11 +3,11 @@
 <polygon points="16.66,91.8 24.14,91.8 24.14,40.46 16.66,40.46" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <polyline points="13.6,86.7 19.584,86.7 20.128,87.72 20.672,85.68 21.216,86.7 27.2,86.7" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
 <text x="20.4" y="69.7" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" transform="rotate(-90 20.4 69.7)">L1</text>
-<polygon points="90.1,37.392 122.4,40.335 122.4,18.235 90.1,15.292" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<polygon points="93.5,15.292 119.85,18.235 119.85,13.135 93.5,10.192" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
 <polygon points="3.4,35.7 132.6,35.7 132.6,34 3.4,34" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
-<text x="106.25" y="27.632" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">20 kg</text>
-<text x="106.59" y="13.862" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">books</text>
+<line x1="106.25" y1="10.2" x2="106.25" y2="31.62" stroke="#000" stroke-width="0.8"/>
+<polygon points="106.25,31.62 105.358,29.178 107.142,29.178" fill="#000"/>
+<text x="108.8" y="11.9" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">20 kg beside the</text>
+<text x="108.8" y="15.65" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">straightedge</text>
 <line x1="130.05" y1="41.245" x2="130.05" y2="35.7" stroke="#000" stroke-width="0.25"/>
 <polygon points="130.05,41.245 129.501,39.742 130.599,39.742" fill="#000"/>
 <polygon points="130.05,35.7 130.599,37.203 129.501,37.203" fill="#000"/>
@@ -20,7 +20,7 @@
 <text x="10.2" y="20.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">hold flat</text>
 <text x="34" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">straightedge: flat on the top over L1,</text>
 <text x="34" y="58.15" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">reaching past the corner; the case</text>
-<text x="34" y="61.9" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">stands beside it, not on it.</text>
+<text x="34" y="61.9" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">stands beside it (Fig. K-3a).</text>
 <text x="34" y="65.65" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">Drop exaggerated.</text>
 <text x="129.2" y="47.6" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">R</text>
 </svg>

@@ -132,6 +132,8 @@
 <text x="113" y="97" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">pilot 12</text>
 <text x="113" y="100.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">12 PLATE</text>
 <text x="84" y="104.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(25 from the steel face)</text>
+<text x="113" y="104.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(plate off,</text>
+<text x="113" y="108.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">puck on the wood)</text>
 <polygon points="120,59.1 140,59.1 140,60.9 120,60.9" fill="#fff" stroke="#000" stroke-width="0.2" stroke-dasharray="0.8 0.5" stroke-linejoin="round"/>
 <line x1="155" y1="60" x2="141" y2="60" stroke="#000" stroke-width="0.5"/>
 <polygon points="141,60 142.691,59.383 142.691,60.617" fill="#000"/>

@@ -163,7 +163,7 @@ def p_ring():
     c = Canvas(W, H)
     s = 0.4
     cx, base = 16, 22
-    fo, ro, bo = 75 * s / 2, 57 * s / 2, 51 * s / 2
+    fo, ro, bo = F["rings"]["flange_od"] * s / 2, F["rings"]["od"] * s / 2, F["rings"]["bore"] * s / 2
     ft, rh = 2.5 * s, 10 * s
     c.rect(cx - fo, base - ft, 2 * fo, ft, fill="#fff", lw="outline")
     c.rect(cx - ro, base - ft - rh, 2 * ro, rh, fill="#fff", lw="outline")
@@ -174,7 +174,7 @@ def p_ring():
     c.text((cx, 8), "half section", size=3.0)
     c.text((cx, 27.5), "flange 75, bore 52 mm", size=3.0)
     pc, k = (43, 13), 0.2
-    c.circle(pc, 75 * k / 2, fill="#fff", lw="outline"); c.circle(pc, 57 * k / 2, lw="thin"); c.circle(pc, 51 * k / 2, fill=GREY["light"], lw="outline")
+    c.circle(pc, F["rings"]["flange_od"] * k / 2, fill="#fff", lw="outline"); c.circle(pc, F["rings"]["od"] * k / 2, lw="thin"); c.circle(pc, F["rings"]["bore"] * k / 2, fill=GREY["light"], lw="outline")
     for a in (90, 210, 330):
         r = math.radians(a)
         c.circle((pc[0] + 33 * k * math.cos(r), pc[1] - 33 * k * math.sin(r)), 0.45, fill="#fff", lw="thin")

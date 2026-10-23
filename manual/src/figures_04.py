@@ -460,7 +460,7 @@ def fig_topA_overview():
     fd = FD(c, (0, 2490, 0, 650), s, mL, mT)
     topA_content(fd)
     xs = [(0, "0"), (mm(RA["x0"]), "10"), (150, "150 L1"), (650, "650 L2"), (1400, "1400 L3"),
-          (2145, "2145 F1 F3"), (mm(RA["x1"]), "2140 rail A end"), (2405, "2405 F2 F4"), (2490, "2490")]
+          (mm(RA["x1"]), "2140 rail A end"), (2490, "2490")]
     ord_x(fd, xs, 0, mT - 5, up=True, gap=3.8, jog=1.6)
     datum_dot(c, fd.u(0), fd.v(0))
     c.text((fd.u(0) - 3.2, fd.v(0) - 2.6), "DATUM", size=3.0, anchor="end", weight="bold")
@@ -475,7 +475,7 @@ def fig_topA_overview():
     c.text((fd.u(1245), fd.v(650) + 4.2), "FRONT EDGE · rounded, laminated · y = 65 cm · you stand here", size=3.1, weight="bold")
     c.text((fd.u(0) + 3.0, fd.v(325)), "side-wall end, x = 0", size=3.0, rotate=-90)
     c.text((fd.u(2490) - 3.0, fd.v(325)), "far end", size=3.0, rotate=-90)
-    c.text((W - 1, H - 1.5), "Scale 1:16. y: tape hooked on the back edge. Details: Figs D-4, D-5.", size=3.0, anchor="end")
+    c.text((W - 1, H - 1.5), "1:16. y: tape on the back edge. Feet F1–F4: from the far end, Fig. D-5.", size=3.0, anchor="end")
     return c.save(os.path.join(FIG, "04-topA-overview.svg"))
 
 
@@ -526,19 +526,19 @@ def fig_topA_far():
     fd.clip_begin(); topA_content(fd); fd.clip_end()
     u = fd.u(2040)
     c.line((u, fd.v(0) - 1), (u, fd.v(650) + 1), lw="thin", dash="3 1 0.6 1")
-    xs = [(2490, "2490 far end"), (2455, "2455"), (2405, "2405 F2 F4"), (2145, "2145 F1 F3"), (mm(RA["x1"]), "2140 rail A end"), (mm(A1["x0"]), "2095")]
-    ord_x(fd, xs, 0, mT - 4, up=True, gap=4.0, jog=1.6)
+    xs = [(2490, "0 far end"), (mm(A1["x0"] + A1["w"]), "3.5"), (2405, "8.5 F2 F4"), (2145, "34.5 F1 F3")]
+    ord_x(fd, xs, 0, mT - 4, up=True, gap=4.0, jog=1.6, cm=False)
     ys = [(0, "0"), (mm(A1["y0"]), "35"), (85, "85 F1 F2"), (mm(RA["y0"]), "479"), (mm(RA["y1"]), "530 rail"), (565, "565 F3 F4"), (mm(A1["y0"] + A1["d"]), "615"), (650, "650")]
     ord_y(fd, ys, 2490, fd.u(2490) - 2.5, right=False, gap=3.75, jog=1.4)
     foot_labels(fd, ("F1", "F2", "F3", "F4"), below=("F1", "F2", "F3", "F4"))
     cu = fd.u(2275)
-    for k, t in enumerate(("ALEX 1 outline below,", "x 209.5–245.5, y 3.5–61.5 cm", "(reference only)")):
+    for k, t in enumerate(("ALEX 1 outline below,", "3.5 cm inside the top's edges", "(reference only)")):
         c.text((cu, fd.v(250) + k * 4), t, size=3.0)
     x, y, _ = FEET["F2"]
     lead(c, fd.p(x - FOOT_SP / 2, y + FOOT_SP / 2), fd.p(2380, 170), "4 × ⌀5.2 mm on a 46.8 mm square", size=3.0)
-    c.text((fd.u(2265), fd.v(650) + 4.2), "FRONT EDGE · y = 65", size=3.1, weight="bold")
-    c.text((fd.u(2265), fd.v(650) + 9.2), "All cm. x: tape on the side-wall end. y: tape on the back edge. 1:4.5", size=3.0)
-    c.text((fd.u(2265), 3), "BACK EDGE · y = 0", size=3.1, weight="bold")
+    c.text((fd.u(2265), fd.v(650) + 4.2), "FRONT EDGE · you stand here", size=3.1, weight="bold")
+    c.text((fd.u(2265), fd.v(650) + 9.2), "All cm. Top: tape hooked on the FAR END. Left: tape on the back edge. 1:4.5", size=3.0)
+    c.text((fd.u(2265), 3), "BACK EDGE away from you · x grows to the left", size=3.1, weight="bold")
     return c.save(os.path.join(FIG, "04-topA-far.svg"))
 
 
@@ -566,7 +566,7 @@ def fig_topB_overview():
     fd = FD(c, (0, 650, 520, 3140), s, mL, mT)
     topB_content(fd)
     ys = [(650, "0"), (850, "20"), (1600, "95"), (2350, "170"),
-          (mm(RB["y1"]), "201"), (2795, "214.5"), (3055, "240.5"), (3140, "249")]
+          (mm(RB["y1"]), "201"), (3140, "249")]
     ord_y(fd, ys, 0, fd.u(0) + 3.5, right=True, gap=3.7, jog=1.2, size=3.0, cm=False)
     xs = [(0, "0"), (85, "85"), (100, "100"), (mm(RB["x0"]), "479"), (mm(RB["x1"]), "530"), (565, "565"), (650, "650")]
     ord_x(fd, xs, 650, mT - 13, up=True, gap=3.4, jog=1.2, size=3.0)
@@ -580,7 +580,7 @@ def fig_topB_overview():
     c.text((fd.u(0) + 2.6, fd.v(1250)), "side-wall edge, x = 0", size=3.0, rotate=90)
     c.text((fd.u(505), fd.v(1250)), "RAIL B", size=3.0, rotate=-90, weight="bold")
     c.text((fd.u(325), fd.v(2925)), "ALEX 2", size=3.0)
-    c.text((1, H - 5.4), "All cm. Right: tape hooked on the joint end.", size=3.0, anchor="start")
+    c.text((1, H - 5.4), "All cm. Right: tape on the joint end. F5–F8: Fig. D-8.", size=3.0, anchor="start")
     c.text((1, H - 1.6), "Top: tape on the side-wall edge. 1:14", size=3.0, anchor="start")
     return c.save(os.path.join(FIG, "04-topB-overview.svg"))
 
@@ -623,13 +623,12 @@ def fig_topB_far():
     c.line((fd.u(650) - 1, v), (fd.u(0) + 1, v), lw="thin", dash="3 1 0.6 1")
     xs = [(0, "0"), (mm(A2["x0"]), "35"), (85, "85 F5 F7"), (mm(RB["x0"]), "479"), (mm(RB["x1"]), "530"), (565, "565 F6 F8"), (mm(A2["x0"] + A2["w"]), "615"), (650, "650")]
     ord_x(fd, xs, 2600, mT - 4, up=True, gap=4.0, jog=1.6)
-    ys = [(mm(RB["y1"]), "201 rail end"), (mm(A2["y0"]), "209.5 ALEX 2"), (2795, "214.5 F5 F6"), (3055, "240.5 F7 F8"),
-          (mm(A2["y0"] + A2["d"]), "245.5"), (3140, "249 far end")]
+    ys = [(3140, "0 far end"), (mm(A2["y0"] + A2["d"]), "3.5"), (3055, "8.5 F7 F8"), (2795, "34.5 F5 F6")]
     ord_y(fd, ys, 0, fd.u(0) + 5, right=True, gap=3.8, jog=2.0, cm=False)
     foot_labels(fd, ("F5", "F6", "F7", "F8"), below=("F7", "F8"))
     c.text((fd.u(325), fd.v(2900)), "ALEX 2 outline below (reference only)", size=3.0)
-    c.text((fd.u(325), fd.v(3140) + 4.2), "FAR END", size=3.1, weight="bold")
-    c.text((fd.u(325), H - 1.6), "All cm. Top: tape on the side-wall edge. Right: tape hooked on the joint end. 1:5", size=3.0)
+    c.text((fd.u(325), fd.v(3140) + 4.2), "FAR END · you stand here · joint end away · x grows to the left", size=3.1, weight="bold")
+    c.text((fd.u(325), H - 1.6), "All cm. Top: tape on the side-wall edge. Right: tape hooked on the FAR END. 1:5", size=3.0)
     return c.save(os.path.join(FIG, "04-topB-far.svg"))
 
 
@@ -721,6 +720,8 @@ def fig_depths():
     screw(84, 20.6, F["steel"]["thickness"], 20, "rail flat leg", "#10 × 1", "25 RAIL")
     screw(113, 13, 3, 12, "joining plate", "#10 × 5/8", "12 PLATE")
     c.text((84, yt + 16.6), "(25 from the steel face)", size=3.0)
+    c.text((113, yt + 16.6), "(plate off,", size=3.0)
+    c.text((113, yt + 20.2), "puck on the wood)", size=3.0)
     # trim: sideways into the raw back edge (right end of the section), 14 below the surface
     tv = yt - 14 * s
     c.rect(x1 - 10 * s, tv - 0.9, 10 * s, 1.8, fill="#fff", lw=0.2, dash="0.8 0.5")
@@ -735,25 +736,25 @@ def fig_depths():
 
 
 def fig_ring_depth():
-    """Ring screw into the ALEX top: the panel thickness is unknown (MEASURE)."""
+    """Ring screw into the ALEX top panel, 15.9 mm thick (VERIFIED), 2:1."""
     s = 2.0
-    W, H = 60, 76
+    W, H = 60, 66
     c = Canvas(W, H)
-    yb = 22
-    # ALEX top panel: thickness unknown -> drawn with a break line, labelled
-    c.rect(4, yb, 52, 34, fill=GREY["wood"], lw="outline")
-    c.raw(f'<path d="M 4 {_f(yb + 34)} l 13 0 l 2 -2 l 2 4 l 2 -2 l 33 0" fill="none" stroke="#000" stroke-width="0.25"/>')
-    c.rect(18, yb - 2.5 * s, 24, 2.5 * s, fill=GREY["dark"], lw="thin")
-    u = 30
+    yb = 20
+    T, dep, fl = 15.9, 13.4, F["rings"]["flange_t"]
+    c.rect(4, yb, 44, T * s, fill=GREY["wood"], lw="outline")
+    c.rect(14, yb - fl * s, 26, fl * s, fill=GREY["dark"], lw="thin")
+    u = 27
     c.rect(u - 0.8, yb, 1.6, 12 * s, fill="#fff", lw=0.2, dash="0.8 0.5")
-    c.poly([(u - 3.2, yb - 2.5 * s), (u + 3.2, yb - 2.5 * s), (u + 1.4, yb - 2.5 * s + 1.8), (u + 1.4, yb + 13 * s - 2), (u, yb + 13 * s), (u - 1.4, yb + 13 * s - 2), (u - 1.4, yb - 2.5 * s + 1.8)], fill="#fff", lw="outline")
-    c.text((u + 3, yb + 13 * s - 1), "13 mm", size=3.0, anchor="start", weight="bold")
-    c.text((30, 4), "ring flange", size=3.0, weight="bold")
-    c.text((30, 7.8), "#6 × 5/8 flat head", size=3.0)
-    c.text((30, 11.6), "pilot 12, 12 ALEX", size=3.0)
-    c.text((30, yb + 40), "ALEX top panel:", size=3.0, weight="bold")
-    c.text((30, yb + 43.8), "15.9 mm (5/8 in), measured;", size=3.0)
-    c.text((30, yb + 47.6), "screw 13.4 in, 2.5 remains", size=3.0)
+    c.poly([(u - 3.2, yb - fl * s), (u + 3.2, yb - fl * s), (u + 1.4, yb - fl * s + 1.8), (u + 1.4, yb + dep * s - 2), (u, yb + dep * s), (u - 1.4, yb + dep * s - 2), (u - 1.4, yb - fl * s + 1.8)], fill="#fff", lw="outline")
+    c.text((u + 2.6, yb + dep * s - 3), "13.4", size=3.0, anchor="start", weight="bold")
+    dim2(c, (51, yb + T * s), (51, yb), "15.9", off=-0.01)
+    dim2(c, (8, yb + dep * s), (8, yb + T * s), "", off=-0.01)
+    c.text((9.5, yb + T * s + 3.4), "2.5 remains", size=3.0, anchor="start")
+    c.text((30, 3.5), "ring flange, #6 × 5/8 flat head", size=3.0, weight="bold")
+    c.text((30, 7.3), "pilot 12 (12 ALEX puck)", size=3.0)
+    c.text((30, yb + T * s + 9), "ALEX top panel 15.9 mm (5/8 in)", size=3.0, weight="bold")
+    c.text((30, yb + T * s + 12.8), "all mm, 2:1", size=3.0)
     return c.save(os.path.join(FIG, "04-ring-depth.svg"))
 
 

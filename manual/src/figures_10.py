@@ -26,17 +26,19 @@ def desk_plan(c, alex=True, legs=False, joint=True):
 
 
 def fig_corners():
-    """J-1a: the six corners where the surface height is measured."""
+    """K-1a: the six corners where the surface height is measured."""
     s = 0.024
     x0, y0, x1, y1 = -420, -420, 2900, 3480
     c = Canvas((x1 - x0) * s, (y1 - y0) * s, scale=s, origin=(x0, y0))
     desk_plan(c)
-    pos = [(-250, -250), (2730, -250), (2730, 830), (830, 830), (830, 3310), (-250, 3310)]
-    for i, (p, q) in enumerate(zip(L_OUT, pos), 1):
+    # facts.json procedures.surface_height: six corners, each with its own support; the inside corner last
+    pts = [(0, 0), (2490, 0), (2490, 650), (650, 3140), (0, 3140), (0, 650), (650, 650)]
+    pos = [(-250, -250), (2730, -250), (2730, 830), (830, 3310), (-250, 3310), (-250, 650), (830, 830)]
+    for i, (p, q) in enumerate(zip(pts, pos), 1):
         c.balloon(p, q, i, r=3.2)
     txt(c, (2227, 790), "ALEX 1", 3.0); txt(c, (720, 2930), "ALEX 2", 3.0, anchor="start")
     txt(c, (1250, 330), "top A", 3.0, weight="bold"); txt(c, (325, 1700), "top B", 3.0, weight="bold", rotate=-90)
-    lines(c, (1000, 1500), ["back wall along the top,", "side wall on the left;", "corner 4 is the inside", "corner of the L"], 3.0)
+    lines(c, (1000, 1500), ["back wall along the top,", "side wall on the left;", "7: the inside corner,", "measured last"], 3.0)
     return save(c, "10-corners-plan.svg")
 
 
@@ -124,7 +126,7 @@ def fig_load_plan():
 
 
 def fig_load_elev():
-    """J-3b: elevation along the straightedge: flat over L1, gap opening toward the loaded corner (exaggerated)."""
+    """K-3b: elevation along the straightedge: flat over L1, gap opening toward the loaded corner (exaggerated)."""
     s = 0.17
     x0, z0, x1, z1 = -120, -330, 760, 210
     c = Canvas((x1 - x0) * s, (z1 - z0) * s, scale=s, origin=(x0, z0), flip_y=True)
@@ -137,25 +139,22 @@ def fig_load_elev():
     c.rect(-22, -330, 44, 302, fill="#fff", lw="thin"); zig_h(c, -40, 40, -300, a=6)
     txt(c, (0, -200), "L1", 3.0, weight="bold", rotate=-90)
     # straightedge (rigid, flat on the top over L1)
-    # the case and books stand beside the straightedge (drawn behind it)
-    case = [(410, zt(410)), (600, zt(600)), (600, zt(600) + 130), (410, zt(410) + 130)]
-    c.poly(case, fill=GREY["mid"])
-    c.poly([(430, zt(410) + 130), (585, zt(600) + 130), (585, zt(600) + 160), (430, zt(410) + 160)], fill="#fff")
     c.rect(-100, 0, 760, 10, fill="#000", lw="thin")
-    txt(c, (505, zt(505) + 65), "20 kg", 3.2, weight="bold")
-    txt(c, (507, zt(505) + 146), "books", 3.0)
+    # the 20 kg stands beside the straightedge (Fig. K-3a), so here it is only an arrow that stops above it
+    c.arrow((505, 150), (505, 24), lw="heavy", head=2.6)
+    lines(c, (520, 140), ["20 kg beside the", "straightedge"], 3.0)
     # reading at the corner
     dim(c, (645, zt(645)), (645, 0), "", 0)
     lines(c, (670, -30), ["≤ 2 mm", "(est. 1 mm)"], 3.0)
     c.arrow((-60, 70), (-60, 14), head=1.8)
     txt(c, (-60, 90), "hold flat", 3.0)
-    lines(c, (80, -110), ["straightedge: flat on the top over L1,", "reaching past the corner; the case", "stands beside it, not on it.", "Drop exaggerated."], 3.0)
+    lines(c, (80, -110), ["straightedge: flat on the top over L1,", "reaching past the corner; the case", "stands beside it (Fig. K-3a).", "Drop exaggerated."], 3.0)
     txt(c, (640, -70), "R", 3.2, weight="bold")
     return save(c, "10-load-elev.svg")
 
 
 def fig_pad_turn():
-    """J-4: a foot pad in its printed ring on the ALEX top; turn it by hand."""
+    """K-4: a foot pad in its printed ring on the ALEX top; rock it sideways by hand."""
     R = F["rings"]; s = 0.40
     x0, z0, x1, z1 = -80, -40, 120, 150
     c = Canvas((x1 - x0) * s, (z1 - z0) * s, scale=s, origin=(x0, z0), flip_y=True)
@@ -174,18 +173,15 @@ def fig_pad_turn():
     c.rect(-pd, 0, 2 * pd, 12, fill=GREY["mid"])
     c.rect(-pd, 12, 2 * pd, H - 15, fill=GREY["light"])
     c.rect(-pl, H - 3, 2 * pl, 3, fill=GREY["dark"], lw="thin")
-    # rotation arrow round the pad
-    cx, cz, rx, rz = 0, 30, 36, 7
-    pts = [(cx + rx * math.cos(t), cz + rz * math.sin(t)) for t in [math.radians(a) for a in range(200, 520, 10)]]
-    c.poly(pts, close=False, lw="outline")
-    x1_, y1_ = c.P(*pts[-2]); x2_, y2_ = c.P(*pts[-1]); c._head(x1_, y1_, x2_, y2_, 3.0)
+    # rock sideways (facts.json procedures.pads): never turn, turning changes the height
+    c.arrow((-40, 55), (40, 55), lw="outline", head=3.0, both=True)
     dim(c, (-pd, -8), (pd, -8), "", 0)
     dim(c, (95, 0), (95, H), "102 mm", 0, side=1, gap=-3.2)
     c.line((pl, H), (98, H), lw="thin", dash="1 0.8"); c.line((70, 0), (98, 0), lw="thin", dash="1 0.8")
     txt(c, (0, -32), f"pad ⌀{pd * 2:g} mm in a ⌀{R['bore']:g} mm bore", 3.0)
     c.label_box((46, -11), "ALEX top", 3.0)
     txt(c, (0, H + T + 9), "top (face up)", 3.0)
-    lines(c, (-78, 72), ["turn the", "pad by", "hand"], 3.0)
+    lines(c, (-79, 92), ["rock it", "sideways", "by hand;", "do not", "turn it"], 3.0)
     lines(c, (32, 72), ["foot P09"], 3.0)
     lines(c, (40, 22), ["ring P10"], 3.0)
     c.leader((28, 6), (38, 22), "", 3)

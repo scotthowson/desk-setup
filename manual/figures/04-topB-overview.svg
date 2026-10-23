@@ -98,14 +98,6 @@
 <line x1="55.729" y1="182.857" x2="56.129" y2="182.857" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="56.129" y1="182.857" x2="56.929" y2="182.857" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <text x="57.729" y="182.857" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">201</text>
-<line x1="54.229" y1="192.5" x2="55.729" y2="192.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="55.729" y1="192.5" x2="56.129" y2="192.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="56.129" y1="192.5" x2="56.929" y2="192.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="57.729" y="192.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">214.5</text>
-<line x1="54.229" y1="211.071" x2="55.729" y2="211.071" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="55.729" y1="211.071" x2="56.129" y2="211.071" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="56.129" y1="211.071" x2="56.929" y2="211.071" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="57.729" y="211.071" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">240.5</text>
 <line x1="54.229" y1="217.143" x2="55.729" y2="217.143" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="55.729" y1="217.143" x2="56.129" y2="217.143" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="56.129" y1="217.143" x2="56.929" y2="217.143" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
@@ -152,6 +144,6 @@
 <text x="56.029" y="82.143" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90 56.029 82.143)">side-wall edge, x = 0</text>
 <text x="17.357" y="82.143" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90 17.357 82.143)">RAIL B</text>
 <text x="30.214" y="201.786" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 2</text>
-<text x="1" y="226.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">All cm. Right: tape hooked on the joint end.</text>
+<text x="1" y="226.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">All cm. Right: tape on the joint end. F5–F8: Fig. D-8.</text>
 <text x="1" y="230.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Top: tape on the side-wall edge. 1:14</text>
 </svg>

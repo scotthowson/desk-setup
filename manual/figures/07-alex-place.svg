@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 134" width="120mm" height="134mm" class="fig">
-<line x1="16.00" y1="12.00" x2="108.88" y2="12.00" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120mm" height="140mm" class="fig">
+<line x1="16.00" y1="12.00" x2="103.72" y2="12.00" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
 <line x1="16.00" y1="12.00" x2="17.50" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="18.40" y1="12.00" x2="19.90" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="20.80" y1="12.00" x2="22.30" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
@@ -37,9 +37,7 @@
 <line x1="97.60" y1="12.00" x2="99.10" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="100.00" y1="12.00" x2="101.50" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="102.40" y1="12.00" x2="103.90" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
-<line x1="104.80" y1="12.00" x2="106.30" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
-<line x1="107.20" y1="12.00" x2="108.70" y2="10.00" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
-<line x1="16.00" y1="12.00" x2="16.00" y2="128.28" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="16.00" y1="12.00" x2="16.00" y2="128.62" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
 <line x1="16.00" y1="12.00" x2="14.00" y2="13.50" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="16.00" y1="14.40" x2="14.00" y2="15.90" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="16.00" y1="16.80" x2="14.00" y2="18.30" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
@@ -89,39 +87,42 @@
 <line x1="16.00" y1="122.40" x2="14.00" y2="123.90" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="16.00" y1="124.80" x2="14.00" y2="126.30" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
 <line x1="16.00" y1="127.20" x2="14.00" y2="128.70" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
-<text x="60.28" y="7.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">back wall</text>
-<text x="11.32" y="67.08" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90.00 11.32 67.08)">side wall</text>
-<polygon points="17.08,13.08 106.72,13.08 106.72,36.48 40.48,36.48 40.48,126.12 17.08,126.12" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="4 1 0.8 1 0.8 1" stroke-linejoin="round"/>
-<text x="28.60" y="81.48" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 28.60 81.48)">tops come later (outline)</text>
-<polygon points="92.5,14.34 105.46,14.34 105.46,35.22 92.5,35.22" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<polygon points="18.34,111.9 39.22,111.9 39.22,124.86 18.34,124.86" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
-<line x1="92.5" y1="35.22" x2="105.46" y2="35.22" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
-<line x1="39.22" y1="111.9" x2="39.22" y2="124.86" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
-<text x="98.98" y="24.78" font-family="Helvetica, Arial, sans-serif" font-size="4.5" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">1</text>
-<text x="28.78" y="118.38" font-family="Helvetica, Arial, sans-serif" font-size="4.5" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">2</text>
-<line x1="98.98" y1="38.28" x2="98.98" y2="44.76" stroke="#000" stroke-width="0.5"/>
-<polygon points="98.98,44.76 98.363,43.069 99.597,43.069" fill="#000"/>
-<text x="93.94" y="47.64" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">drawers</text>
-<text x="93.94" y="51.84" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">toward you</text>
-<line x1="42.28" y1="118.38" x2="49.48" y2="118.38" stroke="#000" stroke-width="0.5"/>
-<polygon points="49.48,118.38 47.789,118.997 47.789,117.763" fill="#000"/>
-<text x="51.64" y="116.22" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">door toward you</text>
-<line x1="107.08" y1="17.40" x2="103.48" y2="13.17" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<circle cx="103.48" cy="13.17" r="0.6" fill="#000"/>
-<text x="108.28" y="17.40" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm</text>
-<line x1="16.00" y1="51.88" x2="16.00" y2="48.18" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="92.50" y1="51.88" x2="92.50" y2="48.18" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="16.00" y1="49.68" x2="92.50" y2="49.68" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<polygon points="16,49.68 17.409,49.166 17.409,50.194" fill="#000"/>
-<polygon points="92.5,49.68 91.091,50.194 91.091,49.166" fill="#000"/>
-<text x="54.25" y="47.48" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">212.5 cm</text>
-<line x1="17.17" y1="118.20" x2="17.17" y2="126.84" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<circle cx="17.17" cy="118.20" r="0.6"/>
-<text x="18.17" y="128.28" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm</text>
-<line x1="55.88" y1="12.00" x2="52.18" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="55.88" y1="111.90" x2="52.18" y2="111.90" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="53.68" y1="12.00" x2="53.68" y2="111.90" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<polygon points="53.68,12 54.194,13.409 53.166,13.409" fill="#000"/>
-<polygon points="53.68,111.9 53.166,110.491 54.194,110.491" fill="#000"/>
-<text x="51.48" y="61.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 51.48 61.95)">277.5 cm</text>
+<text x="57.82" y="7.58" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">back wall</text>
+<text x="11.58" y="64.02" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90.00 11.58 64.02)">side wall</text>
+<polygon points="17.02,13.02 101.68,13.02 101.68,35.12 39.12,35.12 39.12,119.78 17.02,119.78" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="4 1 0.8 1 0.8 1" stroke-linejoin="round"/>
+<text x="27.90" y="77.62" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 27.90 77.62)">tops come later (outline)</text>
+<polygon points="88.25,14.21 100.49,14.21 100.49,33.93 88.25,33.93" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.21,106.35 37.93,106.35 37.93,118.59 18.21,118.59" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1.5 1" stroke-linejoin="round"/>
+<polygon points="18.21,111.45 37.93,111.45 37.93,123.69 18.21,123.69" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="88.25" y1="33.93" x2="100.49" y2="33.93" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="37.93" y1="111.45" x2="37.93" y2="123.69" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<text x="94.37" y="24.07" font-family="Helvetica, Arial, sans-serif" font-size="4.5" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">1</text>
+<text x="28.07" y="117.57" font-family="Helvetica, Arial, sans-serif" font-size="4.5" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">2</text>
+<line x1="94.37" y1="36.82" x2="94.37" y2="42.94" stroke="#000" stroke-width="0.5"/>
+<polygon points="94.37,42.94 93.753,41.249 94.987,41.249" fill="#000"/>
+<text x="89.61" y="45.66" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">drawers</text>
+<text x="89.61" y="49.86" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">toward you</text>
+<line x1="40.82" y1="117.57" x2="47.62" y2="117.57" stroke="#000" stroke-width="0.5"/>
+<polygon points="47.62,117.57 45.929,118.187 45.929,116.953" fill="#000"/>
+<text x="49.66" y="115.53" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">door toward you</text>
+<text x="49.66" y="122.33" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">staged 15 cm out;</text>
+<text x="49.66" y="126.53" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">dashed: its final place</text>
+<line x1="102.02" y1="17.10" x2="98.62" y2="13.10" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="98.62" cy="13.10" r="0.6" fill="#000"/>
+<text x="103.22" y="17.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm</text>
+<line x1="16.00" y1="49.62" x2="16.00" y2="45.92" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="88.25" y1="49.62" x2="88.25" y2="45.92" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16.00" y1="47.42" x2="88.25" y2="47.42" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="16,47.42 17.409,46.906 17.409,47.934" fill="#000"/>
+<polygon points="88.25,47.42 86.841,47.934 86.841,46.906" fill="#000"/>
+<text x="52.13" y="45.22" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">212.5 cm</text>
+<line x1="17.11" y1="114.85" x2="17.11" y2="125.73" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="17.11" cy="114.85" r="0.6"/>
+<text x="18.11" y="127.09" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">6.5 cm</text>
+<line x1="53.62" y1="12.00" x2="49.92" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="53.62" y1="111.45" x2="49.92" y2="111.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.42" y1="12.00" x2="51.42" y2="111.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="51.42,12 51.934,13.409 50.906,13.409" fill="#000"/>
+<polygon points="51.42,111.45 50.906,110.041 51.934,110.041" fill="#000"/>
+<text x="49.22" y="61.73" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 49.22 61.73)">292.5 cm (staged)</text>
 </svg>

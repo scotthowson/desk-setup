@@ -109,18 +109,10 @@
 <line x1="76.125" y1="29.6" x2="76.125" y2="28.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="76.125" y1="28.8" x2="76.125" y2="28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <text x="76.125" y="27.4" font-family="Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 76.125 27.4)">140 L3</text>
-<line x1="29.562" y1="32.2" x2="29.562" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="29.562" y1="29.6" x2="27.819" y2="28.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="27.819" y1="28.8" x2="27.819" y2="28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="27.819" y="27.4" font-family="Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 27.819 27.4)">214.5 F1 F3</text>
 <line x1="29.875" y1="32.2" x2="29.875" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="29.875" y1="29.6" x2="31.619" y2="28.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="31.619" y1="28.8" x2="31.619" y2="28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="31.619" y="27.4" font-family="Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 31.619 27.4)">214 rail A end</text>
-<line x1="13.312" y1="32.2" x2="13.312" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="13.312" y1="29.6" x2="13.312" y2="28.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="13.312" y1="28.8" x2="13.312" y2="28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<text x="13.312" y="27.4" font-family="Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 13.312 27.4)">240.5 F2 F4</text>
+<line x1="29.875" y1="29.6" x2="29.875" y2="28.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="29.875" y1="28.8" x2="29.875" y2="28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="29.875" y="27.4" font-family="Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 29.875 27.4)">214 rail A end</text>
 <line x1="8" y1="32.2" x2="8" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="8" y1="29.6" x2="8" y2="28.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="8" y1="28.8" x2="8" y2="28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
@@ -147,5 +139,5 @@
 <text x="85.812" y="77.825" font-family="Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">FRONT EDGE · rounded, laminated · y = 65 cm · you stand here</text>
 <text x="166.625" y="53.312" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 166.625 53.312)">side-wall end, x = 0</text>
 <text x="5" y="53.312" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90 5 53.312)">far end</text>
-<text x="177" y="84.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">Scale 1:16. y: tape hooked on the back edge. Details: Figs D-4, D-5.</text>
+<text x="177" y="84.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">1:16. y: tape on the back edge. Feet F1–F4: from the far end, Fig. D-5.</text>
 </svg>

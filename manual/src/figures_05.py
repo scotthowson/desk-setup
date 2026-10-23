@@ -372,18 +372,19 @@ def table(c, x, y, cols, rows, widths, size=3.2, rh=4.35):
     return y + len(allr) * rh
 
 
-def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
+def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block, fig="", note=""):
     """heels: [(station, +1 legs toward far end / -1 toward datum, label)]."""
     W, H = 250, 178
     c = Canvas(W, H)
     x0 = 27; x1 = x0 + LEN / 10
     kx, kw = 0.1, 0.4
-    fe = 33; heel = fe + LEG * kw; vfe = heel + LEG * kw
+    fe = 34; heel = fe + LEG * kw; vfe = heel + LEG * kw
     sl, bl = fe + SCREW * kw, heel + BOLT * kw
     X = lambda s: x0 + s * kx
-    T_(c, 3, 5, f"{part} · {name} · OPENED-OUT FABRICATION DRAWING · ordinates in mm (cm in the table)", size=4.2, weight="bold")
+    T_(c, 3, 5, f"{fig} · {part} {name} · OPENED-OUT FABRICATION DRAWING · ordinates in mm (cm in the table)", size=4.2, weight="bold")
     T_(c, 3, 10.5, f"Lengths 1:10 from the {datum.upper()} (datum 0); leg widths 1:2.5, not to scale across; hole symbols not to scale. "
                    f"Seen from outside the L.", size=3.2)
+    T_(c, 3, 14.7, note, size=3.2)
     R_(c, x0, fe, x1 - x0, LEG * kw, fill=GREY["steel"])
     R_(c, x0, heel, x1 - x0, LEG * kw, fill=GREY["light"])
     L_(c, x0, heel, x1, heel, lw="heavy")
@@ -402,8 +403,8 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
     lab = spread(xs, 4.3, lo=x0 - 1.5, hi=x1 + 1)
     for i, (xh, xl) in enumerate(zip(xs, lab)):
         ytop = fe if i in (0, len(vals) - 1) else sl - 1.5
-        L_(c, xh, ytop, xh, 27.5, lw="dim"); L_(c, xh, 27.5, xl, 25, lw="dim"); L_(c, xl, 25, xl, 24, lw="dim")
-        T_(c, xl, 23.2, num(vals[i]), size=3.2, anchor="start", rotate=-90, weight="bold" if 0 < i < len(vals) - 1 else "normal")
+        L_(c, xh, ytop, xh, 29, lw="dim"); L_(c, xh, 29, xl, 26.5, lw="dim"); L_(c, xl, 26.5, xl, 25.5, lw="dim")
+        T_(c, xl, 24.7, num(vals[i]), size=3.2, anchor="start", rotate=-90, weight="bold" if 0 < i < len(vals) - 1 else "normal")
     nums = spread([X(s) for s in holes], 3.6)
     for i, s in enumerate(holes):
         hole(c, X(s), sl, 2.2, cross=0.5)
@@ -474,10 +475,10 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block):
     rows = [[str(i + 1), num(s), cm(s), SC_LBL, f"flat, {SCREW} line"] for i, s in enumerate(holes)]
     for lbl, pos_ in bolt_rows:
         rows.append([lbl, num(pos_), BOLT_CM[pos_], BO_LBL, f"vertical, {BOLT}"])
-    T_(c, 147, 96.6, f"Holes from the {datum}", size=3.2, weight="bold")
-    yt = table(c, 147, 99, ["No.", "mm", "cm", "hole", "leg, line"], rows, [10, 14, 12, 27, 36])
+    T_(c, 147, 97.4, f"Holes from the {datum}", size=3.2, weight="bold")
+    yt = table(c, 147, 99.6, ["No.", "mm", "cm", "hole", "leg, line"], rows, [10, 14, 12, 27, 36])
     for i, s in enumerate(block):
-        T_(c, 147, yt + 4.2 + i * 4.1, s, size=3.2, weight="bold" if i == 0 else "normal")
+        T_(c, 147, yt + 3.9 + i * 3.95, s, size=3.2, weight="bold" if i == 0 else "normal")
     return c, D, dfe, dvfe, dbl
 
 
@@ -485,7 +486,8 @@ def fig_railA():
     heels = [(HEEL_IN, -1, f"heel {HEEL_IN}: inside fitting, legs to the wall end", HOLES_AI), (HEEL_OUT, +1, f"heel {HEEL_OUT}: outside fitting, legs to the far end", HOLES_AO)]
     block = [f"P06 Rail A · {S['section']}", f"{LEG} × {LEG} × {T} mm, {cm(LEN)} cm: MEASURE first",
              f"On the desk: wall end x = {cm(RAILA_X0)} cm, outer face y = {cm(OUTF)} cm", "(datum: top A's back-left corner)"]
-    c, D, dfe, dvfe, dbl = fab("P06", "RAIL A", HOLES_A, "wall end", heels, 395, 645, [("I2", HOLES_AI[1]), ("I1", HOLES_AI[0]), ("O1", HOLES_AO[0]), ("O2", HOLES_AO[1])], block)
+    c, D, dfe, dvfe, dbl = fab("P06", "RAIL A", HOLES_A, "wall end", heels, 395, 645, [("I2", HOLES_AI[1]), ("I1", HOLES_AI[0]), ("O1", HOLES_AO[0]), ("O2", HOLES_AO[1])], block,
+                               fig="Fig. E-3", note="Flat leg (upper strip) and vertical leg (lower strip) unfolded about the heel. Stations SOURCE-DEFINED; bolt holes VERIFIED.")
     return save(c, "05-railA.svg", rotate=True)
 
 
@@ -493,7 +495,8 @@ def fig_railB():
     heels = [(0, +1, "heel flush with the corner end (0), legs to the far end; both fittings share these holes", HOLES_BC)]
     block = [f"P07 Rail B · {S['section']}", f"{LEG} × {LEG} × {T} mm, {cm(LEN)} cm: MEASURE first",
              f"On the desk: corner end y = {cm(OUTF)} cm, outer face x = {cm(DATA['railB']['x1'] * 10)} cm", "(datum: top A's back-left corner)"]
-    c, D, dfe, dvfe, dbl = fab("P07", "RAIL B", HOLES_B, "corner end", heels, 0, 250, [("C1", HOLES_BC[0]), ("C2", HOLES_BC[1])], block)
+    c, D, dfe, dvfe, dbl = fab("P07", "RAIL B", HOLES_B, "corner end", heels, 0, 250, [("C1", HOLES_BC[0]), ("C2", HOLES_BC[1])], block,
+                               fig="Fig. E-4", note="Holes 1, 2 go into top A, 3 to 10 into top B; the two bolt holes serve both fittings. Stations SOURCE-DEFINED; bolt holes VERIFIED.")
     yz = dfe - 4.5
     L_(c, D(0), yz, D(UNDER_A), yz, lw="dim"); head(c, D(UNDER_A), yz, D(0), yz, 1.4); head(c, D(0), yz, D(UNDER_A), yz, 1.4)
     L_(c, D(UNDER_A), yz - 1.5, D(UNDER_A), dfe - 0.3, lw="thin", dash="1.5 1")

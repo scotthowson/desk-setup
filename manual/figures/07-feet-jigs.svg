@@ -23,8 +23,8 @@
 <rect x="104" y="12" width="72" height="52" fill="#f2f2f2" stroke="none"/>
 <line x1="104.00" y1="12.00" x2="176.00" y2="12.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
 <line x1="140.00" y1="9.00" x2="140.00" y2="66.00" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1 0.8 1" stroke-linecap="round"/>
-<text x="140.00" y="2.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">station 214.5 cm from the side-wall end (F1, F3)</text>
-<text x="140.00" y="6.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">or from the joint end (F5, F6)</text>
+<text x="140.00" y="2.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">station 34.5 cm from the far end</text>
+<text x="140.00" y="6.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(tape hooked on the far end)</text>
 <rect x="122.40" y="10.60" width="35.20" height="1.4" fill="#808080"/>
 <rect x="122.40" y="12.00" width="35.20" height="6.40" fill="#fff" stroke="#000" stroke-width="0.5"/>
 <rect x="136.16" y="18.40" width="7.68" height="45.44" fill="#fff" stroke="#000" stroke-width="0.5"/>

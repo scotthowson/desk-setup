@@ -300,30 +300,29 @@ def use_cornerjig():
 
 
 def use_alexcorner():
+    """Template on an ALEX corner (fences on both edges), holes at the scad's angles 45/165/285 deg from the edge."""
     c = Canvas(UW, 66)
-    k = 0.45
-    rx, ty = 54, 12
+    k = 0.48
+    rx, ty = 52, 12
     c.rect(4, ty, rx - 4, 52, fill=GREY["light"], lw="outline")
     c.line((4, ty), (rx, ty), lw="heavy"); c.line((rx, ty), (rx, 64), lw="heavy")
-    c.text((6, 61.5), "ALEX top", size=3.0, anchor="start")
-    js = 100 * k
+    c.text((6, 61.5), "ALEX corner", size=3.0, anchor="start")
+    js = 92 * k
     c.rect(rx - js, ty, js, js, fill="#fff", lw="outline")
     c.rect(rx - js, ty - 2, js + 2, 2, fill=GREY["mid"], lw="outline"); c.rect(rx, ty - 2, 2, js + 2, fill=GREY["mid"], lw="outline")
     cx, cy = rx - 50 * k, ty + 50 * k
-    c.circle((cx, cy), 75 * k / 2, lw=0.25, dash="1.2 0.7")
+    c.circle((cx, cy), 58 * k / 2, lw=0.25, dash="1.2 0.7"); c.circle((cx, cy), 52 * k / 2, lw=0.2, dash="1.2 0.7")
     c.circle((cx, cy), 0.5, fill="#000", lw="thin")
-    for a in (90, 210, 330):
-        r = math.radians(a)
-        hole(c, (cx + 33 * k * math.cos(r), cy - 33 * k * math.sin(r)), 1.0, fill="#000")
+    P = lambda r, a: (cx - r * k * math.cos(math.radians(a)), cy + r * k * math.sin(math.radians(a)))
     for a in (45, 165, 285):
-        r = math.radians(a)
-        hole(c, (cx + 14.5 * k * math.cos(r), cy - 14.5 * k * math.sin(r)), 0.9)
+        hole(c, P(33, a), 1.0, fill="#000")
+        hole(c, P(14.5, a), 0.9)
     dim2(c, (cx, ty), (rx, ty), "5 cm", off=5.5)
     dim2(c, (rx, ty), (rx, cy), "5 cm", off=-6)
-    lead(c, (cx + 33 * k * math.cos(math.radians(330)), cy - 33 * k * math.sin(math.radians(330))), (rx + 6, 40), "outer 3:", size=3.0)
-    c.text((rx + 7, 43.7), "drill, 5/64", size=3.0, anchor="start")
-    lead(c, (cx + 14.5 * k * math.cos(math.radians(285)), cy - 14.5 * k * math.sin(math.radians(285))), (rx + 6, 52), "inner 3:", size=3.0)
-    c.text((rx + 7, 55.7), "ALEX feet only", size=3.0, anchor="start")
+    lead(c, P(33, 165), (rx + 6, 40), "outer 3: ring", size=3.0)
+    c.text((rx + 7, 43.7), "circle, check only", size=3.0, anchor="start")
+    lead(c, P(14.5, 165), (rx + 6, 52), "inner 3: ALEX", size=3.0)
+    c.text((rx + 7, 55.7), "feet, bottom only", size=3.0, anchor="start")
     return c.save(os.path.join(FIG, "02-use-alexcorner.svg"))
 
 
