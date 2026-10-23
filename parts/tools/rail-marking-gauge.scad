@@ -10,8 +10,8 @@
 
 lip_h  = 6;     // how far the lip hangs down over the edge
 lip_t  = 3;
-body_t = 5;
-w      = 30;    // width along the rail
+body_t = 3;
+w      = 20;    // width along the rail
 d19 = 19; d29 = 29;
 notch = 2.4;    // V notch side; the V is 90 degrees
 pencil_tip = 0.8;
@@ -34,9 +34,9 @@ module gauge() {   // use orientation: body on the steel face, lip hanging over 
     }
 }
 module labels(top = false) {
-    translate([d19 / 2, w / 4, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("19", size = 5, halign = "center", valign = "center");
-    translate([d29 / 2, 3 * w / 4, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("29", size = 5, halign = "center", valign = "center");
-    translate([24, 3 * w / 4, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL", size = 3, halign = "center", valign = "center");
+    translate([d19 / 2, w / 4, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("19", size = 3.6, halign = "center", valign = "center");
+    translate([d29 / 2, 3 * w / 4, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("29", size = 3.6, halign = "center", valign = "center");
+    translate([24, 3 * w / 4, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL", size = 2.6, halign = "center", valign = "center");
 }
 difference() {
     translate([0, 0, body_t]) mirror([0, 0, 1]) gauge();   // flipped for printing
