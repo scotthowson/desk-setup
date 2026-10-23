@@ -70,7 +70,7 @@ def render_pages(pages, doc_title, with_toc=True, toc_after=1):
     out = []
     for i, p in enumerate(numbered):
         if with_toc and i == toc_after:
-            items = "".join(f'<li><span><b>{c}</b>&nbsp; {t}</span><span>{pg}</span></li>' for c, t, pg in toc_entries)
+            items = "".join(f'<li><span>{t if t.startswith(c) else f"<b>{c}</b>&nbsp; {t}"}</span><span>{pg}</span></li>' for c, t, pg in toc_entries)
             out.append(f'<section class="page"><div class="header"><span>{doc_title}</span><span></span></div><h1>Contents</h1><ul class="toc">{items}</ul><div class="footer"><span>{doc_title}</span><span>{toc_after + 1}</span></div></section>')
         hdr = "" if "cover" in p["cls"] else f'<div class="header"><span>{doc_title}</span><span>{p["chapter"]} · {p["title"]}</span></div>'
         ftr = "" if "cover" in p["cls"] else f'<div class="footer"><span>{doc_title}</span><span>Page {p["n"]}</span></div>'

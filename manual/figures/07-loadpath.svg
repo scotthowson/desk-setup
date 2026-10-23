@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 104" width="178mm" height="104mm" class="fig">
+<rect x="44" y="2" width="90" height="11" fill="#e6e6e6" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="89.00" y="5.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Tops A and B</text>
+<text x="89.00" y="9.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">you, monitors, PC, everything on the desk</text>
+<rect x="2" y="24" width="46" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="25.00" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">6 OLOV legs</text>
+<text x="25.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">wall edges, M4 screws</text>
+<rect x="56" y="24" width="62" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="87.00" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Rails A and B</text>
+<text x="87.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edges, #10 screws</text>
+<rect x="126" y="24" width="50" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="151.00" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">8 feet plates F1–F8</text>
+<text x="151.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">#8 screws, 14 in</text>
+<line x1="60" y1="13" x2="25" y2="24" stroke="#000" stroke-width="0.5"/>
+<polygon points="25,24 26.587,22.782 26.998,24.091" fill="#000"/>
+<line x1="89" y1="13" x2="87" y2="24" stroke="#000" stroke-width="0.5"/>
+<polygon points="87,24 86.661,22.029 88.011,22.274" fill="#000"/>
+<line x1="118" y1="13" x2="151" y2="24" stroke="#000" stroke-width="0.5"/>
+<polygon points="151,24 149.001,24.056 149.435,22.755" fill="#000"/>
+<rect x="56" y="46" width="62" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="87.00" y="51.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Corner: rail B hangs</text>
+<text x="87.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">from rail A on 2 fittings</text>
+<line x1="87" y1="38" x2="87" y2="46" stroke="#000" stroke-width="0.5"/>
+<polygon points="87,46 86.314,44.121 87.686,44.121" fill="#000"/>
+<rect x="56" y="68" width="62" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="87.00" y="73.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Rail ends load the top</text>
+<text x="87.00" y="77.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">A: 5 from F1/F3 · B: 135 to F5/F6</text>
+<line x1="87" y1="60" x2="87" y2="68" stroke="#000" stroke-width="0.5"/>
+<polygon points="87,68 86.314,66.121 87.686,66.121" fill="#000"/>
+<rect x="126" y="46" width="50" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="151.00" y="51.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Feet, wound to 102</text>
+<text x="151.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">pads bear on the ALEX top</text>
+<line x1="151" y1="38" x2="151" y2="46" stroke="#000" stroke-width="0.5"/>
+<polygon points="151,46 150.314,44.121 151.686,44.121" fill="#000"/>
+<line x1="118.00" y1="75.00" x2="122.00" y2="75.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="122.00" y1="75.00" x2="122.00" y2="53.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="122" y1="53" x2="126" y2="53" stroke="#000" stroke-width="0.5"/>
+<polygon points="126,53 124.121,53.686 124.121,52.314" fill="#000"/>
+<rect x="126" y="68" width="50" height="14" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="151.00" y="73.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Rings on the ALEX tops</text>
+<text x="151.00" y="77.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">hold the pads sideways</text>
+<line x1="151" y1="60" x2="151" y2="68" stroke="#000" stroke-width="0.5"/>
+<polygon points="151,68 150.314,66.121 151.686,66.121" fill="#000"/>
+<rect x="126" y="88" width="50" height="12" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="151.00" y="92.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX 1 and ALEX 2</text>
+<text x="151.00" y="96.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">then the floor</text>
+<line x1="151" y1="82" x2="151" y2="88" stroke="#000" stroke-width="0.5"/>
+<polygon points="151,88 150.314,86.121 151.686,86.121" fill="#000"/>
+<rect x="2" y="88" width="46" height="12" fill="#fff" stroke="#000" stroke-width="0.5" rx="1"/>
+<text x="25.00" y="94.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Floor</text>
+<line x1="25" y1="38" x2="25" y2="88" stroke="#000" stroke-width="0.5"/>
+<polygon points="25,88 24.314,86.121 25.686,86.121" fill="#000"/>
+<rect x="56" y="88" width="62" height="12" fill="#fff" stroke="#000" stroke-width="0.8" rx="1" stroke-dasharray="2 1"/>
+<text x="87.00" y="92.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">NEVER: a rail on a cabinet</text>
+<text x="87.00" y="96.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail lower edge 751, ALEX top 700</text>
+</svg>

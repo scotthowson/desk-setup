@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.65 87.75" width="78.65mm" height="87.75mm" class="fig">
+<polyline points="5.85,83.85 5.85,5.85 76.05,5.85" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="76.05,48.1 48.1,48.1 48.1,83.85" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="76.05,5.85 76.05,24.44 75.14,26.13 76.96,27.82 76.05,29.51 76.05,48.1" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polyline points="5.85,83.85 24.44,83.85 26.13,82.94 27.82,84.76 29.51,83.85 48.1,83.85" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="3.9" y1="3.9" x2="77.35" y2="3.9" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="3.9" y1="3.9" x2="3.9" y2="85.15" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="5.85" y1="48.1" x2="48.1" y2="48.1" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="15.6" cy="33.15" r="3.413" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1.5 1"/>
+<line x1="14.4" y1="33.15" x2="16.8" y2="33.15" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="15.6" y1="31.95" x2="15.6" y2="34.35" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="9.425" y="39.325" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">L1</text>
+<circle cx="48.1" cy="12.35" r="3.413" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1.5 1"/>
+<line x1="46.9" y1="12.35" x2="49.3" y2="12.35" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="48.1" y1="11.15" x2="48.1" y2="13.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="52.65" y="8.45" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">L2</text>
+<circle cx="12.35" cy="61.1" r="3.413" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1.5 1"/>
+<line x1="11.15" y1="61.1" x2="13.55" y2="61.1" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="12.35" y1="59.9" x2="12.35" y2="62.3" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="16.9" y="57.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">L4</text>
+<polygon points="24.7,54.6 41.6,54.6 41.6,76.7 24.7,76.7" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="33.15" y="65.65" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">20 kg</text>
+<line x1="41.6" y1="74.75" x2="48.1" y2="74.75" stroke="#000" stroke-width="0.25"/>
+<polygon points="41.6,74.75 43.103,74.201 43.103,75.299" fill="#000"/>
+<polygon points="48.1,74.75 46.597,75.299 46.597,74.201" fill="#000"/>
+<text x="44.85" y="77.15" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 44.85 77.15)"></text>
+<text x="44.85" y="76.95" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal"></text>
+<text x="49.4" y="74.75" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">100</text>
+<line x1="25.35" y1="48.1" x2="25.35" y2="54.6" stroke="#000" stroke-width="0.25"/>
+<polygon points="25.35,48.1 25.899,49.603 24.801,49.603" fill="#000"/>
+<polygon points="25.35,54.6 24.801,53.097 25.899,53.097" fill="#000"/>
+<text x="27.75" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 27.75 51.35)"></text>
+<text x="28.35" y="51.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" transform="rotate(90 28.35 51.35)">100</text>
+<polygon points="15.22,33.977 54.87,52.177 55.63,50.523 15.98,32.323" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="59.15" y1="39.65" x2="48.1" y2="48.1" stroke="#000" stroke-width="0.25"/>
+<circle cx="48.1" cy="48.1" r="0.7" fill="#000"/>
+<circle cx="59.15" cy="39.65" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="59.15" y="39.65" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">R</text>
+<text x="49.4" y="57.85" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">R: read the drop</text>
+<text x="49.4" y="61.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">here, at the inside</text>
+<text x="49.4" y="65.35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">corner, beside</text>
+<text x="49.4" y="69.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">the case</text>
+<text x="14.95" y="20.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">straightedge from</text>
+<text x="14.95" y="24.55" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">over leg L1's line</text>
+<text x="57.85" y="25.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">top A</text>
+<text x="14.3" y="80.6" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">top B</text>
+</svg>

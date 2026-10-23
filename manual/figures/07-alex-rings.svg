@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 78" width="178mm" height="78mm" class="fig">
+<rect x="14" y="8" width="39.60" height="63.80" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>
+<circle cx="19.50" cy="13.50" r="4.12" fill="#e6e6e6" stroke="#000" stroke-width="0.4"/>
+<circle cx="19.50" cy="13.50" r="2.81" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="48.10" cy="13.50" r="4.12" fill="#e6e6e6" stroke="#000" stroke-width="0.4"/>
+<circle cx="48.10" cy="13.50" r="2.81" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="19.50" cy="66.30" r="4.12" fill="#e6e6e6" stroke="#000" stroke-width="0.4"/>
+<circle cx="19.50" cy="66.30" r="2.81" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="48.10" cy="66.30" r="4.12" fill="#e6e6e6" stroke="#000" stroke-width="0.4"/>
+<circle cx="48.10" cy="66.30" r="2.81" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<line x1="14.00" y1="71.80" x2="53.60" y2="71.80" stroke="#000" stroke-width="1.2" stroke-linecap="round"/>
+<text x="33.80" y="75.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">drawer fronts</text>
+<text x="33.80" y="37.90" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX 1</text>
+<text x="33.80" y="42.40" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">from above</text>
+<text x="55.60" y="39.90" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 55.60 39.90)">360 × 580</text>
+<rect x="92" y="12" width="56" height="58" fill="#f2f2f2" stroke="none"/>
+<line x1="92.00" y1="12.00" x2="148.00" y2="12.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="92.00" y1="12.00" x2="92.00" y2="70.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<rect x="92.00" y="12.00" width="41.40" height="41.40" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<rect x="90.40" y="10.40" width="1.6" height="43.00" fill="#808080"/>
+<rect x="90.40" y="10.40" width="43.00" height="1.6" fill="#808080"/>
+<circle cx="114.50" cy="34.50" r="12.83" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="114.50" cy="34.50" r="11.47" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="125.00" cy="45.00" r="0.9" fill="#000" stroke="#000" stroke-width="0.4"/>
+<circle cx="119.11" cy="39.11" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="100.16" cy="38.34" r="0.9" fill="#000" stroke="#000" stroke-width="0.4"/>
+<circle cx="108.20" cy="36.19" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="118.34" cy="20.16" r="0.9" fill="#000" stroke="#000" stroke-width="0.4"/>
+<circle cx="116.19" cy="28.20" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="114.50" cy="34.50" r="0.5" fill="#000"/>
+<line x1="114.50" y1="34.50" x2="114.50" y2="10.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="114.50" y1="34.50" x2="90.00" y2="34.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="114.50" y1="10.80" x2="114.50" y2="14.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="92.00" y1="10.80" x2="92.00" y2="14.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="114.50" y1="13.00" x2="92.00" y2="13.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="114.5,13 113.091,13.514 113.091,12.486" fill="#000"/>
+<polygon points="92,13 93.409,12.486 93.409,13.514" fill="#000"/>
+<text x="103.25" y="15.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(360.00 103.25 15.20)">50</text>
+<line x1="90.80" y1="34.50" x2="94.50" y2="34.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="90.80" y1="12.00" x2="94.50" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="93.00" y1="34.50" x2="93.00" y2="12.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="93,34.5 92.486,33.091 93.514,33.091" fill="#000"/>
+<polygon points="93,12 93.514,13.409 92.486,13.409" fill="#000"/>
+<text x="95.20" y="23.25" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 95.20 23.25)">50</text>
+<text x="152.00" y="16.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">fences against</text>
+<text x="152.00" y="20.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">both edges</text>
+<line x1="125.80" y1="45.80" x2="151.00" y2="42.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="152.00" y="38.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">● ring screws,</text>
+<text x="152.00" y="42.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">5/64 in bit, r 33</text>
+<text x="152.00" y="50.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">○ inner (r 14.5):</text>
+<text x="152.00" y="54.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">optional ALEX feet,</text>
+<text x="152.00" y="59.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">on the bottom</text>
+<text x="120.00" y="76.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX corner template on a corner</text>
+</svg>

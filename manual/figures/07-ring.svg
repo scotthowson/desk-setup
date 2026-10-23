@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 80" width="178mm" height="80mm" class="fig">
+<circle cx="44" cy="40" r="30" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<circle cx="44" cy="40" r="22.8" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
+<circle cx="44" cy="40" r="20.4" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="42" y1="40" x2="46" y2="40" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="44" y1="38" x2="44" y2="42" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="44" cy="40" r="26.4" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1 0.8 1"/>
+<circle cx="44" cy="13.6" r="2.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="44" cy="13.6" r="1.52" fill="none" stroke="#000" stroke-width="0.5"/>
+<circle cx="21.137" cy="53.2" r="2.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="21.137" cy="53.2" r="1.52" fill="none" stroke="#000" stroke-width="0.5"/>
+<circle cx="66.863" cy="53.2" r="2.8" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="66.863" cy="53.2" r="1.52" fill="none" stroke="#000" stroke-width="0.5"/>
+<text x="44.00" y="32.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">⌀51 bore</text>
+<text x="44.00" y="47.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">⌀57 ring</text>
+<line x1="79.20" y1="68.80" x2="68.94" y2="55.28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="68.94" cy="55.28" r="0.6" fill="#000"/>
+<text x="80.40" y="68.80" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">3 × ⌀3.8, csk ⌀7.0,</text>
+<text x="80.40" y="73.10" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">on r 33 at 90°, 210°, 330°</text>
+<line x1="14.00" y1="39.20" x2="14.00" y2="7.60" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="74.00" y1="39.20" x2="74.00" y2="7.60" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="14.00" y1="9.19" x2="74.00" y2="9.19" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="14,9.19 15.409,8.676 15.409,9.704" fill="#000"/>
+<polygon points="74,9.19 72.591,9.704 72.591,8.676" fill="#000"/>
+<text x="44.00" y="6.99" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">⌀75 flange</text>
+<polygon points="102.50,50.00 90.50,50.00 90.50,47.50 99.50,47.50 99.50,37.50 102.50,37.50" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<polygon points="153.50,50.00 165.50,50.00 165.50,47.50 156.50,47.50 156.50,37.50 153.50,37.50" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<polygon points="159.10,50.00 162.90,50.00 162.90,49.70 164.50,47.50 157.50,47.50 159.10,49.70" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<line x1="128.00" y1="53.00" x2="128.00" y2="34.50" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1 0.8 1" stroke-linecap="round"/>
+<line x1="98.50" y1="37.50" x2="85.50" y2="37.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="87.50" y1="47.50" x2="87.50" y2="37.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="87.5,47.5 87.02,46.185 87.98,46.185" fill="#000"/>
+<polygon points="87.5,37.5 87.98,38.815 87.02,38.815" fill="#000"/>
+<text x="85.50" y="42.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="bold" fill="#000">10</text>
+<line x1="166.30" y1="48.75" x2="170.50" y2="48.75" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="171.50" y="48.75" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">2.5</text>
+<line x1="161.00" y1="47.50" x2="167.00" y2="37.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="167.50" y="36.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">csk</text>
+<text x="128.00" y="56.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">open bottom: the pad bears on the ALEX top</text>
+<text x="128.00" y="17.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">Section through one screw hole</text>
+<text x="128.00" y="22.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(full size)</text>
+</svg>

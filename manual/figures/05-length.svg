@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 94" width="172mm" height="94mm" class="fig">
+<text x="4" y="6" font-family="Helvetica, Arial, sans-serif" font-size="3.6" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">RAIL A (P06)</text>
+<polygon points="10,11 60,11 60,17 10,17" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="35" y="14" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">TAPE LABEL: WALL END</text>
+<line x1="12" y1="17" x2="11" y2="20" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="10,20 140,20 140,26 10,26" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="140,20 147,20 147,26 140,26" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-dasharray="1.2 0.8" stroke-linejoin="round"/>
+<line x1="10" y1="21.6" x2="147" y2="21.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="18" x2="10" y2="28" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<text x="12" y="23.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">0</text>
+<polygon points="10,28.5 147,28.5 147,30.7 10,30.7" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="8.8,27 10,27 10,30.7 8.8,30.7" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="10" y1="28.5" x2="10" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16" y1="28.5" x2="16" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="22" y1="28.5" x2="22" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="28" y1="28.5" x2="28" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="34" y1="28.5" x2="34" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="40" y1="28.5" x2="40" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="46" y1="28.5" x2="46" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="52" y1="28.5" x2="52" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="58" y1="28.5" x2="58" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="64" y1="28.5" x2="64" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="70" y1="28.5" x2="70" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="76" y1="28.5" x2="76" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="82" y1="28.5" x2="82" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="88" y1="28.5" x2="88" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="94" y1="28.5" x2="94" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="100" y1="28.5" x2="100" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="106" y1="28.5" x2="106" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="112" y1="28.5" x2="112" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="118" y1="28.5" x2="118" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="124" y1="28.5" x2="124" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="130" y1="28.5" x2="130" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="136" y1="28.5" x2="136" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="142" y1="28.5" x2="142" y2="29.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="26.8" x2="10" y2="38.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="140" y1="26.8" x2="140" y2="38.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="37.5" x2="140" y2="37.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="10,37.5 11.503,36.951 11.503,38.049" fill="#000"/>
+<polygon points="140,37.5 138.497,38.049 138.497,36.951" fill="#000"/>
+<text x="75" y="35.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">design length 2130 · last hole at 2105</text>
+<line x1="10" y1="26.8" x2="10" y2="46.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="26.8" x2="147" y2="46.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="45.5" x2="147" y2="45.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="10,45.5 11.503,44.951 11.503,46.049" fill="#000"/>
+<polygon points="147,45.5 145.497,46.049 145.497,44.951" fill="#000"/>
+<text x="78.5" y="43.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">delivered length: MEASURE ______ mm</text>
+<text x="150" y="21" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">far end:</text>
+<text x="150" y="25.1" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">any extra</text>
+<text x="150" y="29.2" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">stays here</text>
+<text x="4" y="52" font-family="Helvetica, Arial, sans-serif" font-size="3.6" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">RAIL B (P07)</text>
+<polygon points="10,57 60,57 60,63 10,63" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="35" y="60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">TAPE LABEL: CORNER END</text>
+<line x1="12" y1="63" x2="11" y2="66" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="10,66 140,66 140,72 10,72" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="140,66 147,66 147,72 140,72" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-dasharray="1.2 0.8" stroke-linejoin="round"/>
+<line x1="10" y1="67.6" x2="147" y2="67.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="64" x2="10" y2="74" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<text x="12" y="69.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">0</text>
+<polygon points="10,74.5 147,74.5 147,76.7 10,76.7" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="8.8,73 10,73 10,76.7 8.8,76.7" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="10" y1="74.5" x2="10" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16" y1="74.5" x2="16" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="22" y1="74.5" x2="22" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="28" y1="74.5" x2="28" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="34" y1="74.5" x2="34" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="40" y1="74.5" x2="40" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="46" y1="74.5" x2="46" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="52" y1="74.5" x2="52" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="58" y1="74.5" x2="58" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="64" y1="74.5" x2="64" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="70" y1="74.5" x2="70" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="76" y1="74.5" x2="76" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="82" y1="74.5" x2="82" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="88" y1="74.5" x2="88" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="94" y1="74.5" x2="94" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="100" y1="74.5" x2="100" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="106" y1="74.5" x2="106" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="112" y1="74.5" x2="112" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="118" y1="74.5" x2="118" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="124" y1="74.5" x2="124" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="130" y1="74.5" x2="130" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="136" y1="74.5" x2="136" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="142" y1="74.5" x2="142" y2="75.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="72.8" x2="10" y2="84.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="140" y1="72.8" x2="140" y2="84.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="83.5" x2="140" y2="83.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="10,83.5 11.503,82.951 11.503,84.049" fill="#000"/>
+<polygon points="140,83.5 138.497,84.049 138.497,82.951" fill="#000"/>
+<text x="75" y="81.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">design length 2130 · last hole at 2105</text>
+<line x1="10" y1="72.8" x2="10" y2="92.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="147" y1="72.8" x2="147" y2="92.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10" y1="91.5" x2="147" y2="91.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="10,91.5 11.503,90.951 11.503,92.049" fill="#000"/>
+<polygon points="147,91.5 145.497,92.049 145.497,90.951" fill="#000"/>
+<text x="78.5" y="89.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">delivered length: MEASURE ______ mm</text>
+<text x="150" y="67" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">far end:</text>
+<text x="150" y="71.1" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">any extra</text>
+<text x="150" y="75.2" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">stays here</text>
+</svg>

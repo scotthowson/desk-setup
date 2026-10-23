@@ -1,0 +1,25 @@
+<!-- Appendix: outstanding measurements (manual/facts.json open_measurements), confidence labels (facts.json _about), QC note (facts.json source_commit). -->
+<section class="page" data-chapter="Appendix" data-title="Outstanding measurements" data-toc="Appendix · Outstanding measurements">
+  <h1>Appendix · Outstanding measurements</h1>
+  <p>These values were not measured on the purchased parts when this manual was built. Each is marked <span class="badge badge-measure">MEASURE ON HARDWARE</span> at its point of use. Measure it before the step that uses it; if it differs, the step's own warning panel says what changes.</p>
+  <table>
+    <tr><th>Measurement</th><th>Expected</th><th>Used in</th></tr>
+    <tr><td>ALEX top and bottom panel thickness</td><td>16 or more for the 5/8 in screws</td><td>Build manual step 5: ring screws, 12 mm pilots; optional ALEX feet screws</td></tr>
+    <tr><td>ALEX height, with and without its stock feet</td><td>700 (docs assume)</td><td>Underside 802 = 700 + foot 102; OLOV setting 802; surface 830 (check 1)</td></tr>
+    <tr><td>Feet pad diameter (calipers)</td><td>50; rings bored 51</td><td>Printed rings P10 before printing; check 4</td></tr>
+    <tr><td>EKBACKEN thickness (calipers)</td><td>28</td><td>Every screw into a top (21 max; 1 mm shorter if 27); clamp opening 28 + 3 = 31 (chapter I)</td></tr>
+    <tr><td>VIVO top arm reach and maximum opening</td><td>reach about 89; opening 31 or more</td><td>Chapter I: clamp zones, Fig. I-2</td></tr>
+    <tr><td>Delivered rail lengths and angle thickness</td><td>2130 layout (bought as 84 in = 2133.6); 4.8</td><td>Build manual step 1 hole positions; rail pilot depth 25 (4.8 steel + 20)</td></tr>
+    <tr><td>Room: wall to wall, and baseboard thickness</td><td>2520 and 3170</td><td>Build manual step 0 (252 × 317 cm of floor with the 30 wall gaps); step 8b wall-gap trim</td></tr>
+    <tr><td>Feet load rating</td><td>unknown; the design wants 50 kg or more each</td><td>Load path through the eight feet; check 3 corner load test</td></tr>
+  </table>
+  <h2>Confidence labels</h2>
+  <div class="kv">
+    <span><span class="badge badge-verified">VERIFIED</span></span><span>measured on the purchased part, or taken from its own geometry file.</span>
+    <span><span class="badge badge-source">SOURCE-DEFINED</span></span><span>defined by the project documents (docs/build-manual.md). A source-defined dimension is never called verified.</span>
+    <span><span class="badge badge-assumption">ASSUMPTION / FIELD CHECK</span></span><span>engineering estimate or field check.</span>
+    <span><span class="badge badge-measure">MEASURE ON HARDWARE</span></span><span>not yet measured: measure it before the step that uses it.</span>
+  </div>
+  <h2>Quality control</h2>
+  <p>Every number in this manual comes from manual/data.json (extracted from guide.html's D object), manual/facts.json or docs/build-manual.md. Source: HEAD of https://github.com/scotthowson/desk-setup on 23 Oct 2026 (supersedes a2e99ea with measured facts). If you change a measured value, change it in the docs first, then rebuild the manual.</p>
+</section>

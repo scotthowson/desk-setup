@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 200" width="178mm" height="200mm" class="fig">
+<polygon points="13.74,9.74 158.16,9.74 158.16,47.44 13.74,47.44" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="13.74,47.44 51.44,47.44 51.44,191.86 13.74,191.86" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="13.74" y1="9.74" x2="158.16" y2="9.74" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="13.74" y1="9.74" x2="13.74" y2="191.86" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polygon points="135.25,11.77 156.13,11.77 156.13,45.41 135.25,45.41" fill="none" stroke="#000" stroke-width="0.5" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
+<polygon points="15.77,168.95 49.41,168.95 49.41,189.83 15.77,189.83" fill="none" stroke="#000" stroke-width="0.5" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
+<polygon points="14.32,37.522 137.86,37.522 137.86,40.48 14.32,40.48" fill="#d9d9d9" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="41.522,40.48 44.48,40.48 44.48,164.02 41.522,164.02" fill="#d9d9d9" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="25.34,10.03 40.072,10.03 40.072,14.438 25.34,14.438" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.8" stroke-linejoin="round"/>
+<polygon points="14.03,21.34 18.438,21.34 18.438,36.072 14.03,36.072" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.8" stroke-linejoin="round"/>
+<polygon points="34.62,9.74 39.26,9.74 39.26,14.96 34.62,14.96" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="13.74,30.62 18.96,30.62 18.96,35.26 13.74,35.26" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="22.44" cy="34.1" r="3.045" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="22.44" cy="34.1" r="1.392" fill="#808080" stroke="#000" stroke-width="0.25"/>
+<circle cx="51.44" cy="15.54" r="3.045" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="51.44" cy="15.54" r="1.392" fill="#808080" stroke="#000" stroke-width="0.25"/>
+<circle cx="94.94" cy="15.54" r="3.045" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="94.94" cy="15.54" r="1.392" fill="#808080" stroke="#000" stroke-width="0.25"/>
+<circle cx="19.54" cy="59.04" r="3.045" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="19.54" cy="59.04" r="1.392" fill="#808080" stroke="#000" stroke-width="0.25"/>
+<circle cx="19.54" cy="102.54" r="3.045" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="19.54" cy="102.54" r="1.392" fill="#808080" stroke="#000" stroke-width="0.25"/>
+<circle cx="19.54" cy="146.04" r="3.045" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="19.54" cy="146.04" r="1.392" fill="#808080" stroke="#000" stroke-width="0.25"/>
+<polygon points="136.424,12.944 139.875,12.944 139.875,16.396 136.424,16.396" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="138.15" cy="14.67" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="151.505,12.944 154.956,12.944 154.956,16.396 151.505,16.396" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="153.23" cy="14.67" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="136.424,40.785 139.875,40.785 139.875,44.236 136.424,44.236" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="138.15" cy="42.51" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="151.505,40.785 154.956,40.785 154.956,44.236 151.505,44.236" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="153.23" cy="42.51" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="16.944,170.124 20.395,170.124 20.395,173.576 16.944,173.576" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="18.67" cy="171.85" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="44.784,170.124 48.236,170.124 48.236,173.576 44.784,173.576" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="46.51" cy="171.85" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="16.944,185.204 20.395,185.204 20.395,188.656 16.944,188.656" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="18.67" cy="186.93" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<polygon points="44.784,185.204 48.236,185.204 48.236,188.656 44.784,188.656" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="46.51" cy="186.93" r="1.45" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="16.35" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="30.56" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="45.64" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="60.72" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="75.8" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="90.88" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="105.96" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="121.04" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="136.41" cy="38.624" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="41.93" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="44.83" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="56.72" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="71.8" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="86.88" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="101.96" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="117.04" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="132.12" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="147.2" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="42.624" cy="162.57" r="0.348" fill="#000" stroke="#000" stroke-width="0.25"/>
+<polygon points="20.236,40.654 24.644,40.654 24.644,55.386 20.236,55.386" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="31.836,40.654 36.244,40.654 36.244,55.386 31.836,55.386" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="44.48,40.48 50.309,40.48 50.309,40.828 44.828,40.828 44.828,46.309 44.48,46.309" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="44.19,40.48 38.361,40.48 38.361,40.828 43.842,40.828 43.842,46.309 44.19,46.309" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="138.15" cy="14.67" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="153.23" cy="14.67" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="138.15" cy="42.51" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="153.23" cy="42.51" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="18.67" cy="171.85" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="46.51" cy="171.85" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="18.67" cy="186.93" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="46.51" cy="186.93" r="2.175" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<text x="145.69" y="28.59" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX 1</text>
+<text x="32.30" y="179.39" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">ALEX 2</text>
+<text x="26.79" y="34.45" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">L1</text>
+<text x="55.79" y="15.89" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">L2</text>
+<text x="99.29" y="15.89" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">L3</text>
+<text x="23.89" y="59.39" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">L4</text>
+<text x="23.89" y="102.89" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">L5</text>
+<text x="23.89" y="146.39" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">L6</text>
+<circle cx="13.74" cy="9.74" r="1.3" fill="#000"/>
+<text x="11.74" y="13.24" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">datum</text>
+<line x1="100.74" y1="22.50" x2="94.94" y2="15.54" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="94.94" cy="15.54" r="0.7" fill="#000"/>
+<circle cx="100.74" cy="22.50" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="100.74" y="22.60" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P05</text>
+<line x1="100.74" y1="56.14" x2="100.74" y2="39.03" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="100.74" cy="39.03" r="0.7" fill="#000"/>
+<circle cx="100.74" cy="56.14" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="100.74" y="56.24" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P06</text>
+<line x1="65.94" y1="125.74" x2="43.03" y2="125.74" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="43.03" cy="125.74" r="0.7" fill="#000"/>
+<circle cx="65.94" cy="125.74" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="65.94" y="125.84" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P07</text>
+<line x1="68.84" y1="67.74" x2="44.65" y2="42.80" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="44.65" cy="42.80" r="0.7" fill="#000"/>
+<circle cx="68.84" cy="67.74" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="68.84" y="67.84" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P08</text>
+<line x1="132.64" y1="64.84" x2="138.15" y2="42.51" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="138.15" cy="42.51" r="0.7" fill="#000"/>
+<circle cx="132.64" cy="64.84" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="132.64" y="64.94" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P09</text>
+<line x1="65.94" y1="183.74" x2="46.51" y2="186.93" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="46.51" cy="186.93" r="0.7" fill="#000"/>
+<circle cx="65.94" cy="183.74" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="65.94" y="183.84" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P10</text>
+<line x1="68.84" y1="90.94" x2="34.04" y2="51.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="34.04" cy="51.50" r="0.7" fill="#000"/>
+<circle cx="68.84" cy="90.94" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="68.84" y="91.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P11</text>
+<line x1="57.24" y1="27.14" x2="31.14" y2="12.06" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="31.14" cy="12.06" r="0.7" fill="#000"/>
+<circle cx="57.24" cy="27.14" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="57.24" y="27.24" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P11</text>
+<line x1="152.94" y1="61.94" x2="153.23" y2="38.74" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="153.23" cy="38.74" r="0.7" fill="#000"/>
+<circle cx="152.94" cy="61.94" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="152.94" y="62.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P03</text>
+<line x1="65.94" y1="166.34" x2="42.74" y2="168.95" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="42.74" cy="168.95" r="0.7" fill="#000"/>
+<circle cx="65.94" cy="166.34" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="65.94" y="166.44" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">P04</text>
+<line x1="60.14" y1="59.04" x2="60.14" y2="38.62" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="60.14" cy="38.62" r="0.7" fill="#000"/>
+<circle cx="60.14" cy="59.04" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="60.14" y="59.14" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">H03</text>
+<line x1="65.94" y1="148.94" x2="42.62" y2="162.57" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="42.62" cy="162.57" r="0.7" fill="#000"/>
+<circle cx="65.94" cy="148.94" r="3.6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="65.94" y="149.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">H03</text>
+<text x="89.14" y="90.94" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Seen from above, through the tops</text>
+<text x="89.14" y="95.58" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">(not a face-down view: nothing is mirrored)</text>
+</svg>

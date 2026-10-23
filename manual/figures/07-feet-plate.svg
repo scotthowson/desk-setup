@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 68" width="72mm" height="68mm" class="fig">
+<polygon points="11.688,11.688 56.313,11.688 56.313,56.313 11.688,56.313" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<circle cx="34" cy="34" r="18.75" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1.6 0.9"/>
+<circle cx="16.45" cy="16.45" r="1.95" fill="none" stroke="#000" stroke-width="0.5"/>
+<line x1="12.94" y1="16.45" x2="19.96" y2="16.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16.45" y1="12.94" x2="16.45" y2="19.96" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="16.45" cy="51.55" r="1.95" fill="none" stroke="#000" stroke-width="0.5"/>
+<line x1="12.94" y1="51.55" x2="19.96" y2="51.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16.45" y1="48.04" x2="16.45" y2="55.06" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="51.55" cy="16.45" r="1.95" fill="none" stroke="#000" stroke-width="0.5"/>
+<line x1="48.04" y1="16.45" x2="55.06" y2="16.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.55" y1="12.94" x2="51.55" y2="19.96" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="51.55" cy="51.55" r="1.95" fill="none" stroke="#000" stroke-width="0.5"/>
+<line x1="48.04" y1="51.55" x2="55.06" y2="51.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.55" y1="48.04" x2="51.55" y2="55.06" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="32" y1="34" x2="36" y2="34" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="34" y1="32" x2="34" y2="36" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="56.31" y1="10.89" x2="56.31" y2="6.19" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="11.69" y1="10.89" x2="11.69" y2="6.19" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="56.31" y1="7.69" x2="11.69" y2="7.69" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="56.313,7.688 54.903,8.202 54.903,7.173" fill="#000"/>
+<polygon points="11.688,7.688 13.097,7.173 13.097,8.202" fill="#000"/>
+<text x="34.00" y="5.49" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(360.00 34.00 5.49)">59.5</text>
+<line x1="10.89" y1="11.69" x2="6.19" y2="11.69" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="10.89" y1="56.31" x2="6.19" y2="56.31" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="7.69" y1="11.69" x2="7.69" y2="56.31" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="7.688,11.688 8.202,13.097 7.173,13.097" fill="#000"/>
+<polygon points="7.688,56.313 7.173,54.903 8.202,54.903" fill="#000"/>
+<text x="5.49" y="34.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 5.49 34.00)">59.5</text>
+<line x1="16.45" y1="57.11" x2="16.45" y2="61.81" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.55" y1="57.11" x2="51.55" y2="61.81" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16.45" y1="60.31" x2="51.55" y2="60.31" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="16.45,60.313 17.859,59.798 17.859,60.827" fill="#000"/>
+<polygon points="51.55,60.313 50.141,60.827 50.141,59.798" fill="#000"/>
+<text x="34.00" y="62.51" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">46.8</text>
+<line x1="57.11" y1="51.55" x2="61.81" y2="51.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="57.11" y1="16.45" x2="61.81" y2="16.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="60.31" y1="51.55" x2="60.31" y2="16.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="60.313,51.55 59.798,50.141 60.827,50.141" fill="#000"/>
+<polygon points="60.313,16.45 60.827,17.859 59.798,17.859" fill="#000"/>
+<text x="62.51" y="34.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(90.00 62.51 34.00)">46.8</text>
+<line x1="51.55" y1="16.45" x2="57.06" y2="16.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.55" y1="51.55" x2="57.06" y2="51.55" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="16.45" y1="51.55" x2="16.45" y2="57.06" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="51.55" y1="51.55" x2="51.55" y2="57.06" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="70.00" y1="3.00" x2="53.05" y2="14.95" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="53.05" cy="14.95" r="0.6" fill="#000"/>
+<text x="68.80" y="3.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">⌀5.2</text>
+<text x="34.00" y="25.75" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">pad ⌀50</text>
+<text x="34.00" y="42.25" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(below)</text>
+</svg>

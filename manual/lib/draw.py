@@ -171,8 +171,8 @@ class Canvas:
     def iso(x, y, z, angle=30):
         """Standard isometric: x goes right-down, y goes right-up (into the page), z up. Returns 2D (u, v) with v up."""
         a = math.radians(angle)
-        u = (x - y) * math.cos(a)
-        v = (x + y) * math.sin(a) + z
+        u = (x + y) * math.cos(a)
+        v = (y - x) * math.sin(a) + z
         return u, v
 
     def iso_box(self, x, y, z, dx, dy, dz, fill=("#fff", "#e6e6e6", "#cccccc"), lw="outline"):

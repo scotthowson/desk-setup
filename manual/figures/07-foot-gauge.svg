@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 40" width="56mm" height="40mm" class="fig">
+<rect x="14.57" y="8.00" width="17.25" height="0.72" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
+<rect x="15.95" y="8.72" width="14.50" height="17.98" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<rect x="21.46" y="26.70" width="3.48" height="7.97" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<rect x="15.95" y="34.68" width="14.50" height="2.90" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<rect x="8.70" y="6.26" width="1.74" height="33.06" fill="#808080" stroke="#000" stroke-width="0.5"/>
+<rect x="8.70" y="6.26" width="22.04" height="1.74" fill="#808080" stroke="#000" stroke-width="0.5"/>
+<rect x="8.70" y="37.58" width="22.04" height="1.74" fill="#808080" stroke="#000" stroke-width="0.5"/>
+<line x1="5.80" y1="8.00" x2="8.70" y2="8.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="5.80" y1="37.58" x2="8.70" y2="37.58" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="5.80" y1="8.00" x2="5.80" y2="37.58" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="5.8,8 6.314,9.409 5.286,9.409" fill="#000"/>
+<polygon points="5.8,37.58 5.286,36.171 6.314,36.171" fill="#000"/>
+<text x="3.20" y="22.79" font-family="Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(-90.00 3.20 22.79)">102.0</text>
+<line x1="43.5" y1="22.5" x2="33.64" y2="22.5" stroke="#000" stroke-width="0.5"/>
+<polygon points="33.64,22.5 35.331,21.883 35.331,23.117" fill="#000"/>
+<text x="34.22" y="19.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">slide on</text>
+</svg>

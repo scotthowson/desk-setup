@@ -25,7 +25,8 @@ td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 /* step layout */
 .step { display: grid; grid-template-columns: 14mm 1fr; gap: 3mm; margin: 2.5mm 0 4mm 0; break-inside: avoid; }
 .step .num { width: 12mm; height: 12mm; border: 0.5mm solid #000; border-radius: 50%; font-size: 14pt; font-weight: bold; display: flex; align-items: center; justify-content: center; }
-.step .body { }
+.step .body { font-size: 9.5pt; }
+.step .body p, .step .body li, .step .body td, .step .body th { font-size: 9.5pt; }
 .fig { display: block; max-width: 100%; height: auto; }
 .figbox { border: 0.25mm solid #000; padding: 2mm; margin: 2mm 0 3mm 0; break-inside: avoid; }
 .figbox .cap { font-size: 8.5pt; margin-top: 1.5mm; }

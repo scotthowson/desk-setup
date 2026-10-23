@@ -1,0 +1,112 @@
+<!-- Chapter J: final inspection and load testing. Reproduces docs/build-manual.md step 9 (and guide.html section 8) exactly; the estimates each check tests are the docs/design-review.md structural rows. -->
+<section class="page" data-chapter="J" data-title="Final inspection" data-toc="J · Final inspection and load testing">
+  <h1>J · Final inspection and load testing</h1>
+  <p>Ten checks, in the build manual's order, before you call the desk done. Each is an <span class="badge badge-source">ACCEPTANCE CHECK</span>: a pass or fail you can see or measure. Several of them test a <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span> from the design review that has not been measured on this desk; the check says which. Write the results in the boxes and in the sign-off table at the end of this chapter. Datum for every drawing: top A's back-left corner (0, 0); mm.</p>
+  <h2>Check 1 · Surface height at the six corners <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="step"><div class="num">1</div><div class="body"><p>Measure from the floor to the top face at each of the six corners of the L (Fig. J-1). Every reading <b>830 ± 3</b> (83.0 cm). With the optional ALEX feet fitted: 830 plus their height. If a corner is out, turn that corner's OLOV foot or round foot, then measure all six again.</p></div></div>
+  <div class="two">
+    <div class="figbox" style="margin:0"><img class="fig" src="../../figures/10-corners-plan.svg"><div class="cap"><b>Fig. J-1a</b> The six corners, numbered for the record.</div></div>
+    <div class="figbox" style="margin:0"><img class="fig" src="../../figures/10-corner-elev.svg"><div class="cap"><b>Fig. J-1b</b> Tape from the floor to the top face, at the corner.</div></div>
+  </div>
+  <table>
+    <tr><th>Corner</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+    <tr><td>Reading (mm)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</section>
+
+<section class="page" data-chapter="J" data-title="Final inspection">
+  <h2>Check 2 · Level and flush across the joint <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="step"><div class="num">2</div><div class="body"><p>A level across the joint reads flat both ways: across it (1) and along it (2). A fingertip drawn across the joint (3) finds no step. Level the two tops with the OLOV feet and the round feet, never by packing anything under the joining plates.</p></div></div>
+  <div class="figbox"><img class="fig" src="../../figures/10-joint-level.svg"><div class="cap"><b>Fig. J-2</b> Plan of the joint at y = 650. 1, 2: level positions; 3: fingertip; 4: where the straightedge of check 5 goes, at the inside corner.</div></div>
+  <h2>For the remaining checks you need</h2>
+  <div class="hw">
+    <div class="item"><img class="fig" src="../../figures/10-icon-tape.svg" style="width:12mm;margin:0 auto"><div class="id">Tape</div>floor to top face, checks 1 and 8</div>
+    <div class="item"><img class="fig" src="../../figures/10-icon-level.svg" style="width:12mm;margin:0 auto"><div class="id">Level, straightedge</div>checks 2, 3 and 5; a rule to read the gap</div>
+    <div class="item"><img class="fig" src="../../figures/10-icon-weight.svg" style="width:12mm;margin:0 auto"><div class="id">20 kg</div>a case of water plus a few books, check 3</div>
+    <div class="item"><img class="fig" src="../../figures/10-icon-wrench.svg" style="width:12mm;margin:0 auto"><div class="id">Wrench</div>torque wrench at 25 N·m, or a 15 cm wrench, checks 5 and 10</div>
+  </div>
+  <div class="note">Do the checks in this order, with the screens and everything else in place.</div>
+</section>
+
+<section class="page" data-chapter="J" data-title="Load test">
+  <h2>Check 3 · Corner load test <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="warn"><span class="warn-icon">!</span><div><b>NEVER STAND OR SIT ON THE DESK</b><br>The test load is a known weight: 20 kg of water and books. Do not stand or sit on the corner; that is not what the beam was sized for.</div></div>
+  <div class="two">
+    <div class="figbox" style="margin:0"><img class="fig" src="../../figures/10-load-plan.svg"><div class="cap"><b>Fig. J-3a</b> Plan. Case faces 100 in from top B's front edge and from the joint (case size schematic). R: reading point.</div></div>
+    <div>
+      <div class="step"><div class="num">3</div><div class="body">
+        <p>Set <b>20 kg</b> (a case of water plus a few books) on top B's inside corner, <b>100 (10 cm) in from both edges</b>.</p>
+        <p>Rest a straightedge from leg L1's line across the corner. Read the drop at the corner (R): <b>no more than 2</b>. The estimate is about 1. <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span></p>
+        <p>Lift the weight off. The corner returns to where it was, nothing creaks, no screw or bolt has moved.</p>
+      </div></div>
+      <p class="small">Tests: sag at the inside corner (rail A carrying rail B's corner reaction) and corner-joint slip (the six fitting bolts holding by friction). <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span></p>
+      <table class="small"><tr><th>Drop under 20 kg</th><th>Returned?</th><th>Creak / movement?</th></tr><tr><td style="height:9mm"></td><td></td><td></td></tr></table>
+    </div>
+  </div>
+  <div class="figbox"><img class="fig" src="../../figures/10-load-elev.svg"><div class="cap"><b>Fig. J-3b</b> Elevation along the straightedge, from leg L1 to the corner. The case stands beside the straightedge, not under it.</div></div>
+</section>
+
+<section class="page" data-chapter="J" data-title="Final inspection">
+  <h2>Check 4 · All eight pads bear <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="two">
+    <div>
+      <div class="step"><div class="num">4</div><div class="body"><p>At each of the eight feet F1–F8, try to turn the pad in its ring by hand. None spins free or rocks. A pad that spins or rocks is not bearing: see chapter K, "Top moves on its ALEX".</p></div></div>
+      <p class="small">Tests: the racking estimate (eight pads captive in their rings hold the frame against a sideways push) and the ALEX load share. <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span></p>
+    </div>
+    <div class="figbox" style="margin:0"><img class="fig" src="../../figures/10-pad-turn.svg"><div class="cap"><b>Fig. J-4</b> Foot P09 on its pad in ring P10 on the ALEX top.</div></div>
+  </div>
+  <h2>Check 5 · Straightedge at the joint, now and later <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="step"><div class="num">5</div><div class="body"><p>Lay a straightedge across the joint at the inside corner (Fig. J-2, position 4) and <b>write down any step</b>. Check it again after two weeks and after the first month. If the corner has settled, retighten the six fitting bolts (25 N·m, chapter K).</p></div></div>
+  <div class="figbox"><img class="fig" src="../../figures/10-joint-step.svg"><div class="cap"><b>Fig. J-5</b> Section across the joint at the inside corner. Step drawn exaggerated.</div></div>
+  <table>
+    <tr><th>Step at the joint</th><th>Day 0</th><th>Two weeks</th><th>One month</th><th>Bolts retightened?</th></tr>
+    <tr><td>mm, and which top is higher</td><td style="height:9mm"></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="small">Tests: corner-joint slip, an estimate, not a measured capacity. <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span></p>
+</section>
+
+<section class="page" data-chapter="J" data-title="Final inspection">
+  <h2>Check 6 · Sideways push <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="two">
+    <div>
+      <div class="step"><div class="num">6</div><div class="body"><p>Push the desk sideways along each wall. No sway at the top beyond a few millimetres, and no top moves on its ALEX.</p></div></div>
+      <p class="small">Tests: racking. The OLOV legs give almost no racking resistance; the two ALEX units, locked to the tops by the pads in their rings, do. <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span></p>
+    </div>
+    <div class="figbox" style="margin:0"><img class="fig" src="../../figures/10-push.svg"><div class="cap"><b>Fig. J-6</b> Push along the back wall, then along the side wall.</div></div>
+  </div>
+  <h2>Check 7 · Screw tips <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="step"><div class="num">7</div><div class="body"><p><b>No screw tip</b> visible, or felt as a bump, on either laminate face. Run a hand over both tops, above every leg, foot plate, rail screw and joining plate.</p></div></div>
+  <h2>Check 8 · Knees clear <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+  <div class="two">
+    <div>
+      <div class="step"><div class="num">8</div><div class="body"><p><b>Knees clear.</b> Sit at the corner and slide in: nothing within reach of a knee or thigh. The rails' lower edge is 751 (75.1 cm) from the floor, 120 (12 cm) back from the front edge.</p></div></div>
+    </div>
+    <div class="figbox" style="margin:0"><img class="fig" src="../../figures/10-knee.svg"><div class="cap"><b>Fig. J-7</b> Section through top A's front at rail A.</div></div>
+  </div>
+</section>
+
+<section class="page" data-chapter="J" data-title="Sign-off">
+  <h2>Check 9 · ALEX fronts <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+<div class="step"><div class="num">9</div><div class="body"><p><b>Both ALEX fronts open fully</b> (ALEX 1's drawers, ALEX 2's door) without touching a foot or a leg.</p></div></div>
+  <h2>Check 10 · Retighten <span class="badge badge-source">ACCEPTANCE CHECK</span></h2>
+<div class="step"><div class="num">10</div><div class="body"><p><b>Retighten every screw after two weeks</b>, then repeat check 5.</p></div></div>
+  <h2>Sign-off</h2>
+  <table>
+    <tr><th>#</th><th>Acceptance check</th><th>Pass when</th><th>Structural estimate it tests</th><th style="width:22mm">Result</th></tr>
+    <tr><td>1</td><td>Surface height, six corners</td><td>830 ± 3 each (plus ALEX feet height if fitted)</td><td>—</td><td></td></tr>
+    <tr><td>2</td><td>Level and fingertip across the joint</td><td>flat both ways; no step felt</td><td>—</td><td></td></tr>
+    <tr><td>3</td><td>Corner load test, 20 kg</td><td>drop ≤ 2; returns; no creak; nothing moved</td><td>sag at the inside corner (estimate about 1); corner joint slip</td><td></td></tr>
+    <tr><td>4</td><td>All eight pads bear</td><td>none spins free or rocks</td><td>racking; ALEX load share</td><td></td></tr>
+    <tr><td>5</td><td>Straightedge at the joint</td><td>step written down; re-checked at two weeks and one month</td><td>corner joint slip (settling)</td><td></td></tr>
+    <tr><td>6</td><td>Sideways push along each wall</td><td>sway a few mm at most; no top moves on its ALEX</td><td>racking</td><td></td></tr>
+    <tr><td>7</td><td>Screw tips</td><td>none visible or felt on either laminate face</td><td>—</td><td></td></tr>
+    <tr><td>8</td><td>Knees clear</td><td>nothing in reach; rail lower edge 751 from the floor, 120 back</td><td>—</td><td></td></tr>
+    <tr><td>9</td><td>ALEX fronts</td><td>open fully, touch no foot or leg</td><td>—</td><td></td></tr>
+    <tr><td>10</td><td>Retighten every screw</td><td>done after two weeks</td><td>—</td><td></td></tr>
+  </table>
+  <p><span class="badge badge-source">ACCEPTANCE CHECK</span> pass or fail on this desk. <span class="badge badge-assumption">STRUCTURAL ESTIMATE</span> a number from the design review that the check confirms or refutes. If a check fails, see chapter K.</p>
+  <table>
+    <tr><th>Checked by</th><th>Date</th><th>Two-week re-check</th><th>One-month re-check</th></tr>
+    <tr><td style="height:10mm"></td><td></td><td></td><td></td></tr>
+  </table>
+</section>

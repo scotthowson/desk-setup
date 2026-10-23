@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 30" width="52mm" height="30mm" class="fig">
+<polygon points="18.963,27.432 30.054,21.028 23.037,16.977 11.946,23.381" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.963,29 30.054,22.597 30.054,21.028 18.963,27.432" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.963,29 11.946,24.949 11.946,23.381 18.963,27.432" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.963,16.455 30.054,10.051 23.037,6 11.946,12.403" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.963,27.432 30.054,21.028 30.054,10.051 18.963,16.455" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.963,27.432 11.946,23.381 11.946,12.403 18.963,16.455" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="46" y="26" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">pedestal</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 30" width="52mm" height="30mm" class="fig">
+<polygon points="18.86,2 33.14,2 33.14,2.8 18.86,2.8" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="25.1,2.8 26.9,2.8 26.9,10 25.1,10" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="25.1" y1="3.829" x2="26.9" y2="4.229" stroke="#000" stroke-width="0.15" stroke-linecap="round"/>
+<line x1="25.1" y1="4.857" x2="26.9" y2="5.257" stroke="#000" stroke-width="0.15" stroke-linecap="round"/>
+<line x1="25.1" y1="5.886" x2="26.9" y2="6.286" stroke="#000" stroke-width="0.15" stroke-linecap="round"/>
+<line x1="25.1" y1="6.914" x2="26.9" y2="7.314" stroke="#000" stroke-width="0.15" stroke-linecap="round"/>
+<line x1="25.1" y1="7.943" x2="26.9" y2="8.343" stroke="#000" stroke-width="0.15" stroke-linecap="round"/>
+<line x1="25.1" y1="8.971" x2="26.9" y2="9.371" stroke="#000" stroke-width="0.15" stroke-linecap="round"/>
+<polygon points="20,10 32,10 32,23.44 20,23.44" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="20,23.44 32,23.44 32,26.48 20,26.48" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="36.54" y1="2" x2="35.84" y2="2" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="36.54" y1="26.48" x2="35.84" y2="26.48" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="37.04" y1="2" x2="37.04" y2="26.48" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="37.04,2 37.554,3.409 36.526,3.409" fill="#000"/>
+<polygon points="37.04,26.48 36.526,25.071 37.554,25.071" fill="#000"/>
+<text x="35.04" y="14.24" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 35.04 14.24)">102</text>
+<text x="17.86" y="3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">plate</text>
+<text x="19" y="17" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">body</text>
+<text x="19" y="25.48" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">pad</text>
+</svg>

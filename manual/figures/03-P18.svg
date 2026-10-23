@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 30" width="52mm" height="30mm" class="fig">
+<polygon points="1,2 3.4,2 3.4,10.8 1,10.8" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="3.4,4.8 17,4.8 17,8 3.4,8" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<circle cx="8.2" cy="6.4" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="11.4" cy="6.4" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="14.2" cy="6.4" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="17.4" cy="6.4" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<polygon points="20,2 33.6,2 33.6,10.8 20,10.8" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="19.2,2 20,2 20,10.8 19.2,10.8" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="24.8" cy="6.4" r="3.6" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="21.88" cy="6.4" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="23.898" cy="3.623" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="27.162" cy="4.684" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="27.162" cy="8.116" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="23.898" cy="9.177" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="29.6" cy="6.4" r="3.6" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="32.52" cy="6.4" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="30.502" cy="9.177" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="27.238" cy="8.116" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="27.238" cy="4.684" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="30.502" cy="3.623" r="0.28" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<polygon points="37,2.64 39.56,2.64 39.56,9.68 37,9.68" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="40.2,6.48 41.64,6.48 41.64,9.68 40.2,9.68" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="41.96,5.52 43.4,5.52 43.4,9.68 41.96,9.68" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="43.72,6.8 45.16,6.8 45.16,9.68 43.72,9.68" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="45.48,6.48 46.92,6.48 46.92,9.68 45.48,9.68" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="47.24,3.28 48.68,3.28 48.68,9.68 47.24,9.68" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="1,18 17,18 17,20.4 1,20.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="1,20.4 2.2,20.4 2.2,21.6 1,21.6" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="8.12,18 9.08,18 8.6,18.88" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="12.12,18 13.08,18 12.6,18.88" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="22,18 28.4,18 28.4,19.6 22,19.6" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="23" y="19.6" width="4.4" height="4" rx="0.8" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<line x1="25.2" y1="17.4" x2="25.2" y2="24.2" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6" stroke-linecap="round"/>
+<polygon points="33,16 43.4,16 43.4,26.4 33,26.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="33" y1="16" x2="43.4" y2="16" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="43.4" y1="16" x2="43.4" y2="26.4" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<circle cx="38.6" cy="20.8" r="0.24" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="36.2" cy="18.4" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="36.2" cy="23.2" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="41" cy="18.4" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="41" cy="23.2" r="0.36" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<polygon points="46,16 50.4,16 50.4,16.88 46.88,16.88 46.88,20.84 50.4,20.84 50.4,21.72 46,21.72" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+</svg>

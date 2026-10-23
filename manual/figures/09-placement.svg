@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.6 133.6" width="109.6mm" height="133.6mm" class="fig">
+<polygon points="4.8,4.8 104.4,4.8 104.4,30.8 30.8,30.8 30.8,130.4 4.8,130.4" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="4.8" y1="30.8" x2="30.8" y2="30.8" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="3.6" y1="3.6" x2="107.2" y2="3.6" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="3.6" y1="3.6" x2="3.6" y2="132.8" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polygon points="88.6,6.2 103,6.2 103,29.4 88.6,29.4" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
+<polygon points="6.2,114.6 29.4,114.6 29.4,129 6.2,129" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
+<text x="95.8" y="24" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">ALEX 1</text>
+<text x="17.8" y="117.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">ALEX 2</text>
+<line x1="20.8" y1="6.548" x2="6.548" y2="20.8" stroke="#808080" stroke-width="0.8" stroke-linecap="round"/>
+<circle cx="20.8" cy="6.548" r="1.2" fill="#000" stroke="#000" stroke-width="0.5"/>
+<circle cx="6.548" cy="20.8" r="1.2" fill="#000" stroke="#000" stroke-width="0.5"/>
+<polygon points="83.8,6.6 103.4,6.6 103.4,19 83.8,19" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="11.244,33.871 33.871,11.244 42.356,19.729 19.729,42.356" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="19.4" cy="19.4" r="0.88" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="19.2" cy="19.2" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="28.2" cy="28.2" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="34.4" cy="22.8" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="78" cy="12.8" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="16" cy="60.8" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="17.6" cy="124" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="44.4" cy="12.4" r="0.88" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="12.4" cy="44.4" r="0.88" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="48" cy="13.6" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<circle cx="13.6" cy="48" r="0.88" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<text x="18" y="16.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="bold">1 2</text>
+<text x="30.4" y="28.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">3</text>
+<text x="36.4" y="22.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">4</text>
+<text x="44.4" y="8.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">5</text>
+<text x="50" y="14.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">7</text>
+<text x="10" y="44.4" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="bold">6</text>
+<text x="15.6" y="48.4" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">8</text>
+<text x="80" y="12.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">9</text>
+<text x="18" y="60.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">10</text>
+<text x="19.6" y="124" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold">11</text>
+<text x="42.8" y="52.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">1  G5 P13 (365, 365)</text>
+<text x="42.8" y="56.85" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">2  ELLOVEN P16 (360, 360)</text>
+<text x="42.8" y="60.9" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">3  keyboard (585, 585)</text>
+<text x="42.8" y="64.95" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">4  mouse (740, 450)</text>
+<text x="42.8" y="69" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">5  Acer P14 (990, 190)</text>
+<text x="42.8" y="73.05" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">6  Acer P14 (190, 990)</text>
+<text x="42.8" y="77.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">7  Edifier P15 (1080, 220)</text>
+<text x="42.8" y="81.15" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">8  Edifier P15 (220, 1080)</text>
+<text x="42.8" y="85.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">9  lamp (1830, 200)</text>
+<text x="42.8" y="89.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">10  headset (280, 1400)</text>
+<text x="42.8" y="93.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">11  plant (320, 2980)</text>
+<text x="42.8" y="97.35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal"></text>
+<text x="42.8" y="101.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">grey 45°: mat 800 × 300 at (550, 550)</text>
+<text x="42.8" y="105.45" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">black: VIVO poles and crossbar P12</text>
+<text x="42.8" y="109.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">datum (0, 0): top A back-left corner</text>
+<text x="92.8" y="10.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">Y60 P17</text>
+<line x1="41.6" y1="41.6" x2="33.2" y2="33.2" stroke="#000" stroke-width="0.5"/>
+<polygon points="33.2,33.2 35.195,34.128 34.128,35.195" fill="#000"/>
+<text x="42.8" y="43.2" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">seat: facing the corner</text>
+<circle cx="4.8" cy="4.8" r="1.1" fill="#000"/>
+</svg>

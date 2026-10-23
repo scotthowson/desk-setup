@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 72" width="178mm" height="72mm" class="fig">
+<rect x="14" y="12" width="72" height="50" fill="#f2f2f2" stroke="none"/>
+<line x1="14.00" y1="12.00" x2="86.00" y2="12.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="14.00" y1="12.00" x2="14.00" y2="62.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<rect x="14.00" y="12.00" width="50.00" height="50.00" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<rect x="12.40" y="10.40" width="1.6" height="51.60" fill="#808080"/>
+<rect x="12.40" y="10.40" width="51.60" height="1.6" fill="#808080"/>
+<rect x="36.10" y="34.10" width="23.80" height="23.80" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
+<circle cx="38.64" cy="36.64" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="38.64" cy="55.36" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="57.36" cy="36.64" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="57.36" cy="55.36" r="0.9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="48.00" cy="46.00" r="0.5" fill="#000"/>
+<line x1="14.00" y1="46.00" x2="48.00" y2="46.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="48.00" y1="12.00" x2="48.00" y2="46.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="31.00" y="43.60" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">85</text>
+<text x="50.60" y="29.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000" transform="rotate(90.00 50.60 29.00)">85</text>
+<text x="39.00" y="7.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">fence on one edge</text>
+<text x="9.50" y="37.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.00 9.50 37.00)">fence</text>
+<text x="66.00" y="42.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">plate outline</text>
+<line x1="59.90" y1="44.00" x2="65.60" y2="42.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="50.00" y="68.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(a) corner jig on a far corner: F2 F4 F7 F8</text>
+<rect x="104" y="12" width="72" height="52" fill="#f2f2f2" stroke="none"/>
+<line x1="104.00" y1="12.00" x2="176.00" y2="12.00" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="140.00" y1="9.00" x2="140.00" y2="66.00" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1 0.8 1" stroke-linecap="round"/>
+<text x="140.00" y="5.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">station: x 2145 (F1, F3) or y 2795 (F5, F6)</text>
+<rect x="122.40" y="10.60" width="35.20" height="1.4" fill="#808080"/>
+<rect x="122.40" y="12.00" width="35.20" height="6.40" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<rect x="136.16" y="18.40" width="7.68" height="45.44" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<rect x="131.04" y="30.24" width="17.92" height="17.92" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<circle cx="140.00" cy="28.00" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="140.00" cy="39.20" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="140.00" cy="44.00" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="140.00" cy="60.00" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="132.51" cy="31.71" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="132.51" cy="46.69" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="147.49" cy="31.71" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<circle cx="147.49" cy="46.69" r="0.8" fill="#fff" stroke="#000" stroke-width="0.4"/>
+<line x1="139.00" y1="28.00" x2="129.00" y2="28.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="128.00" y="28.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">50</text>
+<line x1="139.00" y1="44.00" x2="129.00" y2="44.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="128.00" y="44.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">100</text>
+<line x1="139.00" y1="60.00" x2="129.00" y2="60.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="128.00" y="60.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">150</text>
+<line x1="141.00" y1="39.20" x2="151.00" y2="39.20" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="152.00" y="39.20" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">85 + plate holes</text>
+<text x="105.00" y="15.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">lip over</text>
+<text x="105.00" y="19.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">the edge</text>
+<text x="140.00" y="68.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(b) T-square, 85 hole: F1 F3 F5 F6</text>
+</svg>

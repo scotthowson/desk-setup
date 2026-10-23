@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.4 67.8" width="134.4mm" height="67.8mm" class="fig">
+<polyline points="127.2,33.6 85.2,33.6 85.2,66" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="7.2" y1="3.6" x2="7.2" y2="66" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="3.6" y1="3.6" x2="3.6" y2="66" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polyline points="7.2,66 41.52,66 44.64,65.04 47.76,66.96 50.88,66 85.2,66" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polyline points="7.2,3.6 60,3.6 64.8,2.64 69.6,4.56 74.4,3.6 127.2,3.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polyline points="127.2,3.6 127.2,16.8 126.24,18 128.16,19.2 127.2,20.4 127.2,33.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="7.2" y1="33.6" x2="85.2" y2="33.6" stroke="#000" stroke-width="0.25" stroke-dasharray="4 1.5" stroke-linecap="round"/>
+<polygon points="39.6,12 45.6,12 45.6,55.2 39.6,55.2" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="41.04,31.2 44.16,31.2 44.16,36 41.04,36" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="16.8,30.6 36,30.6 36,36.6 16.8,36.6" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="24,32.04 28.8,32.04 28.8,35.16 24,35.16" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="63.6" y1="26.4" x2="63.6" y2="40.8" stroke="#000" stroke-width="0.5"/>
+<polygon points="63.6,40.8 62.983,39.109 64.217,39.109" fill="#000"/>
+<polygon points="63.6,26.4 64.217,28.091 62.983,28.091" fill="#000"/>
+<polygon points="79.8,12 82.44,12 82.44,55.2 79.8,55.2" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="47.4" y="9" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">1  level across the joint</text>
+<text x="14.4" y="42" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">2  level along it</text>
+<text x="49.2" y="43.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">3  fingertip:</text>
+<text x="49.2" y="47.55" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">no step</text>
+<text x="91.2" y="39.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">4  straightedge</text>
+<text x="91.2" y="43.35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">at the inside</text>
+<text x="91.2" y="47.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">corner (check 5)</text>
+<line x1="90.6" y1="39.6" x2="82.44" y2="46.8" stroke="#000" stroke-width="0.25"/>
+<polygon points="82.44,46.8 83.109,45.57 83.744,46.29" fill="#000"/>
+<text x="92.1" y="39.6" font-family="Helvetica, Arial, sans-serif" font-size="3" text-anchor="start" dominant-baseline="middle"></text>
+<text x="103.2" y="18" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">top A</text>
+<text x="25.2" y="57.6" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold">top B</text>
+<text x="12" y="27.6" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">joint y = 650</text>
+</svg>

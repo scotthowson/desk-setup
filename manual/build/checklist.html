@@ -1,0 +1,199 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Assembly Verification Checklist</title><style>/* IKEA-style assembly manual: white pages, black line art, greys for fills, no meaning carried by colour. */
+@page { size: A4; margin: 0; }
+html, body { margin: 0; padding: 0; background: #fff; color: #000; font-family: Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+
+.page { width: 210mm; height: 297mm; position: relative; padding: 16mm 16mm 18mm 16mm; break-after: page; overflow: hidden; }
+.page:last-child { break-after: auto; }
+.page .footer { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 8.5pt; color: #333; border-top: 0.3mm solid #000; padding-top: 1.5mm; }
+.page .header { position: absolute; left: 16mm; right: 16mm; top: 7mm; font-size: 8pt; color: #333; display: flex; justify-content: space-between; }
+.chapter-letter { font-size: 26pt; font-weight: bold; }
+
+h1 { font-size: 20pt; margin: 0 0 4mm 0; letter-spacing: 0.2mm; }
+h2 { font-size: 13pt; margin: 5mm 0 2mm 0; }
+h3 { font-size: 10.5pt; margin: 4mm 0 1.5mm 0; }
+p, li, td, th { font-size: 9.5pt; line-height: 1.35; }
+p { margin: 0 0 2.2mm 0; }
+ul, ol { margin: 0 0 2.5mm 0; padding-left: 5mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm 0; }
+th, td { border: 0.25mm solid #000; padding: 1.2mm 1.8mm; text-align: left; vertical-align: top; }
+th { background: #e6e6e6; font-weight: bold; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.small { font-size: 8.5pt; }
+.mono { font-family: "DejaVu Sans Mono", Menlo, monospace; font-size: 8.5pt; }
+
+/* step layout */
+.step { display: grid; grid-template-columns: 14mm 1fr; gap: 3mm; margin: 2.5mm 0 4mm 0; break-inside: avoid; }
+.step .num { width: 12mm; height: 12mm; border: 0.5mm solid #000; border-radius: 50%; font-size: 14pt; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.step .body { font-size: 9.5pt; }
+.step .body p, .step .body li, .step .body td, .step .body th { font-size: 9.5pt; }
+.fig { display: block; max-width: 100%; height: auto; }
+.figbox { border: 0.25mm solid #000; padding: 2mm; margin: 2mm 0 3mm 0; break-inside: avoid; }
+.figbox .cap { font-size: 8.5pt; margin-top: 1.5mm; }
+.full { width: 178mm; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3mm; }
+
+/* panels */
+.warn { display: grid; grid-template-columns: 9mm 1fr; gap: 2.5mm; border: 0.6mm solid #000; padding: 2mm 2.5mm; margin: 2.5mm 0; font-size: 9pt; background: #fff; break-inside: avoid; }
+.warn-icon { width: 8mm; height: 8mm; border: 0.6mm solid #000; border-radius: 50%; font-weight: bold; font-size: 14pt; display: flex; align-items: center; justify-content: center; }
+.note { border-left: 1.2mm solid #000; padding: 1.5mm 2.5mm; margin: 2.5mm 0; font-size: 9pt; background: #f2f2f2; }
+.badge { display: inline-block; font-size: 7pt; font-weight: bold; padding: 0.4mm 1.4mm; border: 0.3mm solid #000; border-radius: 1mm; margin-left: 1mm; vertical-align: middle; letter-spacing: 0.1mm; }
+.badge-verified { background: #000; color: #fff; }
+.badge-source { background: #fff; }
+.badge-measure { background: #e6e6e6; }
+.badge-assumption { background: #fff; border-style: dashed; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 1mm 4mm; font-size: 9pt; }
+
+/* cover */
+.cover { padding: 20mm; }
+.cover h1 { font-size: 30pt; margin-top: 10mm; }
+.cover .sub { font-size: 12pt; color: #333; }
+
+/* TOC */
+.toc li { list-style: none; display: flex; justify-content: space-between; border-bottom: 0.2mm dotted #999; padding: 1mm 0; font-size: 10pt; }
+
+/* hardware symbol grid for the inventory */
+.hw { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+.hw .item { border: 0.25mm solid #000; padding: 2mm; text-align: center; font-size: 8pt; break-inside: avoid; }
+.hw .item .id { font-weight: bold; font-size: 10pt; }
+
+/* checklist */
+.check li { list-style: none; display: grid; grid-template-columns: 6mm 1fr; gap: 2mm; padding: 1.2mm 0; border-bottom: 0.2mm solid #ccc; }
+.check li::before { content: ""; width: 4.5mm; height: 4.5mm; border: 0.4mm solid #000; display: block; margin-top: 0.3mm; }
+
+/* templates (1:1 sheets) */
+.tpl { padding: 10mm; }
+.ruler { font-size: 7pt; }
+</style></head><body><section class="page"><div class="header"><span>Assembly Verification Checklist</span><span>Checklist · Before you start</span></div>
+  <h1>Build-day checklist</h1>
+  <p class="small">Tick each box at the step it belongs to. mm throughout (cm in brackets where the build manual uses cm). Datum: top A's back-left corner (0, 0).</p>
+  <h2><svg  style="width:9mm;display:inline-block;vertical-align:middle;margin-right:2mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12mm" height="12mm" class="fig">
+<polygon points="1,2 11,2 11,4 1,4" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="1,4 3,4 3,10 1,10" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="6,4 8,4 8,9 6,9" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="5.5,1.5 8.5,1.5 8.5,4.5 5.5,4.5" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+</svg>Measure before anything is cut, printed or drilled</h2>
+  <ul class="check">
+    <li><span>Both EKBACKEN tops 28 thick (calipers). If 27, shorten every screw into the top by 1 mm. Never deeper than 21 into a top. <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+    <li><span>Feet pad diameter 50 (calipers) before printing the 51-bore rings. <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+    <li><span>ALEX top panel at an edge: 16 or more for the 5/8 in ring screws. ALEX height 700 (with and without its stock feet). <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+    <li><span>Delivered rail lengths (bought as 84 in = 2133.6; layout 2130) and angle thickness 4.8. <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+    <li><span>VIVO lower clamp: maximum opening 31 or more (28 top + 3 plate); top arm reach (about 89). <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+    <li><span>Room: 252 × 317 cm of floor cleared, including the 30 wall gaps; wall to wall 2520 and 3170; baseboard thickness. <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+    <li><span>Feet load rating (design wants 50 kg or more each). <span class="badge badge-measure">MEASURE ON HARDWARE</span></span></li>
+  </ul>
+  <h2><svg  style="width:9mm;display:inline-block;vertical-align:middle;margin-right:2mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12mm" height="12mm" class="fig">
+<polygon points="1,6 3.5,3.6 6,3 8.5,3.6 11,6 8.5,8.4 6,9 3.5,8.4" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<circle cx="6" cy="6" r="1.8" fill="#000" stroke="#000" stroke-width="0.25"/>
+</svg>Parts and tools on hand</h2>
+  <ul class="check">
+    <li><span>Six OLOV legs, 105 plate with five 5.5 holes on an 85 circle; 30 × M4 × 16 mm screws (H01), five per leg.</span></li>
+    <li><span>Eight of the twelve 4 in feet: plate 59.5 with four 5.2 holes 46.8 apart; 32 × #8 × 5/8 in pan head (H02).</span></li>
+    <li><span>Eight printed rings (51 bore, 3 wall, 10 ring on a 75 × 2.5 flange), PETG or ABS, flange-down; 24 × #6 × 5/8 in flat head (H06).</span></li>
+    <li><span>Two rails, 2 × 2 × 3/16 in angle, ends deburred; 19 × #10 × 1 in pan head Robertson (H03).</span></li>
+    <li><span>Four 10 × 3 in mending plates (two joining, two clamp pads); 8 × #10 × 5/8 in (H04) with #10 washers (H05).</span></li>
+    <li><span>Two gusseted 90° strut fittings; 6 × 3/8-16 × 1-1/2 in grade 5 bolts (H08), 12 × 3/8 washers (H09), 6 nylon-insert nuts (H10).</span></li>
+    <li><span>Printed tools: edge T-square, leg jig, feet corner jig, ALEX corner template, rail marking gauge, rail drill jig, two fitting centring plugs, drill guide (tower + 5 pucks), foot height gauge 102, wall gauge 65 / 30.</span></li>
+    <li><span>Automatic centre punch, cutting oil; 5/64, 1/8, 7/32 and 7/16 in bits (7/16 cobalt); Robertson #2 bit on a 3 in extension.</span></li>
+  </ul>
+<div class="footer"><span>Assembly Verification Checklist</span><span>Page 1</span></div></section>
+<section class="page"><div class="header"><span>Assembly Verification Checklist</span><span>Checklist · Gates during the build</span></div>
+  <h2><svg  style="width:9mm;display:inline-block;vertical-align:middle;margin-right:2mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12mm" height="12mm" class="fig">
+<line x1="1" y1="6" x2="5" y2="6" stroke="#000" stroke-width="1.4" stroke-linecap="round"/>
+<polygon points="5,5 11,6 5,7" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="6.2" y1="5.3" x2="7" y2="6.7" stroke="#fff" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="7.6" y1="5.3" x2="8.4" y2="6.7" stroke="#fff" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="9" y1="5.3" x2="9.8" y2="6.7" stroke="#fff" stroke-width="0.25" stroke-linecap="round"/>
+</svg>Verify before: at each step</h2>
+  <h3>Step 1 · Steel on the bench</h3>
+  <ul class="check">
+    <li><span>Rail A holes at 3.5, 28, 54, 80, 106, 132, 158, 184, 210.5 cm from the wall end (first at 3.5, not 2.5); rail B at 2.5, 7.5, 28 … 210.5 cm from the corner end; all 19 from the flat leg's free edge.</span></li>
+    <li><span>Fitting as template: rail A heel on the 52.0 cm mark legs toward the far end, and on 51.5 cm legs toward the wall end; rail B heel on the corner end. Holes 29 below the heel edge, 7/16 in.</span></li>
+  </ul>
+  <h3>Steps 2–3 · Marking the tops, face down</h3>
+  <ul class="check">
+    <li><span>Unfinished edge to the wall (y = 0 on top A, x = 0 on top B); the side-wall end of top A taped and measured from.</span></li>
+    <li><span>A mark off by more than 2 mm: redraw it.</span></li>
+  </ul>
+  <h3>Step 4 · Legs, feet and rails</h3>
+  <ul class="check">
+    <li><span>Every OLOV pre-set to 802 (80.2 cm), or the ALEX-feet table's number (decided before this step).</span></li>
+    <li><span>Every foot set with the 102 gauge: slides over from the side with no rock.</span></li>
+    <li><span>Rail A: 120 (12 cm) from the front edge to the vertical leg's outer face at both ends and in the middle before drilling; end screws first, re-check, then the rest. Rail pilots 25 from the flat leg's top face (20 into the wood).</span></li>
+    <li><span>Rail B: holes 3 to 10 only; holes 1 and 2 wait for step 7.</span></li>
+  </ul>
+  <h3>Step 5 · ALEX units and rings</h3>
+  <ul class="check">
+    <li><span>ALEX 1 back 65 off the back wall (wall gauge), near side 2125 (212.5 cm) from the side wall; ALEX 2 side 65 off the side wall, near end 2775 (277.5 cm) from the back wall.</span></li>
+    <li><span>ALEX top panel 16 or more before the ring screws; ring centres 50 in from each ALEX corner.</span></li>
+  </ul>
+  <h3>Steps 6–7 · Stand the tops, make the joint</h3>
+  <ul class="check">
+    <li><span>Top A 30 off both walls, pads in their rings, level along x and y, all four pads bearing.</span></li>
+    <li><span>Top B's legs 2–3 mm short before sliding rail B under top A; then wound up to flush.</span></li>
+    <li><span>Before the plates: rail B's end touches rail A's vertical leg with no gap, and its outer face lines up with the 52.0 mark.</span></li>
+    <li><span>Surfaces flush by the feet, never by packing under the joining plates.</span></li>
+    <li><span>Before the bolts: surfaces flush and rail B touching rail A; inside fitting gusset-down. Six bolts 25 N·m.</span></li>
+  </ul>
+  <h3>Step 8 · Mount and trim</h3>
+  <ul class="check">
+    <li><span>Pad plates on their outlines (x 200–454, y 5–81; y 200–454, x 5–81); clamps finger-tight at x = 400 and y = 400 on Option 1 holes until the crossbar is on.</span></li>
+    <li><span>G5 top edge 669 under the 673 limit; if the mount will not reach, lower the G5 (down to 120 still clears the ELLOVEN).</span></li>
+    <li><span>Trim: gap measured at five or six points per wall; gap set to the smallest minus 1 mm; desk slid back until the 65 leg just fits at each ALEX.</span></li>
+  </ul>
+<div class="footer"><span>Assembly Verification Checklist</span><span>Page 2</span></div></section>
+<section class="page"><div class="header"><span>Assembly Verification Checklist</span><span>Checklist · Final and follow-up checks</span></div>
+  <h2><svg  style="width:9mm;display:inline-block;vertical-align:middle;margin-right:2mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12mm" height="12mm" class="fig">
+<polygon points="0.8,4.5 11.2,4.5 11.2,7.7 0.8,7.7" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="4.4,5.1 7.6,5.1 7.6,8.1 4.4,8.1" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="6" cy="6.1" r="0.6" fill="#000" stroke="#000" stroke-width="0.25"/>
+</svg>Step 9 · Final checks (chapter J)</h2>
+  <ul class="check">
+    <li><span>1 · Surface 830 ± 3 at all six corners (plus ALEX feet height if fitted).</span></li>
+    <li><span>2 · Level across the joint reads flat both ways; a fingertip finds no step.</span></li>
+    <li><span>3 · 20 kg (case of water + books) on top B's inside corner, 100 in from both edges: drop ≤ 2 on a straightedge from L1's line; returns, no creak, nothing moved. Never stand or sit on the desk.</span></li>
+    <li><span>4 · All eight pads bear: none spins free or rocks when turned by hand.</span></li>
+    <li><span>5 · Straightedge across the joint at the inside corner: step written down: ______ mm.</span></li>
+    <li><span>6 · Sideways push along each wall: no sway beyond a few mm, no top moving on its ALEX.</span></li>
+    <li><span>7 · No screw tip visible or felt on either laminate face.</span></li>
+    <li><span>8 · Knees clear; rail lower edge 751 from the floor, 120 back from the edge.</span></li>
+    <li><span>9 · Both ALEX fronts open fully without touching a foot or a leg.</span></li>
+  </ul>
+  <h2><svg  style="width:9mm;display:inline-block;vertical-align:middle;margin-right:2mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12mm" height="12mm" class="fig">
+<polygon points="1.2,3 10.8,3 10.8,11.6 1.2,11.6" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="1.2" y1="4.6" x2="10.8" y2="4.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="3.8" y1="1" x2="3.8" y2="3.2" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="8.2" y1="1" x2="8.2" y2="3.2" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<polygon points="2.4,5.8 3.6,5.8 3.6,7 2.4,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="2.4,8 3.6,8 3.6,9.2 2.4,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="4.6,5.8 5.8,5.8 5.8,7 4.6,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="4.6,8 5.8,8 5.8,9.2 4.6,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="6.8,5.8 8,5.8 8,7 6.8,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="6.8,8 8,8 8,9.2 6.8,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="8.8,5.8 10,5.8 10,7 8.8,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="8.8,8 10,8 10,9.2 8.8,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+</svg>Two weeks · date ________</h2>
+  <ul class="check">
+    <li><span>Retighten every screw.</span></li>
+    <li><span>Straightedge at the joint: ______ mm. Settled? Retighten the six fitting bolts to 25 N·m (18 ft·lb).</span></li>
+    <li><span>Each printed ring and its three screws: no crack (reprint in PETG if cracked), screws tight.</span></li>
+  </ul>
+  <h2><svg  style="width:9mm;display:inline-block;vertical-align:middle;margin-right:2mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12mm" height="12mm" class="fig">
+<polygon points="1.2,3 10.8,3 10.8,11.6 1.2,11.6" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="1.2" y1="4.6" x2="10.8" y2="4.6" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="3.8" y1="1" x2="3.8" y2="3.2" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<line x1="8.2" y1="1" x2="8.2" y2="3.2" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<polygon points="2.4,5.8 3.6,5.8 3.6,7 2.4,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="2.4,8 3.6,8 3.6,9.2 2.4,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="4.6,5.8 5.8,5.8 5.8,7 4.6,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="4.6,8 5.8,8 5.8,9.2 4.6,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="6.8,5.8 8,5.8 8,7 6.8,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="6.8,8 8,8 8,9.2 6.8,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="8.8,5.8 10,5.8 10,7 8.8,7" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+<polygon points="8.8,8 10,8 10,9.2 8.8,9.2" fill="#000" stroke="#000" stroke-width="0.1" stroke-linejoin="round"/>
+</svg>One month · date ________</h2>
+  <ul class="check">
+    <li><span>Straightedge at the joint: ______ mm. Settled? Retighten the six fitting bolts.</span></li>
+  </ul>
+<div class="footer"><span>Assembly Verification Checklist</span><span>Page 3</span></div></section></body></html>

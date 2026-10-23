@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 93" width="178mm" height="93mm" class="fig">
+<polygon points="0.4,0.4 29.267,0.4 29.267,30.6 0.4,30.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="5.333,6 17.333,6 17.333,12 5.333,12" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="17.333,7.5 20.333,7.5 20.333,10.5 17.333,10.5" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="20.333" y1="9" x2="24.333" y2="9" stroke="#000" stroke-width="0.6" stroke-linecap="round"/>
+<polygon points="8.333,12 12.333,12 11.333,20 7.333,20" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="14.833" y="23.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">drill, clutch</text>
+<polygon points="30.067,0.4 58.933,0.4 58.933,30.6 30.067,30.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="36" y1="4" x2="36" y2="14" stroke="#000" stroke-width="0.4" stroke-linecap="round"/>
+<line x1="40.5" y1="4" x2="40.5" y2="17" stroke="#000" stroke-width="0.65" stroke-linecap="round"/>
+<line x1="45" y1="4" x2="45" y2="19" stroke="#000" stroke-width="0.9" stroke-linecap="round"/>
+<line x1="49.5" y1="4" x2="49.5" y2="21" stroke="#000" stroke-width="1.15" stroke-linecap="round"/>
+<text x="44.5" y="23.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">bits 5/64</text>
+<text x="44.5" y="27" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">1/8 7/32 7/16</text>
+<polygon points="59.733,0.4 88.6,0.4 88.6,30.6 59.733,30.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="71.667,3 75.667,3 75.667,15 73.667,20 71.667,15" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="74.167" y="23.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">centre punch</text>
+<polygon points="89.4,0.4 118.267,0.4 118.267,30.6 89.4,30.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="97.333,10 107.333,10 107.333,20 97.333,20" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="101.333,10 103.333,10 109.333,4 108.333,3.5" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="103.833" y="23.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">cutting oil</text>
+<polygon points="119.067,0.4 147.933,0.4 147.933,30.6 119.067,30.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="124,10 138,10 138,13 124,13" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="138,10.7 143,10.7 143,12.3 138,12.3" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="125" y1="10" x2="126.2" y2="13" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="127.2" y1="10" x2="128.4" y2="13" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="129.4" y1="10" x2="130.6" y2="13" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="131.6" y1="10" x2="132.8" y2="13" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="133.8" y1="10" x2="135" y2="13" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="136" y1="10" x2="137.2" y2="13" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<text x="133.5" y="23.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">flat +</text>
+<text x="133.5" y="27" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">round file</text>
+<polygon points="148.733,0.4 177.6,0.4 177.6,30.6 148.733,30.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="155.667,6 168.667,6 168.667,18 155.667,18" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="162.167" y="12" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">120</text>
+<text x="163.167" y="23.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">120 grit</text>
+<polygon points="0.4,31.4 29.267,31.4 29.267,61.6 0.4,61.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="8.333,37 19.333,37 19.333,51 8.333,51" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="10.333,35 17.333,35 17.333,37 10.333,37" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="13.833" y="44.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">AC</text>
+<text x="14.833" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">acetone</text>
+<polygon points="30.067,31.4 58.933,31.4 58.933,61.6 30.067,61.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="38,37 49,37 49,51 38,51" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="40,35 47,35 47,37 40,37" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="43.5" y="44.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">BK</text>
+<text x="44.5" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">flat black</text>
+<text x="44.5" y="58" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">enamel</text>
+<polygon points="59.733,31.4 88.6,31.4 88.6,61.6 59.733,61.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="64.667,41 78.667,41 78.667,44 64.667,44" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="78.667,41.6 82.667,41.6 82.667,43.4 78.667,43.4" fill="#808080" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="83.667,40.5 85.667,40.5 85.667,44.5 83.667,44.5" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="74.167" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">Robertson #2</text>
+<text x="74.167" y="58" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">+ 3 in ext.</text>
+<polygon points="89.4,31.4 118.267,31.4 118.267,61.6 89.4,61.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="95.333" y1="48" x2="108.333" y2="39" stroke="#000" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="109.333" cy="39" r="2.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="95.333" y1="42" x2="108.333" y2="33" stroke="#000" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="109.333" cy="33" r="2.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="103.833" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">two wrenches</text>
+<polygon points="119.067,31.4 147.933,31.4 147.933,61.6 119.067,61.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="125,35 139,35 139,37 127,37 127,49 125,49" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="127,46 137,46 137,48 127,48" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="134" y1="37" x2="134" y2="46" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<text x="133.5" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">two clamps</text>
+<polygon points="148.733,31.4 177.6,31.4 177.6,61.6 148.733,61.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<rect x="154.667" y="37" width="12" height="12" rx="2" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<polygon points="166.667,46 172.667,46 172.667,48 166.667,48" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="163.167" y="54.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">tape measure</text>
+<polygon points="0.4,62.4 29.267,62.4 29.267,92.6 0.4,92.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="6.333,70 12.333,70 12.333,74 6.333,74" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="12.333,71 24.333,71 24.333,73 12.333,73" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="14.833" y="85.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">combination</text>
+<text x="14.833" y="89" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">square</text>
+<polygon points="30.067,62.4 58.933,62.4 58.933,92.6 30.067,92.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="34,72 55,72 55,76 34,76" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="42,72.8 47,72.8 47,75.2 42,75.2" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="44.5" y="85.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">spirit level</text>
+<polygon points="59.733,62.4 88.6,62.4 88.6,92.6 59.733,92.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="64.667,71 83.667,71 83.667,73.4 64.667,73.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="65.667,73.4 67.667,73.4 67.667,81 65.667,79" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="72.667,73.4 74.667,73.4 74.667,79 72.667,81" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="74.167" y="85.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">calipers</text>
+<polygon points="89.4,62.4 118.267,62.4 118.267,92.6 89.4,92.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<path d="M 96.333 71 h 14 q 2 0 2 3 v 2 q 0 3 -3 3 h -3 q -2 0 -3 -2 q -1 2 -3 2 h -3 q -3 0 -3 -3 v -2 q 0 -3 2 -3 z" fill="#fff" stroke="#000" stroke-width="0.6"/>
+<text x="103.833" y="85.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">eye protection</text>
+<polygon points="119.067,62.4 147.933,62.4 147.933,92.6 119.067,92.6" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<path d="M 128 82 v -9 q 0 -2 1.5 -2 q 1.5 0 1.5 2 v -4 q 0 -2 1.5 -2 q 1.5 0 1.5 2 v 1 q 0 -2 1.5 -2 q 1.5 0 1.5 2 v 6 l 2 -2 q 1.5 -1 2 1 l -3 6 q -1 2 -3 2 h -5 q -2 0 -2 -2 z" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>
+<text x="133.5" y="85.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">gloves</text>
+</svg>

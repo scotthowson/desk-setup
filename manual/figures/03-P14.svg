@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 30" width="52mm" height="30mm" class="fig">
+<polygon points="6,2 46,2 46,19 6,19" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="7,3 45,3 45,18 7,18" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<path d="M 6 26.365 A 48 48 0 0 1 46 26.365" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="26" y="29" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">plan: 1500R</text>
+</svg>

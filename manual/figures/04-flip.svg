@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 58" width="178mm" height="58mm" class="fig">
+<text x="48.583" y="4" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">FACE UP: installed, seen from above</text>
+<polygon points="14,17 83.167,17 83.167,35.056 14,35.056" fill="#f2f2f2" stroke="#000" stroke-width="0.8" stroke-linejoin="round"/>
+<circle cx="14" cy="17" r="1.5" fill="#000"/><circle cx="14" cy="17" r="2.6" fill="none" stroke="#000" stroke-width="0.4"/>
+<text x="16" y="10.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">datum, x = 0</text>
+<text x="48.583" y="14.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">back edge (taped), y = 0</text>
+<text x="48.583" y="38.656" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edge (rounded)</text>
+<line x1="16" y1="29.428" x2="30" y2="29.428" stroke="#000" stroke-width="0.5"/>
+<polygon points="30,29.428 28.497,29.976 28.497,28.879" fill="#000"/>
+<text x="32" y="29.428" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">x grows to the right</text>
+<text x="48.583" y="23.428" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">laminate up</text>
+<line x1="48.583" y1="47.556" x2="48.583" y2="42.056" stroke="#000" stroke-width="0.5"/>
+<polygon points="48.583,42.056 49.338,44.122 47.829,44.122" fill="#000"/>
+<text x="48.583" y="50.656" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">your side when seated</text>
+<text x="135.583" y="4" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">FACE DOWN: on the blanket, as you mark it</text>
+<polygon points="101,17 170.167,17 170.167,35.056 101,35.056" fill="#e6e6e6" stroke="#000" stroke-width="0.8" stroke-linejoin="round"/>
+<circle cx="170.167" cy="17" r="1.5" fill="#000"/><circle cx="170.167" cy="17" r="2.6" fill="none" stroke="#000" stroke-width="0.4"/>
+<text x="168.167" y="10.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="bold" fill="#000">datum, x = 0</text>
+<text x="135.583" y="14.8" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">back edge (taped), y = 0</text>
+<text x="135.583" y="38.656" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edge (rounded)</text>
+<line x1="168.167" y1="29.428" x2="154.167" y2="29.428" stroke="#000" stroke-width="0.5"/>
+<polygon points="154.167,29.428 155.67,28.879 155.67,29.976" fill="#000"/>
+<text x="152.167" y="29.428" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="bold" fill="#000">x grows to the LEFT</text>
+<text x="135.583" y="23.428" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">underside up</text>
+<line x1="135.583" y1="47.556" x2="135.583" y2="42.056" stroke="#000" stroke-width="0.5"/>
+<polygon points="135.583,42.056 136.338,44.122 134.829,44.122" fill="#000"/>
+<text x="135.583" y="50.656" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">YOU STAND HERE</text>
+<line x1="85" y1="26.028" x2="98" y2="26.028" stroke="#000" stroke-width="0.8"/>
+<polygon points="98,26.028 95.746,26.851 95.746,25.205" fill="#000"/>
+<text x="91.5" y="22.028" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">turn</text>
+<text x="91.5" y="31.028" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">over</text>
+</svg>

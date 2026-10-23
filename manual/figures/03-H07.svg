@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 21.44" width="36mm" height="21.44mm" class="fig">
+<polygon points="9.2,7.1 14.8,7.1 13.4,8.76 10.6,8.76" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="10.6,8.76 13.4,8.76 13.4,18 12,20.2 10.6,18" fill="#fff" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="10.6" y1="10.06" x2="13.4" y2="10.56" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="10.6" y1="11.36" x2="13.4" y2="11.86" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="10.6" y1="12.66" x2="13.4" y2="13.16" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="10.6" y1="13.96" x2="13.4" y2="14.46" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="10.6" y1="15.26" x2="13.4" y2="15.76" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="10.6" y1="16.56" x2="13.4" y2="17.06" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<line x1="10.6" y1="17.86" x2="13.4" y2="18.36" stroke="#000" stroke-width="0.2" stroke-linecap="round"/>
+<circle cx="28" cy="8" r="2.8" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
+<line x1="26.46" y1="8" x2="29.54" y2="8" stroke="#000" stroke-width="0.6" stroke-linecap="round"/>
+<line x1="28" y1="6.46" x2="28" y2="9.54" stroke="#000" stroke-width="0.6" stroke-linecap="round"/>
+</svg>

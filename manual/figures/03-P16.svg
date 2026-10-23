@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 30" width="52mm" height="30mm" class="fig">
+<polygon points="4,12 48,12 48,24 4,24" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="10,15 42,15 42,22 10,22" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="22" y1="18.5" x2="30" y2="18.5" stroke="#000" stroke-width="0.5" stroke-linecap="round"/>
+<text x="26" y="7" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">monitor stand with drawer</text>
+</svg>

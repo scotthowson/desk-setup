@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 72" width="82mm" height="72mm" class="fig">
+<polygon points="3.6,12.6 73.8,12.6 73.8,33.48 3.6,33.48" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<circle cx="20.7" cy="23.04" r="2.16" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="56.7" cy="23.04" r="2.16" fill="#000" stroke="#000" stroke-width="0.25"/>
+<line x1="3.6" y1="33.48" x2="3.6" y2="37.98" stroke="#000" stroke-width="0.25"/>
+<line x1="73.8" y1="33.48" x2="73.8" y2="37.98" stroke="#000" stroke-width="0.25"/>
+<line x1="3.6" y1="36.48" x2="73.8" y2="36.48" stroke="#000" stroke-width="0.25"/>
+<polygon points="3.6,36.48 5.103,35.931 5.103,37.029" fill="#000"/>
+<polygon points="73.8,36.48 72.297,37.029 72.297,35.931" fill="#000"/>
+<text x="38.7" y="38.73" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 38.7 38.73)"></text>
+<text x="38.70" y="38.38" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" transform="rotate(0.0 38.70 38.38)">39</text>
+<line x1="73.8" y1="12.6" x2="78.3" y2="12.6" stroke="#000" stroke-width="0.25"/>
+<line x1="73.8" y1="33.48" x2="78.3" y2="33.48" stroke="#000" stroke-width="0.25"/>
+<line x1="76.8" y1="12.6" x2="76.8" y2="33.48" stroke="#000" stroke-width="0.25"/>
+<polygon points="76.8,12.6 77.349,14.103 76.251,14.103" fill="#000"/>
+<polygon points="76.8,33.48 76.251,31.977 77.349,31.977" fill="#000"/>
+<text x="79.05" y="23.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" transform="rotate(90 79.05 23.04)"></text>
+<text x="78.70" y="23.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" transform="rotate(90.0 78.70 23.04)">11.6</text>
+<line x1="20.7" y1="12.6" x2="20.7" y2="8.1" stroke="#000" stroke-width="0.25"/>
+<line x1="56.7" y1="12.6" x2="56.7" y2="8.1" stroke="#000" stroke-width="0.25"/>
+<line x1="20.7" y1="9.6" x2="56.7" y2="9.6" stroke="#000" stroke-width="0.25"/>
+<polygon points="20.7,9.6 22.203,9.051 22.203,10.149" fill="#000"/>
+<polygon points="56.7,9.6 55.197,10.149 55.197,9.051" fill="#000"/>
+<text x="38.7" y="7.35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 38.7 7.35)"></text>
+<text x="38.70" y="7.70" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" transform="rotate(0.0 38.70 7.70)">20</text>
+<text x="60.3" y="23.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">pins ⌀2.4</text>
+<polygon points="3.6,55.08 73.8,55.08 73.8,57.24 3.6,57.24" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="18.54,53.46 22.86,53.46 22.86,55.08 18.54,55.08" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="54.54,53.46 58.86,53.46 58.86,55.08 54.54,55.08" fill="#000" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<text x="3.6" y="63.18" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="hanging" font-weight="normal" fill="#000">side view, 1.2 thick</text>
+<line x1="66.6" y1="73.08" x2="66.6" y2="59.04" stroke="#000" stroke-width="0.5"/>
+<polygon points="66.6,59.04 67.149,60.543 66.051,60.543" fill="#000"/>
+<text x="63" y="63.18" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="hanging" font-weight="normal" fill="#000">push up</text>
+</svg>

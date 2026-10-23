@@ -437,7 +437,7 @@
     "bolt_hole": "7/16 in (11.1 mm)",
     "fitting_hole": "21 x 12 mm slot (measured)",
     "rail_screws": "#10 x 1 in pan head, Robertson; 20.6 mm into the top; 19 total",
-    "rail_pilot": "1/8 in, 25 mm from the flat leg's top face = 20 mm into the wood (puck 25 RAIL)",
+    "rail_pilot": "1/8 in, 25 mm from the face of the flat leg the puck stands on (the floor side) = 20 mm into the wood (puck 25 RAIL)",
     "finish": "degrease, 120 grit, two coats flat black enamel, 24 h",
     "confidence": "SOURCE for all positions; delivered length MEASURE ON HARDWARE"
   },

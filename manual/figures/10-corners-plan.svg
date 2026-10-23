@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.68 93.6" width="79.68mm" height="93.6mm" class="fig">
+<polygon points="10.08,10.08 69.84,10.08 69.84,25.68 25.68,25.68 25.68,85.44 10.08,85.44" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="10.08" y1="25.68" x2="25.68" y2="25.68" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="9.36" y1="9.36" x2="71.52" y2="9.36" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="9.36" y1="9.36" x2="9.36" y2="86.88" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<polygon points="60.36,10.92 69,10.92 69,24.84 60.36,24.84" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
+<polygon points="10.92,75.96 24.84,75.96 24.84,84.6 10.92,84.6" fill="#e6e6e6" stroke="#000" stroke-width="0.25" stroke-dasharray="3 1.5" stroke-linejoin="round"/>
+<line x1="4.08" y1="4.08" x2="10.08" y2="10.08" stroke="#000" stroke-width="0.25"/>
+<circle cx="10.08" cy="10.08" r="0.7" fill="#000"/>
+<circle cx="4.08" cy="4.08" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="4.08" y="4.08" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">1</text>
+<line x1="75.6" y1="4.08" x2="69.84" y2="10.08" stroke="#000" stroke-width="0.25"/>
+<circle cx="69.84" cy="10.08" r="0.7" fill="#000"/>
+<circle cx="75.6" cy="4.08" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="75.6" y="4.08" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">2</text>
+<line x1="75.6" y1="30" x2="69.84" y2="25.68" stroke="#000" stroke-width="0.25"/>
+<circle cx="69.84" cy="25.68" r="0.7" fill="#000"/>
+<circle cx="75.6" cy="30" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="75.6" y="30" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">3</text>
+<line x1="30" y1="30" x2="25.68" y2="25.68" stroke="#000" stroke-width="0.25"/>
+<circle cx="25.68" cy="25.68" r="0.7" fill="#000"/>
+<circle cx="30" cy="30" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="30" y="30" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">4</text>
+<line x1="30" y1="89.52" x2="25.68" y2="85.44" stroke="#000" stroke-width="0.25"/>
+<circle cx="25.68" cy="85.44" r="0.7" fill="#000"/>
+<circle cx="30" cy="89.52" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="30" y="89.52" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">5</text>
+<line x1="4.08" y1="89.52" x2="10.08" y2="85.44" stroke="#000" stroke-width="0.25"/>
+<circle cx="10.08" cy="85.44" r="0.7" fill="#000"/>
+<circle cx="4.08" cy="89.52" r="3.2" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="4.08" y="89.52" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">6</text>
+<text x="63.528" y="29.04" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal">ALEX 1</text>
+<text x="27.36" y="80.4" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">ALEX 2</text>
+<text x="40.08" y="18" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold">top A</text>
+<text x="17.88" y="50.88" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" transform="rotate(-90 17.88 50.88)">top B</text>
+<text x="34.08" y="46.08" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">back wall along the top,</text>
+<text x="34.08" y="49.83" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">side wall on the left;</text>
+<text x="34.08" y="53.58" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">corner 4 is the inside</text>
+<text x="34.08" y="57.33" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal">corner of the L</text>
+</svg>

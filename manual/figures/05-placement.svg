@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 124" width="172mm" height="124mm" class="fig">
+<text x="4" y="5.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Rail A, outside fitting: heel on 520 from the wall end, legs toward the far end</text>
+<polygon points="10,10 140,10 140,35.4 10,35.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="10" y1="10" x2="140" y2="10" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="10" y1="24.5" x2="140" y2="24.5" stroke="#000" stroke-width="0.25" stroke-dasharray="4 1 0.8 1" stroke-linecap="round"/>
+<line x1="10" y1="35.4" x2="10" y2="38.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="10" y="40.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">400</text>
+<line x1="20" y1="35.4" x2="20" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="30" y1="35.4" x2="30" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="40" y1="35.4" x2="40" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="50" y1="35.4" x2="50" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="60" y1="35.4" x2="60" y2="38.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="60" y="40.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">500</text>
+<line x1="70" y1="35.4" x2="70" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="80" y1="35.4" x2="80" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="90" y1="35.4" x2="90" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="100" y1="35.4" x2="100" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="110" y1="35.4" x2="110" y2="38.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="110" y="40.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">600</text>
+<line x1="120" y1="35.4" x2="120" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="130" y1="35.4" x2="130" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="140" y1="35.4" x2="140" y2="37" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="142" y="11.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">heel edge</text>
+<text x="142" y="24.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">bolt line 29</text>
+<text x="142" y="40.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">mm</text>
+<polygon points="70,14.25 120.25,14.25 120.25,34.75 70,34.75" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="70" y1="7.8" x2="70" y2="37.6" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M82.325,21.5 L86.825,21.5 A3,3 0 0 1 86.825,27.5 L82.325,27.5 A3,3 0 0 1 82.325,21.5 Z" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="83.375" y1="24.5" x2="85.775" y2="24.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="84.575" y1="23.3" x2="84.575" y2="25.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<path d="M106.975,21.5 L111.475,21.5 A3,3 0 0 1 111.475,27.5 L106.975,27.5 A3,3 0 0 1 106.975,21.5 Z" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="108.025" y1="24.5" x2="110.425" y2="24.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="109.225" y1="23.3" x2="109.225" y2="25.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="71.5" y1="12.45" x2="85" y2="12.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="85,12.45 83.685,12.93 83.685,11.97" fill="#000"/>
+<text x="86.5" y="12.45" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">legs</text>
+<text x="4" y="45.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Rail A, inside fitting: heel on 515 from the wall end, legs toward the wall end</text>
+<polygon points="10,50 140,50 140,75.4 10,75.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="10" y1="50" x2="140" y2="50" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="10" y1="64.5" x2="140" y2="64.5" stroke="#000" stroke-width="0.25" stroke-dasharray="4 1 0.8 1" stroke-linecap="round"/>
+<line x1="10" y1="75.4" x2="10" y2="78.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="10" y="80.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">400</text>
+<line x1="20" y1="75.4" x2="20" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="30" y1="75.4" x2="30" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="40" y1="75.4" x2="40" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="50" y1="75.4" x2="50" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="60" y1="75.4" x2="60" y2="78.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="60" y="80.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">500</text>
+<line x1="70" y1="75.4" x2="70" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="80" y1="75.4" x2="80" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="90" y1="75.4" x2="90" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="100" y1="75.4" x2="100" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="110" y1="75.4" x2="110" y2="78.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="110" y="80.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">600</text>
+<line x1="120" y1="75.4" x2="120" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="130" y1="75.4" x2="130" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="140" y1="75.4" x2="140" y2="77" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="142" y="51.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">heel edge</text>
+<text x="142" y="64.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">bolt line 29</text>
+<text x="142" y="80.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">mm</text>
+<polygon points="17.25,54.25 67.5,54.25 67.5,74.75 17.25,74.75" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="67.5" y1="47.8" x2="67.5" y2="77.6" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M50.675,61.5 L55.175,61.5 A3,3 0 0 1 55.175,67.5 L50.675,67.5 A3,3 0 0 1 50.675,61.5 Z" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="51.725" y1="64.5" x2="54.125" y2="64.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="52.925" y1="63.3" x2="52.925" y2="65.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<path d="M26.025,61.5 L30.525,61.5 A3,3 0 0 1 30.525,67.5 L26.025,67.5 A3,3 0 0 1 26.025,61.5 Z" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="27.075" y1="64.5" x2="29.475" y2="64.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="28.275" y1="63.3" x2="28.275" y2="65.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="66" y1="52.45" x2="52.5" y2="52.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="52.5,52.45 53.815,51.97 53.815,52.93" fill="#000"/>
+<text x="51" y="52.45" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">legs</text>
+<text x="4" y="85.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">Rail B, one fitting: heel flush with the corner end (0), legs toward the far end</text>
+<polygon points="10,90 140,90 140,115.4 10,115.4" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="10" y1="90" x2="140" y2="90" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="10" y1="88.5" x2="10" y2="116.9" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="10" y1="104.5" x2="140" y2="104.5" stroke="#000" stroke-width="0.25" stroke-dasharray="4 1 0.8 1" stroke-linecap="round"/>
+<line x1="10" y1="115.4" x2="10" y2="118.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="10" y="120.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">0</text>
+<line x1="20" y1="115.4" x2="20" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="30" y1="115.4" x2="30" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="40" y1="115.4" x2="40" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="50" y1="115.4" x2="50" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="60" y1="115.4" x2="60" y2="118.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="60" y="120.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">100</text>
+<line x1="70" y1="115.4" x2="70" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="80" y1="115.4" x2="80" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="90" y1="115.4" x2="90" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="100" y1="115.4" x2="100" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="110" y1="115.4" x2="110" y2="118.4" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="110" y="120.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">200</text>
+<line x1="120" y1="115.4" x2="120" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="130" y1="115.4" x2="130" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="140" y1="115.4" x2="140" y2="117" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="142" y="91.8" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">heel edge</text>
+<text x="142" y="104.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">bolt line 29</text>
+<text x="142" y="120.9" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">mm</text>
+<polygon points="10,94.25 60.25,94.25 60.25,114.75 10,114.75" fill="#bfbfbf" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="10" y1="87.8" x2="10" y2="117.6" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M22.325,101.5 L26.825,101.5 A3,3 0 0 1 26.825,107.5 L22.325,107.5 A3,3 0 0 1 22.325,101.5 Z" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="23.375" y1="104.5" x2="25.775" y2="104.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="24.575" y1="103.3" x2="24.575" y2="105.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<path d="M46.975,101.5 L51.475,101.5 A3,3 0 0 1 51.475,107.5 L46.975,107.5 A3,3 0 0 1 46.975,101.5 Z" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="48.025" y1="104.5" x2="50.425" y2="104.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="49.225" y1="103.3" x2="49.225" y2="105.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="11.5" y1="92.45" x2="25" y2="92.45" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="25,92.45 23.685,92.93 23.685,91.97" fill="#000"/>
+<text x="26.5" y="92.45" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">legs</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 20.98" width="21.6mm" height="20.98mm" class="fig">
+<polygon points="1.5,1.5 18.86,1.5 18.86,16.38 1.5,16.38" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="1.5,16.38 18.86,16.38 18.86,18.24 1.5,18.24" fill="#bfbfbf" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<circle cx="10.18" cy="4.6" r="0.992" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="10.18" y1="7.08" x2="10.18" y2="15.76" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6" stroke-linecap="round"/>
+</svg>

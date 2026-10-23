@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 34" width="178mm" height="34mm" class="fig">
+<circle cx="18" cy="10" r="1.587" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="14.912" y1="10" x2="21.087" y2="10" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="18" y1="6.912" x2="18" y2="13.088" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="18" y="21.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">pilot ⌀3.2 (1/8 in)</text>
+<text x="18" y="25.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">into the tops: legs, feet,</text>
+<text x="18" y="29.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rails, joining plates</text>
+<circle cx="52" cy="10" r="0.992" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="49.508" y1="10" x2="54.492" y2="10" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="52" y1="7.508" x2="52" y2="12.492" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="52" y="21.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">pilot ⌀2.0 (5/64 in)</text>
+<text x="52" y="25.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">into the ALEX tops</text>
+<text x="52" y="29.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">and the trim edge</text>
+<circle cx="87" cy="10" r="2.78" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="82.72" y1="10" x2="91.28" y2="10" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="87" y1="5.72" x2="87" y2="14.28" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="87" y="21.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">clearance ⌀5.56</text>
+<text x="87" y="25.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">(7/32 in): rail flat</text>
+<text x="87" y="29.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">legs, for #10 screws</text>
+<circle cx="121" cy="10" r="5.55" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="113.95" y1="10" x2="128.05" y2="10" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="121" y1="2.95" x2="121" y2="17.05" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="121" y="21.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">through ⌀11.1 (7/16 in)</text>
+<text x="121" y="25.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail vertical legs,</text>
+<text x="121" y="29.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">6 holes, 3/8 bolts</text>
+<rect x="146.5" y="4" width="21" height="12" rx="6" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<line x1="145" y1="10" x2="169" y2="10" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="157" y1="2.5" x2="157" y2="17.5" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="157" y="21.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">slot 21 × 12</text>
+<text x="157" y="25.3" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">in each fitting leg,</text>
+<text x="157" y="29.1" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">bought, not drilled</text>
+<text x="177" y="2.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">1:1</text>
+</svg>

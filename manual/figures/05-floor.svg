@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 110" width="172mm" height="110mm" class="fig">
+<text x="4" y="4" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Plan from above. Both rails upside down on the floor: flat legs down, vertical legs up.</text>
+<text x="4" y="8.5" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">Bolts in loosely; every one must slide in by hand.</text>
+<polygon points="8,72 164,72 164,92.32 8,92.32" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="8,72 164,72 164,73.904 8,73.904" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="6.7" y="71.5" width="2.6" height="21.32" fill="#fff"/>
+<polyline points="8,71.7 9,76.93 7,82.16 9,87.39 8,92.62" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<rect x="162.7" y="71.5" width="2.6" height="21.32" fill="#fff"/>
+<polyline points="164,71.7 165,76.93 163,82.16 165,87.39 164,92.62" fill="none" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="63.68,16 84,16 84,72 63.68,72" fill="#d9d9d9" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="82.096,16 84,16 84,72 82.096,72" fill="#808080" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<rect x="63.18" y="14.7" width="21.32" height="2.6" fill="#fff"/>
+<polygon points="84,72 124.2,72 124.2,70 86,70 86,31.8 84,31.8" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="82.096,72 41.896,72 41.896,70 80.096,70 80.096,31.8 82.096,31.8" fill="#e6e6e6" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="93.76,67.8 97.56,67.8 97.56,76.104 93.76,76.104" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="68.536,67.8 72.336,67.8 72.336,76.104 68.536,76.104" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="77.896,58.44 88.2,58.44 88.2,62.24 77.896,62.24" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="113.48,67.8 117.28,67.8 117.28,76.104 113.48,76.104" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="48.816,67.8 52.616,67.8 52.616,76.104 48.816,76.104" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<polygon points="77.896,38.72 88.2,38.72 88.2,42.52 77.896,42.52" fill="#fff" stroke="#000" stroke-width="0.25" stroke-linejoin="round"/>
+<line x1="118.4" y1="30" x2="114.15" y2="69.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="114.15" cy="69.7" r="0.55" fill="#000"/>
+<text x="119.2" y="30" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">outside fitting: far-end side</text>
+<line x1="51.6" y1="30" x2="51.946" y2="69.7" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<circle cx="51.946" cy="69.7" r="0.55" fill="#000"/>
+<text x="50.8" y="30" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">inside fitting: wall side</text>
+<text x="52" y="34.2" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">(over B's flat leg)</text>
+<text x="87" y="19" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="bold" fill="#000">rail B</text>
+<text x="118" y="48" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">check 90° with the</text>
+<text x="118" y="52.2" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">combination square</text>
+<line x1="117.2" y1="50" x2="89" y2="67" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<text x="162" y="96.82" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="end" dominant-baseline="middle" font-weight="bold" fill="#000">rail A</text>
+<line x1="63.68" y1="93.12" x2="63.68" y2="101.52" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="84" y1="93.12" x2="84" y2="101.52" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="63.68" y1="100.32" x2="84" y2="100.32" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="63.68,100.32 65.183,99.771 65.183,100.869" fill="#000"/>
+<polygon points="84,100.32 82.497,100.869 82.497,99.771" fill="#000"/>
+<text x="73.84" y="98.62" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000"></text>
+<text x="87" y="100.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">B's flat leg covers 469 to 520 on rail A</text>
+<text x="74" y="106.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">B's outer face on rail A's 520 mark; B's end touching A: no gap</text>
+</svg>
