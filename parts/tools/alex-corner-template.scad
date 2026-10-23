@@ -15,7 +15,7 @@ size    = 92;      // square plate
 fence_h = 6; fence_t = 4;
 centre_d = 2.5;    // scriber only
 bit     = 2.3;     // 5/64 in bit (1.98) + 0.3 for the #6 screws, prints as a running fit
-screw_r = (57 / 2 + 75 / 2) / 2;   // the ring's screw circle: (ring_od/2 + flange_od/2)/2 from structure/foot-ring.scad. If pad_d changes there, change ring_od here too
+screw_r = 33;      // the ring's screw circle, fixed at 33 in structure/foot-ring.scad
 n_screws = 3;
 foot_r  = 14.5;      // the ALEX foot's screw circle (accessories/alex-foot.scad), same angles
 ring_od = 58; ring_bore = 52;

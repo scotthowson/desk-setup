@@ -19,7 +19,7 @@ lead_in    = 1.0;   // chamfer at the top of the bore so the pad finds its way i
 
 bore_d  = pad_d + clearance;      // 52 for a 50 mm pad
 ring_od = bore_d + 2 * wall;      // 58
-screw_r = (ring_od / 2 + flange_od / 2) / 2;   // screws centred in the flange band
+screw_r = 33;                     // screw circle, fixed: the ALEX corner template and the paper template drill r 33 (countersink stays 0.5 mm clear of the ring wall)
 $fn = 128;
 
 difference() {
