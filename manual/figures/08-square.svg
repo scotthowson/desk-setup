@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 74" width="84mm" height="74mm" class="fig">
+<line x1="4.583" y1="0" x2="4.583" y2="71.667" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="0" y1="3.75" x2="76.667" y2="3.75" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<text x="43.333" y="2.708" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="auto" font-weight="normal" fill="#000">back wall</text>
+<text x="3.542" y="50.833" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="auto" font-weight="normal" fill="#000" transform="rotate(-90 3.542 50.833)">side wall</text>
+<polygon points="5.833,5 76.667,5 76.667,32.083 32.917,32.083 32.917,71.667 5.833,71.667" fill="#f2f2f2" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>
+<line x1="76.667" y1="4.167" x2="76.667" y2="32.917" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="5" y1="71.667" x2="33.75" y2="71.667" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="5.833" y1="32.083" x2="32.917" y2="32.083" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>
+<line x1="57.917" y1="32.083" x2="32.917" y2="65.417" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1" stroke-linecap="round"/>
+<circle cx="32.917" cy="32.083" r="0.917" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="57.917" cy="32.083" r="0.917" fill="#000" stroke="#000" stroke-width="0.25"/>
+<circle cx="32.917" cy="65.417" r="0.917" fill="#000" stroke="#000" stroke-width="0.25"/>
+<text x="45.417" y="35" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="hanging" font-weight="normal" fill="#000">60 cm</text>
+<text x="31.667" y="48.75" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="end" dominant-baseline="middle" font-weight="normal" fill="#000">80 cm</text>
+<text x="47.5" y="50" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">100 cm</text>
+<line x1="35" y1="21.667" x2="23.333" y2="31.917" stroke="#000" stroke-width="0.25"/>
+<polygon points="23.333,31.917 24.004,30.688 24.638,31.409" fill="#000"/>
+<text x="36.5" y="21.667" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle">butt joint closed,</text>
+<text x="36.5" y="26.25" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="start" dominant-baseline="middle" font-weight="normal" fill="#000">full width</text>
+<text x="19.583" y="13.333" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">top A</text>
+<text x="19.583" y="59.167" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">top B</text>
+</svg>

@@ -383,7 +383,7 @@ def fab(part, name, holes, datum, heels, d_from, d_to, bolt_rows, block, fig="",
     X = lambda s: x0 + s * kx
     T_(c, 3, 5, f"{fig} · {part} {name} · OPENED-OUT FABRICATION DRAWING · ordinates in mm (cm in the table)", size=4.2, weight="bold")
     T_(c, 3, 10.5, f"Lengths 1:10 from the {datum.upper()} (datum 0); leg widths 1:2.5, not to scale across; hole symbols not to scale. "
-                   f"Seen from outside the L.", size=3.2)
+                   + ("Seen from outside the L." if name == "RAIL A" else "Seen from inside the L."), size=3.2)
     T_(c, 3, 14.7, note, size=3.2)
     R_(c, x0, fe, x1 - x0, LEG * kw, fill=GREY["steel"])
     R_(c, x0, heel, x1 - x0, LEG * kw, fill=GREY["light"])

@@ -247,7 +247,7 @@ def fig_leg_steps():
         c.raw(f'<rect x="{x0}" y="0.5" width="{w - 3}" height="65" fill="none" stroke="#000" stroke-width="0.25"/>')
     # 1: through the jig, 3-4 mm
     top_slab(4, 44, 36); c.raw('<rect x="6" y="41" width="32" height="3" fill="#e6e6e6" stroke="#000" stroke-width="0.5"/>')
-    drill(22, 46.5); ptext(c, 22, 58, "start 3–4 mm", size=3.2); ptext(c, 22, 62, "through the jig", size=3.2)
+    drill(22, 46.5); ptext(c, 22, 58, "chapter D: started", size=3.2); ptext(c, 22, 62, "3–4 mm through the jig", size=3.2)
     ptext(c, 30, 38, "jig", size=3.2, anchor="start")
     # 2: lift the jig, finish with the 15 LEG puck
     x = 46; top_slab(x + 2, 44, 36)
@@ -545,13 +545,13 @@ def fig_rails_detail():
 
 
 # ---------------- G-11 ALEX placement by the walls ----------------
-STAGE = 15   # cm: ALEX 2 stands 15 cm short of its final place until chapter G (build manual step 5)
+STAGE = 5    # cm: ALEX 2 stands 5 cm short of its final place until chapter G (build manual step 5)
 
 
 def fig_alex_place():
     s = 0.34
     g = D["gap"]
-    c = Canvas(120, 140, scale=s, origin=(-g - 16 / s, -g - 12 / s))
+    c = Canvas(120, 127, scale=s, origin=(-g - 16 / s, -g - 12 / s))
     wall_hatch(c, (-g, -g), (A["x1"] + 6, -g), (0, -1))
     wall_hatch(c, (-g, -g), (-g, B["y1"] + 26), (-1, 0))
     ptext(c, *c.P(120, -g - 13), "back wall", size=3.2, weight="bold")
@@ -570,7 +570,7 @@ def fig_alex_place():
     c.arrow((a1["x0"] + 18, 70), (a1["x0"] + 18, 88)); ptext(c, *c.P(a1["x0"] + 4, 96), "drawers", size=3.2)
     ptext(c, *c.P(a1["x0"] + 4, 96 + 4.2 / s), "toward you", size=3.2)
     c.arrow((70, y2 + 18), (90, y2 + 18)); ptext(c, *c.P(96, y2 + 12), "door toward you", size=3.2, anchor="start")
-    ptext(c, *c.P(96, y2 + 32), "staged 15 cm out;", size=3.2, anchor="start")
+    ptext(c, *c.P(96, y2 + 32), "staged 5 cm out;", size=3.2, anchor="start")
     ptext(c, c.P(96, 0)[0], c.P(0, y2 + 32)[1] + 4.2, "dashed: its final place", size=3.2, anchor="start")
     L = LAY["alex_by_walls"]
     leader(c, (240, a1["y0"] / 2 - g / 2), c.P(250, 12), cm(L["alex1_back_off_back_wall"]) + " cm", anchor="start")
@@ -728,7 +728,7 @@ def fig_rail_ends():
     ptext(c, 44, 50, "(a) rail A's far end, plan", size=3.2, weight="bold")
     ptext(c, 44, 55, "rail end x 214 cm", size=3.2); ptext(c, 44, 59.5, "F1/F3 centres x 214.5 cm", size=3.2)
     # (b) rail B's end before ALEX 2, plan; y 256..290 runs to the right
-    Pb = lambda x, y: (98 + (y - 256) * s * 1.55, 9 + (x - 40) * s)
+    Pb = lambda x, y: (98 + (y - 256) * s * 1.55, 9 + (65 - x) * s)   # seen from above: x up, y right (a quarter turn, not a mirror)
     rb, a2 = D["railB"], D["alex2"]
     rect(Pb, 40, 65, 256, 290, fill="#f2f2f2")
     rect(Pb, 40, a2["x0"] + a2["w"], a2["y0"], 290, dash="2 1")
@@ -742,8 +742,8 @@ def fig_rail_ends():
     ptext(c, (a[0] + b[0]) / 2, 6.3, "13.5 cm", size=3.2, weight="bold")
     ptext(c, *Pb(50.4, 262), "rail B", size=3.2, weight="bold")
     ptext(c, *Pb(44.5, 283), "ALEX 2", size=3.2)
-    ptext(c, *Pb(63, 268), "front edge", size=3.2)
-    ptext(c, 136, 50, "(b) rail B's end, plan (y to the right)", size=3.2, weight="bold")
+    ptext(c, *Pb(63, 285), "front edge", size=3.2)
+    ptext(c, 136, 50, "(b) rail B's end, plan (front edge at the top)", size=3.2, weight="bold")
     ptext(c, 136, 55, "rail end y 266 cm · ALEX 2 face y 274.5 cm", size=3.2); ptext(c, 136, 59.5, "F5/F6 centres y 279.5 cm", size=3.2)
     save(c, "07-rail-ends.svg")
 

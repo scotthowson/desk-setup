@@ -295,7 +295,7 @@ def fig_slideB():
     s = 1 / 24.0
     W = 172
     out = Canvas(W, 100)
-    sh = 150  # ALEX 2 staged 15 cm out (facts procedures.alex2_staging)
+    sh = 50  # ALEX 2 staged 5 cm out (facts procedures.alex2_staging)
     for k, (dy, lab, oy) in enumerate([(sh, "a", 0), (0, "b", 51)]):
         # seen from the knee space looking at the side wall: top A on the right, so y grows to the LEFT (negative scale)
         c = MirrorCanvas(W, 49, scale=s, origin=(-150, -110), flip_y=True)
@@ -309,9 +309,9 @@ def fig_slideB():
             yend = cm(D["B"]["y1"]) + dy
             c.arrow((yend + 30, 960), (yend - 470, 960), lw="heavy", head=2.6)
             c.text((yend - 220, 1020), "push ALEX 2", size=3.2)
-            ldr(c, (legs["L5"][1] + dy - 18, 330), (1690, 330), "legs set to", size=3.2)
-            c.text((1655, 190), "79.9–80.0 cm", size=3.2, anchor="start")
-            c.balloon((1900 + dy, UNDER - 25), (2150 + dy, 420), "P07")
+            ldr(c, (legs["L6"][1] + dy - 18, 330), (2330, 330), "legs set to", size=3.2)
+            c.text((2295, 190), "79.9–80.0 cm", size=3.2, anchor="start")
+            c.balloon((1500 + dy, UNDER - 25), (1300 + dy, 420), "P07")
             c.balloon((1000 + dy, SURF - 6), (950, 960), "P02")
             c.balloon((cm(A2["y0"]) + dy + 40, 300), (2700, 300), "P04")
             c.balloon((300, SURF - 6), (300, 960), "P01")
@@ -336,7 +336,7 @@ def fig_joint_section():
     c.poly(R(WID, y1, UNDER, SURF), fill=GREY["wood"])
     c.poly(R(yb, y1, RAIL_LOW, UNDER), fill=GREY["steel"])
     c.line((yb, UNDER - TH), (y1, UNDER - TH), lw="hidden", dash="1.2 0.8")
-    dz, dy = -3, 45   # approach position: 3 mm low (the manual's 2-3), offset along y for clarity
+    dz, dy = -3, 50   # approach position: 3 mm low, 5 cm out (ALEX 2 staging)
     c.poly(R(WID + dy, y1, UNDER + dz, SURF + dz), lw="thin", dash="1.5 1")
     c.poly(R(yb + dy, y1, RAIL_LOW + dz, UNDER + dz), lw="thin", dash="1.5 1")
     c.arrow((yb + dy - 4, 775), (yb + 4, 775), lw="outline", head=1.8)
@@ -434,24 +434,35 @@ def fig_checks():
         c.circle((x, y), FB, fill="#fff", lw="thin")
     c.text((cm(A1["x0"]) + cm(A1["w"]) / 2, 330), "F1–F4", size=3.0)
     c.text((330, cm(A2["y0"]) + cm(A2["d"]) / 2), "F5–F8", size=3.0)
-    offs = [(-140, -140), (140, -140), (160, 130), (-170, 150), (160, 130), (-140, 140)]
-    for i, (p, o) in enumerate(zip(L, offs)):
-        c.circle(p, 25, fill="#000", lw="thin")
-        c.balloon(p, (p[0] + o[0], p[1] + o[1]), str(i + 1), r=3.0)
-    a, b = (WID + 600, WID), (WID, WID + 800)
-    c.line(a, b, lw="outline", dash="2 1")
-    for p in (a, b):
-        c.circle(p, 20, fill="#000", lw="thin")
-    c.text(((WID + a[0]) / 2, WID + 70), "60 cm", size=3.0)
-    c.text((WID - 30, (WID + b[1]) / 2), "80 cm", size=3.0, anchor="end")
-    c.text(((a[0] + b[0]) / 2 + 60, (a[1] + b[1]) / 2 + 40), "100 cm (field check)", size=3.0, anchor="start")
     c.rect(300, 450, 60, 400, fill="#fff"); c.circle((330, 560), 18, lw="thin")
     c.rect(120, 620, 400, 60, fill="#fff"); c.circle((230, 650), 18, lw="thin")
     ldr(c, (360, 470), (900, 190), "levels across")
     c.text((936, 300), "and along the joint", size=3.0, anchor="start")
-    ldr(c, (600, WID - 4), (900, 480), "butt joint closed,")
-    c.text((936, 590), "full width", size=3.0, anchor="start")
     save(c, "checks")
+
+
+def fig_square():
+    """The inside corner region only: butt joint and the optional 3-4-5 check (chapter H, step 2)."""
+    s = 1 / 24.0
+    c = Canvas(84, 74, scale=s, origin=(-140, -120))
+    X1, Y1 = 1700, 1600
+    c.line((-GAP, -120), (-GAP, Y1), lw="heavy"); c.line((-140, -GAP), (X1, -GAP), lw="heavy")
+    c.text((900, -GAP - 25), "back wall", size=3.0, baseline="auto")
+    c.text((-GAP - 25, 1100), "side wall", size=3.0, rotate=-90, baseline="auto")
+    c.poly([(0, 0), (X1, 0), (X1, WID), (WID, WID), (WID, Y1), (0, Y1)], fill=GREY["wood"], lw="outline")
+    c.line((X1, -20), (X1, WID + 20), lw="thin"); c.line((-20, Y1), (WID + 20, Y1), lw="thin")
+    c.line((0, WID), (WID, WID), lw="heavy")
+    a, b = (WID + 600, WID), (WID, WID + 800)
+    c.line(a, b, lw="outline", dash="2 1")
+    for p in ((WID, WID), a, b):
+        c.circle(p, 22, fill="#000", lw="thin")
+    c.text(((WID + a[0]) / 2, WID + 70), "60 cm", size=3.0, baseline="hanging")
+    c.text((WID - 30, (WID + b[1]) / 2), "80 cm", size=3.0, anchor="end")
+    c.text(((a[0] + b[0]) / 2 + 50, (a[1] + b[1]) / 2 + 30), "100 cm", size=3.0, anchor="start")
+    ldr(c, (420, WID - 4), (700, 400), "butt joint closed,")
+    c.text((736, 510), "full width", size=3.0, anchor="start")
+    c.text((330, 200), "top A", size=3.2, weight="bold"); c.text((330, 1300), "top B", size=3.2, weight="bold")
+    save(c, "square")
 
 
 # ------------------------------------------------------------------ H-7: desk pulled 40 cm off both walls
@@ -618,16 +629,12 @@ def fig_gauge():
 
 
 def fig_corner():
-    """Former chapter F figures. F-2 plan, F-3 stack-up and F-4 screw are reused as drawn by figures_06.py (plan and
-    sections, not mirrored). The exploded view is redrawn here unmirrored: the desk frame (x along the back wall, y into
-    the room, z up) is left-handed, so seen from the knee space rail A's far end is to the RIGHT and rail B to the LEFT."""
-    import shutil
+    """Former chapter F figures, now chapter H: plan, stack-up and rail screw from figures_08_corner.py as drawn; the
+    exploded view is laid out here. The desk frame (x along the back wall, y into the room, z up) is left-handed, so
+    seen from the knee space rail A's far end is to the RIGHT and rail B to the LEFT (figures_08_corner.proj)."""
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    import figures_06 as f6
-    f6.proj = lambda p: ((p[0] - p[1]) * f6.C30, p[2] - (p[0] + p[1]) / 2)
-    for fn, name in ((f6.fig_plan, "06-plan.svg"), (f6.fig_stackup, "06-stackup.svg"), (f6.fig_screw, "06-screw.svg")):
-        fn()
-        shutil.copy(os.path.join(OUT, name), os.path.join(OUT, "08-" + name[3:]))
+    import figures_08_corner as f6
+    f6.fig_plan(); f6.fig_stackup(); f6.fig_screw()
     sc = f6.Scene()
     xa0, xa1, yb1 = 400, 740, 800
     f6.rails(sc, xa0, xa1, yb1)
@@ -658,7 +665,7 @@ def fig_corner():
 
 
 if __name__ == "__main__":
-    fig_corner()
+    fig_corner(); fig_square()
     fig_standA(); fig_pad_ring(); fig_slideB(); fig_joint_section(); fig_joint_plan(); fig_checks()
     fig_pulled(); fig_chain(); fig_profile(); fig_tile(); fig_gauge()
     print("chapter H figures:", sorted(f for f in os.listdir(OUT) if f.startswith("08-")))

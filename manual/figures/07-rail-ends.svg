@@ -14,20 +14,20 @@
 <text x="44.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail end x 214 cm</text>
 <text x="44.00" y="59.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">F1/F3 centres x 214.5 cm</text>
 <rect x="98.00" y="9.00" width="76.41" height="36.25" fill="#f2f2f2" stroke="#000" stroke-width="0.5"/>
-<rect x="139.58" y="9.00" width="34.84" height="31.17" fill="none" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1"/>
-<rect x="98.00" y="20.45" width="22.47" height="7.39" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
-<rect x="144.13" y="28.61" width="13.37" height="8.63" fill="#fff" stroke="#000" stroke-width="0.5"/>
-<text x="150.82" y="32.92" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">F6</text>
-<line x1="120.47" y1="20.45" x2="120.47" y2="2.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
-<line x1="150.82" y1="28.42" x2="150.82" y2="2.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<rect x="139.58" y="14.07" width="34.84" height="31.18" fill="none" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1"/>
+<rect x="98.00" y="26.40" width="22.47" height="7.40" fill="#bfbfbf" stroke="#000" stroke-width="0.5"/>
+<rect x="144.13" y="17.01" width="13.37" height="8.63" fill="#fff" stroke="#000" stroke-width="0.5"/>
+<text x="150.82" y="21.32" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">F6</text>
+<line x1="120.47" y1="33.80" x2="120.47" y2="2.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="150.82" y1="16.82" x2="150.82" y2="2.00" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <line x1="120.47" y1="3.50" x2="150.82" y2="3.50" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
 <polygon points="120.475,3.5 121.884,2.986 121.884,4.014" fill="#000"/>
 <polygon points="150.816,3.5 149.407,4.014 149.407,2.986" fill="#000"/>
 <text x="135.65" y="6.30" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">13.5 cm</text>
-<text x="111.48" y="24.08" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">rail B</text>
-<text x="158.68" y="15.52" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 2</text>
-<text x="124.97" y="42.35" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edge</text>
-<text x="136.00" y="50.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(b) rail B's end, plan (y to the right)</text>
+<text x="111.48" y="30.17" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">rail B</text>
+<text x="158.68" y="38.72" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 2</text>
+<text x="163.18" y="11.90" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">front edge</text>
+<text x="136.00" y="50.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#000">(b) rail B's end, plan (front edge at the top)</text>
 <text x="136.00" y="55.00" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">rail end y 266 cm · ALEX 2 face y 274.5 cm</text>
 <text x="136.00" y="59.50" font-family="Helvetica, Arial, sans-serif" font-size="3.2" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">F5/F6 centres y 279.5 cm</text>
 </svg>

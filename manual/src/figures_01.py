@@ -347,7 +347,7 @@ def wall_hatch(c, p0, p1, side, n_step=2.4):
 
 def fig_plan():
     s = 0.58
-    W, H = 178, 216
+    W, H = 178, 215
     ox, oy = -3 - 20 / s, -3 - 22 / s
     c = Canvas(W, H, scale=s, origin=(ox, oy))
     A, B, g = D["A"], D["B"], D["gap"]

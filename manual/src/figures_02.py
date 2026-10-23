@@ -71,31 +71,35 @@ def fig_safety():
 
 
 def fig_floor():
-    s = 1 / 40.0
-    W, H = 96, 106
+    """Footprint 252 x 317 cm with the 3 cm gaps, the side wall's 322 cm minimum, 40 cm free floor on the open sides."""
+    s = 1 / 46.0
+    R = F["room"]
+    W, H = 86, 93
     c = Canvas(W, H)
-    ox, oy = 16, 14
+    ox, oy = 18, 14
     P = lambda x, y: (ox + x * s, oy + y * s)
     g = F["layout_cm"]["wall_gap"] * 10
-    # the floor needed: walls at x = -30, y = -30; desk to x 2490, y 3140 -> 2520 x 3170
-    c.rect(P(-g, -g)[0], P(-g, -g)[1], 2520 * s, 650 * s + g * s, fill="none", lw="thin", dash="1.5 0.8")
-    c.rect(P(-g, -g)[0], P(-g, -g)[1], 650 * s + g * s, 3170 * s, fill="none", lw="thin", dash="1.5 0.8")
+    fr = R["open_sides_cm"] * 10
+    # 40 cm of free floor along the open sides (offset of the desk outline away from the walls)
+    zone = [P(2490, 0), P(2490 + fr, 0), P(2490 + fr, 650 + fr), P(650 + fr, 650 + fr), P(650 + fr, 3140 + fr), P(0, 3140 + fr), P(0, 3140), P(650, 3140), P(650, 650), P(2490, 650)]
+    c.poly(zone, fill="#f7f7f7", lw="thin", dash="1.5 0.8")
     c.poly([P(0, 0), P(2490, 0), P(2490, 650), P(650, 650), P(650, 3140), P(0, 3140)], fill=GREY["wood"], lw="outline")
     wu, wv = P(-g, -g)
-    c.line((wu, wv), (P(2490, 0)[0] + 4, wv), lw="heavy"); c.line((wu, wv), (wu, P(0, 3140)[1] + 4), lw="heavy")
-    hatch_rect(c, wu, wv - 2, P(2490, 0)[0] + 4, wv, spacing=1.1); hatch_rect(c, wu - 2, wv, wu, P(0, 3140)[1] + 4, spacing=1.1)
+    sw = R["side_wall_min_cm"] * 10 - g                       # side wall must reach desk y = 322 cm - gap
+    c.line((wu, wv), (P(2490 + fr, 0)[0], wv), lw="heavy"); c.line((wu, wv), (wu, P(0, sw)[1]), lw="heavy")
+    hatch_rect(c, wu, wv - 2, P(2490 + fr, 0)[0], wv, spacing=1.1); hatch_rect(c, wu - 2, wv, wu, P(0, sw)[1], spacing=1.1)
     dim2(c, (wu, wv), (P(2490, 0)[0], wv), "252 cm", off=5)
-    dim2(c, (wu, P(0, 3140)[1]), (wu, wv), "317 cm", off=5)
+    dim2(c, (wu, P(0, 3140)[1]), (wu, wv), "317 cm", off=4)
+    dim2(c, (wu, P(0, sw)[1]), (wu, wv), "side wall 322 cm min.", off=10)
     c.text((P(1500, 330)[0], P(0, 330)[1]), "desk", size=3.0)
-    c.text((P(1500, 0)[0], P(0, 0)[1] + 9), "", size=3.0)
-    lead(c, P(-15, 1000), (P(900, 1000)[0], P(0, 1000)[1]), "3 cm wall gap", size=3.0)
-    # bench for the steel, outside the footprint
-    bx, by = P(1150, 2000)
+    c.text((P(1550, 650 + fr / 2)[0], P(0, 650 + fr / 2)[1]), "40 cm free floor", size=3.0)
+    c.text((P(650 + fr / 2, 0)[0], P(0, 2700)[1]), "40 cm free floor", size=3.0, rotate=-90)
+    lead(c, P(-15, 1000), (P(1120, 1250)[0], P(0, 1250)[1]), "3 cm wall gap", size=3.0)
+    bx, by = P(1350, 1900)
     c.rect(bx, by, 26, 9, fill=GREY["light"], lw="outline")
     c.rect(bx + 1, by + 3.4, 24, 1.2, fill=GREY["dark"], lw="thin")
     c.text((bx + 13, by + 14), "bench for the steel", size=3.0)
     c.text((bx + 13, by + 18), "(rails 213 cm long)", size=3.0)
-    c.text((W / 2, H - 1.5), "Plan, 1:40. Both walls MEASURE.", size=3.0)
     return c.save(os.path.join(FIG, "02-floor.svg"))
 
 

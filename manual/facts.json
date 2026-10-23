@@ -487,6 +487,7 @@
     "confidence": "VERIFIED: crossbar, pole, pole inset, clamp back, pad all measured 21-23 Oct 2026; top arm reach ASSUMPTION about 89; max opening MEASURE ON HARDWARE (needs 31 mm or more)"
   },
   "monitors": {
+    "vivo_ratings": "VIVO centre bracket 48.4 lb curved / 59.4 lb flat, side arms 17.6 lb each, from the VIVO listing in docs/design-review.md",
     "centre": "Samsung Odyssey G5 32 in, 1000R, VESA 75, about 5 kg, bottom edge 230 mm above the top, top edge 669 (limit 673)",
     "sides": "two Acer XZ320QU 31.5 in, 1500R, VESA 100, 5.6 kg with stand, about 5 kg on the arm",
     "all_landscape": true,

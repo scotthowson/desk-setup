@@ -463,7 +463,7 @@ def fig_topA_overview():
           (mm(RA["x1"]), "2140 rail A end"), (2490, "2490")]
     ord_x(fd, xs, 0, mT - 5, up=True, gap=3.8, jog=1.6)
     datum_dot(c, fd.u(0), fd.v(0))
-    c.text((fd.u(0) - 3.2, fd.v(0) - 2.6), "DATUM", size=3.0, anchor="end", weight="bold")
+    c.text((fd.u(0) - 3.0, fd.v(0) + 8.0), "DATUM", size=3.0, anchor="end", weight="bold")
     c.text((fd.u(1245), 3), "← x grows to the LEFT · all cm · tape hooked on the side-wall end", size=3.1, weight="bold")
     for n, w in (("L1", "above"), ("L2", "below"), ("L3", "below")):
         leg_label(fd, n, w)

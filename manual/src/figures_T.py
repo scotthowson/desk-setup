@@ -184,7 +184,7 @@ def drill(c, svg, hid, p, bit, uv, src, ref_d=None, optional=False, label=None, 
 
 def refhole(c, svg, hid, p, uv, src, d):
     """A part's own hole shown for checking: dashed circle at its size plus a POSITION mark. Never drilled from this sheet."""
-    c.raw(f'<circle id="{hid}" cx="{_f(p[0])}" cy="{_f(p[1])}" r="{_f(d / 2)}" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="0.8 0.6"/>')
+    c.raw(f'<circle id="{hid}" cx="{_f(p[0])}" cy="{_f(p[1])}" r="0" fill="none" stroke="none"/>')   # anchor for the check only
     posmark(c, p, size=4.2)
     HOLES.append((svg, hid, "POSITION", uv, d, src))
 
@@ -291,7 +291,7 @@ def t1():
     label_box(c, (C[0] + 20, C[1] + 3.4), "DATUM: ALEX corner")
     c.arrow(U(104, 7), U(114, 17)); T(c, U(116, 12), "into the cabinet")
     k = RING["centre_from_alex_corner"]; R = U(k, k)
-    ring(c, R, RING["flange_od"] / 2); ring(c, R, FEET["body_and_pad_diameter"] / 2)
+    ring(c, R, RING["flange_od"] / 2); ring(c, R, RING["bore"] / 2)
     posmark(c, R, size=6, hid="T-1-centre")
     dim2(c, U(0, 10), U(k, 10), "50 (5.0 cm)"); dim2(c, U(k + 42, 0), U(k + 42, k), "50 (5.0 cm)")
     c.line(U(k + 6, k), U(k + 44, k), lw="thin", dash="2 1"); T(c, U(k + 45.5, k), "0°")
@@ -299,7 +299,7 @@ def t1():
     for a in RING_ANGLES:
         t = math.radians(a); uv = (k + r * math.cos(t), k + r * math.sin(t))
         lp, an = {45: ((88, 106), "start"), 165: ((9.5, 116), "start"), 285: ((72, 178), "start")}[a]
-        refhole(c, name, f"T-1-R{a}", U(*uv), uv, f"facts rings r {r} (foot-ring.scad) at {a}° as alex-corner-template.scad", RING["screw_hole"])
+        refhole(c, name, f"T-1-R{a}", U(*uv), uv, f"facts rings r {r} (foot-ring.scad) at {a}° as alex-corner-template.scad", 0)
         T(c, lp, f"RING {a}°", anchor=an)
     rf = AF["screw_circle_radius"]
     for a in AF["screw_angles_deg"]:
@@ -310,10 +310,10 @@ def t1():
     # calibration, id, use; legend and notes in the right column
     ruler(c, 20, 17); crosscheck(c, 20, 23)
     ident(c, 28, 27, "T1", "P10 locating ring + P20 ALEX foot (opt.)")
-    y = para(c, 28, 33, "CHECK, ALEX TOP: sheet face up, the edge lines on the two edges of one corner. Your pencil trace of the pad must lie on the ⌀50 circle. Turn the sheet for each corner, never flip it.", 92)
+    y = para(c, 28, 33, "CHECK, before drilling any ring (chapter G, step 2a): top lifted off, lay the sheet face up on the bare ALEX corner, edge lines on the two edges. The pencil trace of the pad must lie inside the ⌀52 circle all round; if not, move the cabinet and re-trace.", 92)
     para(c, 28, y + 1, "DRILL, ALEX BOTTOM, only if fitting ALEX feet (unit on its back): punch the 3 inner centres, lift, pilot 5/64 in, 12 mm deep (puck 12 ALEX).", 92)
     yl = legend(c, 124, 35, None, "DRILL ⌀2.0 (5/64 in), dashed: ALEX feet only, ALEX BOTTOM.", w=52)
-    para(c, 124, yl + 3, "Dashed circles: pad trace ⌀50, ring flange ⌀75. RING marks: the ring's screw holes (⌀3.8) on r 33 at 45 / 165 / 285°, where the printed ALEX corner template pilots them. ALEX foot: r 14.5, same angles. Angles counter-clockwise from the bottom edge, sheet face up.", 52)
+    para(c, 124, yl + 3, "Dashed circles: ring bore ⌀52 (the check), ring flange ⌀75. RING marks: position only, never drilled; the ring is fitted turned, its own holes at any angle. ALEX foot: 3 holes on r 14.5 at 45 / 165 / 285°, counter-clockwise from the bottom edge, sheet face up. Turn the sheet for each corner, never flip it.", 52)
     return save(c, name), W
 
 
@@ -730,8 +730,8 @@ def main():
 </section>
 """)
     write("01-ring.html", page("T1", "Locating ring P10", "Locating ring (P10) · check template 1:1", ["VERIFIED"], f1, w1,
-          pre='<div class="note"><b>CHECK SHEET.</b> The rings are placed by tracing the pads (chapter G). Lay this sheet on each ALEX top corner: the traced circle must sit on the ⌀50 circle, centred 5 cm in from both edges. It is a drilling template only for the optional ALEX feet, on the bottom corners.</div>',
-          after='<div class="note">The ring\'s own holes are at 90 / 210 / 330° in its file; the template drills 45 / 165 / 285°. The ring is round and is turned so its holes meet the pilots. ALEX top panel 15.9 mm (5/8 in), measured 23 Oct 2026: the #6 × 5/8 in screws go 13.4 mm in and leave 2.5 mm.</div>'))
+          pre='<div class="note"><b>CHECK SHEET (chapter G, step 2a).</b> With the top lifted off and before drilling any ring, lay this sheet on each bare ALEX corner: the pencil trace of the pad must lie inside the ⌀52 circle all round. If not, move the cabinet and re-trace. It is a drilling template only for the optional ALEX feet, on the bottom corners.</div>',
+          after='<div class="note">The ring is fitted turned: its own holes may sit at any angle. ALEX top panel 15.9 mm (5/8 in), measured 23 Oct 2026: the #6 × 5/8 in screws go 13.4 mm in and leave 2.5 mm.</div>'))
     write("02-feet.html", page("T2", "Feet plate P09", "Feet plate (P09) · drilling template 1:1", ["VERIFIED"], f2, w2,
           extra=" Verified on the purchased plate 23 Oct 2026: 41.6 between holes (inside jaws), 52.0 across (outside jaws), so 46.8 centres."))
     write("03-olov.html", page("T3a", "OLOV plate P05, 100", "OLOV plate (P05) · 100 from the edge · 1:1", ["VERIFIED"], f3a, w3)
@@ -743,7 +743,7 @@ def main():
     write("04-rails.html", html)
     write("05-fittings.html", page("T5", "Corner fittings P08", "Corner fitting (P08) placement · reference", ["SOURCE", "VERIFIED"], f5, w5))
     write("06-pads.html", page("T6", "Clamp pad plates P11", "Clamp pad plate (P11) placement · reference", ["SOURCE", "VERIFIED", "ASSUMPTION"], f6, w6,
-          after='<p class="small">SOURCE-DEFINED: the pad plate outlines (marking table, chapter F). VERIFIED: the 90 × 50 mm lower-jaw pad, measured 21-23 Oct 2026 (facts.json vivo). ASSUMPTION / FIELD CHECK: the oval drawn centred on the clamp; the clamp back sets the final position (crossbar fitted as the spacing guide).</p>'))
+          after='<p class="small">SOURCE-DEFINED: the pad plate outlines (marking table, chapter D). VERIFIED: the 90 × 50 mm lower-jaw pad, measured 21-23 Oct 2026 (facts.json vivo). ASSUMPTION / FIELD CHECK: the oval drawn centred on the clamp; the clamp back sets the final position (crossbar fitted as the spacing guide).</p>'))
 
 
 if __name__ == "__main__":
