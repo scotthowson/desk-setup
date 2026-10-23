@@ -24,5 +24,5 @@ mirror([hand < 0 ? 1 : 0, 0, 0]) difference() {
     linear_extrude(depth + wall) offset(r = wall) L2d(leg + 2 * slack, t + 2 * slack);
     translate([0, 0, wall]) linear_extrude(depth + 1) L2d(leg + 2 * slack, t + 2 * slack);   // the socket
     translate([-wall - 1, leg + 2 * slack, -1]) cube([leg + 2 * wall + 4, wall + 2, depth + wall + 2]);   // open on the desk-side face
-    mirror([hand < 0 ? 1 : 0, 0, 0]) translate([(t + 2 * slack) / 2, (leg + 2 * slack) / 2, -0.01]) rotate([0, 0, 90]) linear_extrude(0.6) text(hand > 0 ? "RAIL CAP A" : "RAIL CAP B", size = 3.2, halign = "center", valign = "center");   // on the closed end, reads correctly for both hands
+    mirror([hand < 0 ? 1 : 0, 0, 0]) translate([(t + 2 * slack) / 2, (leg + 2 * slack) / 2, -0.01]) mirror([1, 0, 0]) rotate([0, 0, 90]) linear_extrude(0.6) text(hand > 0 ? "RAIL CAP A" : "RAIL CAP B", size = 3.2, halign = "center", valign = "center");   // on the closed end, reads correctly from outside for both hands
 }

@@ -8,8 +8,8 @@
 
 d19    = 19;     // screw line from the leg's free edge
 body_t = 6; lip_h = 6; lip_t = 4;
-w      = 30;     // along the rail
-len    = 40;     // from the lip across the leg
+w      = 24;     // along the rail
+len    = 28;     // from the lip across the leg
 bore   = 3.3;    // 1/8 in bit, running fit
 module jig() {   // use orientation: body on the leg's top face, lip hanging over the free edge
     difference() {
@@ -19,8 +19,14 @@ module jig() {   // use orientation: body on the leg's top face, lip hanging ove
         }
         translate([d19, w / 2, -1]) cylinder(d = bore, h = body_t + 2, $fn = 32);
         for (y = [-1, w - 0.6]) translate([d19 - 0.4, y, -1]) cube([0.8, 1.6, body_t + 2]);                     // sight grooves down both sides, on the bore's centre line
-        translate([d19 + 9, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("19", size = 5, halign = "center", valign = "center");
-        translate([len - 6, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL JIG  1/8 pilot", size = 3, halign = "center", valign = "center");
+        translate([0, 0, body_t - 0.6]) labels();   // labels on the face you see in use
     }
 }
-translate([0, 0, body_t]) mirror([0, 0, 1]) jig();   // flipped for printing: lip up
+module labels(top = false) {
+    translate([25, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL 19", size = 2.6, halign = "center", valign = "center");
+    translate([9, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("1/8", size = 3, halign = "center", valign = "center");
+}
+difference() {
+    translate([0, 0, body_t]) mirror([0, 0, 1]) jig();   // flipped for printing
+    translate([0, 0, body_t - 0.6]) labels(top = true);   // print-top labels read as written; the use-face ones above are mirrored in y so they read after the flip
+}

@@ -33,8 +33,8 @@ difference() {
     translate([tower_w / 2 + 4, depth_y / 2, tower_h - P64]) cylinder(d = set_64th, h = P64 + 1, $fn = 32);    // 35 mm setting hole
     for (i = [0 : len(steps) - 1]) translate([tower_w + step_w * i + bore_off, depth_y / 2, -1]) cylinder(d = steps[i][1], h = steps[i][0] + 2, $fn = 32);
     translate([tower_w / 2, 1.0, tower_h - 6]) rotate([90, 0, 0]) linear_extrude(1.2) text("SET", size = 3.6, halign = "center");
-    translate([tower_w + 40, 1.0, 5]) rotate([90, 0, 0]) linear_extrude(1.2) text("DRILL GUIDE  .  depth into EKB unless it says ALEX or EDGE", size = 2.6, halign = "left");
+    translate([tower_w + 40, 1.0, 5]) rotate([90, 0, 0]) linear_extrude(1.2) text("DRILL GUIDE  .  into EKB unless it says ALEX or EDGE", size = 2.4, halign = "left");
     translate([tower_w / 2 - 4, 1.0, tower_h - 11]) rotate([90, 0, 0]) linear_extrude(1.2) text("1/8", size = 2.4, halign = "center");
     translate([tower_w / 2 + 4, 1.0, tower_h - 11]) rotate([90, 0, 0]) linear_extrude(1.2) text("5/64", size = 2.4, halign = "center");
-    for (i = [0 : len(steps) - 1]) translate([tower_w + step_w * i + bore_off, 1.0, steps[i][0] - 6]) rotate([90, 0, 0]) linear_extrude(1.2) text(steps[i][2], size = 2.8, halign = "center");
+    for (i = [0 : len(steps) - 1]) translate([tower_w + step_w * i + step_w / 2, 1.0, steps[i][0] - 6]) rotate([90, 0, 0]) linear_extrude(1.2) text(steps[i][2], size = 2.4, halign = "center");
 }

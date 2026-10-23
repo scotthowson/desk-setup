@@ -35,9 +35,16 @@ module template() {   // use orientation: plate on the ALEX top, fences hanging 
             translate([inset, inset, -1]) rotate([0, 0, i * 360 / n_screws + 45])
                 translate([foot_r, 0, 0]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);            // ALEX foot screws (underside)
         ring_line(ring_od); ring_line(ring_bore);
-        translate([inset, 10, plate_t - 0.6]) linear_extrude(1) text("ring / foot centre 50 / 50  .  inner 3 = foot screws", size = 3.2, halign = "center");
-        translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the ALEX edges", size = 3.5, halign = "center");
-        translate([inset, size - 12, plate_t - 0.6]) linear_extrude(1) text("ALEX CORNER", size = 6, halign = "center");
+        translate([0, 0, plate_t - 0.6]) labels();   // labels on the face you see in use
     }
 }
-translate([0, 0, plate_t]) mirror([0, 0, 1]) template();   // flipped for printing
+module labels(top = false) {
+    translate([inset, 11.6, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("ring + foot centre 50 / 50", size = 3.2, halign = "center", valign = "center");
+    translate([inset, 5.3, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("outer 3 = ring screws   inner 3 = foot screws", size = 2.6, halign = "center", valign = "center");
+    translate([size - 6, size / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("fences on the ALEX edges", size = 3.4, halign = "center", valign = "center");
+    translate([inset, size - 9, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("ALEX CORNER", size = 6, halign = "center", valign = "center");
+}
+difference() {
+    translate([0, 0, plate_t]) mirror([0, 0, 1]) template();   // flipped for printing
+    translate([0, 0, plate_t - 0.6]) labels(top = true);   // print-top labels read as written; the use-face ones above are mirrored in y so they read after the flip
+}

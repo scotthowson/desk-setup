@@ -30,9 +30,15 @@ module gauge() {   // use orientation: body on the steel face, lip hanging over 
         }
         notch_at(d19, 0, w / 2);
         notch_at(d29, w / 2, w);
-        translate([d19 / 2, w / 4, body_t - 0.6]) linear_extrude(1) text("19", size = 5, halign = "center", valign = "center");
-        translate([d29 / 2, 3 * w / 4, body_t - 0.6]) linear_extrude(1) text("29", size = 5, halign = "center", valign = "center");
-        translate([24, w / 2, body_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL", size = 3, halign = "center", valign = "center");
+        translate([0, 0, body_t - 0.6]) labels();   // labels on the face you see in use
     }
 }
-translate([0, 0, body_t]) mirror([0, 0, 1]) gauge();   // flipped for printing
+module labels(top = false) {
+    translate([d19 / 2, w / 4, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("19", size = 5, halign = "center", valign = "center");
+    translate([d29 / 2, 3 * w / 4, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("29", size = 5, halign = "center", valign = "center");
+    translate([24, 3 * w / 4, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL", size = 3, halign = "center", valign = "center");
+}
+difference() {
+    translate([0, 0, body_t]) mirror([0, 0, 1]) gauge();   // flipped for printing
+    translate([0, 0, body_t - 0.6]) labels(top = true);   // print-top labels read as written; the use-face ones above are mirrored in y so they read after the flip
+}

@@ -17,6 +17,6 @@ difference() {
         translate([0, 0, head_t]) cylinder(d = hole_d - fit, h = plug_h, $fn = 96);
     }
     translate([0, 0, -1]) cylinder(d = bore, h = head_t + plug_h + 2, $fn = 32);
-    translate([0, 5, -0.01]) linear_extrude(0.6) text("FIT", size = 2.6, halign = "center", valign = "center");
-    translate([0, -5, -0.01]) linear_extrude(0.6) text("PLUG", size = 2.6, halign = "center", valign = "center");
+    translate([0, 5, -0.01]) mirror([1, 0, 0]) linear_extrude(0.6) text("FIT", size = 2.6, halign = "center", valign = "center");
+    translate([0, -5, -0.01]) mirror([1, 0, 0]) linear_extrude(0.6) text("PLUG", size = 2.6, halign = "center", valign = "center");
 }

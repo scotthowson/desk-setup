@@ -23,9 +23,15 @@ module jig() {
         translate([inset, inset, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);
         for (sx = [-1, 1], sy = [-1, 1]) translate([inset + sx * hole_sp / 2, inset + sy * hole_sp / 2, -1]) cylinder(d = hole_d, h = plate_t + 2, $fn = 24);
         square_line(plate);
-        translate([inset, 8, plate_t - 0.6]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 36.6", size = 3.6, halign = "center");
-        translate([size - 6, size / 2, plate_t - 0.6]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the EKB edges", size = 3.4, halign = "center");
-        translate([inset, size - 12, plate_t - 0.6]) linear_extrude(1) text("EKB FEET CORNER", size = 6, halign = "center");
+        translate([0, 0, plate_t - 0.6]) labels();   // labels on the face you see in use
     }
 }
-translate([0, 0, plate_t]) mirror([0, 0, 1]) jig();   // flipped for printing
+module labels(top = false) {
+    translate([inset, 9.8, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("foot 8.5 / 8.5  .  holes 36.6", size = 3.6, halign = "center", valign = "center");
+    translate([size - 6, size / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("fences against the EKB edges", size = 3.4, halign = "center", valign = "center");
+    translate([inset, size - 5, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("EKB FEET CORNER", size = 5, halign = "center", valign = "center");
+}
+difference() {
+    translate([0, 0, plate_t]) mirror([0, 0, 1]) jig();   // flipped for printing
+    translate([0, 0, plate_t - 0.6]) labels(top = true);   // print-top labels read as written; the use-face ones above are mirrored in y so they read after the flip
+}
