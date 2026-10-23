@@ -85,7 +85,8 @@ class Canvas:
 
     def hatch(self, pts, spacing=1.5, angle=45):
         """Section hatching inside a polygon (page-space clip)."""
-        hid = f"h{len(self.parts)}"
+        Canvas._hid = getattr(Canvas, '_hid', 0) + 1
+        hid = f"h{id(self) % 100000}_{Canvas._hid}"   # unique even when several SVGs are inlined into one page
         d = " ".join(f"{_f(px)},{_f(py)}" for px, py in (self._pt(p) for p in pts))
         xs = [self._pt(p)[0] for p in pts]; ys = [self._pt(p)[1] for p in pts]
         x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
@@ -128,11 +129,12 @@ class Canvas:
             self.parts.append(f'<line x1="{_f(x2)}" y1="{_f(y2)}" x2="{_f(a2[0] + nx * e)}" y2="{_f(a2[1] + ny * e)}" stroke="#000" stroke-width="{LW["dim"]}"/>')
         self.parts.append(f'<line x1="{_f(a1[0])}" y1="{_f(a1[1])}" x2="{_f(a2[0])}" y2="{_f(a2[1])}" stroke="#000" stroke-width="{LW["dim"]}"/>')
         self._head(a2[0], a2[1], a1[0], a1[1], 1.6); self._head(a1[0], a1[1], a2[0], a2[1], 1.6)
-        mx, my = (a1[0] + a2[0]) / 2 + nx * 1.2 * (1 if side > 0 else -1) * 0, (a1[1] + a2[1]) / 2
         ang = math.degrees(math.atan2(dy, dx))
         if ang > 90 or ang < -90:
             ang += 180
-        tx, ty = (a1[0] + a2[0]) / 2 - ny * 2.0, (a1[1] + a2[1]) / 2 + nx * 2.0
+        s_out = 1 if offset >= 0 else -1          # the label sits beside the line, on the side away from the object
+        gap = size * 0.75
+        tx, ty = (a1[0] + a2[0]) / 2 + nx * gap * s_out, (a1[1] + a2[1]) / 2 + ny * gap * s_out
         self.parts.append(f'<text x="{_f(tx)}" y="{_f(ty)}" font-family="{FONT}" font-size="{size}" text-anchor="middle" dominant-baseline="middle" transform="rotate({_f(ang)} {_f(tx)} {_f(ty)})">{label}</text>')
 
     def leader(self, p_target, p_text, label, size=3.2, anchor="start"):

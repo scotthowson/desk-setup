@@ -5,7 +5,7 @@ html, body { margin: 0; padding: 0; background: #fff; color: #000; font-family: 
 
 .page { width: 210mm; height: 297mm; position: relative; padding: 16mm 16mm 18mm 16mm; break-after: page; overflow: hidden; }
 .page:last-child { break-after: auto; }
-.page .footer { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 8pt; color: #333; border-top: 0.3mm solid #000; padding-top: 1.5mm; }
+.page .footer { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 8.5pt; color: #333; border-top: 0.3mm solid #000; padding-top: 1.5mm; }
 .page .header { position: absolute; left: 16mm; right: 16mm; top: 7mm; font-size: 8pt; color: #333; display: flex; justify-content: space-between; }
 .chapter-letter { font-size: 26pt; font-weight: bold; }
 
@@ -19,7 +19,7 @@ table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm 0; }
 th, td { border: 0.25mm solid #000; padding: 1.2mm 1.8mm; text-align: left; vertical-align: top; }
 th { background: #e6e6e6; font-weight: bold; }
 td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
-.small { font-size: 8pt; }
+.small { font-size: 8.5pt; }
 .mono { font-family: "DejaVu Sans Mono", Menlo, monospace; font-size: 8.5pt; }
 
 /* step layout */
@@ -28,7 +28,7 @@ td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 .step .body { }
 .fig { display: block; max-width: 100%; height: auto; }
 .figbox { border: 0.25mm solid #000; padding: 2mm; margin: 2mm 0 3mm 0; break-inside: avoid; }
-.figbox .cap { font-size: 8pt; margin-top: 1.5mm; }
+.figbox .cap { font-size: 8.5pt; margin-top: 1.5mm; }
 .full { width: 178mm; }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
 .three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3mm; }
