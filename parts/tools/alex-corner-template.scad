@@ -40,7 +40,7 @@ module template() {   // use orientation: plate on the ALEX top, fences hanging 
     }
 }
 module labels(top = false) {
-    translate([inset, 11.6, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("ring + foot centre 50 / 50", size = 3.2, halign = "center", valign = "center");
+    translate([inset, 11.6, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("ring centre 50 / 50  .  outer 3 = ring check only", size = 3.0, halign = "center", valign = "center");
     translate([inset, 5.3, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("trace must sit inside the inner circle   .   inner 3 = ALEX feet (bottom), drill", size = 2.4, halign = "center", valign = "center");
     translate([size - 5, size / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("fences on the ALEX edges", size = 3.0, halign = "center", valign = "center");
     translate([inset, size - 7, 0]) mirror([0, top ? 0 : 1, 0]) linear_extrude(1) text("ALEX CORNER", size = 5, halign = "center", valign = "center");
