@@ -17,7 +17,7 @@ t      = 3;                               // plate thickness, head and blade ali
 lip_h  = 6;   lip_t  = 4;                 // the lip that hooks over the edge; its inner face is the zero line
 blade_l = 162; blade_w = 24;
 hole_d  = 4;                              // fits a scriber, a pencil tip or a 1/8 in bit
-plate_hole_spacing = 46.8;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.4 mm holes)
+plate_hole_spacing = 46.8;                // the feet plates' screw holes, centre to centre: measured 22 Oct 2026 (59.5 mm plate, 5.2 mm holes)
 pad = 56;                                 // square pad round the 85 mm hole (holes at ±23.3)
 
 module tool() {   // use orientation: plate at z 0..t on the surface, lip hanging below
