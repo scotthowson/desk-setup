@@ -8,6 +8,24 @@ The deliverables are three PDFs built by `python3 manual/build.py` from HTML pag
 - Your chapter: `manual/src/chapters/NN-name.html` (fragment, no html/head) and `manual/src/figures_NN.py` that writes SVGs into `manual/figures/`. Run your figures script, then `python3 manual/build.py manual --render --dpi=60` and look at your pages in `manual/build/png/manual/`. Fix overlaps and cropping before you finish.
 - Do not edit another chapter's files, `build.py`, `style.css`, `data.json` or `facts.json`. If a shared file needs a change, say so in your report.
 
+## Chapter order (binding, follows the build manual's order so a page-by-page reader never meets a step early)
+| Letter | File | Content | Build-manual steps |
+| --- | --- | --- | --- |
+| A | 01-cover.html | cover, finished assembly, plan | |
+| B | 02-before.html | before you begin, printed tools in use | 0 |
+| C | 03-parts.html | parts inventory | 0 |
+| D | 04-prep.html | marking both tops face down, rails labelled, hole types | 2, 3 |
+| E | 05-steel.html | steel on the bench: stations, 19/29 lines, holes, fittings as template, floor test, paint, heel marks re-marked | 1 |
+| F | 06-legs-cabinets.html | legs, feet (gauge first, then plates), RAILS SCREWED TO THE TOPS, cabinets placed (ALEX 2 staged 15 cm out) | 4, 5 |
+| G | 07-standing.html | stand top A on the bare cabinet, trace, rings, stand again; ALEX 2 and top B the same, then pushed home | 6, 7.1 |
+| H | 08-joint.html | the joint: flush, plates (pilot with the plate off), rail B screws 1–2, fittings bolted and torqued (the corner assembly detail lives here) | 7.2–7.5 |
+| I | 09-mount.html | monitor mount and accessories | 8 |
+| J | 10-trim.html | wall-gap trim, after the mount (unload the desk first) | 8b |
+| K | 11-checks.html | final inspection and load testing | 9 |
+| L | 12-maintenance.html | maintenance and troubleshooting | |
+| Appendix | 13-appendix.html | outstanding measurements | |
+Figure numbers carry the chapter letter (Fig. F-3). Cross-references name booklet chapters and steps ("chapter H, step 4"), never build-manual step numbers. Every chapter ends with "Next: chapter X".
+
 ## Page fragments
 ```html
 <section class="page" data-chapter="E" data-title="Steel rails" data-toc="E · Steel rail fabrication and drilling">
