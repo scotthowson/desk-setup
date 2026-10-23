@@ -1,16 +1,16 @@
 # Quality-control report · assembly manual
 
-Built 23 Oct 2026 from the repository at commit 459465afdf429f88e9928482752b118f5d7cdea3 (the measured facts since a2e99ea are included; see `manual/facts.json` `source_commit`). The brief named a2e99ea; the facts measured after it (feet plate 46.8, OLOV pattern on the 85 mm circle, VIVO pole inset 43.7 and pad, strut fitting slots, 1½ in bolts everywhere, the printed drill jigs) are in this manual and in the repository documents, so the two agree.
+Built 23 Oct 2026 from the repository at commit fe382cd1bcdf4319e264eaff154285ee58acc715 (the measured facts since a2e99ea are included; see `manual/facts.json` `source_commit`). The brief named a2e99ea; the facts measured after it (feet plate 46.8, OLOV pattern on the 85 mm circle, VIVO pole inset 43.7 and pad, strut fitting slots, 1½ in bolts everywhere, the printed drill jigs) are in this manual and in the repository documents, so the two agree.
 
 ## Deliverables
 | File | Pages | Content |
 | --- | --- | --- |
-| `manual/IKEA-Style-Assembly-Manual.pdf` | 72 | cover, contents, chapters A–K, appendix |
+| `manual/IKEA-Style-Assembly-Manual.pdf` | 76 | cover, contents, chapters A–L in build order, appendix |
 | `manual/Drilling-and-Placement-Templates.pdf` | 25 | T0 index, T1 ring (1:1), T2 feet plate (1:1), T3a/b OLOV (1:1), T4-A/B rail strips (1:1, 9 landscape sheets each), T5 fittings (reference 1:2 with VERIFIED rail hole positions), T6 clamp pads (reference 1:4) |
 | `manual/Assembly-Verification-Checklist.pdf` | 3 | measurements before you start, gates at each step, final checks, two-week and one-month items |
-| Source: `manual/src/` (chapter HTML and figure scripts), `manual/figures/` (162 SVG), `manual/lib/draw.py`, `manual/build.py`, `manual/facts.json`, `manual/data.json` | | rebuild with `python3 manual/build.py` |
+| Source: `manual/src/` (chapter HTML and figure scripts), `manual/figures/` (164 SVG), `manual/lib/draw.py`, `manual/build.py`, `manual/facts.json`, `manual/data.json` | | rebuild with `python3 manual/build.py` |
 
-Illustrations in the manual: 133 inline vector figures (plus 25 template sheets and the checklist icons). All vector; pages are A4 with 16 mm margins.
+Illustrations in the manual: 135 inline vector figures (plus 25 template sheets and the checklist icons). All vector; pages are A4 with 16 mm margins.
 
 ## How it was checked
 - Every chapter was written from `facts.json` and `data.json` (extracted from the guide's `D` object) and `docs/build-manual.md`; no number was allowed from anywhere else. Each author rendered its pages to PNG at 60 and 100 dpi and read them; then every page of all three PDFs was rendered and read again at integration, with the dense pages (face-down marking diagrams, both rail fabrication drawings, the underside layout, the joint plan, the clamp section) re-read at 110 dpi.
@@ -53,6 +53,11 @@ ALEX height 700 · VIVO top arm reach about 89 · feet load rating · the 3-4-5 
 - Rings: fitted by tracing the pads with the top standing on the bare cabinet (chapters G and H, build manual steps 5–7, checklist); bore 52 / OD 58 for the 50 mm pad; screw circle pinned at r 33 in `foot-ring.scad`, `alex-corner-template.scad`, `facts.json` and template T1, and asserted equal by `figures_T.py` (which reads the pinned value instead of deriving it).
 - Measured on the hardware 23 Oct 2026 and now VERIFIED throughout: strut fittings (legs 100.5 × 41 × 5, slots 21 × 12 at 29.15 / 78.45 from the heel; rail holes 54.9 / 59.8 / 48.6 / 43.7 cm on A, 2.9 / 7.8 cm on B), ALEX top panel 15.9 mm (screws 13.4 in, 2.5 remains), feet plate 59.5 with 46.8 centres, VIVO pole inset 43.7 and pad. Defined by CAD / the documents (SOURCE): every coordinate, the rail layout, the ring and foot geometry, heights. Still ASSUMPTION or MEASURE: see the list above (the ALEX top panel is removed from it; the bottom panel remains, for the optional feet only).
 - Verification run on this build: all three PDFs built from a clean clone of the repository (same page counts); built text searched for stale ring (51 / 57), panel-rule (16 mm) and earlier-geometry strings: none; the templates' 43 holes re-derived from the sources (0.002 mm) and the 100 mm rulers re-measured at 254 dpi; every page rendered and read again after the rebuild.
+
+## Third build: two independent builder's reads and what they changed
+A reviewer who had written none of it read every page of all three documents as a first-time builder, twice. Pass one found five blockers: no step screwed the rails to the tops; the corner-bolting chapter came before the legs; the rings were fitted twice (by template, then by tracing); a "27 mm top → screws 1 mm shorter" rule contradicted the source; the 51.5 / 52.0 cm heel marks were never made and were painted over. All five are fixed: the chapters were re-lettered into build order (B before you begin, C parts, D marking, E steel on the bench, F legs / feet / rails / cabinets, G standing and rings by tracing, H the joint with the corner bolting, I mount, J trim, K checks, L maintenance), the rail-fitting step exists once (F steps 4–5), the rings are fitted once (G), the 27 mm rule is gone everywhere (at 27 mm nothing changes; under 27 stop and ask), the heel marks are scribed in E and re-taped after paint.
+Pass two found no blocker; its majors are fixed: the room must give 322 cm along the side wall (top B is stood 5 cm out, not 15, and pushed home) and 40 cm of free floor on the open sides for the trim, with a stop-and-ask; the trace is checked against the corner template before any ring is drilled (G step 2, item 3); the squareness check comes before the plates; pads are rocked, never turned; pilots started in D are finished in F, not restarted; a mirrored elevation caption and a mirrored plan were corrected; the checklist gates every one of these. Verified after the rebuild: the three PDFs contain none of the retired wording (searched), every chapter ends with "Next: chapter …", the templates' 43 holes still match their sources to 0.002 mm, and the sequence pages (B work area, F rails, G, H, J, the checklist) were read again at 90–110 dpi.
+Judgement after pass two, in the reviewer's words: the owner could build the desk from the booklet alone, narrowly; the fixes above were its remaining list.
 
 ## Not done
 No paper print was measured (the 100 mm rulers were measured on the rendered PDF). The desk has not been load-tested; the manual's chapter J is the acceptance test, not a structural certification.
