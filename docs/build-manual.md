@@ -9,11 +9,12 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 - [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
 - [ ] Six OLOV legs on hand. Plate is 11 cm across: keep that in mind at every mark below.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 6 × 6 cm, body and pad 5 cm, 10 cm tall.
-- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines) and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand, ALEX feet (2, 4 or 6 cm under the cabinets; height table before step 5).
+- [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines), the rail drill jig (1/8 in bore on the 19 mm line), two fitting centring plugs and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand, ALEX feet (2, 4 or 6 cm under the cabinets; height table before step 5).
 - [ ] Eight printed locating rings for the pads (`parts/structure/foot-ring.stl`, source beside it): 51 mm bore, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange with three countersunk holes for #6 × ⅝ in flat-head screws, open bottom. PETG or ABS, printed flange-down. Plus 24 × #6 × ⅝ in flat-head screws.
 - [ ] Two lengths of 2 × 2 × 3/16 in hot-rolled steel angle, cut to 213 cm (84 in) by Metal Supermarkets, ends deburred.
 - [ ] Four 10 × 3 in mending plates, 19 × #10 × 1 in pan-head screws (rails), 32 × #8 × ⅝ in pan-head screws (feet plates), 8 × #10 × ⅝ in screws with #10 washers (joining plates), two 5 mm gusseted 90° strut fittings (1-5/8 in channel size, two holes per leg), 6 × 3/8-16 × 1½ in hex bolts, grade 5 (one length for both rails), 6 × 3/8 nylon-insert nuts, 12 × 3/8 flat washers. Buy a few spares of each screw.
 - [x] VIVO crossbar measured 19¾ in (50.2 cm) centre to centre of its end collars: clamps at 40 cm from the corner put the poles exactly that far apart.
+- [ ] An automatic centre punch and cutting oil for the steel; a 5/64, 1/8, 7/32 and 7/16 in bit (the 7/16 cobalt).
 - [ ] Room cleared: the desk needs 252 × 317 cm of floor including the 3 cm wall gaps.
 
 ## 1. Drill the steel (bench)
@@ -113,6 +114,14 @@ Top A already has its legs and feet on it. With a helper, turn it over and stand
 | Lamp | base centred (183, 20), arm reaching toward the keyboard | on top A beside the Y60 |
 | Headset stand | base centred (28, 140), hook toward you | on top B |
 | Plant | centred (32, 298) | far end of top B, over ALEX 2 |
+
+### 8b. Wall-gap trim, before the final push to the walls
+
+1. With the desk in place against both walls, measure the gap between each top's raw back edge and the wall at five or six points along each wall. Set `gap` in `parts/accessories/wall-gap-common.scad` to the smallest value minus 1 mm and print the trim (cut list in `parts/README.md`).
+2. Two people, one at each ALEX unit: slide the whole desk 40 cm away from both walls. The ALEX units slide on their feet and the pads stay in their rings. Nothing comes apart.
+3. Build each chain on the edge from the corner outward: corner piece, 80 mm filler, clamp piece with its notch round the clamp back (the clamps are already tight from step 8), then the 240 mm segments, slotted ones where the cut list says, ending with the short piece. Butt every joint and push a connector tile up into the pockets.
+4. Through each lip hole, pilot 5/64 in, 10 mm deep, with the drill horizontal and the drill guide's **10 EDGE** step held against the raw edge. Drive a #4 × 1/2 in flat head into each. Two per segment, one per corner leg, one each side of a clamp notch.
+5. Slide the desk back until the ALEX units are at their step 5 wall distances. The trim's outer edge stops 1 mm short of the wall.
 
 Retighten every screw after two weeks.
 
