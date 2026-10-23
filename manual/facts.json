@@ -392,7 +392,9 @@
         "note": "OLOV max is 900"
       }
     },
-    "confidence": "SOURCE (optional; the model and all fixed numbers stay at 802/830)"
+    "confidence": "SOURCE (optional; the model and all fixed numbers stay at 802/830)",
+    "bottom_panel_rule": "measure the ALEX bottom panel at an edge: 14 mm or more is fine (the 12 ALEX pilot is 12 deep, the #6 x 5/8 screw reaches 9.9 mm through the foot's 6 mm roof, 4 mm of panel remains at 14); under 14 mm do not fit the feet",
+    "screw_depth_into_panel": 9.9
   },
   "steel": {
     "section": "2 x 2 x 3/16 in hot-rolled angle",
