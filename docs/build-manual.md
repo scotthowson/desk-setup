@@ -6,7 +6,7 @@ The interactive 3D model is at `index.html` (open it in a browser, or enable Git
 
 ## 0. Before you start
 
-- [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If 27 mm, shorten every screw into the top by 1 mm.
+- [ ] Both EKBACKEN tops measure 28 mm thick (calipers). If a top measures 27 mm, nothing changes: the deepest screw (the rail's #10 × 1 in, 20.6 mm in) still stops 6 mm short of the laminate. If it measures less than 27, stop and ask before drilling.
 - [ ] Six OLOV legs on hand. Plate is 10.5 cm across with five 5.5 mm holes on an 85 mm circle, neighbouring holes 50 mm apart (22 Oct 2026); the printed leg jig marks all five. Count the M4 screws in the boxes: five per leg, 30 in all.
 - [ ] Eight of your twelve round 4 in feet (four per ALEX, four spare). Plate 59.5 × 59.5 mm with four holes 46.8 mm apart (measured 23 Oct 2026: 41.6 mm between two neighbouring holes with the inside jaws, 52.0 across them with the outside jaws, so 5.2 mm holes), body and pad 5 cm, 10 cm tall.
 - [ ] Printed tools from `parts/tools/` (see `parts/README.md`) before any marking: the edge T-square (50/85/100/150 mm offsets and the feet-plate holes), the leg jig (an OLOV's centre and five plate holes at 10 or 15 cm from the edge), the feet corner jig (a far-corner foot and its four plate holes in one placement), the foot height gauge (102 mm), the wall gauge (65 and 30 mm), the ALEX corner template (ring centre and screw holes in one placement), the rail marking gauge (19 and 29 mm lines), the rail drill jig (1/8 in bore on the 19 mm line), two fitting centring plugs and the pilot drill guide. Optional, from `parts/cables/` and `parts/accessories/`: rail end caps, cable hooks and clips, power-bar cradles, cable tray, wall-gap strip, phone stand, ALEX feet (2, 4 or 6 cm under the cabinets; height table before step 5).
@@ -117,7 +117,7 @@ Top A already has its legs and feet on it; the ALEX has no rings yet. With a hel
 
 ### 8b. Wall-gap trim, before the final push to the walls
 
-1. With the desk in place against both walls, measure the gap between each top's raw back edge and the wall at five or six points along each wall. Set `gap` in `parts/accessories/wall-gap-common.scad` to the smallest value minus 1 mm and print the trim (cut list in `parts/README.md`).
+1. With the desk in place against both walls, measure the gap between each top's raw back edge and the wall at five or six points along each wall. Set `gap` in `parts/accessories/wall-gap-common.scad` from the smallest reading with this table: 27 mm → 26, 28 → 27, 29 → 28, 30 → 29 (as saved), 31 → 30, 32 → 31, 33 → 32 and print the trim (cut list in `parts/README.md`).
 2. Two people, one at each ALEX unit: slide the whole desk 40 cm away from both walls. The ALEX units slide on their feet and the pads stay in their rings. Nothing comes apart.
 3. Build each chain on the edge from the corner outward: corner piece, 80 mm filler, clamp piece with its notch round the clamp back (the clamps are already tight from step 8), then the 240 mm segments, slotted ones where the cut list says, ending with the short piece. Butt every joint and push a connector tile up into the pockets.
 4. Through each lip hole, pilot 5/64 in, 10 mm deep, with the drill horizontal and the drill guide's **10 EDGE** step held against the raw edge. Drive a #4 × 1/2 in flat head into each. Two per segment, one per corner leg, one each side of a clamp notch.

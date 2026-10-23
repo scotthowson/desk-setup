@@ -20,7 +20,8 @@
     "back_edge": "square, unfinished (wall side)",
     "max_fastener_depth": 21,
     "why_21": "28 mm particleboard with a thin laminate skin; a screw reaching the skin lifts it",
-    "confidence": "SOURCE; thickness MEASURE ON HARDWARE (expect 28)"
+    "confidence": "SOURCE; thickness MEASURE ON HARDWARE (expect 28)",
+    "if_27": "nothing changes: the deepest screw (rail #10 x 1, 20.6 in) still stops 6 mm short of the laminate; under 27, stop and ask"
   },
   "layout_cm": {
     "topA": {
@@ -588,12 +589,13 @@
     "retighten": "every screw after two weeks",
     "surface_height": "830 mm at all six outer corners, +/- 3 mm (plus ALEX feet height if fitted)",
     "trim_fitting": "manual step 8b: measure the gap at the wall, print, slide the desk 40 cm off both walls, fit the chain with connector tiles, pilot 10 EDGE horizontal, #4 x 1/2 screws, slide back until the wall gauge's 65 leg just fits at each ALEX",
-    "rings_by_trace": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method."
+    "rings_by_trace": "by tracing: stand the top on the bare cabinet with 3.5 cm of top showing all round (wall gauge 65 leg at the wall), pencil round each pad, lift the top off, set each ring on its circle (pencil line visible all round through the open bottom), pilot through the ring's own holes 3-4 mm, lift, finish with the 12 ALEX puck, three #6 x 5/8; stand the top up again and the pads drop in. The corner template is the check, not the method.",
+    "trim_gap_table": "smallest gap reading -> gap value: 27 -> 26, 28 -> 27, 29 -> 28, 30 -> 29 (as saved), 31 -> 30, 32 -> 31, 33 -> 32"
   },
   "tools_note": "the 3/8-16 bolt head and nut take a 9/16 in wrench or socket; two needed",
   "open_measurements": [
     "ALEX height with and without its stock feet (docs assume 700)",
-    "feet pad diameter (rings bored 51 for 50)",
+    "feet pad diameter (rings bored 52 for 50)",
     "EKBACKEN thickness (expect 28)",
     "VIVO top arm reach (about 89) and max opening (31 or more)",
     "delivered rail lengths and angle thickness (4.8)",
