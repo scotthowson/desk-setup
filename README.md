@@ -2,6 +2,10 @@
 
 L-shaped PC desk built from two IKEA EKBACKEN countertops (249 × 65 × 2.8 cm, brown walnut) on two ALEX units, six OLOV legs and two 2 × 2 × 3/16 in steel angle rails, with a VIVO STAND-V300CU triple monitor mount across the inside corner (Samsung Odyssey G5 32 in centre, two Acer XZ320QU 31.5 in curved sides, all landscape).
 
+[![Showcase film: the finished desk, the three screens from the seat, the steel under the walnut and the Y60](desk-showcase-source/poster-image.jpeg)](desk-showcase-source/desk-showcase.mp4)
+
+*30 s showcase film, 1920 × 1080: click the poster to play [`desk-showcase.mp4`](desk-showcase-source/desk-showcase.mp4). Rendered from the 3D model by [`desk-showcase-source/`](desk-showcase-source/README.md).*
+
 `docs/build-manual.md` is the source of truth for every number; everything else is kept in step with it.
 
 | What | Where |
@@ -11,6 +15,7 @@ L-shaped PC desk built from two IKEA EKBACKEN countertops (249 × 65 × 2.8 cm, 
 | Design review: verified specs, load paths, bill of materials, drilling schedule, structural assessment, open measurements | [`docs/design-review.md`](docs/design-review.md) |
 | Interactive 3D model (orbit, look under, toggle knee zone and labels) | [`index.html`](index.html), served by GitHub Pages at `https://scotthowson.github.io/desk-setup/` |
 | Top-down plan | [`docs/plan.svg`](docs/plan.svg) |
+| Showcase film (30 s, 1080p) and the renderer that makes it from the model | [`desk-showcase-source/desk-showcase.mp4`](desk-showcase-source/desk-showcase.mp4), [`desk-showcase-source/README.md`](desk-showcase-source/README.md) |
 | Printed parts: marking tools, locating rings, cable parts, wall-gap trim, optional ALEX feet, with print list and cut list | [`parts/README.md`](parts/README.md) |
 
 ## Key numbers
