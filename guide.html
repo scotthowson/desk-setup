@@ -145,6 +145,9 @@ a{color:var(--accent2)}
 <table id="tFast"></table>
 <h3>Tools</h3>
 <table id="tTools"></table>
+<h3>Drill bits</h3>
+<p>Four sizes do every hole. Sort them out of the bit case and keep them with the printed jigs; the jig bores are sized for these imperial bits (2.3 and 3.5 mm), so the metric near-misses do not fit.</p>
+<table id="tBits"></table>
 <h3>The printed helpers</h3>
 <p>Print everything in <code>parts/tools</code> and the eight rings in <code>parts/structure</code> before you start; <code>parts/README.md</code> has quantities and print settings. Two rules: never scale a printed tool in the slicer (its distances are the tool), and the three marking tools print lip-up and are turned over to use, so the lip hangs over an edge and the label reads correctly.</p>
 <table id="tHelpers"></table>
@@ -382,6 +385,13 @@ table('tFast', ['Fastener','Qty','Goes through','Into the top','Pilot'], [
   ['#6 × 5/8 in flat head','24','2.5 mm ring flange','ALEX top only, 13.4 mm','5/64 in, 12 mm deep (step 12 ALEX)'],
   ['3/8-16 × 1½ in bolt, 2 washers, nylon nut','4','fitting + rail A vertical leg','none','7/16 in, bench-drilled'],
   ['3/8-16 × 1½ in bolt, 2 washers, nylon nut','2','fitting + rail B leg + fitting','none','7/16 in, bench-drilled'],
+]);
+
+table('tBits', ['Bit','Holes','Through','Depth / guide'], [
+  ['5/64 in HSS','ring screws into the ALEX tops (24, plus 24 for optional ALEX feet); wall-gap trim screws (48, optional)','the ring\u2019s own holes; the trim\u2019s lip holes','12 mm, step 12 ALEX; 10 mm, step 10 EDGE'],
+  ['1/8 in HSS','OLOV plate pilots (30); feet plate pilots (32); joining plate pilots (8); rail screw pilots into the tops (19); first pass of the six fitting bolt holes in the rails','leg jig, feet corner jig or T-square; plate holes; rail holes; the slot plug in the fitting','15 mm, step 15 LEG; 12 mm, step 12 PLATE; 20 mm into the top, step 25 RAIL; through the steel'],
+  ['7/32 in HSS','the 19 rail screw holes in the rails\u2019 flat legs (9 in A, 10 in B)','the 1/8 in pilot made through the rail drill jig','through, 19 mm from the free edge, oil'],
+  ['7/16 in cobalt','the six fitting bolt holes in the rails\u2019 vertical legs (4 in A, 2 in B)','the 1/8 in pilot made through the slot plug, fitting off','through, 29 mm from the heel, slow, oil, 1/4 in in between if it labours'],
 ]);
 
 table('tTools', ['Tool','For'], [
