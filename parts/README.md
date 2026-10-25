@@ -26,7 +26,7 @@ Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-prev
 | accessories: wall-gap-strip, 240 mm | 15 | same |
 | accessories: wall-gap-strip-slot, 240 mm | 3 | same |
 | accessories: wall-gap-strip-clamp, 240 mm | 2 | same |
-| accessories: wall-gap-strip, short (set `seg`) | 2 × 80 (fillers), 1 × 50, 1 × 220 | same |
+| accessories: wall-gap-strip, short: `wall-gap-strip-80.stl`, `-50.stl`, `-220.stl` (pre-rendered with `seg` set) | 2 × 80 (fillers), 1 × 50, 1 × 220 | same |
 | accessories: wall-gap-connector | 26 (24 joints + 2 spare) | same |
 | accessories: phone-stand | 1 | any |
 | accessories: alex-foot (optional, one height: 20, 40 or 60) | 8 | PETG, 5 walls, 50% infill |
