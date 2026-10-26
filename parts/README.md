@@ -15,6 +15,7 @@ Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-prev
 | tools: edge-t-square, alex-corner-template, rail-marking-gauge, pilot-drill-guide, rail-drill-jig | 1 each | any (PETG for the jig) |
 | tools: leg-jig, feet-corner-jig, foot-height-gauge, wall-gauge | 1 each | any |
 | tools: fitting-centring-plug | 2 | any |
+| tools: rail-setback-gauge | 2 | any |
 | structure: foot-ring | 8 | PETG or ABS |
 | structure: rail-end-cap-A | 1 | PETG or ABS |
 | structure: rail-end-cap-B | 2 | PETG or ABS |
@@ -56,6 +57,7 @@ Totals: 20 full-length pieces (15 plain, 3 slotted, 2 clamp), 4 short (two 80 mm
 | `feet-corner-jig` | Drops over a far corner of a top (face down), fences against both edges: a foot's centre 8.5 cm from each edge and its four plate holes, square to the edges, in one placement. F2, F4, F7, F8 need no measuring; F1, F3, F5, F6 (34.5 cm from the end) use the T-square's 85 hole. | as saved (fences up), 2.5 mm plate; turn over to use. |
 | `wall-gauge` | An L with a 65 mm leg (ALEX back to wall) and a 30 mm leg (top's raw edge to wall). Hold it in the gap while you place a cabinet or slide the desk back; no tape. | flat, any filament. |
 | `foot-height-gauge` | A C with a 102.0 mm inside height. Stand a foot on its pad, slide the gauge over it from the side, wind the pad until the gauge just slides on without rocking. All eight feet identical, no ruler. | flat, 100% infill. |
+| `rail-setback-gauge` | A 120 mm bar with a lip. Top face down: hook the lip over the front edge and slide the rail until its vertical leg's outer face touches the bar's end; the rail is then exactly 12 cm back. Two of them, one near each end, hold the setback while you clamp; one checks the middle. Replaces the three tape readings in manual step 4. Labelled RAIL 120 on both faces. | as saved (on its side), any filament. Print 2. |
 | `rail-marking-gauge` | Sits on a face of the angle with its lip over the edge. Pencil in the **19** notch along the flat leg's free edge gives the screw line; **29** along the vertical leg's heel edge gives the bolt line. The notches put a 0.8 mm pencil point on exactly 19.0 and 29.0. | as saved (lip up), 3 mm body 20 mm wide, 6 mm lip; turn over to use. |
 | `rail-drill-jig` | Hooks over the flat leg's free edge like the gauge and puts a 1/8 in bore exactly on the 19 mm screw line. Slide to a station line (sight grooves on both sides), hold, drill the pilot through it: square, no wandering. Pull it off and open the hole to 7/32 in; the bit follows the pilot. All 19 rail holes. | as saved (lip up), 28 × 24 × 6 mm body; turn over to use. PETG. |
 | `fitting-centring-plug` | A slot-shaped plug that drops into a strut fitting's 21 × 12 mm slot with a 1/8 in bore dead centre, so the pilot lands on the slot's centre instead of somewhere along 11.5 mm of slot. Clamp the fitting on its heel mark, a plug in each of the leg's two slots, drill both pilots; then open each pilot to 7/16 in with the fitting off. Two plugs so the fitting is never nudged between the two holes. | head down, any filament. Print 2. |
