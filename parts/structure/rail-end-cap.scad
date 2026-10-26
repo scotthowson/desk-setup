@@ -4,8 +4,8 @@
 // edge of the flat leg, and both faces and the bottom edge of the vertical leg.
 // Three rail ends take a cap (rail B's corner end is bolted to rail A and takes none), and
 // an L-section end is HANDED: the two ends of one rail need mirror-image caps. Render both:
-//   openscad -D hand=1 -o rail-end-cap-A.stl rail-end-cap.scad    (rail A's far end: print 1)
-//   openscad -D hand=-1 -o rail-end-cap-B.stl rail-end-cap.scad   (rail A's wall end and rail B's far end, which is the mirror of A's far end about the desk's diagonal: print 2)
+//   openscad -D hand=1 -o rail-end-cap-A-x1.stl rail-end-cap.scad    (rail A's far end: print 1)
+//   openscad -D hand=-1 -o rail-end-cap-B-x2.stl rail-end-cap.scad   (rail A's wall end and rail B's far end, which is the mirror of A's far end about the desk's diagonal: print 2)
 // A cap that does not go on is the other hand. Print with the closed end down. PETG or ABS;
 // a dab of hot glue if it is loose.
 

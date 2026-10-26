@@ -10,7 +10,8 @@ You are continuing work on Scott's L-shaped PC desk build. Everything here is a 
 | `docs/design-review.md` | Engineering review: verified IKEA specs, load paths, bill of materials, hole schedule, structural assessment, purchasing decision, open measurements | Only to correct a measured fact |
 | `docs/build-manual.md` | Build order with every measurement and the final checks | Only to correct a measured fact |
 | `docs/plan.svg` | Static top-down plan | Regenerate if leg or clamp positions change |
-| `parts/` | Printed parts in `tools/`, `structure/`, `cables/`, `accessories/`, each an OpenSCAD source with its STL and preview; `parts/README.md` lists every one with quantity and print settings. Re-render with `openscad -o name.stl name.scad`. | Yes, when a measured dimension changes (pad diameter, angle size, wall gap, feet-plate hole spacing) |
+| `parts/` | Printed parts in `tools/`, `structure/`, `cables/`, `accessories/`, each an OpenSCAD source with its STL (named with the print count, `-x8`) and preview; `parts/README.md` lists every one with quantity and print settings. Re-render with `openscad -o name.stl name.scad`. | Yes, when a measured dimension changes (pad diameter, angle size, wall gap, feet-plate hole spacing) |
+| `components/underware/` | Our own optional add-on, not in the manual: openGrid Lite tiles and Underware channels under the tops (third-party OpenSCAD sources, CC-BY-NC-SA, need BOSL2), rendered STLs named with their print count (`-x10`), and the plan in its README; the model shows it under the Underware toggle. | Yes, with the model |
 | `guide.html` | Print-ready build guide: every measurement, dimensioned drawings of each top face down, rails, ALEX rings, the corner joint and the desk layout. All numbers live in the `D` object at the top of its script and every table and drawing is rendered from it. | Yes: change `D` whenever `docs/build-manual.md` changes |
 
 ## The design in one paragraph

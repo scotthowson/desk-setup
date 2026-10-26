@@ -4,7 +4,7 @@
 // desk sliding sideways on the cabinets. Eight needed (four per ALEX).
 //
 // Print flange-down, flat on the bed, no supports. PETG or ABS, 3+ perimeters, 30% infill.
-// Render:  openscad -o foot-ring.stl foot-ring.scad
+// Render:  openscad -o foot-ring-x8.stl foot-ring.scad
 
 pad_d      = 50;    // measured pad diameter, mm. Re-measure yours with calipers before printing.
 clearance  = 2.0;   // added to the pad: bore 52 for a 50 pad, so a ring placed on a pencil trace of the pad (within 1 mm) still takes it

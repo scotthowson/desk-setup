@@ -1,6 +1,6 @@
 # Printed parts
 
-Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-preview.png` beside it. Change a number at the top of the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm.
+Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-preview.png` beside it. The STL name ends in `-x` and the number to print (`foot-ring-x8.stl`: print eight). Change a number at the top of the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm.
 
 **Printers:** everything fits the Bambu P1S and A1 (256 × 256 × 256 mm; the longest part is 240 mm, the tallest 200). **Every STL is saved in its print orientation**: put it on the bed as it opens, no rotating, no supports. Every tool is named on both faces: the face you see in the slicer reads as printed, and the face you see in use (the lipped tools are turned over) reads after the flip. Bambu defaults (0.2 mm layers, 3 walls) are fine; PETG where the table says so, PLA for the rest. **Never scale anything in the slicer**: the tools' distances are the tool.
 
@@ -27,12 +27,14 @@ Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-prev
 | accessories: wall-gap-strip, 240 mm | 15 | same |
 | accessories: wall-gap-strip-slot, 240 mm | 3 | same |
 | accessories: wall-gap-strip-clamp, 240 mm | 2 | same |
-| accessories: wall-gap-strip, short: `wall-gap-strip-80.stl`, `-50.stl`, `-220.stl` (pre-rendered with `seg` set) | 2 × 80 (fillers), 1 × 50, 1 × 220 | same |
+| accessories: wall-gap-strip, short: `wall-gap-strip-80-x2.stl`, `-50-x1.stl`, `-220-x1.stl` (pre-rendered with `seg` set) | 2 × 80 (fillers), 1 × 50, 1 × 220 | same |
 | accessories: wall-gap-connector | 26 (24 joints + 2 spare) | same |
 | accessories: wall-gap-end-cap | 2 | same |
 | accessories: phone-stand | 1 | any |
 | accessories: alex-foot (optional, one height: 20, 40 or 60) | 8 | PETG, 5 walls, 50% infill |
 | accessories: alex-foot-pad (optional, with the feet) | 8 | TPU 95A |
+
+Optional openGrid tiles and Underware channels under the tops live in `components/underware/` (own README, print counts in the file names).
 
 Screws to buy for the printed parts: 46 × #6 × 5/8 in flat head (24 rings, 6 clips, 4 cradles, 12 trays) and 48 × #4 × 1/2 in flat head (wall-gap trim, two per piece). The optional ALEX feet take 24 more #6 × 5/8 in.
 

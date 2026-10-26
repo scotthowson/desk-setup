@@ -3,7 +3,7 @@
 // back edge, and two #4 x 1/2 in flat-head screws through the lip go sideways into that edge,
 // 14 mm below the surface. Connector pockets at both ends (see wall-gap-common.scad).
 // 240 mm segments, butted end to end; set `seg` for the short pieces (README cut list):
-//   openscad -D seg=80 -o wall-gap-strip-80.stl wall-gap-strip.scad
+//   openscad -D seg=80 -o wall-gap-strip-80-x2.stl wall-gap-strip.scad
 // Measure the real gap after the desk is in and set `gap` in wall-gap-common.scad to the
 // SMALLEST value minus 1. The file is in PRINT orientation: top face down, lip up, no supports.
 

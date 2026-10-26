@@ -80,6 +80,7 @@ label.t input{accent-color:var(--accent);margin:0}
   <div class="grp"><span class="lbl">Show</span>
     <label class="t"><input type="checkbox" id="tChair" checked> Chair &amp; setup</label>
     <label class="t"><input type="checkbox" id="tKnee"> Knee zone</label>
+    <label class="t"><input type="checkbox" id="tUnder"> Underware</label>
     <label class="t"><input type="checkbox" id="tXray"> See-through tops</label>
     <label class="t"><input type="checkbox" id="tLabels"> Labels</label>
     <label class="t"><input type="checkbox" id="tWalls" checked> Walls</label>
@@ -150,6 +151,8 @@ label.t input{accent-color:var(--accent);margin:0}
     pot:    new THREE.MeshStandardMaterial({color:0xc7b8a3, roughness:0.8}),
     orange: new THREE.MeshStandardMaterial({color:0xd9541e, roughness:0.6}),
     orange2:new THREE.MeshStandardMaterial({color:0xe8783c, roughness:0.6}),
+    grid:   new THREE.MeshStandardMaterial({color:0x8c9298, roughness:0.7}),
+    chan:   new THREE.MeshStandardMaterial({color:0x3f4a56, roughness:0.6}),
     sapele: new THREE.MeshStandardMaterial({color:0x6b3f2a, roughness:0.6}),
   };
 
@@ -226,6 +229,28 @@ label.t input{accent-color:var(--accent);margin:0}
 
   // Knee zone: seat at the corner, knees sweep x 20–120 under A and y 20–120 under B
   const knee = new THREE.Group(); knee.add(box(20,120,0.2,Y0-0.2,20,65,M.knee,false), box(20,65,0.2,Y0-0.2,65,120,M.knee,false)); knee.visible=false; scene.add(knee);
+
+  // ---- Underware (optional): openGrid Lite tiles (4 mm) screwed to the undersides, Underware channels (26.4 wide, 22 tall) snapped into them.
+  // One grid for everything, cells 28 mm from the origin (16, 16). One continuous run: from the ALEX 1 end along row 2 behind rail A, an L at the corner,
+  // down column 4 (x 24.4-27.2) between L1's plate and the clamp plate, a hop under rail A's vertical leg between the joining plates, then on down column 4
+  // behind rail B. A T drops toward the wall under each wall-gap slot (x 100-124 and y 100-124). Power bar on ALEX 1's top panel, fed from the Y60 slot.
+  const under = new THREE.Group(); under.visible=false;
+  const G=16, CELL=2.8, TT=0.4, CH=2.2, CW=2.64, c=k=>G+k*CELL;
+  const tile=(x0,x1,z0,z1)=>under.add(box(x0+0.05,x1-0.05,Y0-TT,Y0,z0+0.05,z1-0.05,M.grid,false));
+  for(let i=0;i<8;i++) tile(c(4)+i*22.4, c(4)+(i+1)*22.4, c(0), c(4));   // 8 x 4 tiles behind rail A, x 27.2-206.4, y 16-27.2
+  tile(c(2), c(4), c(2), c(11));                                            // 2 x 9 tile, corner column, x 21.6-27.2, y 21.6-46.8 (L1 plate ends at x 20.25)
+  tile(c(2), c(4), c(14), c(23));                                           // 2 x 9 tile under rail A's hop, y 55.2-80.4 (joining plate P1 ends at x 18.8)
+  for(let i=0;i<3;i++) tile(c(0), c(4), c(23)+i*22.4, c(23)+(i+1)*22.4);  // 8 x 4 tiles behind rail B, x 16-27.2, y 80.4-147.6
+  function chanX(x0,x1,z0){ const g=new THREE.Group(); g.add(box(x0,x1,Y0-TT-CH,Y0-TT,z0+0.08,z0+0.28,M.chan,false), box(x0,x1,Y0-TT-CH,Y0-TT,z0+CW-0.2,z0+CW,M.chan,false), box(x0,x1,Y0-TT-CH,Y0-TT-CH+0.3,z0+0.08,z0+CW,M.chan,false)); under.add(g); }
+  function chanZ(z0,z1,x0){ const g=new THREE.Group(); g.add(box(x0+0.08,x0+0.28,Y0-TT-CH,Y0-TT,z0,z1,M.chan,false), box(x0+CW-0.2,x0+CW,Y0-TT-CH,Y0-TT,z0,z1,M.chan,false), box(x0+0.08,x0+CW,Y0-TT-CH,Y0-TT-CH+0.3,z0,z1,M.chan,false)); under.add(g); }
+  chanX(c(5), c(33), c(1)); chanX(c(36), c(68), c(1));                     // row 2 straights: 8+8+8+4 and 8+8+8+8
+  chanX(c(33), c(36), c(1)); chanZ(c(0), c(1), c(34)+0.08);               // T under the slot x 100-124, stem toward the wall
+  chanX(c(3), c(5), c(1)); chanZ(c(1), c(3), c(3)+0.08);                   // L at the corner: row 2 into column 4
+  chanZ(c(3), c(11), c(3)+0.08);                                            // column 4 down to rail A: I-8
+  chanZ(c(14), c(33), c(3)+0.08); chanZ(c(36), c(47), c(3)+0.08);         // column 4 beyond the hop: 8+8+3 and 8+3
+  chanZ(c(33), c(36), c(3)+0.08); chanX(c(2), c(3), c(34)+0.08);          // T under the slot y 100-124, stem toward the wall
+  under.add(box(223, 231, 70, 73.5, 16, 48, M.black));                     // power bar lying on ALEX 1's top panel, between the rings
+  scene.add(under);
 
   // ---- Setup ----
   const setup = new THREE.Group();
@@ -460,6 +485,7 @@ label.t input{accent-color:var(--accent);margin:0}
   document.querySelectorAll('button.v').forEach(b=>b.addEventListener('click',()=>goView(b.dataset.view)));
   document.getElementById('tChair').addEventListener('change',e=>setup.visible=e.target.checked);
   document.getElementById('tKnee').addEventListener('change',e=>knee.visible=e.target.checked);
+  document.getElementById('tUnder').addEventListener('change',e=>under.visible=e.target.checked);
   document.getElementById('tLabels').addEventListener('change',e=>labels.visible=e.target.checked);
   document.getElementById('tWalls').addEventListener('change',e=>walls.visible=e.target.checked);
   const xrayMat = new THREE.MeshStandardMaterial({color:0x8a6a50, transparent:true, opacity:0.28, roughness:0.6, depthWrite:false});

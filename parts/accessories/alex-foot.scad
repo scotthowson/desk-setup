@@ -8,7 +8,7 @@
 // centre and the three screws (its inner holes) with the unit on its back. Unscrew the IKEA
 // stock feet first. Three #6 x 5/8 in flat heads per foot, 10 mm into the panel.
 // A TPU pad (alex-foot-pad.scad) presses into the floor end so it neither slips nor scratches.
-// Render each height:  openscad -D h=60 -o alex-foot-60.stl alex-foot.scad
+// Render each height:  openscad -D h=60 -o alex-foot-60-x8.stl alex-foot.scad
 // PRINT orientation: top face (the one against the ALEX) on the bed, wells open upward, no
 // supports. PETG, 5 walls, 50% infill (the wells make it mostly wall anyway).
 
