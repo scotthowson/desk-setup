@@ -89,7 +89,7 @@ def build(kind, only=None, tag=""):
     suffix = f"-{tag}" if tag else ""
     hp = os.path.join(OUT, f"{kind}{suffix}.html"); open(hp, "w").write(html)
     pdf = os.path.join(OUT, f"{kind}{suffix}.pdf")
-    subprocess.run(["google-chrome", "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", hp], capture_output=True, timeout=300)
+    subprocess.run([next((b for b in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser") if __import__('shutil').which(b)), "google-chrome"), "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", hp], capture_output=True, timeout=300)
     name = {"manual": "IKEA-Style-Assembly-Manual.pdf", "templates": "Drilling-and-Placement-Templates.pdf", "checklist": "Assembly-Verification-Checklist.pdf"}[kind]
     if not tag and not only:
         shutil.copy(pdf, os.path.join(ROOT, name))

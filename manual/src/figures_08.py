@@ -391,7 +391,8 @@ def fig_joint_plan():
         x = cm(xc)
         c.poly(R(x - pw / 2, x + pw / 2, py0, py0 + pl), fill=GREY["mid"])
         for h in D["plateHoles"]:
-            c.hole((x, py0 + cm(h)), 4.8)
+            for r in (-25, 25):   # two rows, 5.0 cm apart
+                c.hole((x + r, py0 + cm(h)), 4.8)
         c.balloon((x + pw / 2 - 3, py0 + pl - 12), (x + 80, py0 + pl + 40), "P11")
         c.text((x + 18, py0 + pl / 2 - 26), name, size=3.4, weight="bold", rotate=-90)
     x2 = cm(D["plates"][1][1]) + pw / 2

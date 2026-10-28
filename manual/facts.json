@@ -511,12 +511,12 @@
     },
     "H04": {
       "name": "#10 x 5/8 in pan head",
-      "qty": 8,
-      "use": "joining plates"
+      "qty": 16,
+      "use": "joining plates, 8 each (two rows of four)"
     },
     "H05": {
       "name": "#10 flat washer",
-      "qty": 8,
+      "qty": 16,
       "use": "under H04"
     },
     "H06": {

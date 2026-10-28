@@ -87,7 +87,7 @@ Six legs sit along the two wall edges, one of them in the corner square under VI
 | Rail A | x 1–214, flat leg y 48–53, vertical leg at y 53 | 12 cm back from A's front edge | 213 cm |
 | Rail B | y 53–266, flat leg x 48–53, vertical leg at x 53 | 12 cm back from B's front edge | corner end against rail A's vertical leg; first 12 cm lie under A, crossing the joint; stops 8.5 cm short of ALEX 2 |
 | Corner fittings | two 5 mm gusseted 90° strut fittings, one on the outside corner (A's vertical leg toward +x, B's outer face) and one on the inside corner (A's vertical leg toward −x, B's inner face) | rail B's end sandwiched between them, 29 mm below the top | 3/8 in bolts: four through rail A, two through rail B and both fittings |
-| Joining plates | 10 × 3 × 0.12 in, centred x 15 and x 35, spanning y 53.3–78.7 | long axis across the joint; four holes along the plate at 2.0, 7.0, 18.4, 23.4 cm from one end, landing at y 55.3 and 60.3 in A, 71.7 and 76.7 in B, all used | flushness only |
+| Joining plates | 10 × 3 × 0.12 in, centred x 15 and x 35, spanning y 53.3–78.7 | long axis across the joint; two rows of four holes (rows 5.0 cm apart, 1.3 cm from each long edge; along the plate at 2.0, 7.0, 18.4, 23.4 cm from one end), landing at y 55.3 and 60.3 in A, 71.7 and 76.7 in B, all eight used | flushness only |
 
 **IKEA spacing check (their rule: ≤ 80 cm between supports, ≤ 25 cm overhang).** Back edge of A: corner → 65 → 140 → 209.5: gaps 65 (overhang, see below), 75, 69.5. Wall edge of B: joint 65 → 85 → 160 → 235 → 274.5: gaps 20, 75, 75, 39.5. Side edge of A: corner → 42 → joint 65: gaps 42, 23. Front edges: the rule can't be met with legs without putting them in the knee zone, so the rails take over there; that is my engineering substitution, not IKEA's guidance. Overhangs: 12 cm beyond each rail, 3.5 cm beyond each ALEX, 10–15 cm beyond each wall leg, and the back-left corner tip, which is 43 cm from the L1–L2 line. That tip is the one knowing exception to the 25 cm rule: it carries only the ELLOVEN, and the mount's load goes into the clamps at the edges, which bear near L1 and L2, not at the tip. **Knee zone:** you sit at the inside corner, so your knees sweep the corner square and about 55 cm under each wing from the corner (x 20–120 under A, y 20–120 under B). Every leg is on a wall edge at least 10 cm outside that sweep.
 
@@ -104,7 +104,7 @@ Everything beyond what you own comes to roughly CAD $215–230 in parts (the ste
 | Fitting bolts, rail B | 3/8-16 × 1½ in hex bolt, zinc (through both fittings and the leg) | 2 | $2 | same |  |
 | Fitting nuts | 3/8-16 nylon-insert lock nut | 6 | $4 | same |  |
 | Fitting washers | 3/8 in flat washer (under head and nut) | 12 | $3 | same |  |
-| Joining-plate screws | #10 × ⅝ in (16 mm) pan-head wood screw with #10 flat washer (the 10 × 3 in plates have oversized holes) | 8 | $3 | same | Skip if your plates came with screws ≤ 16 mm |
+| Joining-plate screws | #10 × ⅝ in (16 mm) pan-head wood screw with #10 flat washer (the 10 × 3 in plates have oversized holes) | 16 | $5 | same | Skip if your plates came with screws ≤ 16 mm |
 | Feet locating rings | 3D-printed (`parts/structure/foot-ring-x8.stl`): 52 mm bore for the 50 mm pad, 3 mm wall, 10 mm ring on a 75 mm × 2.5 mm flange, three countersunk #6 holes, open bottom; PETG or ABS | 8 | filament | printed at home | Replaces the corner braces, which could not bridge the 10 cm feet |
 | Ring screws, into ALEX top | #6 × ⅝ in (16 mm) | 24 | $3 | Canadian Tire / Rona | ALEX top panel 15.9 mm (5/8 in, measured 23 Oct 2026): 13.4 mm in, 2.5 mm remains |
 | Degreaser | Acetone or mineral spirits, small can, plus rags | 1 | $8 | same |  |
@@ -146,7 +146,7 @@ All steel drilling happens on the bench before anything touches the tops; the on
 | Rail A, vertical leg | fitting bolts | 7/16 in (11.1 mm) | on the bench, template-drilled through a fitting: heel at 52.0 cm from the wall end with legs toward the far end, then heel at 51.5 cm with legs toward the wall end; 29 mm down from the heel edge | 4 |
 | Rail B, vertical leg | fitting bolts | 7/16 in | on the bench, template-drilled: heel at the corner end, legs toward the far end, 29 mm down; both fittings share these two holes | 2 |
 | Tops, under each rail hole | pilot | 1/8 in (3.2 mm), 20 mm deep | through the rail hole, in place | 19 |
-| Tops, joining plates | pilot | 1/8 in, 12 mm deep | through the plate holes, in place | 8 |
+| Tops, joining plates | pilot | 1/8 in, 12 mm deep | through the plate holes, in place | 16 |
 
 Edge clearances: screw holes sit 19 mm from the flat leg's edge and bolt holes about 22 mm from the vertical leg's bottom edge, both more than three hole diameters. Nothing is closer than 4 cm to any particleboard edge; the two rail-B screws into A's front strip are 4.5 and 9.5 cm from A's front edge. The wall-gap trim's #4 × ½ in screws go into the raw back edge itself, 14 mm below the surface, and are the one deliberate exception: they carry 30 g of plastic.
 
