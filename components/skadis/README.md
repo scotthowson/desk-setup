@@ -25,7 +25,9 @@ Three bow-tie keys per joint, in pockets cut from the **back** of both tiles, 3.
 - The front skin means nothing shows and nothing can come out the front.
 - A 0.3 mm lip round the back of each pocket snaps over the key: push it in with a thumb until it clicks, and it cannot fall out the back.
 
-Keys sit at cell corners (40, 120, 200 mm along each edge), where the pattern leaves 2.5 mm of solid on each side. A 0.1 mm slop is built in; if a key is tight, a tap with a mallet seats it; if loose, a drop of CA glue.
+Keys sit at cell corners (40, 120, 200 mm along each edge), where the pattern leaves 2 mm of solid on each side.
+
+The keys also keep the pattern true across the joint. The pockets are cut in the same print as the slots, on the same 40 mm grid, so a seated key holds the two tiles within 0.1 mm of each other along the joint, and butting the edges fixes them across it. The neighbour's first slot then lands exactly 40 mm from this tile's last, row after row, however many tiles you add. The key is 13 × 11 mm with a 5 mm waist, 3.4 mm thick. A 0.1 mm slop is built in; if a key is tight, a tap with a mallet seats it; if loose, a drop of CA glue.
 
 ## The desk mount (MakerWorld 2780289, measured from its 3MF)
 
@@ -41,7 +43,7 @@ The board rests on the foot frame's ledge, 12 mm above the desk, with the frame'
 | `skadis-L1-x1.stl` `skadis-M1-x1.stl` `skadis-R1-x1.stl` | single-row board, with the skirt | top and bottom (+ left / right) |
 | `skadis-key-x24.stl` | every joint, 3 each | |
 
-Outside edges are chamfered 1.5 mm on the front and have no pockets. Joint edges have the pockets. A tile is 331 g (346 g with the skirt), a key 0.6 g.
+Outside edges are chamfered 1.5 mm on the front and have no pockets. Joint edges have the pockets. A tile is 331 g (346 g with the skirt), a key 0.7 g.
 
 Boards and what to print:
 

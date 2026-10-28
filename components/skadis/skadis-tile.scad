@@ -38,7 +38,7 @@ lift = 12;                 // skirt below the bottom row: the frame lifts the bo
 clamp_w = 40; base_w = 60; base_h = 4;   // the mount's upright, and its foot plate
 notches = [];                            // no notches: the bottom edge is straight and sits flush in the clamps; add centres (mm from the left) if a frame's foot needs one
 key_at = [40, 120, 200];   // key centres along each joint, mm from the tile's left or bottom edge
-key_len = 13; key_neck = 6; key_tip = 10; key_depth = 3.5; slop = 0.1; lip = 0.3; lip_h = 0.5;
+key_len = 13; key_neck = 5; key_tip = 11; key_depth = 3.5; slop = 0.1; lip = 0.3; lip_h = 0.5;   // a real dovetail: 11 at the tips, 5 at the waist
 
 outer_top    = pos == "TL" || pos == "T" || pos == "TR" || pos == "L1" || pos == "M1" || pos == "R1";
 outer_bottom = pos == "BL" || pos == "B" || pos == "BR" || pos == "L1" || pos == "M1" || pos == "R1";
