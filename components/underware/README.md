@@ -23,7 +23,7 @@ Both need the BOSL2 library in OpenSCAD's library path (`git clone https://githu
 | `channel-T-x2.stl` (3 × 2 cells, branch) | 2 | 16 | same |
 | `channel-L-x1.stl` (2 × 2 cells, corner) | 1 | 11 | same |
 
-Total about 0.85 kg. Black PETG for the tiles. Channels black too, or one accent colour if you want the run to show.
+Total about 0.85 kg. Also here, not in the plan: `tile-8x9-lite.stl` (224 × 252, the deepest tile behind rail A, 60 g) and `tile-9x9-lite.stl` (252 × 252, the biggest a 256 mm bed takes, 68 g) for a wall, a cabinet side or anywhere you want more openGrid; print as many as you need. Black PETG for the tiles. Channels black too, or one accent colour if you want the run to show.
 
 Re-render with the parameters the STLs were made with:
 

@@ -26,7 +26,7 @@ Screws: countersunk for #8 or M4 at every second cell corner (an 80 mm grid, alw
 
 | File | Print | Grams (PETG) | Print |
 | --- | --- | --- | --- |
-| `skadis-6x6-x4.stl` (240 × 240 × 5, 36 + 36 slots) | 4 for a 48 × 48 cm board; add tiles for any size | about 190 | flat, as saved, 0.2 mm layers, 4 walls, PETG |
+| `skadis-6x6-x4.stl` (244 × 244 × 5 with the tabs, 72 slots) | 4 for a 48 × 48 cm board; add tiles for any size | 333 | flat, as saved, 0.2 mm layers, 4 walls, PETG |
 
     openscad -D cols=6 -D rows=6 -o skadis-6x6-x4.stl skadis-board.scad
 
