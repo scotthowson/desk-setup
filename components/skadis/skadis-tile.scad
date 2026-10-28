@@ -19,10 +19,10 @@
 // Desk mount (makerworld 2780289, measured from its 3MF): the board rests on the foot
 // frame's ledge, `lift` mm above the desk, with the frame's 40 x 12 mm upright behind it
 // and the frame screw (4.8 x 14 shank) through any slot of the bottom row. Bottom tiles get
-// a `lift` mm skirt so the board reaches the desk, notched where each frame stands: a
-// `clamp_w` wide notch the full skirt height for the upright, and a `base_w` x `base_h`
-// notch for the frame's foot plate. Put the notch centres in `notches` (mm from the tile's
-// left edge). Set lift = 0 for no skirt.
+// a `lift` mm skirt so the board reaches the desk with a straight bottom edge that sits
+// flush in the clamps. `notches` is empty; if a frame's foot plate ever needs clearance,
+// add notch centres (mm from the tile's left edge) and the `clamp_w` / `base_w` x `base_h`
+// cuts come back. Set lift = 0 for no skirt.
 //
 // Positions, rendered as skadis-<pos>.stl: TL T TR / L C R / BL B BR for a board of two or
 // more rows; L1 M1 R1 for a single-row board (top and bottom both outside).
@@ -36,7 +36,7 @@ slot_w = 5; slot_h = 15;
 chamfer = 1.5;             // on the front face along outer edges
 lift = 12;                 // skirt below the bottom row: the frame lifts the board this much off the desk
 clamp_w = 40; base_w = 60; base_h = 4;   // the mount's upright, and its foot plate
-notches = [cols * pitch / 2];            // notch centres along the bottom edge, mm from the left
+notches = [];                            // no notches: the bottom edge is straight and sits flush in the clamps; add centres (mm from the left) if a frame's foot needs one
 key_at = [40, 120, 200];   // key centres along each joint, mm from the tile's left or bottom edge
 key_len = 13; key_neck = 6; key_tip = 10; key_depth = 3.5; slop = 0.1; lip = 0.3; lip_h = 0.5;
 

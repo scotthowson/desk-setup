@@ -29,7 +29,7 @@ Keys sit at cell corners (40, 120, 200 mm along each edge), where the pattern le
 
 ## The desk mount (MakerWorld 2780289, measured from its 3MF)
 
-The board rests on the foot frame's ledge, 12 mm above the desk, with the frame's 40 × 12 mm upright behind it and its 60 × 4 mm foot plate on the desk. The frame screw's 4.8 × 14 mm shank goes through any slot of the bottom row into the frame's window, nut behind. So the slots need no change, and bottom tiles get a 12 mm **skirt** that reaches the desk, notched 40 wide for the upright and 60 × 4 for the foot plate. One notch per bottom tile, centred, by default; move or add notches with `notches = [x, x, ...]` (mm from the tile's left edge) and set `clamp_w`, `base_w`, `base_h`, `lift` if your measurements differ. `lift = 0` removes the skirt.
+The board rests on the foot frame's ledge, 12 mm above the desk, with the frame's 40 × 12 mm upright behind it and its 60 × 4 mm foot plate on the desk. The frame screw's 4.8 × 14 mm shank goes through any slot of the bottom row into the frame's window, nut behind. So the slots need no change, and bottom tiles get a 12 mm **skirt** with a straight bottom edge that sits flush in the clamps and reaches the desk. No notches by default; if a frame's foot plate ever needs clearance, `notches = [x, x, ...]` (mm from the tile's left edge) cuts a 40 wide notch for the upright and a 60 × 4 one for the plate. `lift = 0` removes the skirt.
 
 ## Pieces
 
@@ -37,7 +37,7 @@ The board rests on the foot frame's ledge, 12 mm above the desk, with the frame'
 | --- | --- | --- |
 | `skadis-TL-x1.stl` `skadis-T-x1.stl` `skadis-TR-x1.stl` | top row | top (+ left / right) |
 | `skadis-L-x1.stl` `skadis-C-x1.stl` `skadis-R-x1.stl` | middle rows | left / none / right |
-| `skadis-BL-x1.stl` `skadis-B-x1.stl` `skadis-BR-x1.stl` | bottom row, with the skirt | bottom (+ left / right) |
+| `skadis-BL-x1.stl` `skadis-B-x1.stl` `skadis-BR-x1.stl` | bottom row, with the skirt, straight bottom edge | bottom (+ left / right) |
 | `skadis-L1-x1.stl` `skadis-M1-x1.stl` `skadis-R1-x1.stl` | single-row board, with the skirt | top and bottom (+ left / right) |
 | `skadis-key-x24.stl` | every joint, 3 each | |
 
@@ -53,18 +53,18 @@ Boards and what to print:
 | 3 × 2 (72 × 49 cm) | TL, T, TR, BL, B, BR | 21 |
 | 3 × 3 (72 × 73 cm) | TL, T, TR, L, C, R, BL, B, BR | 36 |
 
-Two frames hold a 2-wide board, three a 3-wide one, one under each bottom tile's notch.
+Two frames hold a 2-wide board, three a 3-wide one, one under each bottom tile.
 
 ## Print
 
-Tiles: **front face down, as saved**, 0.2 mm layers, 4 walls, PETG; the textured plate becomes the front. No supports. Keys: flat as saved, 100 % infill, print the whole `-x24` plate; spares weigh nothing.
+Tiles: **front face down, as saved**, 0.2 mm layers, 3 to 4 walls, 3 top and bottom layers, 15 to 20 % gyroid, PETG; the textured plate becomes the front. No supports. Keys: flat as saved, same profile (a 13 × 10 × 3.4 key is nearly all walls anyway), print the whole `-x24` plate; spares weigh nothing.
 
     openscad -D 'pos="BL"' -o skadis-BL-x1.stl skadis-tile.scad      # TL T TR L C R BL B BR L1 M1 R1
     openscad -o skadis-key-x24.stl skadis-key.scad
 
 Assembly: lay the tiles face down on a flat surface, butted, pattern lined up by eye (the pockets line up when the slots do), push a key into each pocket pair until it clicks, turn the board over. Stand it on the frames, frame screw through a bottom-row slot, nut behind.
 
-First print: one BL tile and three keys. Hang an IKEA hook on it, click a key in and out, set a frame under the notch. Then print the rest.
+First print: one BL tile and three keys. Hang an IKEA hook on it, click a key in and out, set it in a clamp. Then print the rest. A 2 × 2 board takes about 1.35 kg.
 
 ## Should you use a generator online instead?
 
