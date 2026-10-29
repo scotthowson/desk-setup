@@ -5,7 +5,7 @@
 //
 //   type = "cross"     where four tiles meet: 73 x 42 plate, four pegs, one in each tile.
 //                      Centre it on the corner. It fits either way up (180° symmetric).
-//   type = "bridge-h"  across an upright joint: 62 x 21 stadium, two pegs side by side 40 apart
+//   type = "bridge-h"  across an upright joint: 61 x 21 stadium, two pegs side by side 40 apart
 //                      (the shape in Scott's picture).
 //   type = "bridge-v"  across a level joint: 21 x 71, two pegs one above the other 40 apart.
 //
@@ -19,7 +19,7 @@
 // Bridges: two slots 40 apart in the same row (h) or the same column (v).
 //
 // Print plate down, pegs up, as saved, PETG, 100 % (they are small), no supports.
-//   openscad -D 'type="cross"' -o skadis-cross-x1.stl skadis-bracket.scad
+//   openscad -D 'type="cross"' -o skadis-cross-x4.stl skadis-bracket.scad     # bridge-h, bridge-v the same, -x4 each (3 x 3)
 
 type = "cross";            // cross, bridge-h, bridge-v
 th = 5;                    // board thickness: the pegs are this tall, so they end flush with the front
