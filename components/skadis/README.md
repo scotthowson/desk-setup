@@ -43,6 +43,7 @@ The board rests on the foot frame's ledge, 12 mm above the desk, with the frame'
 | `skadis-L1-x1.stl` `skadis-M1-x1.stl` `skadis-R1-x1.stl` | single-row board, with the skirt | top and bottom (+ left / right) |
 | `skadis-key-x24.stl` | every joint, 3 each | |
 | `skadis-cross-x4.stl` | every inside corner where four tiles meet, on the back, glued | |
+| `skadis-bridge-h-x4.stl` `skadis-bridge-v-x4.stl` | joint ends at the board's edge, on the back, glued | |
 
 Outside edges are chamfered 1.5 mm on the front and have no pockets. Joint edges have the pockets. A tile is 331 g (346 g with the skirt), a key 0.7 g.
 
@@ -76,7 +77,7 @@ First print: one BL tile and three keys. Hang an IKEA hook on it, click a key in
 - **Pegs** are 4.8 × 14.8 mm, 0.1 mm smaller all round than the slot so CA glue has room. They are 5 mm tall, the board's thickness, so they finish flush with the front and the corner reads as solid board.
 - **Where they go**, relative to the corner: 10 left and 10 down, 10 right and 10 up, 30 right and 10 down, 30 left and 10 up. These are the four slots nearest the corner, one per tile. The cross fits either way round. It cannot go in sideways because the slots only take it upright.
 - **What it costs**: its own four slots. The plate stays 1.5 mm clear of every other slot, so the rest of the corner still takes hooks.
-- **How many**: one per inside corner. A 2 × 2 board needs 1, a 3 × 2 needs 2, and a 3 × 3 needs 4. The file is named for a 3 × 3.
+- **How many**: one per inside corner. See the table below.
 
 Fitting:
 
@@ -90,7 +91,35 @@ Print the cross plate down, pegs up, as saved, in PETG. Use 100 % infill, becaus
 
     openscad -D 'type="cross"' -o skadis-cross-x4.stl skadis-bracket.scad
 
-The same source also draws two-peg bridges (`bridge-h` across an upright joint, `bridge-v` across a level one), for a single-row board that has no inside corner.
+### The bridges (two pegs, for joints that reach the board's edge)
+
+`skadis-bridge-h-x4.stl` crosses an upright joint: a 61 × 21 stadium with two pegs side by side, 40 apart. `skadis-bridge-v-x4.stl` crosses a level joint: 21 × 71 with two pegs one above the other. Same plate, pegs, fit and glue as the cross. Each stays about 2 mm clear of every other slot.
+
+Where they go: the cross braces each joint at the inside corner, so the bridge goes at the joint's other end, where it meets the board's outside edge. Count the slot rows in from that edge. The bridge's two pegs go in the two slots of the **4th row** that sit either side of the joint, 70 mm in. For a level joint, count columns instead. On a single-row board there is no cross, and each joint reaches both the top and the bottom edge, so it gets two bridges: the 4th row from the top and the 4th row from the bottom. The skirt does not count as a row. The bridge fits only one way: if the pegs don't drop into two slots, you are on the wrong row.
+
+| Board | Cross | Bridge-h | Bridge-v | Slots used |
+| --- | --- | --- | --- | --- |
+| 2 wide × 1 | 0 | 2 | 0 | 4 |
+| 3 wide × 1 | 0 | 4 | 0 | 8 |
+| 2 × 2 | 1 | 2 | 2 | 12 |
+| 3 × 2 | 2 | 4 | 2 | 20 |
+| 3 × 3 | 4 | 4 | 4 | 32 |
+
+The files are named for a 3 × 3. Mount frames stand under the middle of a bottom tile, at least 50 mm from any joint, so they never meet a bridge. The tallest frame piece is 113 mm.
+
+![3 × 3 board from the back, braces in orange](skadis-3x3-back-braces-preview.png)
+
+## Extras
+
+| File | What | Print |
+| --- | --- | --- |
+| `skadis-hook-x4.stl` | J-hook, 40 mm reach, 14 mm tip, for the headset, cables or a bag. It hangs the IKEA way: lift it, push the top tab through a slot, and drop it 6 mm. A short peg goes in the slot 40 mm below so it cannot tip. Lift it to take it off. | On its side as saved, PETG, 4 walls, 40 % infill. The layers run along the arm. |
+| `skadis-cable-clip-x6.stl` | Back cable clip. A split peg pushes into any slot from behind and grips by spring, with nothing on the front. An 8 mm open ring carries the leads of whatever hangs on the board down to the wall gap. | Standing on an end as saved, PETG. |
+
+Both were checked against a printed-tile model. The hook touches nothing going in or once dropped. The clip's only contact is its two 0.25 mm spring bumps. Change `reach`, `tip` or `cable` in the sources for other sizes.
+
+    openscad -o skadis-hook-x4.stl skadis-hook.scad
+    openscad -o skadis-cable-clip-x6.stl skadis-cable-clip.scad
 
 ## Should you use a generator online instead?
 

@@ -9,10 +9,10 @@
 //                      (the shape in Scott's picture).
 //   type = "bridge-v"  across a level joint: 21 x 71, two pegs one above the other 40 apart.
 //
-// Where, along every tile edge that is a joint: a bridge at 70 and at 170 mm from the
-// tile's corner (between the keys at 40, 120, 200), and a cross on every corner where four
-// tiles meet. Each bracket fills only its own slots; it leaves at least 1 mm to every other
-// slot, so the rest of the board still takes hooks.
+// Where: a cross on every corner where four tiles meet. A bridge on every joint where it
+// reaches the board's outside edge, centred on the 4th slot row (or column) in from that
+// edge; a single-row board's joints reach two edges, so two bridges each. Each bracket
+// fills only its own slots and leaves at least 1 mm to every other slot.
 //
 // Peg positions, from the pattern (slots at 10 + 40 i and 30 + 40 i, every tile edge on a
 // multiple of 40): cross, relative to the corner: (-10,-10) (+10,+10) (+30,-10) (-30,+10).
