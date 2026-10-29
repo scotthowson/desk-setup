@@ -27,7 +27,7 @@ Three bow-tie keys per joint, in pockets cut from the **back** of both tiles, 3.
 
 Keys sit at cell corners (40, 120, 200 mm along each edge), where the pattern leaves 2 mm of solid on each side.
 
-The keys also keep the pattern true across the joint. The pockets are cut in the same print as the slots, on the same 40 mm grid, so a seated key holds the two tiles within 0.1 mm of each other along the joint, and butting the edges fixes them across it. The neighbour's first slot then lands exactly 40 mm from this tile's last, row after row, however many tiles you add. The key is 13 × 11 mm with a 5 mm waist, 3.4 mm thick. A 0.1 mm slop is built in; if a key is tight, a tap with a mallet seats it; if loose, a drop of CA glue.
+The keys also keep the pattern true across the joint. The pockets are cut in the same print as the slots, on the same 40 mm grid, so a seated key holds the two tiles within 0.1 mm of each other along the joint, and butting the edges fixes them across it. The neighbour's first slot then lands exactly 40 mm from this tile's last, row after row, however many tiles you add. The key is drawn 0.1 mm smaller all round than the pocket (`fit` in skadis-key.scad), so the lip holds it by 0.1 mm a side and both its faces are chamfered. It should go in with a firm thumb push or a light tap, chamfer first, either way up. Tight: raise `fit` to 0.15 and reprint the keys only, the tiles never change. Loose: lower it, or a drop of CA glue.
 
 ## The desk mount (MakerWorld 2780289, measured from its 3MF)
 
