@@ -14,6 +14,11 @@
 // edge; a single-row board's joints reach two edges, so two bridges each. Each bracket
 // fills only its own slots and leaves at least 1 mm to every other slot.
 //
+// IKEA's hooks drop a tab behind the board below their slot, so the plates are notched clear
+// of the zone 12 mm under every slot they would otherwise cover (hook_zone below): the cross
+// loses two bites from each long edge, bridge-h one from each long edge, and every slot
+// around a bracket still takes a hook.
+//
 // Peg positions, from the pattern (slots at 10 + 40 i and 30 + 40 i, every tile edge on a
 // multiple of 40): cross, relative to the corner: (-10,-10) (+10,+10) (+30,-10) (-30,+10).
 // Bridges: two slots 40 apart in the same row (h) or the same column (v).
@@ -43,5 +48,8 @@ module outline() {
     else                         hull() for (p = pegs) translate(p) offset(r = 8, $fn = 48) slot2d();
 }
 
-linear_extrude(plate) outline();
+hook_drop = 12;   // how far an IKEA hook's tab reaches below its slot, behind the board
+module hook_zones() for (i = [-3 : 3], j = [-3 : 3], o = [10, 30]) let (c = [40 * i + o, 40 * j + o])
+    if (len([for (q = pegs) if (q == c) 1]) == 0) translate([c[0] - slot_w / 2 - 1, c[1] - slot_h / 2 - hook_drop]) square([slot_w + 2, hook_drop]);
+linear_extrude(plate) difference() { outline(); hook_zones(); rotate(180) hook_zones(); }   // and the zones of the piece turned 180°, so it still fits either way up
 for (p = pegs) translate([p[0], p[1], plate]) linear_extrude(th + proud) peg2d();

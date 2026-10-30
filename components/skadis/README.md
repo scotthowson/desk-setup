@@ -43,7 +43,8 @@ The board rests on the foot frame's ledge, 12 mm above the desk, with the frame'
 | `skadis-L1-x1.stl` `skadis-M1-x1.stl` `skadis-R1-x1.stl` | single-row board, with the skirt | top and bottom (+ left / right) |
 | `skadis-key-x24.stl` | every joint, 3 each | |
 | `skadis-cross-x4.stl` | every inside corner where four tiles meet, on the back, glued | |
-| `skadis-bridge-h-x4.stl` `skadis-bridge-v-x4.stl` | joint ends at the board's edge, on the back, glued | |
+| `skadis-bridge-h-x4.stl` `skadis-bridge-v-x4.stl` | joint ends at the board's edge, on the back, glued (optional) | |
+| `rib-*.stl` | the back, glued: see Making it stiff | |
 
 Outside edges are chamfered 1.5 mm on the front and have no pockets. Joint edges have the pockets. A tile is 331 g (346 g with the skirt), a key 0.7 g.
 
@@ -57,7 +58,7 @@ Boards and what to print:
 | 3 × 2 (72 × 49 cm) | TL, T, TR, BL, B, BR | 21 |
 | 3 × 3 (72 × 73 cm) | TL, T, TR, L, C, R, BL, B, BR | 36 |
 
-Two frames hold a 2-wide board, three a 3-wide one, one under each bottom tile.
+Two frames hold a 2-wide board, three a 3-wide one, one under each bottom tile. With ribs, the loose-key count drops to 12 for a 3 × 3 (see Making it stiff).
 
 ## Print
 
@@ -70,7 +71,39 @@ Assembly: lay the tiles face down on a flat surface, butted, pattern lined up by
 
 First print: one BL tile and three keys. Hang an IKEA hook on it, click a key in and out, set it in a clamp. Then print the rest. A 2 × 2 board takes about 1.35 kg.
 
-## The corner cross (back brace where four tiles meet)
+## Making it stiff (print these: the ribs)
+
+A 5 mm printed tile is bendier than IKEA's fibreboard, every joint between tiles is a hinge, and the whole board stands on clamps along its bottom edge. Left like that, a 3 × 3 board sways when you hang something on it. The fix is ribs glued to the back, and they cost nothing on the front.
+
+**Why ribs can go on the back at all.** The slots sit in columns at 10 and 30 mm (and every 40 after) from a tile's edge, so the back of a tile is solid, top to bottom, in 15 mm wide bands centred on every 20, 40, 60 ... mm, and on the joint lines themselves. A 12 mm rib in such a band covers no slot and stays 1.5 mm clear of the slots either side, where IKEA's hook tabs drop behind the board. Every slot still takes a hook. Level ribs are impossible: the solid band between rows is 5 mm and sits right under a row of slots.
+
+**What they do.** A rib down each upright joint makes that joint rigid along its whole length. Ribs down the middle of each tile cross the level joints and stiffen the board top to bottom. The ribs are staggered so every level joint is crossed. Together they make a 3 × 3 board roughly twenty times stiffer against a push on its top edge. The ribs are 12 wide and 20 deep; stiffness grows with the cube of the depth, so do not make them shallower.
+
+**They carry their own keys.** A rib covers the pockets of the joint it sits on, so it has the bow-tie keys built in, the original fit you liked, and drops into the pockets instead of loose keys. The keys locate it, the glue holds it. A 3 × 3 then needs only 12 loose keys (the level-joint pockets no rib crosses) instead of 36. For a joint whose keys are already in, `rib-240-k0.stl` is the same rib flat; glue it over the keys.
+
+| File | Print (3 × 3) | Where (mm from the board's bottom edge, skirt not counted) |
+| --- | --- | --- |
+| `rib-240-k3-x4.stl` | 4 | upright joints, 80 to 320 and 320 to 560 |
+| `rib-80-k1-x2.stl` | 2 | upright joints, 0 to 80 |
+| `rib-160-k2-x2.stl` | 2 | upright joints, 560 to 720 |
+| `rib-240-k1-x6.stl` | 6 | tile centres (120, 360 and 600 mm from the left edge), 120 to 360 and 360 to 600 |
+
+For a 2 × 2: one upright joint (80 + 240 + 160: `k1` 1, `k3` 1, `k2` 1) and two centre bands crossing one level joint (`rib-240-k1` 2). For a single-row board: one `rib-240-k3` per joint, keys up, no centre ribs. The centre ribs start 120 mm up so they clear the clamp frames' uprights (113 mm tall) at the bottom. The ends of the upright-joint ribs fall at 80, 320 and 560, between pockets.
+
+![Rib with its three keys](skadis-rib-preview.png)
+
+Fitting: tiles face down, loose keys in the level-joint pockets that no rib covers (40, 200, 280, 440, 520, 680 mm along each level joint). Dry-fit every rib: its keys find the pockets, press it until it clicks like a key. Lift each rib in turn, run a bead of CA down both sides of where it sat, press it back and hold for 30 s. Leave the board flat for an hour. Rib fit was checked on the tile models: the body touches nothing, and each key meets the pocket lip by the same 0.2 mm the loose keys do.
+
+If the board stands with its back toward a wall, add two `skadis-wall-standoff-x2.stl` at the top corners (glued in a solid band) and the last of the sway goes, because the board is then held at the top as well as at the clamps. Measure the gap from the board's back to the wall at the top, subtract 3 mm for a felt pad, set `reach` in the source, print two. With ribs and standoffs the weak point left is the clamps' own grip on the top.
+
+Print the ribs on their outer face, as saved (keys up), PETG, 3 walls, 15 to 20 % gyroid. About 35 g each.
+
+    openscad -D L=240 -D 'keys=[40,120,200]' -o rib-240-k3-x4.stl skadis-rib.scad
+    openscad -D L=240 -D 'keys=[120]' -D along=true -o rib-240-k1-x6.stl skadis-rib.scad
+
+## The corner cross and bridges (optional, the ribs do more)
+
+With ribs fitted these are not needed; they remain for a board without ribs or as extra insurance. Their plates are notched clear of the zone 12 mm under every slot they would otherwise cover, where an IKEA hook's tab drops behind the board, so every slot around a bracket still takes a hook. The cross keeps its 180° symmetry (it fits either way up).
 
 `skadis-cross-x4.stl` (source `skadis-bracket.scad`): a 73 × 42 × 2 mm plate with four pegs, one into a slot of each of the four tiles that meet at an inside corner. It goes on the back and is glued in. The keys hold the tiles together. The cross stops the corner from hinging and makes the board one stiff panel.
 
@@ -109,17 +142,30 @@ The files are named for a 3 × 3. Mount frames stand under the middle of a botto
 
 ![3 × 3 board from the back, braces in orange](skadis-3x3-back-braces-preview.png)
 
-## Extras
+## Accessories (all on one proven hanger)
+
+Everything hangs the IKEA way, from `skadis-lib.scad`: a 4.6 mm tab through a slot with a lip that drops 5.9 mm behind the board, and a short peg in the slot 40 mm below so the piece cannot tip, swing or lift by accident. Lift it 6 mm to take it off. Anything that carries weight has two hangers, 40 mm apart, in two slots of one row. Every piece was placed on the tile model, raised and dropped, and touches nothing but the slots (and the check was shown to catch a 2 mm error). All print on their side as saved, with no supports, because every wall stands upright in that pose.
+
+![The accessories](skadis-accessories-preview.png)
 
 | File | What | Print |
 | --- | --- | --- |
-| `skadis-hook-x4.stl` | J-hook, 40 mm reach, 14 mm tip, for the headset, cables or a bag. It hangs the IKEA way: lift it, push the top tab through a slot, and drop it 6 mm. A short peg goes in the slot 40 mm below so it cannot tip. Lift it to take it off. | On its side as saved, PETG, 4 walls, 40 % infill. The layers run along the arm. |
-| `skadis-cable-clip-x6.stl` | Back cable clip. A split peg pushes into any slot from behind and grips by spring, with nothing on the front. An 8 mm open ring carries the leads of whatever hangs on the board down to the wall gap. | Standing on an end as saved, PETG. |
+| `skadis-headset-hook-x1.stl` | 60 wide, 55 reach, two hangers; the arm is crowned 9 mm across its width so a headband sits centred and the pads hang free | PETG, 4 walls, 30 % |
+| `skadis-controller-hook-x1.stl` | 24 wide, 60 reach, 25 tip, one hanger: the pad goes between the grips, the controller hangs face out | same |
+| `skadis-shelf-120-x2.stl` | 120 × 70 shelf, 12 mm lip, two hangers, gussets under them; a couple of kilos | PETG, 4 walls, 25 % |
+| `skadis-keyboard-perch-x2.stl` | a pair: parks the keyboard on the board, on edge, leaning back on it. 30 deep, 16 lip, takes 26 mm thick. Hang both in one row, 5 columns (200 mm) apart for a 75 % board | PETG, 4 walls, 30 % |
+| `skadis-phone-dock-x1.stl` | phone stands in a 14 mm channel 20 mm out and leans back about 10°; a notch under it for the charging plug, the lead runs down behind the step | PETG, 4 walls, 25 % |
+| `skadis-cable-comb-x1.stl` | five 8 mm fingers with 6.5 mm necks: leads clip in from the front and stay | PETG, 4 walls, 30 % |
+| `skadis-hook-x4.stl` | narrow J-hook, 40 reach, one hanger (the same geometry, built before the library) | on its side, 4 walls, 40 % |
+| `skadis-cable-clip-x6.stl` | back cable clip: a split peg pushes into any slot from behind and grips; an 8 mm open ring carries leads down to the wall gap. Nothing shows on the front | standing on an end |
+| `skadis-wall-standoff-x2.stl` | see Making it stiff | standing on the disc, 100 % |
 
-Both were checked against a printed-tile model. The hook touches nothing going in or once dropped. The clip's only contact is its two 0.25 mm spring bumps. Change `reach`, `tip` or `cable` in the sources for other sizes.
+![A 2 × 2 board with the set hung on it](skadis-board-accessories-preview.png)
 
-    openscad -o skadis-hook-x4.stl skadis-hook.scad
-    openscad -o skadis-cable-clip-x6.stl skadis-cable-clip.scad
+To change a size, edit the number at the top of the source (`reach`, `W`, `D`, `lip`, `cable` ...) and re-render; the hanger never changes.
+
+    openscad -D 'kind="headset"' -o skadis-headset-hook-x1.stl skadis-arm-hook.scad
+    openscad -o skadis-shelf-120-x2.stl skadis-shelf.scad     # perch, phone-dock, cable-comb, hook, cable-clip, wall-standoff the same way
 
 ## Should you use a generator online instead?
 
