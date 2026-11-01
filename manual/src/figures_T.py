@@ -682,8 +682,11 @@ def check():
 
 # ---------- pages ----------
 HEAD_CSS = """<style>
-@page land { size: A4 landscape; margin: 0; }
-.page.land { page: land; width: 297mm; height: 210mm; padding: 12mm 12mm 13mm 12mm; }
+/* T4 strips are landscape sheets stored on portrait pages, rotated 90°, so every page of the PDF is portrait A4
+   and the print path never rotates: CUPS's rotate step re-fits the page to the printer's imageable area (97 % on
+   the HL-2140, measured 1 Nov 2026) even with print-scaling=none. Read the printed sheet sideways. */
+.page.land { width: 210mm; height: 297mm; padding: 0; }
+.page.land > .landbox { position: absolute; left: 0; top: 0; width: 297mm; height: 210mm; padding: 12mm 12mm 13mm 12mm; transform-origin: 0 0; transform: translate(210mm, 0) rotate(90deg); }
 .tph { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 0.5mm solid #000; padding-bottom: 1mm; margin-bottom: 1.5mm; }
 .tph .tid { font-size: 17pt; font-weight: bold; margin-right: 2mm; }
 .tph .tname { font-size: 11.5pt; font-weight: bold; }
@@ -695,7 +698,7 @@ HEAD_CSS = """<style>
 
 def head(tid, name, badges, extra=""):
     b = "".join(badge(x) for x in badges)
-    w = warning_panel("DISABLE FIT TO PAGE / shrink to fit / scale to fit. Measure the ruler before use: 0 to 100 must read 100.0 mm and the cross-check bar 50.0 mm (±0.5). If either is off, do not use the sheet: reprint." + extra, kind="PRINT AT 100% / ACTUAL SIZE" + (" · A4 LANDSCAPE" if tid.startswith("T4") else ""))
+    w = warning_panel("DISABLE FIT TO PAGE / shrink to fit / scale to fit. Measure the ruler before use: 0 to 100 must read 100.0 mm and the cross-check bar 50.0 mm (±0.5). If either is off, do not use the sheet: reprint." + extra, kind="PRINT AT 100% / ACTUAL SIZE" + (" · READ SIDEWAYS (PORTRAIT A4)" if tid.startswith("T4") else ""))
     return (f'<div class="tph"><div><span class="tid">{tid}</span><span class="tname">{name}</span> {b}</div>'
             f'<div class="trev">Template {tid} · rev {REV}<br><b>units: mm; tape stations also in cm</b><br>numbers: manual/facts.json + data.json, source_commit: {SRC}</div></div><div class="tplwarn">{w}</div>')
 
@@ -717,13 +720,13 @@ def main():
     check()
     sheets = [("T1", "Locating ring P10 (+ optional ALEX foot P20)", "1:1 check; drilling only for the ALEX feet"), ("T2", "Feet plate P09, two pieces", "1:1 drilling"),
               ("T3a", "OLOV plate P05 at 100: L2-L6", "1:1 drilling"), ("T3b", "OLOV plate P05 at 150: L1", "1:1 drilling"),
-              ("T4-A", f"Rail A P06 station strip, {len(rA)} landscape sheets", "1:1 marking check"), ("T4-B", f"Rail B P07 station strip, {len(rB)} landscape sheets", "1:1 marking check"),
+              ("T4-A", f"Rail A P06 station strip, {len(rA)} sheets (read sideways)", "1:1 marking check"), ("T4-B", f"Rail B P07 station strip, {len(rB)} sheets (read sideways)", "1:1 marking check"),
               ("T5", "Corner fitting P08 placement", "reference 1:2, not for drilling"), ("T6", "Clamp pad plate P11 placement", "reference 1:4, positioning only")]
     rows = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td></tr>" for a, b, c in sheets)
     write("00-index.html", f"""<section class="page" data-chapter="T0" data-title="Print first">
 {HEAD_CSS}
 {head("T0", "Templates · print this page first", [])}
-<p>Print every sheet from the PDF viewer at <b>100 % / Actual size</b>, on A4 (T4 sheets are A4 landscape). Then lay a steel rule on the ruler below. Use the sheets only if 0 to 100 reads 100.0 mm and the bar reads 50.0 mm. A sheet that is 1 % small puts a hole 0.5 mm off at 50 mm.</p>
+<p>Print every sheet at <b>100 % / Actual size</b> on portrait A4; every page is portrait, the T4 strips are printed sideways and read that way. Then lay a steel rule on the ruler below. Use the sheets only if 0 to 100 reads 100.0 mm and the bar reads 50.0 mm. A sheet that is 1 % small puts a hole 0.5 mm off at 50 mm.</p><p class="small"><b>The print dialog is the usual culprit.</b> Chromium's default for a PDF is <i>Fit to printable area</i> and Firefox's is <i>Fit to page width</i>; both shrink to the printer's imageable area (97.3 % on the Brother HL-2140, measured 1 Nov 2026: the ruler read 97.3). A typed scale is ignored until the mode is <i>Custom</i> or <i>Actual size</i>. The sure way is to send the file to CUPS with scaling off: <span class="mono">lp -d HL-2140-series -o media=A4 -o print-scaling=none -P 1 Drilling-and-Placement-Templates.pdf</span>, measure the ruler, then <span class="mono">-P 2-25</span> for the rest. Never add <span class="mono">-o landscape</span>: CUPS re-fits whatever it rotates. Check the queue's default paper too (<span class="mono">lpoptions -l</span>): it was Letter.</p>
 <img class="fig" src="../../figures/{f0}" style="width:{_f(w0)}mm">
 <table><tr><th>Sheet</th><th>What</th><th>Use</th></tr>{rows}</table>
 <p class="small">Using a drilling sheet: trim on the heavy datum line(s), butt the trimmed edge to the named edge, tape, then punch each DRILL centre through the paper with an awl or automatic centre punch, lift the sheet and drill to the depth stated. The printed jigs (P18) are the primary tools; these sheets reproduce their patterns and serve as the check. Top marking is done face down (underside up); every pattern here is used without flipping the sheet.</p>

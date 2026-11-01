@@ -74,7 +74,9 @@ def render_pages(pages, doc_title, with_toc=True, toc_after=1):
             out.append(f'<section class="page"><div class="header"><span>{doc_title}</span><span></span></div><h1>Contents</h1><ul class="toc">{items}</ul><div class="footer"><span>{doc_title}</span><span>{toc_after + 1}</span></div></section>')
         hdr = "" if "cover" in p["cls"] else f'<div class="header"><span>{doc_title}</span><span>{p["chapter"]} · {p["title"]}</span></div>'
         ftr = "" if "cover" in p["cls"] else f'<div class="footer"><span>{doc_title}</span><span>Page {p["n"]}</span></div>'
-        out.append(f'<section class="page{p["cls"]}">{hdr}{p["body"]}{ftr}</section>')
+        inner = f'{hdr}{p["body"]}{ftr}'
+        if "land" in p["cls"]: inner = f'<div class="landbox">{inner}</div>'   # landscape sheet on a portrait page, rotated by the templates' CSS
+        out.append(f'<section class="page{p["cls"]}">{inner}</section>')
     return "\n".join(out)
 
 
