@@ -71,3 +71,13 @@ Why it is laid out this way: every lead on the desk goes down through one of the
 ## What it replaces in `parts/cables/`
 
 The cable clips, the power-bar cradles and the cable tray. Keep the rail cable hooks (magnets on the steel) for the drop from the desk surface to rail A and for the hop.
+
+## Our own snap-in accessories (`accessories/`)
+
+Built on the Underware grip itself (`accessories/og-lib.scad` uses `monokiniGrip` from the channel source), so they click into any openGrid Lite cell exactly as a channel does: two 2 mm tabs 26.4 apart, 15 long, 3.4 tall, one pair per cell. Checked by boolean intersection against a Lite tile rendered from `openGrid.scad`: 16.26 mm³ of lip interference per cell for the hook and the comb, the same figure the Underware channel gives (32.51 for two cells), and a 1 mm shift gives 2480, so the check sees. All print plate down, snaps up, no supports, PETG. Rendering the sources needs BOSL2; the STLs are here.
+
+| File | What | Print |
+| --- | --- | --- |
+| `og-brick-dock-dell65-x1.stl`, `og-brick-dock-g5-x1.stl` | Power-brick tray under the tile: the brick slides in from the open end over a 6 mm lip, a Velcro strap through the two slots holds it, cord notches both ends, the name engraved underneath. Sized by `brick = [length, width, height]` with 1 mm clearance; **the two STLs use catalogue guesses, measure the bricks and re-render** (command in the source). Dell 65 W default 95 × 47 × 28 (2 × 4 cells), G5 adapter 100 × 48 × 32. | 1 each |
+| `og-hook-x2.stl` | One-cell J-hook, 40 drop, 30 reach, 16 wide: headset or a coiled lead under the front edge. | 2 |
+| `og-cable-exit-x2.stl` | One-cell comb, four 7 mm slots, where leads leave a channel run or drop to the floor. | 2 |
