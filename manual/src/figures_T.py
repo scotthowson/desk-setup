@@ -56,7 +56,7 @@ RAILS = {"A": [round(v * 10, 1) for v in D["railA"]["holes"]], "B": [round(v * 1
 assert RAILS["A"] == [round(v * 10, 1) for v in ST["railA"]["holes_from_wall_end_cm"]] and RAILS["B"] == [round(v * 10, 1) for v in ST["railB"]["holes_from_corner_end_cm"]]
 SCREW_LINE = ST["screw_line_from_free_edge"]; assert SCREW_LINE == D["holeOffset"] * 10
 BOUGHT = float(re.search(r"= ([\d.]+) mm", ST["purchased_as"]).group(1))
-BITS = {"5/64": (2.0, "5/64 in"), "1/8": (3.2, "1/8 in"), "7/32": (5.56, "7/32 in")}
+BITS = {"5/64": (2.0, "5/64 in"), "1/8": (3.2, "1/8 in"), "7/32": (5.56, "7/32 in"), "7/16": (11.11, "7/16 in")}
 
 HOLES = []      # recorded while drawing: (svg, id, kind, expected (u, v), expected d, source)
 CHECKS = []     # filled by check()
@@ -579,6 +579,71 @@ def t5():
 
 
 # ---------- T6 clamp pad plates (reference, 1:4) ----------
+# ---------- T7 corner bolt holes on the rails (1:1, drilled on the bench) ----------
+def t7():
+    """Rail A's four 7/16 holes located from a 40.0 cm tape mark (they lie 43.7-59.8 cm from the wall end, too far
+    to butt the sheet to the end) and rail B's two from its corner end. Bolt line 29 below the heel on both."""
+    name = "T-7-corner.svg"; W, H = 250, 158
+    c = Canvas(W, H); c.boxes = []
+    below = ST["bolt_line_below_heel"]; ang = D["angle"] * 10; th = ST["thickness"]; legl, fw = FIT["leg"], FIT["w"]
+    heels = ST["railA"]["fitting_heels_from_wall_end_cm"]
+    heel_out, heel_in = heels["outside_fitting_facing_far_end"] * 10, heels["inside_fitting_facing_wall_end"] * 10
+    holesA = sorted(RH["railA_inside_fitting_from_wall_end"] + RH["railA_outside_fitting_from_wall_end"])
+    ruler(c, 4, 17)
+    drill_symbol(c, (118, 6.5)); c.circle((118, 6.5), BITS["1/8"][0] / 2, lw="thin", dash="0.5 0.4")
+    para(c, 124, 4.2, f"DRILL ⌀{BITS['7/16'][0]:g} (7/16 in) through the vertical leg, {below:g} below the heel: punch through the paper, 1/8 in pilot (dashed), then 7/16, low speed, oil; deburr both faces.", 122)
+    para(c, 124, 16.5, "On the bench, before the rails go on the tops. Hatched: rail B's end on rail A. Grey: the fittings' legs and slots, orientation only.", 122)
+    # ---- strip A: s 395-625 from the wall end, outer face, heel up, wall end left
+    s_a, XA, YH = 395, 5, 34
+    X = lambda s: XA + (s - s_a)
+    T(c, (XA, 26.5), "RAIL A (P06) · vertical leg, OUTER face (toward the knee space) · HEEL edge UP · WALL END to the LEFT", weight="bold")
+    for s0 in (heel_out, heel_in - legl):
+        c.rect(X(s0), YH + below - fw / 2, legl, fw, fill="#d9d9d9", lw="thin")
+    c.hatch([(X(heel_out - th), YH), (X(heel_out), YH), (X(heel_out), YH + ang), (X(heel_out - th), YH + ang)], spacing=1.2)
+    c.rect(X(s_a), YH, 230, ang, lw="thin")
+    line_id(c, "T-7-A-heel", (X(s_a), YH), (X(s_a + 230), YH))
+    c.centreline((X(s_a), YH + below), (X(s_a + 230), YH + below))
+    for hc in (heel_out + FIT["c1"], heel_out + FIT["c2"], heel_in - FIT["c1"], heel_in - FIT["c2"]):
+        slot(c, (X(hc), YH + below), 1)
+    line_id(c, "T-7-A-tape", (X(400), YH - 4.5), (X(400), YH + ang + 1.5), dash="2.5 1")
+    line_id(c, "T-7-A-check", (X(620), YH - 4.5), (X(620), YH + ang + 1.5), heavy=False, dash="2.5 1")
+    T(c, (X(400) + 1.5, YH + 4.2), "TAPE LINE = 40.0 cm from the WALL END", weight="bold")
+    T(c, (X(620) - 1.5, YH + 4.2), "CHECK = 62.0 cm", weight="bold", anchor="end")
+    yr = YH + ang + 4.2
+    c.arrow((X(s_a + 30), yr), (X(s_a + 2), yr), head=1.6); T(c, (X(s_a + 32), yr + 1), "WALL END (x = 1 cm)")
+    c.arrow((X(s_a + 200), yr), (X(s_a + 228), yr), head=1.6); T(c, (X(s_a + 198), yr + 1), "FAR END", anchor="end")
+    T(c, (X(heel_in) - 1.5, yr + 1), "INSIDE fitting heel 51.5", anchor="end"); T(c, (X(heel_out) + 1.5, yr + 1), "OUTSIDE fitting heel 52.0")
+    tags = ["A-in 1", "A-in 2", "A-out 1", "A-out 2"]
+    cmA = [round(e / 10, 1) for e in (heel_in - FIT["c2"], heel_in - FIT["c1"], heel_out + FIT["c1"], heel_out + FIT["c2"])]   # cm from the unrounded heel + slot centre, as T5
+    for i, sv in enumerate(holesA, 1):
+        drill(c, name, f"T-7-A{i}", (X(sv), YH + below), "7/16", (sv, below), f"facts corner_joint.rail_hole_positions_mm rail A = {sv:g}; bolt line {below:g} below the heel")
+        c.circle((X(sv), YH + below), BITS["1/8"][0] / 2, lw="thin", dash="0.5 0.4")
+        T(c, (X(sv), YH + below + 11), f"{sv:g}", anchor="middle", weight="bold"); T(c, (X(sv), YH + below + 15.2), f"({cmA[i - 1]:g} cm) {tags[i - 1]}", anchor="middle")
+    # ---- strip B: corner end, either face, heel up, end butted
+    XB, YB = 5, 100
+    Xb = lambda s: XB + s
+    T(c, (XB, 93.5), "RAIL B (P07) · vertical leg, EITHER face · HEEL edge UP · trim on the heavy END line, butt it flush with the CORNER END", weight="bold")
+    c.rect(Xb(0), YB + below - fw / 2, legl, fw, fill="#d9d9d9", lw="thin")
+    c.rect(Xb(0), YB, 125, ang, lw="thin")
+    line_id(c, "T-7-B-heel", (Xb(0), YB), (Xb(125), YB))
+    line_id(c, "T-7-B-end", (Xb(0), YB - 3), (Xb(0), YB + ang + 3))
+    c.centreline((Xb(0), YB + below), (Xb(125), YB + below))
+    for i, sv in enumerate(RH["railB_from_corner_end"], 1):
+        slot(c, (Xb(sv), YB + below), 1)
+        drill(c, name, f"T-7-B{i}", (Xb(sv), YB + below), "7/16", (sv, below), f"facts corner_joint.rail_hole_positions_mm rail B = {sv:g}; bolt line {below:g} below the heel")
+        c.circle((Xb(sv), YB + below), BITS["1/8"][0] / 2, lw="thin", dash="0.5 0.4")
+        T(c, (Xb(sv) + (0 if i == 1 else 0), YB + below + 11), f"{sv:g}", anchor="middle", weight="bold"); T(c, (Xb(sv), YB + below + 15.2), f"({round((FIT['c1'], FIT['c2'])[i - 1] / 10, 1):g} cm) B{i}", anchor="middle")
+    para(c, Xb(136), YB + 0.5, "RAIL A: 1. Trim on the heavy HEEL line. 2. Hook the tape on rail A's WALL END (the end that goes 1 cm in from top A's taped end) and mark 40.0 and 62.0 cm on the heel corner. "
+         "3. Trimmed edge along the heel, TAPE line on 40.0; the CHECK line must fall on 62.0 (if not, the sheet is scaled: reprint). 4. Tape, punch, drill the four. "
+         "Assumes rail B's outer face at 53 cm from the wall, butting on rail A (chapter H).", 109)
+    para(c, Xb(136), YB + 33, "RAIL B: one bolt per hole with a fitting on both sides of the leg, so the pattern is the same from either face. Skip if already drilled. "
+         "Bolts 3/8-16 x 1-1/2, washers, nylon nuts, 25 N·m by hand; never an impact wrench.", 109)
+    crosscheck(c, 243, 34)
+    ident(c, Xb(0), H - 2.5, "T7", "P08 on P06 / P07")
+    lint(c, name)
+    return save(c, name), W
+
+
 def t6():
     name = "T-6-pads.svg"; W, H = 178, 212
     c = Canvas(W, H); k = 0.25
@@ -626,6 +691,10 @@ def expected(hid):
     if hid.startswith("T-3"):
         inset = D["legs"][1][2] * 10 if hid[3] == "a" else D["legs"][0][1] * 10
         x, y = cs(F["olov"]["hole_circle_radius"], (-90 if hid[3] == "a" else 90) + 360 / F["olov"]["holes"] * (int(hid[-1]) - 1)); return (x, inset + y)
+    if hid.startswith("T-7-"):
+        cj = F["corner_joint"]["rail_hole_positions_mm"]; i = int(hid[-1])
+        sv = sorted(cj["railA_inside_fitting_from_wall_end"] + cj["railA_outside_fitting_from_wall_end"])[i - 1] if hid[4] == "A" else cj["railB_from_corner_end"][i - 1]
+        return (sv, F["steel"]["bolt_line_below_heel"])
     rail, i = hid.split("-")[-1][0], int(hid.split("-")[-1][1:])
     return (D["rail" + rail]["holes"][i - 1] * 10, F["steel"]["screw_line_from_free_edge"])
 
@@ -651,6 +720,9 @@ def check():
             e, st = attrs(svg, "T-2-B-edge"), attrs(svg, "T-2-B-station"); m = (st["y1"] - cy, cx - e["x1"])
         elif svgname.startswith("T-3"):
             tid = hid.rsplit("-", 1)[0]; e, st = attrs(svg, f"{tid}-edge"), attrs(svg, f"{tid}-station"); m = (cx - st["x1"], e["y1"] - cy)
+        elif svgname == "T-7-corner.svg":   # u = s along the rail (A via the 40.0 cm tape line, B from the end line); v = below the heel line
+            if hid[4] == "A": st, he = attrs(svg, "T-7-A-tape"), attrs(svg, "T-7-A-heel"); m = (cx - st["x1"] + 400, cy - he["y1"])
+            else: st, he = attrs(svg, "T-7-B-end"), attrs(svg, "T-7-B-heel"); m = (cx - st["x1"], cy - he["y1"])
         else:   # rail strips: u = s from the reference end, via the sheet's start line; v = from the free edge
             base = hid.rsplit("-", 1)[0]; n = int(base.split("-")[-1]); fe, ref = attrs(svg, f"{base}-free"), attrs(svg, f"{base}-ref")
             s_ref = 0 if n == 1 else STEP * (n - 1) + OVER // 2
@@ -716,12 +788,12 @@ def main():
     os.makedirs(FIG, exist_ok=True); os.makedirs(TPL, exist_ok=True)
     f0, w0 = t0(); f1, w1 = t1(); f2, w2 = t2()
     f3a, w3 = t3(100, "T-3a-olov-100.svg", "T-3a"); f3b, _ = t3(150, "T-3b-olov-150.svg", "T-3b")
-    rA, rB = t4("A"), t4("B"); f5, w5 = t5(); f6, w6 = t6()
+    rA, rB = t4("A"), t4("B"); f5, w5 = t5(); f6, w6 = t6(); f7, w7 = t7()
     check()
     sheets = [("T1", "Locating ring P10 (+ optional ALEX foot P20)", "1:1 check; drilling only for the ALEX feet"), ("T2", "Feet plate P09, two pieces", "1:1 drilling"),
               ("T3a", "OLOV plate P05 at 100: L2-L6", "1:1 drilling"), ("T3b", "OLOV plate P05 at 150: L1", "1:1 drilling"),
               ("T4-A", f"Rail A P06 station strip, {len(rA)} sheets (read sideways)", "1:1 marking check"), ("T4-B", f"Rail B P07 station strip, {len(rB)} sheets (read sideways)", "1:1 marking check"),
-              ("T5", "Corner fitting P08 placement", "reference 1:2, not for drilling"), ("T6", "Clamp pad plate P11 placement", "reference 1:4, positioning only")]
+              ("T5", "Corner fitting P08 placement", "reference 1:2, not for drilling"), ("T6", "Clamp pad plate P11 placement", "reference 1:4, positioning only"), ("T7", "Corner bolt holes P08 on rails A and B (read sideways)", "1:1 drilling, on the bench")]
     rows = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td></tr>" for a, b, c in sheets)
     write("00-index.html", f"""<section class="page" data-chapter="T0" data-title="Print first">
 {HEAD_CSS}
@@ -745,6 +817,7 @@ def main():
             html += page(f"T4-{rail}", f"Rail {rail} strip {n}/{N}", f"Rail {rail} ({part}) station strip {n}/{N}", ["SOURCE", "MEASURE"], fig, W, cls=" land")
     write("04-rails.html", html)
     write("05-fittings.html", page("T5", "Corner fittings P08", "Corner fitting (P08) placement · reference", ["SOURCE", "VERIFIED"], f5, w5))
+    write("07-corner.html", page("T7", "Corner bolt holes", "Corner bolt holes (P08 on P06 / P07) · drilling template 1:1", ["VERIFIED", "SOURCE"], f7, w7, cls=" land"))
     write("06-pads.html", page("T6", "Clamp pad plates P11", "Clamp pad plate (P11) placement · reference", ["SOURCE", "VERIFIED", "ASSUMPTION"], f6, w6,
           after='<p class="small">SOURCE-DEFINED: the pad plate outlines (marking table, chapter D). VERIFIED: the 90 × 50 mm lower-jaw pad, measured 21-23 Oct 2026 (facts.json vivo). ASSUMPTION / FIELD CHECK: the oval drawn centred on the clamp; the clamp back sets the final position (crossbar fitted as the spacing guide).</p>'))
 
