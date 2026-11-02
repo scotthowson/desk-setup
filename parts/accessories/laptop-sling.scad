@@ -19,6 +19,7 @@
 //   openscad -D part=\"rail\"     -o laptop-sling-rail-x2.stl       laptop-sling.scad
 //   openscad -D part=\"mouth\"    -o laptop-sling-mouth-x2.stl      laptop-sling.scad
 //   openscad -D part=\"carriage\" -o laptop-sling-carriage-x1.stl   laptop-sling.scad
+//   openscad -D part=\"clip\"     -o laptop-sling-usbc-clip-x1.stl  laptop-sling.scad   (set port_h and plug_body first; x is set on the slots)
 // Print rails and mouths standing on the flange face (as saved), PETG, 4 walls, 30 %; the
 // carriage flat on its back. Nothing here is test-printed; the rails are safe to print now.
 
@@ -62,20 +63,35 @@ module rail_part(len, mouth = false) difference() {
     for (z = holes_z(len, mouth)) translate([wall + flange / 2 + 2, flange_t + 0.01, z]) rotate([90, 0, 0]) cylinder(d1 = head_d, d2 = hole_d, h = (head_d - hole_d) / 2 + 0.2, $fn = 24);
 }
 function holes_z(len, mouth) = mouth ? [20] : [25, len - 25];   // a mouth piece gets one screw, clear of its flare
-module carriage() {   // y across the bay between the rails' inner faces, x = laptop thickness direction (0 at the lip top), z toward the laptop
-    // a bar the width of the bay, carr_t thick, screwed up through two tabs; the laptop's leading edge meets the two stops
-    // (one each end, 25 wide) and the plug tongue, set 1 mm short of bottoming, meets the port.
+module carriage() {   // x along the bay (0 at the hinge-side rail's inner face), y toward the laptop (0 = the bar's back), z up from the lip top
+    // A bar across the bay with a stop pad each end: the laptop's leading edge lands on the stops. A window in the bar, 50 wide and open
+    // at the bottom, takes the USB-C clip (separate part), which screws to the bar's laptop-side face on four M3 screws through its slots,
+    // so the plug can be set 10 mm either way along the bay once the port is measured. Two tabs screw the bar up to the top.
     bar_h = clear_t;
     difference() {
         union() {
-            cube([inner, carr_t, bar_h]);                                                  // the bar: x along the bay, y toward the laptop, z up from the lip top
-            for (x = [0, inner - 25]) translate([x, carr_t, 0]) cube([25, stop_t, bar_h]);  // stops
-            for (x = [0, inner - 30]) translate([x, -12, bar_h]) cube([30, 12 + carr_t, flange_t]);   // screw tabs, inside the bay, rising past the rails' flange level to the top
-            translate([port_x - plug_body[0] / 2 - play - 3, -plug_body[2] + carr_t, port_h - plug_body[1] / 2 - play - 3]) cube([plug_body[0] + 2 * play + 6, plug_body[2], plug_body[1] + 2 * play + 6]);   // plug clip block behind the bar
+            cube([inner, carr_t, bar_h]);
+            for (x = [0, inner - 25]) translate([x, carr_t, 0]) cube([25, stop_t, bar_h]);                 // stops
+            for (x = [0, inner - 30]) translate([x, -12, bar_h]) cube([30, 12 + carr_t, flange_t]);        // screw tabs, up to the top
         }
-        translate([port_x - plug_body[0] / 2 - play, -plug_body[2] + carr_t - 1, port_h - plug_body[1] / 2 - play]) cube([plug_body[0] + 2 * play, plug_body[2] + 2, plug_body[1] + 2 * play]);   // plug pocket, through the bar
-        translate([port_x - plug_body[0] / 2 - play, -plug_body[2] + carr_t - 1, -1]) cube([plug_body[0] + 2 * play, plug_body[2] + 2, port_h + 1]);   // open underneath: the plug pushes up into the clip from below, a strip of tape or a zip tie keeps it
+        translate([port_x - 25, -1, -1]) cube([50, carr_t + 2, bar_h - 7]);                                // the window, open underneath, an 8 mm bridge left over it
+        for (dx = [-28, 28], z = [5, 20]) translate([port_x + dx, -1, z]) rotate([-90, 0, 0]) cylinder(d = 2.8, h = carr_t + 2, $fn = 20);   // M3 self-tapping, for the clip
         for (x = [15, inner - 15]) translate([x, -6, bar_h - 1]) cylinder(d = hole_d, h = flange_t + 2, $fn = 24);
+    }
+}
+module usbc_clip() {   // screws to the carriage's laptop-side face: plate with four slots, cradle for the plug's overmould, zip-tie slots
+    pw = plug_body[0] + 1; ph = plug_body[1] + 1; pl = plug_body[2];
+    front = stop_t + 6.5 - plug_tongue;          // overmould face beyond the plate when the tongue is 6.5 into the port
+    cw = 3; cf = 3;                               // cradle wall and floor
+    difference() {
+        union() {
+            cube([76, 3, 24]);                                                                            // the plate, bottom at the lip top
+            translate([38 - pw / 2 - cw, front - pl, port_h - ph / 2 - cf]) cube([pw + 2 * cw, pl + 3, ph + cf]);   // cradle, open on top, through the window behind the plate
+        }
+        translate([38 - pw / 2, front - pl - 1, port_h - ph / 2]) cube([pw, pl + 5, 30]);               // the overmould's pocket
+        translate([38 - pw / 2 - cw - 1, -1, port_h - ph / 2]) cube([pw + 2 * cw + 2, 5, ph + 2]);     // the plate opens where the plug passes; continuous above
+        for (dx = [-28, 28], z = [5, 20]) hull() for (sx = [-6, 6]) translate([38 + dx + sx, -1, z]) rotate([-90, 0, 0]) cylinder(d = 3.4, h = 5, $fn = 20);   // slots, 12 long: 6 mm of adjustment each way
+        for (y = [front - pl + 6, front - 6]) translate([38 - pw / 2 - cw - 1, y - 2, port_h - ph / 2 - cf - 1]) cube([pw + 2 * cw + 2, 4, cf + 2]);         // zip-tie slots through the floor
     }
 }
 port_x = port_from_hinge;   // hinge edge at x = 0 of the bay (hinge toward the wall); set port_from_hinge from the other edge if the hinge faces the room
@@ -83,3 +99,4 @@ port_x = port_from_hinge;   // hinge edge at x = 0 of the bay (hinge toward the 
 if (part == "rail") rail_part(seg);
 else if (part == "mouth") rail_part(mouth_len, true);
 else if (part == "carriage") carriage();
+else if (part == "clip") usbc_clip();
