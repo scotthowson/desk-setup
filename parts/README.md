@@ -1,6 +1,6 @@
 # Printed parts
 
-Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-preview.png` beside it. The STL name ends in `-x` and the number to print (`foot-ring-x8.stl`: print eight). Change a number at the top of the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm.
+Every part is an OpenSCAD source (`.scad`) with its rendered `.stl` and a `-preview.png` beside it. Engraved labels are bold and at least 4.5 mm (smaller text does not survive a 0.4 mm nozzle); if one is still hard to read, rub a permanent marker over it and wipe the face. The STL name ends in `-x` and the number to print (`foot-ring-x8.stl`: print eight). Change a number at the top of the source and re-render with `openscad -o name.stl name.scad`. Measurements in mm.
 
 **Printers:** everything fits the Bambu P1S and A1 (256 × 256 × 256 mm; the longest part is 240 mm, the tallest 200). **Every STL is saved in its print orientation**: put it on the bed as it opens, no rotating, no supports. Every tool is named on both faces: the face you see in the slicer reads as printed, and the face you see in use (the lipped tools are turned over) reads after the flip. Bambu defaults (0.2 mm layers, 3 walls) are fine; PETG where the table says so, PLA for the rest. **Never scale anything in the slicer**: the tools' distances are the tool.
 

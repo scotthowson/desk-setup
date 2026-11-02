@@ -19,14 +19,16 @@ module jig() {   // use orientation: body on the leg's top face, lip hanging ove
         }
         translate([d19, w / 2, -1]) cylinder(d = bore, h = body_t + 2, $fn = 32);
         for (y = [-1, w - 0.6]) translate([d19 - 0.4, y, -1]) cube([0.8, 1.6, body_t + 2]);                     // sight grooves down both sides, on the bore's centre line
-        translate([0, 0, body_t - 0.6]) labels();   // labels on the face you see in use
+        translate([0, 0, body_t - 1.0]) labels();   // labels on the face you see in use
     }
 }
-module labels(top = false) {
-    translate([25, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("RAIL 19", size = 2.6, halign = "center", valign = "center");
-    translate([9, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1) text("1/8", size = 3, halign = "center", valign = "center");
+module labels(top = false) {   // bold, 4.5-5 mm, 1 mm deep: a 0.4 nozzle cannot draw 2.6 mm text legibly; run a marker over the engraving
+    f = "DejaVu Sans:style=Bold";
+    translate([6.5, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1.2) text("RAIL", size = 4.5, font = f, halign = "center", valign = "center");
+    translate([12.5, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1.2) text("1/8", size = 4.5, font = f, halign = "center", valign = "center");
+    translate([25, w / 2, 0]) mirror([0, top ? 0 : 1, 0]) rotate([0, 0, 90]) linear_extrude(1.2) text("19", size = 5, font = f, halign = "center", valign = "center");
 }
 difference() {
     translate([0, 0, body_t]) mirror([0, 0, 1]) jig();   // flipped for printing
-    translate([0, 0, body_t - 0.6]) labels(top = true);   // print-top labels read as written; the use-face ones above are mirrored in y so they read after the flip
+    translate([0, 0, body_t - 1.0]) labels(top = true);   // print-top labels read as written; the use-face ones above are mirrored in y so they read after the flip
 }

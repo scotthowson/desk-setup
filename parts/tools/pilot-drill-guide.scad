@@ -20,23 +20,27 @@ puck_w = 18; depth_y = 10; gap = 4;
 P8 = 45;   // protrusion for the 1/8 in bit, set by the tower hole
 P64 = 35;  // protrusion for the 5/64 in bit (shorter bit, less sticks out)
 bore_8th = 3.5; bore_64th = 2.3; set_8th = 3.6; set_64th = 2.4;   // bit + 0.3 for the bores, which print as a running fit
-steps = [ [P8 - 12, bore_8th, "12 PLATE"], [P8 - 15, bore_8th, "15 LEG"], [P64 - 10, bore_64th, "10 EDGE"], [P64 - 12, bore_64th, "12 ALEX"], [P8 - 25, bore_8th, "25 RAIL"] ];
+steps = [ [P8 - 12, bore_8th, "12", "PLATE"], [P8 - 15, bore_8th, "15", "LEG"], [P64 - 10, bore_64th, "10", "EDGE"], [P64 - 12, bore_64th, "12", "ALEX"], [P8 - 25, bore_8th, "25", "RAIL"] ];
 tower_w = 16; tower_h = P8 + 2;
+f = "DejaVu Sans:style=Bold";
 
-module puck(h, bore, name) {
+module puck(h, bore, num, word) {
     difference() {
         cube([puck_w, depth_y, h]);
         translate([puck_w / 2, depth_y / 2, -1]) cylinder(d = bore, h = h + 2, $fn = 32);
-        translate([puck_w / 2, 1.0, h - 5]) rotate([90, 0, 0]) linear_extrude(1.2) text(name, size = 2.2, halign = "center");
+        // depth as a big bold number, the word under it (bold 2.2 mm text was unreadable off a 0.4 nozzle); 1.2 deep, the bore is 3.25 behind the face
+        translate([puck_w / 2, 1.2, h - 10]) rotate([90, 0, 0]) linear_extrude(1.4) text(num, size = 7, font = f, halign = "center");
+        translate([puck_w / 2, 1.2, h - 15.5]) rotate([90, 0, 0]) linear_extrude(1.4) text(word, size = 3.4, font = f, halign = "center");
     }
 }
 difference() {   // SET tower
     cube([tower_w, depth_y, tower_h]);
     translate([tower_w / 2 - 4, depth_y / 2, tower_h - P8]) cylinder(d = set_8th, h = P8 + 1, $fn = 32);       // 45 mm setting hole
     translate([tower_w / 2 + 4, depth_y / 2, tower_h - P64]) cylinder(d = set_64th, h = P64 + 1, $fn = 32);    // 35 mm setting hole
-    translate([tower_w / 2, 1.0, tower_h - 6]) rotate([90, 0, 0]) linear_extrude(1.2) text("SET", size = 3.6, halign = "center");
-    translate([tower_w / 2 - 4, 1.0, tower_h - 11]) rotate([90, 0, 0]) linear_extrude(1.2) text("1/8", size = 2.4, halign = "center");
-    translate([tower_w / 2 + 4, 1.0, tower_h - 11]) rotate([90, 0, 0]) linear_extrude(1.2) text("5/64", size = 2.4, halign = "center");
+    translate([tower_w / 2, 1.2, tower_h - 9]) rotate([90, 0, 0]) linear_extrude(1.4) text("SET", size = 6, font = f, halign = "center");
+    // each bit size on the side face next to its hole, reading upward, 5 mm bold, 1.4 deep
+    translate([1.4, depth_y / 2, tower_h / 2]) rotate([0, -90, 0]) linear_extrude(1.4) text("1/8", size = 5, font = f, halign = "center", valign = "center");
+    translate([tower_w - 1.4, depth_y / 2, tower_h / 2]) rotate([0, 90, 0]) rotate([0, 0, 180]) linear_extrude(1.4) text("5/64", size = 5, font = f, halign = "center", valign = "center");
 }
 // five pucks in two rows beside the tower; separate pieces on the bed
-for (i = [0 : len(steps) - 1]) translate([tower_w + gap + (i % 3) * (puck_w + gap), (i < 3 ? 0 : depth_y + gap), 0]) puck(steps[i][0], steps[i][1], steps[i][2]);
+for (i = [0 : len(steps) - 1]) translate([tower_w + gap + (i % 3) * (puck_w + gap), (i < 3 ? 0 : depth_y + gap), 0]) puck(steps[i][0], steps[i][1], steps[i][2], steps[i][3]);
