@@ -316,6 +316,15 @@ label.t input{accent-color:var(--accent);margin:0}
     const matMat = new THREE.MeshStandardMaterial({color:0x2a1f4a, roughness:0.9, emissive:0x3a1a5e, emissiveIntensity:0.25});
     // Mat centred on the diagonal in front of the ELLOVEN, inside the corner square
     const mat = box(-40,40,0,0.3,-15,15,matMat,false); mat.position.set(55,Y1,55); mat.rotation.y = Math.PI/4; setup.add(mat);
+    // Laptop sling under top B between the ALEX 2 feet (parts/accessories/laptop-sling.scad): two C-rails, inner faces 253.4 mm apart centred on x = 31.5,
+    // z 268-314, flanges out toward the feet; the Dell Pro 16 Plus (35.8 x 25.1 x 2.1) slides in from top B's far end, short side first, and docks at z 272.
+    const matLaptop = new THREE.MeshStandardMaterial({color:0x3a3a3a, roughness:0.6});
+    [[16.63,18.83],[44.17,46.37]].forEach(([a,b])=>{ const inner = a < 30 ? b : a;
+      setup.add(box(Math.min(inner-0.4,inner), Math.max(inner-0.4,inner), Y0-3.1, Y0, 268, 314, M.steel));          // wall
+      setup.add(box(a, b, Y0-0.4, Y0, 268, 314, M.steel));                                                         // flange
+      setup.add(box(a < 30 ? inner : inner-1.2, a < 30 ? inner+1.2 : inner, Y0-3.1, Y0-2.8, 268, 314, M.steel));   // lip
+    });
+    setup.add(box(18.93, 44.07, Y0-2.8, Y0-0.66, 272, 307.8, matLaptop));
     const k = box(-15.8,15.8,0,1.4,-6.65,6.65,new THREE.MeshStandardMaterial({color:0xd8d9d6, roughness:0.6})); k.position.set(58.5,Y1+0.3,58.5); k.rotation.y = Math.PI/4; setup.add(k);
     const keys = box(-14.8,14.8,1.4,2.0,-5.8,5.8,M.key,false); keys.position.set(58.5,Y1+0.3,58.5); keys.rotation.y = Math.PI/4; setup.add(keys);
     const mouse = box(-3,3,0,2.6,-5.5,5.5,M.key); mouse.position.set(74,Y1+0.3,45); mouse.rotation.y = Math.PI/4; setup.add(mouse);
