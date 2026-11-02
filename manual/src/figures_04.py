@@ -469,6 +469,7 @@ def fig_topA_overview():
         leg_label(fd, n, w)
     foot_labels(fd, ("F1", "F2", "F3", "F4"), below=("F2",), right=("F1", "F3"))
     dim2(c, fd.p(1400, 0), fd.p(1400, 100), "10", off=-5.5)
+    dim2(c, fd.p(150, 0), fd.p(150, 420), "42", off=-5.5)   # L1 is the one leg not 10 from the back edge: show its 42 (its 15 from the end is on the scale)
     c.text((fd.u(1100), fd.v(440)), "RAIL A: vertical leg's outer face on y = 53 cm", size=3.0)
     c.text((fd.u(2275), fd.v(325)), "ALEX 1", size=3.0)
     c.text((fd.u(2275), fd.v(325) + 3.6), "below", size=3.0)

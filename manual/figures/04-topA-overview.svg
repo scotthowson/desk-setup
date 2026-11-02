@@ -133,6 +133,12 @@
 <polygon points="70.625,33 71.139,34.409 70.111,34.409" fill="#000"/>
 <polygon points="70.625,39.25 70.111,37.841 71.139,37.841" fill="#000"/>
 <text x="68.625" y="36.125" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 68.625 36.125)">10</text>
+<line x1="153.65" y1="33" x2="147.55" y2="33" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="153.65" y1="59.25" x2="147.55" y2="59.25" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<line x1="148.75" y1="33" x2="148.75" y2="59.25" stroke="#000" stroke-width="0.25" stroke-linecap="round"/>
+<polygon points="148.75,33 149.264,34.409 148.236,34.409" fill="#000"/>
+<polygon points="148.75,59.25 148.236,57.841 149.264,57.841" fill="#000"/>
+<text x="146.75" y="46.125" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000" transform="rotate(-90.0 146.75 46.125)">42</text>
 <text x="94.875" y="60.5" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">RAIL A: vertical leg's outer face on y = 53 cm</text>
 <text x="21.438" y="53.312" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">ALEX 1</text>
 <text x="21.438" y="56.913" font-family="Helvetica, Arial, sans-serif" font-size="3.0" text-anchor="middle" dominant-baseline="middle" font-weight="normal" fill="#000">below</text>
