@@ -78,6 +78,6 @@ Built on the Underware grip itself (`accessories/og-lib.scad` uses `monokiniGrip
 
 | File | What | Print |
 | --- | --- | --- |
-| `og-brick-dock-dell65-x1.stl`, `og-brick-dock-g5-x1.stl` | Power-brick tray under the tile: the brick slides in from the open end over a 6 mm lip, a Velcro strap through the two slots holds it, cord notches both ends, the name engraved underneath. Sized by `brick = [length, width, height]` with 1 mm clearance; **the two STLs use catalogue guesses, measure the bricks and re-render** (command in the source). Dell 65 W default 95 × 47 × 28 (2 × 4 cells), G5 adapter 100 × 48 × 32. | 1 each |
+| `og-brick-dock-dell65-x1.stl`, `og-brick-dock-g5-x1.stl` | Power-brick tray under the tile: the brick slides in from the open end over a 6 mm lip, a Velcro strap through the two slots holds it, cord notches both ends, the name engraved underneath. Sized by `brick = [length, width, height]` with 1 mm clearance; **the two STLs use catalogue guesses, measure the bricks and re-render** (command in the source). Dell 65 W: 112 × 51 × 28, Dell's own 4.4 × 2.0 × 1.1 in (2 × 5 cells, 56 × 140); G5 adapter (A5919_KPNL, 59 W): no published size, the STL uses 100 × 48 × 32 until measured. | 1 each |
 | `og-hook-x2.stl` | One-cell J-hook, 40 drop, 30 reach, 16 wide: headset or a coiled lead under the front edge. | 2 |
 | `og-cable-exit-x2.stl` | One-cell comb, four 7 mm slots, where leads leave a channel run or drop to the floor. | 2 |
