@@ -3,13 +3,13 @@
 // both ends. Sized by the brick: set `brick` to its measured length, width, height in mm
 // (MEASURE: the defaults are catalogue guesses) and render:
 //   openscad -D 'brick=[112,51,28]' -D 'tag="DELL 65W"' -o og-brick-dock-dell65-x1.stl og-brick-dock.scad
-//   openscad -D 'brick=[100,48,32]' -D 'tag="G5"'      -o og-brick-dock-g5-x1.stl     og-brick-dock.scad
+//   openscad -D 'brick=[90,60,29]' -D clr=1.5 -D 'tag="G5"'      -o og-brick-dock-g5-x1.stl     og-brick-dock.scad
 // Print plate down, snaps up, PETG, 3 walls, 20 %. The plate covers whole cells (2 x 4 for the
 // Dell brick); snap it in with the open end toward where the cord goes.
 include <og-lib.scad>
 
 brick = [112, 51, 28];   // length (along the cord), width, height. Dell 65 W USB-C: 4.4 x 2.0 x 1.1 in on dell.com (112 x 51 x 28); the G5 adapter (A5919_KPNL) is not published: MEASURE
-tag = "DELL 65W";
+tag = "DELL 65W";   // G5 adapter: BN44-00887A / A5919_KPNL listed as 90 x 60 x 29 by one spares seller (impactcomputers.com), unconfirmed; the STL uses it with 1.5 clearance
 clr = 1.0; wall = 2.4; floor_t = 2.4; lip = 6; notch = 14; strap = [20, 3];
 f = "DejaVu Sans:style=Bold";
 
